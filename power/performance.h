@@ -40,7 +40,7 @@ enum SCREEN_DISPLAY_TYPE {
 };
 
 enum PWR_CLSP_TYPE {
-    ALL_CPUS_PWR_CLPS_DIS = 0x100,
+    ALL_CPUS_PWR_CLPS_DIS = 0x101,
 };
 
 /* For CPUx min freq, the leftmost byte
@@ -166,8 +166,7 @@ enum OPTIMAL_FREQ_LVL {
 };
 
 enum SCREEN_PWR_CLPS_LVL {
-    PWR_CLPS_DIS = 0x1300,
-    PWR_CLPS_ENA = 0x1301,
+    PWR_CLPS_DIS = 0x1301,
 };
 
 enum THREAD_MIGRATION_LVL {
