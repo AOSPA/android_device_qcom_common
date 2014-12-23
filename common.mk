@@ -716,6 +716,11 @@ PRODUCT_PACKAGE_OVERLAYS += device/qcom/common/product/overlay
 #Enabling video for live effects
 -include frameworks/base/data/videos/VideoPackage1.mk
 
+#skip boot jars check if QCPATH not available
+ifeq ($(strip $(QCPATH)),)
+SKIP_BOOT_JARS_CHECK := true
+endif
+
 # For PRODUCT_COPY_FILES, the first instance takes precedence.
 # Since we want use QC specific files, we should inherit
 # device-vendor.mk first to make sure QC specific files gets installed.
