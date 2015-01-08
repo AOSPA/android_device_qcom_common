@@ -41,7 +41,7 @@ on fs
     mkdir /dev/bus/usb 0755 root root
 
 service qcom-usb-sh /system/bin/sh /init.qcom.usb.sh
-    class core
+    class main
     user root
     oneshot
 
