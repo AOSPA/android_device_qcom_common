@@ -297,6 +297,9 @@ on property:sys.boot_completed=1
 on property:persist.radio.atfwd.start=false
     stop atfwd
 
+on property:radio.atfwd.start=false
+    stop atfwd
+
 # corefile limit and ETB enabling
 on property:persist.debug.trace=1
     mkdir /data/core 0777 root root
