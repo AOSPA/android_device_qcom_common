@@ -331,7 +331,7 @@ case "$target" in
         chmod -h 664 /sys/devices/system/cpu/cpu1/online
         chmod -h 664 /sys/devices/system/cpu/cpu2/online
         chmod -h 664 /sys/devices/system/cpu/cpu3/online
-        echo 1 > /dev/cpuctl/apps/cpu.notify_on_migrate
+        echo 1 > /dev/cpuctl/cpu.notify_on_migrate
     ;;
 esac
 
