@@ -47,6 +47,10 @@ ifeq ($(call is-board-platform-in-list, msm8992), true)
 LOCAL_SRC_FILES += power-8992.c
 endif
 
+ifeq ($(call is-board-platform-in-list, msm8996), true)
+LOCAL_SRC_FILES += power-8996.c
+endif
+
 ifneq ($(TARGET_TAP_TO_WAKE_NODE),)
 LOCAL_CFLAGS += -DTAP_TO_WAKE_NODE=\"$(TARGET_TAP_TO_WAKE_NODE)\"
 endif
