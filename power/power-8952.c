@@ -74,9 +74,6 @@ int  power_hint_override(struct power_module *module, power_hint_t hint,
 int  set_interactive_override(struct power_module *module, int on)
 {
     char governor[80];
-    char tmp_str[NODE_MAX];
-    struct video_encode_metadata_t video_encode_metadata;
-    int rc;
 
     ALOGI("Got set_interactive hint");
 
@@ -161,6 +158,8 @@ static void process_video_encode_hint(void *metadata)
             (strlen(governor) == strlen(INTERACTIVE_GOVERNOR))) {
             /* Sched_load and migration_notif*/
             int resource_values[] = {INTERACTIVE_USE_SCHED_LOAD_OFF,
+                                     TR_MS_CPU0_40,
+                                     TR_MS_CPU4_40,
                                      INTERACTIVE_USE_MIGRATION_NOTIF_OFF};
             if (!video_encode_hint_sent) {
                 perform_hint_action(video_encode_metadata.hint_id,
