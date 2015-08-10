@@ -92,7 +92,9 @@ int  set_interactive_override(struct power_module *module, int on)
         /* Display off. */
              if ((strncmp(governor, INTERACTIVE_GOVERNOR, strlen(INTERACTIVE_GOVERNOR)) == 0) &&
                 (strlen(governor) == strlen(INTERACTIVE_GOVERNOR))) {
-               int resource_values[] = {TR_MS_CPU0_50,TR_MS_CPU4_50, THREAD_MIGRATION_SYNC_OFF};
+               int resource_values[] = {INT_OP_CLUSTER0_TIMER_RATE, BIG_LITTLE_TR_MS_50,
+                                        INT_OP_CLUSTER1_TIMER_RATE, BIG_LITTLE_TR_MS_50,
+                                        INT_OP_NOTIFY_ON_MIGRATE, 0x00};
 
                if (!display_hint_sent) {
                    perform_hint_action(DISPLAY_STATE_HINT_ID,
@@ -157,10 +159,19 @@ static void process_video_encode_hint(void *metadata)
             strlen(INTERACTIVE_GOVERNOR)) == 0) &&
             (strlen(governor) == strlen(INTERACTIVE_GOVERNOR))) {
             /* Sched_load and migration_notif*/
-            int resource_values[] = {INTERACTIVE_USE_SCHED_LOAD_OFF,
-                                     TR_MS_CPU0_40,
-                                     TR_MS_CPU4_40,
-                                     INTERACTIVE_USE_MIGRATION_NOTIF_OFF};
+            int resource_values[] = {INT_OP_CLUSTER0_USE_SCHED_LOAD,
+                                     0x1,
+                                     INT_OP_CLUSTER1_USE_SCHED_LOAD,
+                                     0x1,
+                                     INT_OP_CLUSTER0_USE_MIGRATION_NOTIF,
+                                     0x1,
+                                     INT_OP_CLUSTER1_USE_MIGRATION_NOTIF,
+                                     0x1,
+                                     INT_OP_CLUSTER0_TIMER_RATE,
+                                     BIG_LITTLE_TR_MS_40,
+                                     INT_OP_CLUSTER1_TIMER_RATE,
+                                     BIG_LITTLE_TR_MS_40
+                                     };
             if (!video_encode_hint_sent) {
                 perform_hint_action(video_encode_metadata.hint_id,
                 resource_values,
