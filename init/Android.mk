@@ -3,17 +3,21 @@ ifeq ($(TARGET_INIT_VENDOR_LIB),libinit_msm)
 LOCAL_PATH := $(call my-dir)
 LIBINIT_MSM_PATH := $(call my-dir)
 
-LIBINIT_USE_MSM_DEFAULT := $(shell if [ ! -f $(LIBINIT_MSM_PATH)/init_$(TARGET_BOARD_PLATFORM).c ]; then echo true; fi)
+LIBINIT_USE_MSM_DEFAULT := $(shell if [ ! -f "$(LIBINIT_MSM_PATH)/init_$(TARGET_BOARD_PLATFORM).cpp" ]; then echo true; fi)
 
 include $(CLEAR_VARS)
 LOCAL_MODULE_TAGS := optional
 LOCAL_C_INCLUDES := system/core/init
-LOCAL_CFLAGS := -Wall -DANDROID_TARGET=\"$(TARGET_BOARD_PLATFORM)\"
-LOCAL_SRC_FILES := init_msm.c
+LOCAL_CPPFLAGS := \
+    -Wall \
+    -Werror -Wno-error=deprecated-declarations \
+    -Wno-unused-parameter \
+    -DANDROID_TARGET=\"$(TARGET_BOARD_PLATFORM)\"
+LOCAL_SRC_FILES := init_msm.cpp
 ifeq ($(LIBINIT_USE_MSM_DEFAULT),true)
-  LOCAL_SRC_FILES += init_msmdefault.c
+  LOCAL_SRC_FILES += init_msmdefault.cpp
 else
-  LOCAL_SRC_FILES += init_$(TARGET_BOARD_PLATFORM).c
+  LOCAL_SRC_FILES += init_$(TARGET_BOARD_PLATFORM).cpp
 endif
 LOCAL_MODULE := libinit_msm
 include $(BUILD_STATIC_LIBRARY)

@@ -63,7 +63,7 @@ void init_msm_properties(unsigned long msm_id, unsigned long msm_ver, char *boar
     }
 
     rc = property_get(PROP_BOOT_BASEBAND, baseband);
-    if ((rc != NULL) && ISMATCH(baseband, "apq")) {
+    if ((rc != 0) && ISMATCH(baseband, "apq")) {
         property_set(PROP_BLUETOOTH_SOC, "ath3k");
     }
 }
