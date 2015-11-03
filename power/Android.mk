@@ -47,10 +47,6 @@ ifeq ($(call is-board-platform-in-list, msm8992), true)
 LOCAL_SRC_FILES += power-8992.c
 endif
 
-ifeq ($(TARGET_USES_INTERACTION_BOOST),true)
-    LOCAL_CFLAGS += -DINTERACTION_BOOST
-endif
-
 LOCAL_MODULE := power.$(TARGET_BOARD_PLATFORM)
 LOCAL_MODULE_TAGS := optional
 include $(BUILD_SHARED_LIBRARY)
