@@ -49,19 +49,6 @@ void init_msm_properties(unsigned long msm_id, unsigned long msm_ver, char *boar
     if (!rc || !ISMATCH(platform, ANDROID_TARGET))
         return;
 
-    if (ISMATCH(board_type, "Liquid")) {
-        property_set(PROP_LCDDENSITY, "160");
-        /* Liquid do not have hardware navigation keys, so enable
-           Android sw navigation bar
-         */
-        property_set(PROP_QEMU_NAVKEY, "0");
-    }
-    else if (ISMATCH(board_type, "Dragon"))
-        property_set(PROP_LCDDENSITY, "240");
-    else {
-        property_set(PROP_LCDDENSITY, "320");
-    }
-
     rc = property_get(PROP_BOOT_BASEBAND, baseband);
     if ((rc != 0) && ISMATCH(baseband, "apq")) {
         property_set(PROP_BLUETOOTH_SOC, "ath3k");

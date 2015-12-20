@@ -48,5 +48,4 @@ void init_msm_properties(unsigned long msm_id, unsigned long msm_ver, char *boar
     if (!rc || !ISMATCH(platform, ANDROID_TARGET))
         return;
 
-    property_set(PROP_LCDDENSITY, "480");
 }

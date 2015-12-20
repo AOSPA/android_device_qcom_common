@@ -53,15 +53,6 @@ void init_msm_properties(unsigned long msm_id, unsigned long msm_ver, char *boar
         if (msm_ver == 196608) {
             property_set(PROP_HWROTATE, "90");
         }
-        property_set(PROP_LCDDENSITY, "160");
-    }
-    else if (ISMATCH(board_type, "MTP"))
-        property_set(PROP_LCDDENSITY, "240");
-    else {
-        if (msm_id == 109)
-            property_set(PROP_LCDDENSITY, "160");
-        else
-            property_set(PROP_LCDDENSITY, "240");
     }
     /* Populate system properties */
     switch (msm_id) {

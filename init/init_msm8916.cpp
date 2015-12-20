@@ -36,14 +36,12 @@
 
 #include "init_msm.h"
 
-#define VIRTUAL_SIZE "/sys/class/graphics/fb0/virtual_size"
 #define BUF_SIZE 64
 
 void init_msm_properties(unsigned long msm_id, unsigned long msm_ver, char *board_type)
 {
     char platform[PROP_VALUE_MAX];
     int rc;
-    unsigned long virtual_size = 0;
     char str[BUF_SIZE];
 
     UNUSED(msm_id);
@@ -53,26 +51,6 @@ void init_msm_properties(unsigned long msm_id, unsigned long msm_ver, char *boar
     if (!rc || !ISMATCH(platform, ANDROID_TARGET)){
         return;
     }
-
-    rc = read_file2(VIRTUAL_SIZE, str, sizeof(str));
-    if (rc) {
-        virtual_size = strtoul(str, NULL, 0);
-    }
-
-    if(virtual_size >= 1080) {
-        if (ISMATCH(board_type, "SBC")) {
-            property_set(PROP_LCDDENSITY, "240");
-            property_set(PROP_QEMU_NAVKEY, "0");
-        } else
-            property_set(PROP_LCDDENSITY, "480");
-    } else if (virtual_size >= 720) {
-        // For 720x1280 resolution
-        property_set(PROP_LCDDENSITY, "320");
-    } else if (virtual_size >= 480) {
-        // For 480x854 resolution QRD.
-        property_set(PROP_LCDDENSITY, "240");
-    } else
-        property_set(PROP_LCDDENSITY, "320");
 
     if (msm_id >= 239 && msm_id <= 243) {
         property_set("media.msm8939hw", "1");

@@ -48,21 +48,4 @@ void init_msm_properties(unsigned long msm_id, unsigned long msm_ver, char *boar
     if (!rc || !ISMATCH(platform, ANDROID_TARGET))
         return;
 
-    if (ISMATCH(board_type, "Liquid")) {
-        property_set(PROP_LCDDENSITY, "320");
-        /* Liquid do not have hardware navigation keys, so enable
-           Android sw navigation bar
-         */
-        property_set(PROP_QEMU_NAVKEY, "0");
-    }
-    else if (ISMATCH(board_type, "SBC")) {
-        property_set(PROP_LCDDENSITY, "200");
-        /* SBC does not have hardware navigation keys, so enable
-           Android sw navigation bar
-         */
-        property_set(PROP_QEMU_NAVKEY, "0");
-    }
-    else {
-        property_set(PROP_LCDDENSITY, "480");
-    }
 }

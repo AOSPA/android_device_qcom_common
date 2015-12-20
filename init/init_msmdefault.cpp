@@ -50,5 +50,4 @@ void init_msm_properties(unsigned long msm_id, unsigned long msm_ver, char *boar
     ERROR("Using MSM default libinit for ro.board.platform '%s'\n",
           rc ? platform : "<undefined>");
 
-    property_set(PROP_LCDDENSITY, "240");
 }

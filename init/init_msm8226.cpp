@@ -70,8 +70,4 @@ void init_msm_properties(unsigned long msm_id, unsigned long msm_ver, char *boar
         subtype = strtoul(tmp, NULL, 0);
     }
 
-    if ((subtype == PLATFORM_SUBTYPE_1080p) || (subtype == PLATFORM_SUBTYPE_1080p_EXT_BUCK))
-        property_set(PROP_LCDDENSITY, "480");
-    else
-        property_set(PROP_LCDDENSITY, "320");
 }
