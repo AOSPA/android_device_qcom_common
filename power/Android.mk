@@ -7,6 +7,7 @@ ifeq ($(call is-vendor-board-platform,QCOM),true)
 include $(CLEAR_VARS)
 
 LOCAL_MODULE_RELATIVE_PATH := hw
+LOCAL_MULTILIB := both
 LOCAL_SHARED_LIBRARIES := liblog libcutils libdl
 LOCAL_SRC_FILES := power.c metadata-parser.c utils.c list.c hint-data.c
 
