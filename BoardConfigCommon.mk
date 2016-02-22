@@ -26,3 +26,5 @@ include device/qcom/common/utils.mk
 PRODUCT_BOOT_JARS += \
     tcmiface \
     org.codeaurora.Performance
+
+ANDROID_COMPILE_WITH_JACK := false
