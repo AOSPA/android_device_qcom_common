@@ -68,8 +68,8 @@ ifeq ($(call is-board-platform-in-list,msm8998), true)
 LOCAL_SRC_FILES += power-8998.c
 endif
 
-ifeq ($(call is-board-platform-in-list,titanium), true)
-LOCAL_SRC_FILES += power-titanium.c
+ifeq ($(call is-board-platform-in-list,msm8953), true)
+LOCAL_SRC_FILES += power-8953.c
 endif
 
 ifeq ($(TARGET_USES_INTERACTION_BOOST),true)
