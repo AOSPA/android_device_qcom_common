@@ -1,5 +1,6 @@
 /*
  * Copyright (C) 2015 The CyanogenMod Project
+ * Copyright (C) 2016 The Paranoid Android Project
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -41,6 +42,13 @@ void set_device_specific_feature(struct power_module *module __unused,
     }
 #endif
 
+#ifdef DRAW_INVERSE_V_NODE
+    if (feature == POWER_FEATURE_DRAW_INVERSE_V) {
+        sysfs_write(DRAW_INVERSE_V_NODE, tmp_str);
+        return;
+    }
+#endif
+
 #ifdef DRAW_O_NODE
     if (feature == POWER_FEATURE_DRAW_O) {
         sysfs_write(DRAW_O_NODE, tmp_str);
@@ -72,6 +80,20 @@ void set_device_specific_feature(struct power_module *module __unused,
 #ifdef DRAW_ARROW_RIGHT_NODE
     if (feature == POWER_FEATURE_DRAW_ARROW_RIGHT) {
         sysfs_write(DRAW_ARROW_RIGHT_NODE, tmp_str);
+        return;
+    }
+#endif
+
+#ifdef ONE_FINGER_SWIPE_DOWN_NODE
+    if (feature == POWER_FEATURE_ONE_FINGER_SWIPE_DOWN) {
+        sysfs_write(ONE_FINGER_SWIPE_DOWN_NODE, tmp_str);
+        return;
+    }
+#endif
+
+#ifdef ONE_FINGER_SWIPE_LEFT_NODE
+    if (feature == POWER_FEATURE_TARGET_ONE_FINGER_SWIPE_LEFT) {
+        sysfs_write(ONE_FINGER_SWIPE_LEFT_NODE, tmp_str);
         return;
     }
 #endif
