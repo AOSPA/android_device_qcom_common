@@ -28,6 +28,13 @@ void set_device_specific_feature(struct power_module *module __unused,
     char tmp_str[NODE_MAX];
     snprintf(tmp_str, NODE_MAX, "%d", state);
 
+#ifdef GESTURES_NODE
+    if (feature == POWER_FEATURE_GESTURES) {
+        sysfs_write(GESTURES_NODE, tmp_str);
+        return;
+    }
+#endif
+
 #ifdef TAP_TO_WAKE_NODE
     if (feature == POWER_FEATURE_DOUBLE_TAP_TO_WAKE) {
         sysfs_write(TAP_TO_WAKE_NODE, tmp_str);
