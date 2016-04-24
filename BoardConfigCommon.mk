@@ -24,7 +24,6 @@ AUDIO_FEATURE_PCM_IOCTL_ENABLED := true
 include device/qcom/common/utils.mk
 
 PRODUCT_BOOT_JARS += \
-    tcmiface \
-    org.codeaurora.Performance
+    tcmiface
 
 ANDROID_COMPILE_WITH_JACK := false
