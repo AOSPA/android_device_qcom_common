@@ -119,16 +119,9 @@ void set_device_specific_feature(struct power_module *module __unused,
     }
 #endif
 
-#ifdef TWO_FINGER_SWIPE_UP_NODE
-    if (feature == POWER_FEATURE_TWO_FINGER_SWIPE_UP) {
-        sysfs_write(TWO_FINGER_SWIPE_UP_NODE, tmp_str);
-        return;
-    }
-#endif
-
-#ifdef TWO_FINGER_SWIPE_DOWN_NODE
-    if (feature == POWER_FEATURE_TWO_FINGER_SWIPE_DOWN) {
-        sysfs_write(TWO_FINGER_SWIPE_DOWN_NODE, tmp_str);
+#ifdef TWO_FINGER_SWIPE_NODE
+    if (feature == POWER_FEATURE_TWO_FINGER_SWIPE) {
+        sysfs_write(TWO_FINGER_SWIPE_NODE, tmp_str);
         return;
     }
 #endif
