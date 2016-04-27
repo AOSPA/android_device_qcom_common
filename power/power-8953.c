@@ -53,8 +53,8 @@ static int display_hint_sent;
 static int video_encode_hint_sent;
 static int cam_preview_hint_sent;
 
-static void process_video_encode_hint(void *metadata);
-static void process_cam_preview_hint(void *metadata);
+//static void process_video_encode_hint(void *metadata);
+//static void process_cam_preview_hint(void *metadata);
 
 int  power_hint_override(struct power_module *module, power_hint_t hint,
         void *data)
@@ -65,14 +65,16 @@ int  power_hint_override(struct power_module *module, power_hint_t hint,
             break;
         case POWER_HINT_VIDEO_ENCODE:
         {
-            process_video_encode_hint(data);
+            //process_video_encode_hint(data);
             return HINT_HANDLED;
         }
+#if 0
         case POWER_HINT_CAM_PREVIEW:
         {
             process_cam_preview_hint(data);
             return HINT_HANDLED;
         }
+#endif
     }
     return HINT_NONE;
 }
@@ -124,6 +126,7 @@ int  set_interactive_override(struct power_module *module, int on)
     return HINT_HANDLED;
 }
 
+#if 0
 /* Video Encode Hint */
 static void process_video_encode_hint(void *metadata)
 {
@@ -256,4 +259,4 @@ static void process_cam_preview_hint(void *metadata)
     }
     return;
 }
-
+#endif
