@@ -23,7 +23,4 @@ AUDIO_FEATURE_PCM_IOCTL_ENABLED := true
 # include additional build utilities
 include device/qcom/common/utils.mk
 
-PRODUCT_BOOT_JARS += \
-    tcmiface
-
 ANDROID_COMPILE_WITH_JACK := false
