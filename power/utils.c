@@ -198,12 +198,13 @@ int get_scaling_governor_check_cores(char governor[], int size,int core_num)
     return 0;
 }
 
-int interaction(int duration, int num_args, int opt_list[])
+void interaction(int duration, int num_args, int opt_list[])
 {
-    int lock_handle = 0;
+#ifdef INTERACTION_BOOST
+    static int lock_handle = 0;
 
     if (duration < 0 || num_args < 1 || opt_list[0] == NULL)
-        return 0;
+        return;
 
     if (qcopt_handle) {
         if (perf_lock_acq) {
@@ -212,13 +213,12 @@ int interaction(int duration, int num_args, int opt_list[])
                 ALOGE("Failed to acquire lock.");
         }
     }
-    return lock_handle;
 }
 
-int interaction_with_handle(int lock_handle, int duration, int num_args, int opt_list[])
+void interaction_with_handle(int lock_handle, int duration, int num_args, int opt_list[])
 {
     if (duration < 0 || num_args < 1 || opt_list[0] == NULL)
-        return 0;
+        return;
 
     if (qcopt_handle) {
         if (perf_lock_acq) {
@@ -227,7 +227,7 @@ int interaction_with_handle(int lock_handle, int duration, int num_args, int opt
                 ALOGE("Failed to acquire lock.");
         }
     }
-    return lock_handle;
+#endif
 }
 
 void perform_hint_action(int hint_id, int resource_values[], int num_resources)
