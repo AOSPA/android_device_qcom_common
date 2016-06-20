@@ -161,7 +161,11 @@ static int process_video_encode_hint(void *metadata)
     return HINT_NONE;
 }
 
-int power_hint_override(struct power_module *module, power_hint_t hint, void *data)
+/* Declare function before use */
+int interaction(int duration, int num_args, int opt_list[]);
+int interaction_with_handle(int lock_handle, int duration, int num_args, int opt_list[]);
+
+static void power_hint_override(struct power_module *module, power_hint_t hint, void *data)
 {
     int ret_val = HINT_NONE;
     switch(hint) {
@@ -190,7 +194,7 @@ int power_hint_override(struct power_module *module, power_hint_t hint, void *da
             static int handle_downmigrate = 0;
 
             // sched_upmigrate lowered to at most 20 for 500ms
-           // set threshold based on elapsed time since last boost
+            // set threshold based on elapsed time since last boost
             int resources_upmigrate[] = {0x4E00};
             int duration_upmigrate = 500;
             static int handle_upmigrate = 0;
@@ -212,14 +216,15 @@ int power_hint_override(struct power_module *module, power_hint_t hint, void *da
             else if (elapsed_time < 250000 && duration_hint <= 750)
                 return;
 
-            // keep sched_upmigrate high when flinging
-            if (duration_hint >= 750)
-                upmigrate_value = 20;
-
             // 95: default upmigrate for phone
             // 20: upmigrate for sporadic touch
             // 750ms: a completely arbitrary threshold for last touch
             int upmigrate_value = 95 - (int)(75. * ((elapsed_time*elapsed_time) / (750000.*750000.)));
+
+            // keep sched_upmigrate high when flinging
+            if (duration_hint >= 750)
+                upmigrate_value = 20;
+
             previous_boost_time = cur_boost_time;
             resources_upmigrate[0] = resources_upmigrate[0] | upmigrate_value;
             resources_downmigrate[0] = resources_downmigrate[0] | (upmigrate_value / 2);
@@ -234,7 +239,6 @@ int power_hint_override(struct power_module *module, power_hint_t hint, void *da
                 } else {
                     duration_downmigrate = 5000;
                     duration = 5750;
-
                 }
             }
 
