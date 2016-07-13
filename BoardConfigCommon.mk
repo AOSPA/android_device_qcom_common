@@ -20,6 +20,15 @@ TARGET_USES_QCOM_MM_AUDIO := true
 AUDIO_FEATURE_ENABLED_EXTN_POST_PROC := true
 AUDIO_FEATURE_PCM_IOCTL_ENABLED := true
 
+# Advanced DPM
+ifeq ($(TARGET_WANTS_EXTENDED_DPM_PLATFORM),true)
+PRODUCT_BOOT_JARS += tcmiface
+PRODUCT_BOOT_JARS += tcmclient
+PRODUCT_BOOT_JARS += com.qti.dpmframework
+PRODUCT_BOOT_JARS += dpmapi
+PRODUCT_BOOT_JARS += com.qti.location.sdk
+endif
+
 # include additional build utilities
 include device/qcom/common/utils.mk
 
