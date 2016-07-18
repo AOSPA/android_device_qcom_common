@@ -269,9 +269,8 @@ int set_interactive_override(struct power_module *module, int on)
         /* Display off */
         if ((strncmp(governor, INTERACTIVE_GOVERNOR, strlen(INTERACTIVE_GOVERNOR)) == 0) &&
             (strlen(governor) == strlen(INTERACTIVE_GOVERNOR))) {
-            // sched upmigrate = 99, sched downmigrate = 95
-            // keep the big cores around, but make them very hard to use
-            int resource_values[] = {0x4E63, 0x4F5F};
+            // Offline all big cores
+            int resource_values[] = {0x777};
             if (!display_hint_sent) {
                 perform_hint_action(DISPLAY_STATE_HINT_ID,
                 resource_values, sizeof(resource_values)/sizeof(resource_values[0]));
