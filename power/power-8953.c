@@ -53,7 +53,7 @@ static int display_hint_sent;
 static int video_encode_hint_sent;
 static int cam_preview_hint_sent;
 
-//static void process_video_encode_hint(void *metadata);
+static void process_video_encode_hint(void *metadata);
 //static void process_cam_preview_hint(void *metadata);
 
 int  power_hint_override(struct power_module *module, power_hint_t hint,
@@ -65,16 +65,9 @@ int  power_hint_override(struct power_module *module, power_hint_t hint,
             break;
         case POWER_HINT_VIDEO_ENCODE:
         {
-            //process_video_encode_hint(data);
+            process_video_encode_hint(data);
             return HINT_HANDLED;
         }
-#if 0
-        case POWER_HINT_CAM_PREVIEW:
-        {
-            process_cam_preview_hint(data);
-            return HINT_HANDLED;
-        }
-#endif
     }
     return HINT_NONE;
 }
@@ -126,7 +119,7 @@ int  set_interactive_override(struct power_module *module, int on)
     return HINT_HANDLED;
 }
 
-#if 0
+
 /* Video Encode Hint */
 static void process_video_encode_hint(void *metadata)
 {
@@ -144,7 +137,7 @@ static void process_video_encode_hint(void *metadata)
                             if (get_scaling_governor_check_cores(governor,
                                 sizeof(governor),CPU3) == -1) {
                                     ALOGE("Can't obtain scaling governor.");
-                                    return HINT_HANDLED;
+                                    // return HINT_HANDLED;
                             }
                     }
             }
@@ -194,69 +187,4 @@ static void process_video_encode_hint(void *metadata)
     return;
 }
 
-/* Camera Preview Hint */
-static void process_cam_preview_hint(void *metadata)
-{
-    char governor[80];
-    struct cam_preview_metadata_t cam_preview_metadata;
-    ALOGI("Got process_video_encode_hint");
 
-    if (get_scaling_governor_check_cores(governor,
-        sizeof(governor),CPU0) == -1) {
-            if (get_scaling_governor_check_cores(governor,
-                sizeof(governor),CPU1) == -1) {
-                    if (get_scaling_governor_check_cores(governor,
-                        sizeof(governor),CPU2) == -1) {
-                            if (get_scaling_governor_check_cores(governor,
-                                sizeof(governor),CPU3) == -1) {
-                                    ALOGE("Can't obtain scaling governor.");
-                                    return HINT_HANDLED;
-                            }
-                    }
-            }
-    }
-
-    /* Initialize cam preveiw metadata struct fields. */
-    memset(&cam_preview_metadata, 0, sizeof(struct cam_preview_metadata_t));
-    cam_preview_metadata.state = -1;
-    cam_preview_metadata.hint_id = CAM_PREVIEW_HINT_ID;
-
-    if (metadata) {
-        if (parse_cam_preview_metadata((char *)metadata,
-            &cam_preview_metadata) == -1) {
-            ALOGE("Error occurred while parsing metadata.");
-            return;
-        }
-    } else {
-        return;
-    }
-
-    if (cam_preview_metadata.state == 1) {
-        if ((strncmp(governor, INTERACTIVE_GOVERNOR,
-            strlen(INTERACTIVE_GOVERNOR)) == 0) &&
-            (strlen(governor) == strlen(INTERACTIVE_GOVERNOR))) {
-            /* Sched_load and migration_notification disable
-             * timer rate - 40mS*/
-            int resource_values[] = {0x41430000, 0x1,
-                                     0x41434000, 0x1,
-                                     0x41424000, 0x28,
-                                     };
-            if (!cam_preview_hint_sent) {
-                perform_hint_action(cam_preview_metadata.hint_id,
-                resource_values,
-                sizeof(resource_values)/sizeof(resource_values[0]));
-                cam_preview_hint_sent = 1;
-            }
-        }
-    } else if (cam_preview_metadata.state == 0) {
-        if ((strncmp(governor, INTERACTIVE_GOVERNOR,
-            strlen(INTERACTIVE_GOVERNOR)) == 0) &&
-            (strlen(governor) == strlen(INTERACTIVE_GOVERNOR))) {
-            undo_hint_action(cam_preview_metadata.hint_id);
-            cam_preview_hint_sent = 0;
-            return ;
-        }
-    }
-    return;
-}
-#endif
