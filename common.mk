@@ -12,6 +12,8 @@ ANDROID_COMPILE_WITH_JACK := false
 
 # Advanced DPM
 ifeq ($(TARGET_WANTS_EXTENDED_DPM_PLATFORM),true)
+PRODUCT_PACKAGES += tcmiface
+
 PRODUCT_BOOT_JARS += tcmiface
 PRODUCT_BOOT_JARS += tcmclient
 PRODUCT_BOOT_JARS += com.qti.dpmframework
