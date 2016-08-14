@@ -10,9 +10,12 @@ include device/qcom/common/utils.mk
 
 ANDROID_COMPILE_WITH_JACK := false
 
+# Dummy DPM controller to hook into http
+PRODUCT_PACKAGES += tcmiface
+PRODUCT_BOOT_JARS += tcmiface
+
 # Advanced DPM
 ifeq ($(TARGET_WANTS_EXTENDED_DPM_PLATFORM),true)
-PRODUCT_BOOT_JARS += tcmiface
 PRODUCT_BOOT_JARS += tcmclient
 PRODUCT_BOOT_JARS += com.qti.dpmframework
 PRODUCT_BOOT_JARS += dpmapi
