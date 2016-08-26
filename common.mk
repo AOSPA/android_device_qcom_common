@@ -8,7 +8,7 @@ TARGET_USES_QCOM_MM_AUDIO := true
 # include additional build utilities
 include device/qcom/common/utils.mk
 
-ANDROID_COMPILE_WITH_JACK := false
+#ANDROID_COMPILE_WITH_JACK := false
 
 # Dummy DPM controller to hook into http
 PRODUCT_PACKAGES += tcmiface
