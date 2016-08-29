@@ -239,7 +239,7 @@ void set_interactive(struct power_module *module, int on)
     char governor[80];
     char tmp_str[NODE_MAX];
     struct video_encode_metadata_t video_encode_metadata;
-    int rc;
+    int rc = 0;
 
     if (set_interactive_override(module, on) == HINT_HANDLED) {
         return;
