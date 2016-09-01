@@ -8,6 +8,8 @@ TARGET_USES_QCOM_MM_AUDIO := true
 # include additional build utilities
 include device/qcom/common/utils.mk
 
+TARGET_CRYPTFS_HW_PATH := device/qcom/common/cryptfs_hw
+
 #ANDROID_COMPILE_WITH_JACK := false
 
 # Dummy DPM controller to hook into http
