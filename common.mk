@@ -5,6 +5,8 @@ TARGET_USES_AOSP := false
 TARGET_HAS_QC_KERNEL_SOURCE := true
 TARGET_USES_QCOM_MM_AUDIO := true
 
+BOARD_USES_ADRENO := true
+
 # include additional build utilities
 include device/qcom/common/utils.mk
 
