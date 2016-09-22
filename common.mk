@@ -12,10 +12,6 @@ include device/qcom/common/utils.mk
 
 TARGET_CRYPTFS_HW_PATH := device/qcom/common/cryptfs_hw
 
-# Dummy DPM controller to hook into http
-PRODUCT_PACKAGES += tcmiface
-PRODUCT_BOOT_JARS += tcmiface
-
 # Advanced DPM
 ifeq ($(TARGET_WANTS_EXTENDED_DPM_PLATFORM),true)
 PRODUCT_BOOT_JARS += tcmclient
