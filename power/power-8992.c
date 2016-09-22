@@ -165,15 +165,13 @@ static int process_video_encode_hint(void *metadata)
 int interaction(int duration, int num_args, int opt_list[]);
 int interaction_with_handle(int lock_handle, int duration, int num_args, int opt_list[]);
 
-static void power_hint_override(struct power_module *module, power_hint_t hint, void *data)
+int power_hint_override(struct power_module *module, power_hint_t hint, void *data)
 {
-    int ret_val = HINT_NONE;
-    switch(hint) {
-        case POWER_HINT_VIDEO_ENCODE:
-            ret_val = process_video_encode_hint(data);
-            break;
-        case POWER_HINT_INTERACTION:
-        {
+
+	if (hint == POWER_HINT_VIDEO_ENCODE) {
+            return process_video_encode_hint(data);
+	}
+	if (hint == POWER_HINT_INTERACTION) {
             int duration_hint = 0;
             static unsigned long long previous_boost_time = 0;
 
@@ -214,7 +212,7 @@ static void power_hint_override(struct power_module *module, power_hint_t hint, 
             // also detect if we're doing anything resembling a fling
             // support additional boosting in case of flings
             else if (elapsed_time < 250000 && duration_hint <= 750)
-                return;
+                return HINT_HANDLED;
 
             // 95: default upmigrate for phone
             // 20: upmigrate for sporadic touch
@@ -246,13 +244,9 @@ static void power_hint_override(struct power_module *module, power_hint_t hint, 
             handle_big = interaction_with_handle(handle_big, duration_big, sizeof(resources_big)/sizeof(resources_big[0]), resources_big);
             handle_downmigrate = interaction_with_handle(handle_downmigrate, duration_downmigrate, sizeof(resources_downmigrate)/sizeof(resources_downmigrate[0]), resources_downmigrate);
             handle_upmigrate = interaction_with_handle(handle_upmigrate, duration_upmigrate, sizeof(resources_upmigrate)/sizeof(resources_upmigrate[0]), resources_upmigrate);
-            ret_val = HINT_HANDLED;
+            return HINT_HANDLED;
         }
-            break;
-        default:
-            break;
-    }
-    return ret_val;
+            return HINT_NONE;
 }
 
 int set_interactive_override(struct power_module *module, int on)
