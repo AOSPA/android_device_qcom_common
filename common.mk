@@ -14,6 +14,9 @@ include device/qcom/common/utils.mk
 PRODUCT_PACKAGES += \
     SnapdragonCamera
 
+# Snapdragon Clang LTO support
+SDCLANG_LTO_DEFS := device/qcom/common/sdllvm-lto-defs.mk
+
 TARGET_CRYPTFS_HW_PATH := device/qcom/common/cryptfs_hw
 
 # Dummy DPM controller to hook into http
