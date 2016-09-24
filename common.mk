@@ -10,6 +10,9 @@ BOARD_USES_ADRENO := true
 # include additional build utilities
 include device/qcom/common/utils.mk
 
+# include definitions for SDCLANG
+include device/qcom/common/sdclang/sdclang.mk
+
 # Qualcomm specific packages
 PRODUCT_PACKAGES += \
     SnapdragonCamera
