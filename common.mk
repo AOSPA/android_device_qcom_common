@@ -10,6 +10,9 @@ BOARD_USES_ADRENO := true
 # include additional build utilities
 include device/qcom/common/utils.mk
 
+# Snapdragon Clang LTO support
+SDCLANG_LTO_DEFS := device/qcom/common/sdllvm-lto-defs.mk
+
 TARGET_CRYPTFS_HW_PATH := device/qcom/common/cryptfs_hw
 
 # Advanced DPM
