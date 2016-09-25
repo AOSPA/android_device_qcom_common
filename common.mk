@@ -10,6 +10,10 @@ BOARD_USES_ADRENO := true
 # include additional build utilities
 include device/qcom/common/utils.mk
 
+# Qualcomm specific packages
+PRODUCT_PACKAGES += \
+    SnapdragonCamera
+
 TARGET_CRYPTFS_HW_PATH := device/qcom/common/cryptfs_hw
 
 # Advanced DPM
