@@ -31,15 +31,15 @@
 #include <dlfcn.h>
 #include <fcntl.h>
 #include <errno.h>
-#include <string.h>
 #include <stdlib.h>
+#include <string.h>
 
 #include "utils.h"
 #include "list.h"
 #include "hint-data.h"
 #include "power-common.h"
 
-#define LOG_TAG "QCOMPowerHAL"
+#define LOG_TAG "QCOM PowerHAL"
 #include <utils/Log.h>
 
 char scaling_gov_path[4][80] ={
@@ -203,20 +203,6 @@ void interaction(int duration, int num_args, int opt_list[])
 #ifdef INTERACTION_BOOST
     static int lock_handle = 0;
 
-    if (duration < 0 || num_args < 1 || opt_list[0] == NULL)
-        return;
-
-    if (qcopt_handle) {
-        if (perf_lock_acq) {
-            lock_handle = perf_lock_acq(lock_handle, duration, opt_list, num_args);
-            if (lock_handle == -1)
-                ALOGE("Failed to acquire lock.");
-        }
-    }
-}
-
-void interaction_with_handle(int lock_handle, int duration, int num_args, int opt_list[])
-{
     if (duration < 0 || num_args < 1 || opt_list[0] == NULL)
         return;
 
