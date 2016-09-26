@@ -12,7 +12,7 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-SDCLANG ?= false
+SDCLANG ?= true
 
 SDCLANG_PATH := prebuilts/clang/host/linux-x86/sdclang-3.8/bin
 
