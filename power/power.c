@@ -189,6 +189,10 @@ static void process_video_encode_hint(void *metadata)
     }
 }
 
+/* Declare function before use */
+int interaction(int duration, int num_args, int opt_list[]);
+int interaction_with_handle(int lock_handle, int duration, int num_args, int opt_list[]);
+
 int __attribute__ ((weak)) power_hint_override(struct power_module *module, power_hint_t hint,
         void *data)
 {
@@ -211,8 +215,9 @@ static void power_hint(struct power_module *module, power_hint_t hint,
         {
             int resources[] = {0x702, 0x20F, 0x30F};
             int duration = 3000;
+            static int handle_interaction = 0;
 
-            interaction(duration, sizeof(resources)/sizeof(resources[0]), resources);
+            handle_interaction = interaction_with_handle(handle_interaction, duration, sizeof(resources)/sizeof(resources[0]), resources);
         }
         break;
         case POWER_HINT_VIDEO_ENCODE:
