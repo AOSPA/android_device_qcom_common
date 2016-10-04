@@ -23,7 +23,7 @@ linked_module_32 := $(intermediates)/LINKED/$(my_built_module_stem)
 intermediates    := $(call local-intermediates-dir,,$(LOCAL_2ND_ARCH_VAR_PREFIX))
 linked_module_64 := $(intermediates)/LINKED/$(my_built_module_stem)
 
-FLAGS_TO_BE_FILTERED := -Wl,--icf=safe -Wl,--no-undefined-version -Wl,--fix-cortex-a53-843419 -fuse-ld=gold
+FLAGS_TO_BE_FILTERED := -Wl,--icf=safe -Wl,--no-undefined-version -Wl,--fix-cortex-a53-843419 -Wl,--no-fix-cortex-a53-843419 -fuse-ld=gold
 $(linked_module_32) : PRIVATE_TARGET_GLOBAL_LDFLAGS := $(filter-out $(FLAGS_TO_BE_FILTERED),$(PRIVATE_TARGET_GLOBAL_LDFLAGS))
 $(linked_module_64) : PRIVATE_TARGET_GLOBAL_LDFLAGS := $(filter-out $(FLAGS_TO_BE_FILTERED),$(PRIVATE_TARGET_GLOBAL_LDFLAGS))
 
