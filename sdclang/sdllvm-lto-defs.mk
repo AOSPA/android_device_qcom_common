@@ -27,4 +27,9 @@ FLAGS_TO_BE_FILTERED := -Wl,--icf=safe -Wl,--no-undefined-version -Wl,--fix-cort
 $(linked_module_32) : PRIVATE_TARGET_GLOBAL_LDFLAGS := $(filter-out $(FLAGS_TO_BE_FILTERED),$(PRIVATE_TARGET_GLOBAL_LDFLAGS))
 $(linked_module_64) : PRIVATE_TARGET_GLOBAL_LDFLAGS := $(filter-out $(FLAGS_TO_BE_FILTERED),$(PRIVATE_TARGET_GLOBAL_LDFLAGS))
 
+ifeq ($(LOCAL_SDCLANG_LTO_UNSAFE_FILTER), true)
+$(linked_module_32) : PRIVATE_LDFLAGS := $(filter-out $(FLAGS_TO_BE_FILTERED),$(PRIVATE_LDFLAGS))
+$(linked_module_64) : PRIVATE_LDFLAGS := $(filter-out $(FLAGS_TO_BE_FILTERED),$(PRIVATE_LDFLAGS))
+endif
+
 endif
