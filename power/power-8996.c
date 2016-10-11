@@ -47,7 +47,9 @@
 #include "performance.h"
 #include "power-common.h"
 
+pthread_mutex_t camera_hint_mutex = PTHREAD_MUTEX_INITIALIZER;
 static int display_hint_sent;
+static int camera_hint_ref_count;
 
 static int process_video_encode_hint(void *metadata)
 {
@@ -101,15 +103,26 @@ static int process_video_encode_hint(void *metadata)
                 0x41810000, 0x9C4, 0x41814000, 0x32, 0x4180C000, 0x0, 0x41820000, 0xA,
                 0x41438100, 0x0,  0x41438000, 0x0};
 
-            perform_hint_action(video_encode_metadata.hint_id,
-                    resource_values, sizeof(resource_values)/sizeof(resource_values[0]));
+            pthread_mutex_lock(&camera_hint_mutex);
+            camera_hint_ref_count++;
+            if (camera_hint_ref_count == 1) {
+                perform_hint_action(video_encode_metadata.hint_id,
+                        resource_values, sizeof(resource_values)/sizeof(resource_values[0]));
+            }
+            pthread_mutex_unlock(&camera_hint_mutex);
             ALOGI("Video Encode hint start");
             return HINT_HANDLED;
         }
     } else if (video_encode_metadata.state == 0) {
         if ((strncmp(governor, INTERACTIVE_GOVERNOR, strlen(INTERACTIVE_GOVERNOR)) == 0) &&
                 (strlen(governor) == strlen(INTERACTIVE_GOVERNOR))) {
-            undo_hint_action(video_encode_metadata.hint_id);
+            pthread_mutex_lock(&camera_hint_mutex);
+            camera_hint_ref_count--;
+            if (!camera_hint_ref_count) {
+                undo_hint_action(video_encode_metadata.hint_id);
+            }
+            pthread_mutex_unlock(&camera_hint_mutex);
+
             ALOGI("Video Encode hint stop");
             return HINT_HANDLED;
         }
