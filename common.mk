@@ -14,8 +14,7 @@ include device/qcom/common/utils.mk
 include device/qcom/common/sdclang/sdclang.mk
 
 # Qualcomm specific packages
-PRODUCT_PACKAGES += \
-    SnapdragonCamera
+PRODUCT_PACKAGES += SnapdragonCamera
 
 TARGET_CRYPTFS_HW_PATH := device/qcom/common/cryptfs_hw
 
