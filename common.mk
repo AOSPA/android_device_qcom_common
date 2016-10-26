@@ -18,6 +18,9 @@ PRODUCT_PACKAGES += SnapdragonCamera
 
 TARGET_CRYPTFS_HW_PATH := device/qcom/common/cryptfs_hw
 
+# SECCOMP Extension
+BOARD_SECCOMP_POLICY += device/qcom/common/seccomp
+
 # Advanced DPM
 ifeq ($(TARGET_WANTS_EXTENDED_DPM_PLATFORM),true)
 PRODUCT_BOOT_JARS += tcmclient
