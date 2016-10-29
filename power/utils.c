@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2012-2013, The Linux Foundation. All rights reserved.
+ * Copyright (c) 2012-2013,2015-2016, The Linux Foundation. All rights reserved.
  *
  * Redistribution and use in source and binary forms, with or without
  * modification, are permitted provided that the following conditions are
@@ -196,6 +196,12 @@ int get_scaling_governor_check_cores(char governor[], int size,int core_num)
         governor[len--] = '\0';
 
     return 0;
+}
+
+int is_interactive_governor(char* governor) {
+   if (strncmp(governor, INTERACTIVE_GOVERNOR, (strlen(INTERACTIVE_GOVERNOR)+1)) == 0)
+      return 1;
+   return 0;
 }
 
 int interaction(int duration, int num_args, int opt_list[])
