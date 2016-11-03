@@ -1,6 +1,5 @@
 LOCAL_PATH := $(call my-dir)
 
-ifneq ($(TARGET_USES_AOSP),true)
 ifeq ($(call is-vendor-board-platform,QCOM),true)
 
 # HAL module implemenation stored in
@@ -119,5 +118,4 @@ LOCAL_MODULE := power.$(TARGET_BOARD_PLATFORM)
 LOCAL_MODULE_TAGS := optional
 include $(BUILD_SHARED_LIBRARY)
 
-endif
 endif
