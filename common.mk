@@ -1,3 +1,5 @@
+TARGET_USES_AOSP ?= false
+
 TARGET_USES_QCOM_BSP := $(call match-word,false,$(TARGET_USES_AOSP))
 
 TARGET_COMPILE_WITH_MSM_KERNEL := true
