@@ -10,7 +10,9 @@ BOARD_USES_ADRENO := true
 include device/qcom/common/utils.mk
 
 # include definitions for SDCLANG
+ifeq ($(HOST_OS),linux)
 include device/qcom/common/sdclang/sdclang.mk
+endif
 
 # Qualcomm specific packages
 PRODUCT_PACKAGES += SnapdragonCamera
