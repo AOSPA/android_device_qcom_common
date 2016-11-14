@@ -1,4 +1,6 @@
-TARGET_USES_QCOM_BSP := $(call match-word,false,$(TARGET_USES_AOSP))
+ifneq ($(TARGET_USES_AOSP),true)
+TARGET_USES_QCOM_BSP := true
+endif
 
 TARGET_COMPILE_WITH_MSM_KERNEL := true
 TARGET_HAS_QC_KERNEL_SOURCE := true
