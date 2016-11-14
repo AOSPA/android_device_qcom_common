@@ -15,6 +15,7 @@ $(warning * SDCLANG is not supported on non-linux hosts. Disabling...)
 $(warning ****************************************************************)
 else
 # include definitions for SDCLANG
+ifeq ($(HOST_OS),linux)
 include device/qcom/common/sdclang/sdclang.mk
 endif
 
