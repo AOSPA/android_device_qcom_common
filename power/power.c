@@ -407,7 +407,7 @@ void set_interactive(struct power_module *module, int on)
                 (strlen(governor) == strlen(INTERACTIVE_GOVERNOR))) {
             undo_hint_action(DISPLAY_STATE_HINT_ID);
             display_hint_sent = 0;
-        } else if ((strncmp(governor, MSMDCVS_GOVERNOR, strlen(MSMDCVS_GOVERNOR)) == 0) && 
+        } else if ((strncmp(governor, MSMDCVS_GOVERNOR, strlen(MSMDCVS_GOVERNOR)) == 0) &&
                 (strlen(governor) == strlen(MSMDCVS_GOVERNOR))) {
             if (saved_interactive_mode == -1 || saved_interactive_mode == 0) {
                 /* Display turned on. Restore if possible. */
@@ -469,14 +469,6 @@ void set_interactive(struct power_module *module, int on)
 
 void set_feature(struct power_module *module, feature_t feature, int state)
 {
-#ifdef TAP_TO_WAKE_NODE
-    char tmp_str[NODE_MAX];
-    if (feature == POWER_FEATURE_DOUBLE_TAP_TO_WAKE) {
-        snprintf(tmp_str, NODE_MAX, "%d", state);
-        sysfs_write(TAP_TO_WAKE_NODE, tmp_str);
-        return;
-    }
-#endif
     set_device_specific_feature(module, feature, state);
 }
 struct power_module HAL_MODULE_INFO_SYM = {
