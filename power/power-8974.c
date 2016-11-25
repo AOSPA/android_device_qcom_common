@@ -80,8 +80,8 @@ int set_interactive_override(struct power_module *module, int on)
             }
         }
 
-        if ((strncmp(governor, ONDEMAND_GOVERNOR, strlen(ONDEMAND_GOVERNOR)) == 0) &&
-                (strlen(governor) == strlen(ONDEMAND_GOVERNOR))) {
+        if ((strncmp(governor, INTERACTIVE_GOVERNOR, strlen(INTERACTIVE_GOVERNOR)) == 0) &&
+                (strlen(governor) == strlen(INTERACTIVE_GOVERNOR))) {
             int resource_values[] = {MS_500, SYNC_FREQ_600, OPTIMAL_FREQ_600, THREAD_MIGRATION_SYNC_OFF};
 
             if (!display_hint_sent) {
@@ -101,8 +101,8 @@ int set_interactive_override(struct power_module *module, int on)
             display_hint2_sent = 0;
         }
 
-        if ((strncmp(governor, ONDEMAND_GOVERNOR, strlen(ONDEMAND_GOVERNOR)) == 0) &&
-                (strlen(governor) == strlen(ONDEMAND_GOVERNOR))) {
+        if ((strncmp(governor, INTERACTIVE_GOVERNOR, strlen(INTERACTIVE_GOVERNOR)) == 0) &&
+                (strlen(governor) == strlen(INTERACTIVE_GOVERNOR))) {
             undo_hint_action(DISPLAY_STATE_HINT_ID);
             display_hint_sent = 0;
 
