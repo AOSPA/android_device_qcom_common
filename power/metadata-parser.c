@@ -52,15 +52,17 @@ int parse_metadata(char *metadata, char **metadata_saveptr,
                     ATTRIBUTE_VALUE_DELIM)) != NULL) {
         bytes_to_copy = MIN((attribute_value_delim - attribute_string),
                 attribute_size - 1);
-        strncpy(attribute, attribute_string,
-                bytes_to_copy);
-        attribute[bytes_to_copy] = '\0';
+        /* Replace strncpy with strlcpy
+         * Add +1 to bytes_to_copy as strlcpy copies size-1 bytes */
+        strlcpy(attribute, attribute_string,
+                bytes_to_copy+1);
 
         bytes_to_copy = MIN(strlen(attribute_string) - strlen(attribute) - 1,
                 value_size - 1);
-        strncpy(value, attribute_value_delim + 1,
-                bytes_to_copy);
-        value[bytes_to_copy] = '\0';
+        /* Replace strncpy with strlcpy
+         * Add +1 to bytes_to_copy as strlcpy copies size-1 bytes */
+        strlcpy(value, attribute_value_delim + 1,
+                bytes_to_copy+1);
     }
 
     return METADATA_PARSING_CONTINUE;
