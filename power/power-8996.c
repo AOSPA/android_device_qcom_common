@@ -130,6 +130,33 @@ int power_hint_override(struct power_module *module, power_hint_t hint, void *da
     return ret_val;
 }
 
+/* Indicates whether the hint for
+ * sutained performance mode can be handled.
+ */
+bool sustained_performance_supported()
+{
+    return SUPPORTED;
+}
+
+/* Contains chipset/target specific handling
+ * for sustained performance mode.
+ */
+int toggle_sustained_performance(bool request_enable)
+{
+    static int handle_sustained_performance = 0;
+
+    if (request_enable) {
+        int resources[] = {0x40804000, 1190, 0x40804100, 1190, 0x41424000, 40};
+        handle_sustained_performance = interaction_with_handle(
+                 handle_sustained_performance, 0,
+                 sizeof(resources) / sizeof(resources[0]), resources);
+    } else {
+        release_request(handle_sustained_performance);
+    }
+
+    return HINT_HANDLED;
+}
+
 int set_interactive_override(struct power_module *module, int on)
 {
     return HINT_HANDLED; /* Don't excecute this code path, not in use */
