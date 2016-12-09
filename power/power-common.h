@@ -41,6 +41,9 @@
 #define HINT_HANDLED (0)
 #define HINT_NONE (-1)
 
+#define SUPPORTED (true)
+#define UNSUPPORTED (false)
+
 enum CPU_GOV_CHECK {
     CPU0 = 0,
     CPU1 = 1,
