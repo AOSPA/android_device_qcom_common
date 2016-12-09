@@ -1,5 +1,6 @@
 /*
  * Copyright (c) 2012-2013, The Linux Foundation. All rights reserved.
+ * Copyright (c) 2017, Paranoid Android
  *
  * Redistribution and use in source and binary forms, with or without
  * modification, are permitted provided that the following conditions are
@@ -57,6 +58,10 @@ static int saved_interactive_mode = -1;
 static int slack_node_rw_failed = 0;
 static int display_hint_sent;
 int display_boost;
+
+// Sustained performance mode support
+static bool sustained_performance_mode;
+static pthread_mutex_t sustained_performance_toggle_lock = PTHREAD_MUTEX_INITIALIZER;
 
 static struct hw_module_methods_t power_module_methods = {
     .open = NULL,
@@ -199,6 +204,13 @@ int __attribute__ ((weak)) power_hint_override(struct power_module *module, powe
     return HINT_NONE;
 }
 
+/*
+ * Contains chipset/target specific handling
+ * for Sustained performance mode.
+ */
+void __attribute__ ((weak)) toggle_sustained_performance(bool request_enable)
+{}
+
 static void power_hint(struct power_module *module, power_hint_t hint,
         void *data)
 {
@@ -211,10 +223,29 @@ static void power_hint(struct power_module *module, power_hint_t hint,
     switch(hint) {
         case POWER_HINT_VSYNC:
         break;
+        /* Sustained performance mode */
+        case POWER_HINT_SUSTAINED_PERFORMANCE:
+        {
+
+        pthread_mutex_lock(&sustained_performance_toggle_lock);
+
+        /* Execute the change in SPM mode */
+        toggle_sustained_performance(data);
+        sustained_performance_mode = data;
+
+        pthread_mutex_unlock(&sustained_performance_toggle_lock);
+
+        }
+        break;
         case POWER_HINT_INTERACTION:
         {
             int resources[] = {0x702, 0x20F, 0x30F};
             int duration = 3000;
+
+            /* Avoid dispatching an interaction boost if Sustained performance mode is active */
+            if (sustained_performance_mode)
+                return;
+
             static int handle_interaction = 0;
 
             handle_interaction = interaction_with_handle(handle_interaction, duration, sizeof(resources)/sizeof(resources[0]), resources);
