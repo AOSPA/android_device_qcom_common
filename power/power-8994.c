@@ -176,6 +176,29 @@ int power_hint_override(struct power_module *module, power_hint_t hint, void *da
     return ret_val;
 }
 
+/*
+ * Contains chipset/target specific handling
+ * for Sustained performance mode.
+ */
+void toggle_sustained_performance(bool request_enable)
+{
+    static int handle_sustained_performance = 0;
+
+    if (request_enable) {
+        /*
+         * Unplug all big cores
+         * Set maximum GPU power level to 3
+         * Set interactive timer rate to 40ms
+         */
+        int resources[] = {0x41004000, 0x0, 0x41424000, 0x28, 0X42808000, 0x3};
+        handle_sustained_performance = interaction_with_handle(
+                 handle_sustained_performance, 0,
+                 sizeof(resources) / sizeof(resources[0]), resources);
+    } else {
+        release_request(handle_sustained_performance);
+    }
+}
+
 int set_interactive_override(struct power_module *module, int on)
 {
     char governor[80];
