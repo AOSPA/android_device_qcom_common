@@ -64,13 +64,18 @@ else
   LOCAL_STATIC_LIBRARIES += $(TARGET_POWER_SET_FEATURE_LIB)
 endif
 
+ifeq ($(call is-board-platform-in-list,msm8953), true)
+LOCAL_SRC_FILES += power-8953.c
+endif
+
 ifeq ($(call is-board-platform-in-list,msm8998), true)
 LOCAL_SRC_FILES += power-8998.c
 endif
 
-ifeq ($(call is-board-platform-in-list,msm8953), true)
-LOCAL_SRC_FILES += power-8953.c
+ifeq ($(call is-board-platform-in-list,sdm660), true)
+LOCAL_SRC_FILES += power-660.c
 endif
+
 
 ifeq ($(TARGET_USES_INTERACTION_BOOST),true)
     LOCAL_CFLAGS += -DINTERACTION_BOOST
