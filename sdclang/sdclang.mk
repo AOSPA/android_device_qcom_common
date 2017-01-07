@@ -1,4 +1,4 @@
-# Copyright (C) 2016 ParanoidAndroid Project
+# Copyright (C) 2016-2017 ParanoidAndroid Project
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -19,4 +19,4 @@ SDCLANG_PATH := vendor/qcom/sdclang-3.8/linux-x86/bin
 
 SDCLANG_LTO_DEFS := device/qcom/common/sdclang/sdllvm-lto-defs.mk
 
-SDCLANG_COMMON_FLAGS := -O3
+SDCLANG_COMMON_FLAGS := -O3 -fvectorize-loops
