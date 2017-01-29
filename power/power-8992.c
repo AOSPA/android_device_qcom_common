@@ -190,7 +190,7 @@ int set_interactive_override(struct power_module *module, int on)
         /* Display off */
         if ((strncmp(governor, INTERACTIVE_GOVERNOR, strlen(INTERACTIVE_GOVERNOR)) == 0) &&
             (strlen(governor) == strlen(INTERACTIVE_GOVERNOR))) {
-            int resource_values[] = {0x777}; /* 4+0 core config in display off */
+            int resource_values[] = {0x41004000, 0x0}; /* 4+0 core config in display off */
             if (!display_hint_sent) {
                 perform_hint_action(DISPLAY_STATE_HINT_ID,
                 resource_values, sizeof(resource_values)/sizeof(resource_values[0]));
