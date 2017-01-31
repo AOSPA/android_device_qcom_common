@@ -52,6 +52,59 @@
       "revId": "02ad8bcb472db4459e87ecde9f862d13ee0b3a3a",
       "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "fa81d914_0da195a9",
+        "filename": "power/power.c",
+        "patchSetId": 9
+      },
+      "lineNbr": 211,
+      "author": {
+        "id": 1000064
+      },
+      "writtenOn": "2017-01-31T22:37:17Z",
+      "side": 1,
+      "message": "I think the overhead most likely isn\u0027t that big a deal.",
+      "parentUuid": "fa81d914_edb52132",
+      "revId": "02ad8bcb472db4459e87ecde9f862d13ee0b3a3a",
+      "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "fa81d914_cdc77d63",
+        "filename": "power/power.c",
+        "patchSetId": 9
+      },
+      "lineNbr": 243,
+      "author": {
+        "id": 1000064
+      },
+      "writtenOn": "2017-01-31T22:37:17Z",
+      "side": 1,
+      "message": "What would cause data \u003d\u003d null? Since it isn\u0027t being used in this block of code, is it necessary to null check it?",
+      "revId": "02ad8bcb472db4459e87ecde9f862d13ee0b3a3a",
+      "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "fa81d914_edc44161",
+        "filename": "power/power.c",
+        "patchSetId": 9
+      },
+      "lineNbr": 248,
+      "author": {
+        "id": 1000064
+      },
+      "writtenOn": "2017-01-31T22:37:17Z",
+      "side": 1,
+      "message": "Lines 248 through 253 can be shortened to:\n\ntoggle_sustained_performance(!sustained_performance_mode);\nsustained_performance_mode \u003d !sustained_performance_mode;",
+      "parentUuid": "",
+      "revId": "02ad8bcb472db4459e87ecde9f862d13ee0b3a3a",
+      "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad",
+      "unresolved": false
     }
   ]
 }
