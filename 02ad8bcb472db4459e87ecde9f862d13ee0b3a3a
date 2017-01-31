@@ -16,6 +16,24 @@
       "revId": "02ad8bcb472db4459e87ecde9f862d13ee0b3a3a",
       "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "fa81d914_2da019f4",
+        "filename": "power/power.c",
+        "patchSetId": 9
+      },
+      "lineNbr": 211,
+      "author": {
+        "id": 1000064
+      },
+      "writtenOn": "2017-01-31T05:02:07Z",
+      "side": 1,
+      "message": "Err, by \u0027unconditionally\u0027, I meant \u0027regardless of whether sustained performance mode is supported by the target powerHAL\u0027.",
+      "parentUuid": "fa81d914_ed5e0112",
+      "revId": "02ad8bcb472db4459e87ecde9f862d13ee0b3a3a",
+      "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad",
+      "unresolved": false
     }
   ]
 }
