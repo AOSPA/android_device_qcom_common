@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "fa81d914_ed5e0112",
+        "filename": "power/power.c",
+        "patchSetId": 9
+      },
+      "lineNbr": 211,
+      "author": {
+        "id": 1000064
+      },
+      "writtenOn": "2017-01-31T04:52:23Z",
+      "side": 1,
+      "message": "What\u0027s the point of this method? If toggle_sustained_performance() is not implemented by a target powerHAL, simply nothing happens when calling it. In that case, why not get rid of this method and call toggle_sustained_performance() unconditionally?",
+      "revId": "02ad8bcb472db4459e87ecde9f862d13ee0b3a3a",
+      "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad",
+      "unresolved": false
+    }
+  ]
+}
