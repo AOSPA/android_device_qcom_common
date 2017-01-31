@@ -34,6 +34,24 @@
       "revId": "02ad8bcb472db4459e87ecde9f862d13ee0b3a3a",
       "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "fa81d914_edb52132",
+        "filename": "power/power.c",
+        "patchSetId": 9
+      },
+      "lineNbr": 211,
+      "author": {
+        "id": 1000011
+      },
+      "writtenOn": "2017-01-31T08:29:22Z",
+      "side": 1,
+      "message": "yeah, you are right here in terms of functionality.\nMy plan was to avoid locking the mutex if the device opts in to SPM but the target  chipset doesn\u0027t support it. Do you think it\u0027s worth it?",
+      "parentUuid": "fa81d914_2da019f4",
+      "revId": "02ad8bcb472db4459e87ecde9f862d13ee0b3a3a",
+      "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad",
+      "unresolved": false
     }
   ]
 }
