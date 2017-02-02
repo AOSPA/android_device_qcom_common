@@ -73,6 +73,24 @@
     },
     {
       "key": {
+        "uuid": "fa81d914_4d0c6d95",
+        "filename": "power/power.c",
+        "patchSetId": 9
+      },
+      "lineNbr": 211,
+      "author": {
+        "id": 1000011
+      },
+      "writtenOn": "2017-02-02T17:10:17Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "fa81d914_0da195a9",
+      "revId": "02ad8bcb472db4459e87ecde9f862d13ee0b3a3a",
+      "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "fa81d914_cdc77d63",
         "filename": "power/power.c",
         "patchSetId": 9
@@ -84,6 +102,24 @@
       "writtenOn": "2017-01-31T22:37:17Z",
       "side": 1,
       "message": "What would cause data \u003d\u003d null? Since it isn\u0027t being used in this block of code, is it necessary to null check it?",
+      "revId": "02ad8bcb472db4459e87ecde9f862d13ee0b3a3a",
+      "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "fa81d914_6d1131ac",
+        "filename": "power/power.c",
+        "patchSetId": 9
+      },
+      "lineNbr": 243,
+      "author": {
+        "id": 1000011
+      },
+      "writtenOn": "2017-02-02T17:10:17Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "fa81d914_cdc77d63",
       "revId": "02ad8bcb472db4459e87ecde9f862d13ee0b3a3a",
       "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad",
       "unresolved": false
@@ -102,6 +138,24 @@
       "side": 1,
       "message": "Lines 248 through 253 can be shortened to:\n\ntoggle_sustained_performance(!sustained_performance_mode);\nsustained_performance_mode \u003d !sustained_performance_mode;",
       "parentUuid": "",
+      "revId": "02ad8bcb472db4459e87ecde9f862d13ee0b3a3a",
+      "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "fa81d914_8d25850c",
+        "filename": "power/power.c",
+        "patchSetId": 9
+      },
+      "lineNbr": 248,
+      "author": {
+        "id": 1000011
+      },
+      "writtenOn": "2017-02-02T17:10:17Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "fa81d914_edc44161",
       "revId": "02ad8bcb472db4459e87ecde9f862d13ee0b3a3a",
       "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad",
       "unresolved": false
