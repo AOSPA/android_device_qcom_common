@@ -112,19 +112,6 @@ static unsigned char* get_tmp_passwd(const char* passwd)
     return tmp_passwd;
 }
 
-static void wipe_userdata()
-{
-    mkdir("/cache/recovery", 0700);
-    int fd = open("/cache/recovery/command", O_RDWR|O_CREAT|O_TRUNC|O_NOFOLLOW, 0600);
-    if (fd >= 0) {
-        write(fd, "--wipe_data", strlen("--wipe_data") + 1);
-        close(fd);
-    } else {
-        SLOGE("could not open /cache/recovery/command\n");
-    }
-    android_reboot(ANDROID_RB_RESTART2, 0, "recovery");
-}
-
 static int is_qseecom_up()
 {
     int i = 0;
@@ -203,7 +190,7 @@ static int set_key(const char* currentpasswd, const char* passwd, const char* en
             }
             if(err < 0) {
                 if(ERR_MAX_PASSWORD_ATTEMPTS == err)
-                    wipe_userdata();
+                    SLOGI("Maximum wrong password attempts reached, will erase userdata\n");
             }
             secure_memset(tmp_passwd, 0, MAX_PASSWORD_LEN);
             free(tmp_passwd);
