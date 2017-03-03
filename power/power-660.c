@@ -100,6 +100,7 @@ int  set_interactive_override(struct power_module *module, int on)
     char governor[80];
     char tmp_str[NODE_MAX];
     int resource_values[20];
+    int num_resources;
     struct video_encode_metadata_t video_encode_metadata;
     int rc;
 
@@ -129,10 +130,12 @@ int  set_interactive_override(struct power_module *module, int on)
                         - Sample_ms of 10ms
             */
             if(is_target_SDM630()){
-                memcpy(resource_values, (int[]) { 0x41414000, 0x459,
-                                                  0x41410000, 0x5F,
-                                                  0x41400000, 0x4,
-                                                  0x41820000, 0xA }, sizeof(resource_values));
+                int res[] = { 0x41414000, 0x459,
+                              0x41410000, 0x5F,
+                              0x41400000, 0x4,
+                              0x41820000, 0xA };
+                memcpy(resource_values, res, sizeof(resource_values));
+                num_resources = sizeof(res)/sizeof(res[0]);
             }
              /*
                  1. CPUfreq params
@@ -144,15 +147,18 @@ int  set_interactive_override(struct power_module *module, int on)
                  3. Sched group upmigrate - 500
             */
             else{
-                 memcpy(resource_values, (int[]) { 0x41414100, 0x386,
-                                                   0x41410100, 0x5F,
-                                                   0x41400100, 0x4,
-                                                   0x41820000, 0xA,
-                                                   0x40C54000, 0x1F4}, sizeof(resource_values));
+                int res[] =  { 0x41414100, 0x386,
+                               0x41410100, 0x5F,
+                               0x41400100, 0x4,
+                               0x41820000, 0xA,
+                               0x40C54000, 0x1F4};
+                memcpy(resource_values, res, sizeof(resource_values));
+                num_resources = sizeof(res)/sizeof(res[0]);
+
             }
                if (!display_hint_sent) {
                    perform_hint_action(DISPLAY_STATE_HINT_ID,
-                   resource_values, sizeof(resource_values)/sizeof(resource_values[0]));
+                   resource_values, num_resources);
                   display_hint_sent = 1;
                 }
              }
@@ -176,6 +182,7 @@ static void process_video_encode_hint(void *metadata)
 {
     char governor[80];
     int resource_values[20];
+    int num_resources;
     struct video_encode_metadata_t video_encode_metadata;
 
     ALOGI("Got process_video_encode_hint");
@@ -224,11 +231,14 @@ static void process_video_encode_hint(void *metadata)
                         - Sample_ms of 10ms
             */
             if(is_target_SDM630()){
-                 memcpy(resource_values, (int[]) { 0x41414000, 0x459,
-                                                   0x41410000, 0x5F,
-                                                   0x41400000, 0x4,
-                                                   0x41420000, 0x5A,
-                                                   0x41820000, 0xA}, sizeof(resource_values));
+                int res[] = { 0x41414000, 0x459,
+                              0x41410000, 0x5F,
+                              0x41400000, 0x4,
+                              0x41420000, 0x5A,
+                              0x41820000, 0xA};;
+                memcpy(resource_values, res, sizeof(resource_values));
+                num_resources = sizeof(res)/sizeof(res[0]);
+
             }
             /*
                  1. CPUfreq params
@@ -239,18 +249,19 @@ static void process_video_encode_hint(void *metadata)
                         - Sample_ms of 10ms
             */
             else{
-                 memcpy(resource_values, (int[]) { 0x41414100, 0x386,
-                                                   0x41410100, 0x5F,
-                                                   0x41400100, 0x4,
-                                                   0x41820000, 0xA}, sizeof(resource_values));
+                int res[] = { 0x41414100, 0x386,
+                              0x41410100, 0x5F,
+                              0x41400100, 0x4,
+                              0x41820000, 0xA};
+                memcpy(resource_values, res, sizeof(resource_values));
+                num_resources = sizeof(res)/sizeof(res[0]);
             }
             pthread_mutex_lock(&camera_hint_mutex);
             camera_hint_ref_count++;
             if (camera_hint_ref_count == 1) {
                 if (!video_encode_hint_sent) {
                     perform_hint_action(video_encode_metadata.hint_id,
-                    resource_values,
-                    sizeof(resource_values)/sizeof(resource_values[0]));
+                    resource_values, num_resources);
                     video_encode_hint_sent = 1;
                 }
            }
