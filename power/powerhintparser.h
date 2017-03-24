@@ -1,10 +1,9 @@
-/*
- * Copyright (c) 2012, 2013, 2015, 2017, The Linux Foundation. All rights reserved.
+/* Copyright (c) 2016, The Linux Foundation. All rights reserved.
  *
  * Redistribution and use in source and binary forms, with or without
  * modification, are permitted provided that the following conditions are
  * met:
- * *    * Redistributions of source code must retain the above copyright
+ *     * Redistributions of source code must retain the above copyright
  *       notice, this list of conditions and the following disclaimer.
  *     * Redistributions in binary form must reproduce the above
  *       copyright notice, this list of conditions and the following
@@ -25,23 +24,25 @@
  * WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE
  * OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN
  * IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+ *
  */
 
-/* Default use-case hint IDs */
-#define DEFAULT_VIDEO_ENCODE_HINT_ID    (0x0A00)
-#define DEFAULT_VIDEO_DECODE_HINT_ID    (0x0B00)
-#define DISPLAY_STATE_HINT_ID           (0x0C00)
-#define DISPLAY_STATE_HINT_ID_2         (0x0D00)
-#define CAM_PREVIEW_HINT_ID             (0x0E00)
-#define SUSTAINED_PERF_HINT_ID          (0x0F00)
-#define VR_MODE_HINT_ID                 (0x1000)
-#define VR_MODE_SUSTAINED_PERF_HINT_ID  (0x1001)
+#ifndef __POWERHINTPARSER__
+#define __POWERHINTPARSER__
 
-struct hint_data {
-    unsigned long hint_id; /* This is our key. */
-    unsigned long perflock_handle;
-};
+#define POWERHINT_XML      "/system/etc/powerhint.xml"
+#define MAX_HINT 6
+#define MAX_PARAM 30
 
-int hint_compare(struct hint_data *first_hint,
-        struct hint_data *other_hint);
-void hint_dump(struct hint_data *hint);
+typedef struct perflock_param_t {
+    int type;
+    int numParams;
+    int paramList[MAX_PARAM];//static limit on number of hints - 15
+}perflock_param_t;
+
+static perflock_param_t powerhint[MAX_HINT];
+
+int parsePowerhintXML();
+int *getPowerhint(int, int*);
+
+#endif /* __POWERHINTPARSER__ */
