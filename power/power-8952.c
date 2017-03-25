@@ -94,7 +94,8 @@ int  set_interactive_override(struct power_module *module, int on)
                 (strlen(governor) == strlen(INTERACTIVE_GOVERNOR))) {
                int resource_values[] = {INT_OP_CLUSTER0_TIMER_RATE, BIG_LITTLE_TR_MS_50,
                                         INT_OP_CLUSTER1_TIMER_RATE, BIG_LITTLE_TR_MS_50,
-                                        INT_OP_NOTIFY_ON_MIGRATE, 0x00};
+                                        INT_OP_NOTIFY_ON_MIGRATE, 0x00, 0x41410100,
+                                        0x64, 0x41410000, 0x64};
 
                if (!display_hint_sent) {
                    perform_hint_action(DISPLAY_STATE_HINT_ID,
