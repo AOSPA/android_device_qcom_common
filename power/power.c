@@ -214,6 +214,17 @@ void __attribute__ ((weak)) toggle_sustained_performance(bool request_enable)
 static void power_hint(struct power_module *module, power_hint_t hint,
         void *data)
 {
+    /* Sustained performance mode */
+    if (hint == POWER_HINT_SUSTAINED_PERFORMANCE) {
+        pthread_mutex_lock(&sustained_performance_toggle_lock);
+
+        /* Execute the change in SPM mode */
+        toggle_sustained_performance(data);
+        sustained_performance_mode = data;
+
+        pthread_mutex_unlock(&sustained_performance_toggle_lock);
+    }
+
     /* Check if this hint has been overridden. */
     if (power_hint_override(module, hint, data) == HINT_HANDLED) {
         /* The power_hint has been handled. We can skip the rest. */
@@ -222,20 +233,6 @@ static void power_hint(struct power_module *module, power_hint_t hint,
 
     switch(hint) {
         case POWER_HINT_VSYNC:
-        break;
-        /* Sustained performance mode */
-        case POWER_HINT_SUSTAINED_PERFORMANCE:
-        {
-
-        pthread_mutex_lock(&sustained_performance_toggle_lock);
-
-        /* Execute the change in SPM mode */
-        toggle_sustained_performance(data);
-        sustained_performance_mode = data;
-
-        pthread_mutex_unlock(&sustained_performance_toggle_lock);
-
-        }
         break;
         case POWER_HINT_INTERACTION:
         {
