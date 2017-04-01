@@ -1,0 +1,8 @@
+Code-Review+2: Alex Naidis <alex.naidis@linux.com>
+Code-Review+2: Carlo Savignano <carlosavignano@aospa.co>
+Verified+1: Carlo Savignano <carlosavignano@aospa.co>
+Submitted-by: Carlo Savignano <carlosavignano@aospa.co>
+Submitted-at: Sat, 01 Apr 2017 14:09:22 +0000
+Reviewed-on: https://gerrit.aospa.co/2128
+Project: AOSPA/android_device_qcom_common
+Branch: refs/heads/nougat-mr1
