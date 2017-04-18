@@ -48,6 +48,8 @@
 #include "performance.h"
 #include "power-common.h"
 
+#define MIN_VAL(X,Y) ((X>Y)?(Y):(X))
+
 static int saved_interactive_mode = -1;
 static int display_hint_sent;
 static int video_encode_hint_sent;
@@ -134,7 +136,7 @@ int  set_interactive_override(struct power_module *module, int on)
                               0x41410000, 0x5F,
                               0x41400000, 0x4,
                               0x41820000, 0xA };
-                memcpy(resource_values, res, sizeof(resource_values));
+                memcpy(resource_values, res, MIN_VAL(sizeof(resource_values), sizeof(res)));
                 num_resources = sizeof(res)/sizeof(res[0]);
             }
              /*
@@ -152,7 +154,7 @@ int  set_interactive_override(struct power_module *module, int on)
                                0x41400100, 0x4,
                                0x41820000, 0xA,
                                0x40C54000, 0x1F4};
-                memcpy(resource_values, res, sizeof(resource_values));
+                memcpy(resource_values, res, MIN_VAL(sizeof(resource_values), sizeof(res)));
                 num_resources = sizeof(res)/sizeof(res[0]);
 
             }
@@ -236,7 +238,7 @@ static void process_video_encode_hint(void *metadata)
                               0x41400000, 0x4,
                               0x41420000, 0x5A,
                               0x41820000, 0xA};;
-                memcpy(resource_values, res, sizeof(resource_values));
+                memcpy(resource_values, res, MIN_VAL(sizeof(resource_values), sizeof(res)));
                 num_resources = sizeof(res)/sizeof(res[0]);
 
             }
@@ -253,7 +255,7 @@ static void process_video_encode_hint(void *metadata)
                               0x41410100, 0x5F,
                               0x41400100, 0x4,
                               0x41820000, 0xA};
-                memcpy(resource_values, res, sizeof(resource_values));
+                memcpy(resource_values, res, MIN_VAL(sizeof(resource_values), sizeof(res)));
                 num_resources = sizeof(res)/sizeof(res[0]);
             }
             pthread_mutex_lock(&camera_hint_mutex);
