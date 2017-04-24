@@ -228,7 +228,8 @@ static void process_video_encode_hint(void *metadata)
                         - hispeed freq for big - 1113Mhz
                         - go hispeed load for big - 95
                         - above_hispeed_delay for big - 40ms
-                        - target loads - 90
+                        - target loads - 95
+                        - nr_run - 5
                  2. BusDCVS V2 params
                         - Sample_ms of 10ms
             */
@@ -236,8 +237,9 @@ static void process_video_encode_hint(void *metadata)
                 int res[] = { 0x41414000, 0x459,
                               0x41410000, 0x5F,
                               0x41400000, 0x4,
-                              0x41420000, 0x5A,
-                              0x41820000, 0xA};;
+                              0x41420000, 0x5F,
+                              0x40C2C000, 0X5,
+                              0x41820000, 0xA};
                 memcpy(resource_values, res, MIN_VAL(sizeof(resource_values), sizeof(res)));
                 num_resources = sizeof(res)/sizeof(res[0]);
 
