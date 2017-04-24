@@ -101,7 +101,7 @@ static unsigned char* get_tmp_passwd(const char* passwd)
         tmp_passwd = (unsigned char*)malloc(MAX_PASSWORD_LEN);
         if(tmp_passwd) {
             memset(tmp_passwd, 0, MAX_PASSWORD_LEN);
-            passwd_len = (strlen(passwd) > MAX_PASSWORD_LEN) ? MAX_PASSWORD_LEN : strlen(passwd);
+            passwd_len = strnlen(passwd, MAX_PASSWORD_LEN);
             memcpy(tmp_passwd, passwd, passwd_len);
         } else {
             SLOGE("%s: Failed to allocate memory for tmp passwd \n", __func__);
