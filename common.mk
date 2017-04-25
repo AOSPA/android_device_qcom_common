@@ -12,9 +12,12 @@ BOARD_USES_ADRENO := true
 include device/qcom/common/utils.mk
 
 ifneq ($(HOST_OS),linux)
-$(warning ****************************************************************)
-$(warning * SDCLANG is not supported on non-linux hosts. Disabling...)
-$(warning ****************************************************************)
+ifneq ($(SDCLANG_ALREADY_WARNED),true)
+$(warning **********************************************)
+$(warning * SDCLANG is not supported on non-linux hosts.)
+$(warning **********************************************)
+SDCLANG_ALREADY_WARNED := true
+endif
 else
 # include definitions for SDCLANG
 include device/qcom/common/sdclang/sdclang.mk
