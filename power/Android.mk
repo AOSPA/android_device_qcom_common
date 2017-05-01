@@ -82,7 +82,7 @@ endif
 
 LOCAL_MODULE := power.$(TARGET_BOARD_PLATFORM)
 LOCAL_MODULE_TAGS := optional
-LOCAL_CFLAGS := -Wno-unused-parameter -Wno-unused-variable
+LOCAL_CFLAGS += -Wno-unused-parameter -Wno-unused-variable
 include $(BUILD_SHARED_LIBRARY)
 
 endif
