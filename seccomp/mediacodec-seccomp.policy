@@ -10,3 +10,4 @@ getcwd: 1
 getdents64: 1
 inotify_init1: 1
 inotify_add_watch: 1
+inotify_rm_watch: 1
