@@ -24,7 +24,9 @@ include device/qcom/common/sdclang/sdclang.mk
 endif
 
 # Qualcomm specific packages
+ifneq ($(TARGET_USES_AOSP_CAMERA),true)
 PRODUCT_PACKAGES += SnapdragonCamera
+endif
 
 TARGET_CRYPTFS_HW_PATH := device/qcom/common/cryptfs_hw
 
