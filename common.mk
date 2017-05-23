@@ -8,6 +8,8 @@ TARGET_USES_QCOM_MM_AUDIO := true
 
 BOARD_USES_ADRENO := true
 
+BOARD_USES_QCNE := true
+
 # include additional build utilities
 include device/qcom/common/utils.mk
 
