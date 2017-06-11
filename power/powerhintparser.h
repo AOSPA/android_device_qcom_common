@@ -30,7 +30,7 @@
 #ifndef __POWERHINTPARSER__
 #define __POWERHINTPARSER__
 
-#define POWERHINT_XML      "/system/etc/powerhint.xml"
+#define POWERHINT_XML      "/vendor/etc/powerhint.xml"
 #define MAX_HINT 6
 #define MAX_PARAM 30
 
