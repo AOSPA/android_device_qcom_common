@@ -14,14 +14,15 @@ QCOM_BOARD_PLATFORMS += msm8976
 QCOM_BOARD_PLATFORMS += msm8992
 QCOM_BOARD_PLATFORMS += msm8994
 QCOM_BOARD_PLATFORMS += msm8996
+QCOM_BOARD_PLATFORMS += msm8998
 QCOM_BOARD_PLATFORMS += msm_bronze
 QCOM_BOARD_PLATFORMS += apq8084
 
 #List of targets that use video hw
-MSM_VIDC_TARGET_LIST := msm8974 msm8610 msm8226 apq8084 msm8916 msm8994 msm8909 msm8992 msm8996 msm8952 msm8937 msm8953 msmcobalt
+MSM_VIDC_TARGET_LIST := msm8974 msm8610 msm8226 apq8084 msm8916 msm8994 msm8909 msm8992 msm8996 msm8952 msm8937 msm8953 msm8998
 
 #List of targets that use master side content protection
-MASTER_SIDE_CP_TARGET_LIST := msm8996
+MASTER_SIDE_CP_TARGET_LIST := msm8996 msm8998
 
 # vars for use by utils
 empty :=
