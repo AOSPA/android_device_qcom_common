@@ -37,6 +37,21 @@
 #define VR_MODE_HINT_ID                 (0x1000)
 #define VR_MODE_SUSTAINED_PERF_HINT_ID  (0x1001)
 
+#define AOSP_DELTA                      (0x1200)
+
+#define VSYNC_HINT                      AOSP_DELTA + POWER_HINT_VSYNC
+#define INTERACTION_HINT                AOSP_DELTA + POWER_HINT_INTERACTION
+#define VIDEO_DECODE_HINT               AOSP_DELTA + POWER_HINT_VIDEO_DECODE
+#define VIDEO_ENCODE_HINT               AOSP_DELTA + POWER_HINT_VIDEO_ENCODE
+#define LOW_POWER_HINT                  AOSP_DELTA + POWER_HINT_LOW_POWER
+#define SUSTAINED_PERF_HINT             AOSP_DELTA + POWER_HINT_SUSTAINED_PERFORMANCE
+#define VR_MODE_HINT                    AOSP_DELTA + POWER_HINT_VR_MODE
+#define LAUNCH_HINT                     AOSP_DELTA + POWER_HINT_LAUNCH
+#define DISABLE_TOUCH_HINT              AOSP_DELTA + POWER_HINT_DISABLE_TOUCH
+
+#define VR_MODE_SUSTAINED_PERF_HINT    (0x1301)
+
+
 struct hint_data {
     unsigned long hint_id; /* This is our key. */
     unsigned long perflock_handle;
