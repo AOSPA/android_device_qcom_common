@@ -16,6 +16,8 @@ commonIncludes := \
                   hardware/libhardware/include/hardware/ \
                   $(TARGET_OUT_INTERMEDIATES)/KERNEL_OBJ/usr/include \
 
+LOCAL_ADDITIONAL_DEPENDENCIES := $(TARGET_OUT_INTERMEDIATES)/KERNEL_OBJ/usr
+
 LOCAL_C_INCLUDES := $(commonIncludes)
 LOCAL_SRC_FILES := $(sourceFiles)
 
