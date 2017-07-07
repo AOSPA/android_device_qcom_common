@@ -48,95 +48,106 @@
 #include "power-common.h"
 #include "powerhintparser.h"
 
-static int sustained_mode_handle = 0;
-static int vr_mode_handle = 0;
-int sustained_performance_mode = 0;
-int vr_mode = 0;
-static pthread_mutex_t s_interaction_lock = PTHREAD_MUTEX_INITIALIZER;
-#define CHECK_HANDLE(x) (((x)>0) && ((x)!=-1))
+#define CHECK_HANDLE(x) ((x)>0)
+#define NUM_PERF_MODES  3
 
-static int process_sustained_perf_hint(void *data)
-{
-    int duration = 0;
+typedef enum {
+    NORMAL_MODE       = 0,
+    SUSTAINED_MODE    = 1,
+    VR_MODE           = 2,
+    VR_SUSTAINED_MODE = (SUSTAINED_MODE|VR_MODE),
+    INVALID_MODE      = 0xFF
+}perf_mode_type_t;
 
-    pthread_mutex_lock(&s_interaction_lock);
-    if (data && sustained_performance_mode == 0) {
-        if (vr_mode == 0) { // Sustained mode only.
-            sustained_mode_handle = perf_hint_enable(
-                SUSTAINED_PERF_HINT, duration);
-            if (!CHECK_HANDLE(sustained_mode_handle)) {
-                ALOGE("Failed interaction_with_handle for sustained_mode_handle");
-                pthread_mutex_unlock(&s_interaction_lock);
-                return HINT_NONE;
-            }
-        } else if (vr_mode == 1) { // Sustained + VR mode.
-            release_request(vr_mode_handle);
-            sustained_mode_handle = perf_hint_enable(
-                VR_MODE_SUSTAINED_PERF_HINT, duration);
-            if (!CHECK_HANDLE(sustained_mode_handle)) {
-                ALOGE("Failed interaction_with_handle for sustained_mode_handle");
-                pthread_mutex_unlock(&s_interaction_lock);
-                return HINT_NONE;
-            }
+typedef struct perf_mode {
+    perf_mode_type_t type;
+    int perf_hint_id;
+}perf_mode_t;
+
+perf_mode_t perf_modes[NUM_PERF_MODES] = { { SUSTAINED_MODE, SUSTAINED_PERF_HINT },
+                                           { VR_MODE, VR_MODE_HINT },
+                                           { VR_SUSTAINED_MODE, VR_MODE_SUSTAINED_PERF_HINT } };
+
+static pthread_mutex_t perf_mode_switch_lock = PTHREAD_MUTEX_INITIALIZER;
+static int current_mode = NORMAL_MODE;
+
+static inline  int get_perfd_hint_id(perf_mode_type_t type) {
+    int i;
+    for(i=0; i<NUM_PERF_MODES; i++) {
+        if (perf_modes[i].type == type) {
+            ALOGD("Hint id is 0x%x for mode 0x%x", perf_modes[i].perf_hint_id, type);
+            return perf_modes[i].perf_hint_id;
         }
-        sustained_performance_mode = 1;
-    } else if (sustained_performance_mode == 1) {
-        release_request(sustained_mode_handle);
-        if (vr_mode == 1) { // Switch back to VR Mode.
-            vr_mode_handle = perf_hint_enable(
-                VR_MODE_HINT, duration);
-            if (!CHECK_HANDLE(vr_mode_handle)) {
-                ALOGE("Failed interaction_with_handle for vr_mode_handle");
-                pthread_mutex_unlock(&s_interaction_lock);
-                return HINT_NONE;
-            }
-        }
-        sustained_performance_mode = 0;
     }
-    pthread_mutex_unlock(&s_interaction_lock);
-    return HINT_HANDLED;
+    ALOGD("Couldn't find the hint for mode 0x%x", type);
+    return 0;
 }
 
-static int process_vr_mode_hint(void *data)
-{
-    int duration = 0;
+static int switch_mode(perf_mode_type_t mode) {
 
-    pthread_mutex_lock(&s_interaction_lock);
-    if (data && vr_mode == 0) {
-        if (sustained_performance_mode == 0) { // VR mode only.
-            vr_mode_handle = perf_hint_enable(
-                VR_MODE_HINT, duration);
-            if (!CHECK_HANDLE(vr_mode_handle)) {
-                ALOGE("Failed interaction_with_handle for vr_mode_handle");
-                pthread_mutex_unlock(&s_interaction_lock);
-                return HINT_NONE;
-            }
-        } else if (sustained_performance_mode == 1) { // Sustained + VR mode.
-            release_request(sustained_mode_handle);
-            vr_mode_handle = perf_hint_enable(
-                VR_MODE_SUSTAINED_PERF_HINT, duration);
-            if (!CHECK_HANDLE(vr_mode_handle)) {
-                ALOGE("Failed interaction_with_handle for vr_mode_handle");
-                pthread_mutex_unlock(&s_interaction_lock);
-                return HINT_NONE;
-            }
-        }
-        vr_mode = 1;
-    } else if (vr_mode == 1) {
-        release_request(vr_mode_handle);
-        if (sustained_performance_mode == 1) { // Switch back to sustained Mode.
-            sustained_mode_handle = perf_hint_enable(
-                SUSTAINED_PERF_HINT, duration);
-            if (!CHECK_HANDLE(sustained_mode_handle)) {
-                ALOGE("Failed interaction_with_handle for sustained_mode_handle");
-                pthread_mutex_unlock(&s_interaction_lock);
-                return HINT_NONE;
-            }
-        }
-        vr_mode = 0;
+    int hint_id = 0;
+    static int perfd_mode_handle = -1;
+
+    // release existing mode if any
+    if (CHECK_HANDLE(perfd_mode_handle)) {
+        ALOGD("Releasing handle 0x%x", perfd_mode_handle);
+        release_request(perfd_mode_handle);
+        perfd_mode_handle = -1;
     }
-    pthread_mutex_unlock(&s_interaction_lock);
+    // switch to a perf mode
+    hint_id = get_perfd_hint_id(mode);
+    if(hint_id != 0) {
+        perfd_mode_handle = perf_hint_enable(hint_id, 0);
+        if (!CHECK_HANDLE(perfd_mode_handle)) {
+            ALOGE("Failed perf_hint_interaction for mode: 0x%x", mode);
+            return -1;
+        }
+        ALOGD("Acquired handle 0x%x", perfd_mode_handle);
+    }
+    return 0;
+}
 
+static int process_perf_hint(void *data, perf_mode_type_t mode) {
+
+    pthread_mutex_lock(&perf_mode_switch_lock);
+
+    // enable
+    if (data){
+        ALOGI("Enable request for mode: 0x%x", mode);
+        // check if mode is current mode
+        if ( current_mode & mode ) {
+            pthread_mutex_unlock(&perf_mode_switch_lock);
+            ALOGD("Mode 0x%x already enabled", mode);
+            return HINT_HANDLED;
+        }
+        // enable requested mode
+        if ( 0 != switch_mode(current_mode | mode)) {
+            pthread_mutex_unlock(&perf_mode_switch_lock);
+            ALOGE("Couldn't enable mode 0x%x", mode);
+            return HINT_NONE;
+        }
+        current_mode |= mode;
+        ALOGI("Current mode is 0x%x", current_mode);
+    // disable
+    } else {
+        ALOGI("Disable request for mode: 0x%x", mode);
+        // check if mode is enabled
+        if ( !(current_mode & mode) ) {
+            pthread_mutex_unlock(&perf_mode_switch_lock);
+            ALOGD("Mode 0x%x already disabled", mode);
+            return HINT_HANDLED;
+        }
+        //disable requested mode
+        if ( 0 != switch_mode(current_mode & ~mode)) {
+            pthread_mutex_unlock(&perf_mode_switch_lock);
+            ALOGE("Couldn't disable mode 0x%x", mode);
+            return HINT_NONE;
+        }
+        current_mode &= ~mode;
+        ALOGI("Current mode is 0x%x", current_mode);
+    }
+
+    pthread_mutex_unlock(&perf_mode_switch_lock);
     return HINT_HANDLED;
 }
 
@@ -189,17 +200,17 @@ int power_hint_override(struct power_module *module, power_hint_t hint, void *da
             ret_val = process_video_encode_hint(data);
             break;
         case POWER_HINT_SUSTAINED_PERFORMANCE:
-            ret_val = process_sustained_perf_hint(data);
+            ret_val = process_perf_hint(data, SUSTAINED_MODE);
             break;
         case POWER_HINT_VR_MODE:
-            ret_val = process_vr_mode_hint(data);
+            ret_val = process_perf_hint(data, VR_MODE);
             break;
         case POWER_HINT_INTERACTION:
-            pthread_mutex_lock(&s_interaction_lock);
-            if (sustained_performance_mode || vr_mode) {
+            pthread_mutex_lock(&perf_mode_switch_lock);
+            if (current_mode != NORMAL_MODE) {
                 ret_val = HINT_HANDLED;
             }
-            pthread_mutex_unlock(&s_interaction_lock);
+            pthread_mutex_unlock(&perf_mode_switch_lock);
             break;
         default:
             break;
