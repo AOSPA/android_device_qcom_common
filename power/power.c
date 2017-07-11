@@ -278,6 +278,14 @@ void set_interactive(struct power_module *module, int on)
     struct video_encode_metadata_t video_encode_metadata;
     int rc = 0;
 
+    if (!on) {
+        /* Send Display OFF hint to perf HAL */
+        perf_hint_enable(VENDOR_HINT_DISPLAY_OFF, 0);
+    } else {
+        /* Send Display ON hint to perf HAL */
+        perf_hint_enable(VENDOR_HINT_DISPLAY_ON, 0);
+    }
+
     if (set_interactive_override(module, on) == HINT_HANDLED) {
         return;
     }

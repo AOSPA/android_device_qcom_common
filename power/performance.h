@@ -35,6 +35,12 @@ extern "C" {
 #define SUCCESS                 0
 #define INDEFINITE_DURATION     0
 
+/* Hints sent to perf HAL from power HAL
+ * These have to be kept in sync with Perf HAL side definitions
+ */
+#define VENDOR_HINT_DISPLAY_OFF      0x00001086
+#define VENDOR_HINT_DISPLAY_ON       0x00001087
+
 enum SCREEN_DISPLAY_TYPE {
     DISPLAY_OFF = 0x00FF,
 };
