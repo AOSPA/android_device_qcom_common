@@ -77,6 +77,13 @@ void set_device_specific_feature(struct power_module *module __unused,
     }
 #endif
 
+#ifdef DRAW_S_NODE
+    if (feature == POWER_FEATURE_DRAW_S) {
+        sysfs_write(DRAW_S_NODE, tmp_str);
+        return;
+    }
+#endif
+
 #ifdef DRAW_ARROW_LEFT_NODE
     if (feature == POWER_FEATURE_DRAW_ARROW_LEFT) {
         sysfs_write(DRAW_ARROW_LEFT_NODE, tmp_str);
