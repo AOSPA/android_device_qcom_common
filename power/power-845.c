@@ -51,6 +51,27 @@
 static int display_fd;
 #define SYS_DISPLAY_PWR "/sys/kernel/hbtp/display_pwr"
 
+/* Declare function before use */
+void interaction(int duration, int num_args, int opt_list[]);
+
+int power_hint_override(struct power_module *module, power_hint_t hint, void *data)
+{
+    int ret_val = HINT_NONE;
+    switch(hint) {
+        case POWER_HINT_INTERACTION:
+        {
+            int resources[] = {0x40800100, 0x553};
+            int duration = 100;
+            interaction(duration, sizeof(resources)/sizeof(resources[0]), resources);
+            ret_val = HINT_HANDLED;
+        }
+        break;
+        default:
+            break;
+    }
+    return ret_val;
+}
+
 int set_interactive_override(struct power_module *module, int on)
 {
     static const char *display_on = "1";
