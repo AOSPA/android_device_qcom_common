@@ -374,15 +374,8 @@ static int get_keymaster_version()
 
 int should_use_keymaster()
 {
-    /* HW FDE key would be tied to keymaster only if:
-     * New Keymaster is available
-     * keymaster partition exists on the device
+    /*
+     * HW FDE key should be tied to keymaster
      */
-    int rc = 0;
-    if (get_keymaster_version() != KEYMASTER_MODULE_API_VERSION_1_0) {
-        SLOGI("Keymaster version is not 1.0");
-        return rc;
-    }
-
     return 1;
 }
