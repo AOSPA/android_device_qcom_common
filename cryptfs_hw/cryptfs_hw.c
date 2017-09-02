@@ -157,7 +157,6 @@ static int __cryptfs_hw_wipe_clear_key(enum cryptfs_hw_key_management_usage_type
 static int cryptfs_hw_wipe_key(enum cryptfs_hw_key_management_usage_type usage)
 {
 	int32_t ret;
-
 	ret = __cryptfs_hw_wipe_clear_key(usage, CRYPTFS_HW_KMS_WIPE_KEY);
 	if (ret) {
 		SLOGE("Error::ioctl call to wipe the encryption key for usage %d failed with ret = %d, errno = %d\n",
@@ -273,11 +272,12 @@ static int is_qseecom_up()
     char value[PROPERTY_VALUE_MAX] = {0};
 
     for (; i<CRYPTFS_HW_UP_CHECK_COUNT; i++) {
-        property_get("sys.keymaster.loaded", value, "");
+        property_get("sys.listeners.registered", value, "");
         if (!strncmp(value, "true", PROPERTY_VALUE_MAX))
             return 1;
         usleep(100000);
     }
+    SLOGE("%s Qseecom daemon timed out", __func__);
     return 0;
 }
 
@@ -288,7 +288,7 @@ static int is_qseecom_up()
 static int set_key(const char* currentpasswd, const char* passwd, const char* enc_mode, int operation)
 {
     int err = -1;
-    if (is_hw_disk_encryption(enc_mode)) {
+    if (is_hw_disk_encryption(enc_mode) && is_qseecom_up()) {
         unsigned char* tmp_passwd = get_tmp_passwd(passwd);
         unsigned char* tmp_currentpasswd = get_tmp_passwd(currentpasswd);
         if (tmp_passwd) {
@@ -356,7 +356,9 @@ int is_ice_enabled(void)
 
 int clear_hw_device_encryption_key()
 {
-	return cryptfs_hw_wipe_key(map_usage(CRYPTFS_HW_KM_USAGE_DISK_ENCRYPTION));
+	if(is_qseecom_up())
+		return cryptfs_hw_wipe_key(map_usage(CRYPTFS_HW_KM_USAGE_DISK_ENCRYPTION));
+	return 0;
 }
 
 static int get_keymaster_version()
