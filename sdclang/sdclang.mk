@@ -12,11 +12,4 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-SDCLANG ?= true
-SDCLANG_FORCED ?= false
-
-SDCLANG_PATH := vendor/qcom/sdclang-3.8/linux-x86/bin
-
 SDCLANG_LTO_DEFS := device/qcom/common/sdclang/sdllvm-lto-defs.mk
-
-SDCLANG_COMMON_FLAGS := -O3 -fvectorize-loops
