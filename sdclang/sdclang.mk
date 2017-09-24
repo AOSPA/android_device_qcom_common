@@ -15,7 +15,7 @@
 SDCLANG ?= true
 SDCLANG_FORCED ?= false
 
-SDCLANG_PATH := vendor/qcom/sdclang-3.8/linux-x86/bin
+SDCLANG_PATH := vendor/qcom/sdclang-4.0/linux-x86/bin
 
 SDCLANG_LTO_DEFS := device/qcom/common/sdclang/sdllvm-lto-defs.mk
 
