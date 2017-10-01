@@ -1,0 +1,50 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "a8a94c7a_d5e2c3ab",
+        "filename": "sdclang/sdclang.json",
+        "patchSetId": 4
+      },
+      "lineNbr": 5,
+      "author": {
+        "id": 1000011
+      },
+      "writtenOn": "2017-10-01T12:19:16Z",
+      "side": 1,
+      "message": "Not sure whether json supports this, but can we set this to the value of SDCLANG_PATH to avoid duplication?",
+      "range": {
+        "startLine": 5,
+        "startChar": 9,
+        "endLine": 5,
+        "endChar": 23
+      },
+      "revId": "9f5539f98e113c403a970666f607d53e72cf4269",
+      "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "fa796be4_4c494205",
+        "filename": "sdclang/sdclang.json",
+        "patchSetId": 4
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 1000011
+      },
+      "writtenOn": "2017-10-01T12:19:16Z",
+      "side": 1,
+      "message": "same here",
+      "range": {
+        "startLine": 7,
+        "startChar": 9,
+        "endLine": 7,
+        "endChar": 24
+      },
+      "revId": "9f5539f98e113c403a970666f607d53e72cf4269",
+      "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad",
+      "unresolved": false
+    }
+  ]
+}
