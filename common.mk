@@ -53,3 +53,6 @@ endif
 
 # Disable Sound Trigger
 BOARD_SUPPORTS_SOUND_TRIGGER := false
+
+# Disable SSR
+AUDIO_FEATURE_ENABLED_SSR := false
