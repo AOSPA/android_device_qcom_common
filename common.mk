@@ -46,3 +46,5 @@ ifeq ($(TARGET_DISABLE_DASH),false)
 PRODUCT_BOOT_JARS += qcmediaplayer
 endif
 
+# Sound Trigger 
+BOARD_SUPPORTS_SOUND_TRIGGER ?= true
