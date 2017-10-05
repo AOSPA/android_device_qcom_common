@@ -48,3 +48,6 @@ endif
 
 # Sound Trigger 
 BOARD_SUPPORTS_SOUND_TRIGGER ?= true
+
+# SSR
+AUDIO_FEATURE_ENABLED_SSR := false
