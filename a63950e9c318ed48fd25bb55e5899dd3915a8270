@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "681156e9_b33cab77",
+        "filename": "common.mk",
+        "patchSetId": 3
+      },
+      "lineNbr": 49,
+      "author": {
+        "id": 1000011
+      },
+      "writtenOn": "2017-10-08T01:22:10Z",
+      "side": 1,
+      "message": "Whitespace",
+      "revId": "a63950e9c318ed48fd25bb55e5899dd3915a8270",
+      "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad",
+      "unresolved": false
+    }
+  ]
+}
