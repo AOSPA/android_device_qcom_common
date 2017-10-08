@@ -3,8 +3,8 @@
         "SDCLANG" : true,
         "SDCLANG_PATH" : "vendor/qcom/sdclang-4.0/linux-x86/bin",
         "SDCLANG_PATH_2" : "vendor/qcom/sdclang-4.0/linux-x86/bin",
-        "SDCLANG_FLAGS" : "",
-        "SDCLANG_FLAGS_2" : ""
+        "SDCLANG_FLAGS" : "-O3 -fvectorize-loops",
+        "SDCLANG_FLAGS_2" : "-O3 -fvectorize-loops"
     }
 }
 
