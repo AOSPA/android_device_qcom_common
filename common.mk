@@ -39,7 +39,7 @@ PRODUCT_BOOT_JARS += com.qti.location.sdk
 endif
 
 # Block Dash by default
-TARGET_DISABLE_DASH ?= true
+TARGET_DISABLE_DASH := true
 
 # Dash extension
 ifeq ($(TARGET_DISABLE_DASH),false)
