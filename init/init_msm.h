@@ -31,6 +31,7 @@
 #define __INIT_MSM__H__
 
 #include <sys/system_properties.h>
+#include <log/log.h>
 
 #define PROP_HWROTATE    "ro.sf.hwrotation"
 #define PROP_BOOT_BASEBAND "ro.boot.baseband"
@@ -41,5 +42,11 @@
 
 void init_msm_properties(unsigned long msm_id, unsigned long msm_ver, char *board_type);
 int read_file2(const char *fname, char *data, int max_size);
+
+#define ERROR(fmt, args...)                                                   \
+do {                                                                          \
+    fprintf(stderr, fmt, ## args);                                            \
+    ALOG(LOG_ERROR, "libinit_msm", fmt, ## args);                              \
+} while(0)
 
 #endif /* __INIT_MSM__H__ */

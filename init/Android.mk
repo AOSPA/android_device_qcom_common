@@ -5,12 +5,9 @@ LIBINIT_MSM_PATH := $(call my-dir)
 
 include $(CLEAR_VARS)
 LOCAL_MODULE_TAGS := optional
+LOCAL_SHARED_LIBRARIES := libbase liblog
 LOCAL_C_INCLUDES := system/core/init
-LOCAL_CPPFLAGS := \
-    -Wall \
-    -Werror -Wno-error=deprecated-declarations \
-    -Wno-unused-parameter \
-    -DANDROID_TARGET=\"$(TARGET_BOARD_PLATFORM)\"
+LOCAL_CFLAGS := -Wall -DANDROID_TARGET=\"$(TARGET_BOARD_PLATFORM)\"
 LOCAL_SRC_FILES := init_msm.cpp
 ifneq ($(TARGET_LIBINIT_DEFINES_FILE),)
   LOCAL_SRC_FILES += ../../../../$(TARGET_LIBINIT_DEFINES_FILE)
