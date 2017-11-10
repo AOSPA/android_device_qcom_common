@@ -42,12 +42,3 @@ PRODUCT_BOOT_JARS += com.qti.dpmframework
 PRODUCT_BOOT_JARS += dpmapi
 PRODUCT_BOOT_JARS += com.qti.location.sdk
 endif
-
-# Block Dash by default
-TARGET_DISABLE_DASH ?= true
-
-# Dash extension
-ifeq ($(TARGET_DISABLE_DASH),false)
-PRODUCT_BOOT_JARS += qcmediaplayer
-endif
-
