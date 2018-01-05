@@ -5,7 +5,7 @@ LIBINIT_MSM_PATH := $(call my-dir)
 
 include $(CLEAR_VARS)
 LOCAL_MODULE_TAGS := optional
-LOCAL_SHARED_LIBRARIES := libbase liblog
+LOCAL_SHARED_LIBRARIES := libbase liblog libselinux
 LOCAL_C_INCLUDES := system/core/init
 LOCAL_CFLAGS := -Wall -DANDROID_TARGET=\"$(TARGET_BOARD_PLATFORM)\"
 LOCAL_SRC_FILES := init_msm.cpp
