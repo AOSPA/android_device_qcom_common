@@ -38,3 +38,5 @@ PRODUCT_BOOT_JARS += com.qti.dpmframework
 PRODUCT_BOOT_JARS += dpmapi
 PRODUCT_BOOT_JARS += com.qti.location.sdk
 endif
+
+TARGET_ENABLE_QC_AV_ENHANCEMENTS ?= true
