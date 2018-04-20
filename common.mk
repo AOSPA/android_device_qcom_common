@@ -9,18 +9,6 @@ BOARD_USES_QCNE := true
 # include additional build utilities
 include device/qcom/common/utils.mk
 
-ifneq ($(HOST_OS),linux)
-ifneq ($(sdclang_already_warned),true)
-$(warning **********************************************)
-$(warning * SDCLANG is not supported on non-linux hosts.)
-$(warning **********************************************)
-sdclang_already_warned := true
-endif
-else
-# include definitions for SDCLANG
-include device/qcom/common/sdclang/sdclang.mk
-endif
-
 TARGET_CRYPTFS_HW_PATH := device/qcom/common/cryptfs_hw
 
 # SECCOMP Extension
