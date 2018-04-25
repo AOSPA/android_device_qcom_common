@@ -3001,7 +3001,7 @@ case "$target" in
                 "321")
                 # Start Host based Touch processing
                 case "$hw_platform" in
-                    "MTP" )
+		    "MTP" | "Surf" | "RCM" )
                           start_hbtp
                      ;;
                     "QRD" )
