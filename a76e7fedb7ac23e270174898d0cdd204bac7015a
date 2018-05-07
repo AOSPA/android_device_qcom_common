@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "4b3a4e0a_a64e044a",
+        "filename": "power/power.c",
+        "patchSetId": 1
+      },
+      "lineNbr": 494,
+      "author": {
+        "id": 1000012
+      },
+      "writtenOn": "2018-05-07T02:44:35Z",
+      "side": 1,
+      "message": "not true, our gesture support moves us to 0.3.  not sure if this is correct in that case.",
+      "revId": "a76e7fedb7ac23e270174898d0cdd204bac7015a",
+      "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad",
+      "unresolved": false
+    }
+  ]
+}
