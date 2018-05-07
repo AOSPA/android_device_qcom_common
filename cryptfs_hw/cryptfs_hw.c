@@ -273,7 +273,7 @@ static int is_qseecom_up()
     char value[PROPERTY_VALUE_MAX] = {0};
 
     for (; i<CRYPTFS_HW_UP_CHECK_COUNT; i++) {
-        property_get("sys.keymaster.loaded", value, "");
+        property_get("vendor.sys.keymaster.loaded", value, "");
         if (!strncmp(value, "true", PROPERTY_VALUE_MAX))
             return 1;
         usleep(100000);

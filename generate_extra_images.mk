@@ -38,8 +38,8 @@ $(FIRMWARE_MOUNT_POINT):
 
 $(BT_FIRMWARE_MOUNT_POINT):
 	@echo "Creating $(BT_FIRMWARE_MOUNT_POINT)"
-	@mkdir -p $(TARGET_ROOT_OUT)/bt_firmware
-	@mkdir -p $(TARGET_RECOVERY_ROOT_OUT)/bt_firmware
+	@mkdir -p $(TARGET_OUT_VENDOR)/bt_firmware
+	@ln -sf /vendor/bt_firmware $(TARGET_ROOT_OUT)/bt_firmware
 
 $(DSP_MOUNT_POINT):
 	@echo "Creating $(DSP_MOUNT_POINT)"

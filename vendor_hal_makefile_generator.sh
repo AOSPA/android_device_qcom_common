@@ -45,6 +45,11 @@ function generate_make_files() {
     #Iterate over identified .hal Paths
     for file in $halFilePaths
         do
+            local hal_path=`echo "$file" | rev | cut -d"/" -f2- | rev`
+            if echo $(ls $hal_path) | grep "Android.bp" > /dev/null; then
+                echo "Skipping $hal_path"
+                continue;
+            fi
             # Find out package name from HAL file
             local hal_package=`echo $(cat $file | grep -E -m 1 "^package ") | cut -d' ' -f2`
             # Get rid of extra delimter
@@ -66,9 +71,6 @@ function generate_make_files() {
             if [ "$flag_opensource" = true ]; then
                 root="$root.$delimeter"
                 hal_path="$hal_path/$delimeter"
-            fi
-            if echo "$delimeter" | grep "fingerprint" > /dev/null;then
-              continue;
             fi
             local root_arguments="-r $root:$hal_path -r  $2"
             echo "Updating $hal_package"

@@ -32,14 +32,17 @@
 #
 baseband=`getprop ro.baseband`
 sgltecsfb=`getprop persist.vendor.radio.sglte_csfb`
-datamode=`getprop persist.data.mode`
+datamode=`getprop persist.vendor.data.mode`
 rild_status=`getprop init.svc.ril-daemon`
+vendor_rild_status=`getprop init.svc.vendor.ril-daemon`
+target=`getprop ro.board.platform`
 
 case "$baseband" in
     "apq" | "sda" | "qcs" )
     setprop ro.radio.noril yes
-    if [ -n "$rild_status" ]; then
+    if [ -n "$rild_status" ] || [ -n "$vendor_rild_status" ]; then
       stop ril-daemon
+      stop vendor.ril-daemon
     fi
 esac
 
@@ -50,7 +53,46 @@ esac
 
 case "$baseband" in
     "msm" | "csfb" | "svlte2a" | "mdm" | "mdm2" | "sglte" | "sglte2" | "dsda2" | "unknown" | "dsda3" | "sdm" | "sdx")
-    if [ -z "$rild_status" ]; then
+
+    case "$target" in
+        "sdm660")
+        if [ -f /vendor/firmware/verinfo/ver_info.txt ]; then
+            # Check if this sdm660 version need L+L support.
+            # If not, start ril-daemon
+            modem=`cat /vendor/firmware/verinfo/ver_info.txt |
+                    sed -n 's/^[^:]*modem[^:]*:[[:blank:]]*//p' |
+                    sed 's/.*MPSS.\(.*\)/\1/g' | cut -d \. -f 1`
+            if [ "$modem" = "AT" ]; then
+                version=`cat /vendor/firmware/verinfo/ver_info.txt |
+                        sed -n 's/^[^:]*modem[^:]*:[[:blank:]]*//p' |
+                        sed 's/.*AT.\(.*\)/\1/g' | cut -d \- -f 1`
+                if [ ! -z $version ]; then
+                    if [ "$version" \< "3.1" ]; then
+                        # At a time only one of them will be available
+                        # start both vendor.ril-daemon, ril-daemon to make
+                        # this script agnostic to ril-daemon service name
+                        start ril-daemon
+                        start vendor.ril-daemon
+                    fi
+                fi
+            fi
+        fi
+        ;;
+
+        *)
+            # For all other targets, start rild. If rild is defined
+            # it will be started, otherwise rild will not start.
+            # At later point in script, qcrild will be launched if rild is not started.
+             start ril-daemon
+             start vendor.ril-daemon
+        ;;
+    esac
+
+    # Get ril-daemon status again to ensure that we have latest info
+    rild_status=`getprop init.svc.ril-daemon`
+    vendor_rild_status=`getprop init.svc.vendor.ril-daemon`
+
+    if [ -z "$rild_status" ] && [ -z "$vendor_rild_status" ]; then
       start vendor.qcrild
     fi
     start vendor.ipacm-diag
@@ -73,28 +115,28 @@ case "$baseband" in
     multisim=`getprop persist.radio.multisim.config`
 
     if [ "$multisim" = "dsds" ] || [ "$multisim" = "dsda" ]; then
-        if [ -z "$rild_status" ]; then
+        if [ -z "$rild_status" ] &&  [ -z "$vendor_rild_status" ]; then
           start vendor.qcrild2
         else
-          start ril-daemon2
+          start vendor.ril-daemon2
         fi
     elif [ "$multisim" = "tsts" ]; then
-        if [ -z "$rild_status" ]; then
+        if [ -z "$rild_status" ] && [ -z "$vendor_rild_status" ]; then
           start vendor.qcrild2
           start vendor.qcrild3
         else
-          start ril-daemon2
-          start ril-daemon3
+          start vendor.ril-daemon2
+          start vendor.ril-daemon3
         fi
     fi
 
     case "$datamode" in
         "tethered")
-            start vendor.qti
+            start vendor.dataqti
             start port-bridge
             ;;
         "concurrent")
-            start vendor.qti
+            start vendor.dataqti
             start netmgrd
             start port-bridge
             ;;

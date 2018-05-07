@@ -32,7 +32,7 @@ service fastmmi /system/bin/mmi
     group root
     disabled
 
-service mmid /vendor/bin/mmid
+service vendor.mmid /vendor/bin/mmid
     user root
     group root
     disabled
