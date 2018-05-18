@@ -1,0 +1,10 @@
+Code-Review+2: Jake Weinstein <xboxlover360@gmail.com>
+Code-Review+1: Alex Naidis <alex.naidis@linux.com>
+Autosubmit+1: Alex Naidis <alex.naidis@linux.com>
+Presubmit-Ready+1: Alex Naidis <alex.naidis@linux.com>
+Verified+1: Friendly BuildBot
+Submitted-by: Alex Naidis <alex.naidis@linux.com>
+Submitted-at: Fri, 18 May 2018 15:22:47 +0000
+Reviewed-on: https://gerrit.aospa.co/4931
+Project: AOSPA/android_device_qcom_common
+Branch: refs/heads/oreo-mr1
