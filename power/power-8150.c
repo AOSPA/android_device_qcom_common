@@ -92,3 +92,21 @@ int set_interactive_override(struct power_module *module, int on)
     return HINT_HANDLED;
 }
 
+void interaction(int duration, int num_args, int opt_list[]);
+
+int power_hint_override(struct power_module *module, power_hint_t hint, void *data)
+{
+    int ret_val = HINT_NONE;
+    switch(hint) {
+        case POWER_HINT_INTERACTION:
+        {
+            int resources[] = {0x40800100, 0x514};
+            int duration = 100;
+            interaction(duration, sizeof(resources)/sizeof(resources[0]), resources);
+            ret_val = HINT_HANDLED;
+        }
+        default:
+            break;
+    }
+    return ret_val;
+}

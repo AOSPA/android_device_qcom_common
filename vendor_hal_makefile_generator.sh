@@ -29,73 +29,104 @@
 
 function generate_make_files() {
     local dir_path="$ANDROID_BUILD_TOP/$1"
-    pushd $dir_path
+    pushd $dir_path > /dev/null
+
     # Due to same package name in different folders we need to detect
     # opensource case so that it can be handled.
     local flag_opensource=false
     if echo "$dir_path" | grep "opensource" > /dev/null;then
         flag_opensource=true
     fi
+
     # Search for all HAL files in given dir.
     local halFilePaths=`echo $(find -iname "*.hal" | sort)`
+
     #Store package name in below array to create a unique set so that we trigger
     #hidl-gen only once  for a given package.
     package_collection=()
 
     #Iterate over identified .hal Paths
-    for file in $halFilePaths
-        do
-            local hal_path=`echo "$file" | rev | cut -d"/" -f2- | rev`
-            if echo $(ls $hal_path) | grep "Android.bp" > /dev/null; then
-                echo "Skipping $hal_path"
-                continue;
+    local prev_path=""
+    for file in $halFilePaths; do
+        local hal_path=`echo "$file" | rev | cut -d"/" -f2- | rev`
+        if [ -e "$hal_path/Android.bp" ] && [ ! -e "$hal_path/.hidl-autogen" ]; then
+            if [ ! "$hal_path" = "$prev_path" ]; then
+                echo "Skipping hidl-gen on $1/$hal_path as Android.bp is not compile-time generated"
+                prev_path="$hal_path"
             fi
-            # Find out package name from HAL file
-            local hal_package=`echo $(cat $file | grep -E -m 1 "^package ") | cut -d' ' -f2`
-            # Get rid of extra delimter
-            hal_package=${hal_package%?}
-                #Check if we already executed hidl-gen for a given package
-                if echo "${package_collection[@]}" | grep $hal_package > /dev/null; then
-                    continue;
-                else
-                    package_collection+=($hal_package)
-                    local delimeter=`echo "$file" | cut -d'/' -f2`
-                    local root=`echo "$hal_package" | sed "s/$delimeter/#/g" | cut -d'#' -f1`
-                    #Identify Package Root
-                    root=${root%?}
-                    #Create root arguments for hidl-command
-                    local root_arguments="-r $root:$1 -r  $2"
-                fi
-            local hal_path=$1;
-            #Handling for opensource HAL to solve package name conflict
-            if [ "$flag_opensource" = true ]; then
-                root="$root.$delimeter"
-                hal_path="$hal_path/$delimeter"
+            continue;
+        fi
+        prev_path="$hal_path"
+
+        # Find out package name from HAL file
+        local hal_package=`echo $(cat $file | grep -E -m 1 "^package ") | cut -d' ' -f2`
+
+        # Get rid of extra delimter
+        hal_package=${hal_package%?}
+
+        #Check if we already executed hidl-gen for a given package
+        if echo "${package_collection[@]}" | grep $hal_package > /dev/null; then
+            continue;
+        else
+            package_collection+=($hal_package)
+            local delimeter=`echo "$file" | cut -d'/' -f2`
+            local root=`echo "$hal_package" | sed "s/$delimeter/#/g" | cut -d'#' -f1`
+            #Identify Package Root
+            root=${root%?}
+            #Create root arguments for hidl-command
+            local root_arguments="-r $root:$1 -r  $2"
+        fi
+
+        local hal_path2=$1;
+        #Handling for opensource HAL to solve package name conflict
+        if [ "$flag_opensource" = true ]; then
+            root="$root.$delimeter"
+            hal_path2="$hal_path2/$delimeter"
+        fi
+
+        local root_arguments="-r $root:$hal_path2 -r  $2"
+
+        update_check=0
+        if [ -e "$hal_path/Android.bp" ]; then
+            mv $hal_path/Android.bp $hal_path/.hidl-autogen
+            update_check=1
+        fi
+
+        echo -n "Running hidl-gen on $hal_package: "
+        hidl-gen -Landroidbp $root_arguments $hal_package;
+
+        if [ "$update_check" -eq 1 ]; then
+            diff -q $hal_path/Android.bp $hal_path/.hidl-autogen > /dev/null
+            if [ $? -eq 0 ]; then
+                echo "no changes"
+                mv $hal_path/.hidl-autogen $hal_path/Android.bp
+            else
+                echo "updated"
             fi
-            local root_arguments="-r $root:$hal_path -r  $2"
-            echo "Updating $hal_package"
-            hidl-gen -Landroidbp $root_arguments $hal_package;
-            #TODO: we need to enable this once all HAL's are in proper format
-            #    rc=$?; if [[ $rc != 0 ]]; then return $rc; fi
-       done
-    popd
+        else
+            echo "created"
+        fi
+        touch $hal_path/.hidl-autogen
+
+        #TODO: we need to enable this once all HAL's are in proper format
+        #    rc=$?; if [[ $rc != 0 ]]; then return $rc; fi
+    done
+    popd > /dev/null
 }
 
 function start_script_for_interfaces {
-#Find interfaces in workspace
-local interfaces=$(ls -d $ANDROID_BUILD_TOP/vendor/qcom/*/interfaces)
-local bp_flag_camera=$(ls $ANDROID_BUILD_TOP/vendor/qcom/opensource/interfaces/camera/device/1.0)
-if echo "$bp_flag_camera" | grep "Android.bp" > /dev/null;then
-    echo "bp file exist : exiting"
-else
-    for interface in $interfaces
-    do
+    #Find interfaces in workspace
+    local interfaces=$(ls -d ${ANDROID_BUILD_TOP}/vendor/qcom/*/interfaces)
+
+    echo "HIDL interfaces:  Scanning for changes..."
+    for interface in $interfaces; do
         #generate interfaces
         local relative_interface=${interface#${ANDROID_BUILD_TOP}/}
         generate_make_files $relative_interface "android.hidl:system/libhidl/transport"
     done
-fi
+    echo "HIDL interfaces:  Update complete."
 }
+
 #Start script for interfaces
 start_script_for_interfaces
 

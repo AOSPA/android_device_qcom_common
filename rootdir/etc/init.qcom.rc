@@ -47,8 +47,6 @@ on early-init
     exec u:r:vendor_modprobe:s0 -- /vendor/bin/modprobe -a -d /vendor/lib/modules msm_11ad_proxy
 
 on init
-    # Set permissions for persist partition
-    mkdir /persist 0771 root system
 
     # Support legacy paths
     symlink /sdcard /mnt/sdcard
@@ -78,6 +76,7 @@ on early-boot
     chown system system /persist/sensors/registry/registry/sensors_registry
     chown system system /persist/sensors/sensors_settings
     chown system system /persist/sensors/registry/config
+    chmod 0664 /persist/sensors/sensors_settings
 
 on boot
     chown bluetooth bluetooth /sys/module/bluetooth_power/parameters/power
@@ -232,12 +231,6 @@ on post-fs-data
 
     # Create directory used by media clients
     mkdir /data/vendor/media 0770 mediacodec media
-
-    #Create directories for Fingerprint
-    mkdir /data/vendor/misc/qti_fp 0770 system system
-    mkdir /data/vendor/misc/qti_fp/bg_estimation 0770 system system
-    mkdir /data/vendor/misc/qti_fp/calib_test 0770 system system
-    mkdir /data/vendor/misc/qti_fp/database 0770 system system
 
     # create QDMA dropbox
     mkdir /data/vendor/qdmastats 0700 system system
@@ -571,13 +564,13 @@ service irsc_util /vendor/bin/irsc_util "/vendor/etc/sec_config"
     user root
     oneshot
 
-service rmt_storage /vendor/bin/rmt_storage
+service vendor.rmt_storage /vendor/bin/rmt_storage
     class core
     user root
     shutdown critical
     ioprio rt 0
 
-service tftp_server /vendor/bin/tftp_server
+service vendor.tftp_server /vendor/bin/tftp_server
    class core
    user root
 

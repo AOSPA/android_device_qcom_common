@@ -311,6 +311,10 @@ if [ "$ProductName" == "msm8996" ]; then
       configure_zram_parameters
 
       configure_read_ahead_kb_values
+elif [ "$ProductName" == "msmnile" ]; then
+      # Enable ZRAM
+      configure_zram_parameters
+      configure_read_ahead_kb_values
 else
     arch_type=`uname -m`
     MemTotalStr=`cat /proc/meminfo | grep MemTotal`
@@ -3291,6 +3295,7 @@ case "$target" in
     esac
 
     echo 0 > /sys/module/lpm_levels/parameters/sleep_disabled
+    configure_memory_parameters
     ;;
 esac
 

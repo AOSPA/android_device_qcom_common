@@ -1235,6 +1235,7 @@ IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.-->
         <boolean name="disable_filter_out_conference_host" value="true" />
         <boolean name="identify_high_definition_calls_in_call_log_bool" value="true" />
         <boolean name="ignore_reset_ut_capability_bool" value="true" />
+        <boolean name="carrier_parse_number_on_forward_call_bool" value="true" />
     </carrier_config>
 
     <carrier_config mcc="460" mnc="01">
@@ -1253,6 +1254,7 @@ IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.-->
         </map>
         <boolean name="ignore_data_enabled_changed_for_video_calls" value="true"/>
         <boolean name="config_hide_vt_callforward_option" value="true" />
+        <boolean name="carrier_parse_number_on_forward_call_bool" value="true" />
     </carrier_config>
 
     <carrier_config mcc="460" mnc="02">
@@ -1296,6 +1298,7 @@ IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.-->
         <boolean name="disable_filter_out_conference_host" value="true" />
         <boolean name="identify_high_definition_calls_in_call_log_bool" value="true" />
         <boolean name="ignore_reset_ut_capability_bool" value="true" />
+        <boolean name="carrier_parse_number_on_forward_call_bool" value="true" />
     </carrier_config>
 
     <carrier_config mcc="460" mnc="03">
@@ -1323,6 +1326,7 @@ IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.-->
             <item value="supl" />
         </string-array>
         <boolean name="ignore_reset_ut_capability_bool" value="true" />
+        <boolean name="carrier_parse_number_on_forward_call_bool" value="true" />
     </carrier_config>
 
     <carrier_config mcc="460" mnc="04">
@@ -1346,6 +1350,7 @@ IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.-->
         <boolean name="ignore_data_enabled_changed_for_video_calls" value="true"/>
         <boolean name="config_hide_vt_callforward_option" value="true" />
         <boolean name="ignore_reset_ut_capability_bool" value="true" />
+        <boolean name="carrier_parse_number_on_forward_call_bool" value="true" />
     </carrier_config>
 
     <carrier_config mcc="460" mnc="06">
@@ -1360,6 +1365,7 @@ IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.-->
         </map>
         <boolean name="ignore_data_enabled_changed_for_video_calls" value="true"/>
         <boolean name="config_hide_vt_callforward_option" value="true" />
+        <boolean name="carrier_parse_number_on_forward_call_bool" value="true" />
     </carrier_config>
 
     <carrier_config mcc="460" mnc="07">
@@ -1403,6 +1409,7 @@ IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.-->
         <boolean name="disable_filter_out_conference_host" value="true" />
         <boolean name="identify_high_definition_calls_in_call_log_bool" value="true" />
         <boolean name="ignore_reset_ut_capability_bool" value="true" />
+        <boolean name="carrier_parse_number_on_forward_call_bool" value="true" />
     </carrier_config>
 
     <carrier_config mcc="460" mnc="08">
@@ -1445,6 +1452,7 @@ IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.-->
         <boolean name="disable_filter_out_conference_host" value="true" />
         <boolean name="identify_high_definition_calls_in_call_log_bool" value="true" />
         <boolean name="ignore_reset_ut_capability_bool" value="true" />
+        <boolean name="carrier_parse_number_on_forward_call_bool" value="true" />
     </carrier_config>
 
     <carrier_config mcc="460" mnc="09">
@@ -1458,6 +1466,7 @@ IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.-->
         </map>
         <boolean name="ignore_data_enabled_changed_for_video_calls" value="true"/>
         <boolean name="config_hide_vt_callforward_option" value="true" />
+        <boolean name="carrier_parse_number_on_forward_call_bool" value="true" />
     </carrier_config>
 
     <carrier_config mcc="460" mnc="10">
@@ -1494,6 +1503,7 @@ IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.-->
             <item value="supl" />
         </string-array>
         <boolean name="ignore_reset_ut_capability_bool" value="true" />
+        <boolean name="carrier_parse_number_on_forward_call_bool" value="true" />
     </carrier_config>
 
     <carrier_config mcc="460" mnc="12">

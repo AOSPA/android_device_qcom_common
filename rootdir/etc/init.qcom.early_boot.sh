@@ -300,8 +300,8 @@ case "$target" in
         esac
         ;;
     "sdm660")
-        if [ -f /firmware/verinfo/ver_info.txt ]; then
-            Meta_Build_ID=`cat /firmware/verinfo/ver_info.txt |
+        if [ -f /vendor/firmware_mnt/verinfo/ver_info.txt ]; then
+            Meta_Build_ID=`cat /vendor/firmware_mnt/verinfo/ver_info.txt |
                     sed -n 's/^[^:]*Meta_Build_ID[^:]*:[[:blank:]]*//p' |
                     sed 's/.*LA.\(.*\)/\1/g' | cut -d \- -f 1`
             # In SDM660 if meta version is greater than 2.1, need
@@ -342,9 +342,9 @@ baseband=`getprop ro.baseband`
 #enable atfwd daemon all targets except sda, apq, qcs
 case "$baseband" in
     "apq" | "sda" | "qcs" )
-        setprop persist.radio.atfwd.start false;;
+        setprop persist.vendor.radio.atfwd.start false;;
     *)
-        setprop persist.radio.atfwd.start true;;
+        setprop persist.vendor.radio.atfwd.start true;;
 esac
 
 #set default lcd density

@@ -105,4 +105,5 @@
     <hidden-api-whitelisted-app package="com.qualcomm.qti.qmmi" />
     <hidden-api-whitelisted-app package="com.qualcomm.wfd.client" />
     <hidden-api-whitelisted-app package="com.qualcomm.wfd.service" />
+    <hidden-api-whitelisted-app package="com.qualcomm.qti.server.wigigapp" />
 </config>
