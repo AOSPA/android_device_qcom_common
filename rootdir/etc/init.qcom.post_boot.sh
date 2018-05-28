@@ -356,6 +356,11 @@ else
         echo "14746,18432,22118,25805,40000,55000" > /sys/module/lowmemorykiller/parameters/minfree
         echo 55000 > /sys/module/lowmemorykiller/parameters/vmpressure_file_min
     else
+        # Set allocstall_threshold to 0 for both Go & non-go <=1GB targets
+        if [ $MemTotal -le 1048576 ]; then
+            echo 0 > /sys/module/vmpressure/parameters/allocstall_threshold
+        fi
+
         if [ $MemTotal -le 1048576 ] && [ "$low_ram" == "true" ]; then
             # Disable KLMK, ALMK, PPR & Core Control for Go devices
             echo 0 > /sys/module/lowmemorykiller/parameters/enable_lmk
@@ -363,6 +368,11 @@ else
             echo 0 > /sys/module/process_reclaim/parameters/enable_process_reclaim
             echo 1 > /sys/devices/system/cpu/cpu0/core_ctl/disable
         else
+            # Disable Core Control, enable KLMK for non-go 8909
+            if [ "$ProductName" == "msm8909" ]; then
+                echo 1 > /sys/devices/system/cpu/cpu0/core_ctl/disable
+                echo 1 > /sys/module/lowmemorykiller/parameters/enable_lmk
+            fi
             echo 50 > /sys/module/process_reclaim/parameters/pressure_min
             echo 512 > /sys/module/process_reclaim/parameters/per_swap_size
             echo "15360,19200,23040,26880,34415,43737" > /sys/module/lowmemorykiller/parameters/minfree
@@ -374,9 +384,6 @@ else
     if [ -f /sys/module/lowmemorykiller/parameters/oom_reaper ]; then
         echo 1 > /sys/module/lowmemorykiller/parameters/oom_reaper
     fi
-
-    #Enable oom_reaper
-    echo 1 > /sys/module/lowmemorykiller/parameters/oom_reaper
 
     configure_zram_parameters
 
@@ -3450,6 +3457,9 @@ case "$target" in
         echo 0-3 > /dev/cpuset/background/cpus
         echo 0-3 > /dev/cpuset/system-background/cpus
         echo 0 > /proc/sys/kernel/sched_boost
+
+        # Set Memory parameters
+        configure_memory_parameters
     ;;
 esac
 

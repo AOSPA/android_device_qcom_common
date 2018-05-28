@@ -196,7 +196,7 @@ static uint8_t *gpt_pentry_seek(const char *ptn_name,
     char     *pentry_name;
     unsigned  len = strlen(ptn_name);
     unsigned  i;
-    char      name8[MAX_GPT_NAME_SIZE];
+    char      name8[MAX_GPT_NAME_SIZE] = {0}; // initialize with null
 
     for (pentry_name = (char *) (pentries_start + PARTITION_NAME_OFFSET);
          pentry_name < (char *) pentries_end;
