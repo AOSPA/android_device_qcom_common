@@ -156,8 +156,8 @@
 #/(vendor|system/vendor)/bin/init\.qcom\.debug-sdm660\.sh    u:object_r:qti_init_shell_exec:s0
 /(vendor|system/vendor)/bin/init\.qti\.can\.sh              u:object_r:qti_init_shell_exec:s0
 #sysfs
-/sys/devices(/platform)?/soc/caa0000.qcom,jpeg/video4linux/video[0-33]/name(/.*)?   u:object_r:sysfs_jpeg:s0
-/sys/devices(/platform)?/soc/ca00000.qcom,msm-cam/video4linux/video[0-33]/name(/.*)?  u:object_r:sysfs_jpeg:s0
+/sys/devices(/platform)?/soc/caa0000.qcom,jpeg/video4linux/video[0-9]+/name(/.*)?   u:object_r:sysfs_jpeg:s0
+/sys/devices(/platform)?/soc/ca00000.qcom,msm-cam/video4linux/video[0-9]+/name(/.*)?  u:object_r:sysfs_jpeg:s0
 #sysfs graphics
 /sys/devices/virtual/graphics/fb0/supported_bitclk                  u:object_r:sysfs_graphics:s0
 
