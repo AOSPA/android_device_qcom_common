@@ -152,8 +152,8 @@
 /vendor/lib(64)?/hw/gralloc\.msm8998\.so   u:object_r:same_process_hal_file:s0
 /vendor/lib(64)?/hw/vulkan\.msm8998\.so    u:object_r:same_process_hal_file:s0
 #sysfs
-/sys/devices(/platform)?/soc/caa0000.qcom,jpeg/video4linux/video[0-33]/name(/.*)?   u:object_r:sysfs_jpeg:s0
-/sys/devices(/platform)?/soc/ca00000.qcom,msm-cam/video4linux/video[0-33]/name(/.*)?  u:object_r:sysfs_jpeg:s0
+/sys/devices(/platform)?/soc/caa0000.qcom,jpeg/video4linux/video[0-9]+/name(/.*)?   u:object_r:sysfs_jpeg:s0
+/sys/devices(/platform)?/soc/ca00000.qcom,msm-cam/video4linux/video[0-9]+/name(/.*)?  u:object_r:sysfs_jpeg:s0
 
 #SSR nodes
 /sys/devices(/platform)?/soc/soc:qcom,ipa_fws@1e08000/subsys[0-9]+/name   u:object_r:sysfs_ssr:s0
