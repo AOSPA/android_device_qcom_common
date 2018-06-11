@@ -34,12 +34,13 @@
 #include <fcntl.h>
 #include <dirent.h>
 #include <dlfcn.h>
+#include <errno.h>
 #include <linux/qseecom.h>
+#include <hardware/keymaster_common.h>
+#include <hardware/hardware.h>
 #include "cutils/log.h"
 #include "cutils/properties.h"
 #include "cutils/android_reboot.h"
-#include "keymaster_common.h"
-#include "hardware.h"
 #include "cryptfs_hw.h"
 
 /*

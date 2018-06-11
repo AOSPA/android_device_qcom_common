@@ -56,14 +56,14 @@ case "$baseband" in
 
     case "$target" in
         "sdm660")
-        if [ -f /vendor/firmware/verinfo/ver_info.txt ]; then
+        if [ -f /vendor/firmware_mnt/verinfo/ver_info.txt ]; then
             # Check if this sdm660 version need L+L support.
             # If not, start ril-daemon
-            modem=`cat /vendor/firmware/verinfo/ver_info.txt |
+            modem=`cat /vendor/firmware_mnt/verinfo/ver_info.txt |
                     sed -n 's/^[^:]*modem[^:]*:[[:blank:]]*//p' |
                     sed 's/.*MPSS.\(.*\)/\1/g' | cut -d \. -f 1`
             if [ "$modem" = "AT" ]; then
-                version=`cat /vendor/firmware/verinfo/ver_info.txt |
+                version=`cat /vendor/firmware_mnt/verinfo/ver_info.txt |
                         sed -n 's/^[^:]*modem[^:]*:[[:blank:]]*//p' |
                         sed 's/.*AT.\(.*\)/\1/g' | cut -d \- -f 1`
                 if [ ! -z $version ]; then
@@ -133,10 +133,12 @@ case "$baseband" in
     case "$datamode" in
         "tethered")
             start vendor.dataqti
+            start vendor.dataadpl
             start port-bridge
             ;;
         "concurrent")
             start vendor.dataqti
+            start vendor.dataadpl
             start netmgrd
             start port-bridge
             ;;

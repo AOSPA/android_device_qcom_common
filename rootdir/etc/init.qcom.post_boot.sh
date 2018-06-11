@@ -1618,8 +1618,14 @@ case "$target" in
             hw_platform=`cat /sys/devices/system/soc/soc0/hw_platform`
         fi
 
+        if [ -f /sys/devices/soc0/platform_subtype_id ]; then
+            platform_subtype_id=`cat /sys/devices/soc0/platform_subtype_id`
+        fi
+
+        echo 0 > /proc/sys/kernel/sched_boost
+
         case "$soc_id" in
-            "293" | "304" | "338" )
+            "293" | "304" | "338" | "351")
 
                 # Start Host based Touch processing
                 case "$hw_platform" in
@@ -1632,6 +1638,16 @@ case "$target" in
                         fi
                         ;;
                 esac
+
+                if [ $soc_id -eq "338" ]; then
+                    case "$hw_platform" in
+                        "QRD" )
+                            if [ $platform_subtype_id -eq "1" ]; then
+                               start_hbtp
+                            fi
+                            ;;
+                    esac
+                fi
 
                 #init task load, restrict wakeups to preferred cluster
                 echo 15 > /proc/sys/kernel/sched_init_task_load
@@ -1695,13 +1711,114 @@ case "$target" in
                     echo 40 > $gpu_bimc_io_percent
                 done
 
-		# Configure DCC module to capture critical register contents when device crashes
-		for DCC_PATH in /sys/bus/platform/devices/*.dcc*
-		do
-			echo  0 > $DCC_PATH/enable
-			echo cap >  $DCC_PATH/func_type
-			echo sram > $DCC_PATH/data_sink
-			echo  1 > $DCC_PATH/config_reset
+                # disable thermal & BCL core_control to update interactive gov settings
+                echo 0 > /sys/module/msm_thermal/core_control/enabled
+                for mode in /sys/devices/soc.0/qcom,bcl.*/mode
+                do
+                    echo -n disable > $mode
+                done
+                for hotplug_mask in /sys/devices/soc.0/qcom,bcl.*/hotplug_mask
+                do
+                    bcl_hotplug_mask=`cat $hotplug_mask`
+                    echo 0 > $hotplug_mask
+                done
+                for hotplug_soc_mask in /sys/devices/soc.0/qcom,bcl.*/hotplug_soc_mask
+                do
+                    bcl_soc_hotplug_mask=`cat $hotplug_soc_mask`
+                    echo 0 > $hotplug_soc_mask
+                done
+                for mode in /sys/devices/soc.0/qcom,bcl.*/mode
+                do
+                    echo -n enable > $mode
+                done
+
+                #if the kernel version >=4.9,use the schedutil governor
+                KernelVersionStr=`cat /proc/sys/kernel/osrelease`
+                KernelVersionS=${KernelVersionStr:2:2}
+                KernelVersionA=${KernelVersionStr:0:1}
+                KernelVersionB=${KernelVersionS%.*}
+                if [ $KernelVersionA -ge 4 ] && [ $KernelVersionB -ge 9 ]; then
+                    8953_sched_dcvs_eas
+                else
+                    8953_sched_dcvs_hmp
+                fi
+                echo 652800 > /sys/devices/system/cpu/cpu0/cpufreq/scaling_min_freq
+
+                # Bring up all cores online
+                echo 1 > /sys/devices/system/cpu/cpu1/online
+                echo 1 > /sys/devices/system/cpu/cpu2/online
+                echo 1 > /sys/devices/system/cpu/cpu3/online
+                echo 1 > /sys/devices/system/cpu/cpu4/online
+                echo 1 > /sys/devices/system/cpu/cpu5/online
+                echo 1 > /sys/devices/system/cpu/cpu6/online
+                echo 1 > /sys/devices/system/cpu/cpu7/online
+
+                # Enable low power modes
+                echo 0 > /sys/module/lpm_levels/parameters/sleep_disabled
+
+                # re-enable thermal & BCL core_control now
+                echo 1 > /sys/module/msm_thermal/core_control/enabled
+                for mode in /sys/devices/soc.0/qcom,bcl.*/mode
+                do
+                    echo -n disable > $mode
+                done
+                for hotplug_mask in /sys/devices/soc.0/qcom,bcl.*/hotplug_mask
+                do
+                    echo $bcl_hotplug_mask > $hotplug_mask
+                done
+                for hotplug_soc_mask in /sys/devices/soc.0/qcom,bcl.*/hotplug_soc_mask
+                do
+                    echo $bcl_soc_hotplug_mask > $hotplug_soc_mask
+                done
+                for mode in /sys/devices/soc.0/qcom,bcl.*/mode
+                do
+                    echo -n enable > $mode
+                done
+
+                # SMP scheduler
+                echo 85 > /proc/sys/kernel/sched_upmigrate
+                echo 85 > /proc/sys/kernel/sched_downmigrate
+
+                # Set Memory parameters
+                configure_memory_parameters
+            ;;
+        esac
+        case "$soc_id" in
+            "349" | "350")
+
+            # Start Host based Touch processing
+            case "$hw_platform" in
+                 "MTP" | "Surf" | "RCM" | "QRD" )
+                          start_hbtp
+                    ;;
+            esac
+
+            for devfreq_gov in /sys/class/devfreq/qcom,mincpubw*/governor
+            do
+                echo "cpufreq" > $devfreq_gov
+            done
+            for cpubw in /sys/class/devfreq/*qcom,cpubw*
+            do
+                echo "bw_hwmon" > $cpubw/governor
+                echo 50 > $cpubw/polling_interval
+                echo "1611 3221 5859 6445 7104" > $cpubw/bw_hwmon/mbps_zones
+                echo 4 > $cpubw/bw_hwmon/sample_ms
+                echo 34 > $cpubw/bw_hwmon/io_percent
+                echo 20 > $cpubw/bw_hwmon/hist_memory
+                echo 80 > $cpubw/bw_hwmon/down_thres
+                echo 0 > $cpubw/bw_hwmon/hyst_length
+                echo 0 > $cpubw/bw_hwmon/guard_band_mbps
+                echo 250 > $cpubw/bw_hwmon/up_scale
+                echo 1600 > $cpubw/bw_hwmon/idle_mbps
+            done
+
+            # Configure DCC module to capture critical register contents when device crashes
+            for DCC_PATH in /sys/bus/platform/devices/*.dcc*
+            do
+                echo  0 > $DCC_PATH/enable
+                echo cap >  $DCC_PATH/func_type
+                echo sram > $DCC_PATH/data_sink
+                echo  1 > $DCC_PATH/config_reset
 
 			# Register specifies APC CPR closed-loop settled voltage for current voltage corner
 			echo 0xb1d2c18 1 > $DCC_PATH/config
@@ -1739,57 +1856,89 @@ case "$target" in
                     echo -n enable > $mode
                 done
 
-                #if the kernel version >=4.9,use the schedutil governor
-                KernelVersionStr=`cat /proc/sys/kernel/osrelease`
-                KernelVersionS=${KernelVersionStr:2:2}
-                KernelVersionA=${KernelVersionStr:0:1}
-                KernelVersionB=${KernelVersionS%.*}
-                if [ $KernelVersionA -ge 4 ] && [ $KernelVersionB -ge 9 ]; then
-                    8953_sched_dcvs_eas
-                else
-                    8953_sched_dcvs_hmp
-                fi
-                echo 652800 > /sys/devices/system/cpu/cpu0/cpufreq/scaling_min_freq
-                # re-enable thermal & BCL core_control now
-                echo 1 > /sys/module/msm_thermal/core_control/enabled
-                for mode in /sys/devices/soc.0/qcom,bcl.*/mode
-                do
-                    echo -n disable > $mode
-                done
-                for hotplug_mask in /sys/devices/soc.0/qcom,bcl.*/hotplug_mask
-                do
-                    echo $bcl_hotplug_mask > $hotplug_mask
-                done
-                for hotplug_soc_mask in /sys/devices/soc.0/qcom,bcl.*/hotplug_soc_mask
-                do
-                    echo $bcl_soc_hotplug_mask > $hotplug_soc_mask
-                done
-                for mode in /sys/devices/soc.0/qcom,bcl.*/mode
-                do
-                    echo -n enable > $mode
-                done
+            # configure governor settings for little cluster
+            echo 1 > /sys/devices/system/cpu/cpu0/online
+            echo "schedutil" > /sys/devices/system/cpu/cpu0/cpufreq/scaling_governor
+            echo 0 > /sys/devices/system/cpu/cpu0/cpufreq/schedutil/rate_limit_us
+            echo 1363200 > /sys/devices/system/cpu/cpu0/cpufreq/schedutil/hispeed_freq
+            #default value for hispeed_load is 90, for sdm632 it should be 85
+            echo 85 > /sys/devices/system/cpu/cpu0/cpufreq/schedutil/hispeed_load
+            # sched_load_boost as -6 is equivalent to target load as 85.
+            echo -6 > /sys/devices/system/cpu/cpu0/sched_load_boost
+            echo -6 > /sys/devices/system/cpu/cpu1/sched_load_boost
+            echo -6 > /sys/devices/system/cpu/cpu2/sched_load_boost
+            echo -6 > /sys/devices/system/cpu/cpu3/sched_load_boost
 
-                # Bring up all cores online
-                echo 1 > /sys/devices/system/cpu/cpu1/online
-                echo 1 > /sys/devices/system/cpu/cpu2/online
-                echo 1 > /sys/devices/system/cpu/cpu3/online
-                echo 1 > /sys/devices/system/cpu/cpu4/online
-                echo 1 > /sys/devices/system/cpu/cpu5/online
-                echo 1 > /sys/devices/system/cpu/cpu6/online
-                echo 1 > /sys/devices/system/cpu/cpu7/online
+            # configure governor settings for big cluster
+            echo 1 > /sys/devices/system/cpu/cpu4/online
+            echo "schedutil" > /sys/devices/system/cpu/cpu4/cpufreq/scaling_governor
+            echo 0 > /sys/devices/system/cpu/cpu4/cpufreq/schedutil/rate_limit_us
+            echo 1401600 > /sys/devices/system/cpu/cpu4/cpufreq/schedutil/hispeed_freq
+            #default value for hispeed_load is 90, for sdm632 it should be 85
+            echo 85 > /sys/devices/system/cpu/cpu4/cpufreq/schedutil/hispeed_load
+            # sched_load_boost as -6 is equivalent to target load as 85.
+            echo -6 >  /sys/devices/system/cpu/cpu4/sched_load_boost
+            echo -6 > /sys/devices/system/cpu/cpu5/sched_load_boost
+            echo -6 > /sys/devices/system/cpu/cpu7/sched_load_boost
+            echo -6 > /sys/devices/system/cpu/cpu6/sched_load_boost
 
-                # Enable low power modes
-                echo 0 > /sys/module/lpm_levels/parameters/sleep_disabled
+            echo 614400 > /sys/devices/system/cpu/cpu0/cpufreq/scaling_min_freq
+            echo 1094400 > /sys/devices/system/cpu/cpu4/cpufreq/scaling_min_freq
 
-                # SMP scheduler
-                echo 85 > /proc/sys/kernel/sched_upmigrate
-                echo 85 > /proc/sys/kernel/sched_downmigrate
+            # cpuset settings
+            echo 0-3 > /dev/cpuset/background/cpus
+            echo 0-3 > /dev/cpuset/system-background/cpus
+            # choose idle CPU for top app tasks
+            echo 1 > /dev/stune/top-app/schedtune.prefer_idle
 
-                # Set Memory parameters
-                configure_memory_parameters
-	;;
-	esac
-	;;
+            # re-enable thermal & BCL core_control now
+            echo 1 > /sys/module/msm_thermal/core_control/enabled
+            for mode in /sys/devices/soc.0/qcom,bcl.*/mode
+            do
+                echo -n disable > $mode
+            done
+            for hotplug_mask in /sys/devices/soc.0/qcom,bcl.*/hotplug_mask
+            do
+                echo $bcl_hotplug_mask > $hotplug_mask
+            done
+            for hotplug_soc_mask in /sys/devices/soc.0/qcom,bcl.*/hotplug_soc_mask
+            do
+                echo $bcl_soc_hotplug_mask > $hotplug_soc_mask
+            done
+            for mode in /sys/devices/soc.0/qcom,bcl.*/mode
+            do
+                echo -n enable > $mode
+            done
+
+            # Disable Core control
+            echo 0 > /sys/devices/system/cpu/cpu0/core_ctl/enable
+            echo 0 > /sys/devices/system/cpu/cpu4/core_ctl/enable
+
+            # Bring up all cores online
+            echo 1 > /sys/devices/system/cpu/cpu1/online
+            echo 1 > /sys/devices/system/cpu/cpu2/online
+            echo 1 > /sys/devices/system/cpu/cpu3/online
+            echo 1 > /sys/devices/system/cpu/cpu4/online
+            echo 1 > /sys/devices/system/cpu/cpu5/online
+            echo 1 > /sys/devices/system/cpu/cpu6/online
+            echo 1 > /sys/devices/system/cpu/cpu7/online
+
+            # Enable low power modes
+            echo 0 > /sys/module/lpm_levels/parameters/sleep_disabled
+
+            # Set Memory parameters
+            configure_memory_parameters
+
+            # Setting b.L scheduler parameters
+            echo 76 > /proc/sys/kernel/sched_downmigrate
+            echo 86 > /proc/sys/kernel/sched_upmigrate
+            echo 80 > /proc/sys/kernel/sched_group_downmigrate
+            echo 90 > /proc/sys/kernel/sched_group_upmigrate
+            echo 1 > /proc/sys/kernel/sched_walt_rotate_big_tasks
+
+            ;;
+        esac
+    ;;
 esac
 
 case "$target" in
@@ -1806,14 +1955,25 @@ case "$target" in
         else
             hw_platform=`cat /sys/devices/system/soc/soc0/hw_platform`
         fi
+	if [ -f /sys/devices/soc0/platform_subtype_id ]; then
+	    platform_subtype_id=`cat /sys/devices/soc0/platform_subtype_id`
+        fi
 
         case "$soc_id" in
            "303" | "307" | "308" | "309" | "320" )
 
                   # Start Host based Touch processing
                   case "$hw_platform" in
-                    "MTP" | "Surf" | "RCM" )
-                        start_hbtp
+                    "MTP" )
+			start_hbtp
+                        ;;
+                  esac
+
+                  case "$hw_platform" in
+                    "Surf" | "RCM" )
+			if [ $platform_subtype_id -ne "4" ]; then
+			    start_hbtp
+		        fi
                         ;;
                   esac
                 # Apply Scheduler and Governor settings for 8917 / 8920
@@ -1990,6 +2150,125 @@ case "$target" in
             ;;
             *)
 
+            ;;
+        esac
+
+        case "$soc_id" in
+             "354" | "364" | "353" | "363" )
+
+                # Start Host based Touch processing
+                case "$hw_platform" in
+                    "MTP" | "Surf" | "RCM" | "QRD" )
+                    start_hbtp
+                ;;
+                esac
+
+                # Apply settings for sdm429/sda429/sdm439/sda439
+
+                for cpubw in /sys/class/devfreq/*qcom,mincpubw*
+                do
+                    echo "cpufreq" > $cpubw/governor
+                done
+
+                for cpubw in /sys/class/devfreq/*qcom,cpubw*
+                do
+                    echo "bw_hwmon" > $cpubw/governor
+                    echo 20 > $cpubw/bw_hwmon/io_percent
+                    echo 30 > $cpubw/bw_hwmon/guard_band_mbps
+                done
+
+                for gpu_bimc_io_percent in /sys/class/devfreq/soc:qcom,gpubw/bw_hwmon/io_percent
+                do
+                    echo 40 > $gpu_bimc_io_percent
+                done
+
+                case "$soc_id" in
+                     "353" | "363" )
+                     # Apply settings for sdm439/sda439
+                     # configure schedutil governor settings
+                     # enable governor for perf cluster
+                     echo 1 > /sys/devices/system/cpu/cpu0/online
+                     echo "schedutil" > /sys/devices/system/cpu/cpu0/cpufreq/scaling_governor
+                     echo 0 > /sys/devices/system/cpu/cpu0/cpufreq/schedutil/rate_limit_us
+                     #set the hispeed_freq
+                     echo 1497600 > /sys/devices/system/cpu/cpu0/cpufreq/schedutil/hispeed_freq
+                     #default value for hispeed_load is 90, for sdm439 it should be 85
+                     echo 85 > /sys/devices/system/cpu/cpu0/cpufreq/schedutil/hispeed_load
+                     echo 1305600 > /sys/devices/system/cpu/cpu0/cpufreq/scaling_min_freq
+
+
+                     ## enable governor for power cluster
+                     echo 1 > /sys/devices/system/cpu/cpu4/online
+                     echo "schedutil" > /sys/devices/system/cpu/cpu4/cpufreq/scaling_governor
+                     echo 0 > /sys/devices/system/cpu/cpu4/cpufreq/schedutil/rate_limit_us
+                     #set the hispeed_freq
+                     echo 998400 > /sys/devices/system/cpu/cpu4/cpufreq/schedutil/hispeed_freq
+                     #default value for hispeed_load is 90, for sdm439 it should be 85
+                     echo 90 > /sys/devices/system/cpu/cpu4/cpufreq/schedutil/hispeed_load
+                     echo 768000 > /sys/devices/system/cpu/cpu4/cpufreq/scaling_min_freq
+
+
+                     # EAS scheduler (big.Little cluster related) settings
+                     echo 93 > /proc/sys/kernel/sched_upmigrate
+                     echo 83 > /proc/sys/kernel/sched_downmigrate
+                     #echo 140 > /proc/sys/kernel/sched_group_upmigrate
+                     #echo 120 > /proc/sys/kernel/sched_group_downmigrate
+
+                     # cpuset settings
+                     #echo 0-3 > /dev/cpuset/background/cpus
+                     #echo 0-3 > /dev/cpuset/system-background/cpus
+
+                     # Bring up all cores online
+                     echo 1 > /sys/devices/system/cpu/cpu1/online
+                     echo 1 > /sys/devices/system/cpu/cpu2/online
+                     echo 1 > /sys/devices/system/cpu/cpu3/online
+                     echo 1 > /sys/devices/system/cpu/cpu4/online
+                     echo 1 > /sys/devices/system/cpu/cpu5/online
+                     echo 1 > /sys/devices/system/cpu/cpu6/online
+                     echo 1 > /sys/devices/system/cpu/cpu7/online
+
+                     # Enable core control
+                     echo 2 > /sys/devices/system/cpu/cpu0/core_ctl/min_cpus
+                     echo 4 > /sys/devices/system/cpu/cpu0/core_ctl/max_cpus
+                     echo 68 > /sys/devices/system/cpu/cpu0/core_ctl/busy_up_thres
+                     echo 40 > /sys/devices/system/cpu/cpu0/core_ctl/busy_down_thres
+                     echo 100 > /sys/devices/system/cpu/cpu0/core_ctl/offline_delay_ms
+                     echo 1 > /sys/devices/system/cpu/cpu0/core_ctl/is_big_cluster
+                 ;;
+                 *)
+                     # Apply settings for sdm429/sda429
+                     # configure schedutil governor settings
+                     echo 1 > /sys/devices/system/cpu/cpu0/online
+                     echo "schedutil" > /sys/devices/system/cpu/cpu0/cpufreq/scaling_governor
+                     echo 0 > /sys/devices/system/cpu/cpu0/cpufreq/schedutil/rate_limit_us
+                     #set the hispeed_freq
+                     echo 1305600 > /sys/devices/system/cpu/cpu0/cpufreq/schedutil/hispeed_freq
+                     #default value for hispeed_load is 90, for sdm429 it should be 85
+                     echo 85 > /sys/devices/system/cpu/cpu0/cpufreq/schedutil/hispeed_load
+                     echo 960000 > /sys/devices/system/cpu/cpu0/cpufreq/scaling_min_freq
+
+
+                     # Bring up all cores online
+                     echo 1 > /sys/devices/system/cpu/cpu1/online
+                     echo 1 > /sys/devices/system/cpu/cpu2/online
+                     echo 1 > /sys/devices/system/cpu/cpu3/online
+                 ;;
+                esac
+
+                # Set Memory parameters
+                configure_memory_parameters
+
+                #disable sched_boost
+                echo 0 > /proc/sys/kernel/sched_boost
+
+                # Disable L2-GDHS low power modes
+                echo N > /sys/module/lpm_levels/system/pwr/pwr-l2-gdhs/idle_enabled
+                echo N > /sys/module/lpm_levels/system/pwr/pwr-l2-gdhs/suspend_enabled
+                echo N > /sys/module/lpm_levels/system/perf/perf-l2-gdhs/idle_enabled
+                echo N > /sys/module/lpm_levels/system/perf/perf-l2-gdhs/suspend_enabled
+
+                # Enable low power modes
+                echo 0 > /sys/module/lpm_levels/parameters/sleep_disabled
             ;;
         esac
     ;;
@@ -2394,6 +2673,7 @@ case "$target" in
       # sched_load_boost as -6 is equivalent to target load as 85. It is per cpu tunable.
       echo -6 >  /sys/devices/system/cpu/cpu6/sched_load_boost
       echo -6 >  /sys/devices/system/cpu/cpu7/sched_load_boost
+      echo 85 > /sys/devices/system/cpu/cpu6/cpufreq/schedutil/hispeed_load
 
       echo "0:1209600" > /sys/module/cpu_boost/parameters/input_boost_freq
       echo 40 > /sys/module/cpu_boost/parameters/input_boost_ms
@@ -3038,11 +3318,7 @@ case "$target" in
 	echo 85 > /proc/sys/kernel/sched_downmigrate
 	echo 100 > /proc/sys/kernel/sched_group_upmigrate
 	echo 95 > /proc/sys/kernel/sched_group_downmigrate
-	echo 0 > /proc/sys/kernel/sched_select_prev_cpu_us
-	echo 400000 > /proc/sys/kernel/sched_freq_inc_notify
-	echo 400000 > /proc/sys/kernel/sched_freq_dec_notify
-	echo 5 > /proc/sys/kernel/sched_spill_nr_run
-	echo 1 > /proc/sys/kernel/sched_restrict_cluster_spill
+	echo 1 > /proc/sys/kernel/sched_walt_rotate_big_tasks
 
 	# configure governor settings for little cluster
 	echo "schedutil" > /sys/devices/system/cpu/cpu0/cpufreq/scaling_governor
@@ -3152,12 +3428,26 @@ case "$target" in
 	echo 60 > /sys/devices/system/cpu/cpu4/core_ctl/busy_up_thres
 	echo 30 > /sys/devices/system/cpu/cpu4/core_ctl/busy_down_thres
 	echo 100 > /sys/devices/system/cpu/cpu4/core_ctl/offline_delay_ms
-	echo 1 > /sys/devices/system/cpu/cpu4/core_ctl/is_big_cluster
 	echo 3 > /sys/devices/system/cpu/cpu4/core_ctl/task_thres
 
-	# Disable Core control on silver & gold+
+	# Core control parameters for gold+
+	echo 0 > /sys/devices/system/cpu/cpu7/core_ctl/min_cpus
+	echo 60 > /sys/devices/system/cpu/cpu7/core_ctl/busy_up_thres
+	echo 30 > /sys/devices/system/cpu/cpu7/core_ctl/busy_down_thres
+	echo 100 > /sys/devices/system/cpu/cpu7/core_ctl/offline_delay_ms
+	echo 1 > /sys/devices/system/cpu/cpu7/core_ctl/task_thres
+	# Controls how many more tasks should be eligible to run on gold CPUs
+	# w.r.t number of gold CPUs available to trigger assist (max number of
+	# tasks eligible to run on previous cluster minus number of CPUs in
+	# the previous cluster).
+	#
+	# Setting to 3 by default which means there should be at least
+	# 6 tasks eligible to run on gold cluster (tasks running on gold cores
+	# plus misfit tasks on silver cores) to trigger assitance from gold+.
+	echo 3 > /sys/devices/system/cpu/cpu7/core_ctl/nr_prev_assist_thresh
+
+	# Disable Core control on silver
 	echo 0 > /sys/devices/system/cpu/cpu0/core_ctl/enable
-	echo 0 > /sys/devices/system/cpu/cpu7/core_ctl/enable
 
 	# Setting b.L scheduler parameters
 	echo 95 95 > /proc/sys/kernel/sched_upmigrate
@@ -3208,7 +3498,7 @@ case "$target" in
 	    do
 		echo "bw_hwmon" > $cpubw/governor
 		echo 40 > $cpubw/polling_interval
-		echo "2288 4577 6149 8132 10162 11856" > $cpubw/bw_hwmon/mbps_zones
+		echo "2288 3051 6149 8132 10162 11856" > $cpubw/bw_hwmon/mbps_zones
 		echo 4 > $cpubw/bw_hwmon/sample_ms
 		echo 50 > $cpubw/bw_hwmon/io_percent
 		echo 20 > $cpubw/bw_hwmon/hist_memory
