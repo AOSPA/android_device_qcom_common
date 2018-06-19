@@ -32,4 +32,6 @@ IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 <resources>
     <!-- Enable doze mode -->
     <bool name="doze_display_state_supported">true</bool>
+    <!-- framework doesn't support doze suspend correctly -->
+    <bool name="doze_suspend_display_state_supported">false</bool>
 </resources>

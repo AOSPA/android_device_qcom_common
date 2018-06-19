@@ -102,7 +102,7 @@ if [ "$usb_config" == "" ]; then #USB persist config not set, select default con
 		      ;;
 	              "msm8937")
 			    if [ -d /config/usb_gadget ]; then
-				       setprop persist.vendor.usb.config diag,adb
+				       setprop persist.vendor.usb.config diag,serial_cdev,rmnet,dpl,adb
 			    else
 			               case "$soc_id" in
 				               "313" | "320")
@@ -183,7 +183,7 @@ fi
 # enable rps cpus on msm8937 target
 setprop vendor.usb.rps_mask 0
 case "$soc_id" in
-	"294" | "295")
+	"294" | "295" | "353" | "354")
 		setprop vendor.usb.rps_mask 40
 	;;
 esac

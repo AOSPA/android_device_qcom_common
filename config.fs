@@ -1,13 +1,13 @@
-[AID_QTI_DIAG]
+[AID_VENDOR_QTI_DIAG]
 value:2901
 
-[AID_QDSS]
+[AID_VENDOR_QDSS]
 value:2902
 
-[AID_RFS]
+[AID_VENDOR_RFS]
 value:2903
 
-[AID_RFS_SHARED]
+[AID_VENDOR_RFS_SHARED]
 value:2904
 
 [vendor/bin/wcnss_filter]
@@ -104,13 +104,13 @@ caps: NET_BIND_SERVICE
 mode: 0755
 user: AID_SYSTEM
 group: AID_RADIO
-caps: WAKE_ALARM
+caps: NET_BIND_SERVICE BLOCK_SUSPEND WAKE_ALARM
 
 [system/vendor/bin/imsrcsd]
 mode: 0755
 user: AID_SYSTEM
 group: AID_RADIO
-caps: WAKE_ALARM
+caps: NET_BIND_SERVICE BLOCK_SUSPEND WAKE_ALARM
 
 [vendor/bin/cnd]
 mode: 0755

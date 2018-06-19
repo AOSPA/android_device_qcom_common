@@ -3274,37 +3274,39 @@ case "$target" in
         # to one of the CPU from the default IRQ affinity mask.
         echo f > /proc/irq/default_smp_affinity
 
-	if [ -f /sys/devices/soc0/soc_id ]; then
+        if [ -f /sys/devices/soc0/soc_id ]; then
                 soc_id=`cat /sys/devices/soc0/soc_id`
         else
                 soc_id=`cat /sys/devices/system/soc/soc0/id`
         fi
 
-	if [ -f /sys/devices/soc0/hw_platform ]; then
+        if [ -f /sys/devices/soc0/hw_platform ]; then
                 hw_platform=`cat /sys/devices/soc0/hw_platform`
-	fi
+        fi
 
-	if [ -f /sys/devices/soc0/platform_subtype_id ]; then
-		platform_subtype_id=`cat /sys/devices/soc0/platform_subtype_id`
-	fi
+        if [ -f /sys/devices/soc0/platform_subtype_id ]; then
+                platform_subtype_id=`cat /sys/devices/soc0/platform_subtype_id`
+        fi
 
-    case "$soc_id" in
-                "321")
+        case "$soc_id" in
+                "321" | "341")
                 # Start Host based Touch processing
                 case "$hw_platform" in
-		    "MTP" | "Surf" | "RCM" )
-                          start_hbtp
-                     ;;
                     "QRD" )
                             case "$platform_subtype_id" in
-                                   "1") #QRD845
+                                   "32") #QVR845 do nothing
+                                     ;;
+                                   *)
                                          start_hbtp
                                      ;;
                             esac
                      ;;
+                    *)
+                          start_hbtp
+                     ;;
                 esac
          ;;
-	esac
+        esac
 	# Core control parameters
 	echo 2 > /sys/devices/system/cpu/cpu4/core_ctl/min_cpus
 	echo 60 > /sys/devices/system/cpu/cpu4/core_ctl/busy_up_thres
@@ -3487,6 +3489,7 @@ case "$target" in
 	echo 120 > /sys/module/cpu_boost/parameters/input_boost_ms
 
         echo 120 > /proc/sys/vm/watermark_scale_factor
+        echo 1 > /proc/sys/vm/reap_mem_on_sigkill
 
         echo 0-3 > /dev/cpuset/background/cpus
         echo 0-3 > /dev/cpuset/system-background/cpus

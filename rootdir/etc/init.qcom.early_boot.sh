@@ -71,18 +71,20 @@ fi
 function set_density_by_fb() {
     #put default density based on width
     if [ -z $fb_width ]; then
-        setprop ro.sf.lcd_density 320
+        setprop vendor.display.lcd_density 320
     else
-        if [ $fb_width -ge 1440 ]; then
-           setprop ro.sf.lcd_density 560
+        if [ $fb_width -ge 1600 ]; then
+           setprop vendor.display.lcd_density 640
+        elif [ $fb_width -ge 1440 ]; then
+           setprop vendor.display.lcd_density 560
         elif [ $fb_width -ge 1080 ]; then
-           setprop ro.sf.lcd_density 480
+           setprop vendor.display.lcd_density 480
         elif [ $fb_width -ge 720 ]; then
-           setprop ro.sf.lcd_density 320 #for 720X1280 resolution
+           setprop vendor.display.lcd_density 320 #for 720X1280 resolution
         elif [ $fb_width -ge 480 ]; then
-            setprop ro.sf.lcd_density 240 #for 480X854 QRD resolution
+            setprop vendor.display.lcd_density 240 #for 480X854 QRD resolution
         else
-            setprop ro.sf.lcd_density 160
+            setprop vendor.display.lcd_density 160
         fi
     fi
 }
@@ -92,7 +94,7 @@ product=`getprop ro.build.product`
 
 case "$product" in
         "msmnile_au")
-         setprop ro.sf.lcd_density 160
+         setprop vendor.display.lcd_density 160
          ;;
         *)
         ;;
@@ -108,7 +110,7 @@ case "$target" in
                 ln -s  /system/usr/keychars/surf_keypad_qwerty.kcm.bin /system/usr/keychars/surf_keypad.kcm.bin
                 ;;
             "Fluid")
-                setprop ro.sf.lcd_density 240
+                setprop vendor.display.lcd_density 240
                 setprop qcom.bt.dev_power_class 2
                 ;;
             *)
@@ -120,7 +122,7 @@ case "$target" in
     "msm8660")
         case "$soc_hwplatform" in
             "Fluid")
-                setprop ro.sf.lcd_density 240
+                setprop vendor.display.lcd_density 240
                 ;;
             "Dragon")
                 setprop ro.sound.alsa "WM8903"
@@ -136,18 +138,18 @@ case "$target" in
                     setprop ro.sf.hwrotation 90
                 fi
 
-                setprop ro.sf.lcd_density 160
+                setprop vendor.display.lcd_density 160
                 ;;
             "MTP")
-                setprop ro.sf.lcd_density 240
+                setprop vendor.display.lcd_density 240
                 ;;
             *)
                 case "$soc_hwid" in
                     "109")
-                        setprop ro.sf.lcd_density 160
+                        setprop vendor.display.lcd_density 160
                         ;;
                     *)
-                        setprop ro.sf.lcd_density 240
+                        setprop vendor.display.lcd_density 240
                         ;;
                 esac
             ;;
@@ -170,16 +172,16 @@ case "$target" in
     "msm8974")
         case "$soc_hwplatform" in
             "Liquid")
-                setprop ro.sf.lcd_density 160
+                setprop vendor.display.lcd_density 160
                 # Liquid do not have hardware navigation keys, so enable
                 # Android sw navigation bar
                 setprop ro.hw.nav_keys 0
                 ;;
             "Dragon")
-                setprop ro.sf.lcd_density 240
+                setprop vendor.display.lcd_density 240
                 ;;
             *)
-                setprop ro.sf.lcd_density 320
+                setprop vendor.display.lcd_density 320
                 ;;
         esac
         ;;
@@ -187,7 +189,7 @@ case "$target" in
     "msm8226")
         case "$soc_hwplatform" in
             *)
-                setprop ro.sf.lcd_density 320
+                setprop vendor.display.lcd_density 320
                 ;;
         esac
         ;;
@@ -195,45 +197,45 @@ case "$target" in
     "msm8610" | "apq8084" | "mpq8092")
         case "$soc_hwplatform" in
             *)
-                setprop ro.sf.lcd_density 240
+                setprop vendor.display.lcd_density 240
                 ;;
         esac
         ;;
     "apq8084")
         case "$soc_hwplatform" in
             "Liquid")
-                setprop ro.sf.lcd_density 320
+                setprop vendor.display.lcd_density 320
                 # Liquid do not have hardware navigation keys, so enable
                 # Android sw navigation bar
                 setprop ro.hw.nav_keys 0
                 ;;
             "SBC")
-                setprop ro.sf.lcd_density 200
+                setprop vendor.display.lcd_density 200
                 # SBC do not have hardware navigation keys, so enable
                 # Android sw navigation bar
                 setprop qemu.hw.mainkeys 0
                 ;;
             *)
-                setprop ro.sf.lcd_density 480
+                setprop vendor.display.lcd_density 480
                 ;;
         esac
         ;;
     "msm8996")
         case "$soc_hwplatform" in
             "Dragon")
-                setprop ro.sf.lcd_density 240
+                setprop vendor.display.lcd_density 240
                 setprop qemu.hw.mainkeys 0
                 ;;
             "ADP")
-                setprop ro.sf.lcd_density 160
+                setprop vendor.display.lcd_density 160
                 setprop qemu.hw.mainkeys 0
                 ;;
             "SBC")
-                setprop ro.sf.lcd_density 240
+                setprop vendor.display.lcd_density 240
                 setprop qemu.hw.mainkeys 0
                 ;;
             *)
-                setprop ro.sf.lcd_density 560
+                setprop vendor.display.lcd_density 560
                 ;;
         esac
         ;;
@@ -267,7 +269,7 @@ case "$target" in
     "msm8998" | "apq8098_latv")
         case "$soc_hwplatform" in
             *)
-                setprop ro.sf.lcd_density 560
+                setprop vendor.display.lcd_density 560
                 if [ ! -e /dev/kgsl-3d0 ]; then
                     setprop persist.sys.force_sw_gles 1
                     setprop sdm.idle_time 0
@@ -282,10 +284,10 @@ case "$target" in
         case "$soc_hwplatform" in
             *)
                 if [ $fb_width -le 1600 ]; then
-                    setprop ro.sf.lcd_density 560
+                    setprop vendor.display.lcd_density 560
                     setprop dalvik.vm.heapgrowthlimit 256m
                 else
-                    setprop ro.sf.lcd_density 640
+                    setprop vendor.display.lcd_density 640
                     setprop dalvik.vm.heapgrowthlimit 512m
                 fi
 
@@ -303,41 +305,14 @@ case "$target" in
         case "$soc_hwplatform" in
             *)
                 if [ $fb_width -le 1600 ]; then
-                    setprop ro.sf.lcd_density 560
+                    setprop vendor.display.lcd_density 560
                     setprop dalvik.vm.heapgrowthlimit 256m
                 else
-                    setprop ro.sf.lcd_density 640
+                    setprop vendor.display.lcd_density 640
                     setprop dalvik.vm.heapgrowthlimit 512m
                 fi
                 ;;
         esac
-        ;;
-    "sdm660")
-        if [ -f /vendor/firmware_mnt/verinfo/ver_info.txt ]; then
-            Meta_Build_ID=`cat /vendor/firmware_mnt/verinfo/ver_info.txt |
-                    sed -n 's/^[^:]*Meta_Build_ID[^:]*:[[:blank:]]*//p' |
-                    sed 's/.*LA.\(.*\)/\1/g' | cut -d \- -f 1`
-            # In SDM660 if meta version is greater than 2.1, need
-            # to use the new vendor-ril which supports L+L feature
-            # otherwise use the existing old one.
-            product=`getprop ro.product.device`
-            case "$product" in
-            "sdm660_64")
-                if [ "$Meta_Build_ID" \< "2.1" ]; then
-                    setprop vendor.rild.libpath "/vendor/lib64/libril-qc-qmi-1.so"
-                else
-                    setprop vendor.rild.libpath "/vendor/lib64/libril-qc-hal-qmi.so"
-                fi
-                ;;
-            "sdm660_32")
-                if [ "$Meta_Build_ID" \< "2.1" ]; then
-                    setprop vendor.rild.libpath "/vendor/lib/libril-qc-qmi-1.so"
-                else
-                    setprop vendor.rild.libpath "/vendor/lib/libril-qc-hal-qmi.so"
-                fi
-                ;;
-            esac
-        fi
         ;;
     "sdm710" | "msmpeafowl")
         case "$soc_hwplatform" in
