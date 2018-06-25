@@ -4,7 +4,18 @@ $(call inherit-product, device/qcom/common/base.mk)
 # Since we want use QC specific files, we should inherit
 # device-vendor.mk first to make sure QC specific files gets installed.
 $(call inherit-product-if-exists, $(QCPATH)/common/config/device-vendor.mk)
-$(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
+
+ifeq ($(TARGET_HAS_LOW_RAM),true)
+    PRODUCT_PROPERTY_OVERRIDES += \
+        keyguard.no_require_sim=true \
+        ro.com.android.dataroaming=true
+
+    $(call inherit-product, $(SRC_TARGET_DIR)/product/telephony.mk)
+    $(call inherit-product, $(SRC_TARGET_DIR)/product/generic.mk)
+    $(call inherit-product, $(SRC_TARGET_DIR)/product/languages_full.mk)
+else
+    $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
+endif
 
 PRODUCT_BRAND := qcom
 PRODUCT_AAPT_CONFIG += hdpi mdpi
@@ -38,7 +49,10 @@ PRODUCT_PRIVATE_KEY := device/qcom/common/qcom.key
 PRODUCT_PACKAGES += qcril.db
 
 ifneq ($(TARGET_DEFINES_DALVIK_HEAP), true)
+ifneq ($(TARGET_HAS_LOW_RAM), true)
 $(call inherit-product, frameworks/native/build/phone-xhdpi-1024-dalvik-heap.mk)
 endif
+endif
+
 #$(call inherit-product, frameworks/base/data/fonts/fonts.mk)
 #$(call inherit-product, frameworks/base/data/keyboards/keyboards.mk)

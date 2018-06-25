@@ -118,15 +118,6 @@ IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
             <instance>default</instance>
         </interface>
     </hal>
-    <hal format="hidl" optional="true">
-        <name>android.hardware.radio.deprecated</name>
-        <version>1.0</version>
-        <interface>
-            <name>IOemHook</name>
-            <instance>slot1</instance>
-            <instance>slot2</instance>
-        </interface>
-    </hal>
    <hal format="hidl" optional="true">
        <name>android.hardware.radio</name>
        <version>1.0-2</version>
@@ -288,15 +279,6 @@ IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
            </interface>
     </hal>
     <hal format="hidl" optional="true">
-        <name>vendor.qti.hardware.radio.config</name>
-           <version>1.0</version>
-           <interface>
-               <name>IConfig</name>
-               <instance>radioconfig0</instance>
-               <instance>radioconfig1</instance>
-           </interface>
-    </hal>
-    <hal format="hidl" optional="true">
         <name>vendor.qti.hardware.radio.lpa</name>
         <version>1.0</version>
         <interface>
@@ -455,4 +437,12 @@ IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
          <instance>default</instance>
        </interface>
    </hal>
+    <hal format="hidl" optional="true">
+        <name>vendor.qti.data.factory</name>
+        <version>1.0</version>
+        <interface>
+            <name>IFactory</name>
+            <instance>default</instance>
+        </interface>
+    </hal>
 </compatibility-matrix>
