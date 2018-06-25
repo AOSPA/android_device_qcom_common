@@ -767,6 +767,7 @@ on property:netd.fstman.start=false
     stop fstman
 
 service wigighalsvc /vendor/bin/wigighalsvc
+    interface vendor.qti.hardware.wigig1.supptunnel@1.0::ISuppTunnelProvider default
     class hal
     user system
     group wifi
@@ -775,17 +776,12 @@ service wigighalsvc /vendor/bin/wigighalsvc
     disabled
 
 service wigignpt /vendor/bin/wigignpt
+    interface vendor.qti.hardware.wigig.netperftuner@1.0::INetPerfTuner default
     class hal
     socket wigignpt stream 660 system wifi
     user system
     group wifi net_admin
     disabled
-
-on property:persist.vendor.wigig.enable=1
-    start wigighalsvc
-
-on property:persist.vendor.wigig.npt.enable=1
-    start wigignpt
 
 service dhcpcd_wlan0 /system/bin/dhcpcd -ABKLG
     class late_start
