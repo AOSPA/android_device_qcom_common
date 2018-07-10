@@ -117,9 +117,11 @@ function generate_make_files() {
             ${MV} $hal_path/Android.bp $hal_path/.hidl-autogen
             update_check=1
         fi
+        ${TOUCH} $hal_path/.hidl-autogen
 
         ${ECHO} -n "Running hidl-gen on $hal_package: "
         hidl-gen -Landroidbp $root_arguments $hal_package;
+        rc=$?; if [[ $rc != 0 ]]; then return $rc; fi
 
         if [ "$update_check" -eq 1 ]; then
             ${DIFF} -q $hal_path/Android.bp $hal_path/.hidl-autogen > /dev/null
@@ -132,10 +134,6 @@ function generate_make_files() {
         else
             ${ECHO} "created"
         fi
-        ${TOUCH} $hal_path/.hidl-autogen
-
-        #TODO: we need to enable this once all HAL's are in proper format
-        #    rc=$?; if [[ $rc != 0 ]]; then return $rc; fi
     done
     popd > /dev/null
 }
@@ -149,6 +147,10 @@ function start_script_for_interfaces {
         #generate interfaces
         local relative_interface=${interface#${ANDROID_BUILD_TOP}/}
         generate_make_files $relative_interface "android.hidl:system/libhidl/transport"
+        if [ $? -ne 0 ] ; then
+           ${ECHO} "HIDL interfaces: Update Failed"
+           return 1;
+        fi
     done
     ${ECHO} "HIDL interfaces:  Update complete."
 }
