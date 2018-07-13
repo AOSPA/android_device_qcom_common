@@ -12,24 +12,7 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-PRODUCT_SOONG_NAMESPACES += \
-    device/qcom/common/init
-
-# Init
-PRODUCT_PACKAGES += \
-    init.aospa.perf.rc \
-    init.class_main.sh \
-    init.crda.sh \
-    init.mdm.sh \
-    init.qcom.class_core.sh \
-    init.qcom.coex.sh \
-    init.qcom.early_boot.sh \
-    init.qcom.efs.sync.sh \
-    init.qcom.factory.rc \
-    init.qcom.post_boot.sh \
-    init.qcom.rc \
-    init.qcom.sdio.sh \
-    init.qcom.sh \
-    init.recovery.qcom.rc \
-    qca6234-service.sh \
-    ueventd.qcom.rc
+on property:vendor.post_boot.parsed=1
+    # Override readahead to 128KiB.
+    write /sys/block/dm-0/queue/read_ahead_kb 128
+    write /sys/block/dm-1/queue/read_ahead_kb 128
