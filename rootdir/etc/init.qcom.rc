@@ -1177,3 +1177,9 @@ service chre /vendor/bin/chre
     group system
     socket chre seqpacket 0660 root system
     shutdown critical
+
+service bugreport /system/bin/dumpstate -d -p -B -z -o /data/user_de/0/com.android.shell/files/bugreports/bugreport
+    class main
+    disabled
+    oneshot
+    keycodes 114 115 116
