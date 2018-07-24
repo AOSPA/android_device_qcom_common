@@ -257,20 +257,11 @@ on post-fs-data
     mkdir /dev/socket/qdma 0770 system system
     chmod 2770 /dev/socket/qdma
 
-    # Create directory for TZ Apps
-    mkdir /data/misc/qsee 0770 system system
-
     # Create /data/vendor/tzstorage directory for SFS listener
     mkdir /data/vendor/tzstorage 0770 system system
 
     # Create directory for apps access via QTEEConnector
     mkdir /data/vendor/qtee 0770 system system
-
-    # Create directory for voiceprint
-    mkdir /data/misc/qvop 0771 system system
-
-    #Create folder for mm-qcamera-daemon
-    mkdir /data/misc/camera 0770 camera camera
 
     #Create folder of camera
     mkdir /data/vendor/camera 0770 camera camera
@@ -282,7 +273,6 @@ on post-fs-data
     mkdir /data/vendor/tombstones 0771 system system
 
     mkdir /data/vendor/ramdump 0771 root system
-    mkdir /data/misc/bluetooth 0770 bluetooth bluetooth
     mkdir /data/vendor/bluetooth 0770 bluetooth bluetooth
     mkdir /data/vendor/ramdump/bluetooth 0770 bluetooth bluetooth
 
@@ -293,12 +283,8 @@ on post-fs-data
     mkdir /data/vendor/wifi/hostapd/ctrl 0770 wifi wifi
     mkdir /data/vendor/wifi/wpa_supplicant 0770 wifi wifi
     mkdir /data/vendor/wifi/wigig_hostapd 0770 wifi wifi
-    mkdir /data/misc/wifi 0770 wifi wifi
-    mkdir /data/misc/wifi/wpa_supplicant 0770 wifi wifi
     mkdir /data/vendor/wifi/wpa 0770 wifi wifi
     mkdir /data/vendor/wifi/wpa/sockets 0770 wifi wifi
-    mkdir /data/misc/dhcp 0777 dhcp dhcp
-    chown dhcp dhcp /data/misc/dhcp
 
     #create port-bridge log dir
     mkdir /data/vendor/port_bridge 0770 radio radio
@@ -330,9 +316,6 @@ on post-fs-data
     # Create directory for audio delta files
     mkdir /data/vendor/audio/acdbdata 0770 media audio
     mkdir /data/vendor/audio/acdbdata/delta 0770 media audio
-
-    # Create directory used by the DASH client
-    mkdir /data/misc/dash 0770 media audio
 
     # Create directory for radio
     mkdir /data/vendor/radio 0770 system radio
@@ -387,10 +370,6 @@ on post-fs-data
     #Create a folder for SRS to be able to create a usercfg file
     #mkdir /data/data/media 0770 media media
 
-    #Create FM dir for patchdownloader
-    mkdir /data/misc/fm 0770 system system
-    chmod 0770 /data/misc/fm
-
     #Create PERFD deamon related dirs
     mkdir /data/vendor/perfd 0770 root system
     chmod 2770 /data/vendor/perfd
@@ -440,6 +419,9 @@ on post-fs-data
 
     #Create dir for TUI
     mkdir /data/vendor/tui 0600 system drmrpc
+
+    #Start move time data to /data/vendor once post-fs-data done
+    start vendor.move_time_data
 
 service nqnfcinfo /system/vendor/bin/nqnfcinfo
     class late_start
@@ -749,7 +731,8 @@ service vendor.wigig_supplicant /vendor/bin/hw/wpa_supplicant \
 # FST Manager with hostapd (softap) - all settings inside ini file
 service fstman /vendor/bin/fstman -B -ddd -c /data/vendor/wifi/fstman.ini -a 1
     user wifi
-    group wifi net_admin net_raw
+    group wifi
+    capabilities NET_ADMIN NET_RAW
     class main
     disabled
     oneshot
@@ -758,19 +741,14 @@ service fstman /vendor/bin/fstman -B -ddd -c /data/vendor/wifi/fstman.ini -a 1
 service fstman_wlan0 /vendor/bin/fstman -B -ddd -c /data/vendor/wifi/fstman.ini \
     -a 0 @android:vendor_wpa_wlan0
     user wifi
-    group wifi net_admin net_raw
+    group wifi
+    capabilities NET_ADMIN NET_RAW
     class main
     disabled
     oneshot
 
-on property:netd.fstman.start=true
-    start fstman
-
-on property:netd.fstman.start=false
-    stop fstman
-
 service wigighalsvc /vendor/bin/wigighalsvc
-    interface vendor.qti.hardware.wigig1.supptunnel@1.0::ISuppTunnelProvider default
+    interface vendor.qti.hardware.wigig.supptunnel@1.0::ISuppTunnelProvider default
     class hal
     user system
     group wifi
@@ -783,7 +761,8 @@ service wigignpt /vendor/bin/wigignpt
     class hal
     socket wigignpt stream 660 system wifi
     user system
-    group wifi net_admin
+    group wifi
+    capabilities NET_ADMIN
     disabled
 
 service dhcpcd_wlan0 /system/bin/dhcpcd -ABKLG
@@ -968,15 +947,17 @@ service vendor.atfwd /vendor/bin/ATFWD-daemon
 service hostapd_fst /vendor/bin/hw/hostapd -dd -g /data/vendor/wifi/hostapd/global
     interface android.hardware.wifi.hostapd@1.0::IHostapd default
     class main
+    capabilities NET_ADMIN NET_RAW
     user wifi
-    group wifi net_raw net_admin
+    group wifi
     disabled
     oneshot
 
 service vendor.wigig_hostapd /vendor/bin/hw/hostapd -dd  -j wigighostapd /data/vendor/wifi/hostapd/wigig_hostapd.conf
     class late_start
+    capabilities NET_ADMIN NET_RAW
     user wifi
-    group wifi inet keystore net_admin net_raw
+    group wifi inet keystore
     oneshot
     disabled
 
@@ -1172,6 +1153,13 @@ service seemp_healthd /vendor/bin/seemp_healthd
 
 service power_off_alarm /vendor/bin/power_off_alarm
     class core
+    group system
+    disabled
+    oneshot
+
+service vendor.move_time_data /system/bin/move_time_data.sh
+    class main
+    user system
     group system
     disabled
     oneshot

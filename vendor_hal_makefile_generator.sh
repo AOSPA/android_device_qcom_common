@@ -134,6 +134,7 @@ function generate_make_files() {
         else
             ${ECHO} "created"
         fi
+        ${TOUCH} $hal_path/.hidl-autogen
     done
     popd > /dev/null
 }

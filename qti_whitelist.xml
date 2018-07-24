@@ -42,6 +42,7 @@
     <allow-in-power-save package="com.qualcomm.qti.server.wigigapp" />
     <allow-in-power-save package="com.qualcomm.qti.StatsPollManager" />
     <allow-in-power-save package="com.qualcomm.qti.gsma.services.nfc" />
+    <allow-in-power-save package="com.quicinc.voice.activation" />
     <!-- These telephony applications need access to non-[System]SDK APIs -->
     <hidden-api-whitelisted-app package="com.qualcomm.uimremoteserver" />
     <hidden-api-whitelisted-app package="com.qualcomm.uimremoteclient" />

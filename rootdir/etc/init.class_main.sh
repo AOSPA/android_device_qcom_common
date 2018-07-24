@@ -42,6 +42,7 @@ case "$baseband" in
     if [ -n "$rild_status" ] || [ -n "$vendor_rild_status" ]; then
       stop ril-daemon
       stop vendor.ril-daemon
+      start vendor.ipacm
     fi
 esac
 

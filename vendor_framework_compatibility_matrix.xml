@@ -52,7 +52,7 @@ IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
     </hal>
     <hal format="hidl" optional="true">
         <name>vendor.display.config</name>
-        <version>1.0-1</version>
+        <version>1.0-2</version>
         <interface>
              <name>IDisplayConfig</name>
              <instance>default</instance>
@@ -244,7 +244,7 @@ IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
    </hal>
     <hal format="hidl" optional="true">
         <name>vendor.qti.hardware.radio.ims</name>
-           <version>1.0-2</version>
+           <version>1.0-3</version>
            <interface>
                <name>IImsRadio</name>
                <instance>imsradio0</instance>
@@ -418,4 +418,16 @@ IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
             <instance>default</instance>
         </interface>
     </hal>
+   <hal format="hidl" optional="true">
+       <name>vendor.qti.hardware.scve.panorama</name>
+       <version>1.0</version>
+       <interface>
+          <name>IPanoramaTracking</name>
+          <instance>panoTracking</instance>
+       </interface>
+       <interface>
+           <name>IPanoramaStitching</name>
+           <instance>panoStitching</instance>
+       </interface>
+   </hal>
 </compatibility-matrix>
