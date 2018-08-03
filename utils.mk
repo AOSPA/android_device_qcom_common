@@ -31,8 +31,6 @@ MSM_VIDC_TARGET_LIST := msm8974 msm8610 msm8226 apq8084 msm8916 msm8994 msm8909 
 MASTER_SIDE_CP_TARGET_LIST := msm8996 msm8998 sdm660 sdm710 sdm845 msmnile trinket sm6150
 
 # vars for use by utils
-empty :=
-space := $(empty) $(empty)
 colon := $(empty):$(empty)
 underscore := $(empty)_$(empty)
 
