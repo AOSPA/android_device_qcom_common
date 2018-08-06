@@ -1223,3 +1223,9 @@ on property:vendor.opengles.version=*
 #Set gpu available frequencies property
 on property:vendor.gpu.available_frequencies=*
     setprop ro.vendor.gpu.available_frequencies ${vendor.gpu.available_frequencies}
+
+service vendor.wifilearner /system/vendor/bin/wifilearner
+    class main
+    user wifi
+    group wifi
+    oneshot
