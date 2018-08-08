@@ -430,4 +430,12 @@ IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
            <instance>panoStitching</instance>
        </interface>
    </hal>
+   <hal format="hidl" optional="true">
+       <name>vendor.qti.hardware.scve.objecttracker</name>
+       <version>1.0</version>
+       <interface>
+         <name>IObjectTracker</name>
+         <instance>objectTracker</instance>
+       </interface>
+   </hal>
 </compatibility-matrix>

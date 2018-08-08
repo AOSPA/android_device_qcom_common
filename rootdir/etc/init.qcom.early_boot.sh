@@ -89,17 +89,6 @@ function set_density_by_fb() {
     fi
 }
 
-# set Lilliput LCD density for ADP
-product=`getprop ro.build.product`
-
-case "$product" in
-        "msmnile_au")
-         setprop vendor.display.lcd_density 160
-         ;;
-        *)
-        ;;
-esac
-
 target=`getprop ro.board.platform`
 case "$target" in
     "msm7630_surf" | "msm7630_1x" | "msm7630_fusion")
@@ -338,6 +327,18 @@ esac
 #property, it will not overwrite previous set
 #property if any target is setting forcefully.
 set_density_by_fb
+
+
+# set Lilliput LCD density for ADP
+product=`getprop ro.build.product`
+
+case "$product" in
+        "msmnile_au")
+         setprop vendor.display.lcd_density 160
+         ;;
+        *)
+        ;;
+esac
 
 # Setup display nodes & permissions
 # HDMI can be fb1 or fb2

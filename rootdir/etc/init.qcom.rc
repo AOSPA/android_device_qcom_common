@@ -370,6 +370,10 @@ on post-fs-data
     #Create a folder for SRS to be able to create a usercfg file
     #mkdir /data/data/media 0770 media media
 
+    #Create FM dir for patchdownloader
+    mkdir /data/vendor/fm 0770 system system
+    chmod 0770 /data/vendor/fm
+
     #Create PERFD deamon related dirs
     mkdir /data/vendor/perfd 0770 root system
     chmod 2770 /data/vendor/perfd
@@ -1135,7 +1139,7 @@ service time_daemon /system/vendor/bin/time_daemon
 service vendor.qdmastatsd /system/vendor/bin/qdmastatsd
     class late_start
     user system
-    group readproc system net_bw_stats radio rfs_shared
+    group readproc system net_bw_stats radio vendor_rfs_shared
 
 service vendor.vppservice /vendor/bin/vppservice
     class main
@@ -1145,6 +1149,9 @@ service vendor.vppservice /vendor/bin/vppservice
 # Set vendor-ril lib path based on Meta version
 on property:vendor.rild.libpath=*
     setprop rild.libpath ${vendor.rild.libpath}
+
+on property:ro.vendor.radio.noril=*
+    setprop ro.radio.noril ${ro.vendor.radio.noril}
 
 service seemp_healthd /vendor/bin/seemp_healthd
     class late_start

@@ -3512,6 +3512,9 @@ case "$target" in
         echo 0-3 > /dev/cpuset/background/cpus
         echo 0-3 > /dev/cpuset/system-background/cpus
 
+        # Enable oom_reaper
+        echo 1 > /sys/module/lowmemorykiller/parameters/oom_reaper
+
 	# Enable bus-dcvs
 	for device in /sys/devices/platform/soc
 	do

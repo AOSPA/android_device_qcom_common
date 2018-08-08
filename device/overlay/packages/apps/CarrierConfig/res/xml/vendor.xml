@@ -96,6 +96,7 @@ IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.-->
 
     <carrier_config mcc="001" mnc="01">
         <boolean name="carrier_vt_available_bool" value="true" />
+        <boolean name="ignore_data_enabled_changed_for_video_calls" value="true"/>
     </carrier_config>
 
     <carrier_config mcc="202" mnc="01">

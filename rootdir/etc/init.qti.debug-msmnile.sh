@@ -149,7 +149,7 @@ enable_msmnile_dcc_config()
     echo cap > $DCC_PATH/func_type
     echo sram > $DCC_PATH/data_sink
     echo 1 > $DCC_PATH/config_reset
-    echo 2 > $DCC_PATH/curr_list
+    echo 3 > $DCC_PATH/curr_list
 
 
     #TCS

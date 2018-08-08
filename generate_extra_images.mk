@@ -520,3 +520,23 @@ endif
 ifneq ($(BOARD_RECOVERY_KERNEL_MODULES),)
 $(BOARD_RECOVERY_KERNEL_MODULES): $(INSTALLED_BOOTIMAGE_TARGET)
 endif
+
+define board-vendorkernel-ota
+  $(call pretty,"Processing following kernel modules for vendor: $(BOARD_VENDOR_KERNEL_MODULES)")
+  $(if $(BOARD_VENDOR_KERNEL_MODULES), \
+    $(call build-image-kernel-modules,$(BOARD_VENDOR_KERNEL_MODULES),$(TARGET_OUT_VENDOR),vendor/,$(call intermediates-dir-for,PACKAGING,depmod_vendor)))
+endef
+
+# Adding support for vendor module for OTA
+ifeq ($(ENABLE_VENDOR_IMAGE), false)
+.PHONY: otavendormod
+otavendormod: $(BOARD_VENDOR_KERNEL_MODULES)
+	$(board-vendorkernel-ota)
+
+.PHONY: otavendormod-nodeps
+otavendormod-nodeps:
+	@echo "make board-vendorkernel-ota: ignoring dependencies"
+	$(board-vendorkernel-ota)
+
+$(BUILT_SYSTEMIMAGE): otavendormod
+endif

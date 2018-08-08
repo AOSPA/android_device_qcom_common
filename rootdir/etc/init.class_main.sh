@@ -38,7 +38,7 @@ vendor_rild_status=`getprop init.svc.vendor.ril-daemon`
 
 case "$baseband" in
     "apq" | "sda" | "qcs" )
-    setprop ro.radio.noril yes
+    setprop ro.vendor.radio.noril yes
     if [ -n "$rild_status" ] || [ -n "$vendor_rild_status" ]; then
       stop ril-daemon
       stop vendor.ril-daemon
@@ -150,9 +150,9 @@ esac
 
 #
 # Allow persistent faking of bms
-# User needs to set fake bms charge in persist.bms.fake_batt_capacity
+# User needs to set fake bms charge in persist.vendor.bms.fake_batt_capacity
 #
-fake_batt_capacity=`getprop persist.bms.fake_batt_capacity`
+fake_batt_capacity=`getprop persist.vendor.bms.fake_batt_capacity`
 case "$fake_batt_capacity" in
     "") ;; #Do nothing here
     * )
