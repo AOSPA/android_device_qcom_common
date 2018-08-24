@@ -31,6 +31,8 @@ HERE=/vendor/bin
 source $HERE/init.qcom.debug-sdm660.sh
 source $HERE/init.qcom.debug-sdm710.sh
 source $HERE/init.qti.debug-msmnile.sh
+source $HERE/init.qti.debug-talos.sh
+
 enable_tracing_events()
 {
     # timer
@@ -2441,6 +2443,10 @@ enable_core_gladiator_hang_config()
     target=`getprop ro.board.platform`
 
     case "$target" in
+        "msmnile")
+            echo "Enabling core & gladiator config for msmnile"
+            enable_msmnile_core_hang_config
+        ;;
         "sdm845")
             echo "Enabling core & gladiator config for sdm845"
             enable_sdm845_core_hang_config
@@ -2519,6 +2525,11 @@ case "$coresight_config" in
                 if [ "$ftrace_disable" != "Yes" ]; then
                     enable_ftrace_event_tracing
                 fi
+                setprop ro.dbg.coresight.stm_cfg_done 1
+            ;;
+            "talos")
+                echo "Enabling DCC/STM/Debug events for talos"
+                enable_talos_debug
                 setprop ro.dbg.coresight.stm_cfg_done 1
             ;;
             "msmnile")

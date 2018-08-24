@@ -615,6 +615,24 @@ enable_msmnile_stm_hw_events()
    #TODO: Add HW events
 }
 
+enable_msmnile_core_hang_config()
+{
+    CORE_PATH_SILVER="/sys/devices/system/cpu/hang_detect_silver"
+    CORE_PATH_GOLD="/sys/devices/system/cpu/hang_detect_gold"
+    if [ ! -d $CORE_PATH ]; then
+        echo "CORE hang does not exist on this build."
+        return
+    fi
+
+    #set the threshold to around 100 milli-second
+    echo 0x1d4c01 > $CORE_PATH_SILVER/threshold
+    echo 0x1d4c01 > $CORE_PATH_GOLD/threshold
+
+    #To the enable core hang detection
+    echo 0x1 > $CORE_PATH_SILVER/enable
+    echo 0x1 > $CORE_PATH_GOLD/enable
+}
+
 ftrace_disable=`getprop persist.debug.ftrace_events_disable`
 srcenable="enable"
 sinkenable="curr_sink"

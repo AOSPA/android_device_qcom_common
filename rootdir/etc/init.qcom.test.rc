@@ -33,14 +33,14 @@ on post-fs-data
     mkdir /data/vendor/scve 0777 system system
 
 # Coresight early boot service
-service cs-early-boot /vendor/bin/sh /persist/coresight/qdss.agent.sh early-boot /vendor/bin/init.qcom.debug.sh
+service cs-early-boot /vendor/bin/sh /mnt/vendor/persist/coresight/qdss.agent.sh early-boot /vendor/bin/init.qcom.debug.sh
     class core
     user root
     oneshot
     seclabel u:r:qti-testscripts:s0
 
 # Coresight post boot servive
-service cs-post-boot /vendor/bin/sh /persist/coresight/qdss.agent.sh post-boot /vendor/bin/init.qcom.debug.sh
+service cs-post-boot /vendor/bin/sh /mnt/vendor/persist/coresight/qdss.agent.sh post-boot /vendor/bin/init.qcom.debug.sh
     user root
     disabled
     oneshot
@@ -50,10 +50,10 @@ on property:sys.boot_completed=1
     start cs-post-boot
 
 on property:sys.vendor.dbg.coresight.enable=1
-    write /persist/coresight/enable 1
+    write /mnt/vendor/persist/coresight/enable 1
 
 on property:sys.vendor.dbg.coresight.enable=0
-    write /persist/coresight/enable 0
+    write /mnt/vendor/persist/coresight/enable 0
 
 service DiagDaemon /system/vendor/bin/diag_socket_log -f /sdcard/ipaddress.txt
     class late_start
