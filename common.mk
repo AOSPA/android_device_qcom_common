@@ -9,8 +9,6 @@ BOARD_USES_QCNE := true
 # include additional build utilities
 include device/qcom/common/utils.mk
 
-TARGET_CRYPTFS_HW_PATH := device/qcom/common/cryptfs_hw
-
 # SECCOMP Extension
 BOARD_SECCOMP_POLICY += device/qcom/common/seccomp
 
