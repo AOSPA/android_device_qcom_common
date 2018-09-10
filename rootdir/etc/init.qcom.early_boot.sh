@@ -229,14 +229,14 @@ case "$target" in
         esac
         ;;
     "msm8937" | "msm8940")
-        # Set ro.opengles.version based on chip id.
+        # Set vendor.opengles.version based on chip id.
         # MSM8937 and MSM8940  variants supports OpenGLES 3.1
         # 196608 is decimal for 0x30000 to report version 3.0
         # 196609 is decimal for 0x30001 to report version 3.1
         # 196610 is decimal for 0x30002 to report version 3.2
         case "$soc_hwid" in
             294|295|296|297|298|313|353|354|363|364)
-                setprop ro.opengles.version 196610
+                setprop vendor.opengles.version 196610
                 ;;
             303|307|308|309|320)
                 # Vulkan is not supported for 8917 variants
@@ -259,12 +259,6 @@ case "$target" in
         case "$soc_hwplatform" in
             *)
                 setprop vendor.display.lcd_density 560
-                if [ ! -e /dev/kgsl-3d0 ]; then
-                    setprop persist.sys.force_sw_gles 1
-                    setprop vendor.display.idle_time 0
-                else
-                    setprop persist.sys.force_sw_gles 0
-                fi
                 ;;
         esac
         ;;
@@ -277,13 +271,6 @@ case "$target" in
                 else
                     setprop vendor.display.lcd_density 640
                     setprop dalvik.vm.heapgrowthlimit 512m
-                fi
-
-                if [ ! -e /dev/kgsl-3d0 ]; then
-                    setprop persist.sys.force_sw_gles 1
-                    setprop vendor.display.idle_time 0
-                else
-                    setprop persist.sys.force_sw_gles 0
                 fi
                 ;;
         esac
@@ -311,6 +298,18 @@ case "$target" in
                 ;;
         esac
         ;;
+    "msm8953")
+        cap_ver = 1
+                if [ -e "/sys/devices/platform/soc/1d00000.qcom,vidc/capability_version" ]; then
+                    cap_ver=`cat /sys/devices/platform/soc/1d00000.qcom,vidc/capability_version` 2> /dev/null
+                else
+                    cap_ver=`cat /sys/devices/soc/1d00000.qcom,vidc/capability_version` 2> /dev/null
+                fi
+
+                if [ $cap_ver -eq 1 ]; then
+                    setprop vendor.media.msm8953.version 1
+                fi
+                ;;
 esac
 
 baseband=`getprop ro.baseband`
@@ -442,9 +441,9 @@ fi
 boot_reason=`cat /proc/sys/kernel/boot_reason`
 reboot_reason=`getprop ro.boot.alarmboot`
 if [ "$boot_reason" = "3" ] || [ "$reboot_reason" = "true" ]; then
-    setprop ro.alarm_boot true
+    setprop ro.vendor.alarm_boot true
 else
-    setprop ro.alarm_boot false
+    setprop ro.vendor.alarm_boot false
 fi
 
 # copy GPU frequencies to vendor property

@@ -95,7 +95,12 @@ start_msm_irqbalance_8939()
 start_msm_irqbalance()
 {
 	if [ -f /vendor/bin/msm_irqbalance ]; then
-		start vendor.msm_irqbalance
+		case "$platformid" in
+		    "317" | "324" | "325" | "326" | "345" | "346")
+			start vendor.msm_irqbalance;;
+		    "318" | "327" | "385")
+			start vendor.msm_irqbl_sdm630;;
+		esac
 	fi
 }
 
@@ -248,7 +253,7 @@ case "$target" in
                   ;;
         esac
         ;;
-    "msm8994" | "msm8992" | "msm8998" | "apq8098_latv" | "sdm845" | "sdm710" | "qcs605" | "msmnile" | "msmsteppe")
+    "msm8994" | "msm8992" | "msm8998" | "apq8098_latv" | "sdm845" | "sdm710" | "qcs605" | "msmnile" | "talos")
         start_msm_irqbalance
         ;;
     "msm8996")

@@ -153,22 +153,6 @@ IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
         </interface>
     </hal>
     <hal format="hidl" optional="true">
-        <name>com.quicinc.cne.server</name>
-        <version>2.0-2</version>
-        <interface>
-            <name>IServer</name>
-            <instance>cnd</instance>
-        </interface>
-    </hal>
-    <hal format="hidl" optional="true">
-        <name>com.quicinc.cne.api</name>
-        <version>1.0-1</version>
-        <interface>
-            <name>IApiService</name>
-            <instance>cnd</instance>
-        </interface>
-    </hal>
-    <hal format="hidl" optional="true">
         <name>vendor.nxp.hardware.nfc</name>
         <version>1.0</version>
         <interface>
@@ -244,7 +228,7 @@ IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
    </hal>
     <hal format="hidl" optional="true">
         <name>vendor.qti.hardware.radio.ims</name>
-           <version>1.0-3</version>
+           <version>1.0-4</version>
            <interface>
                <name>IImsRadio</name>
                <instance>imsradio0</instance>
@@ -272,6 +256,7 @@ IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
     <hal format="hidl" optional="true">
         <name>vendor.qti.hardware.radio.qtiradio</name>
         <version>1.0</version>
+        <version>2.0</version>
         <interface>
             <name>IQtiRadio</name>
             <instance>slot1</instance>
@@ -378,6 +363,14 @@ IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
         </interface>
     </hal>
     <hal format="hidl" optional="true">
+        <name>android.hardware.gnss</name>
+        <version>1.0</version>
+        <interface>
+            <name>IGnss</name>
+            <instance>gnss_vendor</instance>
+        </interface>
+    </hal>
+    <hal format="hidl" optional="true">
         <name>vendor.qti.gnss</name>
         <version>1.0-2</version>
         <version>2.0</version>
@@ -418,24 +411,4 @@ IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
             <instance>default</instance>
         </interface>
     </hal>
-   <hal format="hidl" optional="true">
-       <name>vendor.qti.hardware.scve.panorama</name>
-       <version>1.0</version>
-       <interface>
-          <name>IPanoramaTracking</name>
-          <instance>panoTracking</instance>
-       </interface>
-       <interface>
-           <name>IPanoramaStitching</name>
-           <instance>panoStitching</instance>
-       </interface>
-   </hal>
-   <hal format="hidl" optional="true">
-       <name>vendor.qti.hardware.scve.objecttracker</name>
-       <version>1.0</version>
-       <interface>
-         <name>IObjectTracker</name>
-         <instance>objectTracker</instance>
-       </interface>
-   </hal>
 </compatibility-matrix>

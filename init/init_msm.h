@@ -36,7 +36,6 @@
 #define PROP_LCDDENSITY  "ro.sf.lcd_density"
 #define PROP_QEMU_NAVKEY "qemu.hw.mainkeys"
 #define PROP_BOOT_BASEBAND "ro.boot.baseband"
-#define PROP_BLUETOOTH_SOC "qcom.bluetooth.soc"
 
 #define UNUSED(a)       ((void)(a))
 #define ISMATCH(a,b)    (!strncmp(a,b,PROP_VALUE_MAX))

@@ -62,13 +62,13 @@ echo "The WLAN Chip ID is $wlanchip"
 if [ "$wlanchip" == "AR6004-USB" ]; then
     echo msm_hsic_host > /sys/bus/platform/drivers/msm_hsic_host/unbind
     setprop wlan.driver.ath 2
-    setprop qcom.bluetooth.soc ath3k
+    setprop vendor.bluetooth.soc ath3k
     setprop wlan.driver.name /system/lib/modules/ath6kl-3.5/ath6kl_usb.ko
     setprop wlan.supp.template /system/etc/wifi/wpa_supplicant_ath6kl.conf
     btsoc="ath3k"
 elif [ "$wlanchip" == "AR6004-SDIO" ]; then
     setprop wlan.driver.ath 2
-    setprop qcom.bluetooth.soc ath3k
+    setprop vendor.bluetooth.soc ath3k
     setprop wlan.driver.name /system/lib/modules/ath6kl-3.5/ath6kl_sdio.ko
     setprop wlan.supp.template /system/etc/wifi/wpa_supplicant_ath6kl.conf
     btsoc="ath3k"

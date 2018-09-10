@@ -59,6 +59,7 @@ enable_tracing_events()
     echo 1 > /sys/kernel/debug/tracing/events/power/clock_set_rate/enable
     echo 1 > /sys/kernel/debug/tracing/events/power/clock_enable/enable
     echo 1 > /sys/kernel/debug/tracing/events/power/clock_disable/enable
+    echo 1 > /sys/kernel/debug/tracing/events/power/cpu_frequency/enable
     # regulator
     echo 1 > /sys/kernel/debug/tracing/events/regulator/enable
     # power
@@ -320,6 +321,15 @@ enable_msmnile_dcc_config()
     echo 0x18296090 0x25 > $DCC_PATH/config_write
     echo 0x18296098 1 > $DCC_PATH/config
 
+    # core hang
+    echo 0x18000058 1 > $DCC_PATH/config
+    echo 0x18010058 1 > $DCC_PATH/config
+    echo 0x18020058 1 > $DCC_PATH/config
+    echo 0x18030058 1 > $DCC_PATH/config
+    echo 0x18040058 1 > $DCC_PATH/config
+    echo 0x18050058 1 > $DCC_PATH/config
+    echo 0x18060058 1 > $DCC_PATH/config
+    echo 0x18070058 1 > $DCC_PATH/config
 
     #DDRSS
     #GEMNOC
@@ -624,9 +634,9 @@ enable_msmnile_core_hang_config()
         return
     fi
 
-    #set the threshold to around 100 milli-second
-    echo 0x1d4c01 > $CORE_PATH_SILVER/threshold
-    echo 0x1d4c01 > $CORE_PATH_GOLD/threshold
+    #set the threshold to max
+    echo 0xffffffff > $CORE_PATH_SILVER/threshold
+    echo 0xffffffff > $CORE_PATH_GOLD/threshold
 
     #To the enable core hang detection
     echo 0x1 > $CORE_PATH_SILVER/enable

@@ -187,7 +187,7 @@ case "$target" in
       "AR6004-USB")
       echo msm_hsic_host > /sys/bus/platform/drivers/msm_hsic_host/unbind
       setprop wlan.driver.ath 2
-      setprop qcom.bluetooth.soc ath3k
+      setprop vendor.bluetooth.soc ath3k
       btsoc="ath3k"
       rm  /system/lib/modules/wlan.ko
       ln -s /system/lib/modules/ath6kl-3.5/ath6kl_usb.ko \
@@ -211,7 +211,7 @@ case "$target" in
 
       "AR6004-SDIO")
       setprop wlan.driver.ath 2
-      setprop qcom.bluetooth.soc ath3k
+      setprop vendor.bluetooth.soc ath3k
       btsoc="ath3k"
       # Chown polling nodes as needed from UI running on system server
       chmod -h 0200 /sys/devices/msm_sdcc.1/polling

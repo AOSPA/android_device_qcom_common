@@ -86,6 +86,7 @@ on early-boot
     chmod 0664 /persist/sensors/sensors_settings
 
     chown system system /mnt/vendor/persist/sensors
+    chown system system /mnt/vendor/persist/sensors/sns.reg
     chown system system /mnt/vendor/persist/sensors/registry
     chown system system /mnt/vendor/persist/sensors/registry/registry
     chown system system /mnt/vendor/persist/sensors/registry/registry/sensors_registry
@@ -301,10 +302,6 @@ on post-fs-data
     #Create QTI dir for logs
     mkdir /data/vendor/dataqti 0770 radio radio
     chmod 0770 /data/vendor/dataqti
-
-    # Create the directories used by CnE subsystem
-    mkdir /data/connectivity 0771 system system
-    chown system system /data/connectivity
 
     # Create the directories used by CnE subsystem
     mkdir /data/vendor/connectivity 0771 radio radio
@@ -1091,6 +1088,12 @@ service vendor.msm_irqbal_lb /vendor/bin/msm_irqbalance -f /system/vendor/etc/ms
     group root
     disabled
 
+service vendor.msm_irqbl_sdm630 /vendor/bin/msm_irqbalance -f /system/vendor/etc/msm_irqbalance_sdm630.conf
+    class core
+    user root
+    group root
+    disabled
+
 # service for USERDEBUG
 service vendor.LKCore-dbg /vendor/bin/LKCore
     class late_start
@@ -1214,4 +1217,4 @@ on property:vendor.opengles.version=*
 
 #Set gpu available frequencies property
 on property:vendor.gpu.available_frequencies=*
-    setprop ro.gpu.available_frequencies ${vendor.gpu.available_frequencies}
+    setprop ro.vendor.gpu.available_frequencies ${vendor.gpu.available_frequencies}

@@ -2493,9 +2493,9 @@ case "$target" in
                 esac
             ;;
         esac
-        #Apply settings for sdm630
+        #Apply settings for sdm630 and Tahaa
         case "$soc_id" in
-            "318" | "327" )
+            "318" | "327" | "385" )
 
             # Start Host based Touch processing
             case "$hw_platform" in
