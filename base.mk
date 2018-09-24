@@ -1038,6 +1038,12 @@ PRODUCT_COPY_FILES := \
     frameworks/native/data/etc/android.software.device_id_attestation.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.software.device_id_attestation.xml \
     frameworks/native/data/etc/android.software.verified_boot.xml:system/etc/permissions/android.software.verified_boot.xml
 
+# Enable TDES support when KM4 is enabled
+ifeq ($(ENABLE_KM_4_0), true)
+    PRODUCT_PROPERTY_OVERRIDES += \
+        ro.hardware.keystore_desede=true
+endif
+
 # Bluetooth configuration files
 #PRODUCT_COPY_FILES += \
     system/bluetooth/data/audio.conf:system/etc/bluetooth/audio.conf \
