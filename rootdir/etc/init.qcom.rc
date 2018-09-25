@@ -882,6 +882,11 @@ service mlid /vendor/bin/mlid
     group gps
     socket mlid stream 0666 gps gps
 
+service vendor.qdmastatsd /system/vendor/bin/qdmastatsd
+    class late_start
+    user system
+    group readproc system net_bw_stats radio vendor_rfs_shared
+
 service loc_launcher /system/vendor/bin/loc_launcher
     class late_start
     user gps
@@ -1160,11 +1165,6 @@ service time_daemon /system/vendor/bin/time_daemon
     class main
     user root
     group root
-
-service vendor.qdmastatsd /system/vendor/bin/qdmastatsd
-    class late_start
-    user system
-    group readproc system net_bw_stats radio vendor_rfs_shared
 
 service vendor.vppservice /vendor/bin/vppservice
     class main
