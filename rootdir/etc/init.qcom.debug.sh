@@ -2515,7 +2515,7 @@ case "$coresight_config" in
             "sdm710" | "qcs605")
                 echo "Enabling DCC/STM/Debug events for sdm710 and qcs605"
                 enable_sdm710_debug
-                setprop ro.dbg.coresight.stm_cfg_done 1
+                setprop ro.vendor.dbg.coresight.stm_cfg_done 1
             ;;
             "sdm845")
                 srcenable="enable_source"
@@ -2525,17 +2525,17 @@ case "$coresight_config" in
                 if [ "$ftrace_disable" != "Yes" ]; then
                     enable_ftrace_event_tracing
                 fi
-                setprop ro.dbg.coresight.stm_cfg_done 1
+                setprop ro.vendor.dbg.coresight.stm_cfg_done 1
             ;;
             "talos")
                 echo "Enabling DCC/STM/Debug events for talos"
                 enable_talos_debug
-                setprop ro.dbg.coresight.stm_cfg_done 1
+                setprop ro.vendor.dbg.coresight.stm_cfg_done 1
             ;;
             "msmnile")
                 echo "Enabling DCC/STM/Debug events for msmnile"
                 enable_msmnile_debug
-                setprop ro.dbg.coresight.stm_cfg_done 1
+                setprop ro.vendor.dbg.coresight.stm_cfg_done 1
             ;;
             *)
                 echo "Invalid target"
