@@ -289,6 +289,13 @@ case "$target" in
                 ;;
         esac
         ;;
+    "talos")
+        case "$soc_hwplatform" in
+            *)
+                    setprop vendor.display.lcd_density 480
+                    setprop dalvik.vm.heapgrowthlimit 256m
+        esac
+        ;;
     "sdm710" | "msmpeafowl")
         case "$soc_hwplatform" in
             *)
