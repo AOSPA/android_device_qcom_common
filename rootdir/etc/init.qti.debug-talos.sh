@@ -1480,7 +1480,7 @@ config_talos_dcc_cx_mx()
     echo 0x18300000 1 > $DCC_PATH/config
     #CPRH
     echo 0x183A3A84 2 > $DCC_PATH/config
-    echo 0x18393A84 2 > $DCC_PATH/config
+    echo 0x18393A84 1 > $DCC_PATH/config
 }
 
 config_talos_dcc_gcc_regs()
@@ -1683,7 +1683,8 @@ config_talos_dcc_tsens_regs()
     echo 0x0C2630C0 4 > $DCC_PATH/config
     echo 0x0C2630D0 4 > $DCC_PATH/config
 }
-config_talos_dcc_core_hang(){
+config_talos_dcc_core_hang()
+{
     echo 0x1800005C 1 > $DCC_PATH/config
     echo 0x1801005C 1 > $DCC_PATH/config
     echo 0x1802005C 1 > $DCC_PATH/config
@@ -1692,6 +1693,17 @@ config_talos_dcc_core_hang(){
     echo 0x1805005C 1 > $DCC_PATH/config
     echo 0x1806005C 1 > $DCC_PATH/config
     echo 0x1807005C 1 > $DCC_PATH/config
+}
+
+config_talos_dcc_bcm_seq_hang()
+{
+    echo 0x00109468 1 > $DCC_PATH/config
+}
+
+config_talos_dcc_pll()
+{
+    echo 0x18284038 1 > $DCC_PATH/config
+    echo 0x18284000 2 > $DCC_PATH/config
 }
 
 # Function talos DCC configuration
@@ -1737,6 +1749,8 @@ enable_talos_dcc_config()
     #config_talos_dcc_apps_regs
     config_talos_dcc_tsens_regs
     config_talos_dcc_core_hang
+    config_talos_dcc_bcm_seq_hang
+    config_talos_dcc_pll
     #Enable below function with relaxed AC
     #config_talos_regs_no_ac
     #Apply configuration and enable DCC
