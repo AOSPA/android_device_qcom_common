@@ -119,6 +119,14 @@ case "$target" in
         esac
         ;;
 
+    "talos")
+        case "$soc_hwplatform" in
+            "ADP")
+                setprop vendor.display.lcd_density 160
+                ;;
+        esac
+        ;;
+
     "msm8960")
         # lcd density is write-once. Hence the separate switch case
         case "$soc_hwplatform" in
