@@ -306,6 +306,20 @@ case "$target" in
                 ;;
         esac
         ;;
+    "talos")
+        case "$soc_hwid" in
+            365|366)
+                sku_ver=`cat /sys/devices/platform/soc/aa00000.qcom,vidc1/sku_version` 2> /dev/null
+                if [ $sku_ver -eq 1 ]; then
+                    setprop vendor.media.sm7150.version 1
+                fi
+                ;;
+            355)
+                setprop vendor.media.sm6150.version 1
+                ;;
+            *)
+        esac
+        ;;
     "msm8953")
         cap_ver = 1
                 if [ -e "/sys/devices/platform/soc/1d00000.qcom,vidc/capability_version" ]; then
