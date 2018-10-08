@@ -188,32 +188,32 @@ config_talos_dcc_gladiator()
 config_talos_dcc_noc_err_regs()
 {
     #CNOC
-    echo 0x1500204 > $DCC_PATH/config
-    echo 0x1500240 > $DCC_PATH/config
-    echo 0x1500244 > $DCC_PATH/config
-    echo 0x1500248 > $DCC_PATH/config
-    echo 0x150024C > $DCC_PATH/config
-    echo 0x1500250 > $DCC_PATH/config
-    echo 0x1500258 > $DCC_PATH/config
-    echo 0x1500288 > $DCC_PATH/config
-    echo 0x150028C > $DCC_PATH/config
-    echo 0x1500290 > $DCC_PATH/config
-    echo 0x1500294 > $DCC_PATH/config
-    echo 0x15002A8 > $DCC_PATH/config
-    echo 0x15002AC > $DCC_PATH/config
-    echo 0x15002B0 > $DCC_PATH/config
-    echo 0x15002B4 > $DCC_PATH/config
-    echo 0x1500300 > $DCC_PATH/config
-    echo 0x1500304 > $DCC_PATH/config
-    echo 0x1500010 > $DCC_PATH/config
-    echo 0x1500020 > $DCC_PATH/config
-    echo 0x1500024 > $DCC_PATH/config
-    echo 0x1500028 > $DCC_PATH/config
-    echo 0x150002C > $DCC_PATH/config
-    echo 0x1500030 > $DCC_PATH/config
-    echo 0x1500034 > $DCC_PATH/config
-    echo 0x1500038 > $DCC_PATH/config
-    echo 0x150003C > $DCC_PATH/config
+    # echo 0x1500204 > $DCC_PATH/config
+    # echo 0x1500240 > $DCC_PATH/config
+    # echo 0x1500244 > $DCC_PATH/config
+    # echo 0x1500248 > $DCC_PATH/config
+    # echo 0x150024C > $DCC_PATH/config
+    # echo 0x1500250 > $DCC_PATH/config
+    # echo 0x1500258 > $DCC_PATH/config
+    # echo 0x1500288 > $DCC_PATH/config
+    # echo 0x150028C > $DCC_PATH/config
+    # echo 0x1500290 > $DCC_PATH/config
+    # echo 0x1500294 > $DCC_PATH/config
+    # echo 0x15002A8 > $DCC_PATH/config
+    # echo 0x15002AC > $DCC_PATH/config
+    # echo 0x15002B0 > $DCC_PATH/config
+    # echo 0x15002B4 > $DCC_PATH/config
+    # echo 0x1500300 > $DCC_PATH/config
+    # echo 0x1500304 > $DCC_PATH/config
+    # echo 0x1500010 > $DCC_PATH/config
+    # echo 0x1500020 > $DCC_PATH/config
+    # echo 0x1500024 > $DCC_PATH/config
+    # echo 0x1500028 > $DCC_PATH/config
+    # echo 0x150002C > $DCC_PATH/config
+    # echo 0x1500030 > $DCC_PATH/config
+    # echo 0x1500034 > $DCC_PATH/config
+    # echo 0x1500038 > $DCC_PATH/config
+    # echo 0x150003C > $DCC_PATH/config
     #SNOC
     echo 0x1620204 > $DCC_PATH/config
     echo 0x1620240 > $DCC_PATH/config
@@ -362,11 +362,11 @@ config_talos_dcc_noc_err_regs()
     #A1NOC_WEST_SBM_SENSEIN
     echo 0x1700700 3 > $DCC_PATH/config
     #CNOC_CENTER_STATUS_SBM_SENSEIN
-    echo 0x1500500 7 > $DCC_PATH/config
+    # echo 0x1500500 7 > $DCC_PATH/config
     #CNOC_MMNOC_STATUS_SBM_SENSEIN
-    echo 0x1500D00 4 > $DCC_PATH/config
+    # echo 0x1500D00 4 > $DCC_PATH/config
     #CNOC_WEST_STATUS_SBM_SENSEIN
-    echo 0x1501100 4 > $DCC_PATH/config
+    # echo 0x1501100 4 > $DCC_PATH/config
     #DC_NOC_DISABLE_SBM_SENSEIN
     echo 0x9163100 > $DCC_PATH/config
     #GEM_NOC_SBM_MDSP_SAFE_SHAPING_SENSEIN
@@ -1471,6 +1471,16 @@ config_talos_dcc_cabo_llcc_shrm()
 config_talos_dcc_cx_mx()
 {
     #CX_MX
+    echo 0x0C201244 1 > $DCC_PATH/config
+    echo 0x0C202244 1 > $DCC_PATH/config
+    #APC Voltage
+    echo 0x18100C18 1 > $DCC_PATH/config
+    echo 0x18101C18 1 > $DCC_PATH/config
+    #APC / MX CORNER
+    echo 0x18300000 1 > $DCC_PATH/config
+    #CPRH
+    echo 0x183A3A84 2 > $DCC_PATH/config
+    echo 0x18393A84 1 > $DCC_PATH/config
 }
 
 config_talos_dcc_gcc_regs()
@@ -1673,6 +1683,29 @@ config_talos_dcc_tsens_regs()
     echo 0x0C2630C0 4 > $DCC_PATH/config
     echo 0x0C2630D0 4 > $DCC_PATH/config
 }
+config_talos_dcc_core_hang()
+{
+    echo 0x1800005C 1 > $DCC_PATH/config
+    echo 0x1801005C 1 > $DCC_PATH/config
+    echo 0x1802005C 1 > $DCC_PATH/config
+    echo 0x1803005C 1 > $DCC_PATH/config
+    echo 0x1804005C 1 > $DCC_PATH/config
+    echo 0x1805005C 1 > $DCC_PATH/config
+    echo 0x1806005C 1 > $DCC_PATH/config
+    echo 0x1807005C 1 > $DCC_PATH/config
+}
+
+config_talos_dcc_bcm_seq_hang()
+{
+    echo 0x00109468 1 > $DCC_PATH/config
+}
+
+config_talos_dcc_pll()
+{
+    echo 0x18284038 1 > $DCC_PATH/config
+    echo 0x18284000 2 > $DCC_PATH/config
+}
+
 # Function talos DCC configuration
 enable_talos_dcc_config()
 {
@@ -1711,10 +1744,13 @@ enable_talos_dcc_config()
     #config_talos_dcc_ddr_phy
     #config_talos_dcc_ecc_llc
     config_talos_dcc_cabo_llcc_shrm
-    #config_talos_dcc_cx_mx
+    config_talos_dcc_cx_mx
     config_talos_dcc_gcc_regs
     #config_talos_dcc_apps_regs
     config_talos_dcc_tsens_regs
+    config_talos_dcc_core_hang
+    config_talos_dcc_bcm_seq_hang
+    config_talos_dcc_pll
     #Enable below function with relaxed AC
     #config_talos_regs_no_ac
     #Apply configuration and enable DCC
