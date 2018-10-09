@@ -149,6 +149,8 @@ firmware_directories /vendor/firmware_mnt/image/
 
 #QDSS
 /dev/byte-cntr            0660   system    oem_2902
+/dev/mhi_qdss             0660   system    oem_2902
+/sys/class/qdss_bridge/mhi_qdss  mode      0660     system   oem_2902
 
 # wlan
 /dev/wcnss_wlan           0660   system     system
