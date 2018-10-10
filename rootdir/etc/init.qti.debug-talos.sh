@@ -139,7 +139,9 @@ config_talos_dcc_gladiator()
     #Gladiator
     echo 0x9680000 > $DCC_PATH/config
     echo 0x9680004 > $DCC_PATH/config
+    echo 8 > $DCC_PATH/loop
     echo 0x9681000 > $DCC_PATH/config
+    echo 1 > $DCC_PATH/loop
     echo 0x9681004 > $DCC_PATH/config
     echo 0x9681008 > $DCC_PATH/config
     echo 0x968100c > $DCC_PATH/config

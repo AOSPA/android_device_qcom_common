@@ -14,10 +14,10 @@ else
 # Assign external kernel modules to the DLKM class
 LOCAL_MODULE_CLASS := DLKM
 
-# Set the default install path to system/lib/modules
+# Set the default install path to data/kernel-tests/modules
 LOCAL_MODULE_PATH := $(strip $(LOCAL_MODULE_PATH))
 ifeq ($(LOCAL_MODULE_PATH),)
-  LOCAL_MODULE_PATH := $(TARGET_OUT)/lib/modules
+  LOCAL_MODULE_PATH := $(TARGET_OUT_DATA)/kernel-tests/modules
 endif
 
 # Set the default Kbuild file path to LOCAL_PATH

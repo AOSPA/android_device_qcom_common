@@ -119,6 +119,14 @@ case "$target" in
         esac
         ;;
 
+    "talos")
+        case "$soc_hwplatform" in
+            "ADP")
+                setprop vendor.display.lcd_density 160
+                ;;
+        esac
+        ;;
+
     "msm8960")
         # lcd density is write-once. Hence the separate switch case
         case "$soc_hwplatform" in
@@ -289,6 +297,13 @@ case "$target" in
                 ;;
         esac
         ;;
+    "talos")
+        case "$soc_hwplatform" in
+            *)
+                    setprop vendor.display.lcd_density 480
+                    setprop dalvik.vm.heapgrowthlimit 256m
+        esac
+        ;;
     "sdm710" | "msmpeafowl")
         case "$soc_hwplatform" in
             *)
@@ -297,6 +312,20 @@ case "$target" in
                     setprop vendor.media.sdm710.version 1
                 fi
                 ;;
+        esac
+        ;;
+    "talos")
+        case "$soc_hwid" in
+            365|366)
+                sku_ver=`cat /sys/devices/platform/soc/aa00000.qcom,vidc1/sku_version` 2> /dev/null
+                if [ $sku_ver -eq 1 ]; then
+                    setprop vendor.media.sm7150.version 1
+                fi
+                ;;
+            355)
+                setprop vendor.media.sm6150.version 1
+                ;;
+            *)
         esac
         ;;
     "msm8953")
