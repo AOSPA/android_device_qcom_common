@@ -1095,7 +1095,7 @@ PRODUCT_COPY_FILES += \
 endif
 
 ifneq ($(TARGET_NOT_SUPPORT_VULKAN),true)
-ifneq ($(TARGET_SUPPORT_VULKAN_VERSION_1_1),true)
+ifeq ($(TARGET_SUPPORT_VULKAN_VERSION_1_1),false)
 PRODUCT_COPY_FILES += frameworks/native/data/etc/android.hardware.vulkan.version-1_0_3.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.vulkan.version-1_0_3.xml
 else
 PRODUCT_COPY_FILES += frameworks/native/data/etc/android.hardware.vulkan.version-1_1.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.vulkan.version-1_1.xml
