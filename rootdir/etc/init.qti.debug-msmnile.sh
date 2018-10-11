@@ -617,6 +617,14 @@ enable_msmnile_dcc_config()
     echo 0x01700b00 2 > $DCC_PATH/config
     echo 0x01700d00 1 > $DCC_PATH/config
 
+#APM
+    echo 0x0C267000 9 > $DCC_PATH/config
+    echo 0x0C26705C 2 > $DCC_PATH/config
+    echo 0x0C267024 3 > $DCC_PATH/config
+    echo 0x0C267054 2 > $DCC_PATH/config
+    echo 0x0C267030 1 > $DCC_PATH/config
+    echo 0x0C267040 5 > $DCC_PATH/config
+
     echo  1 > $DCC_PATH/enable
 }
 
