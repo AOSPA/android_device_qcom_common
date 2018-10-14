@@ -208,6 +208,10 @@ void set_display_node_perms()
     snprintf(tmp, sizeof(tmp), "%sfb0/msm_cmd_autorefresh_en", sys_fb_path);
     setPerms(tmp, 0664);
     setOwners(tmp, AID_SYSTEM, AID_GRAPHICS);
+    // Set write permission for dynamic_bitclk node.
+    snprintf(tmp, sizeof(tmp), "%sfb0/dynamic_bitclk", sys_fb_path);
+    setPerms(tmp, 0664);
+    setOwners(tmp, AID_SYSTEM, AID_GRAPHICS);
 }
 
 static int check_rlim_action()
