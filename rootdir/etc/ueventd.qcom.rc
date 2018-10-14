@@ -209,6 +209,7 @@ firmware_directories /vendor/firmware_mnt/image/
 /dev/ttyGS0               0660   system     system
 /dev/i2c-5                0660   media       media
 /dev/avtimer              0660   system     audio
+/dev/spidev2.0            0660   system     audio
 
 # DVB devices
 /dev/dvb/adapter0/demux*  0440   media       media
