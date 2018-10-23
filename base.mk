@@ -1091,8 +1091,20 @@ endif
 
 ifneq ($(TARGET_NOT_SUPPORT_VULKAN),true)
 PRODUCT_COPY_FILES += \
-    frameworks/native/data/etc/android.hardware.vulkan.level-1.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.vulkan.level-1.xml \
     frameworks/native/data/etc/android.hardware.vulkan.compute-0.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.vulkan.compute-0.xml
+endif
+
+# Copy the vulkan feature level file.
+# to disable vulkan feature level 1 define TARGET_NOT_SUPPORT_VULKAN_FEATURE_LEVEL_1 to true
+# TARGET_NOT_SUPPORT_VULKAN_FEATURE_LEVEL_1 not defined to any value imply it supports vulkan feature level 1.
+ifneq ($(TARGET_NOT_SUPPORT_VULKAN),true)
+ifeq ($(TARGET_NOT_SUPPORT_VULKAN_FEATURE_LEVEL_1),true)
+PRODUCT_COPY_FILES += \
+    frameworks/native/data/etc/android.hardware.vulkan.level-0.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.vulkan.level-0.xml
+else
+PRODUCT_COPY_FILES += \
+    frameworks/native/data/etc/android.hardware.vulkan.level-1.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.vulkan.level-1.xml
+endif
 endif
 
 ifneq ($(TARGET_NOT_SUPPORT_VULKAN),true)
