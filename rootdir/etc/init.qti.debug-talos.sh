@@ -74,7 +74,8 @@ enable_talos_tracing_events()
 
     #rmph_send_msg
     echo 1 > /sys/kernel/debug/tracing/events/rpmh/rpmh_send_msg/enable
-
+    #SCM Tracing enabling
+    echo 1 > /sys/kernel/debug/tracing/events/scm/enable
     #enable aop with timestamps
     echo 33 0x680000 > /sys/bus/coresight/devices/coresight-tpdm-swao-0/cmb_msr
     echo 48 0xC0 > /sys/bus/coresight/devices/coresight-tpdm-swao-0/cmb_msr
