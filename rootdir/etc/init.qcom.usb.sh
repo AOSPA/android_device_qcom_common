@@ -168,6 +168,13 @@ case "$product" in
 	*)
 	;;
 esac
+case "$product" in
+	"msmnile_gvmq")
+	echo peripheral > /sys/bus/platform/devices/a600000.ssusb/mode
+         ;;
+	*)
+	;;
+esac
 
 # check configfs is mounted or not
 if [ -d /config/usb_gadget ]; then
