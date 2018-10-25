@@ -358,9 +358,6 @@ on post-fs-data
     mkdir /data/fota 0771
     chown system system /data/fota
 
-    #Create directory for hostapd
-    mkdir /data/hostapd 0770 system wifi
-
     # Create /data/time folder for time-services
     mkdir /data/vendor/time/ 0700 system system
 
