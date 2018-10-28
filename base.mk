@@ -792,9 +792,6 @@ IMS_SETTINGS := imssettings
 IMS_EXT := ims-ext-common
 IMS_EXT += ConfURIDialer
 
-#Android Telephony library
-PRODUCT_BOOT_JARS += qtiNetworkLib
-
 #CRDA
 CRDA := crda
 CRDA += regdbdump
@@ -864,8 +861,10 @@ PRODUCT_PACKAGES := \
     wipowerservice \
     Mms \
     QtiDialer \
+    NrNetworkSettingApp \
     qtiNetworkLib \
     TestApp5G
+
 
 ifeq ($(TARGET_HAS_LOW_RAM),true)
     DELAUN := Launcher3Go
