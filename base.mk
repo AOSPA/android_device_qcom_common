@@ -871,9 +871,7 @@ PRODUCT_PACKAGES := \
     wipowerservice \
     Mms \
     QtiDialer \
-    NrNetworkSettingApp \
-    qtiNetworkLib \
-    TestApp5G
+    NrNetworkSettingApp
 
 ifeq ($(TARGET_HAS_LOW_RAM),true)
     DELAUN := Launcher3Go
