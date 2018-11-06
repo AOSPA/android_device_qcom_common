@@ -75,16 +75,6 @@ enable_tracing_events()
     #rmph_send_msg
     echo 1 > /sys/kernel/debug/tracing/events/rpmh/rpmh_send_msg/enable
 
-    #enable aop with timestamps
-    echo 33 0x680000 > /sys/bus/coresight/devices/coresight-tpdm-swao-0/cmb_msr
-    echo 48 0xC0 > /sys/bus/coresight/devices/coresight-tpdm-swao-0/cmb_msr
-    echo 0x4 > /sys/bus/coresight/devices/coresight-tpdm-swao-0/mcmb_lanes_select
-    echo 1 0 > /sys/bus/coresight/devices/coresight-tpdm-swao-0/cmb_mode
-    echo 1 > /sys/bus/coresight/devices/coresight-tpdm-swao-0/cmb_trig_ts
-    echo 1 >  /sys/bus/coresight/devices/coresight-tpdm-swao-0/enable_source
-    echo 4 2 > /sys/bus/coresight/devices/coresight-cti-swao_cti0/map_trigin
-    echo 4 2 > /sys/bus/coresight/devices/coresight-cti-swao_cti0/map_trigout
-
     echo 1 > /sys/kernel/debug/tracing/tracing_on
 }
 
