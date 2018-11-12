@@ -64,3 +64,4 @@ add_lunch_combo msmnile_gvmq-userdebug
 add_lunch_combo qcs605-userdebug
 add_lunch_combo talos-userdebug
 add_lunch_combo talos_au-userdebug
+add_lunch_combo trinket-userdebug

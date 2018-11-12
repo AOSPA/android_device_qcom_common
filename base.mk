@@ -27,6 +27,7 @@ QCOM_BOARD_PLATFORMS += sdm710
 QCOM_BOARD_PLATFORMS += msmnile_au
 QCOM_BOARD_PLATFORMS += qcs605
 QCOM_BOARD_PLATFORMS += $(MSMSTEPPE)
+QCOM_BOARD_PLATFORMS += $(TRINKET)
 
 QSD8K_BOARD_PLATFORMS := qsd8k
 
@@ -38,10 +39,13 @@ BOARD_HAVE_QCOM_FM := true
 BOARD_CHARGER_ENABLE_SUSPEND := true
 
 #List of targets that use video hw
-MSM_VIDC_TARGET_LIST := msm8974 msm8610 msm8226 apq8084 msm8916 msm8994 msm8909 msm8992 msm8996 msm8952 msm8937 msm8953 msm8998 apq8098_latv sdm660 sdm845 sdm710 qcs605 msmnile $(MSMSTEPPE)
+MSM_VIDC_TARGET_LIST := msm8974 msm8610 msm8226 apq8084 msm8916 msm8994 msm8909 msm8992 msm8996 msm8952 msm8937 msm8953 msm8998 apq8098_latv sdm660 sdm845 sdm710 qcs605 msmnile $(MSMSTEPPE) $(TRINKET)
 
 #List of targets that use master side content protection
-MASTER_SIDE_CP_TARGET_LIST := msm8996 msm8998 sdm660 sdm845 apq8098_latv sdm710 qcs605 msmnile $(MSMSTEPPE)
+MASTER_SIDE_CP_TARGET_LIST := msm8996 msm8998 sdm660 sdm845 apq8098_latv sdm710 qcs605 msmnile $(MSMSTEPPE) $(TRINKET)
+
+#List of targets where Vulkan feature level is restricted to 0
+VULKAN_FEATURE_LEVEL_0_TARGETS_LIST := msm8937_32 msm8937_64 sdm660_32 sdm660_64 msm8998 msm8998_32 msm8996 msm8953_64 msm8953_32
 
 # Below projects/packages with LOCAL_MODULEs will be used by
 # PRODUCT_PACKAGES to build LOCAL_MODULEs that are tagged with
@@ -120,6 +124,7 @@ AUDIO_HARDWARE += audio.primary.sdm710
 AUDIO_HARDWARE += audio.primary.qcs605
 AUDIO_HARDWARE += audio.primary.msmnile
 AUDIO_HARDWARE += audio.primary.$(MSMSTEPPE)
+AUDIO_HARDWARE += audio.primary.$(TRINKET)
 #
 AUDIO_POLICY := audio_policy.mpq8064
 AUDIO_POLICY += audio_policy.apq8084
@@ -477,6 +482,7 @@ LIBGRALLOC += gralloc.sdm660
 LIBGRALLOC += gralloc.sdm710
 LIBGRALLOC += gralloc.qcs605
 LIBGRALLOC += gralloc.$(MSMSTEPPE)
+LIBGRALLOC += gralloc.$(TRINKET)
 
 #memtrack
 LIBMEMTRACK := memtrack.default
@@ -500,6 +506,7 @@ LIBMEMTRACK += memtrack.apq8098_latv
 LIBMEMTRACK += memtrack.sdm710
 LIBMEMTRACK += memtrack.qcs605
 LIBMEMTRACK += memtrack.$(MSMSTEPPE)
+LIBMEMTRACK += memtrack.$(TRINKET)
 
 #LIBLIGHTS
 LIBLIGHTS := lights.msm8660
@@ -530,6 +537,7 @@ LIBLIGHTS += lights.apq8098_latv
 LIBLIGHTS += lights.sdm710
 LIBLIGHTS += lights.qcs605
 LIBLIGHTS += lights.$(MSMSTEPPE)
+LIBLIGHTS += lights.$(TRINKET)
 
 #LIBHWCOMPOSER
 LIBHWCOMPOSER := hwcomposer.msm8660
@@ -561,6 +569,7 @@ LIBHWCOMPOSER += hwcomposer.apq8098_latv
 LIBHWCOMPOSER += hwcomposer.sdm710
 LIBHWCOMPOSER += hwcomposer.qcs605
 LIBHWCOMPOSER += hwcomposer.$(MSMSTEPPE)
+LIBHWCOMPOSER += hwcomposer.$(TRINKET)
 
 #LIBAUDIOPARAM -- Exposing AudioParameter as dynamic library for SRS TruMedia to work
 LIBAUDIOPARAM := libaudioparameter
@@ -1092,12 +1101,26 @@ endif
 
 ifneq ($(TARGET_NOT_SUPPORT_VULKAN),true)
 PRODUCT_COPY_FILES += \
-    frameworks/native/data/etc/android.hardware.vulkan.level-1.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.vulkan.level-1.xml \
     frameworks/native/data/etc/android.hardware.vulkan.compute-0.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.vulkan.compute-0.xml
 endif
 
+# include additional build utilities
+-include device/qcom/common/utils.mk
+
+# Copy the vulkan feature level file.
+# Targets listed in VULKAN_FEATURE_LEVEL_0_TARGETS_LIST supports only vulkan feature level 0.
 ifneq ($(TARGET_NOT_SUPPORT_VULKAN),true)
-ifneq ($(TARGET_SUPPORT_VULKAN_VERSION_1_1),true)
+ifeq ($(call is-product-in-list,$(VULKAN_FEATURE_LEVEL_0_TARGETS_LIST)), true)
+PRODUCT_COPY_FILES += \
+    frameworks/native/data/etc/android.hardware.vulkan.level-0.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.vulkan.level-0.xml
+else
+PRODUCT_COPY_FILES += \
+    frameworks/native/data/etc/android.hardware.vulkan.level-1.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.vulkan.level-1.xml
+endif
+endif
+
+ifneq ($(TARGET_NOT_SUPPORT_VULKAN),true)
+ifeq ($(TARGET_SUPPORT_VULKAN_VERSION_1_1),false)
 PRODUCT_COPY_FILES += frameworks/native/data/etc/android.hardware.vulkan.version-1_0_3.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.vulkan.version-1_0_3.xml
 else
 PRODUCT_COPY_FILES += frameworks/native/data/etc/android.hardware.vulkan.version-1_1.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.vulkan.version-1_1.xml
@@ -1125,8 +1148,6 @@ else
      KERNEL_TO_BUILD_ROOT_OFFSET := ../../
      TARGET_KERNEL_SOURCE := kernel/msm-$(TARGET_KERNEL_VERSION)
 endif
-# include additional build utilities
--include device/qcom/common/utils.mk
 
 #Enabling Ring Tones
 #include frameworks/base/data/sounds/OriginalAudio.mk
