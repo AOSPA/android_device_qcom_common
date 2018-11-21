@@ -119,7 +119,7 @@ case "$target" in
         esac
         ;;
 
-    "talos")
+    "sm6150")
         case "$soc_hwplatform" in
             "ADP")
                 setprop vendor.display.lcd_density 160
