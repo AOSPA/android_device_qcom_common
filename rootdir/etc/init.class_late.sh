@@ -30,7 +30,7 @@
 #
 # start atfwd daemon
 #
-atfwd_status=`getprop persist.radio.atfwd.start`
+atfwd_status=`getprop persist.vendor.radio.atfwd.start`
 baseband=`getprop ro.baseband`
 
 #Do not start atfwd for sda, apq, qcs
