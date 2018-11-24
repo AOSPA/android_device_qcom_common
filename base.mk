@@ -1220,3 +1220,6 @@ endif
 PRODUCT_PACKAGES += liboemaids_system
 PRODUCT_PACKAGES += liboemaids_vendor
 PRODUCT_PACKAGES += android.hardware.health@2.0-service
+
+# Disable qmi EAP-SIM security
+DISABLE_EAP_PROXY := true
