@@ -1156,13 +1156,13 @@ endif
 -include frameworks/base/data/videos/VideoPackage1.mk
 
 # dm-verity definitions
-ifneq ($(BOARD_AVB_ENABLE), true)
-   PRODUCT_SYSTEM_VERITY_PARTITION=/dev/block/bootdevice/by-name/system
-   ifeq ($(ENABLE_VENDOR_IMAGE), true)
-      PRODUCT_VENDOR_VERITY_PARTITION=/dev/block/bootdevice/by-name/vendor
-   endif
-   $(call inherit-product, build/target/product/verity.mk)
-endif
+#ifneq ($(BOARD_AVB_ENABLE), true)
+#   PRODUCT_SYSTEM_VERITY_PARTITION=/dev/block/bootdevice/by-name/system
+#   ifeq ($(ENABLE_VENDOR_IMAGE), true)
+#      PRODUCT_VENDOR_VERITY_PARTITION=/dev/block/bootdevice/by-name/vendor
+#   endif
+#   $(call inherit-product, build/target/product/verity.mk)
+#endif
 
 #skip boot jars check
 SKIP_BOOT_JARS_CHECK := true
