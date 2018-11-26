@@ -2816,9 +2816,9 @@ case "$target" in
 esac
 
 case "$target" in
-    "talos")
+    "sm6150")
 
-        #Apply settings for talos
+        #Apply settings for sm6150
         # Set the default IRQ affinity to the silver cluster. When a
         # CPU is isolated/hotplugged, the IRQ affinity is adjusted
         # to one of the CPU from the default IRQ affinity mask.
@@ -4274,7 +4274,7 @@ case "$target" in
         start mpdecision
         echo 512 > /sys/block/mmcblk0/bdi/read_ahead_kb
     ;;
-    "msm8994" | "msm8992" | "msm8996" | "msm8998" | "sdm660" | "apq8098_latv" | "sdm845" | "sdm710" | "msmnile" | "talos")
+    "msm8994" | "msm8992" | "msm8996" | "msm8998" | "sdm660" | "apq8098_latv" | "sdm845" | "sdm710" | "msmnile" | "sm6150")
         setprop vendor.post_boot.parsed 1
     ;;
     "apq8084")
