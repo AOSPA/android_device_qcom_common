@@ -39,6 +39,6 @@ case "$baseband" in
         setprop persist.vendor.radio.atfwd.start false;;
     *)
         if [ "$atfwd_status" = "true" ]; then
-            start atfwd
+            start vendor.atfwd
         fi
 esac
