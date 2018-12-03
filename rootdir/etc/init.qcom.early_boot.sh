@@ -382,6 +382,13 @@ case "$product" in
         *)
         ;;
 esac
+case "$product" in
+        "talos_au")
+         setprop vendor.display.lcd_density 160
+         ;;
+        *)
+        ;;
+esac
 
 # Setup display nodes & permissions
 # HDMI can be fb1 or fb2
