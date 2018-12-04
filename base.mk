@@ -1,3 +1,13 @@
+# define flag to determine the kernel
+TARGET_KERNEL_VERSION := $(shell ls kernel | grep "msm-*" | sed 's/msm-//')
+
+# Set TARGET_USES_NEW_ION for 4.14 and higher kernels
+ifeq ($(TARGET_KERNEL_VERSION),$(filter $(TARGET_KERNEL_VERSION),3.18 4.4 4.9))
+TARGET_USES_NEW_ION := false
+else
+TARGET_USES_NEW_ION := true
+endif
+
 # Board platforms lists to be used for
 # TARGET_BOARD_PLATFORM specific featurization
 QCOM_BOARD_PLATFORMS += msm8974

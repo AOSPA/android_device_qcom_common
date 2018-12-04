@@ -186,10 +186,8 @@ define build-dtboimage-target
     $(hide) chmod a+r $@
 endef
 
-ifeq ($(BOARD_AVB_ENABLE),true)
 $(BOARD_PREBUILT_DTBOIMAGE): $(MKDTIMG) $(INSTALLED_KERNEL_TARGET)
 	$(build-dtboimage-target)
-endif
 
 endif
 endif
@@ -492,25 +490,6 @@ ALL_MODULES.$(LOCAL_MODULE).INSTALLED += $(INSTALLED_SMALL_USERDATAIMAGE_TARGET)
 
 endif
 
-endif
-
-#----------------------------------------------------------------------
-# Compile (L)ittle (K)ernel bootloader and the nandwrite utility
-#----------------------------------------------------------------------
-ifneq ($(strip $(TARGET_NO_BOOTLOADER)),true)
-
-# Compile
-ifeq ($(strip $(TARGET_USES_UEFI)),true)
-include bootable/bootloader/edk2/AndroidBoot.mk
-else
-include bootable/bootloader/lk/AndroidBoot.mk
-endif
-
-$(INSTALLED_BOOTLOADER_MODULE): $(TARGET_EMMC_BOOTLOADER) | $(ACP)
-    $(transform-prebuilt-to-target)
-$(BUILT_TARGET_FILES_PACKAGE): $(INSTALLED_BOOTLOADER_MODULE)
-
-droidcore: $(INSTALLED_BOOTLOADER_MODULE)
 endif
 
 ###################################################################################################
