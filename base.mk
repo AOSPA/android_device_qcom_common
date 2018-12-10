@@ -1,3 +1,13 @@
+# define flag to determine the kernel
+TARGET_KERNEL_VERSION := $(shell ls kernel | grep "msm-*" | sed 's/msm-//')
+
+# Set TARGET_USES_NEW_ION for 4.14 and higher kernels
+ifeq ($(TARGET_KERNEL_VERSION),$(filter $(TARGET_KERNEL_VERSION),3.18 4.4 4.9))
+TARGET_USES_NEW_ION := false
+else
+TARGET_USES_NEW_ION := true
+endif
+
 # Board platforms lists to be used for
 # TARGET_BOARD_PLATFORM specific featurization
 QCOM_BOARD_PLATFORMS += msm8974
@@ -302,6 +312,7 @@ INIT += init.qcom.sdio.sh
 INIT += init.qcom.sh
 INIT += init.qcom.class_core.sh
 INIT += init.class_main.sh
+INIT += init.class_late.sh
 INIT += init.qcom.wifi.sh
 INIT += vold.fstab
 INIT += init.qcom.ril.path.sh
@@ -321,6 +332,7 @@ INIT += init.qcom.crashdata.sh
 INIT += init.qcom.vendor.rc
 INIT += init.target.vendor.rc
 INIT += init.qti.fm.sh
+INIT += init.qti.can.sh
 
 #IPROUTE2
 IPROUTE2 := ip
@@ -661,6 +673,7 @@ NQ_NFC += libnqnfc_nci_jni
 NQ_NFC += libsn100nfc_nci_jni
 NQ_NFC += libsn100nfc-nci
 NQ_NFC += nfc_nci.nqx.default
+NQ_NFC += nfc_nci.sn100.default
 NQ_NFC += libp61-jcop-kit
 NQ_NFC += com.nxp.nfc.nq
 NQ_NFC += com.nxp.nfc.nq.xml
@@ -679,6 +692,7 @@ NQ_NFC += nqnfcinfo
 NQ_NFC += com.android.nfc_extras
 NQ_NFC += vendor.nxp.hardware.nfc@1.1-service
 NQ_NFC += nfc_nci.nqx.default.hw
+NQ_NFC += nfc_nci.sn100.default.hw
 PRODUCT_PROPERTY_OVERRIDES += ro.hardware.nfc_nci=nqx.default
 
 #OPENCORE
@@ -870,9 +884,7 @@ PRODUCT_PACKAGES := \
     wipowerservice \
     Mms \
     QtiDialer \
-    NrNetworkSettingApp \
-    qtiNetworkLib \
-    TestApp5G
+    NrNetworkSettingApp
 
 
 ifeq ($(TARGET_HAS_LOW_RAM),true)
