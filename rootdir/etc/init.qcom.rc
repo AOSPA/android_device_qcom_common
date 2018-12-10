@@ -86,9 +86,10 @@ on early-boot
     chown system system /mnt/vendor/persist/sensors/registry/sns_reg_version
     chown system system /mnt/vendor/persist/sensors/registry/config
     chmod 0664 /mnt/vendor/persist/sensors/sensors_settings
+
+on property:ro.hardware.type=automotive
     wait /sys/class/net/can0
     start can
-
 
 on boot
     chown bluetooth bluetooth /sys/module/bluetooth_power/parameters/power
