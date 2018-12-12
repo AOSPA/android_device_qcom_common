@@ -7,11 +7,11 @@ LIBINIT_USE_MSM_DEFAULT := $(shell if [ ! -f $(LIBINIT_MSM_PATH)/init_$(TARGET_B
 
 include $(CLEAR_VARS)
 LOCAL_MODULE_TAGS := optional
-LOCAL_C_INCLUDES := system/core/init
+LOCAL_C_INCLUDES := system/core/init system/core/base/include
 LOCAL_CFLAGS := -Wall -DANDROID_TARGET=\"$(TARGET_BOARD_PLATFORM)\"
-LOCAL_SRC_FILES := init_msm.c
+LOCAL_SRC_FILES := init_msm.cpp
 ifeq ($(LIBINIT_USE_MSM_DEFAULT),true)
-  LOCAL_SRC_FILES += init_msmdefault.c
+  LOCAL_SRC_FILES += init_msmdefault.cpp
 else
   LOCAL_SRC_FILES += init_$(TARGET_BOARD_PLATFORM).c
 endif
