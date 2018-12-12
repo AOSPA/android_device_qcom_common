@@ -1223,3 +1223,6 @@ PRODUCT_PACKAGES += android.hardware.health@2.0-service
 
 # Disable qmi EAP-SIM security
 DISABLE_EAP_PROXY := true
+
+# Skip vendor/pa kernel.mk
+TARGET_PROVIDES_KERNEL_MAKEFILE := true
