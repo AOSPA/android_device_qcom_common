@@ -65,17 +65,21 @@ endif
 # a dummy MLVM to satisfy those cases
 #
 # --------------------------------------------------------------------
-DUMMY_MLVM := dummy_mlvm.img
+ifeq ($(TARGET_ENABLE_MLVM),true)
+DUMMY_MLVM_IMAGE := $(PRODUCT_OUT)/dummy_mlvm.img
+ALL_DEFAULT_INSTALLED_MODULES += $(DUMMY_MLVM_IMAGE)
 
-$(shell dd if=/dev/zero of=$(PRODUCT_OUT)/$(DUMMY_MLVM) bs=1024 count=1)
-$(shell $(AVBTOOL) add_hash_footer \
-    --image $(DUMMY_MLVM) \
-    --partition_size 0x02000000 \
-    --partition_name vm-linux \
-    --algorithm SHA256_RSA4096  \
-    --key $(BOARD_AVB_MLVM_PRIVATE_KEY) \
-    --rollback_index 0 )
-
+$(DUMMY_MLVM_IMAGE): $(AVBTOOL)
+	@echo "Target dummy MLVM  image"
+	$(shell  dd if=/dev/zero of=$(DUMMY_MLVM_IMAGE) bs=1024 count=1)
+	$(shell  $(AVBTOOL) add_hash_footer \
+        --image $(DUMMY_MLVM_IMAGE) \
+        --partition_size 0x02000000 \
+        --partition_name vm-linux \
+        --algorithm SHA256_RSA4096  \
+        --key $(BOARD_AVB_MLVM_BOOT_PRIV_KEY) \
+        --rollback_index 0)
+endif
 #----------------------------------------------------------------------
 # Generate secure boot image
 #----------------------------------------------------------------------
