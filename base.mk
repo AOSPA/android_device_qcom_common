@@ -8,6 +8,17 @@ else
 TARGET_USES_NEW_ION := true
 endif
 
+# Pure AOSP framework vs vendor modified framework detection
+# - using BUILD_ID xKQ* as mechanism
+
+ifeq ($(filter $(shell echo $(BUILD_ID) | sed 's/.KQ.*/KQ/g'),KQ),KQ)
+  TARGET_FWK_SUPPORTS_FULL_VALUEADDS := true
+  $(warning "Compile using modified AOSP tree supporting full vendor value-adds")
+else
+  TARGET_FWK_SUPPORTS_FULL_VALUEADDS := false
+  $(warning "Compile using pure AOSP tree")
+endif
+
 # Board platforms lists to be used for
 # TARGET_BOARD_PLATFORM specific featurization
 QCOM_BOARD_PLATFORMS += msm8974
@@ -42,7 +53,33 @@ QSD8K_BOARD_PLATFORMS := qsd8k
 
 TARGET_USE_VENDOR_CAMERA_EXT := true
 TARGET_USE_QTI_BT_STACK := true
-BOARD_HAVE_QCOM_FM := true
+
+BOARD_HAVE_QCOM_FM ?= true
+
+
+# Boot additions
+#Android Telephony library
+PRODUCT_BOOT_JARS += qtiNetworkLib
+ifeq ($(strip $(TARGET_USES_NQ_NFC)),true)
+PRODUCT_BOOT_JARS += com.nxp.nfc.nq
+endif
+ifeq ($(strip $(BOARD_HAVE_QCOM_FM)),true)
+PRODUCT_BOOT_JARS += qcom.fmradio
+endif #BOARD_HAVE_QCOM_FM
+#Camera QC extends API
+ifeq ($(strip $(TARGET_USES_QTIC_EXTENSION)),true)
+PRODUCT_BOOT_JARS += com.qualcomm.qti.camera
+endif
+ifneq ($(strip $(TARGET_DISABLE_PERF_OPTIMIATIONS)),true)
+# Preloading QPerformance jar to ensure faster perflocks in Boost Framework
+PRODUCT_BOOT_JARS += QPerformance
+# Preloading UxPerformance jar to ensure faster UX invoke in Boost Framework
+PRODUCT_BOOT_JARS += UxPerformance
+endif
+
+#skip boot jars check
+SKIP_BOOT_JARS_CHECK := true
+
 
 #Enable suspend during charger mode
 BOARD_CHARGER_ENABLE_SUSPEND := true
@@ -800,9 +837,6 @@ IMS_SETTINGS := imssettings
 IMS_EXT := ims-ext-common
 IMS_EXT += ConfURIDialer
 
-#Android Telephony library
-PRODUCT_BOOT_JARS += qtiNetworkLib
-
 #CRDA
 CRDA := crda
 CRDA += regdbdump
@@ -836,9 +870,6 @@ PRODUCT_PACKAGES := \
     AccountAndSyncSettings \
     DeskClock \
     AlarmProvider \
-    Bluetooth \
-    BluetoothExt \
-    BATestApp \
     HidTestApp \
     Calculator \
     Calendar \
@@ -877,6 +908,13 @@ PRODUCT_PACKAGES := \
     qtiNetworkLib \
     TestApp5G
 
+ifneq ($(BOARD_HAVE_BLUETOOTH),false)
+PRODUCT_PACKAGES += \
+    Bluetooth \
+    BluetoothExt \
+    BATestApp
+endif
+
 ifeq ($(TARGET_HAS_LOW_RAM),true)
     DELAUN := Launcher3Go
 else
@@ -902,7 +940,9 @@ PRODUCT_PACKAGES += $(AMPLOADER)
 PRODUCT_PACKAGES += $(APPS)
 PRODUCT_PACKAGES += $(BRCTL)
 PRODUCT_PACKAGES += $(BSON)
+ifneq ($(BOARD_HAVE_BLUETOOTH),false)
 PRODUCT_PACKAGES += $(BT)
+endif
 PRODUCT_PACKAGES += $(C2DCC)
 PRODUCT_PACKAGES += $(CHROMIUM)
 PRODUCT_PACKAGES += $(CIMAX)
@@ -956,10 +996,8 @@ PRODUCT_PACKAGES += $(MM_WFD)
 PRODUCT_PACKAGES += $(MM_VIDEO)
 ifeq ($(strip $(TARGET_USES_NQ_NFC)),true)
 PRODUCT_PACKAGES += $(NQ_NFC)
-PRODUCT_BOOT_JARS += com.nxp.nfc.nq
 endif
 ifeq ($(strip $(BOARD_HAVE_QCOM_FM)),true)
-PRODUCT_BOOT_JARS += qcom.fmradio
 # system prop for fm
 PRODUCT_PROPERTY_OVERRIDES += \
     vendor.hw.fm.init=0
@@ -1147,24 +1185,10 @@ ifneq ($(BOARD_AVB_ENABLE), true)
    $(call inherit-product, build/target/product/verity.mk)
 endif
 
-#skip boot jars check
-SKIP_BOOT_JARS_CHECK := true
-
 ifeq ($(TARGET_BUILD_VARIANT),user)
 PRODUCT_DEFAULT_PROPERTY_OVERRIDES+= \
     ro.adb.secure=1
 endif
-
-#Camera QC extends API
-ifeq ($(strip $(TARGET_USES_QTIC_EXTENSION)),true)
-PRODUCT_BOOT_JARS += com.qualcomm.qti.camera
-endif
-
-# Preloading QPerformance jar to ensure faster perflocks in Boost Framework
-PRODUCT_BOOT_JARS += QPerformance
-
-# Preloading UxPerformance jar to ensure faster UX invoke in Boost Framework
-PRODUCT_BOOT_JARS += UxPerformance
 
 # OEM Unlock reporting
 PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \

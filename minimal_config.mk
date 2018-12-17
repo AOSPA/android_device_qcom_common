@@ -81,6 +81,16 @@ DEVICE_PACKAGE_OVERLAYS += device/qcom/common/device/overlay
 PRODUCT_PACKAGE_OVERLAYS += device/qcom/common/product/overlay
 endif
 
+# Pure AOSP framework vs vendor modified framework detection
+# - using BUILD_ID xKQ* as mechanism
+ifeq ($(filter $(shell echo $(BUILD_ID) | sed 's/.KQ.*/KQ/g'),KQ),KQ)
+  TARGET_FWK_SUPPORTS_FULL_VALUEADDS := true
+  $(warning "Compile using modified AOSP tree supporting full vendor value-adds")
+else
+  TARGET_FWK_SUPPORTS_FULL_VALUEADDS := false
+  $(warning "Compile using pure AOSP tree")
+endif
+
 # Set up flags to determine the kernel version
 ifeq ($(TARGET_KERNEL_VERSION),)
      TARGET_KERNEL_VERSION := 3.18
