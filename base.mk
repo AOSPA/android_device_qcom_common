@@ -653,10 +653,12 @@ LIBQDUTILS := libqdutils
 LIBQDMETADATA := libqdMetaData
 
 #LIBPOWER
+ifneq ($(TARGET_USES_NON_LEGACY_POWERHAL), true)
 LIBPOWER := power.qcom
 #LIBPOWER -- Add HIDL Packages
 LIBPOWER += android.hardware.power@1.0-impl
 LIBPOWER += android.hardware.power@1.0-service
+endif
 
 #LLVM for RenderScript
 #use qcom LLVM
