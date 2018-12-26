@@ -891,30 +891,25 @@ PRODUCT_PACKAGES := \
     Email \
     Gallery2 \
     LatinIME \
-    Music \
     netutils-wrapper-1.0 \
     Phone \
     Provision \
     Protips \
-    QuickSearchBox \
     Settings \
     Sync \
     SystemUI \
     Updater \
     CalendarProvider \
     SyncProvider \
-    SoundRecorder \
     IM \
     VoiceDialer \
-    FM2 \
     SnapdragonGallery \
     SnapdragonMusic \
     VideoEditor \
     SnapdragonLauncher \
     a4wpservice \
     wipowerservice \
-    Mms \
-    QtiDialer
+    Mms
 
 ifneq ($(BOARD_HAVE_BLUETOOTH),false)
 PRODUCT_PACKAGES += \
