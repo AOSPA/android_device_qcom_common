@@ -26,7 +26,7 @@
 #OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN
 #IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
-enable_tracing_events()
+enable_tracing_events_msmnile()
 {
     # timer
     echo 1 > /sys/kernel/debug/tracing/events/timer/timer_expire_entry/enable
@@ -79,7 +79,7 @@ enable_tracing_events()
 }
 
 # function to enable ftrace events
-enable_ftrace_event_tracing()
+enable_ftrace_event_tracing_msmnile()
 {
     # bail out if its perf config
     if [ ! -d /sys/module/msm_rtb ]
@@ -93,7 +93,7 @@ enable_ftrace_event_tracing()
         return
     fi
 
-    enable_tracing_events
+    enable_tracing_events_msmnile
 }
 
 # function to enable ftrace event transfer to CoreSight STM
@@ -121,7 +121,7 @@ enable_stm_events_msmnile()
     echo 1 > /sys/bus/coresight/devices/coresight-stm/$srcenable
     echo 1 > /sys/kernel/debug/tracing/tracing_on
     echo 0 > /sys/bus/coresight/devices/coresight-stm/hwevent_enable
-    enable_tracing_events
+    enable_tracing_events_msmnile
 }
 
 # Function msmnile DCC configuration
@@ -652,7 +652,7 @@ enable_msmnile_debug()
     echo "Enabling STM events on msmnile."
     enable_stm_events_msmnile
     if [ "$ftrace_disable" != "Yes" ]; then
-        enable_ftrace_event_tracing
+        enable_ftrace_event_tracing_msmnile
     fi
     enable_msmnile_dcc_config
     enable_msmnile_stm_hw_events
