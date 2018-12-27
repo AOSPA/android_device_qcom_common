@@ -1173,12 +1173,10 @@ PRODUCT_BOOT_JARS += com.qualcomm.qti.camera
 endif
 
 # Preloading QPerformance jar to ensure faster perflocks in Boost Framework
-PRODUCT_BOOT_JARS += QPerformance
-PRODUCT_PACKAGES += QPerformance
+#PRODUCT_BOOT_JARS += QPerformance
 
 # Preloading UxPerformance jar to ensure faster UX invoke in Boost Framework
-PRODUCT_BOOT_JARS += UxPerformance
-PRODUCT_PACKAGES += UxPerformance
+#PRODUCT_BOOT_JARS += UxPerformance
 
 # Include perf and iop blobs
 -include vendor/qcom/common/qti-vendor.mk
