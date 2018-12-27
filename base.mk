@@ -1180,6 +1180,9 @@ PRODUCT_PACKAGES += QPerformance
 PRODUCT_BOOT_JARS += UxPerformance
 PRODUCT_PACKAGES += UxPerformance
 
+# Include perf and iop blobs
+-include vendor/qcom/common/qti-vendor.mk
+
 # OEM Unlock reporting
 PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
     ro.oem_unlock_supported=1
