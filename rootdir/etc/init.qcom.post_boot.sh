@@ -725,7 +725,6 @@ case "$target" in
                 echo 100000 > /sys/devices/system/cpu/cpufreq/interactive/sampling_down_factor
                 echo 1497600 > /sys/module/cpu_boost/parameters/input_boost_freq
                 echo 40 > /sys/module/cpu_boost/parameters/input_boost_ms
-                setprop ro.vendor.perf.cores_online 2
             ;;
             *)
                 echo "ondemand" > /sys/devices/system/cpu/cpu0/cpufreq/scaling_governor
@@ -2007,7 +2006,7 @@ case "$target" in
                 echo 0 > /proc/sys/kernel/sched_boost
 
 		# core_ctl is not needed for 8917. Disable it.
-		echo 1 > /sys/devices/system/cpu/cpu0/core_ctl/disable
+                disable_core_ctl
 
                 for devfreq_gov in /sys/class/devfreq/qcom,mincpubw*/governor
                 do
@@ -3092,7 +3091,6 @@ case "$target" in
         echo 300000 > /sys/devices/system/cpu/cpu2/cpufreq/scaling_min_freq
         echo 300000 > /sys/devices/system/cpu/cpu3/cpufreq/scaling_min_freq
         echo 1 > /sys/module/msm_thermal/core_control/enabled
-        setprop ro.vendor.perf.cores_online 2
         chown -h  system /sys/devices/system/cpu/cpu0/cpufreq/scaling_max_freq
         chown -h system /sys/devices/system/cpu/cpu0/cpufreq/scaling_min_freq
         chown -h root.system /sys/devices/system/cpu/mfreq
@@ -3766,7 +3764,7 @@ case "$target" in
         "MTP" | "Surf" | "RCM" )
             # Start Host based Touch processing
             case "$platform_subtype_id" in
-                "0" | "1")
+                "0" | "1" | "2")
                     start_hbtp
                     ;;
             esac
@@ -4069,44 +4067,11 @@ case "$target" in
     "msm8660" | "msm8960" | "msm8226" | "msm8610" | "mpq8092" )
         start mpdecision
     ;;
-    "msm8916")
-        setprop vendor.post_boot.parsed 1
-
-        if [ -f /sys/devices/soc0/soc_id ]; then
-           soc_id=`cat /sys/devices/soc0/soc_id`
-        else
-           soc_id=`cat /sys/devices/system/soc/soc0/id`
-        fi
-        case $soc_id in
-            "239" | "241" | "263" | "268" | "269" | "270" | "271")
-            setprop vendor.min_freq_0 960000
-            setprop vendor.min_freq_4 800000
-        ;;
-            "206" | "247" | "248" | "249" | "250" | "233" | "240" | "242")
-            setprop vendor.min_freq_0 800000
-        ;;
-        esac
-    ;;
-    "msm8909")
-        setprop vendor.post_boot.parsed 1
-    ;;
-    "msm8952")
-        setprop vendor.post_boot.parsed 1
-    ;;
-    "msm8937" | "msm8953")
-        setprop vendor.post_boot.parsed 1
-
-        low_ram_enable=`getprop ro.config.low_ram`
-
-        if [ "$low_ram_enable" != "true" ]; then
-        start gamed
-        fi
-    ;;
     "msm8974")
         start mpdecision
         echo 512 > /sys/block/mmcblk0/bdi/read_ahead_kb
     ;;
-    "msm8994" | "msm8992" | "msm8996" | "msm8998" | "sdm660" | "apq8098_latv" | "sdm845" | "sdm710" | "msmnile" | "msmsteppe")
+    "msm8909" | "msm8916" | "msm8937" | "msm8952" | "msm8953" | "msm8994" | "msm8992" | "msm8996" | "msm8998" | "sdm660" | "apq8098_latv" | "sdm845" | "sdm710" | "msmnile" | "msmsteppe")
         setprop vendor.post_boot.parsed 1
     ;;
     "apq8084")

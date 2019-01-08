@@ -10,7 +10,8 @@ ifeq ($(TARGET_HAS_LOW_RAM),true)
         keyguard.no_require_sim=true \
         ro.com.android.dataroaming=true
 
-    $(call inherit-product, $(SRC_TARGET_DIR)/product/telephony.mk)
+    $(call inherit-product, $(SRC_TARGET_DIR)/product/telephony_system.mk)
+    $(call inherit-product, $(SRC_TARGET_DIR)/product/telephony_vendor.mk)
     $(call inherit-product, $(SRC_TARGET_DIR)/product/generic.mk)
     $(call inherit-product, $(SRC_TARGET_DIR)/product/languages_full.mk)
 else

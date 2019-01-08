@@ -29,42 +29,18 @@
 #
 
 # Set platform variables
-if [ -f /sys/devices/soc0/hw_platform ]; then
-    soc_hwplatform=`cat /sys/devices/soc0/hw_platform` 2> /dev/null
-else
-    soc_hwplatform=`cat /sys/devices/system/soc/soc0/hw_platform` 2> /dev/null
-fi
-
-if [ -f /sys/devices/soc0/machine ]; then
-    soc_machine=`cat /sys/devices/soc0/machine` 2> /dev/null
-else
-    soc_machine=`cat /sys/devices/system/soc/soc0/machine` 2> /dev/null
-fi
+soc_hwplatform=`cat /sys/devices/soc0/hw_platform 2> /dev/null`
+soc_machine=`cat /sys/devices/soc0/machine 2> /dev/null`
+soc_id=`cat /sys/devices/soc0/soc_id 2> /dev/null`
 
 #
-# Check ESOC for external MDM
+# Check ESOC for external modem
 #
-# Note: currently only a single MDM is supported
+# Note: currently only a single MDM/SDX is supported
 #
-if [ -d /sys/bus/esoc/devices ]; then
-for f in /sys/bus/esoc/devices/*; do
-    if [ -d $f ]; then
-    if [ `grep -e "^MDM" -e "^SDX" $f/esoc_name` ]; then
-            esoc_link=`cat $f/esoc_link`
-            break
-        fi
-    fi
-done
-fi
+esoc_name=`cat /sys/bus/esoc/devices/esoc0/esoc_name 2> /dev/null`
 
 target=`getprop ro.board.platform`
-
-# soc_ids for 8937
-if [ -f /sys/devices/soc0/soc_id ]; then
-	soc_id=`cat /sys/devices/soc0/soc_id`
-else
-	soc_id=`cat /sys/devices/system/soc/soc0/id`
-fi
 
 if [ -f /sys/class/android_usb/f_mass_storage/lun/nofua ]; then
 	echo 1  > /sys/class/android_usb/f_mass_storage/lun/nofua
@@ -76,9 +52,9 @@ fi
 # If USB persist config not set, set default configuration
 if [ "$(getprop persist.vendor.usb.config)" == "" -a \
 	"$(getprop init.svc.vendor.usb-gadget-hal-1-0)" != "running" ]; then
-      if [ "$esoc_link" != "" ]; then
+    if [ "$esoc_name" != "" ]; then
 	  setprop persist.vendor.usb.config diag,diag_mdm,qdss,qdss_mdm,serial_cdev,dpl,rmnet,adb
-      else
+    else
 	  case "$(getprop ro.baseband)" in
 	      "apq")
 	          setprop persist.vendor.usb.config diag,adb
@@ -179,7 +155,7 @@ if [ -d /config/usb_gadget ]; then
 	echo "$product_string" > /config/usb_gadget/g1/strings/0x409/product
 
 	# ADB requires valid iSerialNumber; if ro.serialno is missing, use dummy
-	serialnumber=`cat /config/usb_gadget/g1/strings/0x409/serialnumber` 2> /dev/null
+	serialnumber=`cat /config/usb_gadget/g1/strings/0x409/serialnumber 2> /dev/null`
 	if [ "$serialnumber" == "" ]; then
 		serialno=1234567
 		echo $serialno > /config/usb_gadget/g1/strings/0x409/serialnumber
