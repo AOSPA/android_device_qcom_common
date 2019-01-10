@@ -2016,7 +2016,7 @@ case "$target" in
                 echo 0 > /proc/sys/kernel/sched_boost
 
 		# core_ctl is not needed for 8917. Disable it.
-		echo 1 > /sys/devices/system/cpu/cpu0/core_ctl/disable
+                disable_core_ctl
 
                 for devfreq_gov in /sys/class/devfreq/qcom,mincpubw*/governor
                 do
@@ -3058,6 +3058,9 @@ case "$target" in
 	            echo 10 > $memlat/polling_interval
 	            echo 400 > $memlat/mem_latency/ratio_ceil
                 done
+
+                #Gold L3 ratio ceil
+                echo 4000 > /sys/class/devfreq/soc:qcom,cpu6-cpu-l3-lat/mem_latency/ratio_ceil
 
                 #Enable cdspl3 governor for L3 cdsp nodes
                 for l3cdsp in $device/*cdsp-cdsp-l3-lat/devfreq/*cdsp-cdsp-l3-lat

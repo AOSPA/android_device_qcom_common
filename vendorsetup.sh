@@ -65,3 +65,4 @@ add_lunch_combo qcs605-userdebug
 add_lunch_combo sm6150-userdebug
 add_lunch_combo sm6150_au-userdebug
 add_lunch_combo trinket-userdebug
+add_lunch_combo sdmshrike_au-userdebug

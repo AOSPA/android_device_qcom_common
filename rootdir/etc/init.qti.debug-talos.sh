@@ -1307,23 +1307,27 @@ config_talos_dcc_memnoc_mccc()
 config_talos_dcc_gpu()
 {
     #GCC
+    echo 0x105050 > $DCC_PATH/config
     echo 0x171004 > $DCC_PATH/config
     echo 0x171154 > $DCC_PATH/config
     echo 0x17100C > $DCC_PATH/config
     echo 0x171018 > $DCC_PATH/config
 
     #GPUCC
-    echo 0x509106C > $DCC_PATH/config
-    echo 0x509100C > $DCC_PATH/config
+    echo 0x5091004 > $DCC_PATH/config
+    echo 0x509100c > $DCC_PATH/config
     echo 0x5091010 > $DCC_PATH/config
     echo 0x5091014 > $DCC_PATH/config
+    echo 0x5091054 > $DCC_PATH/config
+    echo 0x5091060 > $DCC_PATH/config
+    echo 0x509106c > $DCC_PATH/config
     echo 0x5091070 > $DCC_PATH/config
     echo 0x5091074 > $DCC_PATH/config
-    echo 0x5091098 > $DCC_PATH/config
-    echo 0x5091004 > $DCC_PATH/config
-    echo 0x509109C > $DCC_PATH/config
     echo 0x5091078 > $DCC_PATH/config
-    echo 0x5091054 > $DCC_PATH/config
+    echo 0x509107c > $DCC_PATH/config
+    echo 0x509108c > $DCC_PATH/config
+    echo 0x5091098 > $DCC_PATH/config
+    echo 0x509109c > $DCC_PATH/config
 }
 
 config_talos_dcc_pdc_display()
