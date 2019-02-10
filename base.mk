@@ -61,6 +61,7 @@ BOARD_HAVE_QCOM_FM ?= true
 # Boot additions
 #Android Telephony library
 PRODUCT_BOOT_JARS += qtiNetworkLib
+PRODUCT_BOOT_JARS += ims-ext-common
 ifeq ($(strip $(TARGET_USES_NQ_NFC)),true)
 PRODUCT_BOOT_JARS += com.nxp.nfc.nq
 endif
@@ -86,7 +87,7 @@ SKIP_BOOT_JARS_CHECK := true
 BOARD_CHARGER_ENABLE_SUSPEND := true
 
 #List of targets that use video hw
-MSM_VIDC_TARGET_LIST := msm8974 msm8610 msm8226 apq8084 msm8916 msm8994 msm8909 msm8992 msm8996 msm8952 msm8937 msm8953 msm8998 apq8098_latv sdm660 sdm845 sdm710 qcs605 msmnile $(MSMSTEPPE)
+MSM_VIDC_TARGET_LIST := msm8974 msm8610 msm8226 apq8084 msm8916 msm8994 msm8909 msm8992 msm8996 msm8952 msm8937 msm8953 msm8998 apq8098_latv sdm660 sdm845 sdm710 qcs605 msmnile $(MSMSTEPPE) kona
 
 #List of targets that use master side content protection
 MASTER_SIDE_CP_TARGET_LIST := msm8996 msm8998 sdm660 sdm845 apq8098_latv sdm710 qcs605 msmnile $(MSMSTEPPE)
