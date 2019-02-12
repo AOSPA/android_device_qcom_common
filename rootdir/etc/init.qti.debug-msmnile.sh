@@ -26,7 +26,7 @@
 #OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN
 #IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
-enable_tracing_events()
+enable_tracing_events_msmnile()
 {
     # timer
     echo 1 > /sys/kernel/debug/tracing/events/timer/timer_expire_entry/enable
@@ -75,21 +75,11 @@ enable_tracing_events()
     #rmph_send_msg
     echo 1 > /sys/kernel/debug/tracing/events/rpmh/rpmh_send_msg/enable
 
-    #enable aop with timestamps
-    echo 33 0x680000 > /sys/bus/coresight/devices/coresight-tpdm-swao-0/cmb_msr
-    echo 48 0xC0 > /sys/bus/coresight/devices/coresight-tpdm-swao-0/cmb_msr
-    echo 0x4 > /sys/bus/coresight/devices/coresight-tpdm-swao-0/mcmb_lanes_select
-    echo 1 0 > /sys/bus/coresight/devices/coresight-tpdm-swao-0/cmb_mode
-    echo 1 > /sys/bus/coresight/devices/coresight-tpdm-swao-0/cmb_trig_ts
-    echo 1 >  /sys/bus/coresight/devices/coresight-tpdm-swao-0/enable_source
-    echo 4 2 > /sys/bus/coresight/devices/coresight-cti-swao_cti0/map_trigin
-    echo 4 2 > /sys/bus/coresight/devices/coresight-cti-swao_cti0/map_trigout
-
     echo 1 > /sys/kernel/debug/tracing/tracing_on
 }
 
 # function to enable ftrace events
-enable_ftrace_event_tracing()
+enable_ftrace_event_tracing_msmnile()
 {
     # bail out if its perf config
     if [ ! -d /sys/module/msm_rtb ]
@@ -103,7 +93,7 @@ enable_ftrace_event_tracing()
         return
     fi
 
-    enable_tracing_events
+    enable_tracing_events_msmnile
 }
 
 # function to enable ftrace event transfer to CoreSight STM
@@ -131,7 +121,7 @@ enable_stm_events_msmnile()
     echo 1 > /sys/bus/coresight/devices/coresight-stm/$srcenable
     echo 1 > /sys/kernel/debug/tracing/tracing_on
     echo 0 > /sys/bus/coresight/devices/coresight-stm/hwevent_enable
-    enable_tracing_events
+    enable_tracing_events_msmnile
 }
 
 # Function msmnile DCC configuration
@@ -662,7 +652,7 @@ enable_msmnile_debug()
     echo "Enabling STM events on msmnile."
     enable_stm_events_msmnile
     if [ "$ftrace_disable" != "Yes" ]; then
-        enable_ftrace_event_tracing
+        enable_ftrace_event_tracing_msmnile
     fi
     enable_msmnile_dcc_config
     enable_msmnile_stm_hw_events
