@@ -650,7 +650,6 @@ LIBQDUTILS := libqdutils
 
 #LIBQDMETADATA
 LIBQDMETADATA := libqdMetaData
-LIBQDMETADATA += libqdMetaData.system
 
 #LIBPOWER
 LIBPOWER := power.qcom
@@ -1058,6 +1057,7 @@ PRODUCT_PACKAGES += move_widevine_data.sh
 endif
 PRODUCT_PACKAGES += move_wifi_data.sh
 PRODUCT_PACKAGES += librs_jni
+PRODUCT_PACKAGES += libion
 
 # Filesystem management tools
 PRODUCT_PACKAGES += \
