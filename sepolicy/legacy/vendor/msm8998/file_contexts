@@ -49,7 +49,7 @@
 /dev/block/platform/soc/c0c4000.sdhci/by-name/mdm1m9kefsc                       u:object_r:efs_boot_dev:s0
 /dev/block/platform/soc/c0c4000.sdhci/by-name/logdump                           u:object_r:logdump_partition:s0
 /dev/block/platform/soc/c0c4000.sdhci/by-name/super                             u:object_r:super_block_device:s0
-
+/dev/block/platform/soc/c0c4000.sdhci/by-name/persist                           u:object_r:persist_block_device:s0
 
 #for UFS blocks
 /dev/block/platform/soc/1da4000.ufshc/by-name/fsc                               u:object_r:modem_efs_partition_device:s0
@@ -74,6 +74,7 @@
 /dev/block/platform/soc/1da4000.ufshc/by-name/mdm1m9kefsc                       u:object_r:efs_boot_dev:s0
 /dev/block/platform/soc/1da4000.ufshc/by-name/logdump                           u:object_r:logdump_partition:s0
 /dev/block/platform/soc/1da4000.ufshc/by-name/super                             u:object_r:super_block_device:s0
+/dev/block/platform/soc/1da4000.ufshc/by-name/persist                           u:object_r:persist_block_device:s0
 
 #Primary storage device nodes
 /dev/block/mmcblk0rpmb                                                          u:object_r:rpmb_device:s0
