@@ -8,17 +8,6 @@ else
 TARGET_USES_NEW_ION := true
 endif
 
-# Pure AOSP framework vs vendor modified framework detection
-# - using BUILD_ID xKQ* as mechanism
-
-ifeq ($(filter $(shell echo $(BUILD_ID) | sed 's/.KQ.*/KQ/g'),KQ),KQ)
-  TARGET_FWK_SUPPORTS_FULL_VALUEADDS := true
-  $(warning "Compile using modified AOSP tree supporting full vendor value-adds")
-else
-  TARGET_FWK_SUPPORTS_FULL_VALUEADDS := false
-  $(warning "Compile using pure AOSP tree")
-endif
-
 # Board platforms lists to be used for
 # TARGET_BOARD_PLATFORM specific featurization
 QCOM_BOARD_PLATFORMS += msm8974
@@ -310,6 +299,8 @@ GPS_HARDWARE += android.hardware.gnss@1.0-impl-qti
 GPS_HARDWARE += android.hardware.gnss@1.0-service-qti
 GPS_HARDWARE += android.hardware.gnss@1.1-impl-qti
 GPS_HARDWARE += android.hardware.gnss@1.1-service-qti
+GPS_HARDWARE += android.hardware.gnss@2.0-impl-qti
+GPS_HARDWARE += android.hardware.gnss@2.0-service-qti
 
 HIDL_WRAPPER := qti-telephony-hidl-wrapper
 HIDL_WRAPPER += qti_telephony_hidl_wrapper.xml
@@ -683,7 +674,7 @@ MM_CORE += libOmxCore
 
 #WFD
 MM_WFD := libwfdaac
-MM_WFD := libwfdaac_proprietary
+MM_WFD := libwfdaac_vendor
 
 
 #MM_VIDEO
@@ -1251,3 +1242,5 @@ PRODUCT_PACKAGES += libvndfwk_detect_jni.qti
 PRODUCT_PACKAGES += libqti_vndfwk_detect
 PRODUCT_PACKAGES += libvndfwk_detect_jni.qti.vendor
 PRODUCT_PACKAGES += libqti_vndfwk_detect.vendor
+# Temporarily allow eng and debug LOCAL_MODULE_TAGS
+BUILD_BROKEN_ENG_DEBUG_TAGS := true

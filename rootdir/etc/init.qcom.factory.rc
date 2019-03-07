@@ -172,7 +172,7 @@ service vendor.audio_tc229 /vendor/bin/mm-audio-ftm -tc 229
     disabled
     oneshot
 
-service vendor.audio_tc330 /vendor/bin/mm-audio-ftm -tc 230
+service vendor.audio_tc230 /vendor/bin/mm-audio-ftm -tc 230
     user audio
     group audio
     disabled
