@@ -158,6 +158,10 @@ include $(QCOM_COMMON_PATH)/components.mk
 # Filesystem
 TARGET_FS_CONFIG_GEN += $(QCOM_COMMON_PATH)/config.fs
 
+# Partition source order for Product/Build properties pickup.
+PRODUCT_SYSTEM_PROPERTIES += \
+    ro.product.property_source_order=odm,vendor,product,system_ext,system
+
 # Power
 ifneq ($(TARGET_PROVIDES_POWERHAL),true)
 $(call inherit-product-if-exists, vendor/qcom/opensource/power/power-vendor-product.mk)
