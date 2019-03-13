@@ -33,9 +33,6 @@
      for different hardware or product builds. -->
 <resources>
 
-    <!-- Package name for the default in-call UI and dialer [DO NOT TRANSLATE] -->
-    <string name="ui_default_package" translatable="false">org.codeaurora.dialer</string>
-
     <!-- Class name for the default in-call UI Service [DO NOT TRANSLATE] -->
     <string name="incall_default_class" translatable="false">com.android.incallui.InCallServiceImpl</string>
 
