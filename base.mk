@@ -807,6 +807,7 @@ QRGND += qrngtest
 
 #WPA
 WPA := wpa_supplicant.conf
+WPA += wpa_cli
 WPA += wpa_supplicant_wcn.conf
 WPA += wpa_supplicant_ath6kl.conf
 WPA += wpa_supplicant
@@ -1043,6 +1044,16 @@ PRODUCT_PACKAGES += android.hardware.drm@1.0-impl
 PRODUCT_PACKAGES += android.hardware.drm@1.0-service
 PRODUCT_PACKAGES += android.hardware.drm@1.1-service.widevine
 PRODUCT_PACKAGES += android.hardware.drm@1.1-service.clearkey
+
+# Don't use dynamic DRM HAL for non-go SPs
+ifneq ($(TARGET_HAS_LOW_RAM),true)
+PRODUCT_PACKAGES += android.hardware.drm@1.2-service.widevine
+PRODUCT_PACKAGES += android.hardware.drm@1.2-service.clearkey
+else
+PRODUCT_PACKAGES += android.hardware.drm@1.2-service-lazy.widevine
+PRODUCT_PACKAGES += android.hardware.drm@1.2-service-lazy.clearkey
+endif
+
 ifeq ($(strip $(OTA_FLAG_FOR_DRM)),true)
 PRODUCT_PACKAGES += move_widevine_data.sh
 endif

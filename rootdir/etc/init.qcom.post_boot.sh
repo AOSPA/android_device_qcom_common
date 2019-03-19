@@ -1,6 +1,6 @@
 #! /vendor/bin/sh
 
-# Copyright (c) 2012-2013, 2016-2018, The Linux Foundation. All rights reserved.
+# Copyright (c) 2012-2013, 2016-2019, The Linux Foundation. All rights reserved.
 #
 # Redistribution and use in source and binary forms, with or without
 # modification, are permitted provided that the following conditions are met:
@@ -2680,7 +2680,7 @@ case "$target" in
         fi
 
         case "$soc_id" in
-            "336" | "337" | "347" | "360" )
+            "336" | "337" | "347" | "360" | "393" )
 
             # Start Host based Touch processing
             case "$hw_platform" in
@@ -3777,6 +3777,45 @@ case "$target" in
 esac
 case "$target" in
 	"kona")
+	# Core control parameters for gold
+	echo 2 > /sys/devices/system/cpu/cpu4/core_ctl/min_cpus
+	echo 60 > /sys/devices/system/cpu/cpu4/core_ctl/busy_up_thres
+	echo 30 > /sys/devices/system/cpu/cpu4/core_ctl/busy_down_thres
+	echo 100 > /sys/devices/system/cpu/cpu4/core_ctl/offline_delay_ms
+	echo 3 > /sys/devices/system/cpu/cpu4/core_ctl/task_thres
+
+	# Core control parameters for gold+
+	echo 0 > /sys/devices/system/cpu/cpu7/core_ctl/min_cpus
+	echo 60 > /sys/devices/system/cpu/cpu7/core_ctl/busy_up_thres
+	echo 30 > /sys/devices/system/cpu/cpu7/core_ctl/busy_down_thres
+	echo 100 > /sys/devices/system/cpu/cpu7/core_ctl/offline_delay_ms
+	echo 1 > /sys/devices/system/cpu/cpu7/core_ctl/task_thres
+	# Controls how many more tasks should be eligible to run on gold CPUs
+	# w.r.t number of gold CPUs available to trigger assist (max number of
+	# tasks eligible to run on previous cluster minus number of CPUs in
+	# the previous cluster).
+	#
+	# Setting to 1 by default which means there should be at least
+	# 4 tasks eligible to run on gold cluster (tasks running on gold cores
+	# plus misfit tasks on silver cores) to trigger assitance from gold+.
+	echo 1 > /sys/devices/system/cpu/cpu7/core_ctl/nr_prev_assist_thresh
+
+	# Disable Core control on silver
+	echo 0 > /sys/devices/system/cpu/cpu0/core_ctl/enable
+
+	# Setting b.L scheduler parameters
+	echo 95 95 > /proc/sys/kernel/sched_upmigrate
+	echo 85 85 > /proc/sys/kernel/sched_downmigrate
+	echo 100 > /proc/sys/kernel/sched_group_upmigrate
+	echo 95 > /proc/sys/kernel/sched_group_downmigrate
+	echo 1 > /proc/sys/kernel/sched_walt_rotate_big_tasks
+
+	# cpuset parameters
+	echo 0-3 > /dev/cpuset/background/cpus
+	echo 0-3 > /dev/cpuset/system-background/cpus
+
+	# Turn off scheduler boost at the end
+	echo 0 > /proc/sys/kernel/sched_boost
 
 	# configure governor settings for silver cluster
 	echo "schedutil" > /sys/devices/system/cpu/cpufreq/policy0/scaling_governor
