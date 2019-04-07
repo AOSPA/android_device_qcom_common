@@ -48,14 +48,13 @@ BOARD_HAVE_QCOM_FM ?= true
 
 
 # Boot additions
-#Android Telephony library
-PRODUCT_BOOT_JARS += qtiNetworkLib
-PRODUCT_BOOT_JARS += ims-ext-common
 ifeq ($(strip $(TARGET_USES_NQ_NFC)),true)
 PRODUCT_BOOT_JARS += com.nxp.nfc.nq
 endif
 ifeq ($(strip $(BOARD_HAVE_QCOM_FM)),true)
+ifeq ($(TARGET_FWK_SUPPORTS_FULL_VALUEADDS),true)
 PRODUCT_BOOT_JARS += qcom.fmradio
+endif
 endif #BOARD_HAVE_QCOM_FM
 #Camera QC extends API
 #ifeq ($(strip $(TARGET_USES_QTIC_EXTENSION)),true)
@@ -873,11 +872,12 @@ WIGIG += libwigig_pciaccess
 #FD_LEAK
 FD_LEAK := libc_leak_detector
 
+TELEPHONY_DBG := NrNetworkSettingApp
+
 PRODUCT_PACKAGES := \
     AccountAndSyncSettings \
     DeskClock \
     AlarmProvider \
-    HidTestApp \
     Calculator \
     Calendar \
     Camera \
@@ -911,9 +911,7 @@ PRODUCT_PACKAGES := \
     a4wpservice \
     wipowerservice \
     Mms \
-    QtiDialer \
-    qtiNetworkLib \
-    TestApp5G
+    QtiDialer
 
 ifneq ($(BOARD_HAVE_BLUETOOTH),false)
 PRODUCT_PACKAGES += \
@@ -1090,6 +1088,8 @@ PRODUCT_PACKAGES_DEBUG += init.qcom.debug.sh
 
 #NANOPB_LIBRARY_NAME := libnanopb-c-2.8.0
 
+PRODUCT_PACKAGES_DEBUG += $(TELEPHONY_DBG)
+
 PRODUCT_COPY_FILES := \
     frameworks/native/data/etc/android.hardware.camera.flash-autofocus.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.camera.flash-autofocus.xml \
     frameworks/native/data/etc/android.hardware.camera.front.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.camera.front.xml \
@@ -1253,5 +1253,3 @@ PRODUCT_PACKAGES += libvndfwk_detect_jni.qti
 PRODUCT_PACKAGES += libqti_vndfwk_detect
 PRODUCT_PACKAGES += libvndfwk_detect_jni.qti.vendor
 PRODUCT_PACKAGES += libqti_vndfwk_detect.vendor
-# Temporarily allow eng and debug LOCAL_MODULE_TAGS
-BUILD_BROKEN_ENG_DEBUG_TAGS := true

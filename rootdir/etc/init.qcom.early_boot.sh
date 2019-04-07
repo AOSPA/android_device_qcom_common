@@ -107,7 +107,29 @@ case "$target" in
                 ;;
         esac
         ;;
-
+     "sm6150")
+         case "$soc_hwplatform" in
+             "ADP")
+                 setprop vendor.display.lcd_density 160
+                 ;;
+         esac
+         case "$soc_hwid" in
+             365|366)
+                 sku_ver=`cat /sys/devices/platform/soc/aa00000.qcom,vidc1/sku_version` 2> /dev/null
+                 if [ $sku_ver -eq 1 ]; then
+                     setprop vendor.media.sdmmagpie.version 1
+                 fi
+                 ;;
+             355)
+                 setprop vendor.media.sm6150.version 1
+                 setprop vendor.chre.enabled 0
+                 ;;
+             369|377|384)
+                 setprop vendor.chre.enabled 0
+                 ;;
+             *)
+         esac
+         ;;
     "msm8660")
         case "$soc_hwplatform" in
             "Fluid")
@@ -358,7 +380,13 @@ case "$product" in
         *)
         ;;
 esac
-
+case "$product" in
+        "sm6150_au")
+         setprop vendor.display.lcd_density 160
+         ;;
+        *)
+        ;;
+esac
 # Setup display nodes & permissions
 # HDMI can be fb1 or fb2
 # Loop through the sysfs nodes and determine
