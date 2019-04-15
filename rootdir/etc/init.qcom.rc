@@ -1133,14 +1133,6 @@ service poweroffhandler /system/vendor/bin/poweroffhandler
     disabled
     oneshot
 
-on property:init.svc.surfaceflinger=restarting
-    stop  vendor.hwcomposer-2-1
-    stop  vendor.hwcomposer-2-2
-    stop  vendor.hwcomposer-2-3
-    start vendor.hwcomposer-2-1
-    start vendor.hwcomposer-2-2
-    start vendor.hwcomposer-2-3
-
 on property:vendor.display.lcd_density=*
     setprop ro.sf.lcd_density ${vendor.display.lcd_density}
 

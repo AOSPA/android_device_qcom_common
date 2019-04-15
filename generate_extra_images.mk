@@ -224,6 +224,26 @@ ALL_MODULES.$(LOCAL_MODULE).INSTALLED += $(INSTALLED_DTIMAGE_TARGET)
 endif
 endif
 
+# Temp change for ci
+
+ifeq ($(call is-board-platform-in-list,kona),true)
+TARGET_OUT_PATH := $(PRODUCT_OUT)/odm
+OUT_IMAGE_PATH := $(PRODUCT_OUT)/odm.img
+define create-commonvendor-config
+    $(call pretty,"Target odm: $(OUT_IMAGE_PATH)")
+    @mkdir -p $(TARGET_OUT_PATH)
+    $(hide)PATH=$(HOST_OUT_EXECUTABLES):$${PATH} $(MKEXTUSERIMG) -s $(TARGET_OUT_PATH) $@ ext4 odm 67108864
+    $(hide) chmod a+r $@
+    $(hide) $(call assert-max-image-size,$@,67108864)
+endef
+$(OUT_IMAGE_PATH): $(MKEXTUSERIMG) $(MAKE_EXT4FS)
+	$(create-commonvendor-config)
+ALL_DEFAULT_INSTALLED_MODULES += $(OUT_IMAGE_PATH)
+ALL_MODULES.$(LOCAL_MODULE).INSTALLED += $(OUT_IMAGE_PATH)
+.PHONY: commonvendor
+commonvendor: $(OUT_IMAGE_PATH)
+endif
+
 #---------------------------------------------------------------------
 # Generate usbdisk.img FAT32 image
 # Please NOTICE: the valid max size of usbdisk.bin is 10GB
