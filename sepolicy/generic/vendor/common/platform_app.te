@@ -1,0 +1,2 @@
+# Vendor aware available
+get_prop(platform_app, vendor_aware_available_prop)
