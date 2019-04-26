@@ -2527,7 +2527,7 @@ case "$coresight_config" in
                 fi
                 setprop ro.dbg.coresight.stm_cfg_done 1
             ;;
-            "talos")
+            "sm6150")
                 echo "Enabling DCC/STM/Debug events for talos"
                 enable_talos_debug
                 setprop ro.dbg.coresight.stm_cfg_done 1

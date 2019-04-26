@@ -3779,9 +3779,6 @@ case "$target" in
 	echo 85 85 > /proc/sys/kernel/sched_downmigrate
 	echo 100 > /proc/sys/kernel/sched_group_upmigrate
 	echo 10 > /proc/sys/kernel/sched_group_downmigrate
-	echo 0 > /proc/sys/kernel/sched_min_task_util_for_boost
-	echo 0 > /proc/sys/kernel/sched_min_task_util_for_colocation
-	echo 0 > /proc/sys/kernel/sched_little_cluster_coloc_fmin_khz
 	echo 1 > /proc/sys/kernel/sched_walt_rotate_big_tasks
 
 	# cpuset parameters
@@ -3992,6 +3989,10 @@ case "$target" in
 	echo 518400 > /sys/devices/system/cpu/cpufreq/policy0/scaling_min_freq
 	echo 1 > /sys/devices/system/cpu/cpufreq/policy0/schedutil/pl
 
+	# configure input boost settings
+	echo "0:1324800" > /sys/devices/system/cpu/cpu_boost/input_boost_freq
+	echo 120 > /sys/devices/system/cpu/cpu_boost/input_boost_ms
+
 	# configure governor settings for gold cluster
 	echo "schedutil" > /sys/devices/system/cpu/cpufreq/policy4/scaling_governor
 	echo 0 > /sys/devices/system/cpu/cpufreq/policy4/schedutil/down_rate_limit_us
@@ -4064,10 +4065,10 @@ case "$target" in
 		echo 400 > $memlat/mem_latency/ratio_ceil
 	    done
 
-	    #Enable powersave governor for L3 cdsp nodes
+	    #Enable cdspl3 governor for L3 cdsp nodes
 	    for l3cdsp in $device/*qcom,devfreq-l3/*cdsp-l3-lat/devfreq/*cdsp-l3-lat
 	    do
-                echo "powersave" > $l3cdsp/governor
+                echo "cdspl3" > $l3cdsp/governor
 	    done
 
 	    #Enable mem_latency governor for LLCC and DDR scaling
@@ -4097,6 +4098,8 @@ case "$target" in
 		echo 20000 > $l3prime/mem_latency/ratio_ceil
 	    done
 	done
+    echo N > /sys/module/lpm_levels/parameters/sleep_disabled
+    ;;
 esac
 
 case "$target" in
