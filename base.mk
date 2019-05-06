@@ -1254,6 +1254,17 @@ else
         persist.vendor.qcomsysd.enabled=1
 endif
 
+PRODUCT_PACKAGES_DEBUG += \
+    init.qcom.debug.sh \
+    init.qcom.debug-sdm660.sh \
+    init.qcom.debug-sdm710.sh \
+    init.qti.debug-msmnile-apps.sh \
+    init.qti.debug-msmnile-modem.sh \
+    init.qti.debug-msmnile-slpi.sh \
+    init.qti.debug-talos.sh \
+    init.qti.debug-msmnile.sh \
+    init.qti.debug-kona.sh
+
 PRODUCT_PACKAGES += liboemaids_system
 PRODUCT_PACKAGES += liboemaids_vendor
 PRODUCT_PACKAGES += android.hardware.health@2.0-service
