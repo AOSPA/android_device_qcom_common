@@ -151,6 +151,10 @@ firmware_directories /vendor/firmware_mnt/image/
 #QDSS
 /dev/byte-cntr            0660   system    oem_2902
 
+#qg
+/dev/qg                   0660  system     system
+/dev/qg_battery           0660  system     system
+
 # wlan
 /dev/wcnss_wlan           0660   system     system
 /dev/wcnss_ctrl           0660   system     system
@@ -339,3 +343,5 @@ firmware_directories /vendor/firmware_mnt/image/
 
 #Memory Offline
 /sys/devices/system/memory/memory* state    0660 system system
+
+/sys/devices/virtual/hdcp/msm_hdcp  min_level_change 0664    system  graphics

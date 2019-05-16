@@ -261,10 +261,6 @@ on post-fs-data
     mkdir /data/vendor/wifi/wpa 0770 wifi wifi
     mkdir /data/vendor/wifi/wpa/sockets 0770 wifi wifi
 
-    #create ipacm log dir
-    mkdir /data/vendor/ipa 0770 radio radio
-    chmod 0770 /data/vendor/ipa
-
     # Create the directories used by CnE subsystem
     mkdir /data/vendor/connectivity 0771 radio radio
     chown radio radio /data/vendor/connectivity
@@ -591,19 +587,6 @@ service qmiproxy /system/bin/qmiproxy
     group radio diag
     disabled
 
-service vendor.ipacm-diag /system/vendor/bin/ipacm-diag
-    class main
-    user radio
-    socket ipacm_log_file dgram 660 radio radio
-    group radio diag oem_2901
-    disabled
-
-service vendor.ipacm /system/vendor/bin/ipacm
-    class main
-    user radio
-    group radio inet
-    disabled
-
 service vendor.sensors /vendor/bin/sscrpcd sensorspd
     class core
     user system
@@ -679,15 +662,6 @@ service fstman_wlan0 /vendor/bin/fstman -B -ddd -c /data/vendor/wifi/fstman.ini 
     class main
     disabled
     oneshot
-
-service wigighalsvc /vendor/bin/wigighalsvc
-    interface vendor.qti.hardware.wigig.supptunnel@1.0::ISuppTunnelProvider default
-    class hal
-    user system
-    group wifi
-    # needed for on-demand insmod/rmmod of wigig module
-    capabilities SYS_MODULE
-    disabled
 
 service wigignpt /vendor/bin/wigignpt
     interface vendor.qti.hardware.wigig.netperftuner@1.0::INetPerfTuner default
@@ -770,7 +744,8 @@ service cnss-daemon /system/vendor/bin/cnss-daemon -n -l
     group system inet net_admin wifi
     capabilities NET_ADMIN
 
-on property:sys.powerctl=*
+on property:sys.shutdown.requested=*
+    write /sys/kernel/shutdown_wlan/shutdown 1
     stop cnss-daemon
 
 service dhcpcd_bt-pan /system/bin/dhcpcd -BKLG
@@ -935,10 +910,10 @@ service profiler_daemon /system/bin/profiler_daemon
     group root
     disabled
 
-service charger /charger
+service charger /system/bin/charger
     class charger
     group system graphics
-    seclabel u:r:healthd:s0
+    seclabel u:r:charger:s0
 
 service vendor.ssr_diag /system/vendor/bin/ssr_diag
     class late_start
