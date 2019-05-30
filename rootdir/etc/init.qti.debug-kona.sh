@@ -125,8 +125,7 @@ enable_stm_events_kona()
         return
     fi
 
-    echo $etr_size > /sys/bus/coresight/devices/coresight-tmc-etr/mem_size
-    echo sg > /sys/bus/coresight/devices/coresight-tmc-etr/mem_type
+    echo $etr_size > /sys/bus/coresight/devices/coresight-tmc-etr/buffer_size
     echo 1 > /sys/bus/coresight/devices/coresight-tmc-etr/$sinkenable
     echo 1 > /sys/bus/coresight/devices/coresight-stm/$srcenable
     echo 1 > /sys/kernel/debug/tracing/tracing_on
@@ -538,6 +537,17 @@ config_kona_dcc_ddr()
 config_kona_dcc_gemnoc()
 {
     #GemNOC for KONA start
+    echo 0x091A9020 1 > $DCC_PATH/config
+    echo 0x5 0x1 > $DCC_PATH/rd_mod_wr
+    echo 0x09102008 1 > $DCC_PATH/config
+    echo 0x2 0x2 > $DCC_PATH/rd_mod_wr
+    echo 0x09142008 1 > $DCC_PATH/config
+    echo 0x2 0x2 > $DCC_PATH/rd_mod_wr
+    echo 0x09102408 1 > $DCC_PATH/config
+    echo 0x2 0x2 > $DCC_PATH/rd_mod_wr
+    echo 0x09142408 1 > $DCC_PATH/config
+    echo 0x2 0x2 > $DCC_PATH/rd_mod_wr
+
     #Dump Coherent even debug chain
     echo 0x09103808 1 > $DCC_PATH/config
     echo 3 > $DCC_PATH/loop

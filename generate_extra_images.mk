@@ -9,9 +9,15 @@
 # variables again.
 ifneq ($(strip $(TARGET_NO_KERNEL)),true)
 INSTALLED_BOOTIMAGE_TARGET := $(PRODUCT_OUT)/boot.img
+ifeq ($(PRODUCT_BUILD_RAMDISK_IMAGE),true)
 INSTALLED_RAMDISK_TARGET := $(PRODUCT_OUT)/ramdisk.img
+endif
+ifeq ($(PRODUCT_BUILD_SYSTEM_IMAGE),true)
 INSTALLED_SYSTEMIMAGE := $(PRODUCT_OUT)/system.img
+endif
+ifeq ($(PRODUCT_BUILD_USERDATA_IMAGE),true)
 INSTALLED_USERDATAIMAGE_TARGET := $(PRODUCT_OUT)/userdata.img
+endif
 ifneq ($(TARGET_NO_RECOVERY), true)
 INSTALLED_RECOVERYIMAGE_TARGET := $(PRODUCT_OUT)/recovery.img
 else
@@ -107,6 +113,7 @@ endif
 #----------------------------------------------------------------------
 # Generate persist image (persist.img)
 #----------------------------------------------------------------------
+ifneq ($(strip $(BOARD_PERSISTIMAGE_PARTITION_SIZE)),)
 ifneq ($(strip $(TARGET_NO_KERNEL)),true)
 
 TARGET_OUT_PERSIST := $(PRODUCT_OUT)/persist
@@ -135,6 +142,7 @@ droidcore: $(INSTALLED_PERSISTIMAGE_TARGET)
 .PHONY: persistimage
 persistimage: $(INSTALLED_PERSISTIMAGE_TARGET)
 
+endif
 endif
 
 #----------------------------------------------------------------------
@@ -224,27 +232,6 @@ $(INSTALLED_DTIMAGE_TARGET): $(DTBTOOL) $(INSTALLED_KERNEL_TARGET)
 ALL_DEFAULT_INSTALLED_MODULES += $(INSTALLED_DTIMAGE_TARGET)
 ALL_MODULES.$(LOCAL_MODULE).INSTALLED += $(INSTALLED_DTIMAGE_TARGET)
 endif
-endif
-
-# Temp change for ci
-
-ifeq ($(call is-board-platform-in-list,kona),true)
-TARGET_OUT_PATH := $(PRODUCT_OUT)/odm
-OUT_IMAGE_PATH := $(PRODUCT_OUT)/odm.img
-define create-commonvendor-config
-    $(call pretty,"Target odm: $(OUT_IMAGE_PATH)")
-    @mkdir -p $(TARGET_OUT_PATH)
-    $(hide)PATH=$(HOST_OUT_EXECUTABLES):$${PATH} $(MKEXTUSERIMG) -s $(TARGET_OUT_PATH) $@ ext4 odm 67108864
-    $(hide) chmod a+r $@
-    $(hide) $(call assert-max-image-size,$@,67108864)
-endef
-$(OUT_IMAGE_PATH): $(MKEXTUSERIMG) $(MAKE_EXT4FS)
-	$(create-commonvendor-config)
-ALL_DEFAULT_INSTALLED_MODULES += $(OUT_IMAGE_PATH)
-ALL_MODULES.$(LOCAL_MODULE).INSTALLED += $(OUT_IMAGE_PATH)
-droidcore: $(OUT_IMAGE_PATH)
-.PHONY: commonvendor
-commonvendor: $(OUT_IMAGE_PATH)
 endif
 
 #---------------------------------------------------------------------
