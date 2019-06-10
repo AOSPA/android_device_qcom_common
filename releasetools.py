@@ -17,6 +17,7 @@
 (installing the radio image)."""
 
 import common
+import os
 import re
 
 
@@ -24,6 +25,18 @@ bootImages = {}
 binImages = {}
 fwImages = {}
 
+# List of images that we pick from IMAGES/ in target-files.
+target_files_IMAGES_list = ["vbmeta.img", "dtbo.img", "vbmeta_system.img"]
+
+# The joined list of user image partitions of source and target builds.
+# - Items should be added to the list if new dynamic partitions are added.
+# - Items should not be removed from the list even if dynamic partitions are
+#   deleted. When generating an incremental OTA package, this script needs to
+#   know that an image is present in source build but not in target build.
+USERIMAGE_PARTITIONS = [
+    "product",
+    "odm",
+]
 
 # Parse filesmap file containing firmware residing places
 def LoadFilesMap(zip, name="RADIO/filesmap"):
@@ -58,8 +71,8 @@ def GetRadioFiles(z):
 
     # This is to include vbmeta,dtbo images from IMAGES/ folder.
     if f.startswith("IMAGES/") and (f.__len__() > len("IMAGES/")):
-      if ("vbmeta" in f or "dtbo" in f):
-        fn = f[7:]
+      fn = f[7:]
+      if (fn in target_files_IMAGES_list):
         data = z.read(f)
         out[fn] = common.File(f, data)
 
@@ -77,13 +90,16 @@ def GetFileDestination(fn, filesmap):
   if fn + ".bak" in filesmap:
     backup = filesmap[fn + ".bak"]
 
+  # Assert if an image belonging to target_files_IMAGES_list is not found in filesmap
+  # but found in IMAGES/ as these are critical images like vbmeta/dtbo etc.
+  if fn in target_files_IMAGES_list and fn not in filesmap:
+    raise common.ExternalError("Filesmap entry for "+ fn +" missing !!")
+
   # If full filename is not specified in filesmap get only the name part
   # and look for this token
   if fn not in filesmap:
     fn = fn.split(".")[0] + ".*"
     if fn not in filesmap:
-      if ("vbmeta" in fn or "dtbo" in fn):
-        raise common.ExternalError("Filesmap entry for vbmeta or dtbo missing !!")
       print "warning radio-update: '%s' not found in filesmap" % (fn)
       return None, backup
   return filesmap[fn], backup
@@ -370,3 +386,26 @@ def IncrementalOTA_InstallEnd_MTD(info):
 def IncrementalOTA_InstallEnd(info):
   IncrementalOTA_InstallEnd_MMC(info)
   return
+
+def GetUserImages(input_tmp, input_zip):
+  return {partition: common.GetUserImage(partition, input_tmp, input_zip)
+          for partition in USERIMAGE_PARTITIONS
+          if os.path.exists(os.path.join(input_tmp,
+                                         "IMAGES", partition + ".img"))}
+
+def FullOTA_GetBlockDifferences(info):
+  images = GetUserImages(info.input_tmp, info.input_zip)
+  return [common.BlockDifference(partition, image)
+          for partition, image in images.items()]
+
+def IncrementalOTA_GetBlockDifferences(info):
+  source_images = GetUserImages(info.source_tmp, info.source_zip)
+  target_images = GetUserImages(info.target_tmp, info.target_zip)
+
+  # Use EmptyImage() as a placeholder for partitions that will be deleted.
+  for partition in source_images:
+    target_images.setdefault(partition, common.EmptyImage())
+
+  # Use source_images.get() because new partitions are not in source_images.
+  return [common.BlockDifference(partition, target_image, source_images.get(partition))
+          for partition, target_image in target_images.items()]

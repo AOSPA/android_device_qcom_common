@@ -3191,21 +3191,35 @@ case "$target" in
         done
 
         #Enable mem_latency governor for L3, LLCC, and DDR scaling
-        for memlat in $device/*cpu*-lat/devfreq/*cpu*-lat
+	for memlat in $device/*qcom,devfreq-l3/*cpu*-lat/devfreq/*cpu*-lat
         do
             echo "mem_latency" > $memlat/governor
             echo 10 > $memlat/polling_interval
             echo 400 > $memlat/mem_latency/ratio_ceil
         done
 
+	#Enable cdspl3 governor for L3 cdsp nodes
+	for l3cdsp in $device/*qcom,devfreq-l3/*cdsp-l3-lat/devfreq/*cdsp-l3-lat
+	do
+            echo "powersave" > $l3cdsp/governor
+	done
+
+	#Enable mem_latency governor for LLCC and DDR scaling
+	for memlat in $device/*cpu*-lat/devfreq/*cpu*-lat
+	do
+	    echo "mem_latency" > $memlat/governor
+	    echo 10 > $memlat/polling_interval
+	    echo 400 > $memlat/mem_latency/ratio_ceil
+        done
+
         #Gold L3 ratio ceil
-        for l3gold in $device/*cpu6-cpu-l3-lat/devfreq/*cpu6-cpu-l3-lat
+	for l3gold in $device/*qcom,devfreq-l3/*cpu6-cpu-l3-lat/devfreq/*cpu6-cpu-l3-lat
         do
             echo 4000 > $l3gold/mem_latency/ratio_ceil
         done
 
         #Prime L3 ratio ceil
-        for l3prime in $device/*cpu7-cpu-l3-lat/devfreq/*cpu7-cpu-l3-lat
+	for l3prime in $device/*qcom,devfreq-l3/*cpu7-cpu-l3-lat/devfreq/*cpu7-cpu-l3-lat
         do
             echo 4000 > $l3prime/mem_latency/ratio_ceil
         done
@@ -4139,8 +4153,9 @@ case "$target" in
 	echo 95 95 > /proc/sys/kernel/sched_upmigrate
 	echo 85 85 > /proc/sys/kernel/sched_downmigrate
 	echo 100 > /proc/sys/kernel/sched_group_upmigrate
-	echo 95 > /proc/sys/kernel/sched_group_downmigrate
+	echo 85 > /proc/sys/kernel/sched_group_downmigrate
 	echo 1 > /proc/sys/kernel/sched_walt_rotate_big_tasks
+	echo 400000000 > /proc/sys/kernel/sched_coloc_downmigrate_ns
 
 	# cpuset parameters
 	echo 0-3 > /dev/cpuset/background/cpus

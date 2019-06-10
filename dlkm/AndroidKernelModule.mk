@@ -31,6 +31,11 @@ LOCAL_MODULE_KBUILD_NAME := $(strip $(LOCAL_MODULE_KBUILD_NAME))
 
 include $(BUILD_SYSTEM)/base_rules.mk
 
+# Intermediate directory where the kernel modules are created
+# by the kernel build system. Ideally this would be the same
+# directory as LOCAL_BUILT_MODULE, but because we're using
+# relative paths for both O= and M=, we don't have much choice
+KBUILD_OUT_DIR := $(TARGET_OUT_INTERMEDIATES)/$(LOCAL_PATH)
 
 # The kernel build system doesn't support parallel kernel module builds
 # that share the same output directory. Thus, in order to build multiple
@@ -41,22 +46,7 @@ include $(BUILD_SYSTEM)/base_rules.mk
 # Therefore, all kernel modules must depend on the same, unique target
 # that invokes the kernel build system and builds all of the modules
 # for the directory. The $(KBUILD_TARGET) target serves this purpose.
-# To ensure the value of KBUILD_TARGET is unique, it is essentially set
-# to the path of the source directory, i.e. LOCAL_PATH.
-#
-# Since KBUILD_TARGET is used as a target and a variable name, it should
-# not contain characters other than letters, numbers, and underscores.
-KBUILD_TARGET := $(strip            \
-                   $(subst .,_,     \
-                     $(subst -,_,   \
-                       $(subst :,_, \
-                         $(subst /,_,$(LOCAL_PATH))))))
-
-# Intermediate directory where the kernel modules are created
-# by the kernel build system. Ideally this would be the same
-# directory as LOCAL_BUILT_MODULE, but because we're using
-# relative paths for both O= and M=, we don't have much choice
-KBUILD_OUT_DIR := $(TARGET_OUT_INTERMEDIATES)/$(LOCAL_PATH)
+KBUILD_TARGET := $(KBUILD_OUT_DIR)/buildko.timestamp
 
 # Path to the intermediate location where the kernel build
 # system creates the kernel module.
@@ -145,7 +135,6 @@ $(KBUILD_TARGET)_RULE := 1
 # NOTE: The following paths are equivalent:
 #         $(KBUILD_OUT_DIR)
 #         $(KERNEL_OUT)/../$(LOCAL_PATH)
-.PHONY: $(KBUILD_TARGET)
 $(KBUILD_TARGET): local_path     := $(LOCAL_PATH)
 $(KBUILD_TARGET): kbuild_out_dir := $(KBUILD_OUT_DIR)
 $(KBUILD_TARGET): kbuild_options := $(KBUILD_OPTIONS)
@@ -153,6 +142,7 @@ $(KBUILD_TARGET): $(TARGET_PREBUILT_INT_KERNEL)
 	@mkdir -p $(kbuild_out_dir)
 	$(hide) cp -f $(local_path)/Kbuild $(kbuild_out_dir)/Kbuild
 	$(MAKE) -C $(TARGET_KERNEL_SOURCE) M=$(KERNEL_TO_BUILD_ROOT_OFFSET)$(local_path) O=$(KERNEL_TO_BUILD_ROOT_OFFSET)$(KERNEL_OUT) ARCH=$(KERNEL_ARCH) CROSS_COMPILE=$(KERNEL_CROSS_COMPILE) $(real_cc) $(KERNEL_CFLAGS) modules $(kbuild_options) ANDROID_BUILD_TOP=$$(pwd)
+	touch $@
 
 # Once the KBUILD_OPTIONS variable has been used for the target
 # that's specific to the LOCAL_PATH, clear it. If this isn't done,
