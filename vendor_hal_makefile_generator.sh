@@ -91,7 +91,7 @@ function generate_make_files() {
         hal_package=${hal_package%?}
 
         #Check if we already executed hidl-gen for a given package
-        if ${ECHO} "${package_collection[@]}" | ${GREP} $hal_package > /dev/null; then
+        if ${ECHO} "${package_collection[@]}" | ${GREP} -w $hal_package > /dev/null; then
             continue;
         else
             package_collection+=($hal_package)
