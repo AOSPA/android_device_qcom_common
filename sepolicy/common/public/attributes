@@ -1,0 +1,7 @@
+# Copyright (c) 2026 AOSPA
+# SPDX-License-Identifier: Apache-2.0
+
+# Attributes for QSPM HAL
+attribute vendor_hal_qspmhal;
+attribute vendor_hal_qspmhal_client;
+attribute vendor_hal_qspmhal_server;
