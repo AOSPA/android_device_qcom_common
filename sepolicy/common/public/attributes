@@ -1,0 +1,4 @@
+# Attributes for QSPM HAL
+attribute vendor_hal_qspmhal;
+attribute vendor_hal_qspmhal_client;
+attribute vendor_hal_qspmhal_server;
