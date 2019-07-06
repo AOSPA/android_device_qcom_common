@@ -76,6 +76,10 @@ enable_tracing_events_lito()
     # echo 4 2 > /sys/bus/coresight/devices/coresight-cti-swao_cti0/map_trigin
     # echo 4 2 > /sys/bus/coresight/devices/coresight-cti-swao_cti0/map_trigout
 
+    #memory pressure events/oom
+    echo 1 > /sys/kernel/debug/tracing/events/psi/psi_event/enable
+    echo 1 > /sys/kernel/debug/tracing/events/psi/psi_window_vmstat/enable
+
     echo 1 > /sys/kernel/debug/tracing/tracing_on
 }
 

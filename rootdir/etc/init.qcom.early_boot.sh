@@ -318,6 +318,8 @@ case "$target" in
                 fi
                 ;;
         esac
+        # Temporary hack to refresh kernel 4.19's cache buffers of /system if overlayfs has /system changes
+        ls /system/app /system/priv-app /system/lib64 /system/lib /system/bin
         ;;
     "lito")
         case "$soc_hwplatform" in
@@ -383,6 +385,10 @@ product=`getprop ro.build.product`
 case "$product" in
         "msmnile_au")
          setprop vendor.display.lcd_density 160
+         echo 902400000 > /sys/class/devfreq/soc:qcom,cpu0-cpu-l3-lat/min_freq
+         echo 1612800000 > /sys/class/devfreq/soc:qcom,cpu0-cpu-l3-lat/max_freq
+         echo 902400000 > /sys/class/devfreq/soc:qcom,cpu4-cpu-l3-lat/min_freq
+         echo 1612800000 > /sys/class/devfreq/soc:qcom,cpu4-cpu-l3-lat/max_freq
          ;;
         *)
         ;;
