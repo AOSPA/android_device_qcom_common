@@ -233,6 +233,7 @@ def GetImageBody(img, compressed=0):
 def MakeLogoImage(logo, out):
     img = Image.open(logo)
     file = open(out, "wb")
+    file.seek(4096, 0)
     body = GetImageBody(img, SUPPORT_RLE24_COMPRESSIONT)
     file.write(GetImgHeader(img.size, SUPPORT_RLE24_COMPRESSIONT, len(body)))
     file.write(body)

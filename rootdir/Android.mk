@@ -221,6 +221,15 @@ LOCAL_SRC_FILES    := etc/init.qti.debug-talos.sh
 LOCAL_MODULE_PATH  := $(TARGET_OUT_VENDOR_EXECUTABLES)
 include $(BUILD_PREBUILT)
 
+
+include $(CLEAR_VARS)
+LOCAL_MODULE       := init.qti.debug-trinket.sh
+LOCAL_MODULE_TAGS  := optional
+LOCAL_MODULE_CLASS := ETC
+LOCAL_SRC_FILES    := etc/init.qti.debug-trinket.sh
+LOCAL_MODULE_PATH  := $(TARGET_OUT_VENDOR_EXECUTABLES)
+include $(BUILD_PREBUILT)
+
 include $(CLEAR_VARS)
 LOCAL_MODULE       := init.qti.debug-msmnile.sh
 LOCAL_MODULE_TAGS  := optional
@@ -281,7 +290,7 @@ include $(BUILD_PREBUILT)
 
 include $(CLEAR_VARS)
 LOCAL_MODULE       := init.qti.can.sh
-LOCAL_MODULE_TAGS  := optional eng
+LOCAL_MODULE_TAGS  := optional
 LOCAL_MODULE_CLASS := ETC
 LOCAL_SRC_FILES    := etc/init.qti.can.sh
 LOCAL_MODULE_PATH  := $(TARGET_OUT_VENDOR_EXECUTABLES)

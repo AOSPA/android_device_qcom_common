@@ -220,31 +220,31 @@ service vendor.audio_tc253 /vendor/bin/mm-audio-ftm -tc 253
     disabled
     oneshot
 
-service vendor.audio_tc11 /vendor/bin/mm-audio-ftm -tc 11
+service vendor.audio_tc11 /vendor/bin/mm-audio-ftm -tc 11 -file /data/vendor/audio/ftm_headset_mic_record.wav
     user audio
     group audio
     disabled
     oneshot
 
-service vendor.audio_tc101 /vendor/bin/mm-audio-ftm -tc 101
+service vendor.audio_tc101 /vendor/bin/mm-audio-ftm -tc 101 -file /data/vendor/audio/ftm_mic1_record.wav
     user audio
     group audio
     disabled
     oneshot
 
-service vendor.audio_tc102 /vendor/bin/mm-audio-ftm -tc 102
+service vendor.audio_tc102 /vendor/bin/mm-audio-ftm -tc 102 -file /data/vendor/audio/ftm_mic2_record.wav
     user audio
     group audio
     disabled
     oneshot
 
-service vendor.audio_tc103 /vendor/bin/mm-audio-ftm -tc 103
+service vendor.audio_tc103 /vendor/bin/mm-audio-ftm -tc 103 -file /data/vendor/audio/ftm_mic3_record.wav
     user audio
     group audio
     disabled
     oneshot
 
-service vendor.audio_tc104 /vendor/bin/mm-audio-ftm -tc 104
+service vendor.audio_tc104 /vendor/bin/mm-audio-ftm -tc 104 -file /data/vendor/audio/ftm_mic4_record.wav
     user audio
     group audio
     disabled

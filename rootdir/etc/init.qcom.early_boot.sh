@@ -330,6 +330,8 @@ case "$target" in
                 fi
                 ;;
         esac
+        # Temporary hack to refresh kernel 4.19's cache buffers of /system if overlayfs has /system changes
+        ls /system/app /system/priv-app /system/lib64 /system/lib /system/bin
         ;;
     "sdm710" | "msmpeafowl")
         case "$soc_hwplatform" in
