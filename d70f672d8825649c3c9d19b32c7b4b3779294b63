@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "86e7fbe1_5f9a887a",
+        "filename": "seccomp/mediaextractor-seccomp.policy",
+        "patchSetId": 1
+      },
+      "lineNbr": 5,
+      "author": {
+        "id": 1000012
+      },
+      "writtenOn": "2019-07-29T00:02:30Z",
+      "side": 0,
+      "message": "this is in cobalt and thulium",
+      "revId": "d70f672d8825649c3c9d19b32c7b4b3779294b63",
+      "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad",
+      "unresolved": true
+    }
+  ]
+}
