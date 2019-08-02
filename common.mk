@@ -6,6 +6,8 @@ BOARD_USES_ADRENO := true
 
 BOARD_USES_QCNE := true
 
+TARGET_ENABLE_QC_AV_ENHANCEMENTS := true
+
 # include additional build utilities
 include device/qcom/common/utils.mk
 
