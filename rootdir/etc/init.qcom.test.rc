@@ -25,6 +25,9 @@
 # ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 #
 
+on early-init
+    write /proc/sys/kernel/kptr_restrict 0
+
 # this will make sure you have /data ready and then you try to create the dir.
 on post-fs-data
     # Create directory for Graphics applications
