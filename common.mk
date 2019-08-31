@@ -18,3 +18,6 @@ BOARD_SECCOMP_POLICY += device/qcom/common/seccomp
 PRODUCT_COPY_FILES += \
     device/qcom/common/seccomp/mediacodec-seccomp.policy:$(TARGET_COPY_OUT_VENDOR)/etc/seccomp_policy/mediacodec.policy \
     device/qcom/common/seccomp/mediaextractor-seccomp.policy:$(TARGET_COPY_OUT_VENDOR)/etc/seccomp_policy/mediaextractor.policy
+
+# Include common Qualcomm binaries if vendor/qcom/common is present
+-include vendor/qcom/common/qti-vendor.mk
