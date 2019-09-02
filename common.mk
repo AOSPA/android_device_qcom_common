@@ -8,6 +8,9 @@ BOARD_USES_QCNE := true
 
 TARGET_ENABLE_QC_AV_ENHANCEMENTS := true
 
+#skip boot jars check
+SKIP_BOOT_JARS_CHECK := true
+
 # include additional build utilities
 include device/qcom/common/utils.mk
 
