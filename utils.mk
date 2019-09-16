@@ -100,7 +100,7 @@ endef
 # $(call is-product-in-list,tpl)
 # # returns true or empty
 define is-product-in-list
-$(call match-word-in-list,$(TARGET_PRODUCT),$(1))
+$(call match-word-in-list,$(TARGET_DEVICE),$(1))
 endef
 
 # $(call is-vendor-board-platform,vendor)
