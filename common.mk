@@ -159,7 +159,7 @@ include $(QCOM_COMMON_PATH)/components.mk
 TARGET_FS_CONFIG_GEN += $(QCOM_COMMON_PATH)/config.fs
 
 # Partition source order for Product/Build properties pickup.
-ro.product.property_source_order=odm,vendor,product,product_services,system
+ro.product.property_source_order=odm,vendor,product,system_ext,system
 
 # Power
 ifneq ($(TARGET_PROVIDES_POWERHAL),true)
