@@ -59,9 +59,9 @@ endif
 #endif
 ifneq ($(strip $(TARGET_DISABLE_PERF_OPTIMIATIONS)),true)
 # Preloading QPerformance jar to ensure faster perflocks in Boost Framework
-PRODUCT_BOOT_JARS += QPerformance
+#PRODUCT_BOOT_JARS += QPerformance
 # Preloading UxPerformance jar to ensure faster UX invoke in Boost Framework
-PRODUCT_BOOT_JARS += UxPerformance
+#PRODUCT_BOOT_JARS += UxPerformance
 endif
 
 #skip boot jars check
