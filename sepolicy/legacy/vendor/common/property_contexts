@@ -186,6 +186,8 @@ persist.vendor.wifi.softap.        u:object_r:vendor_softap_prop:s0
 vendor.media.target.version        u:object_r:vendor_video_prop:s0
 vendor.video.disable.ubwc          u:object_r:vendor_video_prop:s0
 
+persist.vendor.camera.debug.logfile u:object_r:camera_prop:s0
+
 #rmt_storage
 ctl.vendor.rmt_storage     u:object_r:vendor_ctl_vendor_rmt_storage_prop:s0
 
