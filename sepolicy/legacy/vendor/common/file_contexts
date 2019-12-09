@@ -610,7 +610,7 @@
 /mnt/vendor/persist/qti_fp(/.*)?                                    u:object_r:persist_qti_fp_file:s0
 /mnt/vendor/persist/hlos_rfs(/.*)?                                  u:object_r:persist_rfs_shared_hlos_file:s0
 /mnt/vendor/persist/display(/.*)?                                   u:object_r:persist_display_file:s0
-/mnt/vendor/persist/rfs.*                                           u:object_r:persist_rfs_file:s0
+/mnt/vendor/persist/rfs(/.*)?                                       u:object_r:persist_rfs_file:s0
 /mnt/vendor/persist/speccfg(/.*)?                                   u:object_r:regionalization_file:s0
 /mnt/vendor/persist/misc(/.*)?                                      u:object_r:persist_misc_file:s0
 /mnt/vendor/persist/bms(/.*)?                                       u:object_r:persist_bms_file:s0
