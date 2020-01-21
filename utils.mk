@@ -23,12 +23,16 @@ QCOM_BOARD_PLATFORMS += sdm845
 QCOM_BOARD_PLATFORMS += msmnile
 QCOM_BOARD_PLATFORMS += trinket
 QCOM_BOARD_PLATFORMS += sm6150
+QCOM_BOARD_PLATFORMS += kona
+QCOM_BOARD_PLATFORMS += atoll
+QCOM_BOARD_PLATFORMS += lito
+QCOM_BOARD_PLATFORMS += bengal
 
 #List of targets that use video hw
-MSM_VIDC_TARGET_LIST := msm8974 msm8610 msm8226 apq8084 msm8916 msm8994 msm8909 msm8992 msm8996 msm8952 msm8937 msm8953 msm8998 sdm660 sdm710 sdm845 msmnile trinket sm6150
+MSM_VIDC_TARGET_LIST := msm8974 msm8610 msm8226 apq8084 msm8916 msm8994 msm8909 msm8992 msm8996 msm8952 msm8937 msm8953 msm8998 sdm660 sdm710 sdm845 msmnile trinket sm6150 kona atoll lito
 
 #List of targets that use master side content protection
-MASTER_SIDE_CP_TARGET_LIST := msm8996 msm8998 sdm660 sdm710 sdm845 msmnile trinket sm6150
+MASTER_SIDE_CP_TARGET_LIST := msm8996 msm8998 sdm660 sdm710 sdm845 msmnile trinket sm6150 kona lito atoll bengal
 
 # vars for use by utils
 colon := $(empty):$(empty)
