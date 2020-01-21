@@ -8,6 +8,15 @@ BOARD_USES_QCNE := true
 
 TARGET_ENABLE_QC_AV_ENHANCEMENTS := true
 
+ifneq ($(filter msm8996 sdm660,$(TARGET_BOARD_PLATFORM)),)
+TARGET_USES_AOSP ?= true
+else
+TARGET_USES_AOSP ?= false
+endif
+
+TARGET_USES_AOSP_FOR_AUDIO ?= false
+TARGET_USES_QCOM_BSP ?= false
+
 #skip boot jars check
 SKIP_BOOT_JARS_CHECK := true
 
