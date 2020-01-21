@@ -1,3 +1,6 @@
+# include additional build utilities
+include device/qcom/common/utils.mk
+
 TARGET_COMPILE_WITH_MSM_KERNEL := true
 TARGET_HAS_QC_KERNEL_SOURCE := true
 TARGET_USES_QCOM_MM_AUDIO := true
@@ -19,9 +22,6 @@ TARGET_USES_QCOM_BSP ?= false
 
 #skip boot jars check
 SKIP_BOOT_JARS_CHECK := true
-
-# include additional build utilities
-include device/qcom/common/utils.mk
 
 # SECCOMP Extension
 BOARD_SECCOMP_POLICY += device/qcom/common/seccomp
