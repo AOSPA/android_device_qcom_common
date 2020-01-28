@@ -16,9 +16,6 @@
 
 DEVICE_PATH := device/qcom/common
 
-# include additional build utilities
-include $(DEVICE_PATH)/utils.mk
-
 # Power
 # Define all modules and they will be filtered out
 # by the build flags in Android.mk
