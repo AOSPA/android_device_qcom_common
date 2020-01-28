@@ -21,9 +21,6 @@ endif
 TARGET_USES_AOSP_FOR_AUDIO ?= false
 TARGET_USES_QCOM_BSP ?= false
 
-#skip boot jars check
-SKIP_BOOT_JARS_CHECK := true
-
 # SECCOMP Extension
 BOARD_SECCOMP_POLICY += device/qcom/common/seccomp
 
