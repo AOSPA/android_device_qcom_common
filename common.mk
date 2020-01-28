@@ -16,9 +16,6 @@
 
 DEVICE_PATH := device/qcom/common
 
-# include additional build utilities
-include $(DEVICE_PATH)/utils.mk
-
 # QTI common components
 ifneq (,$(filter av, $(TARGET_COMMON_QTI_COMPONENTS)))
 include $(DEVICE_PATH)/av/qti-av.mk
