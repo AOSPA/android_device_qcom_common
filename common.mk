@@ -16,9 +16,6 @@
 
 DEVICE_PATH := device/qcom/common
 
-# include additional build utilities
-include $(DEVICE_PATH)/utils.mk
-
 TARGET_COMPILE_WITH_MSM_KERNEL := true
 TARGET_USES_QCOM_MM_AUDIO := true
 
