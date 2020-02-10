@@ -105,6 +105,10 @@ endif
 ifneq ($(strip $(TARGET_NO_KERNEL)),true)
 ifeq ($(strip $(BOARD_KERNEL_SEPARATED_DTBO)),true)
 
+ifneq ($(BOARD_CUSTOM_DTBOIMG_MK),)
+include $(BOARD_CUSTOM_DTBOIMG_MK)
+else
+
 MKDTIMG := $(HOST_OUT_EXECUTABLES)/mkdtimg$(HOST_EXECUTABLE_SUFFIX)
 
 # Most specific paths must come first in possible_dtbo_dirs
@@ -125,6 +129,7 @@ endef
 $(BOARD_PREBUILT_DTBOIMAGE): $(MKDTIMG) $(INSTALLED_KERNEL_TARGET)
 	$(build-dtboimage-target)
 
+endif
 endif
 endif
 
