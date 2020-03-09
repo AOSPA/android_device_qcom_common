@@ -32,6 +32,11 @@ ifeq ($(call is-board-platform-in-list, apq8084 msm8226 msm8909 msm8916 msm8937 
   TARGET_USES_MEDIA_EXTENSIONS := true
 endif
 
+# Power
+ifneq ($(TARGET_PROVIDES_POWERHAL),true)
+$(call inherit-product, vendor/qcom/opensource/power/power-vendor-product.mk)
+endif
+
 # QTI common components
 ifneq (,$(filter av, $(TARGET_COMMON_QTI_COMPONENTS)))
 include $(DEVICE_PATH)/av/qti-av.mk
