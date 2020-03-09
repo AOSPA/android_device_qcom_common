@@ -26,6 +26,11 @@ BOARD_USES_ADRENO := true
 
 TARGET_USES_AOSP_FOR_AUDIO ?= false
 
+# Power
+ifneq ($(TARGET_PROVIDES_POWERHAL),true)
+$(call inherit-product, vendor/qcom/opensource/power/power-vendor-product.mk)
+endif
+
 # QTI common components
 ifneq (,$(filter av, $(TARGET_COMMON_QTI_COMPONENTS)))
 include $(DEVICE_PATH)/av/qti-av.mk
