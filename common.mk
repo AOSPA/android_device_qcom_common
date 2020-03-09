@@ -7,6 +7,7 @@ TARGET_USES_QCOM_MM_AUDIO := true
 
 # Display
 BOARD_USES_ADRENO := true
+TARGET_USES_ION := true
 
 # Kernel
 TARGET_COMPILE_WITH_MSM_KERNEL := true
