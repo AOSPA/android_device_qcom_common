@@ -9,6 +9,12 @@ BOARD_USES_ADRENO := true
 TARGET_USES_AOSP_FOR_AUDIO ?= false
 TARGET_USES_QCOM_BSP ?= false
 
+# Power
+ifneq ($(TARGET_PROVIDES_POWERHAL),true)
+-include $(TOPDIR)vendor/qcom/opensource/power/power-vendor-board.mk
+$(call inherit-product-if-exists, vendor/qcom/opensource/power/power-vendor-product.mk)
+endif
+
 # SECCOMP Extension
 BOARD_SECCOMP_POLICY += device/qcom/common/seccomp
 
