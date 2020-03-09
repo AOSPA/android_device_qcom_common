@@ -2,17 +2,11 @@
 include device/qcom/common/utils.mk
 
 TARGET_COMPILE_WITH_MSM_KERNEL := true
-TARGET_HAS_QC_KERNEL_SOURCE := true
 TARGET_USES_QCOM_MM_AUDIO := true
 
 BOARD_USES_ADRENO := true
 
-BOARD_USES_QCNE := true
-
-TARGET_ENABLE_QC_AV_ENHANCEMENTS := true
-
 TARGET_USES_AOSP_FOR_AUDIO ?= false
-TARGET_USES_QCOM_BSP ?= false
 
 # SECCOMP Extension
 BOARD_SECCOMP_POLICY += device/qcom/common/seccomp
