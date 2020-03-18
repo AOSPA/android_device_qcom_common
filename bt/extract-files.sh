@@ -1,4 +1,6 @@
+#!/bin/bash
 #
+# Copyright (C) 2018-2019 The LineageOS Project
 # Copyright (C) 2020 Paranoid Android
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
@@ -14,6 +16,16 @@
 # limitations under the License.
 #
 
-LOCAL_PATH := $(call my-dir)
+# If we're being sourced by the common script that we called,
+# stop right here. No need to go down the rabbit hole.
+if [ "${BASH_SOURCE[0]}" != "${0}" ]; then
+    return
+fi
 
-include $(call all-makefiles-under,$(LOCAL_PATH))
+set -e
+
+# Required!
+export COMPONENT=bt
+export VENDOR=qcom/common
+
+"./../extract-files.sh" "$@"
