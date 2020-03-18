@@ -1,0 +1,13 @@
+-lib/libmmparser_lite.so
+-lib/libqct_resampler.so
+lib/extractors/libmmparserextractor.so
+-lib/libavenhancements.so
+-lib/vendor.qti.hardware.audiohalext-utils.so
+-lib/libmmosal.so
+-product/lib/vendor.qti.hardware.audiohalext@1.0.so
+-product/lib64/vendor.qti.hardware.audiohalext@1.0.so
+-lib64/libmmparser_lite.so
+lib64/extractors/libmmparserextractor.so
+-lib64/libavenhancements.so
+-lib64/vendor.qti.hardware.audiohalext-utils.so
+-lib64/libmmosal.so
