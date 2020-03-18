@@ -1,4 +1,6 @@
+#!/bin/bash
 #
+# Copyright (C) 2018-2019 The LineageOS Project
 # Copyright (C) 2020 Paranoid Android
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
@@ -14,6 +16,10 @@
 # limitations under the License.
 #
 
-LOCAL_PATH := $(call my-dir)
+set -e
 
-include $(call all-makefiles-under,$(LOCAL_PATH))
+# Required!
+export DEVICE=bt
+export VENDOR=qcom/common
+
+"./../setup-makefiles.sh" "$@"
