@@ -15,5 +15,10 @@
 # Enable QCT resampler
 AUDIO_FEATURE_ENABLED_EXTN_RESAMPLER := true
 
+BOARD_USES_ADRENO := true
+
+TARGET_USES_AOSP_FOR_AUDIO ?= false
+TARGET_USES_QCOM_MM_AUDIO := true
+
 # Get non-open-source specific aspects
 $(call inherit-product-if-exists, vendor/qcom/common/av/av-vendor.mk)
