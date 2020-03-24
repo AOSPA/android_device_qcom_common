@@ -14,5 +14,15 @@
 
 DEVICE_FRAMEWORK_MANIFEST_FILE += device/qcom/common/telephony/framework_manifest.xml
 
+# QTI HIDL Wrapper
+PRODUCT_PACKAGES += \
+    qti-telephony-hidl-wrapper \
+    qti_telephony_hidl_wrapper.xml
+
+# QTI Telephony Utils
+PRODUCT_PACKAGES += \
+    qti-telephony-utils \
+    qti_telephony_utils.xml
+
 # Get non-open-source specific aspects
 $(call inherit-product-if-exists, vendor/qcom/common/telephony/telephony-vendor.mk)
