@@ -32,6 +32,29 @@ ifeq ($(call is-board-platform-in-list, apq8084 msm8226 msm8909 msm8916 msm8937 
   TARGET_USES_MEDIA_EXTENSIONS := true
 endif
 
+# Power
+ifneq ($(TARGET_PROVIDES_POWERHAL),true)
+# Disable Binderized Power HAL by default for legacy targets.
+# Devices can still opt in by setting TARGET_USES_NON_LEGACY_POWERHAL in BoardConfig.mk.
+# Conversely, recent chips, such as sm8150 with an old vendor can opt out.
+ifneq ($(call is-board-platform-in-list, msm8937 msm8952 msm8953 msm8996 msm8998 sdm660 sdm710 sdm845 sdm710 trinket),true)
+TARGET_USES_NON_LEGACY_POWERHAL ?= true
+
+PRODUCT_PACKAGES += \
+    android.hardware.power@1.2-impl \
+    android.hardware.power@1.2-service
+
+LOCAL_VINTF_FRAGMENTS := android.hardware.power@1.2-service.xml
+else
+PRODUCT_PACKAGES += \
+    android.hardware.power@1.0-impl \
+    android.hardware.power@1.0-service \
+    power.qcom \
+
+LOCAL_VINTF_FRAGMENTS := android.hardware.power@1.0-service.xml
+endif # Legacy PowerHAL
+endif # TARGET_PROVIDES_POWERHAL
+
 # QTI common components
 ifneq (,$(filter av, $(TARGET_COMMON_QTI_COMPONENTS)))
 include $(DEVICE_PATH)/av/qti-av.mk
