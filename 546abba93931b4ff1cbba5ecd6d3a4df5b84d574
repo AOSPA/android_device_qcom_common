@@ -16,6 +16,24 @@
       "revId": "546abba93931b4ff1cbba5ecd6d3a4df5b84d574",
       "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "8ee9b1bd_fb4abe9f",
+        "filename": "sepolicy/Android.mk",
+        "patchSetId": 1
+      },
+      "lineNbr": 45,
+      "author": {
+        "id": 1000012
+      },
+      "writtenOn": "2020-03-29T15:12:13Z",
+      "side": 1,
+      "message": "I would say yes because pa qcom sepolicy is dependent on qcom sepolicy. PA global sepolicy is where we have policies that do not require QC.",
+      "parentUuid": "db41d6e4_9c9f0590",
+      "revId": "546abba93931b4ff1cbba5ecd6d3a4df5b84d574",
+      "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad",
+      "unresolved": true
     }
   ]
 }
