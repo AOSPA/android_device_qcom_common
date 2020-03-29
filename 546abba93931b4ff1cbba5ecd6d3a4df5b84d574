@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "db41d6e4_9c9f0590",
+        "filename": "sepolicy/Android.mk",
+        "patchSetId": 1
+      },
+      "lineNbr": 45,
+      "author": {
+        "id": 1000480
+      },
+      "writtenOn": "2020-03-29T15:09:45Z",
+      "side": 1,
+      "message": "Do they both really belong into the Exclude qcom sepolicy guard?",
+      "revId": "546abba93931b4ff1cbba5ecd6d3a4df5b84d574",
+      "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad",
+      "unresolved": true
+    }
+  ]
+}
