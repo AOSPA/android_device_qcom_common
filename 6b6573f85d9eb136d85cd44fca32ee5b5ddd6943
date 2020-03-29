@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "671c04f2_19938c43",
+        "filename": "common.mk",
+        "patchSetId": 5
+      },
+      "lineNbr": 37,
+      "author": {
+        "id": 1000480
+      },
+      "writtenOn": "2020-03-29T11:48:47Z",
+      "side": 1,
+      "message": "Maybe we should not add -if-exists here because the device has no chance to boot without the power hal, so if the file is missing the build should fail i would say",
+      "revId": "6b6573f85d9eb136d85cd44fca32ee5b5ddd6943",
+      "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad",
+      "unresolved": true
+    }
+  ]
+}
