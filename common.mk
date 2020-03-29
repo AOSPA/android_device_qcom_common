@@ -19,6 +19,24 @@ DEVICE_PATH := device/qcom/common
 # include additional build utilities
 include $(DEVICE_PATH)/utils.mk
 
+# Power
+ifneq ($(TARGET_PROVIDES_POWERHAL),true)
+ifeq ($(TARGET_USES_NON_LEGACY_POWERHAL),true)
+
+PRODUCT_PACKAGES += \
+    android.hardware.power@1.2-impl \
+    android.hardware.power@1.2-service
+
+LOCAL_VINTF_FRAGMENTS := android.hardware.power@1.2-service.xml
+else
+PRODUCT_PACKAGES += \
+    android.hardware.power@1.0-impl \
+    android.hardware.power@1.0-service \
+    power.qcom \
+
+LOCAL_VINTF_FRAGMENTS := android.hardware.power@1.0-service.xml
+
+
 # QTI common components
 ifneq (,$(filter av, $(TARGET_COMMON_QTI_COMPONENTS)))
 include $(DEVICE_PATH)/av/qti-av.mk
