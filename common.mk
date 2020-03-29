@@ -16,13 +16,6 @@
 
 DEVICE_PATH := device/qcom/common
 
-TARGET_COMPILE_WITH_MSM_KERNEL := true
-TARGET_USES_QCOM_MM_AUDIO := true
-
-BOARD_USES_ADRENO := true
-
-TARGET_USES_AOSP_FOR_AUDIO ?= false
-
 # QTI common components
 ifneq (,$(filter av, $(TARGET_COMMON_QTI_COMPONENTS)))
 include $(DEVICE_PATH)/av/qti-av.mk
