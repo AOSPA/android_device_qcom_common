@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "fafc37d4_29f04441",
+        "filename": "BoardConfigQcom.mk",
+        "patchSetId": 6
+      },
+      "lineNbr": 19,
+      "author": {
+        "id": 1000480
+      },
+      "writtenOn": "2020-03-29T17:18:53Z",
+      "side": 1,
+      "message": "What about apq8084 msm8226 msm8909 msm8916 msm8960 msm8974, should they all use 1.2?",
+      "revId": "a5d17bf7d3ad3210c328b144aa681522df16289e",
+      "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "0111e275_f26f24cb",
+        "filename": "common.mk",
+        "patchSetId": 6
+      },
+      "lineNbr": 27,
+      "author": {
+        "id": 1000480
+      },
+      "writtenOn": "2020-03-29T17:18:53Z",
+      "side": 1,
+      "message": "You probably mean android.hardware.power@1.2-service here. The 1.0 service is already a dependency of power.qcom",
+      "revId": "a5d17bf7d3ad3210c328b144aa681522df16289e",
+      "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad",
+      "unresolved": true
+    }
+  ]
+}
