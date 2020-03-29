@@ -19,6 +19,15 @@ DEVICE_PATH := device/qcom/common
 # include additional build utilities
 include $(DEVICE_PATH)/utils.mk
 
+# Power
+# Define all modules and they will be filtered out
+# by the build flags in Android.mk
+ifneq ($(TARGET_PROVIDES_POWERHAL),true)
+PRODUCT_PACKAGES += \
+    android.hardware.power@1.0-service \
+    power.qcom
+endif
+
 # QTI common components
 ifneq (,$(filter av, $(TARGET_COMMON_QTI_COMPONENTS)))
 include $(DEVICE_PATH)/av/qti-av.mk
