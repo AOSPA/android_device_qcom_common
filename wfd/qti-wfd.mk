@@ -12,7 +12,7 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-DEVICE_FRAMEWORK_MANIFEST_FILE += device/qcom/common/qti-components/wfd/framework_manifest.xml
+DEVICE_FRAMEWORK_MANIFEST_FILE += device/qcom/common/wfd/framework_manifest.xml
 
 PRODUCT_PACKAGES += \
     libnl \

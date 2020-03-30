@@ -12,7 +12,7 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-DEVICE_FRAMEWORK_MANIFEST_FILE += device/qcom/common/qti-components/telephony/framework_manifest.xml
+DEVICE_FRAMEWORK_MANIFEST_FILE += device/qcom/common/telephony/framework_manifest.xml
 
 # Get non-open-source specific aspects
 $(call inherit-product-if-exists, vendor/qcom/common/telephony/telephony-vendor.mk)
