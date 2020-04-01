@@ -14,5 +14,15 @@
 
 DEVICE_FRAMEWORK_MANIFEST_FILE += device/qcom/common/telephony/framework_manifest.xml
 
+# Radio
+PRODUCT_PACKAGES += \
+    android.hardware.radio@1.0 \
+    android.hardware.radio@1.1 \
+    android.hardware.radio@1.2 \
+    android.hardware.radio@1.3 \
+    android.hardware.radio@1.4 \
+    android.hardware.radio.config@1.0 \
+    android.hardware.radio.deprecated@1.0
+
 # Get non-open-source specific aspects
 $(call inherit-product-if-exists, vendor/qcom/common/telephony/telephony-vendor.mk)
