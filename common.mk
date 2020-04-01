@@ -24,24 +24,3 @@ PRODUCT_PACKAGES += \
     android.hardware.power@1.2-service \
     power.qcom
 endif
-
-# QTI common components
-ifneq (,$(filter av, $(TARGET_COMMON_QTI_COMPONENTS)))
-include $(DEVICE_PATH)/av/qti-av.mk
-endif
-
-ifneq (,$(filter bt, $(TARGET_COMMON_QTI_COMPONENTS)))
-include $(DEVICE_PATH)/bt/qti-bt.mk
-endif
-
-ifneq (,$(filter perf, $(TARGET_COMMON_QTI_COMPONENTS)))
-include $(DEVICE_PATH)/perf/qti-perf.mk
-endif
-
-ifneq (,$(filter telephony, $(TARGET_COMMON_QTI_COMPONENTS)))
-include $(DEVICE_PATH)/telephony/qti-telephony.mk
-endif
-
-ifneq (,$(filter wfd, $(TARGET_COMMON_QTI_COMPONENTS)))
-include $(DEVICE_PATH)/wfd/qti-wfd.mk
-endif
