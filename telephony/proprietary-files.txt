@@ -113,6 +113,7 @@ product/lib64/libupdateprof.qti.so
 product/lib64/vendor.qti.data.factory@1.0.so
 product/lib64/vendor.qti.data.factory@2.0.so
 product/lib64/vendor.qti.data.factory@2.1.so
+product/lib64/vendor.qti.data.slm@1.0.so
 product/lib64/vendor.qti.hardware.data.cne.internal.api@1.0.so
 product/lib64/vendor.qti.hardware.data.cne.internal.constants@1.0.so
 product/lib64/vendor.qti.hardware.data.cne.internal.server@1.0.so
@@ -143,6 +144,9 @@ product/lib64/vendor.qti.hardware.radio.uim_remote_client@1.0.so
 product/lib64/vendor.qti.hardware.radio.uim_remote_client@1.1.so
 product/lib64/vendor.qti.hardware.radio.uim_remote_client@1.2.so
 product/lib64/vendor.qti.hardware.radio.uim_remote_server@1.0.so
+product/lib64/vendor.qti.ims.callinfo@1.0.so
+product/lib64/vendor.qti.ims.rcsconfig@1.0.so
+product/lib64/vendor.qti.ims.rcsconfig@1.1.so
 product/lib64/vendor.qti.imsrtpservice@2.0.so
 product/lib64/vendor.qti.imsrtpservice@2.1.so
 product/lib64/vendor.qti.latency@2.0.so
@@ -174,6 +178,7 @@ product/lib/libupdateprof.qti.so
 product/lib/vendor.qti.data.factory@1.0.so
 product/lib/vendor.qti.data.factory@2.0.so
 product/lib/vendor.qti.data.factory@2.1.so
+product/lib/vendor.qti.data.slm@1.0.so
 product/lib/vendor.qti.hardware.data.cne.internal.api@1.0.so
 product/lib/vendor.qti.hardware.data.cne.internal.constants@1.0.so
 product/lib/vendor.qti.hardware.data.cne.internal.server@1.0.so
@@ -204,6 +209,9 @@ product/lib/vendor.qti.hardware.radio.uim_remote_client@1.0.so
 product/lib/vendor.qti.hardware.radio.uim_remote_client@1.1.so
 product/lib/vendor.qti.hardware.radio.uim_remote_client@1.2.so
 product/lib/vendor.qti.hardware.radio.uim_remote_server@1.0.so
+product/lib/vendor.qti.ims.callinfo@1.0.so
+product/lib/vendor.qti.ims.rcsconfig@1.0.so
+product/lib/vendor.qti.ims.rcsconfig@1.1.so
 product/lib/vendor.qti.imsrtpservice@2.0.so
 product/lib/vendor.qti.imsrtpservice@2.1.so
 product/lib/vendor.qti.latency@2.0.so
