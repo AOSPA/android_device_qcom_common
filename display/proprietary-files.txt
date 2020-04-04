@@ -1,0 +1,8 @@
+product/lib/vendor.display.color@1.0.so
+product/lib/vendor.display.color@1.1.so
+product/lib/vendor.display.color@1.2.so
+product/lib/vendor.display.postproc@1.0.so
+product/lib64/vendor.display.color@1.0.so
+product/lib64/vendor.display.color@1.1.so
+product/lib64/vendor.display.color@1.2.so
+product/lib64/vendor.display.postproc@1.0.so
