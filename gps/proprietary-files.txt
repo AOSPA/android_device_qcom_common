@@ -1,0 +1,6 @@
+etc/permissions/izat.xt.srv.xml
+framework/izat.xt.srv.jar
+lib/liblocationservice_jni.so
+lib/libxt_native.so
+lib64/liblocationservice_jni.so
+lib64/libxt_native.so
