@@ -12,5 +12,24 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
+# From vendor/qcom/opensource/commonsys-intf/bluetooth/bt-commonsys-intf-board.mk
+
+#ANT
+BOARD_ANT_WIRELESS_DEVICE := "qualcomm-hidl"
+
+#BT
+BOARD_HAVE_BLUETOOTH := true
+BOARD_HAVE_BLUETOOTH_QCOM := true
+TARGET_USE_QTI_BT_STACK := true
+
+#FM - needs libqcomfm_jni
+#BOARD_HAVE_QCOM_FM := true
+
+TARGET_USE_QTI_BT_CONFIGSTORE := true
+TARGET_USE_QTI_BT_SAR := true
+TARGET_USE_QTI_VND_FWK_DETECT := true
+
+$(call inherit-product, vendor/qcom/opensource/commonsys-intf/bluetooth/bt-system-opensource-product.mk)
+
 # Get non-open-source specific aspects
 $(call inherit-product-if-exists, vendor/qcom/common/bt/bt-vendor.mk)
