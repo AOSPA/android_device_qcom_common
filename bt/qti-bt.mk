@@ -12,5 +12,20 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-# Get non-open-source specific aspects
+$(error, $(TARGET_BOARD_PLATFORM))
+
+# Error if TARGET_BOARD_PLATFORM is not set because otherwise the modules with the board in the name cannot be built.
+ifeq ($(TARGET_BOARD_PLATFORM),)
+$(error "TARGET_BOARD_PLATFORM is not defined yet. Please define in your device Makefile if you wish to use this component")
+endif
+
+# Include QTI Bluetooth makefiles.
+ifneq ($(filter msm8909 msm8937 msm8953 msm8996 msm8998 sdm660, $(TARGET_BOARD_PLATFORM)),)
+include vendor/qcom/opensource/commonsys-intf/bluetooth/bt-commonsys-intf-legacy-board.mk
+else
+include vendor/qcom/opensource/commonsys-intf/bluetooth/bt-commonsys-intf-board.mk
+endif
+$(call inherit-product, vendor/qcom/opensource/commonsys-intf/bluetooth/bt-system-opensource-product.mk)
+
+# Get non-open-source specific aspects.
 $(call inherit-product-if-exists, vendor/qcom/common/bt/bt-vendor.mk)
