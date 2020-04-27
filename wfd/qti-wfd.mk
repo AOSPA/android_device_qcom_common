@@ -25,5 +25,15 @@ PRODUCT_PROPERTY_OVERRIDES += \
     persist.debug.wfd.enable=1 \
     persist.sys.wfd.virtual=0
 
+# Display
+PRODUCT_PACKAGES += \
+    libdisplayconfig \
+    libqdMetaData \
+    libqdMetaData.system
+
+
+# Inherit Qualcomm display dependencies
+$(call inherit-product-if-exists, vendor/qcom/opensource/commonsys-intf/display/config/display-product-system.mk)
+
 # Get non-open-source specific aspects
 $(call inherit-product-if-exists, vendor/qcom/common/wfd/wfd-vendor.mk)
