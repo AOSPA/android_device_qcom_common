@@ -52,5 +52,10 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.vendor.beluga.t=0x240
 endif
 
+ifeq ($(call is-board-platform-in-list, lahaina shima holi yupik),true)
+PRODUCT_PROPERTY_OVERRIDES += \
+    ro.vendor.perf.scroll_opt=true
+endif
+
 # Get non-open-source specific aspects
 $(call inherit-product-if-exists, vendor/qcom/common/perf/perf-vendor.mk)
