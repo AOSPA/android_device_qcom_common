@@ -31,5 +31,9 @@ PRODUCT_PACKAGES += \
     libqdMetaData \
     libqdMetaData.system
 
+# Media
+PRODUCT_PACKAGES += \
+    libaacwrapper
+
 # Get non-open-source specific aspects.
 $(call inherit-product-if-exists, vendor/qcom/common/wfd-legacy/wfd-legacy-vendor.mk)
