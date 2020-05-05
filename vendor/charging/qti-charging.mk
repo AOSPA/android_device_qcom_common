@@ -12,6 +12,9 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
+PRODUCT_SOONG_NAMESPACES += \
+    device/qcom/common/vendor/charging
+
 # Health
 ifeq ($(TARGET_USE_AIDL_QTI_HEALTH),true)
 $(call inherit-product, vendor/qcom/opensource/healthd-ext/health-vendor-product.mk)
@@ -31,6 +34,9 @@ PRODUCT_PACKAGES += \
 # Init
 PRODUCT_COPY_FILES += \
     $(QCOM_COMMON_PATH)/vendor/charging/vendor.qti.hardware.charger_monitor@1.0-service.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/vendor.qti.hardware.charger_monitor@1.0-service.rc
+
+PRODUCT_PACKAGES += \
+    init.qcom.charging.rc
 
 # Get non-open-source specific aspects.
 $(call inherit-product-if-exists, vendor/qcom/common/vendor/charging/charging-vendor.mk)
