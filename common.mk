@@ -36,3 +36,7 @@ endif
 ifneq (,$(filter wfd, $(TARGET_COMMON_QTI_COMPONENTS)))
 include $(DEVICE_PATH)/wfd/qti-wfd.mk
 endif
+
+ifneq (,$(filter wfd-legacy, $(TARGET_COMMON_QTI_COMPONENTS)))
+include $(DEVICE_PATH)/wfd-legacy/qti-wfd-legacy.mk
+endif
