@@ -6,9 +6,12 @@ etc/wfdconfig.xml
 etc/wfdconfigsink.xml
 -framework/WfdCommon.jar
 lib/hw/vendor.qti.hardware.sigma_miracast@1.0-impl.so
+lib/com.qualcomm.qti.wifidisplayhal@1.0.so
 lib/libFileMux.so
 lib/libOmxMux.so
 lib/libmiracastsystem.so
+lib/libmmrtpdecoder.so
+lib/libmmrtpencoder.so
 lib/libwfdsm.so
 lib/libwfdrtsp.so
 lib/libwfdmmsrc.so
@@ -31,6 +34,8 @@ lib64/hw/vendor.qti.hardware.sigma_miracast@1.0-impl.so
 lib64/libFileMux.so
 lib64/libOmxMux.so
 lib64/libmiracastsystem.so
+lib64/libmmrtpdecoder.so
+lib64/libmmrtpencoder.so
 lib64/libwfdclient.so
 lib64/libwfdnative.so
 lib64/vendor.qti.hardware.sigma_miracast@1.0-halimpl.so
