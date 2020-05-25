@@ -21,7 +21,8 @@ endif
 # Properties
 ifneq ($(TARGET_USE_QTI_BT_STACK),false)
 PRODUCT_SYSTEM_EXT_PROPERTIES += \
-    ro.bluetooth.library_name=libbluetooth_qti.so
+    ro.bluetooth.library_name=libbluetooth_qti.so \
+    persist.vendor.bt.a2dp.aac_whitelist=false
 endif
 
 # Get non-open-source specific aspects.
