@@ -1,7 +1,6 @@
 etc/cne/Nexus/ATT/ATT_profiles.xml
 etc/cne/Nexus/ROW/ROW_profiles.xml
 etc/cne/Nexus/VZW/VZW_profiles.xml
-etc/permissions/privapp-permissions-qti.xml
 etc/permissions/qcnvitems.xml
 etc/permissions/qti_libpermissions.xml
 etc/permissions/qti_permissions.xml
