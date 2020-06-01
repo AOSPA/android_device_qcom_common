@@ -107,7 +107,9 @@ product/lib64/lib-imsvideocodec.so
 product/lib64/lib-imsvtextutils.so
 product/lib64/lib-imsvt.so
 product/lib64/lib-imsvtutils.so
+product/lib64/libqmi_cci_system.so
 product/lib64/libtrigger-handler.so
+product/lib64/libupdateprof.qti.so
 product/lib64/vendor.qti.data.factory@1.0.so
 product/lib64/vendor.qti.data.factory@2.0.so
 product/lib64/vendor.qti.data.factory@2.1.so
@@ -175,6 +177,7 @@ product/lib/lib-imsvtextutils.so
 product/lib/lib-imsvt.so
 product/lib/lib-imsvtutils.so
 product/lib/libtrigger-handler.so
+product/lib/libupdateprof.qti.so
 product/lib/vendor.qti.data.factory@1.0.so
 product/lib/vendor.qti.data.factory@2.0.so
 product/lib/vendor.qti.data.factory@2.1.so
