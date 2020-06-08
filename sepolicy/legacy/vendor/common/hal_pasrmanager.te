@@ -25,16 +25,33 @@
 # OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN
 # IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
-#Define Domain
+# Define Domain for PASR HAL
+type hal_pasrmanager_memory_qti, domain;
+type hal_pasrmanager_memory_qti_exec, exec_type, vendor_file_type, file_type;
 type hal_pasrmanager_qti, domain;
 type hal_pasrmanager_qti_exec, exec_type, vendor_file_type, file_type;
+
+# Allow permissions required for this HAL server to offer a
+# HAL implementation of the specified type over HwBinder
+hal_server_domain(hal_pasrmanager_memory_qti, hal_pasrmanager_memory)
 hal_server_domain(hal_pasrmanager_qti, hal_pasrmanager)
+
+# Started by init
+init_daemon_domain(hal_pasrmanager_memory_qti)
 init_daemon_domain(hal_pasrmanager_qti)
 
+# Allow PASR clients to perform binder IPC to PASR HAL server
 binder_call(hal_pasrmanager_client, hal_pasrmanager_server)
+binder_call(hal_pasrmanager_memory_client, hal_pasrmanager_memory_server)
+
+# Add pasrmanager to hwservice_manager and allow it to be discovered
+#hal_attribute_hwservice(hal_pasrmanager_memory, hal_pasrmanager_memory_hwservice)
 
 add_hwservice(hal_pasrmanager_server, hal_pasrmanager_hwservice)
 allow hal_pasrmanager_client hal_pasrmanager_hwservice:hwservice_manager find;
 
 allow hal_pasrmanager_qti sysfs_memory_offline:file rw_file_perms;
 allow hal_pasrmanager_qti sysfs_memory_offline:dir r_dir_perms;
+
+# For reading "vendor.pasr." properties
+get_prop(hal_pasrmanager_memory_qti, vendor_pasr_prop)

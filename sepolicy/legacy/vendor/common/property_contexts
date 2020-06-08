@@ -232,3 +232,7 @@ persist.vendor.qteeconnector.    u:object_r:vendor_qteeconnector_opti_prop:s0
 ro.vendor.bt.enablelazyhal       u:object_r:vendor_bluetooth_prop:s0 exact bool
 
 vendor.dcvs.prop                 u:object_r:vendor_dcvs_prop:s0
+
+# PASR
+vendor.pasr.            u:object_r:vendor_pasr_prop:s0
+ro.vendor.pasr.         u:object_r:vendor_pasr_prop:s0

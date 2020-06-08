@@ -358,6 +358,7 @@
 /(vendor|system/vendor)/bin/hw/vendor\.qti\.hardware\.scve\.panorama@1\.0-service    u:object_r:vendor_scve_exec:s0
 /(vendor|system/vendor)/bin/hw/vendor\.qti\.hardware\.scve\.objecttracker@1\.0-service    u:object_r:vendor_scve_exec:s0
 /(vendor|system/vendor)/bin/hdcp_srm               u:object_r:hdcp_srm_exec:s0
+/(vendor|system/vendor)/bin/hw/vendor\.qti\.memory\.pasrmanager\@1\.0-service u:object_r:hal_pasrmanager_memory_qti_exec:s0
 /(vendor|system/vendor)/bin/hw/vendor\.qti\.power\.pasrmanager\@1\.0-service u:object_r:hal_pasrmanager_qti_exec:s0
 /(vendor|system/vendor)/bin/hw/vendor\.qti\.hardware\.capabilityconfigstore@1\.0-service u:object_r:hal_capabilityconfigstore_qti_default_exec:s0
 /(vendor|system/vendor)/bin/hw/vendor\.qti\.hardware\.qccvndhal@1\.0-service       u:object_r:vendor_hal_qccvndhal_qti_exec:s0

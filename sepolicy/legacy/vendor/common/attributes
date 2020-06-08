@@ -38,6 +38,10 @@ attribute hal_hbtp;
 attribute hal_hbtp_client;
 attribute hal_hbtp_server;
 
+attribute hal_pasrmanager_memory;
+attribute hal_pasrmanager_memory_client;
+attribute hal_pasrmanager_memory_server;
+
 attribute hal_perf;
 attribute hal_perf_client;
 attribute hal_perf_server;
