@@ -1,0 +1,4 @@
+-system/lib/libvraudio.so
+-system/lib/libvraudio_client.qti.so
+-system/lib64/libvraudio.so
+-system/lib64/libvraudio_client.qti.so
