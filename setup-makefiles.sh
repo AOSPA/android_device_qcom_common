@@ -42,3 +42,28 @@ write_makefiles "${MY_DIR}/${COMPONENT}/proprietary-files.txt" true
 
 # Finish
 write_footers
+
+VENDOR_OVERLAY_FILES="${MY_DIR}/${COMPONENT}/proprietary-files-vendor-overlay.txt"
+if [ -f "${VENDOR_OVERLAY_FILES}" ]; then
+
+    # Conditionally include vendor-overlay Makefile in vendor Makefile
+    # To simplify, we can still include the default vendor Makefile in case
+    # system and vendor blobs are mixed.
+    printf '\n%s\n' "ifeq (\$(TARGET_IS_VENDORLESS),true)" >> "$PRODUCTMK"
+    printf '%s\n' "\$(call inherit-product-if-exists, "$OUTDIR"/"$COMPONENT"-overlay-vendor.mk)" >> "$PRODUCTMK"
+    printf '%s\n' "endif" >> "$PRODUCTMK"
+    printf '%s\n' >> "$PRODUCTMK"
+
+    # Initialize the helper for device
+    setup_vendor "${COMPONENT}" "${VENDOR}" "${ROOT}" false false "$VNDNAME"-overlay true
+
+    # Copyright headers and guards
+    write_headers
+
+    # The standard common blobs
+    write_makefiles "${VENDOR_OVERLAY_FILES}" true
+
+    # Finish
+    write_footers
+
+fi
