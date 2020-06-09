@@ -28,4 +28,4 @@ set -e
 export COMPONENT=telephony
 export VENDOR=qcom/common
 
-"./../extract-files.sh" "$@"
+"../extract-files.sh" "$@"

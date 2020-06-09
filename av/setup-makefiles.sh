@@ -22,4 +22,4 @@ set -e
 export COMPONENT=av
 export VENDOR=qcom/common
 
-"./../setup-makefiles.sh" "$@"
+"../setup-makefiles.sh" "$@"
