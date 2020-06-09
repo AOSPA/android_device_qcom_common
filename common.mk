@@ -172,6 +172,13 @@ TARGET_COMMON_QTI_COMPONENTS := \
     wlan
 endif
 
+ifeq ($(TARGET_COMMON_QTI_COMPONENTS), all)
+ifeq ($(call is-board-platform-in-list,$(4_9_FAMILY) $(4_14_FAMILY) $(4_19_FAMILY)),true)
+TARGET_COMMON_QTI_COMPONENTS += \
+    adreno-6xx
+endif
+endif
+
 # QTI common components
 ifneq (,$(filter av, $(TARGET_COMMON_QTI_COMPONENTS)))
 include $(DEVICE_PATH)/av/qti-av.mk
@@ -206,6 +213,10 @@ include $(DEVICE_PATH)/usb/qti-usb.mk
 endif
 
 # 845 series and newer
+ifneq (,$(filter adreno-6xx, $(TARGET_COMMON_QTI_COMPONENTS)))
+include $(DEVICE_PATH)/adreno-6xx/qti-adreno-6xx.mk
+endif
+
 ifneq (,$(filter audio, $(TARGET_COMMON_QTI_COMPONENTS)))
 include $(DEVICE_PATH)/audio/qti-audio.mk
 endif
