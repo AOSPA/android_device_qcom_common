@@ -21,6 +21,10 @@ ifneq (,$(filter av, $(TARGET_COMMON_QTI_COMPONENTS)))
 include $(DEVICE_PATH)/av/qti-av.mk
 endif
 
+ifneq (,$(filter audio-hal, $(TARGET_COMMON_QTI_COMPONENTS)))
+include $(DEVICE_PATH)/audio-hal/qti-audio-hal.mk
+endif
+
 ifneq (,$(filter bt, $(TARGET_COMMON_QTI_COMPONENTS)))
 include $(DEVICE_PATH)/bt/qti-bt.mk
 endif
