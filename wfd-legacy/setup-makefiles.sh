@@ -21,4 +21,4 @@ set -e
 export COMPONENT=wfd-legacy
 export VENDOR=qcom/common
 
-"./../setup-makefiles.sh" "$@"
+"../setup-makefiles.sh" "$@"

@@ -28,4 +28,4 @@ set -e
 export COMPONENT=bt
 export VENDOR=qcom/common
 
-"./../extract-files.sh" "$@"
+"../extract-files.sh" "$@"
