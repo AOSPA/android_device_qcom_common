@@ -42,3 +42,26 @@ write_makefiles "${MY_DIR}/${COMPONENT}/proprietary-files.txt" true
 
 # Finish
 write_footers
+
+VENDOR_OVERLAY_FILES="${MY_DIR}/${COMPONENT}/proprietary-files-vendor-overlay.txt"
+if [ -f "${VENDOR_OVERLAY_FILES}" ]; then
+    # Initialize the helper for device
+    setup_vendor "${COMPONENT}" "${VENDOR}" "${ROOT}" false false "$VNDNAME"-overlay true
+
+    # Copyright headers and guards
+    write_headers
+
+    # The standard common blobs
+    write_makefiles "${VENDOR_OVERLAY_FILES}" true
+
+    # Conditionally include vendor-overlay Makefile
+    printf '\n%s\n' "ifeq (\$(TARGET_IS_VENDORLESS),)" >> "$ANDROIDMK"
+    printf '%s\n' "\$(call inherit-product-if-exists, "$OUTDIR"/qti-"$COMPONENT"-overlay-vendor.mk)" >> "$ANDROIDMK"
+    printf '%s\n' "endif" >> "$ANDROIDMK"
+    printf '%s\n' >> "$ANDROIDMK"
+
+
+    # Finish
+    write_footers
+
+fi
