@@ -1,0 +1,17 @@
+-product/app/colorservice/colorservice.apk;PRESIGNED
+product/lib/libsd_sdk_display.qti.so
+product/lib/libsdm-disp-apis.qti.so
+product/lib/vendor.display.color@1.0.so
+product/lib/vendor.display.color@1.1.so
+product/lib/vendor.display.color@1.2.so
+product/lib/vendor.display.color@1.3.so
+product/lib/vendor.display.postproc@1.0.so
+product/lib64/libsd_sdk_display.qti.so
+product/lib64/libsdm-disp-apis.qti.so
+product/lib64/vendor.display.color@1.0.so
+product/lib64/vendor.display.color@1.1.so
+product/lib64/vendor.display.color@1.2.so
+product/lib64/vendor.display.color@1.3.so
+product/lib64/vendor.display.postproc@1.0.so
+system/etc/permissions/com.qti.snapdragon.sdk.display.xml
+-system/framework/com.qti.snapdragon.sdk.display.jar
