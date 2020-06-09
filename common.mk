@@ -170,6 +170,11 @@ TARGET_COMMON_QTI_COMPONENTS := \
     usb \
     wfd \
     wlan
+
+ifeq ($(call is-board-platform-in-list, qcs605 sdm710 sdm845 $(4_14_FAMILY) $(4_19_FAMILY)),true)
+TARGET_COMMON_QTI_COMPONENTS += \
+    adreno-6xx
+endif
 endif
 
 # QTI common components
@@ -206,6 +211,10 @@ include $(DEVICE_PATH)/usb/qti-usb.mk
 endif
 
 # 845 series and newer
+ifneq (,$(filter adreno-6xx, $(TARGET_COMMON_QTI_COMPONENTS)))
+include $(DEVICE_PATH)/adreno-6xx/qti-adreno-6xx.mk
+endif
+
 ifneq (,$(filter audio, $(TARGET_COMMON_QTI_COMPONENTS)))
 include $(DEVICE_PATH)/audio/qti-audio.mk
 endif
