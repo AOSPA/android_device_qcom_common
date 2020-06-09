@@ -66,4 +66,10 @@ setup_vendor "${COMPONENT}" "${VENDOR}" "${ROOT}" false "${CLEAN_VENDOR}" "" tru
 extract "${MY_DIR}/${COMPONENT}/proprietary-files.txt" "${SRC}" \
         "${KANG}" --section "${SECTION}"
 
+VENDOR_OVERLAY_FILES="${MY_DIR}/${COMPONENT}/proprietary-files-vendor-overlay.txt"
+if [ -f "${VENDOR_OVERLAY_FILES}" ]; then
+    extract "${VENDOR_OVERLAY_FILES}" "${SRC}" \
+        "${KANG}" --section "${SECTION}"
+fi
+
 "${MY_DIR}/setup-makefiles.sh"
