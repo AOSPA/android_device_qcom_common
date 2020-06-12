@@ -49,5 +49,18 @@ PRODUCT_VENDOR_PROPERTIES += \
     debug.sf.treat_170m_as_sRGB=1
 endif
 
+<<<<<<< PATCH SET (006a16 vendor: display: Disable SF client composition cache for <5.)
+# Properties for <5.4 targets
+# These are already set on 5.4+
+ifneq (,$(filter 3.18 4.4 4.9 4.14, 4.19, $(TARGET_KERNEL_VERSION)))
+PRODUCT_VENDOR_PROPERTIES += \
+    debug.sf.disable_client_composition_cache=1
+endif
+
+PRODUCT_VENDOR_PROPERTIES += \
+    debug.renderengine.backend=skiaglthreaded
+
+=======
+>>>>>>> BASE      (151877 media-legacy: Replace LOCAL_COPY_HEADERS with headers lib)
 # Get non-open-source specific aspects.
 $(call inherit-product-if-exists, vendor/qcom/common/vendor/display/$(TARGET_KERNEL_VERSION)/display-vendor.mk)
