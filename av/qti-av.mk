@@ -15,5 +15,9 @@
 # Enable QCT resampler
 AUDIO_FEATURE_ENABLED_EXTN_RESAMPLER := true
 
+# Media
+PRODUCT_PACKAGES += \
+    libmediaplayerservice
+
 # Get non-open-source specific aspects
 $(call inherit-product-if-exists, vendor/qcom/common/av/av-vendor.mk)
