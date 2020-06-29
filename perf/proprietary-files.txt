@@ -24,7 +24,11 @@ lib/libqti_performance.so
 lib/libqti-util_system.so
 lib/libqti_workloadclassifiermodel.so
 lib/libskewknob_system.so
+product/lib64/liblayerext.qti.so
+product/lib64/libsmomo.qti.so
 product/lib64/vendor.qti.hardware.iop@2.0.so
 product/lib64/vendor.qti.hardware.perf@2.0.so
 product/lib/vendor.qti.hardware.iop@2.0.so
 product/lib/vendor.qti.hardware.perf@2.0.so
+product/lib/liblayerext.qti.so
+product/lib/libsmomo.qti.so
