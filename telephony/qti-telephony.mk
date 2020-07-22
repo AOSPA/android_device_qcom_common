@@ -23,5 +23,10 @@ PRODUCT_PACKAGES += \
     android.hardware.radio.deprecated@1.0 \
     librmnetctl
 
+# Dual SIM - allow setting calling account to 'Ask every time'
+# rather than resetting to sub 1 every boot
+PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
+    persist.vendor.radio.aosp_usr_pref_sel=true
+
 # Get non-open-source specific aspects
 $(call inherit-product-if-exists, vendor/qcom/common/telephony/telephony-vendor.mk)
