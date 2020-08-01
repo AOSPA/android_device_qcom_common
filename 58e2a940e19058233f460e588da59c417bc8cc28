@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "406b9815_68a77527",
+        "filename": "bt/qti-bt.mk",
+        "patchSetId": 7
+      },
+      "lineNbr": 16,
+      "author": {
+        "id": 1000012
+      },
+      "writtenOn": "2020-08-01T01:50:56Z",
+      "side": 1,
+      "message": "what about https://source.codeaurora.org/quic/la/platform/vendor/qcom-opensource/bluetooth-commonsys-intf/tree/bt-commonsys-intf-legacy-board.mk?h\u003dLA.UM.8.13.r1-09500-SAIPAN.0",
+      "revId": "58e2a940e19058233f460e588da59c417bc8cc28",
+      "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad",
+      "unresolved": true
+    }
+  ]
+}
