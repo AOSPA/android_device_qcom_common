@@ -135,7 +135,11 @@ dtbo_objs = $(shell find $(dtbo_dir) -name \*.dtbo)
 
 define build-dtboimage-target
     $(call pretty,"Target dtbo image: $(BOARD_PREBUILT_DTBOIMAGE)")
+ifdef BOARD_DTBO_CFG
+    $(hide) $(MKDTIMG) cfg_create $@ $(BOARD_DTBO_CFG) -d $(dtbo_dir)
+else
     $(hide) $(MKDTIMG) create $@ --page_size=$(BOARD_KERNEL_PAGESIZE) $(dtbo_objs)
+endif
     $(hide) chmod a+r $@
 endef
 
