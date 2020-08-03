@@ -133,11 +133,20 @@ $(shell mkdir -p $(possible_dtbo_dirs))
 dtbo_dir = $(firstword $(wildcard $(possible_dtbo_dirs)))
 dtbo_objs = $(shell find $(dtbo_dir) -name \*.dtbo)
 
+ifdef BOARD_DTBO_CFG
+define build-dtboimage-target
+    $(call pretty,"Target dtbo image: $(BOARD_PREBUILT_DTBOIMAGE)")
+    $(hide) $(MKDTBOIMG) cfg_create $@ $(BOARD_DTBO_CFG) -d $(dtbo_dir)/$(TARGET_DTS_VENDOR)
+    $(hide) chmod a+r $@
+endef
+
+else
 define build-dtboimage-target
     $(call pretty,"Target dtbo image: $(BOARD_PREBUILT_DTBOIMAGE)")
     $(hide) $(MKDTBOIMG) create $@ --page_size=$(BOARD_KERNEL_PAGESIZE) $(dtbo_objs)
     $(hide) chmod a+r $@
 endef
+endif
 
 # Definition of BOARD_PREBUILT_DTBOIMAGE is in AndroidBoardCommon.mk
 # so as to ensure it is defined well in time to set the dependencies on
