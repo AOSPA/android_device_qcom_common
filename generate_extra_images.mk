@@ -125,7 +125,7 @@ ifneq ($(strip $(TARGET_NO_KERNEL)),true)
 ifeq ($(TARGET_PREBUILT_KERNEL),)
 ifeq ($(strip $(BOARD_KERNEL_SEPARATED_DTBO)),true)
 
-MKDTIMG := $(HOST_OUT_EXECUTABLES)/mkdtimg$(HOST_EXECUTABLE_SUFFIX)
+MKDTBOIMG := $(HOST_OUT_EXECUTABLES)/mkdtboimg$(HOST_EXECUTABLE_SUFFIX)
 
 # Most specific paths must come first in possible_dtbo_dirs
 possible_dtbo_dirs = $(TARGET_OUT_INTERMEDIATES)/KERNEL_OBJ/arch/arm64/boot/dts
@@ -135,14 +135,14 @@ dtbo_objs = $(shell find $(dtbo_dir) -name \*.dtbo)
 
 define build-dtboimage-target
     $(call pretty,"Target dtbo image: $(BOARD_PREBUILT_DTBOIMAGE)")
-    $(hide) $(MKDTIMG) create $@ --page_size=$(BOARD_KERNEL_PAGESIZE) $(dtbo_objs)
+    $(hide) $(MKDTBOIMG) create $@ --page_size=$(BOARD_KERNEL_PAGESIZE) $(dtbo_objs)
     $(hide) chmod a+r $@
 endef
 
 # Definition of BOARD_PREBUILT_DTBOIMAGE is in AndroidBoardCommon.mk
 # so as to ensure it is defined well in time to set the dependencies on
 # BOARD_PREBUILT_DTBOIMAGE
-$(BOARD_PREBUILT_DTBOIMAGE): $(MKDTIMG) $(INSTALLED_KERNEL_TARGET)
+$(BOARD_PREBUILT_DTBOIMAGE): $(MKDTBOIMG) $(INSTALLED_KERNEL_TARGET)
 	$(build-dtboimage-target)
 
 endif
