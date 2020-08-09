@@ -60,6 +60,10 @@ ifneq (,$(filter display, $(TARGET_COMMON_QTI_COMPONENTS)))
 include $(DEVICE_PATH)/display/qti-display.mk
 endif
 
+ifneq (,$(filter media, $(TARGET_COMMON_QTI_COMPONENTS)))
+include $(DEVICE_PATH)/media/qti-media.mk
+endif
+
 ifneq (,$(filter wfd, $(TARGET_COMMON_QTI_COMPONENTS)))
 include $(DEVICE_PATH)/wfd/qti-wfd.mk
 endif
