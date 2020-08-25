@@ -1,4 +1,4 @@
-product/framework/vendor.qti.voiceprint-V1.0-java.jar
+-product/framework/vendor.qti.voiceprint-V1.0-java.jar
 product/lib/vendor.qti.voiceprint@1.0.so
 product/lib64/vendor.qti.voiceprint@1.0.so
 system/etc/permissions/audiosphere.xml
