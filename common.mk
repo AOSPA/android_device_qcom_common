@@ -39,6 +39,10 @@ ifneq (,$(filter gps, $(TARGET_COMMON_QTI_COMPONENTS)))
 include $(DEVICE_PATH)/gps/qti-gps.mk
 endif
 
+ifneq (,$(filter init, $(TARGET_COMMON_QTI_COMPONENTS)))
+include $(DEVICE_PATH)/init/qti-init.mk
+endif
+
 ifneq (,$(filter overlay, $(TARGET_COMMON_QTI_COMPONENTS)))
 include $(DEVICE_PATH)/overlay/qti-overlay.mk
 endif
