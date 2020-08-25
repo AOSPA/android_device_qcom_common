@@ -2,8 +2,8 @@
 bin/perfservice
 etc/init/perfservice.rc
 etc/perf/wlc_model.tflite
-etc/permissions/com.qualcomm.qti.Performance.xml
-etc/permissions/com.qualcomm.qti.UxPerformance.xml
+etc/permissions/com.qualcomm.qti.Performance.xml|7976f2fd46b8d07814310cc957a70f829bdd6932
+etc/permissions/com.qualcomm.qti.UxPerformance.xml|d92749d80c5d956db8251b08ea6388d3f107a32c
 -framework/QPerformance.jar
 -framework/UxPerformance.jar
 lib64/libdolphin.so
