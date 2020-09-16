@@ -19,5 +19,8 @@ AUDIO_FEATURE_ENABLED_EXTN_RESAMPLER := true
 PRODUCT_PACKAGES += \
     libmediaplayerservice
 
+PRODUCT_PROPERTY_OVERRIDES += \
+    vendor.mm.enable.qcom_parser=16777215
+
 # Get non-open-source specific aspects
 $(call inherit-product-if-exists, vendor/qcom/common/av/av-vendor.mk)
