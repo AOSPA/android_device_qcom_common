@@ -12,9 +12,14 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
+# Boot Jars
 PRODUCT_BOOT_JARS += \
     QPerformance \
     UxPerformance
+
+# Properties
+PRODUCT_PROPERTY_OVERRIDES += \
+    ro.vendor.extension_library=libqti-perfd-client.so
 
 # Get non-open-source specific aspects
 $(call inherit-product-if-exists, vendor/qcom/common/perf/perf-vendor.mk)
