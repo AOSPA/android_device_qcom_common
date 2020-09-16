@@ -14,6 +14,7 @@
 
 # Audio Configuration File
 include $(TOPDIR)vendor/qcom/opensource/audio-hal/primary-hal/configs/qssi/qssi.mk
+include $(TOPDIR)vendor/qcom/opensource/audio/configs/qssi/qssi.mk
 
 ifneq ($(TARGET_BOARD_PLATFORM),)
 include $(TOPDIR)vendor/qcom/opensource/audio-hal/primary-hal/configs/$(TARGET_BOARD_PLATFORM)/$(TARGET_BOARD_PLATFORM).mk
