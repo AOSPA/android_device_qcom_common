@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "d212279f_7ad50045",
+        "filename": "audio/qti-audio.mk",
+        "patchSetId": 1
+      },
+      "lineNbr": 15,
+      "author": {
+        "id": 1000012
+      },
+      "writtenOn": "2020-09-17T02:29:32Z",
+      "side": 1,
+      "message": "There\u0027s a good chance we don\u0027t need this anymore but we\u0027ll see",
+      "revId": "b4b09d35c187ea226a01ce72903de4cbbddae517",
+      "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad",
+      "unresolved": true
+    }
+  ]
+}
