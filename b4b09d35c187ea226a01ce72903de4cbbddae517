@@ -34,6 +34,24 @@
       "revId": "b4b09d35c187ea226a01ce72903de4cbbddae517",
       "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "3b91097d_76591a9e",
+        "filename": "audio/qti-audio.mk",
+        "patchSetId": 1
+      },
+      "lineNbr": 15,
+      "author": {
+        "id": 1000012
+      },
+      "writtenOn": "2020-09-17T04:45:45Z",
+      "side": 1,
+      "message": "I meant the audio-hal one.  I think QC moved the audio-hal config to audio at https://source.codeaurora.org/quic/la/platform/vendor/qcom-opensource/audio/commit/?h\u003dLA.QSSI.11.0.r1-05600-qssi.0\u0026id\u003d3a51a92ba144bdb15f2b0abacceba08319d0a448 but of course since we don\u0027t have an audio hal yet, we don\u0027t know for sure just yet.",
+      "parentUuid": "78b08094_63a9f822",
+      "revId": "b4b09d35c187ea226a01ce72903de4cbbddae517",
+      "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad",
+      "unresolved": true
     }
   ]
 }
