@@ -22,7 +22,7 @@ DEVICE_PATH := device/qcom/common
 # by the build flags in Android.mk
 ifneq ($(TARGET_PROVIDES_POWERHAL),true)
 PRODUCT_PACKAGES += \
-    android.hardware.power@1.2-service \
+    android.hardware.power-service \
     power.qcom
 endif
 
