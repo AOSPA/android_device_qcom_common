@@ -129,7 +129,7 @@ ifeq ($(strip $(BOARD_KERNEL_SEPARATED_DTBO)),true)
 MKDTIMG := $(HOST_OUT_EXECUTABLES)/mkdtimg$(HOST_EXECUTABLE_SUFFIX)
 
 # Most specific paths must come first in possible_dtbo_dirs
-possible_dtbo_dirs = $(KERNEL_OUT)/arch/$(TARGET_KERNEL_ARCH)/boot/dts $(KERNEL_OUT)/arch/arm/boot/dts
+possible_dtbo_dirs = $(TARGET_OUT_INTERMEDIATES)/KERNEL_OBJ/arch/arm64/boot/dts $(TARGET_OUT_INTERMEDIATES)/KERNEL_OBJ/arch/arm/boot/dts
 $(shell mkdir -p $(possible_dtbo_dirs))
 dtbo_dir = $(firstword $(wildcard $(possible_dtbo_dirs)))
 dtbo_objs = $(shell find $(dtbo_dir) -name \*.dtbo)
@@ -298,4 +298,4 @@ $(BUILT_SYSTEMIMAGE): otavendormod
 endif
 
 #Print PRODUCT_PACKAGES & PRODUCT_PACKAGES_DEBUG to output log
-$(call dump-products)
+#$(call dump-products)
