@@ -267,6 +267,3 @@ otavendormod-nodeps:
 $(BUILT_SYSTEMIMAGE): otavendormod
 
 endif
-
-#Print PRODUCT_PACKAGES & PRODUCT_PACKAGES_DEBUG to output log
-$(call dump-products)
