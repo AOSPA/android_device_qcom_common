@@ -12,16 +12,16 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-# Audio Configuration File
-include $(TOPDIR)vendor/qcom/opensource/audio-hal/primary-hal/configs/qssi/qssi.mk
+# Inherit from QSSI audio makefile.
+include $(TOPDIR)vendor/qcom/opensource/commonsys/audio/configs/qssi/qssi.mk
 
 ifneq ($(TARGET_BOARD_PLATFORM),)
-include $(TOPDIR)vendor/qcom/opensource/audio-hal/primary-hal/configs/$(TARGET_BOARD_PLATFORM)/$(TARGET_BOARD_PLATFORM).mk
+-include $(TOPDIR)vendor/qcom/opensource/audio-hal/primary-hal/configs/$(TARGET_BOARD_PLATFORM)/$(TARGET_BOARD_PLATFORM).mk
 else
 $(error "TARGET_BOARD_PLATFORM is not defined yet. Please define in your device Makefile if you wish to use this component")
 endif
 
-# Override proprietary definitions from QSSI audio HAL Makefile.
+# Override proprietary definitions from QSSI audio makefile.
 AUDIO_FEATURE_ENABLED_AHAL_EXT := false
 
 # Override proprietary definitions from SoC audio HAL Makefiles.
