@@ -14,6 +14,9 @@
 
 DEVICE_FRAMEWORK_MANIFEST_FILE += device/qcom/common/telephony/framework_manifest.xml
 
+# Dependencies
+$(call inherit-product-if-exists, device/qcom/common/diag/qti-diag.mk)
+
 # Radio
 $(call inherit-product-if-exists, vendor/qcom/opensource/data-ipa-cfg-mgr/ipacm_vendor_product.mk)
 
