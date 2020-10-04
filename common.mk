@@ -35,6 +35,10 @@ ifneq (,$(filter bt, $(TARGET_COMMON_QTI_COMPONENTS)))
 include $(DEVICE_PATH)/bt/qti-bt.mk
 endif
 
+ifneq (,$(filter diag, $(TARGET_COMMON_QTI_COMPONENTS)))
+include $(DEVICE_PATH)/diag/qti-diag.mk
+endif
+
 ifneq (,$(filter gps, $(TARGET_COMMON_QTI_COMPONENTS)))
 include $(DEVICE_PATH)/gps/qti-gps.mk
 endif
