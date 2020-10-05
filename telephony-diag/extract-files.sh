@@ -1,4 +1,3 @@
-
 #!/bin/bash
 #
 # Copyright (C) 2018-2019 The LineageOS Project
