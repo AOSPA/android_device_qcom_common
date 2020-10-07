@@ -1,7 +1,7 @@
-system_ext/bin/diag_callback_sample_system
-system_ext/bin/diag_dci_sample_system
-system_ext/bin/test_diag_system
-system_ext/lib/libdiag_system.so
-system_ext/lib/vendor.qti.diaghal@1.0.so
-system_ext/lib64/libdiag_system.so
-system_ext/lib64/vendor.qti.diaghal@1.0.so
+system_ext/bin/diag_callback_sample_system|7348904c53f0357fc81e2bd7b086599eb1b8c5b2
+system_ext/bin/diag_dci_sample_system|babc7fc3c4794bdadccf548a60e4e12a13d1a01d
+system_ext/bin/test_diag_system|9b7f5c067f88af92d927e4061d0ee1a7c2dc365d
+system_ext/lib/libdiag_system.so|5f8b6ec2e9d74474ab7716aa3978a6fb2b4505fa
+system_ext/lib/vendor.qti.diaghal@1.0.so|4b57f8303e027cd2dc21a42edd362d0701fd9682
+system_ext/lib64/libdiag_system.so|8ece526637bb9c7e85d039983121855786444d8c
+system_ext/lib64/vendor.qti.diaghal@1.0.so|3f555ab1ac9ddd16748d9fc6e5f5c98c0ea61bff
