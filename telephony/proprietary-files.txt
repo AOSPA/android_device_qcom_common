@@ -210,6 +210,5 @@ system_ext/lib64/vendor.qti.imsrtpservice@3.0.so
 system_ext/lib64/vendor.qti.latency@2.0.so
 -system_ext/priv-app/dpmserviceapp/dpmserviceapp.apk;PRESIGNED
 -system_ext/priv-app/ims/ims.apk;PRESIGNED
--system_ext/priv-app/QAS_DVC_MSP/QAS_DVC_MSP.apk;PRESIGNED
 -system_ext/priv-app/qcrilmsgtunnel/qcrilmsgtunnel.apk;PRESIGNED
 -system/framework/tcmclient.jar
