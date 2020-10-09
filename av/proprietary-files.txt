@@ -3,9 +3,7 @@ system_ext/lib/libavenhancements.so
 system_ext/lib/libmmosal.so
 system_ext/lib/libmmparser_lite.so
 -system_ext/lib/libqct_resampler.so
--system_ext/lib/vendor.qti.hardware.audiohalext@1.0.so
 system_ext/lib64/extractors/libmmparserextractor.so
 system_ext/lib64/libavenhancements.so
 system_ext/lib64/libmmosal.so
 system_ext/lib64/libmmparser_lite.so
--system_ext/lib64/vendor.qti.hardware.audiohalext@1.0.so
