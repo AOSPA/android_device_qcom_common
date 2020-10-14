@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "90dfa2d0_6b54a8a6",
+        "filename": "audio/qti-audio.mk",
+        "patchSetId": 2
+      },
+      "lineNbr": 25,
+      "author": {
+        "id": 1000012
+      },
+      "writtenOn": "2020-10-14T20:45:14Z",
+      "side": 1,
+      "message": "should we just remove this line?",
+      "revId": "6dc01b2f240eb8b120609e2d8fa74c64fce299e9",
+      "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad",
+      "unresolved": true
+    }
+  ]
+}
