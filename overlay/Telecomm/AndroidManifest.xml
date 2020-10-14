@@ -5,6 +5,6 @@
 
     <overlay
         android:isStatic="true"
-        android:priority="800"
+        android:priority="700"
         android:targetPackage="com.android.server.telecom" />
 </manifest>
