@@ -16,7 +16,8 @@ DEVICE_FRAMEWORK_MANIFEST_FILE += device/qcom/common/wfd/framework_manifest.xml
 
 PRODUCT_PACKAGES += \
     libnl \
-    libwfdaac
+    libwfdaac \
+    libwfdaac_vendor
 
 PRODUCT_BOOT_JARS += \
     WfdCommon
