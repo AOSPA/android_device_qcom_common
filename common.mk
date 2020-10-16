@@ -26,6 +26,20 @@ PRODUCT_PACKAGES += \
     power.qcom
 endif
 
+ifeq ($(TARGET_COMMON_QTI_COMPONENTS), all)
+TARGET_COMMON_QTI_COMPONENTS := \
+    audio \
+    av \
+    bt \
+    display \
+    gps \
+    init \
+    overlay \
+    perf \
+    telephony \
+    wfd
+endif
+
 # QTI common components
 ifneq (,$(filter av, $(TARGET_COMMON_QTI_COMPONENTS)))
 include $(DEVICE_PATH)/av/qti-av.mk
