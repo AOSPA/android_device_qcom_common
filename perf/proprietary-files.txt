@@ -16,6 +16,8 @@ system_ext/lib/libskewknob_system.so
 system_ext/lib/libsmomo.qti.so
 system_ext/lib/vendor.qti.hardware.iop@2.0.so
 system_ext/lib/vendor.qti.hardware.perf@2.0.so
+system_ext/lib/vendor.qti.hardware.perf@2.1.so
+system_ext/lib/vendor.qti.hardware.perf@2.2.so
 system_ext/lib64/libdolphin.so
 system_ext/lib64/libframeextension.so
 system_ext/lib64/liblayerext.qti.so
@@ -29,6 +31,8 @@ system_ext/lib64/libskewknob_system.so
 system_ext/lib64/libsmomo.qti.so
 system_ext/lib64/vendor.qti.hardware.iop@2.0.so
 system_ext/lib64/vendor.qti.hardware.perf@2.0.so
+system_ext/lib64/vendor.qti.hardware.perf@2.1.so
+system_ext/lib64/vendor.qti.hardware.perf@2.2.so
 system/etc/permissions/com.qualcomm.qti.Performance.xml|7976f2fd46b8d07814310cc957a70f829bdd6932
 system/etc/permissions/com.qualcomm.qti.UxPerformance.xml|d92749d80c5d956db8251b08ea6388d3f107a32c
 -system/framework/QPerformance.jar
