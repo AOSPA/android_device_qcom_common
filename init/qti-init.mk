@@ -16,6 +16,9 @@ PRODUCT_SOONG_NAMESPACES += \
     device/qcom/common/init
 
 # Init
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/init/init.qcom.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/hw/init.qcom.rc
+
 PRODUCT_PACKAGES += \
     init.class_main.sh \
     init.crda.sh \
@@ -26,7 +29,6 @@ PRODUCT_PACKAGES += \
     init.qcom.efs.sync.sh \
     init.qcom.factory.rc \
     init.qcom.post_boot.sh \
-    init.qcom.rc \
     init.qcom.sdio.sh \
     init.qcom.sh \
     init.recovery.qcom.rc \

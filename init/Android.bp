@@ -21,13 +21,6 @@ prebuilt_etc {
     vendor: true,
 }
 
-prebuilt_etc {
-    name: "init.qcom.rc",
-    src: "init.qcom.rc",
-    sub_dir: "init/hw",
-    vendor: true,
-}
-
 sh_binary {
     name: "init.class_main.sh",
     src: "init.class_main.sh",
