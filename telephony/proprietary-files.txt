@@ -105,6 +105,9 @@ system_ext/lib/lib-imsvideocodec.so
 system_ext/lib/lib-imsvtextutils.so
 system_ext/lib/lib-imsvt.so
 system_ext/lib/lib-imsvtutils.so
+system_ext/lib/libjnihelpers.so
+system_ext/lib/libmink-sock-native-api.so
+system_ext/lib/libminksocket_system.so
 system_ext/lib/libmmrtpdecoder.so
 system_ext/lib/libmmrtpencoder.so
 system_ext/lib/libqmi_cci_system.so
@@ -177,6 +180,9 @@ system_ext/lib64/lib-imsvideocodec.so
 system_ext/lib64/lib-imsvtextutils.so
 system_ext/lib64/lib-imsvt.so
 system_ext/lib64/lib-imsvtutils.so
+system_ext/lib64/libjnihelpers.so
+system_ext/lib64/libmink-sock-native-api.so
+system_ext/lib64/libminksocket_system.so
 system_ext/lib64/libmmrtpdecoder.so
 system_ext/lib64/libmmrtpencoder.so
 system_ext/lib64/libqmi_cci_system.so
