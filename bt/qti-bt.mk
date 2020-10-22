@@ -12,9 +12,17 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
+DEVICE_MANIFEST_FILE += device/qcom/common/bt/manifest.xml
+
 # Include QTI Bluetooth makefiles.
 include vendor/qcom/opensource/commonsys-intf/bluetooth/bt-commonsys-intf-board.mk
 $(call inherit-product, vendor/qcom/opensource/commonsys-intf/bluetooth/bt-system-opensource-product.mk)
+
+PRODUCT_PACKAGES += \
+    com.dsi.ant@1.0 \
+    com.dsi.ant@1.0.vendor \
+    vendor.qti.hardware.bluetooth_audio@2.0 \
+    vendor.qti.hardware.bluetooth_audio@2.0.vendor
 
 # Permissions
 PRODUCT_COPY_FILES += \
