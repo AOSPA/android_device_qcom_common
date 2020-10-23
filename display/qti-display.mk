@@ -18,8 +18,10 @@ $(error "TARGET_BOARD_PLATFORM is not defined yet. Please define in your device 
 endif
 
 # Include display HAL makefiles.
+ifneq ($(BOARD_VENDORIMAGE_FILE_SYSTEM),)
 include hardware/qcom/display/config/display-board.mk
 include hardware/qcom/display/config/display-product.mk
+endif
 include vendor/qcom/opensource/commonsys-intf/display/config/display-interfaces-product.mk
 include vendor/qcom/opensource/commonsys-intf/display/config/display-product-system.mk
 
