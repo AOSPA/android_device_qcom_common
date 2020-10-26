@@ -3,6 +3,7 @@ system_ext/bin/perfservice
 system_ext/etc/init/perfservice.rc
 system_ext/etc/perf/wlc_model.tflite
 system_ext/etc/seccomp_policy/perfservice.policy
+system_ext/lib/libbeluga.so
 system_ext/lib/libdolphin.so
 system_ext/lib/libframeextension.so
 system_ext/lib/liblayerext.qti.so
@@ -18,6 +19,7 @@ system_ext/lib/vendor.qti.hardware.iop@2.0.so
 system_ext/lib/vendor.qti.hardware.perf@2.0.so
 system_ext/lib/vendor.qti.hardware.perf@2.1.so
 system_ext/lib/vendor.qti.hardware.perf@2.2.so
+system_ext/lib64/libbeluga.so
 system_ext/lib64/libdolphin.so
 system_ext/lib64/libframeextension.so
 system_ext/lib64/liblayerext.qti.so
