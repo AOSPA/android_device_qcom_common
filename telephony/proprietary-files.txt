@@ -185,6 +185,7 @@ system_ext/lib64/libmink-sock-native-api.so
 system_ext/lib64/libminksocket_system.so
 system_ext/lib64/libmmrtpdecoder.so
 system_ext/lib64/libmmrtpencoder.so
+system_ext/lib64/libmsp.so
 system_ext/lib64/libqmi_cci_system.so
 system_ext/lib64/libqmi_encdec_system.so
 system_ext/lib64/libtrigger-handler.so
