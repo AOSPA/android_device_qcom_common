@@ -1,2 +1,2 @@
-product/lib64/libaptXHD_encoder.so|e13fa70c97caaa24d061678bdee608eb8850a69e
-product/lib64/libaptX_encoder.so|df1c89d7af1bb35808d5fe3496b04ba066c10cbc
+-system_ext/app/aptxals/aptxals.apk;PRESIGNED|10f1be6ac85c0ccc5c148e60f63b29c8744cca04
+-system_ext/app/aptxui/aptxui.apk;PRESIGNED|21b9d52635e6e554c2ae1b7d1a9f635f282acb42
