@@ -1,2 +1,4 @@
 -system_ext/app/aptxals/aptxals.apk;PRESIGNED|10f1be6ac85c0ccc5c148e60f63b29c8744cca04
 -system_ext/app/aptxui/aptxui.apk;PRESIGNED|21b9d52635e6e554c2ae1b7d1a9f635f282acb42
+system_ext/lib/com.qualcomm.qti.ant@1.0.so
+system_ext/lib64/com.qualcomm.qti.ant@1.0.so
