@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="a2dp_offload_enabled">true</string>
+    <string name="aptx_adaptive_settings_enabled">false</string>
+    <string name="notification_header">Bluetooth Audio</string>
+    <string name="notification_info_low_latency">Low Latency</string>
+    <string name="notification_prompt_btsetting">Tap for settings</string>
+    <string name="notification_prompt_pending">Play audio to select</string>
+    <string name="notification_prompt_select">Tap to select</string>
+    <string name="pref_cat_aptx_postfix" />
+    <string name="pref_cat_aptx_prefix" />
+    <string name="pref_cat_use96k">Available Sample Rate</string>
+    <string name="pref_label_cat_open_bt_settings">Connect to other devices</string>
+    <string name="pref_label_main">Settings</string>
+    <string name="pref_label_not_available">not available</string>
+    <string name="pref_label_open_bt_settings">Tap to connect another Bluetooth device</string>
+    <string name="pref_label_stream_battery_level_title">Battery Level</string>
+    <string name="pref_label_stream_codec_name">Codec</string>
+    <string name="pref_label_stream_profile_title">Profile</string>
+    <string name="pref_label_stream_sample_rate_title">Sample Rate</string>
+    <string name="pref_label_stream_title">Current stream</string>
+    <string name="pref_label_summary_open_bt_settings">BT Scanning may be disabled</string>
+    <string name="pref_ull_summary_postfix">when available</string>
+    <string name="pref_ull_summary_prefix">Use</string>
+    <string name="pref_ull_title_postfix" />
+    <string name="pref_ull_title_prefix">Enable use of</string>
+    <string name="pref_use96k_summary">Enabling may provide a superior audio experience</string>
+    <string name="pref_use96k_title">Use 96KHz sample when available</string>
+    <string name="ui_app_package_name">com.qualcomm.qtil.aptxui</string>
+    <string name="ui_app_service_class">aptxuiService</string>
+</resources>
