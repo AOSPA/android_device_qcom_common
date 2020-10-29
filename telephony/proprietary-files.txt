@@ -262,7 +262,6 @@ system_ext/lib64/vendor.qti.ims.rcsconfig@2.0.so
 system_ext/lib64/vendor.qti.ims.rcsconfig@2.1.so
 system_ext/lib64/vendor.qti.imsrtpservice@3.0.so
 system_ext/lib64/vendor.qti.latency@2.0.so
--system_ext/priv-app/MSDC_UI/MSDC_UI.apk;PRESIGNED
 -system_ext/priv-app/QAS_DVC_MSP/QAS_DVC_MSP.apk;PRESIGNED
 -system_ext/priv-app/dpmserviceapp/dpmserviceapp.apk;PRESIGNED
 -system_ext/priv-app/ims/ims.apk;PRESIGNED
