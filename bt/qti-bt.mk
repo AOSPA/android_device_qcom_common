@@ -1,4 +1,4 @@
-# Copyright (C) 2020 Paranoid Android
+# Copyright (C) 2021 Paranoid Android
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -12,11 +12,18 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
+PRODUCT_SOONG_NAMESPACES += \
+    device/qcom/common/bt
+
 # Include QTI Bluetooth makefiles.
 ifeq ($(TARGET_FWK_SUPPORTS_FULL_VALUEADDS),true)
 include vendor/qcom/opensource/commonsys-intf/bluetooth/bt-commonsys-intf-board.mk
 $(call inherit-product, vendor/qcom/opensource/commonsys-intf/bluetooth/bt-system-opensource-product.mk)
 endif
+
+# Overlays
+PRODUCT_PACKAGES += \
+    aptxalsOverlay
 
 # Permissions
 PRODUCT_COPY_FILES += \
