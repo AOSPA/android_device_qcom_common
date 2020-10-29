@@ -39,7 +39,6 @@ qcrild_status=true
 case "$baseband" in
     "apq" | "sda" | "qcs" )
     setprop ro.vendor.radio.noril yes
-    stop ril-daemon
     stop vendor.ril-daemon
     stop vendor.qcrild
 esac
@@ -87,12 +86,10 @@ case "$baseband" in
     if [ "$qcrild_status" = "true" ]; then
         # Make sure both rild, qcrild are not running at same time.
         # This is possible with vanilla aosp system image.
-        stop ril-daemon
         stop vendor.ril-daemon
 
         start vendor.qcrild
     else
-        start ril-daemon
         start vendor.ril-daemon
     fi
 
