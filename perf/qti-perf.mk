@@ -26,5 +26,10 @@ PRODUCT_PACKAGES += \
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.vendor.extension_library=libqti-perfd-client.so
 
+# ServiceTracker HAL
+PRODUCT_PACKAGES += \
+    vendor.qti.hardware.servicetracker@1.2-impl \
+    vendor.qti.hardware.servicetracker@1.2-service
+
 # Get non-open-source specific aspects
 $(call inherit-product-if-exists, vendor/qcom/common/perf/perf-vendor.mk)
