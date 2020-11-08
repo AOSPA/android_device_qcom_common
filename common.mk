@@ -23,7 +23,6 @@ DEVICE_PATH := device/qcom/common
 ifneq ($(TARGET_PROVIDES_POWERHAL),true)
 PRODUCT_PACKAGES += \
     android.hardware.power-service \
-    power.qcom
 endif
 
 ifeq ($(TARGET_COMMON_QTI_COMPONENTS), all)
