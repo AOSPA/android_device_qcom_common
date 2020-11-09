@@ -16,6 +16,87 @@
 
 DEVICE_PATH := device/qcom/common
 
+# List of QCOM targets.
+QCOM_BOARD_PLATFORMS += \
+    apq8084 \
+    apq8098_latv \
+    atoll \
+    bengal \
+    kona \
+    lito \
+    mpq8092 \
+    msm8226 \
+    msm8610 \
+    msm8909 \
+    msm8909_512 \
+    msm8916 \
+    msm8916_32 \
+    msm8916_32_512 \
+    msm8916_64 \
+    msm8937 \
+    msm8952 \
+    msm8953 \
+    msm8974 \
+    msm8992 \
+    msm8994 \
+    msm8996 \
+    msm8998 \
+    msmnile \
+    msmnile_au \
+    msm_bronze \
+    qcs605 \
+    sdm660 \
+    sdm710 \
+    sdm845 \
+    sm6150 \
+    trinket
+
+# List of targets that use video hardware.
+MSM_VIDC_TARGET_LIST := \
+    apq8084 \
+    apq8098_latv \
+    atoll \
+    kona \
+    lito \
+    msm8226 \
+    msm8610 \
+    msm8909 \
+    msm8916 \
+    msm8937 \
+    msm8952 \
+    msm8953 \
+    msm8974 \
+    msm8992 \
+    msm8994 \
+    msm8996 \
+    msm8998 \
+    msmnile \
+    qcs605 \
+    sdm660 \
+    sdm710 \
+    sdm845 \
+    sm6150 \
+    trinket
+
+# List of targets that use master side content protection.
+MASTER_SIDE_CP_TARGET_LIST := \
+    apq8098_latv \
+    atoll \
+    bengal \
+    holi \
+    kona \
+    lito \
+    msm8996 \
+    msm8998 \
+    msmnile \
+    qcs605 \
+    sdm660 \
+    sdm710 \
+    sdm845 \
+    sm6150 \
+    trinket
+
+include $(DEVICE_PATH)/utils.mk
 
 # Power
 # Define all modules and they will be filtered out
