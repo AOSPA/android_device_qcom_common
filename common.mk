@@ -118,6 +118,7 @@ TARGET_COMMON_QTI_COMPONENTS := \
     gps \
     init \
     media \
+    nq-nfc \
     overlay \
     perf \
     telephony \
@@ -165,6 +166,10 @@ endif
 
 ifneq (,$(filter media, $(TARGET_COMMON_QTI_COMPONENTS)))
 include $(DEVICE_PATH)/media/qti-media.mk
+endif
+
+ifneq (,$(filter nq-nfc, $(TARGET_COMMON_QTI_COMPONENTS)))
+include $(DEVICE_PATH)/nq-nfc/qti-nq-nfc.mk
 endif
 
 ifneq (,$(filter wfd, $(TARGET_COMMON_QTI_COMPONENTS)))
