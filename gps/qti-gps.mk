@@ -12,6 +12,20 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
+# HIDL
+LOC_HIDL_VERSION ?= 4.0
+
+# Include GPS HAL makefiles.
+include hardware/qcom/gps/gps_vendor_board.mk
+$(call inherit-product, hardware/qcom/gps/gps_vendor_product.mk)
+
+PRODUCT_COPY_FILES += \
+    $(DEVICE_PATH)/gps/sec_config:$(TARGET_COPY_OUT_VENDOR)/etc/sec_config \
+    frameworks/native/data/etc/android.hardware.location.gps.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.location.gps.xml
+
+PRODUCT_PACKAGES += \
+    libjson
+
 # Overlays
 PRODUCT_PACKAGES += \
     QCOMGPSFrameworksOverlay
