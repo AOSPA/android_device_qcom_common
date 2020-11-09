@@ -119,6 +119,7 @@ TARGET_COMMON_QTI_COMPONENTS := \
     overlay \
     perf \
     telephony \
+    usb \
     wfd \
     wlan
 endif
@@ -154,6 +155,10 @@ endif
 
 ifneq (,$(filter telephony, $(TARGET_COMMON_QTI_COMPONENTS)))
 include $(DEVICE_PATH)/telephony/qti-telephony.mk
+endif
+
+ifneq (,$(filter usb, $(TARGET_COMMON_QTI_COMPONENTS)))
+include $(DEVICE_PATH)/usb/qti-usb.mk
 endif
 
 # 845 series and newer
