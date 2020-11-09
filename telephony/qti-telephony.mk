@@ -17,9 +17,6 @@ DEVICE_FRAMEWORK_MANIFEST_FILE += device/qcom/common/telephony/framework_manifes
 # Dependencies
 $(call inherit-product-if-exists, device/qcom/common/telephony-diag/qti-telephony-diag.mk)
 
-# Radio
-$(call inherit-product-if-exists, vendor/qcom/opensource/data-ipa-cfg-mgr/ipacm_vendor_product.mk)
-
 PRODUCT_PACKAGES += \
     CellBroadcastReceiver \
     android.hardware.radio@1.4 \
