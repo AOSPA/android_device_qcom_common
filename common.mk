@@ -16,6 +16,7 @@
 
 DEVICE_PATH := device/qcom/common
 
+include $(DEVICE_PATH)/utils.mk
 
 # Power
 # Define all modules and they will be filtered out
