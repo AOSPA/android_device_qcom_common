@@ -114,6 +114,7 @@ TARGET_COMMON_QTI_COMPONENTS := \
     display \
     gps \
     init \
+    media \
     overlay \
     perf \
     telephony \
@@ -135,6 +136,10 @@ endif
 
 ifneq (,$(filter init, $(TARGET_COMMON_QTI_COMPONENTS)))
 include $(DEVICE_PATH)/init/qti-init.mk
+endif
+
+ifneq (,$(filter media, $(TARGET_COMMON_QTI_COMPONENTS)))
+include $(DEVICE_PATH)/media/qti-media.mk
 endif
 
 ifneq (,$(filter overlay, $(TARGET_COMMON_QTI_COMPONENTS)))
