@@ -16,6 +16,24 @@
       "revId": "513face5f5fce367f9164b8c00959cf3eb5e5170",
       "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "3623bf30_eab7bfa2",
+        "filename": "gps/qti-gps.mk",
+        "patchSetId": 3
+      },
+      "lineNbr": 16,
+      "author": {
+        "id": 1000447
+      },
+      "writtenOn": "2020-11-13T13:53:38Z",
+      "side": 1,
+      "message": "Yea for now until someone can show it doesn\u0027t work on their device, need people to test this change. Don\u0027t think this is for \"all\" devices, but at least 845+ I\u0027d think.",
+      "parentUuid": "2e5bd908_a77e93b1",
+      "revId": "513face5f5fce367f9164b8c00959cf3eb5e5170",
+      "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad",
+      "unresolved": true
     }
   ]
 }
