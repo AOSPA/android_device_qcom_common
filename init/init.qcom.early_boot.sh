@@ -342,6 +342,9 @@ case "$target" in
             441)
                 setprop vendor.fastrpc.disable.cdsprpcd.daemon 1
                 setprop vendor.gralloc.disable_ubwc 1
+
+                # 196609 is decimal for 0x30001 to report version 3.1
+                setprop vendor.opengles.version 196609
                 ;;
             471)
                 #scuba APQ
