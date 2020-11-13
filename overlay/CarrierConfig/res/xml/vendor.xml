@@ -194,11 +194,21 @@ IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.-->
         <boolean name="carrier_wfc_supports_ims_preferred_bool" value="true" />
         <int name="carrier_default_wfc_ims_mode_int" value="1" />
         <int name="carrier_default_wfc_ims_roaming_mode_int" value="1" />
+        <boolean name="fallback_sms_not_allowed_in_roaming" value="true" />
+    </carrier_config>
+
+    <carrier_config mcc="206" mnc="10">
+        <boolean name="fallback_sms_not_allowed_in_roaming" value="true" />
     </carrier_config>
 
     <carrier_config mcc="208" mnc="01">
         <boolean name="carrier_volte_available_bool" value="true" />
         <boolean name="carrier_wfc_ims_available_bool" value="true" />
+        <boolean name="fallback_sms_not_allowed_in_roaming" value="true" />
+    </carrier_config>
+
+    <carrier_config mcc="208" mnc="02">
+        <boolean name="fallback_sms_not_allowed_in_roaming" value="true" />
     </carrier_config>
 
     <carrier_config mcc="208" mnc="09">
@@ -228,6 +238,10 @@ IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.-->
         <boolean name="carrier_volte_available_bool" value="true" />
     </carrier_config>
 
+    <carrier_config mcc="208" mnc="91">
+        <boolean name="fallback_sms_not_allowed_in_roaming" value="true" />
+    </carrier_config>
+
     <carrier_config mcc="214" mnc="01">
         <boolean name="carrier_volte_available_bool" value="true" />
     </carrier_config>
@@ -235,6 +249,7 @@ IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.-->
     <carrier_config mcc="214" mnc="03">
         <boolean name="carrier_volte_available_bool" value="true" />
         <boolean name="carrier_wfc_ims_available_bool" value="true" />
+        <boolean name="fallback_sms_not_allowed_in_roaming" value="true" />
     </carrier_config>
 
     <carrier_config mcc="214" mnc="06">
@@ -244,11 +259,13 @@ IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.-->
     <carrier_config mcc="214" mnc="09">
         <boolean name="carrier_volte_available_bool" value="true" />
         <boolean name="carrier_wfc_ims_available_bool" value="true" />
+        <boolean name="fallback_sms_not_allowed_in_roaming" value="true" />
     </carrier_config>
 
     <carrier_config mcc="214" mnc="11">
         <boolean name="carrier_volte_available_bool" value="true" />
         <boolean name="carrier_wfc_ims_available_bool" value="true" />
+        <boolean name="fallback_sms_not_allowed_in_roaming" value="true" />
     </carrier_config>
 
     <carrier_config mcc="216" mnc="30">
@@ -283,6 +300,7 @@ IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.-->
     <carrier_config mcc="226" mnc="10">
         <boolean name="carrier_volte_available_bool" value="true" />
         <boolean name="carrier_wfc_ims_available_bool" value="true" />
+        <boolean name="fallback_sms_not_allowed_in_roaming" value="true" />
     </carrier_config>
 
     <carrier_config mcc="228" mnc="01">
@@ -308,6 +326,14 @@ IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.-->
         <boolean name="carrier_volte_available_bool" value="true" />
         <boolean name="carrier_vt_available_bool" value="true" />
         <boolean name="carrier_wfc_ims_available_bool" value="true" />
+    </carrier_config>
+
+    <carrier_config mcc="231" mnc="01">
+        <boolean name="fallback_sms_not_allowed_in_roaming" value="true" />
+    </carrier_config>
+
+    <carrier_config mcc="231" mnc="05">
+        <boolean name="fallback_sms_not_allowed_in_roaming" value="true" />
     </carrier_config>
 
     <carrier_config mcc="232" mnc="03">
@@ -533,6 +559,10 @@ IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.-->
         <boolean name="carrier_volte_available_bool" value="true" />
     </carrier_config>
 
+    <carrier_config mcc="259" mnc="01">
+        <boolean name="fallback_sms_not_allowed_in_roaming" value="true" />
+    </carrier_config>
+
     <carrier_config mcc="260" mnc="02">
         <boolean name="carrier_volte_available_bool" value="true" />
         <boolean name="carrier_wfc_ims_available_bool" value="true" />
@@ -544,11 +574,13 @@ IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.-->
     <carrier_config mcc="260" mnc="03">
         <boolean name="carrier_volte_available_bool" value="true" />
         <boolean name="carrier_wfc_ims_available_bool" value="true" />
+        <boolean name="fallback_sms_not_allowed_in_roaming" value="true" />
     </carrier_config>
 
     <carrier_config mcc="260" mnc="05">
         <boolean name="carrier_volte_available_bool" value="true" />
         <boolean name="carrier_wfc_ims_available_bool" value="true" />
+        <boolean name="fallback_sms_not_allowed_in_roaming" value="true" />
     </carrier_config>
 
     <carrier_config mcc="260" mnc="34">
@@ -606,6 +638,10 @@ IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.-->
 
     <carrier_config mcc="268" mnc="01">
         <boolean name="carrier_volte_available_bool" value="true" />
+    </carrier_config>
+
+    <carrier_config mcc="270" mnc="99">
+        <boolean name="fallback_sms_not_allowed_in_roaming" value="true" />
     </carrier_config>
 
     <carrier_config mcc="286" mnc="02">
@@ -2379,6 +2415,30 @@ IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.-->
         <boolean name="rtt_downgrade_supported_bool" value="true"/>
         <boolean name="rtt_auto_upgrade_bool" value="true" />
         <boolean name="carrier_wfc_ims_available_bool" value="true" />
+    </carrier_config>
+
+    <carrier_config mcc="340" mnc="01">
+        <boolean name="fallback_sms_not_allowed_in_roaming" value="true" />
+    </carrier_config>
+
+    <carrier_config mcc="602" mnc="01">
+        <boolean name="fallback_sms_not_allowed_in_roaming" value="true" />
+    </carrier_config>
+
+    <carrier_config mcc="647" mnc="00">
+        <boolean name="fallback_sms_not_allowed_in_roaming" value="true" />
+    </carrier_config>
+
+    <carrier_config mcc="612" mnc="03">
+        <boolean name="fallback_sms_not_allowed_in_roaming" value="true" />
+    </carrier_config>
+
+    <carrier_config mcc="624" mnc="02">
+        <boolean name="fallback_sms_not_allowed_in_roaming" value="true" />
+    </carrier_config>
+
+    <carrier_config mcc="652" mnc="02">
+        <boolean name="fallback_sms_not_allowed_in_roaming" value="true" />
     </carrier_config>
 
     <carrier_config>
