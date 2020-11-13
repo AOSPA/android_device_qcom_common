@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "2e5bd908_a77e93b1",
+        "filename": "gps/qti-gps.mk",
+        "patchSetId": 3
+      },
+      "lineNbr": 16,
+      "author": {
+        "id": 1000465
+      },
+      "writtenOn": "2020-11-13T08:56:14Z",
+      "side": 1,
+      "message": "Do we really want to use 4.0 for all devices? Afaik legacy devices are using 3.0",
+      "revId": "513face5f5fce367f9164b8c00959cf3eb5e5170",
+      "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad",
+      "unresolved": true
+    }
+  ]
+}
