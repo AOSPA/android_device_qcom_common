@@ -16,9 +16,6 @@ PRODUCT_SOONG_NAMESPACES += \
     device/qcom/common/init
 
 # Init
-PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/init/wigignpt.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/wigignpt.rc
-
 PRODUCT_PACKAGES += \
     init.class_main.sh \
     init.crda.sh \
