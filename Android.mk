@@ -1,4 +1,3 @@
-#
 # Copyright (C) 2020 Paranoid Android
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
@@ -12,8 +11,10 @@
 # WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 # See the License for the specific language governing permissions and
 # limitations under the License.
-#
 
 LOCAL_PATH := $(call my-dir)
+
+# Common
+include vendor/qcom/opensource/core-utils/build/AndroidBoardCommon.mk
 
 include $(call all-makefiles-under,$(LOCAL_PATH))
