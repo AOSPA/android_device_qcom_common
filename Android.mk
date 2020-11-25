@@ -14,7 +14,7 @@
 
 LOCAL_PATH := $(call my-dir)
 
+include $(call all-makefiles-under,$(LOCAL_PATH))
+
 # Common
 include vendor/qcom/opensource/core-utils/build/AndroidBoardCommon.mk
-
-include $(call all-makefiles-under,$(LOCAL_PATH))
