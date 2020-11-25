@@ -168,6 +168,7 @@ TARGET_COMMON_QTI_COMPONENTS := \
     perf \
     telephony \
     usb \
+    vibrator \
     wfd \
     wlan
 endif
@@ -210,6 +211,10 @@ endif
 
 ifneq (,$(filter usb, $(TARGET_COMMON_QTI_COMPONENTS)))
 include $(DEVICE_PATH)/usb/qti-usb.mk
+endif
+
+ifneq (,$(filter vibrator, $(TARGET_COMMON_QTI_COMPONENTS)))
+include $(DEVICE_PATH)/vibrator/qti-vibrator.mk
 endif
 
 # 845 series and newer
