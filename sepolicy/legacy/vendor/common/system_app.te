@@ -133,6 +133,7 @@ allow system_app serial_device:chr_file rw_file_perms;
 unix_socket_connect(system_app,bluetooth, bluetooth)
 # access  wcnss_filter from fm app
 #allow system_app wcnss_filter:unix_stream_socket connectto;
+allow system_app fm_radio_device:chr_file r_file_perms;
 
 # ANR
 allow system_app anr_data_file:dir r_dir_perms;
