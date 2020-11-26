@@ -75,6 +75,7 @@ system_ext/etc/spn-conf.xml
 -system_ext/framework/vendor.qti.data.factory-V1.0-java.jar
 -system_ext/framework/vendor.qti.data.factory-V2.0-java.jar
 -system_ext/framework/vendor.qti.data.factory-V2.1-java.jar
+-system_ext/framework/vendor.qti.data.factory-V2.2-java.jar
 -system_ext/framework/vendor.qti.data.mwqem-V1.0-java.jar
 -system_ext/framework/vendor.qti.data.slm-V1.0-java.jar
 -system_ext/framework/vendor.qti.hardware.data.cne.internal.api-V1.0-java.jar
@@ -86,6 +87,7 @@ system_ext/etc/spn-conf.xml
 -system_ext/framework/vendor.qti.hardware.data.iwlan-V1.0-java.jar
 -system_ext/framework/vendor.qti.hardware.data.latency-V1.0-java.jar
 -system_ext/framework/vendor.qti.hardware.data.qmi-V1.0-java.jar
+-system_ext/framework/vendor.qti.hardware.mwqemadapter-V1.0-java.jar
 -system_ext/framework/vendor.qti.hardware.slmadapter-V1.0-java.jar
 -system_ext/framework/vendor.qti.ims.callcapability-V1.0-java.jar
 -system_ext/framework/vendor.qti.ims.callinfo-V1.0-java.jar
@@ -132,6 +134,7 @@ system_ext/lib/libupdateprof.qti.so
 system_ext/lib/vendor.qti.data.factory@1.0.so
 system_ext/lib/vendor.qti.data.factory@2.0.so
 system_ext/lib/vendor.qti.data.factory@2.1.so
+system_ext/lib/vendor.qti.data.factory@2.2.so
 system_ext/lib/vendor.qti.data.mwqem@1.0.so
 system_ext/lib/vendor.qti.data.slm@1.0.so
 system_ext/lib/vendor.qti.hardware.data.cne.internal.api@1.0.so
@@ -143,6 +146,7 @@ system_ext/lib/vendor.qti.hardware.data.dynamicdds@1.0.so
 system_ext/lib/vendor.qti.hardware.data.iwlan@1.0.so
 system_ext/lib/vendor.qti.hardware.data.latency@1.0.so
 system_ext/lib/vendor.qti.hardware.data.qmi@1.0.so
+system_ext/lib/vendor.qti.hardware.mwqemadapter@1.0.so
 system_ext/lib/vendor.qti.hardware.radio.am@1.0.so
 system_ext/lib/vendor.qti.hardware.radio.ims@1.0.so
 system_ext/lib/vendor.qti.hardware.radio.ims@1.1.so
@@ -161,6 +165,7 @@ system_ext/lib/vendor.qti.hardware.radio.qtiradio@2.1.so
 system_ext/lib/vendor.qti.hardware.radio.qtiradio@2.2.so
 system_ext/lib/vendor.qti.hardware.radio.qtiradio@2.3.so
 system_ext/lib/vendor.qti.hardware.radio.qtiradio@2.4.so
+system_ext/lib/vendor.qti.hardware.radio.qtiradio@2.5.so
 system_ext/lib/vendor.qti.hardware.radio.uim@1.0.so
 system_ext/lib/vendor.qti.hardware.radio.uim@1.1.so
 system_ext/lib/vendor.qti.hardware.radio.uim@1.2.so
@@ -220,6 +225,7 @@ system_ext/lib64/libupdateprof.qti.so
 system_ext/lib64/vendor.qti.data.factory@1.0.so
 system_ext/lib64/vendor.qti.data.factory@2.0.so
 system_ext/lib64/vendor.qti.data.factory@2.1.so
+system_ext/lib64/vendor.qti.data.factory@2.2.so
 system_ext/lib64/vendor.qti.data.mwqem@1.0.so
 system_ext/lib64/vendor.qti.data.slm@1.0.so
 system_ext/lib64/vendor.qti.hardware.data.cne.internal.api@1.0.so
@@ -235,6 +241,7 @@ system_ext/lib64/vendor.qti.hardware.embmssl@1.0-adapter-helper.so
 system_ext/lib64/vendor.qti.hardware.embmssl@1.0.so
 system_ext/lib64/vendor.qti.hardware.embmssl@1.1-adapter-helper.so
 system_ext/lib64/vendor.qti.hardware.embmssl@1.1.so
+system_ext/lib64/vendor.qti.hardware.mwqemadapter@1.0.so
 system_ext/lib64/vendor.qti.hardware.radio.am@1.0.so
 system_ext/lib64/vendor.qti.hardware.radio.ims@1.0.so
 system_ext/lib64/vendor.qti.hardware.radio.ims@1.1.so
@@ -253,6 +260,7 @@ system_ext/lib64/vendor.qti.hardware.radio.qtiradio@2.1.so
 system_ext/lib64/vendor.qti.hardware.radio.qtiradio@2.2.so
 system_ext/lib64/vendor.qti.hardware.radio.qtiradio@2.3.so
 system_ext/lib64/vendor.qti.hardware.radio.qtiradio@2.4.so
+system_ext/lib64/vendor.qti.hardware.radio.qtiradio@2.5.so
 system_ext/lib64/vendor.qti.hardware.radio.uim@1.0.so
 system_ext/lib64/vendor.qti.hardware.radio.uim@1.1.so
 system_ext/lib64/vendor.qti.hardware.radio.uim@1.2.so
