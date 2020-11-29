@@ -28,6 +28,10 @@ ifeq ($(call is-board-platform-in-list, apq8084 msm8226 msm8610 msm8974 msm8992 
   TARGET_USES_QCOM_BSP := true
 endif
 
+# Default mount point symlinks to false
+# since they are not used on 8998 and up
+TARGET_MOUNT_POINTS_SYMLINKS ?= false
+
 # SEPolicy
 ifneq ($(TARGET_EXCLUDE_QCOM_SEPOLICY),true)
 ifneq ($(BOARD_VENDORIMAGE_FILE_SYSTEM_TYPE),)
