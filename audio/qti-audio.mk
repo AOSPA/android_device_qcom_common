@@ -21,8 +21,8 @@ else
 $(error "TARGET_BOARD_PLATFORM is not defined yet. Please define in your device Makefile if you wish to use this component")
 endif
 
-# Override proprietary definitions from QSSI audio makefile.
-AUDIO_FEATURE_ENABLED_AHAL_EXT := true
+# Override proprietary definitions from SoC audio makefile.
+AUDIO_FEATURE_ENABLED_AHAL_EXT := false
 
 # Override proprietary definitions from SoC audio HAL Makefiles.
 AUDIO_FEATURE_ENABLED_DYNAMIC_LOG := false
