@@ -239,3 +239,8 @@ endif
 ifneq (,$(filter wfd-legacy, $(TARGET_COMMON_QTI_COMPONENTS)))
 include $(DEVICE_PATH)/wfd-legacy/qti-wfd-legacy.mk
 endif
+
+# Default mount point symlinks to false
+# since they are not used on 8998 and up
+TARGET_MOUNT_POINTS_SYMLINKS ?= false
+
