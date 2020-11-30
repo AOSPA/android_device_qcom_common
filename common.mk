@@ -166,6 +166,7 @@ TARGET_COMMON_QTI_COMPONENTS := \
     nq-nfc \
     overlay \
     perf \
+    servicetracker \
     telephony \
     usb \
     vibrator \
@@ -196,6 +197,10 @@ endif
 
 ifneq (,$(filter perf, $(TARGET_COMMON_QTI_COMPONENTS)))
 include $(DEVICE_PATH)/perf/qti-perf.mk
+endif
+
+ifneq (,$(filter servicetracker, $(TARGET_COMMON_QTI_COMPONENTS)))
+include $(DEVICE_PATH)/servicetracker/qti-servicetracker.mk
 endif
 
 ifneq (,$(filter telephony, $(TARGET_COMMON_QTI_COMPONENTS)))
