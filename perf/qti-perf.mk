@@ -20,7 +20,8 @@ PRODUCT_BOOT_JARS += \
 # Packages
 PRODUCT_PACKAGES += \
     android.hardware.thermal@2.0 \
-    libtflite
+    libtflite \
+    vendor.qti.hardware.servicetracker@1.2.vendor
 
 # Properties
 PRODUCT_PROPERTY_OVERRIDES += \
