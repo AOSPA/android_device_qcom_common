@@ -16,6 +16,24 @@
       "revId": "c79b35a63ce8e350f7d1dfc8668bcd39a6e0eaa7",
       "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "e1b28d1e_d13ffc2d",
+        "filename": "audio/qti-audio.mk",
+        "patchSetId": 1
+      },
+      "lineNbr": 30,
+      "author": {
+        "id": 1000488
+      },
+      "writtenOn": "2020-12-01T04:10:38Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "831c700b_f4d3a0e1",
+      "revId": "c79b35a63ce8e350f7d1dfc8668bcd39a6e0eaa7",
+      "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad",
+      "unresolved": false
     }
   ]
 }
