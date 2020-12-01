@@ -12,7 +12,12 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-DEVICE_FRAMEWORK_MANIFEST_FILE += device/qcom/common/telephony/framework_manifest.xml
+# HIDL
+DEVICE_FRAMEWORK_MANIFEST_FILE += \
+    $(DEVICE_PATH)/telephony/framework_manifest.xml
+
+DEVICE_MANIFEST_FILE += \
+    $(DEVICE_PATH)/telephony/manifest.xml
 
 # IPACM
 $(call inherit-product, vendor/qcom/opensource/data-ipa-cfg-mgr/ipacm_vendor_product.mk)
@@ -20,6 +25,10 @@ $(call inherit-product, vendor/qcom/opensource/data-ipa-cfg-mgr/ipacm_vendor_pro
 # Dependencies
 $(call inherit-product-if-exists, device/qcom/common/telephony-diag/qti-telephony-diag.mk)
 
+# Disable default RILD.
+ENABLE_VENDOR_RIL_SERVICE := true
+
+# Packages
 PRODUCT_PACKAGES += \
     CellBroadcastReceiver \
     android.hardware.radio@1.4 \
@@ -27,6 +36,10 @@ PRODUCT_PACKAGES += \
     android.hardware.radio.deprecated@1.0 \
     libjson \
     librmnetctl
+
+# Properties
+TARGET_VENDOR_PROP += \
+    $(DEVICE_PATH)/telephony/vendor.prop
 
 # Get non-open-source specific aspects.
 $(call inherit-product-if-exists, vendor/qcom/common/telephony/telephony-vendor.mk)
