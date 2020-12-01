@@ -27,6 +27,8 @@ PRODUCT_COPY_FILES += \
 
 # Packages
 PRODUCT_PACKAGES += \
+    libcodec2_vndk.vendor \
+    libcodec2_hidl@1.0.vendor \
     libgui_vendor \
     libstagefright_softomx.vendor
 
