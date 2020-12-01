@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "831c700b_f4d3a0e1",
+        "filename": "audio/qti-audio.mk",
+        "patchSetId": 1
+      },
+      "lineNbr": 30,
+      "author": {
+        "id": 1000012
+      },
+      "writtenOn": "2020-12-01T03:40:09Z",
+      "side": 1,
+      "message": "These duplicated comments seem useless",
+      "revId": "c79b35a63ce8e350f7d1dfc8668bcd39a6e0eaa7",
+      "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad",
+      "unresolved": true
+    }
+  ]
+}
