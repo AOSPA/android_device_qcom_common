@@ -25,7 +25,6 @@ vendor/lib64/libqcodec2_v4l2codec.so
 vendor/bin/mm-vidc-omx-test
 vendor/lib/libI420colorconvert.so
 -vendor/lib/libMpeg4SwEncoder.so
-vendor/lib/libOmxVenc.so
 vendor/lib/libfastcrc.so
 vendor/lib/libmm-color-convertor.so
 vendor/lib/libstreamparser.so
@@ -34,7 +33,6 @@ vendor/lib/libvideooptfeature.so
 vendor/lib/libvideoutils.so
 vendor/lib64/libI420colorconvert.so
 -vendor/lib64/libMpeg4SwEncoder.so
-vendor/lib64/libOmxVenc.so
 vendor/lib64/libmm-color-convertor.so
 vendor/lib64/libswvdec.so
 vendor/lib64/libvideooptfeature.so
