@@ -4,6 +4,8 @@ vendor/etc/init/vendor.qti.media.c2@1.0-service.rc
 -vendor/etc/vintf/manifest/c2_manifest_vendor.xml
 vendor/etc/media_codecs_c2.xml
 vendor/etc/media_codecs_performance_c2.xml
+vendor/etc/seccomp_policy/codec2.vendor.ext-arm.policy
+vendor/etc/seccomp_policy/codec2.vendor.base-arm.policy
 vendor/lib/libOmxSwVdec.so
 vendor/lib/libOmxSwVencMpeg4.so
 vendor/lib/libqcodec2_base.so
