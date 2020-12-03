@@ -1,5 +1,5 @@
--system_ext/app/PerformanceMode/PerformanceMode.apk;PRESIGNED
--system_ext/app/workloadclassifier/workloadclassifier.apk;PRESIGNED
+-system_ext/app/PerformanceMode/PerformanceMode.apk
+-system_ext/app/workloadclassifier/workloadclassifier.apk
 system_ext/bin/perfservice
 system_ext/bin/qspmsvc
 system_ext/etc/init/perfservice.rc

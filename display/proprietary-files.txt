@@ -1,6 +1,6 @@
 product/etc/permissions/com.qti.snapdragon.sdk.display.xml
 -product/framework/com.qti.snapdragon.sdk.display.jar
--system_ext/app/colorservice/colorservice.apk;PRESIGNED
+-system_ext/app/colorservice/colorservice.apk
 system_ext/lib/libsd_sdk_display.qti.so
 system_ext/lib/libsdm-disp-apis.qti.so
 system_ext/lib/vendor.display.color@1.0.so
