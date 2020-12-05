@@ -25,7 +25,7 @@
     <integer name="OtaShowListeningScreen">1</integer>
 
     <!-- Flag indicating if the phone is a world phone -->
-    <bool name="world_phone">true</bool>
+    <bool name="world_phone">false</bool>
 
     <!-- Flag indicating if dtmf tone type is enabled -->
     <bool name="dtmf_type_enabled">true</bool>
