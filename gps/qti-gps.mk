@@ -12,9 +12,17 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
+# Inherit the GPS Hal.
+$(call inherit-product-if-exists, hardware/qcom/gps/gps_vendor_product.mk)
+-include hardware/qcom/gps/gps_vendor_board.mk 
+
 # Overlays
 PRODUCT_PACKAGES += \
     QCOMGPSFrameworksOverlay
+
+# Permissions
+PRODUCT_COPY_FILES += \
+    frameworks/native/data/etc/android.hardware.location.gps.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.location.gps.xml
 
 # Get non-open-source specific aspects.
 $(call inherit-product-if-exists, vendor/qcom/common/gps/gps-vendor.mk)
