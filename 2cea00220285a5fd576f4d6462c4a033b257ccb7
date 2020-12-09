@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "f9d3aaaa_ec40e755",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 8
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000488
+      },
+      "writtenOn": "2020-12-09T12:51:34Z",
+      "side": 1,
+      "message": "\u003e Patch Set 8:\n\u003e \n\u003e The problem i see here is that the 1.2 qti inplementation is built by the inclusion above your change\n\nyes it is. CAF by default filters out 4.14 and 4.9 kernel devices and does not built qti usb",
+      "revId": "2cea00220285a5fd576f4d6462c4a033b257ccb7",
+      "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
+    }
+  ]
+}
