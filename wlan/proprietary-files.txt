@@ -34,6 +34,7 @@ vendor/lib64/vendor.qti.hardware.wigig.supptunnel@1.0.so
 
 # WLAN
 vendor/bin/athdiag
+vendor/bin/cfrtool
 vendor/bin/cnss-daemon
 vendor/bin/cnss_diag
 vendor/bin/hal_proxy_daemon
