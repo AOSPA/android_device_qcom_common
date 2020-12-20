@@ -27,6 +27,7 @@ AUDIO_FEATURE_ENABLED_AHAL_EXT := false
 # Override proprietary definitions from SoC audio HAL Makefiles.
 AUDIO_FEATURE_ENABLED_DYNAMIC_LOG := false
 AUDIO_FEATURE_ENABLED_SSR := false
+BOARD_SUPPORTS_OPENSOURCE_STHAL := false
 
 PRODUCT_PACKAGES += \
     libaudiohal
