@@ -46,6 +46,7 @@ system_ext/lib64/vendor.qti.hardware.perf@2.2.so
 system_ext/lib64/vendor.qti.qspmhal@1.0.so
 system/etc/permissions/com.qualcomm.qti.Performance.xml|7976f2fd46b8d07814310cc957a70f829bdd6932
 system/etc/permissions/com.qualcomm.qti.UxPerformance.xml|d92749d80c5d956db8251b08ea6388d3f107a32c
+-system/framework/QXPerformance.jar
 -system/framework/QPerformance.jar
 -system/framework/UxPerformance.jar
 vendor/bin/hw/vendor.qti.hardware.servicetracker@1.2-service
