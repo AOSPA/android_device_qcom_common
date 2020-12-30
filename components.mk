@@ -20,6 +20,7 @@ TARGET_COMMON_QTI_COMPONENTS := \
     display \
     gps \
     init \
+    light \
     media \
     nq-nfc \
     overlay \
@@ -46,6 +47,10 @@ endif
 
 ifneq (,$(filter init, $(TARGET_COMMON_QTI_COMPONENTS)))
 include $(DEVICE_PATH)/init/qti-init.mk
+endif
+
+ifneq (,$(filter light, $(TARGET_COMMON_QTI_COMPONENTS)))
+include $(DEVICE_PATH)/light/qti-light.mk
 endif
 
 ifneq (,$(filter overlay, $(TARGET_COMMON_QTI_COMPONENTS)))
