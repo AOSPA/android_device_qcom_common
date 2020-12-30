@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "a6b47820_e249dde9",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000488
+      },
+      "writtenOn": "2020-12-30T18:57:53Z",
+      "side": 1,
+      "message": "don\u0027t think there is a need for this. Let\u0027s keep a standard to follow in this repo, considering every other component is in Makefile",
+      "revId": "01e558c9de137ae58726a092326f469db5a9686c",
+      "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
+    }
+  ]
+}
