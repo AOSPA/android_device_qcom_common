@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "6bd9de1d_4d4c227d",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000012
+      },
+      "writtenOn": "2020-12-30T20:10:00Z",
+      "side": 1,
+      "message": "tell me about this compared to the AIDL HAL in device/qcom/vendor-common",
+      "revId": "69acf9b235980f80321805f1abadedfc1ed84273",
+      "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
+    }
+  ]
+}
