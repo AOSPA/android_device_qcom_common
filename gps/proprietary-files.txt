@@ -1,10 +1,13 @@
 system_ext/etc/permissions/com.qti.location.sdk.xml
 system_ext/etc/permissions/com.qualcomm.location.xml
+system_ext/etc/permissions/com.qualcomm.qmapbridge.xml
 system_ext/etc/permissions/com.qualcomm.qti.izattools.xml
 system_ext/etc/permissions/izat.xt.srv.xml
 system_ext/etc/permissions/privapp-permissions-com.qualcomm.location.xml
 -system_ext/framework/com.qti.location.sdk.jar
 -system_ext/framework/izat.xt.srv.jar
+-system_ext/framework/qmapbridge.jar
+system_ext/lib/libloc2jnibridge.so
 system_ext/lib/vendor.qti.gnss@1.0.so
 system_ext/lib/vendor.qti.gnss@1.1.so
 system_ext/lib/vendor.qti.gnss@1.2.so
@@ -12,6 +15,7 @@ system_ext/lib/vendor.qti.gnss@2.0.so
 system_ext/lib/vendor.qti.gnss@2.1.so
 system_ext/lib/vendor.qti.gnss@3.0.so
 system_ext/lib/vendor.qti.gnss@4.0.so
+system_ext/lib64/libloc2jnibridge.so
 system_ext/lib64/vendor.qti.gnss@1.0.so
 system_ext/lib64/vendor.qti.gnss@1.1.so
 system_ext/lib64/vendor.qti.gnss@1.2.so

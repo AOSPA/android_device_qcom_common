@@ -45,6 +45,7 @@ system_ext/etc/permissions/uimremoteserver.xml
 system_ext/etc/permissions/UimGba.xml
 system_ext/etc/permissions/UimGbaManager.xml
 system_ext/etc/permissions/UimService.xml
+system_ext/etc/sysconfig/qti_whitelist_system_ext.xml
 system_ext/etc/cdma_call_conf.xml
 system_ext/etc/spn-conf.xml
 -system_ext/framework/ActivityExt.jar
