@@ -127,9 +127,9 @@ system_ext/lib/libmink-sock-native-api.so
 system_ext/lib/libminksocket_system.so
 system_ext/lib/libmmrtpdecoder.so
 system_ext/lib/libmmrtpencoder.so
+system_ext/lib/libmwqemiptablemgr.so
 system_ext/lib/libqmi_cci_system.so
 system_ext/lib/libqmi_encdec_system.so
-system_ext/lib/libslmiptablemgr.so
 system_ext/lib/libtrigger-handler.so
 system_ext/lib/libupdateprof.qti.so
 system_ext/lib/vendor.qti.data.factory@1.0.so
@@ -218,9 +218,9 @@ system_ext/lib64/libminksocket_system.so
 system_ext/lib64/libmmrtpdecoder.so
 system_ext/lib64/libmmrtpencoder.so
 system_ext/lib64/libmsp.so
+system_ext/lib64/libmwqemiptablemgr.so
 system_ext/lib64/libqmi_cci_system.so
 system_ext/lib64/libqmi_encdec_system.so
-system_ext/lib64/libslmiptablemgr.so
 system_ext/lib64/libtrigger-handler.so
 system_ext/lib64/libupdateprof.qti.so
 system_ext/lib64/vendor.qti.data.factory@1.0.so
