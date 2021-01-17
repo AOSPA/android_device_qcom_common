@@ -28,5 +28,8 @@ PRODUCT_PACKAGES += \
     libjson \
     librmnetctl
 
+PRODUCT_SYSTEM_EXT_PROPERTIES += \
+    persist.vendor.dpm.feature=11
+
 # Get non-open-source specific aspects.
 $(call inherit-product-if-exists, vendor/qcom/common/telephony/telephony-vendor.mk)
