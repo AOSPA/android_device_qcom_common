@@ -16,6 +16,23 @@
       "message": "not sure about this. some devices use different values.",
       "revId": "6d6ae9eac6acaa7c59f5228df1fb98a3a688ef17",
       "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "27a06d01_6b482fdf",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000012
+      },
+      "writtenOn": "2021-01-17T08:36:08Z",
+      "side": 1,
+      "message": "#0 Disable all DPM feature\n#1 enable fast dormancy (FD)\n#2 enable connection tracking (CT)\n#4 enable network socket request manager (NSRM)\n#8 Enable TCP connection manager (TCM)",
+      "revId": "6d6ae9eac6acaa7c59f5228df1fb98a3a688ef17",
+      "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
     }
   ]
 }
