@@ -14,6 +14,9 @@
 
 DEVICE_FRAMEWORK_MANIFEST_FILE += device/qcom/common/telephony/framework_manifest.xml
 
+# Data Services
+$(call inherit-product, vendor/qcom/opensource/dataservices/dataservices_vendor_product.mk)
+
 # IPACM
 $(call inherit-product, vendor/qcom/opensource/data-ipa-cfg-mgr/ipacm_vendor_product.mk)
 
@@ -25,8 +28,7 @@ PRODUCT_PACKAGES += \
     android.hardware.radio@1.5 \
     android.hardware.radio.config@1.2 \
     android.hardware.radio.deprecated@1.0 \
-    libjson \
-    librmnetctl
+    libjson
 
 PRODUCT_SYSTEM_EXT_PROPERTIES += \
     persist.vendor.dpm.feature=11
