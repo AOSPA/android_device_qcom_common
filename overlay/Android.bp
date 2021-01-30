@@ -14,10 +14,3 @@
 
 soong_namespace {
 }
-
-prebuilt_etc {
-    name: "init.aospa.usb.rc",
-    src: "init.aospa.usb.rc",
-    sub_dir: "init",
-    vendor: true,
-}
