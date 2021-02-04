@@ -33,6 +33,23 @@
       "message": "\n                          Jank Frames     Bad Frames\nImage List View Fling:    0.00 -\u003e 0.01    0.13% -\u003e 0.24%\nList View Fling:          0.03 -\u003e 0.03    0.15% -\u003e 0.16%\nShadow Grid Fling:        0.01 -\u003e 0.01    0.44% -\u003e 0.46%\n",
       "revId": "66fd58f067df3ed09584d883c603029f74db60a7",
       "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "da19bebc_e6e29169",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000447
+      },
+      "writtenOn": "2021-02-04T08:19:47Z",
+      "side": 1,
+      "message": "After seeing the results from a few devices, can conclude this isn\u0027t something we want at least globally.",
+      "revId": "66fd58f067df3ed09584d883c603029f74db60a7",
+      "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
     }
   ]
 }
