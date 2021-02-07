@@ -179,7 +179,7 @@ $(KBUILD_TARGET): kbuild_out_dir := $(KBUILD_OUT_DIR)
 $(KBUILD_TARGET): $(TARGET_PREBUILT_INT_KERNEL) $(GKI_TARGET_PREBUILT_KERNEL) $(LOCAL_ADDITIONAL_DEPENDENCIES) $(KBUILD_TARGET_GKI)
 	@mkdir -p $(kbuild_out_dir)
 	$(hide) cp -f $(local_path)/Kbuild $(kbuild_out_dir)/Kbuild
-	$(MAKE) -C $(KERNEL_OUT) M=$(KERNEL_TO_BUILD_ROOT_OFFSET)$(local_path) ARCH=$(KERNEL_ARCH) CROSS_COMPILE=$(KERNEL_CROSS_COMPILE) $(real_cc) $(KERNEL_CFLAGS) modules $(kbuild_options) ANDROID_BUILD_TOP=$$(pwd)
+	$(MAKE) -C $(KERNEL_OUT) M=$(KERNEL_TO_BUILD_ROOT_OFFSET)$(local_path) ARCH=$(KERNEL_ARCH) CROSS_COMPILE=$(KERNEL_CROSS_COMPILE) CROSS_COMPILE_ARM32=$(TARGET_KERNEL_CROSS_COMPILE_ARM32_PREFIX) $(real_cc) $(KERNEL_CFLAGS) modules $(kbuild_options) ANDROID_BUILD_TOP=$$(pwd)
 	touch $@
 
 # Define a target to build buildko.timestamp for gki modules as well.
@@ -197,7 +197,7 @@ ifneq ($(GKI_KERNEL_OUT),)
 	rm -rf $(kbuild_out_dir)
 	mkdir -p $(kbuild_out_dir)
 	$(hide) cp -f $(local_path)/Kbuild $(kbuild_out_dir)/Kbuild
-	$(MAKE) -C $(GKI_KERNEL_OUT) M=$(KERNEL_TO_BUILD_ROOT_OFFSET)$(local_path) ARCH=$(KERNEL_ARCH) CROSS_COMPILE=$(KERNEL_CROSS_COMPILE) $(real_cc) $(KERNEL_CFLAGS) modules $(kbuild_options_gki) ANDROID_BUILD_TOP=$$(pwd)
+	$(MAKE) -C $(GKI_KERNEL_OUT) M=$(KERNEL_TO_BUILD_ROOT_OFFSET)$(local_path) ARCH=$(KERNEL_ARCH) CROSS_COMPILE=$(KERNEL_CROSS_COMPILE) CROSS_COMPILE_ARM32=$(TARGET_KERNEL_CROSS_COMPILE_ARM32_PREFIX) $(real_cc) $(KERNEL_CFLAGS) modules $(kbuild_options_gki) ANDROID_BUILD_TOP=$$(pwd)
 	@mkdir -p $(TARGET_OUT_INTERMEDIATES)/tmp_$(local_module)
 	mv $(kbuild_out_dir)/* $(TARGET_OUT_INTERMEDIATES)/tmp_$(local_module)
 	@mkdir -p $(kbuild_out_dir_gki)
