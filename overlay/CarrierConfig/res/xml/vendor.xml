@@ -2071,6 +2071,7 @@ IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.-->
         <boolean name="carrier_name_override_bool" value="false" />
         <string name="carrier_name_string"></string>
         <boolean name="carrier_allow_turnoff_ims_bool" value="false"/>
+        <boolean name="require_apn_filtering_with_radio_capability_bool" value="true"/>
     </carrier_config>
 
     <carrier_config mcc="310" mnc="560">
