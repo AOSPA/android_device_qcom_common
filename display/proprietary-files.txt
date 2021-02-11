@@ -1,3 +1,5 @@
+product/bin/init.qti.display.sh
+product/etc/init/init.qti.display.rc
 product/etc/permissions/com.qti.snapdragon.sdk.display.xml
 -product/framework/com.qti.snapdragon.sdk.display.jar
 -system_ext/app/colorservice/colorservice.apk
