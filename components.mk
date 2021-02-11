@@ -1,4 +1,4 @@
-# Copyright 2020 Paranoid Android
+# Copyright 2021 Paranoid Android
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -14,6 +14,7 @@
 
 ifeq ($(TARGET_COMMON_QTI_COMPONENTS), all)
 TARGET_COMMON_QTI_COMPONENTS := \
+    adreno \
     audio \
     av \
     bt \
@@ -69,6 +70,10 @@ include $(DEVICE_PATH)/vibrator/qti-vibrator.mk
 endif
 
 # SDM845+
+ifneq (,$(filter adreno, $(TARGET_COMMON_QTI_COMPONENTS)))
+include $(DEVICE_PATH)/adreno/qti-adreno.mk
+endif
+
 ifneq (,$(filter audio, $(TARGET_COMMON_QTI_COMPONENTS)))
 include $(DEVICE_PATH)/audio/qti-audio.mk
 endif
