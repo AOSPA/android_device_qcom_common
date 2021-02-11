@@ -25,7 +25,8 @@ PRODUCT_PACKAGES += \
 
 # Properties
 PRODUCT_PROPERTY_OVERRIDES += \
-    ro.vendor.extension_library=libqti-perfd-client.so
+    ro.vendor.extension_library=libqti-perfd-client.so \
+    vendor.power.pasr.enabled=true
 
 # Get non-open-source specific aspects
 $(call inherit-product-if-exists, vendor/qcom/common/perf/perf-vendor.mk)
