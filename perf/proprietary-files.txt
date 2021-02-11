@@ -21,6 +21,7 @@ system_ext/lib64/libqti-util_system.so
 system_ext/lib64/libqti_workloadclassifiermodel.so
 system_ext/lib64/libskewknob_system.so
 system_ext/lib64/libsmomo.qti.so
+system_ext/lib64/libsmomoconfig.qti.so
 system_ext/lib64/vendor.qti.hardware.iop@2.0.so
 system_ext/lib64/vendor.qti.hardware.perf@2.0.so
 system_ext/lib64/vendor.qti.hardware.perf@2.1.so

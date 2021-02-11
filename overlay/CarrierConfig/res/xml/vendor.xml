@@ -1503,6 +1503,8 @@ IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.-->
         <boolean name="support_adhoc_conference_calls_bool" value="true" />
         <boolean name="support_add_conference_participants_bool" value="true" />
         <boolean name="carrier_allow_transfer_ims_call_bool" value="false" />
+        <boolean name="carrier_video_crs_supported_bool" value="true" />
+        <boolean name="carrier_call_progress_notification" value="true" />
     </carrier_config>
 
     <carrier_config mcc="460" mnc="01">
@@ -1536,6 +1538,7 @@ IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.-->
         <boolean name="allow_add_call_during_video_call" value="false" />
         <boolean name="allow_hold_video_call_bool" value="false" />
         <boolean name="carrier_allow_transfer_ims_call_bool" value="false" />
+        <boolean name="carrier_video_crs_supported_bool" value="true" />
     </carrier_config>
 
     <carrier_config mcc="460" mnc="02">
@@ -1591,6 +1594,8 @@ IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.-->
         <boolean name="support_adhoc_conference_calls_bool" value="true" />
         <boolean name="support_add_conference_participants_bool" value="true" />
         <boolean name="carrier_allow_transfer_ims_call_bool" value="false" />
+        <boolean name="carrier_video_crs_supported_bool" value="true" />
+        <boolean name="carrier_call_progress_notification" value="true" />
     </carrier_config>
 
     <carrier_config mcc="460" mnc="03">
@@ -1693,6 +1698,7 @@ IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.-->
         <boolean name="allow_add_call_during_video_call" value="false" />
         <boolean name="allow_hold_video_call_bool" value="false" />
         <boolean name="carrier_allow_transfer_ims_call_bool" value="false" />
+        <boolean name="carrier_video_crs_supported_bool" value="true" />
     </carrier_config>
 
     <carrier_config mcc="460" mnc="07">
@@ -1747,6 +1753,8 @@ IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.-->
         <boolean name="support_adhoc_conference_calls_bool" value="true" />
         <boolean name="support_add_conference_participants_bool" value="true" />
         <boolean name="carrier_allow_transfer_ims_call_bool" value="false" />
+        <boolean name="carrier_video_crs_supported_bool" value="true" />
+        <boolean name="carrier_call_progress_notification" value="true" />
     </carrier_config>
 
     <carrier_config mcc="460" mnc="08">
@@ -1800,6 +1808,8 @@ IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.-->
         <boolean name="support_adhoc_conference_calls_bool" value="true" />
         <boolean name="support_add_conference_participants_bool" value="true" />
         <boolean name="carrier_allow_transfer_ims_call_bool" value="false" />
+        <boolean name="carrier_video_crs_supported_bool" value="true" />
+        <boolean name="carrier_call_progress_notification" value="true" />
     </carrier_config>
 
     <carrier_config mcc="460" mnc="09">
@@ -1828,6 +1838,7 @@ IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.-->
         <boolean name="allow_add_call_during_video_call" value="false" />
         <boolean name="allow_hold_video_call_bool" value="false" />
         <boolean name="carrier_allow_transfer_ims_call_bool" value="false" />
+        <boolean name="carrier_video_crs_supported_bool" value="true" />
     </carrier_config>
 
     <carrier_config mcc="460" mnc="10">
@@ -2071,6 +2082,7 @@ IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.-->
         <boolean name="carrier_name_override_bool" value="false" />
         <string name="carrier_name_string"></string>
         <boolean name="carrier_allow_turnoff_ims_bool" value="false"/>
+        <boolean name="require_apn_filtering_with_radio_capability_bool" value="true"/>
     </carrier_config>
 
     <carrier_config mcc="310" mnc="560">
