@@ -9,15 +9,12 @@ system_ext/lib64/vendor.qti.hardware.wigig.supptunnel@1.0.so
 vendor/bin/ftm_flows_test
 vendor/bin/ftmtest
 vendor/bin/host_manager_11ad
-vendor/bin/sensingdaemon
 vendor/bin/shell_11ad
 vendor/bin/wigig_wiburn
 vendor/bin/wigighalsvc
 vendor/bin/wigignpt
 vendor/etc/configstore/wigig.xml
-vendor/etc/init/hw/init.target.wigig.rc
 vendor/etc/init/vendor.qti.hardware.wigig.supptunnel@1.0-service.rc
-vendor/etc/sensors/config/wigig_sensing_0.json
 vendor/etc/wifi/aoa_cldb_falcon.bin
 vendor/etc/wifi/aoa_cldb_swl14.bin
 vendor/etc/wifi/wigig_p2p_supplicant.conf
@@ -28,7 +25,6 @@ vendor/lib64/libwigig_flashaccess.so
 vendor/lib64/libwigig_ftm_flows.so
 vendor/lib64/libwigig_pciaccess.so
 vendor/lib64/libwigig_utils.so
-vendor/lib64/libwigigsensing.so
 vendor/lib64/vendor.qti.hardware.wigig.netperftuner@1.0.so
 vendor/lib64/vendor.qti.hardware.wigig.supptunnel@1.0.so
 
