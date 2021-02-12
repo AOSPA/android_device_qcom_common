@@ -1,4 +1,4 @@
-# Copyright (C) 2020 Paranoid Android
+# Copyright (C) 2021 Paranoid Android
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -30,6 +30,11 @@ AUDIO_FEATURE_ENABLED_SSR := false
 BOARD_SUPPORTS_OPENSOURCE_STHAL := false
 
 PRODUCT_PACKAGES += \
+    libOmxAacEnc \
+    libOmxAmrEnc \
+    libOmxEvrcEnc \
+    libOmxG711Enc \
+    libOmxQcelp13Enc \
     libaudiohal
 
 # Get non-open-source specific aspects.

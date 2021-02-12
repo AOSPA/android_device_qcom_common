@@ -31,4 +31,4 @@ PRODUCT_PACKAGES += \
     libstagefright_softomx.vendor
 
 # Get non-open-source specific aspects.
-$(call inherit-product-if-exists, vendor/qcom/common/media/media-vendor.mk)
+$(call inherit-product-if-exists, vendor/qcom/common/media-legacy/media-legacy-vendor.mk)
