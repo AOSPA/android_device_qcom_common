@@ -21,7 +21,6 @@ TARGET_COMMON_QTI_COMPONENTS := \
     display \
     gps \
     init \
-    media \
     nq-nfc \
     overlay \
     perf \
@@ -30,6 +29,12 @@ TARGET_COMMON_QTI_COMPONENTS := \
     vibrator \
     wfd \
     wlan
+
+ifeq ($(call is-board-platform-in-list,$(5_4_FAMILY)),true)
+TARGET_COMMON_QTI_COMPONENTS += media
+else
+TARGET_COMMON_QTI_COMPONENTS += media-legacy
+endif
 endif
 
 # QTI Common Components
@@ -69,7 +74,18 @@ ifneq (,$(filter vibrator, $(TARGET_COMMON_QTI_COMPONENTS)))
 include $(DEVICE_PATH)/vibrator/qti-vibrator.mk
 endif
 
+# <= SM8350
+ifneq (,$(filter media, $(TARGET_COMMON_QTI_COMPONENTS)))
+include $(DEVICE_PATH)/media/qti-media.mk
+endif
+
+# >= SM8250
+ifneq (,$(filter media-legacy, $(TARGET_COMMON_QTI_COMPONENTS)))
+include $(DEVICE_PATH)/media-legacy/qti-media-legacy.mk
+endif
+
 # SDM845+
+
 ifneq (,$(filter adreno, $(TARGET_COMMON_QTI_COMPONENTS)))
 include $(DEVICE_PATH)/adreno/qti-adreno.mk
 endif
@@ -80,10 +96,6 @@ endif
 
 ifneq (,$(filter display, $(TARGET_COMMON_QTI_COMPONENTS)))
 include $(DEVICE_PATH)/display/qti-display.mk
-endif
-
-ifneq (,$(filter media, $(TARGET_COMMON_QTI_COMPONENTS)))
-include $(DEVICE_PATH)/media/qti-media.mk
 endif
 
 ifneq (,$(filter nq-nfc, $(TARGET_COMMON_QTI_COMPONENTS)))
