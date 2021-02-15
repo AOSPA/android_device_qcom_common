@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "e4f0626e_1aac06f1",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 4
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000225
+      },
+      "writtenOn": "2021-02-15T20:11:19Z",
+      "side": 1,
+      "message": "OP8 - USB/Overlay fail - let me fix it",
+      "revId": "1bf749d89223d53628e8d469a31063475991e251",
+      "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
+    }
+  ]
+}
