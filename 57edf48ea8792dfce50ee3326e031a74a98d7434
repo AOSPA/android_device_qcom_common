@@ -46,6 +46,30 @@
       },
       "revId": "57edf48ea8792dfce50ee3326e031a74a98d7434",
       "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "be559e03_0f9e20bd",
+        "filename": "usb/qti-usb.mk",
+        "patchSetId": 3
+      },
+      "lineNbr": 16,
+      "author": {
+        "id": 1000488
+      },
+      "writtenOn": "2021-02-15T19:08:31Z",
+      "side": 1,
+      "message": "yup, just the single blueprint change looks fine",
+      "parentUuid": "6ef0f59e_c55a8b85",
+      "range": {
+        "startLine": 15,
+        "startChar": 0,
+        "endLine": 16,
+        "endChar": 26
+      },
+      "revId": "57edf48ea8792dfce50ee3326e031a74a98d7434",
+      "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
     }
   ]
 }
