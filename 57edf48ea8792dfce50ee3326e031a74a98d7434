@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "11d3d7ec_d64ec334",
+        "filename": "usb/qti-usb.mk",
+        "patchSetId": 3
+      },
+      "lineNbr": 16,
+      "author": {
+        "id": 1000225
+      },
+      "writtenOn": "2021-02-15T19:05:09Z",
+      "side": 1,
+      "message": "not super sure if these are explicitly needed",
+      "range": {
+        "startLine": 15,
+        "startChar": 0,
+        "endLine": 16,
+        "endChar": 26
+      },
+      "revId": "57edf48ea8792dfce50ee3326e031a74a98d7434",
+      "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
+    }
+  ]
+}
