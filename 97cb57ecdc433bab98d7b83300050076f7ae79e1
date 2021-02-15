@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "d86babec_86665090",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 5
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000225
+      },
+      "writtenOn": "2021-02-15T20:11:40Z",
+      "side": 1,
+      "message": "Ah, Alex beat me",
+      "revId": "97cb57ecdc433bab98d7b83300050076f7ae79e1",
+      "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
+    }
+  ]
+}
