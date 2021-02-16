@@ -1,4 +1,4 @@
-# Copyright (C) 2020 Paranoid Android
+# Copyright (C) 2021 Paranoid Android
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -12,17 +12,16 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-DEVICE_FRAMEWORK_MANIFEST_FILE += device/qcom/common/telephony/framework_manifest.xml
-
 # Data Services
 $(call inherit-product, vendor/qcom/opensource/dataservices/dataservices_vendor_product.mk)
+
+# HIDL
+DEVICE_FRAMEWORK_MANIFEST_FILE += device/qcom/common/telephony/framework_manifest.xml
 
 # IPACM
 $(call inherit-product, vendor/qcom/opensource/data-ipa-cfg-mgr/ipacm_vendor_product.mk)
 
-# Dependencies
-$(call inherit-product-if-exists, device/qcom/common/telephony-diag/qti-telephony-diag.mk)
-
+# Packages
 PRODUCT_PACKAGES += \
     CellBroadcastReceiver \
     android.hardware.radio@1.5 \
@@ -30,6 +29,7 @@ PRODUCT_PACKAGES += \
     android.hardware.radio.deprecated@1.0 \
     libjson
 
+# Properties
 PRODUCT_SYSTEM_EXT_PROPERTIES += \
     persist.vendor.dpm.feature=11
 

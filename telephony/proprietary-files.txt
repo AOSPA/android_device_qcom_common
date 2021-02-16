@@ -6,6 +6,7 @@ product/etc/permissions/telephony_product_privapp-permissions-qti.xml
 -system_ext/app/DeviceStatisticsService/DeviceStatisticsService.apk
 -system_ext/app/DynamicDDSService/DynamicDDSService.apk
 -system_ext/app/NetworkSetting/NetworkSetting.apk
+-system_ext/app/QTIDiagServices/QTIDiagServices.apk
 -system_ext/app/QtiTelephonyService/QtiTelephonyService.apk
 -system_ext/app/SimContact/SimContact.apk
 -system_ext/app/SimSettings/SimSettings.apk
@@ -21,7 +22,11 @@ product/etc/permissions/telephony_product_privapp-permissions-qti.xml
 -system_ext/app/uimremoteclient/uimremoteclient.apk
 -system_ext/app/uimremoteserver/uimremoteserver.apk
 -system_ext/app/xdivert/xdivert.apk
+system_ext/bin/diag_callback_sample_system
+system_ext/bin/diag_dci_sample_system
+system_ext/bin/diag_mdlog_system
 system_ext/bin/dpmd
+system_ext/bin/test_diag_system
 system_ext/etc/dpm/dpm.conf
 system_ext/etc/init/dpmd.rc
 system_ext/etc/permissions/com.qti.dpmframework.xml
@@ -112,6 +117,9 @@ system_ext/lib64/com.quicinc.cne.api@1.1.so
 system_ext/lib64/com.quicinc.cne.constants@1.0.so
 system_ext/lib64/com.quicinc.cne.constants@2.0.so
 system_ext/lib64/com.quicinc.cne.constants@2.1.so
+system_ext/lib64/libDiagService.so
+system_ext/lib64/libdiag_system.so
+system_ext/lib64/libdiag_system.qti.so
 system_ext/lib64/libdpmctmgr.so
 system_ext/lib64/libdpmfdmgr.so
 system_ext/lib64/libdpmframework.so
@@ -143,6 +151,7 @@ system_ext/lib64/vendor.qti.data.factory@2.1.so
 system_ext/lib64/vendor.qti.data.factory@2.2.so
 system_ext/lib64/vendor.qti.data.mwqem@1.0.so
 system_ext/lib64/vendor.qti.data.slm@1.0.so
+system_ext/lib64/vendor.qti.diaghal@1.0.so
 system_ext/lib64/vendor.qti.hardware.data.cne.internal.api@1.0.so
 system_ext/lib64/vendor.qti.hardware.data.cne.internal.constants@1.0.so
 system_ext/lib64/vendor.qti.hardware.data.cne.internal.server@1.0.so
