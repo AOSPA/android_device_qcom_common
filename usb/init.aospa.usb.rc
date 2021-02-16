@@ -1,4 +1,4 @@
-# Copyright (C) 2020 Paranoid Android
+# Copyright (C) 2021 Paranoid Android
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -14,3 +14,4 @@
 
 on boot
     write /config/usb_gadget/g1/strings/0x409/product ${ro.product.model}
+    write /config/usb_gadget/g2/strings/0x409/product ${ro.product.model}
