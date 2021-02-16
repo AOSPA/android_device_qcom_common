@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "20a8419d_cd6ae42b",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000447
+      },
+      "writtenOn": "2021-02-16T09:20:17Z",
+      "side": 1,
+      "message": "The idea is nice, but this isn\u0027t common. 5.4 RIL doesn\u0027t work on 4.19.",
+      "revId": "d0fd8f3f9d27ee42e064c7cecfd3b3baacfcac1f",
+      "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
+    }
+  ]
+}
