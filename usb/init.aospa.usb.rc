@@ -14,3 +14,4 @@
 
 on boot
     write /config/usb_gadget/g1/strings/0x409/product ${ro.product.model}
+    write /config/usb_gadget/g2/strings/0x409/product ${ro.product.model}
