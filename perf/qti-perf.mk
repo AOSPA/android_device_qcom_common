@@ -25,6 +25,8 @@ PRODUCT_PACKAGES += \
     android.hardware.thermal@2.0 \
     init.aospa.perf.rc \
     libtflite \
+    vendor.qti.hardware.perf@2.2 \
+    vendor.qti.hardware.perf@2.2.vendor \
     vendor.qti.hardware.servicetracker@1.2.vendor
 
 # Properties
