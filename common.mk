@@ -1,4 +1,4 @@
-# Copyright 2020 Paranoid Android
+# Copyright 2021 Paranoid Android
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -157,7 +157,7 @@ endif
 
 # Public Libraries
 PRODUCT_COPY_FILES += \
-    device/qcom/qssi/public.libraries.system_ext-qti.txt:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/public.libraries-qti.txt
+    $(DEVICE_PATH)/public.libraries.system_ext-qti.txt:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/public.libraries-qti.txt
 
 # SECCOMP Extensions
 PRODUCT_COPY_FILES += \
