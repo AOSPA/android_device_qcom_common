@@ -155,6 +155,10 @@ PRODUCT_PACKAGES += \
     android.hardware.power-service
 endif
 
+# Public Libraries
+PRODUCT_COPY_FILES += \
+    device/qcom/qssi/public.libraries.system_ext-qti.txt:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/public.libraries-qti.txt
+
 # SECCOMP Extensions
 PRODUCT_COPY_FILES += \
     $(DEVICE_PATH)/seccomp/codec2.software.ext.policy:$(TARGET_COPY_OUT_VENDOR)/etc/seccomp_policy/codec2.software.ext.policy \
