@@ -1,0 +1,95 @@
+# Copyright (c) 2017-2020, The Linux Foundation. All rights reserved.
+#
+# Redistribution and use in source and binary forms, with or without
+# modification, are permitted provided that the following conditions are
+# met:
+#     * Redistributions of source code must retain the above copyright
+#       notice, this list of conditions and the following disclaimer.
+#     * Redistributions in binary form must reproduce the above
+#       copyright notice, this list of conditions and the following
+#       disclaimer in the documentation and/or other materials provided
+#       with the distribution.
+#     * Neither the name of The Linux Foundation nor the names of its
+#       contributors may be used to endorse or promote products derived
+#       from this software without specific prior written permission.
+#
+# THIS SOFTWARE IS PROVIDED "AS IS" AND ANY EXPRESS OR IMPLIED
+# WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF
+# MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NON-INFRINGEMENT
+# ARE DISCLAIMED.  IN NO EVENT SHALL THE COPYRIGHT OWNER OR CONTRIBUTORS
+# BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR
+# CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF
+# SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR
+# BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY,
+# WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE
+# OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN
+# IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+
+type vendor_qcc_trd_exec, file_type, vendor_file_type, exec_type;
+
+init_daemon_domain(vendor_qcc_trd)
+
+vndbinder_use(vendor_qcc_trd)
+
+allow vendor_qcc_trd vendor_qcc_trd_data_file:file create_file_perms;
+allow vendor_qcc_trd vendor_qcc_trd_data_file:dir create_dir_perms;
+
+# access to /dev/ramdump_microdump_modem
+allow vendor_qcc_trd vendor_ramdump_microdump_modem_device:chr_file r_file_perms;
+
+# cpustats
+# access to /sys/class/power_supply/bms/charge_counter
+# access to /sys/class/power_supply/battery/capacity
+# access to /sys/class/power_supply/battery/status
+allow vendor_qcc_trd sysfs_battery_supply:{file lnk_file} r_file_perms;
+allow vendor_qcc_trd sysfs_battery_supply:dir r_dir_perms;
+
+# gpustats
+# /sys/class/kgsl/kgsl-3d0/gpu_busy_percentage
+# /sys/class/kgsl/kgsl-3d0/gpuclk
+# /sys/class/kgsl/kgsl-3d0/gpu_clock_stats
+# /sys/class/kgsl/kgsl-3d0/num_pwrlevels
+# /sys/class/kgsl/kgsl-3d0/gpu_available_frequencies
+allow vendor_qcc_trd sysfs_kgsl:{file lnk_file} r_file_perms;
+allow vendor_qcc_trd sysfs_kgsl:dir r_dir_perms;
+allow vendor_qcc_trd vendor_sysfs_kgsl_gpuclk:{file lnk_file} r_file_perms;
+allow vendor_qcc_trd vendor_sysfs_kgsl_gpuclk:dir r_dir_perms;
+
+# cpustats /sys/class/leds/lcd-backlight/brightness
+allow vendor_qcc_trd sysfs_leds:{file lnk_file} r_file_perms;
+allow vendor_qcc_trd sysfs_leds:dir r_dir_perms;
+
+# cpustats /sys/class/backlight/panel0-backlight/brightness
+allow vendor_qcc_trd sysfs_graphics:{file lnk_file} r_file_perms;
+allow vendor_qcc_trd sysfs_graphics:dir r_dir_perms;
+
+# cpustats /sys/class/thermal/thermal_zone%d
+allow vendor_qcc_trd sysfs_thermal:{file lnk_file} r_file_perms;
+allow vendor_qcc_trd sysfs_thermal:dir r_dir_perms;
+
+# cpustats /proc/stat
+allow vendor_qcc_trd proc_stat:file r_file_perms;
+allow vendor_qcc_trd proc_stat:dir r_dir_perms;
+
+#access to taskstats interface for process stats
+allow vendor_qcc_trd self:{ netlink_socket netlink_generic_socket } create_socket_perms_no_ioctl;
+
+# mps /persist/hlos_rfs/shared
+allow vendor_qcc_trd mnt_vendor_file:dir r_dir_perms;
+allow vendor_qcc_trd persist_rfs_shared_hlos_file:dir rw_dir_perms;
+allow vendor_qcc_trd persist_rfs_shared_hlos_file:file create_file_perms;
+
+# for logcat
+unix_socket_connect(vendor_qcc_trd, logdr, logd);
+
+# allow qcc_prop
+set_prop(vendor_qcc_trd, vendor_qcc_prop);
+
+# qmi
+qmux_socket(vendor_qcc_trd);
+allow vendor_qcc_trd self:{ socket qipcrtr_socket } create_socket_perms;
+allowxperm vendor_qcc_trd self:{ socket qipcrtr_socket } ioctl msm_sock_ipc_ioctls;
+
+# read ver_info.txt
+allow vendor_qcc_trd vendor_firmware_file:dir r_dir_perms;
+allow vendor_qcc_trd vendor_firmware_file:file r_file_perms;

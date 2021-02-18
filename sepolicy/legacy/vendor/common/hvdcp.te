@@ -1,0 +1,76 @@
+# Copyright (c) 2019, The Linux Foundation. All rights reserved.
+#
+# Redistribution and use in source and binary forms, with or without
+# modification, are permitted provided that the following conditions are
+# met:
+#     * Redistributions of source code must retain the above copyright
+#       notice, this list of conditions and the following disclaimer.
+#     * Redistributions in binary form must reproduce the above
+#       copyright notice, this list of conditions and the following
+#       disclaimer in the documentation and/or other materials provided
+#       with the distribution.
+#     * Neither the name of The Linux Foundation nor the names of its
+#       contributors may be used to endorse or promote products derived
+#       from this software without specific prior written permission.
+#
+# THIS SOFTWARE IS PROVIDED "AS IS" AND ANY EXPRESS OR IMPLIED
+# WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF
+# MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NON-INFRINGEMENT
+# ARE DISCLAIMED.  IN NO EVENT SHALL THE COPYRIGHT OWNER OR CONTRIBUTORS
+# BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR
+# CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF
+# SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR
+# BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY,
+# WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE
+# OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN
+# IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+
+# HVDVP quickcharge
+type hvdcp, domain;
+type hvdcp_exec, exec_type, vendor_file_type, file_type;
+
+# Make transition to its own HVDCP domain from init
+init_daemon_domain(hvdcp)
+
+# Add rules for access permissions
+allow hvdcp hvdcp_device:chr_file rw_file_perms;
+allow hvdcp qg_device:chr_file rw_file_perms;
+allow hvdcp {
+    sysfs_battery_supply
+    sysfs_usb_supply
+    sysfs_usbpd_device
+    sysfs_vadc_dev
+    sysfs_spmi_dev
+}:dir r_dir_perms;
+
+allow hvdcp {
+    sysfs_battery_supply
+    sysfs_usb_supply
+    sysfs_usbpd_device
+    sysfs_vadc_dev
+    sysfs_spmi_dev
+}:file rw_file_perms;
+
+allow hvdcp {
+    sysfs_battery_supply
+    sysfs_usb_supply
+    sysfs_vadc_dev
+    sysfs_spmi_dev
+}:lnk_file r_file_perms;
+
+allow hvdcp self:capability { setgid setuid };
+allow hvdcp self:capability2 wake_alarm;
+allow hvdcp kmsg_device:chr_file rw_file_perms;
+allow hvdcp cgroup:dir { create add_name };
+allow hvdcp self:netlink_kobject_uevent_socket create_socket_perms_no_ioctl;
+allow hvdcp sysfs_battery_supply:file setattr;
+allow hvdcp sysfs_usb_supply:file setattr;
+allow hvdcp sysfs_usbpd_device:file setattr;
+
+allow hvdcp mnt_vendor_file:dir search;
+allow hvdcp persist_hvdcp_file:dir rw_dir_perms;
+allow hvdcp persist_hvdcp_file:file create_file_perms;
+
+set_prop(hvdcp,  hvdcp_opti_prop)
+
+wakelock_use(hvdcp)

@@ -1,0 +1,89 @@
+# Copyright (c) 2019, The Linux Foundation. All rights reserved.
+#
+# Redistribution and use in source and binary forms, with or without
+# modification, are permitted provided that the following conditions are
+# met:
+#     * Redistributions of source code must retain the above copyright
+#       notice, this list of conditions and the following disclaimer.
+#     * Redistributions in binary form must reproduce the above
+#       copyright notice, this list of conditions and the following
+#       disclaimer in the documentation and/or other materials provided
+#       with the distribution.
+#     * Neither the name of The Linux Foundation nor the names of its
+#       contributors may be used to endorse or promote products derived
+#       from this software without specific prior written permission.
+#
+# THIS SOFTWARE IS PROVIDED "AS IS" AND ANY EXPRESS OR IMPLIED
+# WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF
+# MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NON-INFRINGEMENT
+# ARE DISCLAIMED.  IN NO EVENT SHALL THE COPYRIGHT OWNER OR CONTRIBUTORS
+# BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR
+# CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF
+# SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR
+# BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY,
+# WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE
+# OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN
+# IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+
+# Adding allow rule for search on /fuse
+allow init fuse:dir { search mounton };
+allow init self:capability sys_module;
+allow init {
+    adsprpcd_file
+    cache_file
+    mnt_vendor_file
+    storage_file
+}:dir mounton;
+allow init kmsg_device:chr_file write;
+
+#Allow triggering IPA FWs loading
+allow init ipa_dev:chr_file write;
+
+#For insmod to search module key for signature verification
+allow init kernel:key search;
+
+#For sdcard
+allow init tmpfs:lnk_file create_file_perms;
+
+#Certain domains needs LD_PRELOAD passed from init
+#allow it for most domain. Do not honor LD_PRELOAD
+#for lmkd
+#allow init { domain -lmkd }:process noatsecure;
+
+#For configfs file permission
+allow init configfs:dir r_dir_perms;
+allow init configfs:file { rw_file_perms link };
+allow init configfs:lnk_file create_file_perms;
+
+#Allow init to mount non-hlos partitions in A/B builds
+allow init { bt_firmware_file vendor_firmware_file  firmware_file } :dir mounton;
+
+# Moved to vendor so need relabelfrom and associate permissions
+allow init { bt_firmware_file firmware_file }:filesystem  { relabelfrom  mount };
+#TODO: This should not be needed and needs to be cleaned.
+allow { bt_firmware_file firmware_file  }self:filesystem associate;
+
+allow init sysfs_boot_adsp:file write;
+allow init sysfs_slpi:file write;
+allow init sysfs_graphics:file setattr;
+
+
+#load /vendor/lib/modules/qca_cld3/qca_cld3_wlan.ko
+#load /vendor/lib/modules/wil6210.ko
+allow init vendor_file:system module_load;
+
+#Needed for restorecon. Init already has these permissions
+#for generic block devices, but is unable to access those
+#which have a custom lable added by us.
+allow init {
+    custom_ab_block_device
+    boot_block_device
+    xbl_block_device
+    ssd_device
+    modem_block_device
+    mdtp_device
+}:{ blk_file lnk_file } relabelto;
+
+#Blocked by neverallow vendor_init { file_type fs_type -init_exec }:file entrypoint;
+#domain_trans(init, vendor_init_exec, vendor_init);
+allow init mnt_vendor_file:lnk_file r_file_perms;

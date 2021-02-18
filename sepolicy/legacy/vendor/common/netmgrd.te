@@ -1,0 +1,111 @@
+# Copyright (c) 2019, The Linux Foundation. All rights reserved.
+#
+# Redistribution and use in source and binary forms, with or without
+# modification, are permitted provided that the following conditions are
+# met:
+#     * Redistributions of source code must retain the above copyright
+#       notice, this list of conditions and the following disclaimer.
+#     * Redistributions in binary form must reproduce the above
+#       copyright notice, this list of conditions and the following
+#       disclaimer in the documentation and/or other materials provided
+#       with the distribution.
+#     * Neither the name of The Linux Foundation nor the names of its
+#       contributors may be used to endorse or promote products derived
+#       from this software without specific prior written permission.
+#
+# THIS SOFTWARE IS PROVIDED "AS IS" AND ANY EXPRESS OR IMPLIED
+# WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF
+# MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NON-INFRINGEMENT
+# ARE DISCLAIMED.  IN NO EVENT SHALL THE COPYRIGHT OWNER OR CONTRIBUTORS
+# BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR
+# CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF
+# SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR
+# BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY,
+# WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE
+# OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN
+# IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+
+type netmgrd, domain;
+type netmgrd_exec, exec_type, vendor_file_type, file_type;
+net_domain(netmgrd)
+init_daemon_domain(netmgrd)
+
+userdebug_or_eng(`
+  domain_auto_trans(shell, netmgrd_exec, netmgrd)
+  #domain_auto_trans(adbd, netmgrd_exec, netmgrd)
+  diag_use(netmgrd)
+  diag_use(netutils_wrapper)
+')
+
+#Allow netmgrd operations
+allow netmgrd netmgrd:capability {
+    net_raw
+    net_admin
+    sys_module
+    fsetid
+    setgid
+    setuid
+    setpcap
+    kill
+};
+
+#Allow logging
+allow netmgrd smem_log_device:chr_file rw_file_perms;
+allow netmgrd netmgrd_data_file:file create_file_perms;
+allow netmgrd netmgrd_data_file:dir w_dir_perms;
+
+#Allow netutils usage
+use_netutils(netmgrd)
+allow netmgrd netutils_wrapper:process sigkill;
+
+#Allow operations on different types of sockets
+allow netmgrd netmgrd:rawip_socket { create getopt setopt write };
+allow netmgrd netmgrd:netlink_xfrm_socket { create_socket_perms_no_ioctl nlmsg_write nlmsg_read };
+allow netmgrd netmgrd:netlink_socket { write read create bind };
+allow netmgrd netmgrd:socket { create };
+allow netmgrd netmgrd:netlink_route_socket { setopt getattr write nlmsg_write };
+allow netmgrd self:netlink_generic_socket create_socket_perms_no_ioctl;
+allow netmgrd self:netlink_tcpdiag_socket { create_socket_perms_no_ioctl nlmsg_read nlmsg_write };
+allow netmgrd self:qipcrtr_socket create_socket_perms_no_ioctl;
+
+unix_socket_connect(netmgrd, cnd, cnd);
+
+qmux_socket(netmgrd);
+
+#Allow writing of ipv6 network properties
+allow netmgrd { proc_net }:file rw_file_perms;
+
+allow netmgrd self:socket create_socket_perms;
+
+allow netmgrd sysfs_data:file r_file_perms;
+
+#Acquire lock on /system/etc/xtables.lock
+#Required till netutils wrappers are available
+not_full_treble(`allow netmgrd system_file:file lock;')
+
+#Allow netmgrd to create netmgrd socket
+allow netmgrd netmgrd_socket:dir create_dir_perms;
+allow netmgrd netmgrd_socket:sock_file create_file_perms;
+
+allow netmgrd { wcnss_service_exec vendor_shell_exec vendor_toolbox_exec }:file rx_file_perms;
+
+#Allow netmgrd to use wakelock
+wakelock_use(netmgrd)
+
+allowxperm netmgrd self:udp_socket ioctl priv_sock_ioctls;
+allowxperm netmgrd self:udp_socket ioctl rmnet_sock_ioctls;
+allowxperm netmgrd self:socket ioctl msm_sock_ipc_ioctls;
+
+#Allow netmgrd to use netd HAL via HIDL
+get_prop(netmgrd, hwservicemanager_prop)
+hwbinder_use(netmgrd)
+binder_call(netmgrd, netd)
+allow netmgrd system_net_netd_hwservice:hwservice_manager find;
+
+allow netmgrd sysfs_net:dir r_dir_perms;
+allow netmgrd sysfs_net:file rw_file_perms;
+
+#Allow diag logging
+userdebug_or_eng(`
+  r_dir_file(netmgrd, sysfs_diag)
+')

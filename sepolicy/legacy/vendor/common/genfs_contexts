@@ -1,0 +1,88 @@
+# Copyright (c) 2019, The Linux Foundation. All rights reserved.
+#
+# Redistribution and use in source and binary forms, with or without
+# modification, are permitted provided that the following conditions are
+# met:
+#     * Redistributions of source code must retain the above copyright
+#       notice, this list of conditions and the following disclaimer.
+#     * Redistributions in binary form must reproduce the above
+#       copyright notice, this list of conditions and the following
+#       disclaimer in the documentation and/or other materials provided
+#       with the distribution.
+#     * Neither the name of The Linux Foundation nor the names of its
+#       contributors may be used to endorse or promote products derived
+#       from this software without specific prior written permission.
+#
+# THIS SOFTWARE IS PROVIDED "AS IS" AND ANY EXPRESS OR IMPLIED
+# WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF
+# MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NON-INFRINGEMENT
+# ARE DISCLAIMED.  IN NO EVENT SHALL THE COPYRIGHT OWNER OR CONTRIBUTORS
+# BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR
+# CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF
+# SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR
+# BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY,
+# WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE
+# OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN
+# IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+
+genfscon proc /debug/fwdump                           u:object_r:proc_wifi_dbg:s0
+genfscon proc /debugdriver/driverdump                 u:object_r:proc_wifi_dbg:s0
+genfscon proc /ath_pktlog/cld                         u:object_r:proc_wifi_dbg:s0
+genfscon proc /asound/card0/state u:object_r:proc_audiod:s0
+genfscon proc /asound/cards u:object_r:proc_audiod:s0
+genfscon proc /sys/vm/dirty_ratio  u:object_r:proc_dirty_ratio:s0
+genfscon sysfs /module/msm_performance/workload_modes u:object_r:sysfs_msm_perf:s0
+genfscon sysfs /class/devfreq                               u:object_r:sysfs_devfreq:s0
+genfscon sysfs /devices/platform/soc/soc:qcom,cpubw/devfreq u:object_r:sysfs_devfreq:s0
+genfscon sysfs /devices/platform/soc/soc:qcom,memlat-cpu0/devfreq u:object_r:sysfs_devfreq:s0
+genfscon sysfs /devices/platform/soc/soc:qcom,memlat-cpu2/devfreq u:object_r:sysfs_devfreq:s0
+genfscon sysfs /devices/platform/soc/soc:qcom,memlat-cpu4/devfreq u:object_r:sysfs_devfreq:s0
+genfscon sysfs /devices/platform/soc/soc:qcom,memlat-cpu6/devfreq u:object_r:sysfs_devfreq:s0
+genfscon sysfs /devices/platform/soc/soc:qcom,l3-cpu0/devfreq u:object_r:sysfs_devfreq:s0
+genfscon sysfs /devices/platform/soc/soc:qcom,l3-cpu2/devfreq u:object_r:sysfs_devfreq:s0
+genfscon sysfs /devices/platform/soc/soc:qcom,l3-cpu4/devfreq u:object_r:sysfs_devfreq:s0
+genfscon sysfs /devices/platform/soc/soc:qcom,l3-cpu6/devfreq u:object_r:sysfs_devfreq:s0
+genfscon sysfs /devices/platform/soc/soc:qcom,mincpubw/devfreq u:object_r:sysfs_devfreq:s0
+genfscon sysfs /devices/platform/soc/soc:qcom,llccbw/devfreq u:object_r:sysfs_devfreq:s0
+genfscon sysfs /module/big_cluster_min_freq_adjust u:object_r:sysfs_devfreq:s0
+genfscon sysfs /devices/soc/soc:qcom,cpubw/devfreq u:object_r:sysfs_devfreq:s0
+genfscon sysfs /devices/soc/soc:qcom,memlat-cpu0/devfreq u:object_r:sysfs_devfreq:s0
+genfscon sysfs /devices/soc/soc:qcom,memlat-cpu2/devfreq u:object_r:sysfs_devfreq:s0
+genfscon sysfs /devices/soc/soc:qcom,memlat-cpu4/devfreq u:object_r:sysfs_devfreq:s0
+genfscon sysfs /devices/soc/soc:qcom,memlat-cpu6/devfreq u:object_r:sysfs_devfreq:s0
+genfscon sysfs /devices/soc/soc:qcom,mincpubw/devfreq u:object_r:sysfs_devfreq:s0
+genfscon debugfs /kgsl/proc u:object_r:qti_debugfs:s0
+genfscon sysfs /kernel/wcd_cpe0 u:object_r:sysfs_audio:s0
+genfscon sysfs /devices/virtual/thermal u:object_r:sysfs_thermal:s0
+genfscon sysfs /devices/virtual/kgsl/kgsl/proc u:object_r:sysfs_kgsl_proc:s0
+
+genfscon sysfs /module/qpnp_rtc/parameters/poweron_alarm u:object_r:sysfs_poweron_alarm:s0
+
+genfscon sysfs /devices/platform/cam_sync/video4linux/video0/name u:object_r:sysfs_graphics:s0
+
+genfscon sysfs /devices/virtual/npu/msm_npu/pwr u:object_r:sysfs_npu:s0
+genfscon sysfs /devices/platform/soc/soc:qcom,msm-ext-disp/extcon/extcon0/name u:object_r:sysfs_graphics:s0
+genfscon sysfs /devices/platform/soc/soc:qcom,msm-ext-disp/extcon/extcon0/cable.0/ u:object_r:sysfs_graphics:s0
+
+genfscon sysfs /devices/platform/soc/soc:qcom,mdm3/esoc0 u:object_r:sysfs_esoc:s0
+genfscon sysfs /devices/platform/soc/soc:qcom,msm-ext-disp/extcon/extcon1/name u:object_r:sysfs_graphics:s0
+genfscon sysfs /devices/platform/soc/soc:qcom,msm-ext-disp/extcon/extcon1/cable.0/ u:object_r:sysfs_graphics:s0
+genfscon sysfs /devices/system/memory/ u:object_r:sysfs_memory_offline:s0
+
+genfscon sysfs /kernel/qvr_external_sensor u:object_r:sysfs_qvr_external_sensor:s0
+
+genfscon sysfs /devices/virtual/xt_hardidletimer/timers u:object_r:sysfs_data:s0
+genfscon sysfs /devices/virtual/xt_idletimer/timers u:object_r:sysfs_data:s0
+
+genfscon sysfs /devices/0306_00.01.00/time u:object_r:sysfs_mhi:s0
+genfscon sysfs /devices/0306_01.01.00/time u:object_r:sysfs_mhi:s0
+genfscon sysfs /devices/0306_02.01.00/time u:object_r:sysfs_mhi:s0
+genfscon sysfs /devices/1101_00.01.00/time u:object_r:sysfs_mhi:s0
+genfscon sysfs /devices/1101_01.01.00/time u:object_r:sysfs_mhi:s0
+genfscon sysfs /devices/1101_02.01.00/time u:object_r:sysfs_mhi:s0
+genfscon sysfs /devices/0306_00.01.00/time_us u:object_r:sysfs_mhi:s0
+genfscon sysfs /devices/0306_01.01.00/time_us u:object_r:sysfs_mhi:s0
+genfscon sysfs /devices/0306_02.01.00/time_us u:object_r:sysfs_mhi:s0
+genfscon sysfs /devices/1101_00.01.00/time_us u:object_r:sysfs_mhi:s0
+genfscon sysfs /devices/1101_01.01.00/time_us u:object_r:sysfs_mhi:s0
+genfscon sysfs /devices/1101_02.01.00/time_us u:object_r:sysfs_mhi:s0

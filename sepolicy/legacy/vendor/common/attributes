@@ -1,0 +1,135 @@
+# Copyright (c) 2016-2018, The Linux Foundation. All rights reserved.
+#
+# Redistribution and use in source and binary forms, with or without
+# modification, are permitted provided that the following conditions are
+# met:
+#     * Redistributions of source code must retain the above copyright
+#       notice, this list of conditions and the following disclaimer.
+#     * Redistributions in binary form must reproduce the above
+#       copyright notice, this list of conditions and the following
+#       disclaimer in the documentation and/or other materials provided
+#       with the distribution.
+#     * Neither the name of The Linux Foundation nor the names of its
+#       contributors may be used to endorse or promote products derived
+#       from this software without specific prior written permission.
+#
+# THIS SOFTWARE IS PROVIDED "AS IS" AND ANY EXPRESS OR IMPLIED
+# WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF
+# MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NON-INFRINGEMENT
+# ARE DISCLAIMED.  IN NO EVENT SHALL THE COPYRIGHT OWNER OR CONTRIBUTORS
+# BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR
+# CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF
+# SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR
+# BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY,
+# WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE
+# OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN
+# IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+
+# HALs
+attribute hal_display_color;
+attribute hal_display_color_client;
+attribute hal_display_color_server;
+
+attribute hal_display_postproc;
+attribute hal_display_postproc_client;
+attribute hal_display_postproc_server;
+
+attribute hal_hbtp;
+attribute hal_hbtp_client;
+attribute hal_hbtp_server;
+
+attribute hal_perf;
+attribute hal_perf_client;
+attribute hal_perf_server;
+
+attribute wifidisplayhalservice;
+attribute wifidisplayhalservice_client;
+attribute wifidisplayhalservice_server;
+
+attribute hal_alarm_qti;
+attribute hal_alarm_qti_client;
+attribute hal_alarm_qti_server;
+
+attribute hal_vpp;
+attribute hal_vpp_client;
+attribute hal_vpp_server;
+
+attribute hal_wigig;
+attribute hal_wigig_client;
+attribute hal_wigig_server;
+
+attribute hal_qteeconnector;
+attribute hal_qteeconnector_client;
+attribute hal_qteeconnector_server;
+
+attribute hal_esepowermanager;
+attribute hal_esepowermanager_client;
+attribute hal_esepowermanager_server;
+
+attribute hal_iop;
+attribute hal_iop_client;
+attribute hal_iop_server;
+
+attribute hal_voiceprint;
+attribute hal_voiceprint_server;
+attribute hal_voiceprint_client;
+
+attribute hal_wigig_npt;
+attribute hal_wigig_npt_client;
+attribute hal_wigig_npt_server;
+
+attribute hal_fstman;
+attribute hal_fstman_client;
+attribute hal_fstman_server;
+
+attribute hal_qdutils_disp;
+attribute hal_qdutils_disp_client;
+attribute hal_qdutils_disp_server;
+
+attribute hal_tui_comm;
+attribute hal_tui_comm_client;
+attribute hal_tui_comm_server;
+
+attribute hal_soter;
+attribute hal_soter_client;
+attribute hal_soter_server;
+
+attribute hal_sensorscalibrate_qti;
+attribute hal_sensorscalibrate_qti_client;
+attribute hal_sensorscalibrate_qti_server;
+
+attribute hal_scve;
+attribute hal_scve_client;
+attribute hal_scve_server;
+
+attribute hal_pasrmanager;
+attribute hal_pasrmanager_client;
+attribute hal_pasrmanager_server;
+
+attribute hal_qseecom;
+attribute hal_qseecom_client;
+attribute hal_qseecom_server;
+
+attribute hal_wifilearner;
+attribute hal_wifilearner_client;
+attribute hal_wifilearner_server;
+
+attribute hal_srvctracker;
+attribute hal_srvctracker_client;
+attribute hal_srvctracker_server;
+
+attribute hal_fm;
+attribute hal_fm_client;
+attribute hal_fm_server;
+
+attribute hal_btconfigstore;
+attribute hal_btconfigstore_client;
+attribute hal_btconfigstore_server;
+
+attribute hal_dataconnection_qti;
+attribute hal_dataconnection_qti_client;
+attribute hal_dataconnection_qti_server;
+
+attribute hal_capabilityconfigstore_qti;
+attribute hal_capabilityconfigstore_qti_client;
+attribute hal_capabilityconfigstore_qti_server;

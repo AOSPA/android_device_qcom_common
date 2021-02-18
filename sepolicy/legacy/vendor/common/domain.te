@@ -1,0 +1,71 @@
+# Copyright (c) 2019, The Linux Foundation. All rights reserved.
+#
+# Redistribution and use in source and binary forms, with or without
+# modification, are permitted provided that the following conditions are
+# met:
+#     * Redistributions of source code must retain the above copyright
+#       notice, this list of conditions and the following disclaimer.
+#     * Redistributions in binary form must reproduce the above
+#       copyright notice, this list of conditions and the following
+#       disclaimer in the documentation and/or other materials provided
+#       with the distribution.
+#     * Neither the name of The Linux Foundation nor the names of its
+#       contributors may be used to endorse or promote products derived
+#       from this software without specific prior written permission.
+#
+# THIS SOFTWARE IS PROVIDED "AS IS" AND ANY EXPRESS OR IMPLIED
+# WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF
+# MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NON-INFRINGEMENT
+# ARE DISCLAIMED.  IN NO EVENT SHALL THE COPYRIGHT OWNER OR CONTRIBUTORS
+# BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR
+# CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF
+# SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR
+# BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY,
+# WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE
+# OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN
+# IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+
+r_dir_file({domain - isolated_app}, sysfs_socinfo);
+r_dir_file({domain - isolated_app}, sysfs_esoc);
+r_dir_file({domain - isolated_app}, sysfs_ssr);
+
+dontaudit domain kernel:system module_request;
+
+# Allow all domains read access to sysfs_thermal
+r_dir_file({domain - isolated_app}, sysfs_thermal);
+
+# Allow domain to read /vendor -> /system/vendor
+allow domain system_file:lnk_file getattr;
+
+get_prop(domain, vendor_gralloc_prop)
+
+allow domain vendor_configs_file:file r_file_perms;
+
+# Added now for smoother UI
+# Remove this after HIDL implementation
+userdebug_or_eng(`
+allow domain hal_graphics_composer:fd use;
+')
+dontaudit domain vendor_persist_dpm_prop:file r_file_perms;
+
+neverallow {
+    coredomain
+    -init
+    -ueventd
+    -vold
+    } vendor_persist_type: { dir file } *;
+
+allow { domain - coredomain } mnt_vendor_file:lnk_file r_file_perms;
+
+allowxperm domain domain:icmp_socket ioctl { unpriv_sock_ioctls unpriv_tty_ioctls };
+
+# For compliance testing test suite reads vendor_security_path_level
+# Which is the public readable property “ ro.vendor.build.security_patch
+get_prop(domain, vendor_security_patch_level_prop)
+get_prop(domain, public_vendor_default_prop)
+
+allow domain qti_debugfs:dir search;
+# allow all context to read sysfs_kgsl
+allow { domain - isolated_app } sysfs_kgsl:dir search;
+# allow all context to read gpu model
+allow { domain - isolated_app } sysfs_kgsl_gpu_model:file r_file_perms;

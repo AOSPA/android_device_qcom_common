@@ -1,0 +1,114 @@
+# Copyright (c) 2019, The Linux Foundation. All rights reserved.
+#
+# Redistribution and use in source and binary forms, with or without
+# modification, are permitted provided that the following conditions are
+# met:
+#     * Redistributions of source code must retain the above copyright
+#       notice, this list of conditions and the following disclaimer.
+#     * Redistributions in binary form must reproduce the above
+#       copyright notice, this list of conditions and the following
+#       disclaimer in the documentation and/or other materials provided
+#       with the distribution.
+#     * Neither the name of The Linux Foundation nor the names of its
+#       contributors may be used to endorse or promote products derived
+#       from this software without specific prior written permission.
+#
+# THIS SOFTWARE IS PROVIDED "AS IS" AND ANY EXPRESS OR IMPLIED
+# WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF
+# MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NON-INFRINGEMENT
+# ARE DISCLAIMED.  IN NO EVENT SHALL THE COPYRIGHT OWNER OR CONTRIBUTORS
+# BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR
+# CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF
+# SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR
+# BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY,
+# WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE
+# OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN
+# IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+
+# Policy for sensor daemon
+type sensors, domain;
+type sensors_exec, exec_type, vendor_file_type, file_type;
+
+# Started by init
+init_daemon_domain(sensors)
+
+allow sensors self:capability {
+    # Change own perms to (nobody,nobody)
+    setuid
+    setgid
+    # Chown /data/misc/sensors/debug/ to nobody
+    chown
+    # Access /data/misc/sensors/debug and /data/system/sensors/settings
+    net_bind_service
+};
+
+dontaudit sensors self:capability { fsetid net_raw };
+
+# Sensors socket
+allow sensors sensors_socket:sock_file create_file_perms;
+type_transition sensors socket_device:sock_file sensors_socket "sensor_ctl_socket";
+allow sensors socket_device:dir rw_dir_perms;
+
+# Create directories and files under /data/misc/sensors
+# and /data/system/sensors. Allow generic r/w file access.
+
+# Access sensor nodes (/dev/msm_dsps, /dev/sensors)
+allow sensors sensors_device:chr_file rw_file_perms;
+
+# Access to /persist/sensors
+allow sensors mnt_vendor_file:dir r_dir_perms;
+allow sensors sensors_persist_file:dir create_dir_perms;
+allow sensors sensors_persist_file:file create_file_perms;
+
+# Access to execmem
+allow sensors self:process execmem;
+
+# Wake lock access
+wakelock_use(sensors)
+
+allow sensors cgroup:dir { create add_name };
+
+allow sensors self:{ socket qipcrtr_socket } create_socket_perms;
+# ioctlcmd=c304
+allowxperm sensors self:{ socket qipcrtr_socket } ioctl msm_sock_ipc_ioctls;
+
+# Access to other devices
+allow sensors smd_device:chr_file rw_file_perms;
+allow sensors smem_log_device:chr_file rw_file_perms;
+allow sensors device_latency:chr_file w_file_perms;
+
+# Access to tests from userdebug/eng builds
+userdebug_or_eng(`
+  domain_auto_trans(shell, sensors_exec, sensors)
+  diag_use(sensors)
+
+  # For starting diag_mdlog
+  allow sensors vendor_shell_exec:file execute_no_trans;
+  allow sensors qlogd_exec:file execute_no_trans;
+  allow sensors storage_file:lnk_file read;
+
+  # For Reading/creating/opening named pipe for diag flush
+  allow sensors sensors_persist_file:fifo_file { create open read write};
+')
+
+#binder_use(sensors)
+#binder_call(sensors, servicemanager)
+binder_call(sensors, vendor_per_mgr)
+
+allow sensors sysfs_socinfo:file w_file_perms;
+allow sensors sysfs_data:file r_file_perms;
+
+allow sensors dsp_device:chr_file r_file_perms;
+allow sensors ion_device:chr_file r_file_perms;
+allow sensors qdsp_device:chr_file r_file_perms;
+allow sensors xdsp_device:chr_file r_file_perms;
+
+
+# For reading dir/files on /dsp
+r_dir_file(sensors, adsprpcd_file)
+# For reading adsprpc_prop
+get_prop(sensors, adsprpc_prop)
+
+#allow access for sensors_vendor_data_file  partition for ODL
+allow sensors sensors_vendor_data_file:dir create_dir_perms;
+allow sensors sensors_vendor_data_file:file create_file_perms;

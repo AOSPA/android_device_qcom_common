@@ -1,0 +1,175 @@
+# Copyright (c) 2019, The Linux Foundation. All rights reserved.
+#
+# Redistribution and use in source and binary forms, with or without
+# modification, are permitted provided that the following conditions are
+# met:
+#     * Redistributions of source code must retain the above copyright
+#       notice, this list of conditions and the following disclaimer.
+#     * Redistributions in binary form must reproduce the above
+#       copyright notice, this list of conditions and the following
+#       disclaimer in the documentation and/or other materials provided
+#       with the distribution.
+#     * Neither the name of The Linux Foundation nor the names of its
+#       contributors may be used to endorse or promote products derived
+#       from this software without specific prior written permission.
+#
+# THIS SOFTWARE IS PROVIDED "AS IS" AND ANY EXPRESS OR IMPLIED
+# WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF
+# MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NON-INFRINGEMENT
+# ARE DISCLAIMED.  IN NO EVENT SHALL THE COPYRIGHT OWNER OR CONTRIBUTORS
+# BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR
+# CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF
+# SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR
+# BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY,
+# WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE
+# OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN
+# IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+
+#####################################
+# qmux_socket(clientdomain)
+# Allow client domain to connecto and send
+# via a local socket to the qmux domain.
+# Also allow the client domain to remove
+# its own socket.
+define(`qmux_socket', `
+allow $1 qmuxd_socket:dir create_dir_perms;
+unix_socket_connect($1, qmuxd, qmuxd)
+allow $1 qmuxd_socket:sock_file { read getattr write setattr create unlink };
+')
+
+#####################################
+# netmgr_socket(clientdomain)
+# Allow client domain to connecto and send
+# via a local socket to the netmgrd domain.
+# Also allow the client domain to remove
+# its own socket.
+define(`netmgr_socket', `
+allow $1 netmgrd_socket:dir r_dir_perms;
+unix_socket_connect($1, netmgrd, netmgrd)
+allow $1 netmgrd_socket:sock_file { read getattr write };
+')
+
+#####################################
+# portbridge_socket(clientdomain)
+# Allow client domain to connecto and send
+# via a local socket to the port-bridge domain.
+# Also allow the client domain to remove
+# its own socket.
+define(`portbridge_socket', `
+allow $1 port-bridge_socket:dir r_dir_perms;
+unix_socket_connect($1, port-bridge, port-bridge)
+allow $1 port-bridge_socket:sock_file { read write };
+')
+
+########################################
+# peripheral_manager
+# Allow clients to interact with peripheral
+# manager
+define(`use_vendor_per_mgr', `
+vndbinder_use($1);
+binder_call(vendor_per_mgr, $1);
+binder_call($1, vendor_per_mgr);
+allow $1 vendor_per_mgr_service:service_manager find;
+get_prop($1, vendor_per_mgr_state_prop);
+')
+
+#####################################
+# cnd_nims_socket_perm(clientdomain)
+# allow cnd to read /proc/pid/cmdline to get appname
+# allow cnd to use inet socket created by app.
+define(`cnd_nims_socket_perm', `
+allow cnd $1:dir r_dir_perms;
+allow cnd $1:file r_file_perms;
+allow cnd $1:fd use;
+allow cnd $1:tcp_socket rw_socket_perms;
+')
+
+#####################################
+# diag_use(clientdomain)
+# allow clientdomain to read/write to diag
+define(`diag_use', `
+r_dir_file($1, sysfs_diag)
+allow $1 diag_device:chr_file rw_file_perms;
+')
+
+#####################################
+# use_netutils(clientdomain)
+# allow access to netutils from vendor
+define(`use_netutils', `
+domain_auto_trans($1, netutils_wrapper_exec, netutils_wrapper)
+allow netutils_wrapper $1:fd use;
+allow netutils_wrapper $1:fifo_file { read write getattr };
+allow netutils_wrapper $1:netlink_route_socket { read write };
+allow netutils_wrapper $1:unix_stream_socket { read write };
+allow netutils_wrapper $1:netlink_generic_socket { read write };
+allow netutils_wrapper $1:netlink_xfrm_socket { read write };
+allow netutils_wrapper $1:udp_socket { read write };
+allow netutils_wrapper $1:tcp_socket { read write };
+')
+
+#####################################
+## hal_server_domain_bypass(domain, hal_type)
+## Allow a base set of permissions required for a domain to offer a
+## HAL implementation of the specified type over HwBinder without
+## halserverdomain attribute
+##
+## For example, default implementation of Foo HAL:
+##   type hal_foo_default, domain;
+##   hal_server_domain_bypass(hal_foo_default, hal_foo)
+##
+define(`hal_server_domain_bypass', `
+hwbinder_use($1)
+allow $1 system_file:dir r_dir_perms;
+get_prop($1, hwservicemanager_prop)
+typeattribute $1 $2_server;
+typeattribute $1 $2;
+')
+
+#####################################
+# qdma_file_socket(clientdomain)
+# Allow client domain to connecto and send
+# via a local socket to the qdma domain.
+define(`qdma_file_socket', `
+allow $1 qdma_socket:dir r_dir_perms;
+allow $1 qdma_socket:sock_file { read getattr write };
+allow $1 qdma_app:unix_stream_socket { connectto };
+')
+
+#####################################
+# coredata_datavendor_migration(domain, old_data_label, data_vendor_label)
+# Allow a base set of permissions required for a sh  to copy data from /data to /data/vendor
+#
+# For example, make nfc-sh copy data from /data/nfc to /data/vendor/nfc:
+#   coredata_datavendor_migration(nfc-sh, nfc_data_file, data_vendor_nfc_file)
+#   script that moves the data should be in /system/bin and should be using the
+#   /system/bin/sh.
+#
+define(`coredata_datavendor_migration', `
+type $1, domain;
+type $1_exec, system_file_type, exec_type, file_type;
+
+init_daemon_domain($1);
+typeattribute $1 data_between_core_and_vendor_violators;
+typeattribute $1 coredomain;
+allow $1 shell_exec:file rx_file_perms;
+allow $1 toolbox_exec:file rx_file_perms;
+allow $1 file_contexts_file:file { read getattr open };
+allow $1 $2:file { getattr setattr relabelfrom rename };
+allow $1 $2:dir { reparent rename rmdir setattr rw_dir_perms relabelfrom };
+allow $1 $3:dir { create_dir_perms relabelto };
+
+# for writing files_moved so we only execute the move once
+allow $1 $3:file { create open write getattr relabelto };
+')
+
+########################################
+# framework full value-add detection
+# Adds rules needed for client to use the framework detection module
+# to differentiate being an unmodified AOSP framework with baseline
+# AOSP functionality or one with modified AOSP providing full vendor
+# value-adds
+#
+# Placeholder - currently the detection mechanism does not require
+# any additional security permissions
+define(`use_vendor_fwk_detect', `
+')

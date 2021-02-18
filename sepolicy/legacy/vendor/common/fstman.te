@@ -1,0 +1,81 @@
+# Copyright (c) 2015,2017,2020 The Linux Foundation. All rights reserved.
+#
+# Redistribution and use in source and binary forms, with or without
+# modification, are permitted provided that the following conditions are
+# met:
+#     * Redistributions of source code must retain the above copyright
+#       notice, this list of conditions and the following disclaimer.
+#     * Redistributions in binary form must reproduce the above
+#       copyright notice, this list of conditions and the following
+#       disclaimer in the documentation and/or other materials provided
+#       with the distribution.
+#     * Neither the name of The Linux Foundation nor the names of its
+#       contributors may be used to endorse or promote products derived
+#       from this software without specific prior written permission.
+#
+# THIS SOFTWARE IS PROVIDED "AS IS" AND ANY EXPRESS OR IMPLIED
+# WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF
+# MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NON-INFRINGEMENT
+# ARE DISCLAIMED.  IN NO EVENT SHALL THE COPYRIGHT OWNER OR CONTRIBUTORS
+# BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR
+# CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF
+# SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR
+# BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY,
+# WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE
+# OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN
+# IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+
+type fstman, domain;
+type fstman_exec, exec_type, vendor_file_type, file_type;
+
+init_daemon_domain(fstman)
+net_domain(fstman)
+
+#use bypass because net_admin capability is needed
+hal_server_domain_bypass(fstman, hal_fstman)
+
+#allows calls between client and server and vice-versa
+binder_call(hal_fstman_client, hal_fstman_server)
+binder_call(hal_fstman_server, hal_fstman_client)
+
+#register hal service, allow hal clients to find the service
+hal_attribute_hwservice(hal_fstman, hal_fstman_hwservice)
+
+# fstman requires special network privileges.
+# access traffic control (TC) for marking packets to identify from
+# which slave interface they arrive, drop multicast packets and
+# duplicate packets. This requires the net_raw capability.
+# network admin operations mainly on the bonding driver:
+# interface up/down, add/remove slave interfaces, set queue parameters
+# This requires the net_admin capability.
+allow fstman self:capability { net_admin net_raw };
+
+# netlink socket is used to access traffic control (TC)
+allow fstman self:netlink_route_socket nlmsg_write;
+
+# allow privileged socket operations: interface up/down, bond interface management
+allowxperm fstman self:udp_socket ioctl { SIOCGIFFLAGS SIOCSIFFLAGS SIOCSIFTXQLEN SIOCBONDENSLAVE SIOCBONDRELEASE SIOCETHTOOL};
+
+# need access to bond0 sysfs in order to manage attached interfaces
+allow fstman sysfs_net:dir r_dir_perms;
+allow fstman sysfs_bond0:file rw_file_perms;
+
+# need access to wigig sysfs in order to control fst_link_loss
+allow fstman sysfs_wigig:file rw_file_perms;
+
+# create/read fstman configuration file (/data/vendor/wifi/fstman.ini)
+r_dir_file(fstman, wifi_vendor_data_file)
+allow fstman wifi_vendor_data_file:dir rw_dir_perms;
+allow fstman wifi_vendor_data_file:file create_file_perms;
+
+# fstman needs to communicate with wpa_supplicant and hostapd using socket
+# for managing FST state
+allow fstman { hal_wifi_supplicant hal_wifi_hostapd_default }:unix_dgram_socket sendto;
+# supplicant interface sockets
+allow fstman wifi_vendor_wpa_socket:dir rw_dir_perms;
+allow fstman wifi_vendor_wpa_socket:sock_file create_file_perms;
+# hostapd global socket
+allow fstman hostapd_data_file:dir rw_dir_perms;
+allow fstman hostapd_data_file:sock_file create_file_perms;
+# access capability config store
+hal_client_domain(fstman, hal_capabilityconfigstore_qti);

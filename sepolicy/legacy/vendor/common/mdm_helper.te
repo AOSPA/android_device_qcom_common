@@ -1,0 +1,72 @@
+# Copyright (c) 2019, The Linux Foundation. All rights reserved.
+#
+# Redistribution and use in source and binary forms, with or without
+# modification, are permitted provided that the following conditions are
+# met:
+#     * Redistributions of source code must retain the above copyright
+#       notice, this list of conditions and the following disclaimer.
+#     * Redistributions in binary form must reproduce the above
+#       copyright notice, this list of conditions and the following
+#       disclaimer in the documentation and/or other materials provided
+#       with the distribution.
+#     * Neither the name of The Linux Foundation nor the names of its
+#       contributors may be used to endorse or promote products derived
+#       from this software without specific prior written permission.
+#
+# THIS SOFTWARE IS PROVIDED "AS IS" AND ANY EXPRESS OR IMPLIED
+# WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF
+# MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NON-INFRINGEMENT
+# ARE DISCLAIMED.  IN NO EVENT SHALL THE COPYRIGHT OWNER OR CONTRIBUTORS
+# BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR
+# CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF
+# SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR
+# BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY,
+# WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE
+# OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN
+# IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+
+#Policy for mdm_helper
+#mdm_helper - mdm_helper domain
+type mdm_helper, domain;
+type mdm_helper_exec, exec_type, vendor_file_type, file_type;
+init_daemon_domain(mdm_helper);
+
+#block_suspend capability is needed by kickstart(ks)
+wakelock_use(mdm_helper)
+
+#Needed to access the esoc device to control the mdm
+allow mdm_helper esoc_device:dir r_dir_perms;
+allow mdm_helper esoc_device:chr_file rw_file_perms;
+
+#Needed to detect presence of hsic bridge and to xfer images
+allow mdm_helper ksbridgehsic_device:chr_file rw_file_perms;
+
+#Needed to detect efs sync and for kickstart to run the efs sync server
+allow mdm_helper efsbridgehsic_device:chr_file rw_file_perms;
+
+#Needed for communication with the HSIC driver
+r_dir_file(mdm_helper, sysfs_hsic)
+allow mdm_helper sysfs_hsic:file w_file_perms;
+
+#Needed by libmdmdetect to get system information regarding subsystems and to check their states
+r_dir_file(mdm_helper, sysfs_ssr)
+
+#Needed in order to run kickstart
+allow mdm_helper shell:fd use;
+allow mdm_helper vendor_shell_exec:file rx_file_perms;
+allow mdm_helper  mdm_helper_exec:file x_file_perms;
+
+#Needed for ram dump storage
+allow mdm_helper vendor_tombstone_data_file:dir create_dir_perms;
+allow mdm_helper vendor_tombstone_data_file:file create_file_perms;
+
+#Needed by ks in order to access the efs sync partitions.
+allow mdm_helper block_device:dir rw_dir_perms;
+allow mdm_helper efs_boot_dev:blk_file rw_file_perms;
+
+#Needed in order to access the firmware partition
+r_dir_file(mdm_helper, firmware_file)
+
+#Needed to allow boot over PCIe
+allow mdm_helper bhi_device:chr_file rw_file_perms;
+allow mdm_helper mhi_device:chr_file rw_file_perms;

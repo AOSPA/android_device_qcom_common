@@ -1,0 +1,53 @@
+#Copyright (c) 2017, The Linux Foundation. All rights reserved.
+#
+#Redistribution and use in source and binary forms, with or without
+#modification, are permitted provided that the following conditions are
+#met:
+#    * Redistributions of source code must retain the above copyright
+#      notice, this list of conditions and the following disclaimer.
+#    * Redistributions in binary form must reproduce the above
+#      copyright notice, this list of conditions and the following
+#      disclaimer in the documentation and/or other materials provided
+#      with the distribution.
+#    * Neither the name of The Linux Foundation nor the names of its
+#      contributors may be used to endorse or promote products derived
+#      from this software without specific prior written permission.
+#
+#THIS SOFTWARE IS PROVIDED "AS IS" AND ANY EXPRESS OR IMPLIED
+#WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF
+#MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NON-INFRINGEMENT
+#ARE DISCLAIMED.  IN NO EVENT SHALL THE COPYRIGHT OWNER OR CONTRIBUTORS
+#BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR
+#CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF
+#SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR
+#BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY,
+#WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE
+#OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN
+#IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+#
+#
+
+# write to files owned by location daemon
+allow hal_wifi_default location_socket:dir search;
+allow hal_wifi_default location:unix_dgram_socket sendto;
+
+# Connect to location via location socket.
+unix_socket_connect(hal_wifi, location, location)
+
+allow hal_wifi_default wifihal_socket:dir rw_dir_perms;
+allow hal_wifi_default wifihal_socket:sock_file create_file_perms;
+
+allow hal_wifi wlan_device:chr_file rw_file_perms;
+allow hal_wifi self:capability sys_module;
+allow hal_wifi kernel:key search;
+allow hal_wifi vendor_file:system module_load;
+allow hal_wifi proc_modules:file r_file_perms;
+# allow hal_wifi to write into /proc/debugdriver/driverdump
+r_dir_file(hal_wifi_default, proc_wifi_dbg)
+get_prop(hal_wifi_default, vendor_softap_prop)
+
+# allow hal_wifi to write into /data/vendor/tombstones/wifi
+userdebug_or_eng(`
+  allow hal_wifi_server vendor_tombstone_data_file:dir rw_dir_perms;
+  allow hal_wifi_server vendor_tombstone_data_file:file create_file_perms;
+')

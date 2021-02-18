@@ -1,0 +1,122 @@
+# Copyright (c) 2019, The Linux Foundation. All rights reserved.
+#
+# Redistribution and use in source and binary forms, with or without
+# modification, are permitted provided that the following conditions are
+# met:
+#     * Redistributions of source code must retain the above copyright
+#       notice, this list of conditions and the following disclaimer.
+#     * Redistributions in binary form must reproduce the above
+#       copyright notice, this list of conditions and the following
+#       disclaimer in the documentation and/or other materials provided
+#       with the distribution.
+#     * Neither the name of The Linux Foundation nor the names of its
+#       contributors may be used to endorse or promote products derived
+#       from this software without specific prior written permission.
+#
+# THIS SOFTWARE IS PROVIDED "AS IS" AND ANY EXPRESS OR IMPLIED
+# WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF
+# MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NON-INFRINGEMENT
+# ARE DISCLAIMED.  IN NO EVENT SHALL THE COPYRIGHT OWNER OR CONTRIBUTORS
+# BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR
+# CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF
+# SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR
+# BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY,
+# WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE
+# OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN
+# IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+
+# tee starts as root, and drops privileges
+allow tee self:capability {
+    setuid
+    setgid
+    sys_admin
+    chown
+    sys_rawio
+};
+
+# Need to directly manipulate certain block devices
+# for anti-rollback protection
+allow tee block_device:dir r_dir_perms;
+allow tee rpmb_device:blk_file rw_file_perms;
+allowxperm tee rpmb_device:blk_file ioctl { MMC_IOC_CMD };
+
+#For Wakelocks
+wakelock_use(tee)
+
+# Need to figure out how many scsi generic devices are preset
+# before being able to identify which one is rpmb device
+allow tee device:dir r_dir_perms;
+allow tee sg_device:chr_file { rw_file_perms setattr };
+
+allow tee mnt_vendor_file:dir r_dir_perms;
+r_dir_file(tee, persist_data_file)
+
+# Write to drm related pieces of persist partition
+allow tee persist_drm_file:dir create_dir_perms;
+allow tee persist_drm_file:file create_file_perms;
+
+# Provide tee access to ssd partition for HW FDE
+allow tee ssd_device:blk_file rw_file_perms;
+
+# allow tee to operate tee device
+allow tee tee_device:chr_file rw_file_perms;
+
+# Allow SFS to write to data partition
+allow tee data_tzstorage_file:dir create_dir_perms;
+allow tee data_tzstorage_file:file create_file_perms;
+
+# allow tee to load firmware images
+r_dir_file(tee, firmware_file)
+
+# allow qseecom access to time domain
+allow tee time_daemon:unix_stream_socket connectto;
+
+# allow tee access for secure UI to work
+allow tee graphics_device:dir r_dir_perms;
+allow tee graphics_device:chr_file rw_file_perms;
+
+#allow tee access for secure touch to work
+allow tee sysfs_securetouch:file rw_file_perms;
+
+#allow tee surfaceflinger_service : service_manager  find;
+
+binder_call(tee, surfaceflinger)
+#binder_use(tee)
+
+#allow tee system_app:unix_dgram_socket sendto;
+unix_socket_connect(tee, property, init)
+
+userdebug_or_eng(`
+  allow tee su:unix_dgram_socket sendto;
+')
+
+
+#allow access to qfp-daemon
+allow tee qfp-daemon_data_file:dir create_dir_perms;
+allow tee qfp-daemon_data_file:file create_file_perms;
+allow tee persist_qti_fp_file:dir create_dir_perms;
+allow tee persist_qti_fp_file:file create_file_perms;
+
+# Allow access to qsee_ipc_irq_spss device
+allow tee qsee_ipc_irq_spss_device:chr_file rw_file_perms;
+
+set_prop(tee, vendor_tee_listener_prop)
+
+# SOTER
+hal_client_domain(tee, hal_soter);
+
+#secureUI
+hal_client_domain(tee, hal_tui_comm);
+hal_client_domain(tee, hal_qdutils_disp);
+hal_client_domain(tee, hal_graphics_allocator);
+vndbinder_use(tee);
+allow tee qdisplay_service:service_manager find;
+hal_client_domain(tee, hal_graphics_composer);
+allow tee sysfs_sectouch:file rw_file_perms;
+allow tee vendor_tui_data_file:file rw_file_perms;
+allow tee vendor_tui_data_file:dir r_dir_perms;
+allow tee graphics_device:chr_file rw_file_perms;
+
+# Allow access to qsee data file
+allow tee data_qsee_file:dir create_dir_perms;
+allow tee data_qsee_file:file create_file_perms;

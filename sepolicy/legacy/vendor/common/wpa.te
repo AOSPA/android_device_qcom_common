@@ -1,0 +1,47 @@
+# Copyright (c) 2019, The Linux Foundation. All rights reserved.
+#
+# Redistribution and use in source and binary forms, with or without
+# modification, are permitted provided that the following conditions are
+# met:
+#     * Redistributions of source code must retain the above copyright
+#       notice, this list of conditions and the following disclaimer.
+#     * Redistributions in binary form must reproduce the above
+#       copyright notice, this list of conditions and the following
+#       disclaimer in the documentation and/or other materials provided
+#       with the distribution.
+#     * Neither the name of The Linux Foundation nor the names of its
+#       contributors may be used to endorse or promote products derived
+#       from this software without specific prior written permission.
+#
+# THIS SOFTWARE IS PROVIDED "AS IS" AND ANY EXPRESS OR IMPLIED
+# WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF
+# MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NON-INFRINGEMENT
+# ARE DISCLAIMED.  IN NO EVENT SHALL THE COPYRIGHT OWNER OR CONTRIBUTORS
+# BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR
+# CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF
+# SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR
+# BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY,
+# WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE
+# OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN
+# IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+
+# AOSP replaced wpa with new definition. this file to be
+# deleted once we have new definition and existing rules are modified
+
+#allow wpa persist_file:dir search;
+#qmux_socket(wpa);
+
+allow hal_wifi_supplicant wifi_vendor_data_file:dir create_dir_perms;
+allow hal_wifi_supplicant wifi_vendor_data_file:dir w_dir_perms;
+allow hal_wifi_supplicant wifi_vendor_data_file:file create_file_perms;
+allow hal_wifi_supplicant wifi_vendor_wpa_socket:dir create_dir_perms;
+allow hal_wifi_supplicant wifi_vendor_wpa_socket:sock_file create_file_perms;
+
+# Permission for wpa socket which IMS use to communicate
+# Allow wpa_supplicant to send back wifi information to cnd
+allow hal_wifi_supplicant { cnd ims }:unix_dgram_socket sendto;
+
+allow hal_wifi_supplicant fstman:unix_dgram_socket sendto;
+allow hal_wifi_supplicant wigighalsvc:unix_dgram_socket sendto;
+
+type_transition hal_wifi_supplicant wifi_vendor_data_file:dir wifi_vendor_wpa_socket "wigig_sockets";

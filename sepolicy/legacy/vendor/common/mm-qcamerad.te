@@ -1,0 +1,106 @@
+# Copyright (c) 2019, The Linux Foundation. All rights reserved.
+#
+# Redistribution and use in source and binary forms, with or without
+# modification, are permitted provided that the following conditions are
+# met:
+#     * Redistributions of source code must retain the above copyright
+#       notice, this list of conditions and the following disclaimer.
+#     * Redistributions in binary form must reproduce the above
+#       copyright notice, this list of conditions and the following
+#       disclaimer in the documentation and/or other materials provided
+#       with the distribution.
+#     * Neither the name of The Linux Foundation nor the names of its
+#       contributors may be used to endorse or promote products derived
+#       from this software without specific prior written permission.
+#
+# THIS SOFTWARE IS PROVIDED "AS IS" AND ANY EXPRESS OR IMPLIED
+# WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF
+# MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NON-INFRINGEMENT
+# ARE DISCLAIMED.  IN NO EVENT SHALL THE COPYRIGHT OWNER OR CONTRIBUTORS
+# BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR
+# CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF
+# SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR
+# BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY,
+# WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE
+# OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN
+# IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+
+type mm-qcamerad, domain;
+type mm-qcamerad_exec, exec_type, vendor_file_type, file_type;
+init_daemon_domain(mm-qcamerad)
+
+#added to support EZTune for camera
+userdebug_or_eng(`
+  allow mm-qcamerad qti_debugfs:dir r_dir_perms;
+  allow mm-qcamerad qti_debugfs:file read;
+  #allow mm-qcamerad self:tcp_socket create_stream_socket_perms;
+  allow mm-qcamerad node:tcp_socket node_bind;
+
+  # IMS use camera daemon to make VT call
+  allow mm-qcamerad port:tcp_socket name_bind;
+  allow mm-qcamerad self:tcp_socket { accept listen };
+
+  # mm-qcamerad needs to set persist.camera. property
+  set_prop(mm-qcamerad, camera_prop)
+')
+
+#Communicate with user land process through domain socket
+unix_socket_connect(mm-qcamerad, sensors, sensors)
+
+#Allow connections between sensor manager and mm-qcamerad
+#allow mm-qcamerad system_server:unix_stream_socket rw_socket_perms;
+binder_call(mm-qcamerad, system_server);
+#binder_use(mm-qcamerad);
+
+allow mm-qcamerad self:socket create_socket_perms_no_ioctl;
+allow mm-qcamerad mnt_vendor_file:dir r_dir_perms;
+allow mm-qcamerad sensors_persist_file:dir r_dir_perms;
+allow mm-qcamerad sensors_persist_file:file r_file_perms;
+
+allow mm-qcamerad self:process execmem;
+
+# Interact with other media devices
+allow mm-qcamerad video_device:dir r_dir_perms;
+allow mm-qcamerad { gpu_device video_device sensors_device }:chr_file rw_file_perms;
+
+allow mm-qcamerad { surfaceflinger mediaserver cameraserver hal_camera }:fd use;
+
+#allow mm-qcamerad camera_data_file:sock_file { create unlink };
+
+allow mm-qcamerad vendor_camera_data_file:dir w_dir_perms;
+allow mm-qcamerad vendor_camera_data_file:sock_file { create unlink };
+
+#Allows camera to call ADSP QDSP6 functionality
+allow mm-qcamerad qdsp_device:chr_file rw_file_perms;
+allow mm-qcamerad xdsp_device:chr_file rw_file_perms;
+
+#Allows sensor service(running in camera daemon) to invoke service manager API
+#allow mm-qcamerad sensorservice_service:service_manager find;
+
+#allow mm-qcamerad to access /dsp
+r_dir_file(mm-qcamerad, adsprpcd_file);
+#allow mm-qcamerad to access adsprpc_prop
+get_prop(mm-qcamerad, adsprpc_prop)
+
+r_dir_file(mm-qcamerad, firmware_file)
+allow mm-qcamerad graphics_device:dir r_dir_perms;
+
+#Allow access to /dev/graphics/fb* for screen capture
+allow mm-qcamerad graphics_device:chr_file rw_file_perms;
+
+#Allow camera work normally in FFBM
+binder_call(mm-qcamerad, vendor_mmi);
+
+#Allow camera to access laser nodes
+allow mm-qcamerad input_device:dir r_dir_perms;
+allow mm-qcamerad input_device:chr_file r_file_perms;
+
+hal_client_domain(mm-qcamerad, hal_graphics_allocator)
+allow mm-qcamerad ion_device:chr_file rw_file_perms;
+
+# from sensors team
+
+allow mm-qcamerad self:socket create_socket_perms;
+allowxperm mm-qcamerad self:socket ioctl msm_sock_ipc_ioctls;
+
+allow mm-qcamerad sysfs_data:file r_file_perms;

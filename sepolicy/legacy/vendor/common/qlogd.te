@@ -1,0 +1,84 @@
+# Copyright (c) 2019, The Linux Foundation. All rights reserved.
+#
+# Redistribution and use in source and binary forms, with or without
+# modification, are permitted provided that the following conditions are
+# met:
+#     * Redistributions of source code must retain the above copyright
+#       notice, this list of conditions and the following disclaimer.
+#     * Redistributions in binary form must reproduce the above
+#       copyright notice, this list of conditions and the following
+#       disclaimer in the documentation and/or other materials provided
+#       with the distribution.
+#     * Neither the name of The Linux Foundation nor the names of its
+#       contributors may be used to endorse or promote products derived
+#       from this software without specific prior written permission.
+#
+# THIS SOFTWARE IS PROVIDED "AS IS" AND ANY EXPRESS OR IMPLIED
+# WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF
+# MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NON-INFRINGEMENT
+# ARE DISCLAIMED.  IN NO EVENT SHALL THE COPYRIGHT OWNER OR CONTRIBUTORS
+# BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR
+# CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF
+# SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR
+# BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY,
+# WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE
+# OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN
+# IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+
+# qlogd
+type qlogd, domain;
+type qlogd_exec, exec_type, vendor_file_type, file_type;
+
+# make transition from init to its domain
+init_daemon_domain(qlogd)
+
+# need to access sharemem log device for smem logs
+allow qlogd smem_log_device:chr_file rw_file_perms;
+
+# need to add more capabilities for qlogd
+allow qlogd self:capability {
+    setuid
+    setgid
+    sys_admin
+    net_raw
+    net_admin
+    fowner
+    fsetid
+    kill
+    sys_module
+};
+allow qlogd self:capability2 syslog;
+allow qlogd self:packet_socket { create bind getopt setopt };
+
+# need to create and listen socket
+allow qlogd qlogd_socket:sock_file create_file_perms;
+
+# need to start shell execute files
+allow qlogd vendor_shell_exec:file rx_file_perms;
+
+# need to create and write files in fuse partition
+allow qlogd fuse:dir create_dir_perms;
+allow qlogd fuse:file create_file_perms;
+
+# need to capture kmsg
+allow qlogd kernel:system syslog_mod;
+
+# need for qdss log and odl from UI
+userdebug_or_eng(`
+  allow qlogd { debugfs_tracing qdss_device }:file r_file_perms;
+  allow qlogd { qdss_device }:file r_file_perms;
+  r_dir_file(qlogd, storage_file)
+  r_dir_file(qlogd, mnt_user_file)
+  diag_use(qlogd)
+')
+
+# need for capture adb logs
+unix_socket_connect(qlogd, logdr, logd)
+
+# need for subsystem ramdump
+allow qlogd device:dir r_dir_perms;
+allow qlogd ramdump_device:chr_file { setattr rw_file_perms };
+
+# need for qxdm log
+allow qlogd diag_exec:file rx_file_perms;
+wakelock_use(qlogd)

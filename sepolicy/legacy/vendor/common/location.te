@@ -1,0 +1,132 @@
+# Copyright (c) 2019, The Linux Foundation. All rights reserved.
+#
+# Redistribution and use in source and binary forms, with or without
+# modification, are permitted provided that the following conditions are
+# met:
+#     * Redistributions of source code must retain the above copyright
+#       notice, this list of conditions and the following disclaimer.
+#     * Redistributions in binary form must reproduce the above
+#       copyright notice, this list of conditions and the following
+#       disclaimer in the documentation and/or other materials provided
+#       with the distribution.
+#     * Neither the name of The Linux Foundation nor the names of its
+#       contributors may be used to endorse or promote products derived
+#       from this software without specific prior written permission.
+#
+# THIS SOFTWARE IS PROVIDED "AS IS" AND ANY EXPRESS OR IMPLIED
+# WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF
+# MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NON-INFRINGEMENT
+# ARE DISCLAIMED.  IN NO EVENT SHALL THE COPYRIGHT OWNER OR CONTRIBUTORS
+# BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR
+# CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF
+# SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR
+# BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY,
+# WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE
+# OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN
+# IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+
+# location - Location daemon
+type location, domain;
+type location_exec, exec_type, vendor_file_type, file_type;
+
+init_daemon_domain(location)
+net_domain(location)
+
+# Socket is created by the daemon, not by init, and under /data/gps,
+# not under /dev/socket.
+type_transition location location_data_file:sock_file location_socket;
+
+qmux_socket(location)
+#binder_use(location)
+binder_call(location, system_server)
+wakelock_use(location)
+
+allow location location_data_file:dir create_dir_perms;
+allow location location_data_file:{ file fifo_file } create_file_perms;
+allow location location_data_file:sock_file write;
+allow location location_exec:file x_file_perms;
+allow location location_socket:sock_file create_file_perms;
+allow location location_socket:dir rw_dir_perms;
+allow location self:capability { setuid setgid net_admin net_bind_service };
+allow location self:{
+    socket
+    netlink_socket
+    netlink_generic_socket
+    qipcrtr_socket
+} create_socket_perms_no_ioctl;
+
+unix_socket_connect(location, sensors, sensors)
+allow location sensors_device:chr_file r_file_perms;
+allow location sensors_socket:sock_file rw_file_perms;
+allow location vendor_shell_exec:file rx_file_perms;
+
+#allow location system_server:unix_stream_socket { read write connectto};
+
+# For interfacing with the device sensorservice
+# permission check for slim daemon
+#allow location { sensorservice_service permission_service }:service_manager find;
+
+hwbinder_use(location)
+get_prop(location, hwservicemanager_prop)
+
+allow location fwk_sensor_hwservice:hwservice_manager find;
+
+allow location sensors_persist_file:dir r_dir_perms;
+allow location sensors_persist_file:file r_file_perms;
+
+#wifi
+userdebug_or_eng(`
+allow location su:unix_dgram_socket sendto;
+')
+
+dontaudit location domain:dir r_dir_perms;
+r_dir_file(location, netmgrd)
+allow location mnt_vendor_file:dir r_dir_perms;
+allow location persist_rfs_shared_hlos_file:dir r_dir_perms;
+allow location persist_rfs_shared_hlos_file:file rw_file_perms;
+
+allow location hal_gnss_qti:unix_dgram_socket sendto;
+
+# /data/vendor/wifi
+allow location wifi_vendor_data_file:dir search;
+
+# /data/vendor/wifi/wpa
+allow location wpa_data_file:dir rw_dir_perms;
+allow location wpa_data_file:sock_file create_file_perms;
+allow location hal_wifi_supplicant_default:unix_dgram_socket sendto;
+
+# /dev/socket/wifihal
+allow location wifihal_socket:dir search;
+unix_socket_send(location, wifihal,  hal_wifi_default);
+
+#Allow access to netmgrd socket
+netmgr_socket(location);
+
+#Allow access to properties
+set_prop(location, location_prop);
+
+#diag
+userdebug_or_eng(`
+    diag_use(location)
+')
+
+allow location sysfs_data:file r_file_perms;
+allow location self:socket ioctl;
+
+# ioctlcmd=c304
+allowxperm location self:{ socket qipcrtr_socket } ioctl msm_sock_ipc_ioctls;
+allow location self:udp_socket ioctl;
+# Replace this with macro
+allowxperm location self:udp_socket ioctl priv_sock_ioctls;
+
+hal_client_domain(location, vendor_qccsyshal);
+
+allow location hal_datafactory_hwservice:hwservice_manager find;
+binder_call(location, cnd)
+get_prop(location, cnd_vendor_prop)
+
+#Allow access to wake alarm
+allow location self:capability2 wake_alarm;
+
+#allow qdma prop
+#get_prop(location, vendor_qdma_prop);

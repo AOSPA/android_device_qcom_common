@@ -1,0 +1,180 @@
+# Copyright (c) 2019, The Linux Foundation. All rights reserved.
+#
+# Redistribution and use in source and binary forms, with or without
+# modification, are permitted provided that the following conditions are
+# met:
+#     * Redistributions of source code must retain the above copyright
+#       notice, this list of conditions and the following disclaimer.
+#     * Redistributions in binary form must reproduce the above
+#       copyright notice, this list of conditions and the following
+#       disclaimer in the documentation and/or other materials provided
+#       with the distribution.
+#     * Neither the name of The Linux Foundation nor the names of its
+#       contributors may be used to endorse or promote products derived
+#       from this software without specific prior written permission.
+#
+# THIS SOFTWARE IS PROVIDED "AS IS" AND ANY EXPRESS OR IMPLIED
+# WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF
+# MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NON-INFRINGEMENT
+# ARE DISCLAIMED.  IN NO EVENT SHALL THE COPYRIGHT OWNER OR CONTRIBUTORS
+# BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR
+# CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF
+# SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR
+# BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY,
+# WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE
+# OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN
+# IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+
+r_dir_file(system_app, bluetooth_data_file);
+
+allow system_app {
+    atfwd_service
+    dun_service
+    qfp_proxy_service
+}:service_manager add;
+
+userdebug_or_eng(`
+  allow system_app qti_debugfs:file r_file_perms;
+  allow system_app su:unix_dgram_socket sendto;
+
+  # Access to tombstone segfaults
+  allow system_app tombstone_data_file:dir r_dir_perms;
+  allow system_app tombstone_data_file:file r_file_perms;
+  diag_use(system_app)
+
+')
+
+allow system_app cnd_data_file:dir w_dir_perms;
+allow system_app cnd_data_file:file create_file_perms;
+allow system_app bluetooth:unix_stream_socket ioctl;
+
+# Allow hbtp hal Service to be found
+hal_client_domain(system_app, hal_hbtp)
+
+#access to wifi_ftmd
+#unix_socket_send(system_app, wififtmd, wifi_ftmd)
+
+# allow system_app to interact with dtseagleservice
+binder_call(system_app, dtseagleservice)
+
+# allow system_app to interact with fido daemon
+binder_call(system_app, fidodaemon)
+
+# allow system_app to interact with secota daemon
+binder_call(system_app, secotad)
+
+#allow access to qfp-daemon
+allow system_app qfp-daemon_data_file:dir create_dir_perms;
+allow system_app qfp-daemon_data_file:file create_file_perms;
+binder_call(system_app, qfp-daemon)
+hal_client_domain(system_app, hal_fingerprint)
+
+#allow access to qvop-daemon
+hal_client_domain(system_app, hal_voiceprint)
+
+# allow system_app to interact with fido daemon
+binder_call(system_app, fidodaemon)
+
+# allow system_app to interact with esepmdaemon
+binder_call(system_app, esepmdaemon)
+
+# allow system_app to interact with seemp health daemon
+binder_call(system_app, seemp_health_daemon)
+
+# allow system_app to interact with display color hal
+hal_client_domain(system_app, hal_display_color)
+
+# allow system_app to interact with pasr hal
+hal_client_domain(system_app, hal_pasrmanager)
+
+# allow system_app to interact with display postproc hal
+hal_client_domain(system_app, hal_display_postproc)
+
+# allow system_app to interact with light hal
+hal_client_domain(system_app, hal_light);
+
+#allow access to RIDL
+allow system_app RIDL_data_file:dir rw_dir_perms;
+allow system_app RIDL_data_file:file create_file_perms;
+allow system_app RIDL_data_file:lnk_file r_file_perms;
+allow system_app RIDL_socket:dir r_dir_perms;
+#unix_socket_connect(system_app, RIDL, RIDL)
+#allow system_app RIDL_socket:sock_file r_file_perms;
+
+# Allow access to qti_logkit
+allow system_app qti_logkit_priv_data_file:dir create_dir_perms;
+allow system_app qti_logkit_priv_data_file:file create_file_perms;
+allow system_app qti_logkit_priv_socket:dir r_dir_perms;
+#unix_socket_connect(system_app, qti_logkit_priv, qti_logkit)
+#allow system_app qti_logkit_priv_socket:sock_file r_file_perms;
+
+# bugreport
+#allow system_app ctl_dumpstate_prop:property_service set;
+unix_socket_connect(system_app, dumpstate, dumpstate)
+
+# allow gba auth service to add itself as system service
+allow system_app gba_auth_service:service_manager add;
+
+# allow gba auth service to find itself
+allow system_app gba_auth_service:service_manager find;
+
+# allow access to system_app for wbc_service
+allow system_app wbc_service:service_manager add;
+allow system_app self:netlink_kobject_uevent_socket { read bind setopt create };
+
+# allow access to system app for radio files
+allow system_app radio_data_file:dir rw_dir_perms;
+allow system_app radio_data_file:file create_file_perms;
+
+# required for FM App to connectto wcnss_filter sockets
+# serial device ttyHS0 (transport layer for FM)
+allow system_app serial_device:chr_file rw_file_perms;
+# access unix sockets for fm application
+unix_socket_connect(system_app,bluetooth, bluetooth)
+# access  wcnss_filter from fm app
+#allow system_app wcnss_filter:unix_stream_socket connectto;
+
+# ANR
+allow system_app anr_data_file:dir r_dir_perms;
+allow system_app anr_data_file:file r_file_perms;
+# detect /data/anr directory is created
+allow system_app system_data_file:dir read;
+
+# allow access to ims helper
+#unix_socket_connect(system_app, ims, ims)
+
+# allow system app to interact with hal_qteeconnector
+hal_client_domain(system_app, hal_qteeconnector);
+
+# allow access to cache recovery for LK3
+allow system_app cache_file:dir create_dir_perms;
+allow system_app cache_file:file create_file_perms;
+allow system_app cache_recovery_file:dir rw_dir_perms;
+allow system_app cache_recovery_file:file create_file_perms;
+
+# update engine
+binder_call( system_app, update_engine )
+
+hal_client_domain(system_app, hal_perf)
+
+#allow system app to interact with the esepowermanager
+hal_client_domain(system_app, hal_esepowermanager)
+get_prop(system_app, fm_prop)
+
+#allow system_app access factory
+hal_client_domain(system_app, vendor_hal_factory_qti);
+
+#secureUI
+hal_client_domain(system_app, hal_qdutils_disp);
+hal_client_domain(system_app, hal_tui_comm);
+hal_client_domain(system_app, hal_sensorscalibrate_qti);
+
+#soter
+hal_client_domain(system_app, hal_soter);
+
+get_prop(system_app, vendor_radio_prop)
+
+
+
+#allow system app to access capabilityconfigstore hal
+hal_client_domain(system_app, hal_capabilityconfigstore_qti);

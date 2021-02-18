@@ -1,0 +1,89 @@
+# Copyright (c) 2019, The Linux Foundation. All rights reserved.
+#
+# Redistribution and use in source and binary forms, with or without
+# modification, are permitted provided that the following conditions are
+# met:
+#     * Redistributions of source code must retain the above copyright
+#       notice, this list of conditions and the following disclaimer.
+#     * Redistributions in binary form must reproduce the above
+#       copyright notice, this list of conditions and the following
+#       disclaimer in the documentation and/or other materials provided
+#       with the distribution.
+#     * Neither the name of The Linux Foundation nor the names of its
+#       contributors may be used to endorse or promote products derived
+#       from this software without specific prior written permission.
+#
+# THIS SOFTWARE IS PROVIDED "AS IS" AND ANY EXPRESS OR IMPLIED
+# WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF
+# MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NON-INFRINGEMENT
+# ARE DISCLAIMED.  IN NO EVENT SHALL THE COPYRIGHT OWNER OR CONTRIBUTORS
+# BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR
+# CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF
+# SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR
+# BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY,
+# WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE
+# OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN
+# IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+
+#integrated sensor process
+type ims, domain;
+type ims_exec, exec_type, vendor_file_type, file_type;
+
+# Started by init
+init_daemon_domain(ims)
+net_domain(ims)
+
+# Talk to qmuxd
+qmux_socket(ims)
+
+allow ims self:capability net_bind_service;
+
+# Use generic netlink socket
+allow ims self:{
+    netlink_socket
+    socket
+    netlink_generic_socket
+    qipcrtr_socket
+} create_socket_perms_no_ioctl;
+
+# To run NDC command
+allow ims {
+    vendor_shell_exec
+    # IMS route installation
+    wcnss_service_exec
+    # for WPA supplicant comment to remove compilation issue
+    #wpa_exec
+}:file rx_file_perms;
+
+
+# Talk to qumuxd via ims_socket
+unix_socket_connect(ims, ims, qmuxd)
+
+set_prop(ims, qcom_ims_prop)
+set_prop(ims, ctl_vendor_imsrcsservice_prop)
+
+# permissions for communication with CNE in LBO use case
+unix_socket_connect(ims, cnd, cnd)
+
+#Allow access to netmgrd socket
+netmgr_socket(ims);
+
+# Inherit and use open files from radio.
+allow ims radio:fd use;
+
+#diag
+userdebug_or_eng(`
+    diag_use(ims)
+')
+allow ims self:{ socket udp_socket } ioctl;
+# ioctlcmd=c302
+allowxperm ims self:socket ioctl msm_sock_ipc_ioctls;
+# ioctlcmd=89fd
+allowxperm ims self:udp_socket ioctl priv_sock_ioctls;
+allow ims sysfs_data:file r_file_perms;
+hwbinder_use(ims)
+get_prop(ims, hwservicemanager_prop)
+get_prop(ims, qcom_ims_prop)
+get_prop(ims, cnd_vendor_prop)
+allow ims hal_datafactory_hwservice:hwservice_manager find;
+binder_call(ims, cnd)

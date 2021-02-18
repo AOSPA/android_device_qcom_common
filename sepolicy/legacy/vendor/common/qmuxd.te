@@ -1,0 +1,74 @@
+# Copyright (c) 2019, The Linux Foundation. All rights reserved.
+#
+# Redistribution and use in source and binary forms, with or without
+# modification, are permitted provided that the following conditions are
+# met:
+#     * Redistributions of source code must retain the above copyright
+#       notice, this list of conditions and the following disclaimer.
+#     * Redistributions in binary form must reproduce the above
+#       copyright notice, this list of conditions and the following
+#       disclaimer in the documentation and/or other materials provided
+#       with the distribution.
+#     * Neither the name of The Linux Foundation nor the names of its
+#       contributors may be used to endorse or promote products derived
+#       from this software without specific prior written permission.
+#
+# THIS SOFTWARE IS PROVIDED "AS IS" AND ANY EXPRESS OR IMPLIED
+# WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF
+# MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NON-INFRINGEMENT
+# ARE DISCLAIMED.  IN NO EVENT SHALL THE COPYRIGHT OWNER OR CONTRIBUTORS
+# BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR
+# CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF
+# SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR
+# BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY,
+# WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE
+# OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN
+# IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+
+type qmuxd, domain;
+type qmuxd_exec, exec_type, vendor_file_type, file_type;
+net_domain(qmuxd)
+init_daemon_domain(qmuxd)
+
+userdebug_or_eng(`
+  domain_auto_trans(shell, qmuxd_exec, qmuxd)
+  #domain_auto_trans(adbd, qmuxd_exec, qmuxd)
+')
+
+#Allow qmuxd to operate on various qmux device sockets
+#allow qmuxd qmux_radio_socket:dir { write add_name remove_name search };
+#allow qmuxd qmux_radio_socket:sock_file { create setattr getattr write unlink };
+#allow qmuxd qmux_audio_socket:dir { write add_name remove_name search };
+#allow qmuxd qmux_audio_socket:sock_file { create setattr getattr write unlink };
+#allow qmuxd qmux_gps_socket:dir { write add_name remove_name search };
+#allow qmuxd qmux_gps_socket:sock_file { create setattr getattr write unlink };
+#allow qmuxd qmux_bluetooth_socket:dir { write add_name remove_name search };
+#allow qmuxd qmux_bluetooth_socket:sock_file { create setattr getattr write unlink };
+
+qmux_socket(qmuxd);
+
+#Allow logging
+allow qmuxd {
+    #Allow operation in platform specific transports
+    smd_device
+    hsic_device
+    mhi_device
+    smem_log_device
+}:chr_file rw_file_perms;
+
+#Allow qmuxd to operate in platform specific transports
+allow qmuxd {
+    sysfs_smd_open_timeout
+    sysfs_hsic_modem_wait
+}:file w_file_perms;
+
+allow qmuxd self:capability { setuid setgid setpcap };
+
+#Allow qmuxd to have the CAP_BLOCK_SUSPEND capability
+wakelock_use(qmuxd)
+
+allow qmuxd mhi_device:chr_file rw_file_perms;
+
+#Allow qmuxd to access to IPC router
+allow qmuxd smem_log_device:chr_file rw_file_perms;
+allow qmuxd qmuxd:socket create_socket_perms_no_ioctl;

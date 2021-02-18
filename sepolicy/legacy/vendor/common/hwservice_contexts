@@ -1,0 +1,114 @@
+# Copyright (c) 2017-2019, 2020, The Linux Foundation. All rights reserved.
+#
+# Redistribution and use in source and binary forms, with or without
+# modification, are permitted provided that the following conditions are
+# met:
+#     * Redistributions of source code must retain the above copyright
+#       notice, this list of conditions and the following disclaimer.
+#     * Redistributions in binary form must reproduce the above
+#       copyright notice, this list of conditions and the following
+#       disclaimer in the documentation and/or other materials provided
+#       with the distribution.
+#     * Neither the name of The Linux Foundation nor the names of its
+#       contributors may be used to endorse or promote products derived
+#       from this software without specific prior written permission.
+#
+# THIS SOFTWARE IS PROVIDED "AS IS" AND ANY EXPRESS OR IMPLIED
+# WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF
+# MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NON-INFRINGEMENT
+# ARE DISCLAIMED.  IN NO EVENT SHALL THE COPYRIGHT OWNER OR CONTRIBUTORS
+# BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR
+# # CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF
+# SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR
+# BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY,
+# WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE
+# OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN
+# IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+
+vendor.qti.hardware.fingerprint::IQtiExtendedFingerprint     u:object_r:hal_fingerprint_hwservice:s0
+vendor.qti.hardware.radio.am::IQcRilAudio                    u:object_r:hal_telephony_hwservice:s0
+vendor.qti.hardware.radio.config::IConfig                    u:object_r:hal_telephony_hwservice:s0
+vendor.qti.hardware.radio.ims::IImsRadio                     u:object_r:hal_telephony_hwservice:s0
+vendor.qti.hardware.radio.qcrilhook::IQtiOemHook             u:object_r:hal_telephony_hwservice:s0
+vendor.qti.hardware.radio.qtiradio::IQtiRadio                u:object_r:hal_telephony_hwservice:s0
+vendor.qti.hardware.radio.lpa::IUimLpa                       u:object_r:hal_telephony_hwservice:s0
+vendor.qti.hardware.radio.uim_remote_client::IUimRemoteServiceClient    u:object_r:hal_telephony_hwservice:s0
+vendor.qti.hardware.radio.uim_remote_server::IUimRemoteServiceServer    u:object_r:hal_telephony_hwservice:s0
+vendor.qti.hardware.radio.uim::IUim                          u:object_r:hal_telephony_hwservice:s0
+vendor.qti.hardware.radio.internal.deviceinfo::IDeviceInfo   u:object_r:hal_telephony_hwservice:s0
+vendor.qti.hardware.radio.atcmdfwd::IAtCmdFwd                u:object_r:vendor_hal_atfwd_hwservice:s0
+vendor.display.color::IDisplayColor                          u:object_r:hal_display_color_hwservice:s0
+vendor.display.config::IDisplayConfig                        u:object_r:hal_display_config_hwservice:s0
+vendor.display.postproc::IDisplayPostproc                    u:object_r:hal_display_postproc_hwservice:s0
+vendor.qti.gnss::ILocHidlGnss                                u:object_r:hal_gnss_hwservice:s0
+vendor.nxp.hardware.nfc::INqNfc                              u:object_r:hal_nfc_hwservice:s0
+vendor.nxp.nxpnfclegacy::INxpNfcLegacy                       u:object_r:hal_nfc_hwservice:s0
+vendor.qti.hardware.improvetouch.touchcompanion::ITouchCompanion       u:object_r:hal_hbtp_hwservice:s0
+vendor.qti.hardware.improvetouch.gesturemanager::IGestureManager       u:object_r:hal_hbtp_hwservice:s0
+vendor.qti.hardware.improvetouch.blobmanager::IBlobManager             u:object_r:hal_hbtp_hwservice:s0
+com.qualcomm.qti.dpm.api::IdpmQmi                            u:object_r:hal_dpmqmi_hwservice:s0
+vendor.qti.imsrtpservice::IRTPService                        u:object_r:hal_imsrtp_hwservice:s0
+com.qualcomm.qti.bluetooth_audio::IBluetoothAudio            u:object_r:hal_audio_hwservice:s0
+vendor.qti.hardware.btconfigstore::IBTConfigStore            u:object_r:hal_btconfigstore_hwservice:s0
+com.qualcomm.qti.ant::IAntHci                                u:object_r:hal_bluetooth_hwservice:s0
+vendor.qti.hardware.wipower::IWipower                        u:object_r:hal_bluetooth_hwservice:s0
+vendor.qti.hardware.perf::IPerf                              u:object_r:hal_perf_hwservice:s0
+com.qualcomm.qti.wifidisplayhal::IHDCPSession                u:object_r:wifidisplayhalservice_hwservice:s0
+vendor.qti.hardware.iop::IIop                                u:object_r:hal_iop_hwservice:s0
+com.qualcomm.qti.wifidisplayhal::IDSManager                  u:object_r:wifidisplayhalservice_hwservice:s0
+vendor.qti.hardware.alarm::IAlarm                            u:object_r:hal_alarm_qti_hwservice:s0
+com.qualcomm.qti.uceservice::IUceService                     u:object_r:hal_imsrcsd_hwservice:s0
+vendor.qti.ims.callinfo::IService                            u:object_r:hal_imscallinfo_hwservice:s0
+com.qualcomm.qti.imscmservice::IImsCmService                 u:object_r:hal_imsrcsd_hwservice:s0
+vendor.qti.hardware.data.latency::ILinkLatency               u:object_r:hal_latency_hwservice:s0
+vendor.qti.hardware.data.iwlan::IIWlan                       u:object_r:hal_iwlan_hwservice:s0
+vendor.qti.hardware.cacert::IService                         u:object_r:hal_cacert_hwservice:s0
+vendor.qti.data.factory::IFactory                            u:object_r:hal_datafactory_hwservice:s0
+vendor.qti.ims.factory::IImsFactory                          u:object_r:vendor_hal_imsfactory_hwservice:s0
+vendor.qti.hardware.data.connection::IDataConnection         u:object_r:hal_dataconnection_hwservice:s0
+vendor.qti.hardware.vpp::IHidlVppService                     u:object_r:hal_vpp_hwservice:s0
+vendor.qti.hardware.wigig.supptunnel::ISuppTunnelProvider    u:object_r:hal_wigig_hwservice:s0
+vendor.qti.hardware.wigig.netperftuner::INetPerfTuner        u:object_r:hal_wigig_npt_hwservice:s0
+vendor.qti.hardware.fstman::IFstManager                      u:object_r:hal_fstman_hwservice:s0
+vendor.qti.hardware.qteeconnector::IAppConnector             u:object_r:vendor_hal_qteeconnector_hwservice:s0
+vendor.qti.hardware.qteeconnector::IGPAppConnector           u:object_r:vendor_hal_qteeconnector_hwservice:s0
+vendor.qti.esepowermanager::IEsePowerManager                 u:object_r:hal_esepowermanager_hwservice:s0
+vendor.qti.voiceprint::IQtiVoicePrintService                 u:object_r:hal_voiceprint_hwservice:s0
+vendor.qti.hardware.servicetracker::IDebugUtils              u:object_r:hal_debugutils_hwservice:s0
+vendor.qti.power.pasrmanager::IPasrManager                   u:object_r:hal_pasrmanager_hwservice:s0
+# Below rules are added to support the devices that are using the HALs before they are moved to
+# vendor.qti.hardware. They are used as it is to maintain the integrity of the software.
+vendor.qti.qcril.am::IQcRilAudio                             u:object_r:hal_telephony_hwservice:s0
+com.qualcomm.qti.ims.radio::IImsRadio                        u:object_r:hal_telephony_hwservice:s0
+com.qualcomm.qti.qcril.qcrilhook::IQtiOemHook                u:object_r:hal_telephony_hwservice:s0
+vendor.qti.atcmdfwd::IAtCmdFwd                               u:object_r:vendor_hal_atfwd_hwservice:s0
+com.qualcomm.qti.imsrtpservice::IRTPService                  u:object_r:hal_imsrtp_hwservice:s0
+vendor.qti.hardware.factory::IFactory                        u:object_r:vendor_hal_factory_qti_hwservice:s0
+vendor.qti.hardware.display.allocator::IQtiAllocator         u:object_r:hal_graphics_allocator_hwservice:s0
+vendor.qti.hardware.display.composer::IQtiComposer           u:object_r:hal_graphics_composer_hwservice:s0
+vendor.qti.hardware.soter::ISoter                            u:object_r:hal_soter_hwservice:s0
+vendor.qti.hardware.servicetracker::IServicetracker          u:object_r:vendor_hal_srvctracker_hwservice:s0
+vendor.qti.hardware.tui_comm::ITuiComm                       u:object_r:hal_tui_comm_hwservice:s0
+vendor.qti.hardware.qdutils_disp::IQdutilsDisp               u:object_r:hal_qdutils_disp_hwservice:s0
+vendor.qti.hardware.sensorscalibrate::ISensorsCalibrate      u:object_r:hal_sensorscalibrate_qti_hwservice:s0
+vendor.qti.hardware.wifi.supplicant::ISupplicantVendor       u:object_r:hal_wifi_supplicant_hwservice:s0
+vendor.qti.hardware.scve.panorama::IPanoramaTracking            u:object_r:hal_scve_hwservice:s0
+vendor.qti.hardware.scve.panorama::IPanoramaStitching           u:object_r:hal_scve_hwservice:s0
+vendor.qti.hardware.scve.objecttracker::IObjectTracker          u:object_r:hal_scve_hwservice:s0
+vendor.qti.hardware.wifi.hostapd::IHostapdVendor             u:object_r:hal_wifi_hostapd_hwservice:s0
+vendor.qti.hardware.wifi.wifilearner::IWifiStats             u:object_r:hal_wifilearner_hwservice:s0
+vendor.qti.hardware.fm::IFmHci                               u:object_r:hal_fm_hwservice:s0
+vendor.qti.hardware.wifidisplaysession::IWifiDisplaySession  u:object_r:wifidisplayhalservice_hwservice:s0
+vendor.qti.hardware.wifidisplaysession::IWifiDisplaySessionVideoTrack    u:object_r:wifidisplayhalservice_hwservice:s0
+vendor.qti.hardware.wifidisplaysession::IWifiDisplaySessionAudioTrack    u:object_r:wifidisplayhalservice_hwservice:s0
+vendor.qti.hardware.wifidisplaysession::IWifiDisplaySessionImageTrack    u:object_r:wifidisplayhalservice_hwservice:s0
+vendor.qti.hardware.bluetooth_audio::IBluetoothAudioProvidersFactory u:object_r:hal_audio_hwservice:s0
+vendor.qti.hardware.display.mapper::IQtiMapper               u:object_r:hal_graphics_mapper_hwservice:s0
+vendor.qti.hardware.cryptfshw::ICryptfsHw                    u:object_r:hal_keymaster_hwservice:s0
+vendor.qti.hardware.capabilityconfigstore::ICapabilityConfigStore u:object_r:hal_capabilityconfigstore_qti_hwservice:s0
+vendor.qti.hardware.bluetooth_sar::IBluetoothSar             u:object_r:hal_bluetooth_hwservice:s0
+com.dsi.ant::IAnt                                            u:object_r:hal_bluetooth_hwservice:s0
+vendor.qti.hardware.qseecom::IQSEECom                        u:object_r:hal_qseecom_hwservice:s0
+vendor.qti.hardware.perf::IPerfCallback                      u:object_r:hal_perfcallback_hwservice:s0
+vendor.qti.hardware.dsp::IDspService                         u:object_r:vendor_hal_dspmanager_hwservice:s0
+vendor.qti.hardware.qccvndhal::IQccvndhal                     u:object_r:vendor_hal_qccvndhal_hwservice:s0

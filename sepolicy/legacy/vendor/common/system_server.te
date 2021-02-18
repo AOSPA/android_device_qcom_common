@@ -1,0 +1,188 @@
+# Copyright (c) 2019, The Linux Foundation. All rights reserved.
+#
+# Redistribution and use in source and binary forms, with or without
+# modification, are permitted provided that the following conditions are
+# met:
+#     * Redistributions of source code must retain the above copyright
+#       notice, this list of conditions and the following disclaimer.
+#     * Redistributions in binary form must reproduce the above
+#       copyright notice, this list of conditions and the following
+#       disclaimer in the documentation and/or other materials provided
+#       with the distribution.
+#     * Neither the name of The Linux Foundation nor the names of its
+#       contributors may be used to endorse or promote products derived
+#       from this software without specific prior written permission.
+#
+# THIS SOFTWARE IS PROVIDED "AS IS" AND ANY EXPRESS OR IMPLIED
+# WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF
+# MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NON-INFRINGEMENT
+# ARE DISCLAIMED.  IN NO EVENT SHALL THE COPYRIGHT OWNER OR CONTRIBUTORS
+# BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR
+# CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF
+# SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR
+# BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY,
+# WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE
+# OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN
+# IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+
+allow system_server self:capability sys_module;
+
+# allow system_server to communicate with cnd process over cnd_socket
+#unix_socket_connect(system_server, cnd, cnd)
+
+# Access to sensors socket
+#unix_socket_connect(system_server, sensors, sensors)
+#unix_socket_send(system_server, sensors, sensors)
+#allow system_server sensors:unix_stream_socket sendto;
+#allow system_server sensors_socket:sock_file r_file_perms;
+#qmux_socket(system_server);
+
+allow system_server self:socket create_socket_perms;
+allowxperm system_server self:socket ioctl msm_sock_ipc_ioctls;
+allow system_server sysfs_sensors:dir search;
+allow system_server sysfs_sensors:file rw_file_perms;
+
+allow system_server {
+    # For wifistatemachine
+    wbc_service
+    # Allow system_server to add digital pen system service
+    #dpmservice
+}:service_manager add;
+
+# required for ANT App to connectto wcnss_filter sockets
+allow system_server bluetooth:unix_stream_socket connectto;
+# access to iop
+unix_socket_send(system_server, iop, dumpstate)
+unix_socket_connect(system_server, iop, dumpstate)
+
+hal_client_domain(system_server, hal_srvctracker)
+
+# allow  system/framework applications to update the dpmd configuration files
+#unix_socket_connect(system_server, dpmd, dpmd);
+#allow system_server { dpmd_socket socket_device }:sock_file w_file_perms;
+#allow system_server dpmd_data_file:dir create_dir_perms;
+#allow system_server dpmd_data_file:file create_file_perms;
+
+# For location
+binder_call(system_server, location);
+type_transition system_server location_data_file:sock_file location_socket "location-mq-s";
+type_transition system_server location_data_file:sock_file location_socket "alarm_svc";
+#allow system_server location:unix_stream_socket connectto;
+#allow system_server location_socket:sock_file create_file_perms;
+
+#For wifistatemachine
+allow system_server kernel:key search;
+allow system_server wlan_device:chr_file rw_file_perms;
+get_prop(system_server, vendor_softap_prop)
+
+#For ssr
+allow system_server ssr_device:chr_file r_file_perms;
+
+allow system_server { fuse }:dir search;
+
+allow system_server proc_audiod:file r_file_perms;
+
+allow system_server {
+    serial_device
+    smd_device
+    #allow access to power control ANT chip
+    bt_device
+}:chr_file rw_file_perms;
+
+hal_client_domain(system_server, hal_dataconnection_qti)
+
+#Allow access to netmgrd socket
+#netmgr_socket(system_server);
+# So init can manage our process
+allow system_server RIDL:fd use;
+allow system_server RIDL:fifo_file write;
+
+# So init can manage our process
+allow system_server qti_logkit:fd use;
+allow system_server qti_logkit:fifo_file write;
+
+#Rules for system server to talk to peripheral manager
+get_prop(system_server, vendor_per_mgr_state_prop);
+
+# Allow system server access to qfp daemon
+binder_call(system_server, qfp-daemon);
+binder_call(system_server, fps_hal)
+allow system_server iqfp_service:service_manager find;
+
+# For shutdown animation
+allow system_server ctl_bootanim_prop:property_service set;
+
+# allow tethering to access dhcp leases
+r_dir_file(system_server, dhcp_data_file)
+
+#allow access to fingerprintd data file
+allow system_server fingerprintd_data_file:file { r_file_perms unlink };
+allow system_server fingerprintd_data_file:dir { rw_dir_perms rmdir };
+
+#for Wifi module this is needed
+allow system_server system_file:system module_load;
+
+userdebug_or_eng(`
+  diag_use(system_server)
+')
+
+# allow access to low persistence mode sysfs node
+allow system_server sysfs_graphics:file rw_file_perms;
+
+# timerslack_ns
+allow system_server { vendor_location_app system_app } :file write;
+
+#OpenGLES version
+get_prop(system_server, vendor_opengles_prop)
+#get_prop(system_server, qemu_hw_mainkeys_prop)
+
+get_prop(system_server, hwui_prop)
+get_prop(system_server, bservice_prop)
+get_prop(system_server, reschedule_service_prop)
+allow system_server appdomain:file w_file_perms;
+get_prop(system_server, vendor_cgroup_follow_prop)
+
+# Allow system_server to access ActivityManager tuning properties from vendor
+get_prop(system_server, vendor_am_prop)
+get_prop(system_server, vendor_mpctl_prop)
+
+# IPC call for sensor feed
+binder_call(system_server, hal_graphics_composer)
+binder_call(system_server, hal_camera)
+binder_call(system_server, mm-pp-daemon)
+
+# Ant ipc
+hal_client_domain(system_server,hal_bluetooth);
+
+hal_client_domain(system_server, hal_perf)
+hal_client_domain(system_server, hal_sensors)
+
+# allow WIGIG framework hosted in system_server to access wigig_hal
+hal_client_domain(system_server, hal_wigig)
+# allow WIGIG framework to access network performance tuner
+hal_client_domain(system_server, hal_wigig_npt)
+# allow WIGIG framework to access the capability config store
+hal_client_domain(system_server, hal_capabilityconfigstore_qti);
+# allow WIFI framework to access the fst-manager
+hal_client_domain(system_server, hal_fstman)
+# allow WIGIG framework access to wil6210 sysfs files like thermal_throttling
+allow system_server sysfs_wigig:file rw_file_perms;
+
+# allow system_server to access IOP HAL service
+hal_client_domain(system_server, hal_iop)
+
+# Allow Gesture based boost from System Server
+get_prop(system_server, vendor_scroll_prop)
+
+# allow system_server to access vendor display property.
+get_prop(system_server, vendor_display_prop)
+get_prop(system_server, vendor_iop_prop)
+
+# allow system server to get vendor_audio_prop
+get_prop(system_server, vendor_audio_prop)
+
+# allow system server to get vendor_xlat_prop
+get_prop(system_server, vendor_xlat_prop)
+
+# allow system_server to access IWifiStats HAL service
+hal_client_domain(system_server, hal_wifilearner)

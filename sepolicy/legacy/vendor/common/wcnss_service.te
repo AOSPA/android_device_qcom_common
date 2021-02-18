@@ -1,0 +1,96 @@
+# Copyright (c) 2019, The Linux Foundation. All rights reserved.
+#
+# Redistribution and use in source and binary forms, with or without
+# modification, are permitted provided that the following conditions are
+# met:
+#     * Redistributions of source code must retain the above copyright
+#       notice, this list of conditions and the following disclaimer.
+#     * Redistributions in binary form must reproduce the above
+#       copyright notice, this list of conditions and the following
+#       disclaimer in the documentation and/or other materials provided
+#       with the distribution.
+#     * Neither the name of The Linux Foundation nor the names of its
+#       contributors may be used to endorse or promote products derived
+#       from this software without specific prior written permission.
+#
+# THIS SOFTWARE IS PROVIDED "AS IS" AND ANY EXPRESS OR IMPLIED
+# WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF
+# MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NON-INFRINGEMENT
+# ARE DISCLAIMED.  IN NO EVENT SHALL THE COPYRIGHT OWNER OR CONTRIBUTORS
+# BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR
+# CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF
+# SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR
+# BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY,
+# WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE
+# OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN
+# IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+
+type wcnss_service, domain;
+type wcnss_service_exec, exec_type, vendor_file_type, file_type;
+
+init_daemon_domain(wcnss_service)
+net_domain(wcnss_service)
+
+allow wcnss_service wcnss_device:chr_file rw_file_perms;
+
+qmux_socket(wcnss_service);
+
+allow wcnss_service wifi_vendor_data_file:dir create_dir_perms;
+allow wcnss_service wifi_vendor_data_file:file create_file_perms;
+
+allow wcnss_service wpa_data_file:dir create_dir_perms;
+allow wcnss_service wpa_data_file:file create_file_perms;
+
+allow wcnss_service mnt_vendor_file:dir r_dir_perms;
+qmux_socket(wcnss_service);
+
+allow wcnss_service self:{ socket qipcrtr_socket } create_socket_perms;
+# ioctlcmd=c304
+allowxperm wcnss_service self:{ socket qipcrtr_socket } ioctl msm_sock_ipc_ioctls;
+allowxperm wcnss_service self:udp_socket ioctl SIOCIWFIRSTPRIV_05;
+allow wcnss_service smem_log_device:chr_file rw_file_perms;
+allow wcnss_service proc_net:file rw_file_perms;
+
+# allow wpa_supplicant to send back wifi information to cnd
+allow wcnss_service cnd:unix_dgram_socket sendto;
+allow wcnss_service self:capability {
+    net_admin
+    net_bind_service
+};
+
+allow wcnss_service self:netlink_socket create_socket_perms_no_ioctl;
+allow wcnss_service self:netlink_generic_socket create_socket_perms_no_ioctl;
+allow wcnss_service firmware_file:dir r_dir_perms;
+allow wcnss_service firmware_file:file r_file_perms;
+allow wcnss_service sysfs_data:file r_file_perms;
+
+# allow access to network performance tuner
+unix_socket_connect(wcnss_service, wigignpt, wigignpt)
+
+userdebug_or_eng(`
+allow wcnss_service fuse:dir create_dir_perms;
+allow wcnss_service fuse:file create_file_perms;
+allow wcnss_service vfat:dir create_dir_perms;
+allow wcnss_service vfat:file create_file_perms;
+allow wcnss_service sdcardfs:dir create_dir_perms;
+allow wcnss_service sdcardfs:file create_file_perms;
+allow wcnss_service mnt_vendor_file:file rw_file_perms;
+
+# This is needed for ptt_socket app to write logs file collected to sdcard
+r_dir_file(wcnss_service, proc_wifi_dbg)
+r_dir_file(wcnss_service, storage_file)
+r_dir_file(wcnss_service, mnt_user_file)
+diag_use(wcnss_service)
+')
+
+#binder_use(wcnss_service)
+use_vendor_per_mgr(wcnss_service)
+
+hwbinder_use(wcnss_service)
+get_prop(wcnss_service, hwservicemanager_prop)
+
+#access to perflock
+hal_client_domain(wcnss_service, hal_perf)
+
+# allow to read /sys/class/net file
+r_dir_file(wcnss_service, sysfs_net);

@@ -1,0 +1,218 @@
+# Copyright (c) 2019, The Linux Foundation. All rights reserved.
+#
+# Redistribution and use in source and binary forms, with or without
+# modification, are permitted provided that the following conditions are
+# met:
+#     * Redistributions of source code must retain the above copyright
+#       notice, this list of conditions and the following disclaimer.
+#     * Redistributions in binary form must reproduce the above
+#       copyright notice, this list of conditions and the following
+#       disclaimer in the documentation and/or other materials provided
+#       with the distribution.
+#     * Neither the name of The Linux Foundation nor the names of its
+#       contributors may be used to endorse or promote products derived
+#       from this software without specific prior written permission.
+#
+# THIS SOFTWARE IS PROVIDED "AS IS" AND ANY EXPRESS OR IMPLIED
+# WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF
+# MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NON-INFRINGEMENT
+# ARE DISCLAIMED.  IN NO EVENT SHALL THE COPYRIGHT OWNER OR CONTRIBUTORS
+# BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR
+# CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF
+# SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR
+# BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY,
+# WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE
+# OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN
+# IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+
+persist.vendor.service.bdroid.      u:object_r:vendor_bluetooth_prop:s0
+persist.vendor.bt.soc.scram_freqs   u:object_r:vendor_bluetooth_prop:s0
+persist.vendor.bluetooth.a2dp.      u:object_r:vendor_bluetooth_prop:s0
+persist.vendor.qcom.bluetooth.      u:object_r:vendor_bluetooth_prop:s0
+vendor.qcom.bluetooth.              u:object_r:vendor_bluetooth_prop:s0
+vendor.wc_transport.       u:object_r:vendor_bluetooth_prop:s0
+ro.vendor.bluetooth.       u:object_r:vendor_bluetooth_prop:s0
+vendor.ims.                u:object_r:qcom_ims_prop:s0
+ro.vendor.build.software.version  u:object_r:qcom_ims_prop:s0
+persist.vendor.ims.        u:object_r:qcom_ims_prop:s0
+persist.vendor.qti.telephony.vt_cam_interface u:object_r:qcom_ims_prop:s0
+vendor.hw.fm.                     u:object_r:fm_prop:s0
+ctl.vendor.qmuxd                  u:object_r:ctl_vendor_qmuxd_prop:s0
+ctl.vendor.netmgrd                u:object_r:ctl_vendor_netmgrd_prop:s0
+ctl.vendor.port-bridge            u:object_r:ctl_vendor_port-bridge_prop:s0
+ctl.vendor.qcrild          u:object_r:ctl_qcrild_prop:s0
+ctl.vendor.ril-daemon             u:object_r:ctl_vendor_rild_prop:s0
+ctl.vendor.cnd                    u:object_r:cnd_vendor_prop:s0
+persist.vendor.sys.cnd            u:object_r:cnd_vendor_prop:s0
+persist.vendor.cne.               u:object_r:cnd_vendor_prop:s0
+persist.vendor.cne.feature        u:object_r:cnd_vendor_prop:s0
+persist.vendor.cne.logging.qxdm   u:object_r:cnd_vendor_prop:s0
+persist.vendor.cnd.        u:object_r:cnd_vendor_prop:s0
+persist.vendor.cnd.wqe     u:object_r:cnd_vendor_prop:s0
+ctl.vendor.vm_bms                 u:object_r:vendor_vm_bms_prop:s0
+ro.vendor.qualcomm.bluetooth.        u:object_r:vendor_bluetooth_prop:s0
+ctl.vendor.ipacm           u:object_r:vendor_ipacm_prop:s0
+ctl.vendor.ipacm-diag      u:object_r:vendor_ipacm-diag_prop:s0
+ctl.vendor.dataqti         u:object_r:vendor_dataqti_prop:s0
+ctl.vendor.dataadpl         u:object_r:vendor_dataadpl_prop:s0
+ctl.vendor.sensors                u:object_r:sensors_prop:s0
+ctl.vendor.msm_irqbalance         u:object_r:vendor_msm_irqbalance_prop:s0
+ctl.vendor.msm_irqbl_sdm630       u:object_r:vendor_msm_irqbl_sdm630_prop:s0
+vendor.slpi.               u:object_r:slpi_prop:s0
+ctl.vendor.msm_irqbal_lb          u:object_r:vendor_msm_irqbalance_prop:s0
+vendor.spcom.              u:object_r:spcomlib_prop:s0
+vendor.display.               u:object_r:vendor_display_prop:s0
+ro.vendor.display.            u:object_r:vendor_display_prop:s0
+persist.vendor.display.       u:object_r:vendor_display_prop:s0
+ro.vendor.scr_enabled         u:object_r:scr_enabled_prop:s0
+vendor.bg_reset               u:object_r:bg_daemon_prop:s0
+vendor.bg.boot_complete       u:object_r:bg_boot_complete_prop:s0
+vendor.opengles.version       u:object_r:vendor_opengles_prop:s0
+ro.vendor.qualcomm.bt.hci_transport  u:object_r:vendor_bluetooth_prop:s0
+ctl.vendor.mdm_helper      u:object_r:vendor_mdm_helper_prop:s0
+vendor.post_boot.parsed    u:object_r:vendor_mpctl_prop:s0
+vendor.perf.cores_online   u:object_r:vendor_mpctl_prop:s0
+persist.vendor.qti.        u:object_r:vendor_mpctl_prop:s0
+ro.vendor.at_library       u:object_r:vendor_mpctl_prop:s0
+vendor.debug.trace.perf    u:object_r:vendor_mpctl_prop:s0
+vendor.iop.enable_uxe      u:object_r:vendor_iop_prop:s0
+vendor.perf.iop_v3.enable  u:object_r:vendor_iop_prop:s0
+vendor.perf.iop_v3.enable.debug u:object_r:vendor_iop_prop:s0
+vendor.iop.enable_prefetch_ofr   u:object_r:vendor_iop_prop:s0
+vendor.perf.gestureflingboost.enable  u:object_r:vendor_scroll_prop:s0
+vendor.qti.izat.           u:object_r:location_prop:s0
+vendor.usb.                u:object_r:vendor_usb_prop:s0
+persist.vendor.usb.        u:object_r:vendor_usb_prop:s0
+ro.vendor.dbg.coresight.cfg_file     u:object_r:vendor_coresight_prop:s0
+vendor.audio.              u:object_r:vendor_audio_prop:s0
+vendor.voice.              u:object_r:vendor_audio_prop:s0
+persist.vendor.audio.      u:object_r:vendor_audio_prop:s0
+ro.vendor.audio.           u:object_r:vendor_audio_prop:s0
+vendor.audio.debug.        u:object_r:vendor_audio_debug_prop:s0
+ro.vendor.alarm_boot       u:object_r:vendor_alarm_boot_prop:s0
+ro.boot.alarmboot          u:object_r:vendor_alarm_boot_prop:s0
+persist.vendor.net.doxlat  u:object_r:vendor_xlat_prop:s0
+persist.vendor.data.dont_use_epc  u:object_r:vendor_dataqdp_prop:s0
+persist.vendor.data.dont_use_npflag  u:object_r:vendor_dataqdp_prop:s0
+persist.vendor.data.profile_update  u:object_r:vendor_dataqdp_prop:s0
+vendor.gralloc.            u:object_r:vendor_gralloc_prop:s0
+vendor.wifi.ftmd.                 u:object_r:vendor_wifi_ftmd_prop:s0
+
+# WIGIG
+vendor.wigig.                                u:object_r:vendor_wigig_prop:s0
+ctl.vendor.wigig_supplicant                  u:object_r:ctl_vendor_wigigsvc_prop:s0
+ctl.vendor.wigig_hostapd                     u:object_r:ctl_vendor_wigigsvc_prop:s0
+
+#HWUI Property
+ro.vendor.hwui.texture_cache_size u:object_r:hwui_prop:s0
+# ActivityManager tuning properties
+ro.vendor.qti.sys.fw.      u:object_r:vendor_am_prop:s0
+
+# public_vendor_default_prop
+ro.vendor.graphics.memory  u:object_r:public_vendor_default_prop:s0
+vendor.debug.egl.changepixelformat  u:object_r:public_vendor_default_prop:s0
+vendor.debug.prerotation.disable  u:object_r:public_vendor_default_prop:s0
+vendor.dump.gpu.output  u:object_r:public_vendor_default_prop:s0
+vendor.debug.egl.swapinterval  u:object_r:public_vendor_default_prop:s0
+vendor.debug.egl.profiler  u:object_r:public_vendor_default_prop:s0
+vendor.debug.rs.           u:object_r:public_vendor_default_prop:s0
+
+# cgroup follow
+ro.vendor.qti.cgroup_follow.enable u:object_r:vendor_cgroup_follow_prop:s0
+ro.vendor.qti.cgroup_follow.dex2oat_only u:object_r:vendor_cgroup_follow_prop:s0
+
+#Bservice Property
+ro.vendor.qti.sys.fw.bservice_ u:object_r:bservice_prop:s0
+#Delayed Service Restart Property
+ro.vendor.qti.am.reschedule_service u:object_r:reschedule_service_prop:s0
+persist.vendor.graphics.vulkan.disable     u:object_r:graphics_vulkan_prop:s0
+#boot mode property
+vendor.sys.boot_mode              u:object_r:vendor_boot_mode_prop:s0
+# GPU
+ro.vendor.gpu.available_frequencies u:object_r:freq_prop:s0
+# NFC
+vendor.qti.nfc.            u:object_r:nfc_nq_prop:s0
+# LKCore start
+ctl.vendor.LKCore-dbg      u:object_r:ctl_LKCore_prop:s0
+ctl.vendor.LKCore-rel      u:object_r:ctl_LKCore_prop:s0
+vendor.rild.libpath        u:object_r:vendor_rild_libpath_prop:s0
+# Peripheral Manager
+vendor.peripheral.         u:object_r:vendor_per_mgr_state_prop:s0
+
+# HBTP
+ctl.vendor.hbtp u:object_r:ctl_vendor_hbtp_prop:s0
+
+# factory properties
+ctl.vendor.mmid   u:object_r:ctl_vendor_mmid_prop:s0
+
+# qcc property
+vendor.qti.qdma.                             u:object_r:vendor_qcc_prop:s0
+
+#Needed by qsee need to rename this
+vendor.sys.listeners.registered   u:object_r:vendor_tee_listener_prop:s0
+
+ctl.vendor.imsrcsservice   u:object_r:ctl_vendor_imsrcsservice_prop:s0
+
+persist.vendor.mmi.        u:object_r:vendor_mmi_prop:s0
+
+#time service
+persist.vendor.delta_time.enable    u:object_r:vendor_time_service_prop:s0
+vendor.debug.time_services.enable   u:object_r:vendor_time_service_prop:s0
+persist.vendor.radio       u:object_r:vendor_radio_prop:s0
+vendor.radio               u:object_r:vendor_radio_prop:s0
+ro.vendor.ril.             u:object_r:vendor_radio_prop:s0
+ro.vendor.radio            u:object_r:vendor_radio_prop:s0
+
+persist.vendor.sys.        u:object_r:vendor_system_prop:s0
+
+#ss-restart
+persist.vendor.ssr.    u:object_r:vendor_ssr_prop:s0
+
+#ss-services (PD)
+persist.vendor.pd_locater_debug    u:object_r:vendor_pd_locater_dbg_prop:s0
+
+#qdcm socket service
+vendor.display.qdcm_socket_service u:object_r:vendor_qdcmss_prop:s0
+
+# Wifi Softap
+persist.vendor.wifi.softap.        u:object_r:vendor_softap_prop:s0
+
+#mm-video
+vendor.media.target.version        u:object_r:vendor_video_prop:s0
+vendor.video.disable.ubwc          u:object_r:vendor_video_prop:s0
+
+#rmt_storage
+ctl.vendor.rmt_storage     u:object_r:ctl_vendor_rmt_storage_prop:s0
+
+#GPU Available frequencies
+vendor.gpu.available_frequencies u:object_r:vendor_gpu_prop:s0
+
+persist.vendor.data.shs_ko_load u:object_r:vendor_data_ko_prop:s0
+persist.vendor.data.perf_ko_load u:object_r:vendor_data_ko_prop:s0
+
+#capabilityconfigstore (CCHAL)
+persist.vendor.cap_configstore_debug u:object_r:vendor_cap_configstore_dbg_prop:s0
+
+#hvdcp_opti
+persist.vendor.bms               u:object_r:hvdcp_opti_prop:s0
+persist.vendor.chg               u:object_r:hvdcp_opti_prop:s0
+persist.vendor.chg_plcy_mgr      u:object_r:hvdcp_opti_prop:s0
+persist.vendor.cp                u:object_r:hvdcp_opti_prop:s0
+persist.vendor.ctm               u:object_r:hvdcp_opti_prop:s0
+persist.vendor.hvdcp2            u:object_r:hvdcp_opti_prop:s0
+persist.vendor.hvdcp_opti        u:object_r:hvdcp_opti_prop:s0
+persist.vendor.hvdcp             u:object_r:hvdcp_opti_prop:s0
+persist.vendor.pps               u:object_r:hvdcp_opti_prop:s0
+persist.vendor.std-pd            u:object_r:hvdcp_opti_prop:s0
+persist.vendor.tb                u:object_r:hvdcp_opti_prop:s0
+persist.vendor.vin               u:object_r:hvdcp_opti_prop:s0
+persist.vendor.qg                u:object_r:hvdcp_opti_prop:s0
+persist.vendor.soh               u:object_r:hvdcp_opti_prop:s0
+#adsprpc
+vendor.fastrpc.                  u:object_r:adsprpc_prop:s0
+
+#qvr properties
+vendor.qvr                       u:object_r:qvr_prop:s0
+
+#bt lazyhal property
+ro.vendor.bt.enablelazyhal       u:object_r:bluetooth_prop:s0 exact bool

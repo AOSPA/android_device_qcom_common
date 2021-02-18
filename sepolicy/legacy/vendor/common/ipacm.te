@@ -1,0 +1,61 @@
+# Copyright (c) 2019, The Linux Foundation. All rights reserved.
+#
+# Redistribution and use in source and binary forms, with or without
+# modification, are permitted provided that the following conditions are
+# met:
+#     * Redistributions of source code must retain the above copyright
+#       notice, this list of conditions and the following disclaimer.
+#     * Redistributions in binary form must reproduce the above
+#       copyright notice, this list of conditions and the following
+#       disclaimer in the documentation and/or other materials provided
+#       with the distribution.
+#     * Neither the name of The Linux Foundation nor the names of its
+#       contributors may be used to endorse or promote products derived
+#       from this software without specific prior written permission.
+#
+# THIS SOFTWARE IS PROVIDED "AS IS" AND ANY EXPRESS OR IMPLIED
+# WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF
+# MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NON-INFRINGEMENT
+# ARE DISCLAIMED.  IN NO EVENT SHALL THE COPYRIGHT OWNER OR CONTRIBUTORS
+# BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR
+# CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF
+# SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR
+# BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY,
+# WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE
+# OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN
+# IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+
+# General definitions
+type ipacm, domain;
+type ipacm-diag, domain;
+type ipacm_exec, exec_type, vendor_file_type, file_type;
+type ipacm-diag_exec, exec_type, vendor_file_type, file_type;
+init_daemon_domain(ipacm)
+init_daemon_domain(ipacm-diag)
+
+# associate netdomain to use for accessing internet sockets
+net_domain(ipacm)
+# ipacm to become hal_tetheroffload_server
+hal_server_domain(ipacm, hal_tetheroffload)
+
+userdebug_or_eng(`
+  # Allow using the logging file between ipacm and ipacm-diag
+  unix_socket_send(ipacm, ipacm, ipacm-diag)
+  diag_use(ipacm-diag)
+')
+
+# Allow operations with /dev/ipa, /dev/wwan_ioctl and /dev/ipaNatTable
+allow ipacm ipa_dev:chr_file rw_file_perms;
+
+# Allow receiving NETLINK messages
+allow ipacm ipacm:{
+    netlink_route_socket
+    netlink_socket
+    # Allow querying the network stack via IOCTLs
+    udp_socket
+    netlink_generic_socket
+} create_socket_perms_no_ioctl;
+
+# Allow creating and modifying the PID file
+allow ipacm ipa_vendor_data_file:dir w_dir_perms;
+allow ipacm ipa_vendor_data_file:file create_file_perms;

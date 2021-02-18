@@ -1,0 +1,420 @@
+# Copyright (c) 2019, The Linux Foundation. All rights reserved.
+#
+# Redistribution and use in source and binary forms, with or without
+# modification, are permitted provided that the following conditions are
+# met:
+#     * Redistributions of source code must retain the above copyright
+#       notice, this list of conditions and the following disclaimer.
+#     * Redistributions in binary form must reproduce the above
+#       copyright notice, this list of conditions and the following
+#       disclaimer in the documentation and/or other materials provided
+#       with the distribution.
+#     * Neither the name of The Linux Foundation nor the names of its
+#       contributors may be used to endorse or promote products derived
+#       from this software without specific prior written permission.
+#
+# THIS SOFTWARE IS PROVIDED "AS IS" AND ANY EXPRESS OR IMPLIED
+# WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF
+# MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NON-INFRINGEMENT
+# ARE DISCLAIMED.  IN NO EVENT SHALL THE COPYRIGHT OWNER OR CONTRIBUTORS
+# BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR
+# CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF
+# SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR
+# BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY,
+# WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE
+# OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN
+# IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+
+# Default type for anything under /firmware.
+type firmware_file,  file_type, contextmount_type, vendor_file_type;
+
+# All files under /vendor/firmware
+type vendor_firmware_file, vendor_file_type, file_type;
+
+#Define the qmux socket type
+type qmuxd_socket, file_type;
+
+#Define the netmgrd socket type
+type netmgrd_socket, file_type;
+
+type port-bridge_socket, file_type;
+
+#Define the qti socket type
+type dataqti_socket, file_type;
+
+#Define the adpl socket type
+type dataadpl_socket, file_type;
+
+#QTI file types
+type vendor_qti_data_file, file_type, data_file_type;
+
+type proc_wifi_dbg, proc_type, fs_type;
+#Define the pps socket type
+type pps_socket, file_type;
+
+#Define the qdcmss socket type
+type qdcmsocket_socket, file_type;
+
+# Define cnd socket and data file type
+type cnd_socket, file_type, mlstrustedobject;
+type cnd_data_file, file_type, data_file_type;
+type chre_socket, file_type;
+
+# Define dpmd data file type
+#type dpmd_socket, file_type;
+#type dpmwrapper_socket, file_type, mlstrustedobject;
+#type dpmd_data_file, file_type, data_file_type;
+#typealias system_app_data_file alias dpmd_app_data_file;
+
+#Define the timeout for platform specific transports
+type sysfs_hsic_modem_wait, sysfs_type, fs_type;
+type sysfs_smd_open_timeout, sysfs_type, fs_type;
+
+#Define the files written during the operation of netmgrd and qmuxd
+type netmgrd_data_file, file_type, data_file_type;
+type sysrq_trigger_proc, fs_type, mlstrustedobject;
+# Persist file types
+type persist_file, file_type, vendor_persist_type;
+type persist_bluetooth_file, file_type , vendor_persist_type;
+type persist_data_file, file_type , vendor_persist_type;
+type persist_drm_file, file_type , vendor_persist_type;
+type data_qtee_file, file_type, data_file_type;
+type vendor_persist_mmi_file, file_type, vendor_persist_type;
+type persist_misc_file, file_type , vendor_persist_type;
+type persist_bms_file, file_type , vendor_persist_type;
+type persist_secnvm_file, file_type , vendor_persist_type;
+type persist_hvdcp_file, file_type , vendor_persist_type;
+
+#file type for restricting proc read by audiod
+type proc_audiod, fs_type, proc_type;
+
+#file type for irqbalance socket
+type vendor_msm_irqbalance_socket, file_type;
+
+# Sensor file types
+type sensors_socket, file_type;
+type sensors_persist_file, file_type, vendor_persist_type;
+type sysfs_sensors, sysfs_type, fs_type;
+
+#Memory offlining file types
+type sysfs_memory_offline, sysfs_type, fs_type;
+
+#VirtualKeys file type
+type sysfs_virtualkeys, sysfs_type, fs_type;
+
+#type for thermal-engine
+type thermal_socket, file_type;
+#type for uart
+type sysfs_msmuart_file, sysfs_type, fs_type;
+
+# Storage RFS file types
+type rfs_file, file_type, data_file_type;
+type rfs_shared_hlos_file, file_type, data_file_type;
+type persist_rfs_file, file_type, vendor_persist_type;
+type persist_rfs_shared_hlos_file, file_type, vendor_persist_type;
+
+#mm-pp-daemon file type for sysfs access
+#type sysfs_leds, fs_type, sysfs_type;
+
+#Define the files written during the operation of mm-pp-daemon
+type data_ad_calib_cfg, file_type, data_file_type;
+
+#SurfaceFlinger file type for sysfs access
+type sysfs_graphics, sysfs_type, fs_type;
+
+# USB/battery power supply type for hvdcp/quickcharge
+type sysfs_usb_supply, sysfs_type, fs_type;
+type sysfs_battery_supply, sysfs_type, fs_type;
+type sysfs_usbpd_device, sysfs_type, fs_type;
+# sysfs vadc device for hvdcp/quickcharge
+type sysfs_vadc_dev, sysfs_type, fs_type;
+# sysfs spmi device for hvdcp/quickcharge
+type sysfs_spmi_dev, sysfs_type, fs_type;
+
+# sysfs qdss device for qcomsysd
+type sysfs_qdss_dev, sysfs_type, fs_type;
+
+# sysfs poweron_alarm is used in init.target.rc
+type sysfs_poweron_alarm, sysfs_type, fs_type;
+
+#Define the files written during the operation of mpdecision
+type sysfs_mpdecision, fs_type, sysfs_type;
+type sysfs_rqstats, fs_type, sysfs_type;
+type sysfs_cpu_online, fs_type, sysfs_type;
+type mpctl_socket, file_type, mlstrustedobject;
+type mpctl_data_file, file_type, data_file_type;
+
+#Define the files used by lm
+type lm_data_file, file_type, data_file_type;
+
+type sysfs_devfreq, fs_type, sysfs_type;
+type sysfs_devfreq_l3cdsp, fs_type, sysfs_type;
+type sysfs_mmc_host, fs_type, sysfs_type;
+type sysfs_scsi_host, fs_type, sysfs_type;
+type sysfs_scsi_target, fs_type, sysfs_type;
+type sysfs_cpu_boost, fs_type, sysfs_type;
+type sysfs_msm_perf, fs_type, sysfs_type;
+type sysfs_memory, fs_type, sysfs_type;
+type sysfs_lib, fs_type, sysfs_type;
+type sysfs_slpi, fs_type, sysfs_type;
+type sysfs_process_reclaim, fs_type, sysfs_type;
+type sysfs_vmpressure, fs_type, sysfs_type;
+
+#define the files writter during the operatio of iop
+type iop_socket, file_type;
+type iop_data_file, file_type, data_file_type;
+
+#Socket node needed by ims_data daemon
+type ims_socket, file_type;
+
+#mink-lowi-interface-daemon (mlid) socket
+type mlid_socket, file_type, mlstrustedobject;
+
+#ssg qmi gateway daemon socket
+type ssgqmig_socket, file_type, mlstrustedobject;
+
+#ssg tz daemon socket
+type ssgtzd_socket, file_type, mlstrustedobject;
+
+#Wireless Edge Service (QWES) socket and files
+type qwesd_socket, file_type, mlstrustedobject;
+type vendor_qwes_data_file, file_type, data_file_type;
+
+#location file types
+type location_data_file, file_type, data_file_type;
+type location_socket, file_type, data_file_type;
+type wifihal_socket, file_type, data_file_type;
+type location_app_data_file, file_type, data_file_type;
+
+#File types required by mdm-helper
+type sysfs_esoc, sysfs_type, fs_type;
+type sysfs_ssr,  sysfs_type, fs_type;
+type sysfs_ssr_toggle,  sysfs_type, fs_type;
+type sysfs_hsic, sysfs_type, fs_type;
+type sysfs_hsic_host_rdy, sysfs_type, fs_type;
+
+# Files accessed by qcom-system-daemon
+type sysfs_socinfo, fs_type, sysfs_type;
+
+type qlogd_socket, file_type, mlstrustedobject;
+#Defines the files (configs, dumps, etc) used by display processes
+type display_vendor_data_file, file_type, data_file_type;
+
+#Define the files for the operation of QDCM
+type persist_display_file, file_type, vendor_persist_type;
+
+# IPA file types
+type ipacm_socket, file_type;
+type ipa_vendor_data_file, file_type, data_file_type;
+
+# vendor audio data file
+type vendor_audio_data_file, file_type, data_file_type;
+
+# Tombstone vendor data
+type vendor_tombstone_data_file, file_type, data_file_type;
+
+# Port-bridge file types
+type port_bridge_data_file, file_type, data_file_type;
+
+#bluetooth firmware file types
+type bt_firmware_file, file_type, contextmount_type, vendor_file_type;
+
+#needed by vold
+type  proc_dirty_ratio, fs_type, proc_type;
+
+#File types by mmi
+type vendor_mmi_socket, file_type;
+
+# hbtp config file
+type hbtp_cfg_file, file_type, vendor_file_type;
+type hbtp_log_file, file_type, data_file_type;
+type hbtp_kernel_sysfs, fs_type, sysfs_type;
+
+#qfp-daemon
+type qfp-daemon_data_file, file_type, data_file_type;
+type persist_qti_fp_file, file_type, vendor_persist_type;
+
+# imshelper_app file types
+type imshelper_app_data_file, file_type, data_file_type;
+
+# RIDL data files
+type RIDL_data_file, file_type, data_file_type;
+type RIDL_socket, file_type, data_file_type;
+
+# qti_logkit data files (privileged and public)
+type qti_logkit_priv_data_file, file_type, data_file_type;
+type qti_logkit_pub_data_file, file_type, data_file_type;
+type qti_logkit_priv_socket, file_type, data_file_type;
+type qti_logkit_pub_socket, file_type, mlstrustedobject, data_file_type;
+
+# used for /dsp files
+type adsprpcd_file, file_type, mlstrustedobject, vendor_file_type;
+
+#mdtp_svc_app file types
+type mdtp_svc_app_data_file, file_type, data_file_type;
+
+# Regionalization files
+type regionalization_file, file_type , vendor_persist_type;
+type vendor_carrier_file, file_type, vendor_file_type;
+
+# /data/system/swap/swapfile - swapfile
+type swap_data_file, file_type, data_file_type;
+
+# dynamic nv files
+type dynamic_nv_data_file, file_type, data_file_type;
+
+# Wifi Data file
+type wifi_vendor_data_file, file_type, data_file_type;
+type wifi_vendor_wpa_socket, file_type, data_file_type;
+type wifi_vendor_hostapd_socket, file_type, data_file_type;
+type hostapd_socket, file_type, data_file_type;
+
+#widevine data file
+type mediadrm_vendor_data_file, file_type, data_file_type;
+
+# wififtmd socket file
+type wififtmd_socket, file_type;
+
+type persist_alarm_file, file_type, vendor_persist_type;
+
+type persist_time_file, file_type, vendor_persist_type;
+
+# nfc file type for data vendor access
+type nfc_vendor_data_file, file_type, data_file_type;
+
+# kgsl file type for sysfs access
+type sysfs_kgsl, sysfs_type, fs_type;
+type sysfs_kgsl_proc, sysfs_type, fs_type;
+# kgsl snapshot file type for sysfs access
+type sysfs_kgsl_snapshot, sysfs_type, fs_type;
+# kgsl gpu model file type for sysfs access
+type sysfs_kgsl_gpu_model, sysfs_type, fs_type;
+
+# secure touch files
+type sysfs_securetouch, fs_type, sysfs_type;
+
+#data sysfs  files
+type sysfs_data, fs_type, sysfs_type;
+
+#diag sysfs files
+type sysfs_diag, fs_type, sysfs_type;
+
+#laser sysfs files
+type sysfs_laser, fs_type, sysfs_type;
+
+# qcc-trd data files
+type vendor_qcc_trd_data_file, file_type, data_file_type;
+
+# path to debugfs use this whic should be only used
+# in debug builds
+type qti_debugfs, fs_type, debugfs_type;
+
+# vendor radio files
+type vendor_radio_data_file, file_type, data_file_type;
+
+# vendor MBN files
+type vendor_mbn_data_file, file_type, data_file_type;
+
+#uio sysfs
+type sysfs_uio_file, fs_type, sysfs_type;
+
+#irq balance sysfs type
+type vendor_sysfs_irqbalance , sysfs_type, fs_type;
+
+# vpp files
+type vendor_vpp_data_file, file_type, data_file_type;
+type persist_vpp_file, file_type, vendor_persist_type;
+
+# vendor camera files
+type vendor_camera_data_file, file_type, data_file_type;
+
+# vendor media files
+type vendor_media_data_file, file_type, data_file_type;
+
+# wigig, fstman
+type sysfs_bond0, fs_type, sysfs_type;
+type sysfs_wigig, fs_type, sysfs_type;
+type wigignpt_socket, file_type, data_file_type;
+
+# wigig_hostapd
+type wigig_hostapd_socket, file_type, data_file_type;
+
+# ea sysfs files
+type sysfs_ea, fs_type, sysfs_type;
+
+#audio sysfs files
+type sysfs_audio, fs_type, sysfs_type;
+
+# lpm sysfs files
+type sysfs_msm_stats, fs_type, sysfs_type;
+type sysfs_msm_power, fs_type, sysfs_type;
+
+type sysfs_fm, sysfs_type, fs_type;
+
+# for adsp to load /sys/kernel/b ot_adsp/boot
+type sysfs_boot_adsp, sysfs_type, fs_type;
+
+# SFS listener data file
+type data_tzstorage_file, file_type, data_file_type;
+
+#TLOC Files
+type tlocd_data_file, file_type, data_file_type;
+
+#DRM files
+type data_qsee_file, file_type, data_file_type;
+
+#secure touch
+type sysfs_sectouch, sysfs_type, fs_type;
+
+#TUI Files
+type vendor_tui_data_file, file_type, data_file_type;
+
+#BT Files
+type vendor_bt_data_file, file_type, data_file_type;
+
+#FM Files
+type vendor_fm_data_file, file_type, data_file_type;
+
+#sysfs jpeg
+type sysfs_jpeg, fs_type, sysfs_type;
+
+#SSR Log Files
+type ramdump_vendor_data_file, file_type, data_file_type, mlstrustedobject;
+
+# npu file
+type sysfs_npu, fs_type, sysfs_type;
+
+# subsystem_ramdump files
+type vendor_ramdump_data_file, file_type, data_file_type;
+type vendor_mdmhelperdata_data_file, file_type, data_file_type;
+
+#for mount of /persist
+typeattribute mnt_vendor_file vendor_persist_type;
+
+#NNHAL files
+type hal_neuralnetworks_data_file, file_type, data_file_type;
+
+# vendor scve data file
+type vendor_scve_data_file, file_type, data_file_type;
+
+# usb device controller files
+type sysfs_usb_controller, sysfs_type, fs_type;
+
+#qvrservice sysfs files
+type sysfs_qvr_external_sensor, sysfs_type, fs_type;
+
+# /dev/msm_aac_in
+type msm_aac_in_device, dev_type;
+
+# sysfs mhi file
+type sysfs_mhi, sysfs_type, fs_type;
+
+#vendor capability configstore hal
+type vendor_capabilityconfigstore_data_file, file_type, data_file_type;
+
+#sensor log files
+type sensors_vendor_data_file, file_type, data_file_type;
+
+type vendor_sysfs_devicetree_cpu, sysfs_type, fs_type;
+
+type vendor_sysfs_kgsl_gpuclk, sysfs_type, fs_type;

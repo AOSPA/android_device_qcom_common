@@ -1,0 +1,90 @@
+# Copyright (c) 2017, The Linux Foundation. All rights reserved.
+#
+# Redistribution and use in source and binary forms, with or without
+# modification, are permitted provided that the following conditions are
+# met:
+#     * Redistributions of source code must retain the above copyright
+#       notice, this list of conditions and the following disclaimer.
+#     * Redistributions in binary form must reproduce the above
+#       copyright notice, this list of conditions and the following
+#       disclaimer in the documentation and/or other materials provided
+#       with the distribution.
+#     * Neither the name of The Linux Foundation nor the names of its
+#       contributors may be used to endorse or promote products derived
+#       from this software without specific prior written permission.
+#
+# THIS SOFTWARE IS PROVIDED "AS IS" AND ANY EXPRESS OR IMPLIED
+# WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF
+# MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NON-INFRINGEMENT
+# ARE DISCLAIMED.  IN NO EVENT SHALL THE COPYRIGHT OWNER OR CONTRIBUTORS
+# BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR
+# CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF
+# SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR
+# BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY,
+# WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE
+# OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN
+# IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+
+# new qti_logkit_app domain
+type qti_logkit_app, domain;
+app_domain(qti_logkit_app)
+binder_use(qti_logkit_app)
+
+# allow set prop to start lkcore
+set_prop(qti_logkit_app, ctl_LKCore_prop)
+set_prop(qti_logkit_app, fm_prop)
+allow qti_logkit_app app_api_service:service_manager find;
+allow qti_logkit_app surfaceflinger_service:service_manager find;
+
+net_domain(qti_logkit_app)
+
+userdebug_or_eng(`
+  # allow qti_logkit_app debugfs:file r_file_perms;
+  allow qti_logkit_app su:unix_dgram_socket sendto;
+  allow qti_logkit_app mnt_vendor_file:dir r_dir_perms;
+  allow qti_logkit_app sensors_persist_file:dir r_dir_perms;
+  allow qti_logkit_app sensors_persist_file:file rw_file_perms;
+  # access to firmware file
+  r_dir_file(qti_logkit_app, firmware_file);
+
+  # Access to tombstone segfaults
+  allow qti_logkit_app tombstone_data_file:dir r_dir_perms;
+  allow qti_logkit_app tombstone_data_file:file r_file_perms;
+  diag_use(qti_logkit_app)
+')
+
+# allow access to qti_logkit
+allow qti_logkit_app qti_logkit_priv_data_file:dir create_dir_perms;
+allow qti_logkit_app qti_logkit_priv_data_file:file create_file_perms;
+allow qti_logkit_app qti_logkit_priv_socket:dir r_dir_perms;
+unix_socket_connect(qti_logkit_app, qti_logkit_priv, qti_logkit)
+allow qti_logkit_app qti_logkit_priv_socket:sock_file r_file_perms;
+allow qti_logkit_app system_app_data_file:dir create_dir_perms;
+allow qti_logkit_app system_app_data_file:file create_file_perms;
+
+# allow access for pub files
+allow qti_logkit_app qti_logkit_pub_data_file:dir create_dir_perms;
+allow qti_logkit_app qti_logkit_pub_data_file:file create_file_perms;
+
+# iwconfig
+allow qti_logkit_app wcnss_service_exec:file rx_file_perms;
+
+# bugreport
+#allow qti_logkit_app ctl_dumpstate_prop:property_service set;
+unix_socket_connect(qti_logkit_app, dumpstate, dumpstate)
+
+# ANR
+allow qti_logkit_app anr_data_file:dir r_dir_perms;
+allow qti_logkit_app anr_data_file:file r_file_perms;
+
+# detect /data/anr directory is created
+allow qti_logkit_app system_data_file:dir read;
+
+# allow access to cache recovery for LK3
+allow qti_logkit_app cache_file:dir create_dir_perms;
+allow qti_logkit_app cache_file:file create_file_perms;
+allow qti_logkit_app cache_recovery_file:dir rw_dir_perms;
+allow qti_logkit_app cache_recovery_file:file create_file_perms;
+
+# update engine
+binder_call(qti_logkit_app, update_engine)

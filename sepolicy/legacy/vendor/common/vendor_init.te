@@ -1,0 +1,121 @@
+# Copyright (c) 2017-2018, The Linux Foundation. All rights reserved.
+
+# Redistribution and use in source and binary forms, with or without
+# modification, are permitted provided that the following conditions are
+# met:
+#    * Redistributions of source code must retain the above copyright
+# notice, this list of conditions and the following disclaimer.
+#     * Redistributions in binary form must reproduce the above
+# copyright notice, this list of conditions and the following
+# disclaimer in the documentation and/or other materials provided
+# with the distribution.
+#     * Neither the name of The Linux Foundation nor the names of its
+# contributors may be used to endorse or promote products derived
+# from this software without specific prior written permission.
+#
+# THIS SOFTWARE IS PROVIDED "AS IS" AND ANY EXPRESS OR IMPLIED
+# WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF
+# MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NON-INFRINGEMENT
+# ARE DISCLAIMED.  IN NO EVENT SHALL THE COPYRIGHT OWNER OR CONTRIBUTORS
+# BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR
+# CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF
+# SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR
+# BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY,
+# WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE
+# OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN
+# IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+
+
+
+# allow vendor toolbox usage
+type vendor_init_exec, exec_type, vendor_file_type, file_type;
+
+allow vendor_init persist_block_device:{ blk_file lnk_file } relabelto;
+allow vendor_init unlabeled:dir { r_dir_perms setattr relabelfrom };
+allow vendor_init unlabeled:file { r_file_perms setattr relabelfrom };
+allow vendor_init ipa_dev:chr_file w_file_perms;
+allow vendor_init proc:file write;
+
+# write from init.target.rc
+allow vendor_init sysfs_poweron_alarm:file w_file_perms;
+
+# vendor init needs permissions for sepolicy files
+allow vendor_init file_contexts_file:file r_file_perms;
+
+allow vendor_init {
+    vendor_camera_data_file
+    vendor_media_data_file
+    vendor_tui_data_file
+    vendor_media_data_file
+    vendor_tombstone_data_file
+    vendor_fm_data_file
+}:dir create_dir_perms;
+
+allow vendor_init self:capability sys_module;
+#For insmod to search module key for signature verification
+allow vendor_init kernel:key search;
+allow vendor_init vendor_file:system module_load;
+allow vendor_init kernel:key search;
+allow vendor_init kernel:system module_request;
+
+userdebug_or_eng(`
+  allow vendor_init misc_block_device:blk_file w_file_perms;
+  set_prop(vendor_init, vendor_audio_debug_prop)
+')
+get_prop(vendor_init, vendor_boot_mode_prop)
+get_prop(vendor_init, vendor_mmi_prop)
+
+#Access persist.sys.usb.config
+set_prop(vendor_init, system_prop)
+set_prop(vendor_init, vendor_usb_prop)
+set_prop(vendor_init, vendor_ipacm_prop)
+set_prop(vendor_init, vendor_ipacm-diag_prop)
+set_prop(vendor_init, vendor_radio_prop)
+set_prop(vendor_init, vendor_am_prop)
+set_prop(vendor_init, vendor_mpctl_prop)
+
+#Access vendor display properties
+set_prop(vendor_init, vendor_display_prop)
+
+#Access vendor gralloc properties
+set_prop(vendor_init, vendor_gralloc_prop)
+
+set_prop(vendor_init, vendor_audio_prop)
+
+set_prop(vendor_init, vendor_rild_libpath_prop)
+
+# allow vendor toolbox usage
+#Blocked by neverallow vendor_init { file_type fs_type }:file execute_no_trans;
+#allow vendor_init vendor_toolbox_exec:file rx_file_perms;
+
+set_prop(vendor_init, cnd_vendor_prop)
+
+#Access vendor gpu freq properties
+set_prop(vendor_init, vendor_gpu_prop)
+set_prop(vendor_init, public_vendor_default_prop)
+
+#allow vendor GPU property
+set_prop(vendor_init, vendor_opengles_prop)
+
+get_prop(vendor_init, vendor_video_prop)
+set_prop(vendor_init, vendor_sys_video_prop)
+
+#Acess vendor hvdcp properties
+set_prop(vendor_init, hvdcp_opti_prop)
+
+# Allow timezone to be overrided by vendor
+set_prop(vendor_init, exported_system_prop)
+
+#Acess vendor bluetooth properties
+set_prop(vendor_init, vendor_bluetooth_prop)
+
+# Access vendor sensor properties
+set_prop(vendor_init, sensors_prop)
+
+#Access vendor wigig properties, mainly for on-demand module loading
+set_prop(vendor_init, vendor_wigig_prop)
+userdebug_or_eng(`
+  allow vendor_init proc_security:file rw_file_perms;
+')
+
+set_prop(vendor_init, vendor_persist_dpm_prop)

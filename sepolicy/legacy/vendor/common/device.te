@@ -1,0 +1,190 @@
+# Copyright (c) 2019, The Linux Foundation. All rights reserved.
+#
+# Redistribution and use in source and binary forms, with or without
+# modification, are permitted provided that the following conditions are
+# met:
+#     * Redistributions of source code must retain the above copyright
+#       notice, this list of conditions and the following disclaimer.
+#     * Redistributions in binary form must reproduce the above
+#       copyright notice, this list of conditions and the following
+#       disclaimer in the documentation and/or other materials provided
+#       with the distribution.
+#     * Neither the name of The Linux Foundation nor the names of its
+#       contributors may be used to endorse or promote products derived
+#       from this software without specific prior written permission.
+#
+# THIS SOFTWARE IS PROVIDED "AS IS" AND ANY EXPRESS OR IMPLIED
+# WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF
+# MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NON-INFRINGEMENT
+# ARE DISCLAIMED.  IN NO EVENT SHALL THE COPYRIGHT OWNER OR CONTRIBUTORS
+# BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR
+# CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF
+# SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR
+# BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY,
+# WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE
+# OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN
+# IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+
+#Define the logging device type
+type diag_device, dev_type, mlstrustedobject;
+type smem_log_device, dev_type;
+
+#Define the hsic device
+type hsic_device, dev_type;
+
+#Define the mhi device
+type mhi_device, dev_type;
+
+#Define the bhi device
+type bhi_device, dev_type;
+
+#device type for smd device nodes, ie /dev/smd*
+type smd_device, dev_type;
+
+#device type for rmnet device nodes, ie /dev/rmnet_ctrl*
+type rmnet_device, dev_type;
+
+#Define thermal-engine devices
+type thermal_device, dev_type;
+
+#Define vm_bms devices
+type vm_bms_device, dev_type;
+type battery_data_device, dev_type;
+
+#Add qdsp_device type
+type qdsp_device, dev_type, mlstrustedobject;
+type dsp_device, dev_type;
+type xdsp_device, dev_type;
+#Define hvdcp/quickcharge device
+type hvdcp_device, dev_type;
+
+#Define mpdecision device
+type device_latency, dev_type;
+
+#Added for fm_radio device
+type  fm_radio_device, dev_type;
+
+#Add for storage pertitions for EFS partitions
+type modem_efs_partition_device, dev_type;
+
+#Define device for partition links
+type ssd_device, dev_type;
+type rpmb_device, dev_type;
+type sg_device, dev_type;
+type dip_device, dev_type;
+type mdtp_device, dev_type;
+type sd_device, dev_type;
+
+#ESOC device
+type esoc_device, dev_type;
+
+#SSR device
+type ssr_device, dev_type;
+
+#Ramdump device
+type ramdump_device, dev_type;
+
+type vendor_ramdump_microdump_modem_device, dev_type;
+
+#Kickstart bridge devices
+type ksbridgehsic_device, dev_type;
+
+#EFS sync bridge devices
+type efsbridgehsic_device, dev_type;
+
+#EFS sync block devices
+type efs_boot_dev, dev_type;
+
+#MBA debug image partition
+type mba_debug_dev, dev_type;
+
+#logdump partition
+type logdump_partition, dev_type;
+
+#Bootselect partition
+type bootselect_device, dev_type;
+
+# Define IPA devices
+type ipa_dev, dev_type;
+
+type wcnss_device, dev_type;
+
+# Define spcom device
+type spcom_device, dev_type;
+
+# Define skp device
+type skp_device, dev_type;
+
+# Define sp_ssr device
+type sp_ssr_device, dev_type;
+
+# Define sp_keymaster device
+type sp_keymaster_device, dev_type;
+
+# Define sec_nvm devices
+type sec_nvm_device, dev_type;
+
+# Define cryptoapp device
+type cryptoapp_device, dev_type;
+
+# Define spdaemon_ssr device
+type spdaemon_ssr_device, dev_type;
+
+# Define qsee_ipc_irq_spss device
+type qsee_ipc_irq_spss_device, dev_type;
+
+# Define QDSS devices
+type qdss_device, dev_type;
+
+#Define Gadget serial device
+type gadget_serial_device, dev_type;
+
+#energy-awareness device
+type pta_device, dev_type;
+
+#Added for hbtp
+type bu21150_device, dev_type;
+type hbtp_device, dev_type;
+
+#Define qfintverify device
+type qce_device, dev_type;
+type rng_device, dev_type;
+
+#Define system health monitor devices
+type system_health_monitor_device, dev_type;
+
+#Define qbt device - ultrasonic fingperprint sensor
+type qbt_device, dev_type;
+
+#Define avtimer device
+type avtimer_device, dev_type;
+
+#define AT device
+type at_device, dev_type;
+
+#define Bluetooth device
+type bt_device, dev_type;
+
+#define Wlan device
+type wlan_device, dev_type;
+
+#Define rawdump block device
+type rawdump_block_device, dev_type;
+
+#Block device for A/B partitions
+type custom_ab_block_device, dev_type;
+type xbl_block_device, dev_type;
+type gpt_block_device, dev_type;
+type modem_block_device, dev_type;
+type uefi_block_device, dev_type;
+
+#define bgcom char device
+type bg_daemon_device, dev_type;
+
+type persist_block_device, dev_type;
+
+#Define npu device
+type npu_device, dev_type;
+
+#define qg char device
+type qg_device, dev_type;

@@ -1,0 +1,55 @@
+# Copyright (c) 2017-2018, The Linux Foundation. All rights reserved.
+
+# Redistribution and use in source and binary forms, with or without
+# modification, are permitted provided that the following conditions are
+# met:
+#    * Redistributions of source code must retain the above copyright
+#      notice, this list of conditions and the following disclaimer.
+#    * Redistributions in binary form must reproduce the above
+#      copyright notice, this list of conditions and the following
+#      disclaimer in the documentation and/or other materials provided
+#      with the distribution.
+#    * Neither the name of The Linux Foundation nor the names of its
+#      contributors may be used to endorse or promote products derived
+#      from this software without specific prior written permission.
+#
+# THIS SOFTWARE IS PROVIDED "AS IS" AND ANY EXPRESS OR IMPLIED
+# WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF
+# MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NON-INFRINGEMENT
+# ARE DISCLAIMED.  IN NO EVENT SHALL THE COPYRIGHT OWNER OR CONTRIBUTORS
+# BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR
+# CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF
+# SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR
+# BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY,
+# WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE
+# OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN
+# IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+
+# Define domain
+type hal_display_color_default, domain;
+hal_server_domain(hal_display_color_default, hal_display_color)
+type hal_display_color_default_exec, exec_type, vendor_file_type, file_type;
+init_daemon_domain(hal_display_color_default)
+
+# Allow hwbinder call from hal client to server
+binder_call(hal_display_color_client, hal_display_color_server)
+
+# Add hwservice related rules
+add_hwservice(hal_display_color_server, hal_display_color_hwservice)
+allow hal_display_color_client hal_display_color_hwservice:hwservice_manager find;
+
+# Rule for vndbinder usage
+allow hal_display_color qdisplay_service:service_manager find;
+vndbinder_use(hal_display_color);
+binder_call(hal_display_color, hal_graphics_composer)
+
+# Rule for pps socket usage
+unix_socket_connect(hal_display_color, pps, hal_graphics_composer_default)
+unix_socket_connect(hal_display_color, pps, mm-pp-daemon)
+
+#Add rules for postproc hal
+add_hwservice(hal_display_color_server, hal_display_postproc_hwservice)
+allow hal_display_postproc_client hal_display_postproc_hwservice:hwservice_manager find;
+
+# Set vendor_qdcmss property
+set_prop(hal_display_color, vendor_qdcmss_prop);

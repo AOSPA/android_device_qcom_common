@@ -1,0 +1,110 @@
+# Copyright (c) 2019, The Linux Foundation. All rights reserved.
+#
+# Redistribution and use in source and binary forms, with or without
+# modification, are permitted provided that the following conditions are
+# met:
+#     * Redistributions of source code must retain the above copyright
+#       notice, this list of conditions and the following disclaimer.
+#     * Redistributions in binary form must reproduce the above
+#       copyright notice, this list of conditions and the following
+#       disclaimer in the documentation and/or other materials provided
+#       with the distribution.
+#     * Neither the name of The Linux Foundation nor the names of its
+#       contributors may be used to endorse or promote products derived
+#       from this software without specific prior written permission.
+#
+# THIS SOFTWARE IS PROVIDED "AS IS" AND ANY EXPRESS OR IMPLIED
+# WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF
+# MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NON-INFRINGEMENT
+# ARE DISCLAIMED.  IN NO EVENT SHALL THE COPYRIGHT OWNER OR CONTRIBUTORS
+# BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR
+# CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF
+# SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR
+# BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY,
+# WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE
+# OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN
+# IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+
+/(vendor|system/vendor)/bin/kernel-tests/smd.* u:object_r:smd_test_exec:s0
+/(vendor|system/vendor)/bin/qmi-framework-tests/qmi_ping.*      u:object_r:qmi_ping_exec:s0
+/(vendor|system/vendor)/bin/qmi-framework-tests/qmi_test.*      u:object_r:qmi_test_service_exec:s0
+
+/(vendor|system/vendor)/bin/diag_dci_client      u:object_r:diagdciclient_exec:s0
+
+/(vendor|system/vendor)/bin/ptt_socket_app      u:object_r:wcnss_service_exec:s0
+/(vendor|system/vendor)/bin/athdiag             u:object_r:wcnss_service_exec:s0
+/(vendor|system/vendor)/bin/cld-fwlog-netlink                   u:object_r:wcnss_service_exec:s0
+/(vendor|system/vendor)/bin/cld-fwlog-record                    u:object_r:wcnss_service_exec:s0
+/(vendor|system/vendor)/bin/cld-fwlog-parser                    u:object_r:wcnss_service_exec:s0
+/(vendor|system/vendor)/bin/cnss_diag           u:object_r:wcnss_service_exec:s0
+/(vendor|system/vendor)/bin/iwpriv                              u:object_r:wcnss_service_exec:s0
+/(vendor|system/vendor)/bin/iwconfig                            u:object_r:wcnss_service_exec:s0
+/(vendor|system/vendor)/bin/iw                                  u:object_r:wcnss_service_exec:s0
+/(vendor|system/vendor)/bin/iwlist                              u:object_r:wcnss_service_exec:s0
+/(vendor|system/vendor)/bin/iwss_test                           u:object_r:wcnss_service_exec:s0
+/(vendor|system/vendor)/bin/pktlogconf                          u:object_r:wcnss_service_exec:s0
+/(vendor|system/vendor)/bin/iperf                               u:object_r:wcnss_service_exec:s0
+/(vendor|system/vendor)/bin/mboxping                            u:object_r:wcnss_service_exec:s0
+/(vendor|system/vendor)/bin/sigma_dut                           u:object_r:wcnss_service_exec:s0
+/(vendor|system/vendor)/bin/pktlog                              u:object_r:wcnss_service_exec:s0
+/(vendor|system/vendor)/bin/hal_proxy_daemon    u:object_r:wcnss_service_exec:s0
+/(vendor|system/vendor)/bin/Wifilogger_app      u:object_r:wcnss_service_exec:s0
+/(vendor|system/vendor)/bin/hs20-osu-client                     u:object_r:wcnss_service_exec:s0
+/(vendor|system/vendor)/bin/ndc                                 u:object_r:wcnss_service_exec:s0
+/(vendor|system/vendor)/bin/icm                                 u:object_r:wcnss_service_exec:s0
+/(vendor|system/vendor)/bin/playreadygtest(.*)                  u:object_r:sectest_exec:s0
+/(vendor|system/vendor)/bin/oem(.*)test                         u:object_r:sectest_exec:s0
+/(vendor|system/vendor)/bin/widevine(.*)                        u:object_r:sectest_exec:s0
+/(vendor|system/vendor)/bin/qseecom_sample_client               u:object_r:sectest_exec:s0
+/(vendor|system/vendor)/bin/isdbtmmtest                         u:object_r:sectest_exec:s0
+/(vendor|system/vendor)/bin/secure_ui_sample_client u:object_r:sectest_exec:s0
+/(vendor|system/vendor)/bin/qseecom_security_test               u:object_r:sectest_exec:s0
+/(vendor|system/vendor)/bin/qfipsverify                         u:object_r:sectest_exec:s0
+/(vendor|system/vendor)/bin/qseecom_assurance_test              u:object_r:sectest_exec:s0
+/(vendor|system/vendor)/bin/drm_generic_prov_test               u:object_r:sectest_exec:s0
+/(vendor|system/vendor)/bin/ParserApp                           u:object_r:sectest_exec:s0
+/(vendor|system/vendor)/bin/StoreKeybox         u:object_r:sectest_exec:s0
+/(vendor|system/vendor)/bin/InstallKeybox                       u:object_r:sectest_exec:s0
+
+#context for debugutils HAL
+/(vendor|system/vendor)/bin/hw/vendor\.qti\.hardware\.debugutils@1\.0-service        u:object_r:vendor_hal_debugutils_default_exec:s0
+
+#Authentication and FIDO
+/(vendor|system/vendor)/bin/sampleauthdaemon    u:object_r:fidotest_exec:s0
+/(vendor|system/vendor)/bin/qseeproxysampledaemon u:object_r:qseeproxysample_exec:s0
+
+#Context for location features
+/(vendor|system/vendor)/bin/sdp_test                            u:object_r:location_exec:s0
+/(vendor|system/vendor)/bin/icm_test                            u:object_r:location_exec:s0
+/(vendor|system/vendor)/bin/pf_test_app                         u:object_r:location_exec:s0
+/(vendor|system/vendor)/bin/quipc_ipe_test                      u:object_r:location_exec:s0
+/(vendor|system/vendor)/bin/ipead_test                          u:object_r:location_exec:s0
+/(vendor|system/vendor)/bin/quipc_iwmm_test                     u:object_r:location_exec:s0
+/(vendor|system/vendor)/bin/slimcw_test                         u:object_r:location_exec:s0
+/(vendor|system/vendor)/bin/lowi_test           u:object_r:location_exec:s0
+/(vendor|system/vendor)/bin/test-lowi-client                    u:object_r:location_exec:s0
+/(vendor|system/vendor)/bin/quipc_os_api_test_1                 u:object_r:location_exec:s0
+/(vendor|system/vendor)/bin/quipc_os_api_test_2                 u:object_r:location_exec:s0
+/(vendor|system/vendor)/bin/loc_api_v02_utt                     u:object_r:location_exec:s0
+/(vendor|system/vendor)/bin/test-version                        u:object_r:location_exec:s0
+/(vendor|system/vendor)/bin/test-pos-tx                         u:object_r:location_exec:s0
+/(vendor|system/vendor)/bin/xtwifi-upload-test                  u:object_r:location_exec:s0
+/(vendor|system/vendor)/bin/test-fake-ap                        u:object_r:location_exec:s0
+/(vendor|system/vendor)/bin/loc_api_app                         u:object_r:location_exec:s0
+/(vendor|system/vendor)/bin/test_loc_api_client                 u:object_r:location_exec:s0
+
+/(vendor|system/vendor)/bin/sns.*               u:object_r:sensors_test_exec:s0
+#for testscripts support
+/(vendor|system/vendor)/bin/init\.qcom\.vendor\.testscripts\.sh u:object_r:vendor-qti-testscripts_exec:s0
+/sys/kernel/debug/dsi_dual_samsung_cmd(/.*)?                    u:object_r:qti_debugfs:s0
+
+#Context for GPU applications
+/data/vendor/gpu(/.*)?                                          u:object_r:vendor_gles_data_file:s0
+
+#Used only in debug build to enable gpu config settings
+/data/misc/gpu(/.*)?                                            u:object_r:system_gles_data_file:s0
+
+/sys/kernel/debug/binder/state                                  u:object_r:binder_state:s0
+
+# Sensors scripts for test app
+/data/sensors/scripts(/.*)?                                     u:object_r:sensors_data_file:s0

@@ -1,0 +1,46 @@
+# Copyright (c) 2018, The Linux Foundation. All rights reserved.
+#
+# Redistribution and use in source and binary forms, with or without
+# modification, are permitted provided that the following conditions are
+# met:
+#     * Redistributions of source code must retain the above copyright
+#       notice, this list of conditions and the following disclaimer.
+#     * Redistributions in binary form must reproduce the above
+#       copyright notice, this list of conditions and the following
+#       disclaimer in the documentation and/or other materials provided
+#       with the distribution.
+#     * Neither the name of The Linux Foundation nor the names of its
+#       contributors may be used to endorse or promote products derived
+#       from this software without specific prior written permission.
+#
+# THIS SOFTWARE IS PROVIDED "AS IS" AND ANY EXPRESS OR IMPLIED
+# WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF
+# MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NON-INFRINGEMENT
+# ARE DISCLAIMED.  IN NO EVENT SHALL THE COPYRIGHT OWNER OR CONTRIBUTORS
+# BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR
+# CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF
+# SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR
+# BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY,
+# WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE
+# OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN
+# IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+
+# Allow hostapd to access it's data folder
+r_dir_file(hal_wifi_hostapd_default, wifi_vendor_data_file)
+allow hal_wifi_hostapd_default hostapd_data_file:dir rw_dir_perms;
+allow hal_wifi_hostapd_default hostapd_data_file:file create_file_perms;
+# Allow hostapd to connect to fstman using control socket
+allow hal_wifi_hostapd_default fstman:unix_dgram_socket sendto;
+# Allow hostapd to create control socket under its data folder
+allow hal_wifi_hostapd_default hostapd_data_file:sock_file create_file_perms;
+# wigig_hostapd has its own directory for sockets,
+# in order to prevent conflicts with wifi hostapd
+# allow wigig_hostapd to create the directory holding its control socket
+allow hal_wifi_hostapd_default wigig_hostapd_socket:dir create_dir_perms;
+# wigig_hostapd needs to create, bind to, read and write its control socket
+allow hal_wifi_hostapd_default wigig_hostapd_socket:sock_file create_file_perms;
+# allow wigig_hostapd to send replies to wigighalsvc
+allow hal_wifi_hostapd_default wigighalsvc:unix_dgram_socket sendto;
+# allow hostapd to attach to fstman socket
+allow hal_wifi_hostapd_default wifi_vendor_wpa_socket:dir r_dir_perms;
+allow hal_wifi_hostapd_default wifi_vendor_wpa_socket:sock_file rw_file_perms;

@@ -1,0 +1,69 @@
+# Copyright (c) 2017, 2019, The Linux Foundation. All rights reserved.
+#
+# Redistribution and use in source and binary forms, with or without
+# modification, are permitted provided that the following conditions are
+# met:
+#     * Redistributions of source code must retain the above copyright
+#       notice, this list of conditions and the following disclaimer.
+#     * Redistributions in binary form must reproduce the above
+#       copyright notice, this list of conditions and the following
+#       disclaimer in the documentation and/or other materials provided
+#       with the distribution.
+#     * Neither the name of The Linux Foundation nor the names of its
+#       contributors may be used to endorse or promote products derived
+#       from this software without specific prior written permission.
+#
+# THIS SOFTWARE IS PROVIDED "AS IS" AND ANY EXPRESS OR IMPLIED
+# WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF
+# MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NON-INFRINGEMENT
+# ARE DISCLAIMED.  IN NO EVENT SHALL THE COPYRIGHT OWNER OR CONTRIBUTORS
+# BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR
+# CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF
+# SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR
+# BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY,
+# WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE
+# OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN
+# IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+
+#qfp daemon for ultrasonic fingerprint sensor
+type qfp-daemon, domain;
+type qfp-daemon_exec, exec_type, vendor_file_type, file_type;
+
+hal_server_domain(qfp-daemon, hal_fingerprint)
+init_daemon_domain(qfp-daemon)
+
+#binder_call(qfp-daemon, servicemanager)
+binder_call(qfp-daemon, system_app)
+binder_call(qfp-daemon, fps_hal)
+#binder_use(qfp-daemon)
+
+allow qfp-daemon qfp-daemon_data_file:dir { rw_dir_perms setattr };
+allow qfp-daemon qfp-daemon_data_file:file create_file_perms;
+
+# Access to tee_device
+allow qfp-daemon tee_device:chr_file rw_file_perms;
+
+# Access QFP Android Proxy
+#allow qfp-daemon qfp_proxy_service:service_manager find;
+
+# Read system property
+allow qfp-daemon property_socket:sock_file write;
+
+# RW to device driver
+allow qfp-daemon qbt_device:chr_file rw_file_perms;
+
+# R dir perms for firmware dir
+r_dir_file(qfp-daemon, firmware_file)
+
+# R dir perms for persist qc_senseid dir
+r_dir_file(qfp-daemon, mnt_vendor_file)
+r_dir_file(qfp-daemon, persist_qti_fp_file)
+
+# Allow listing input devices and sending input events
+allow qfp-daemon input_device:chr_file rw_file_perms;
+allow qfp-daemon input_device:dir r_dir_perms;
+
+#diag
+userdebug_or_eng(`
+    diag_use(qfp-daemon)
+')
