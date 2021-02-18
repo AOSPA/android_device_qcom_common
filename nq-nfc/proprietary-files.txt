@@ -1,1 +1,9 @@
+vendor/bin/hw/vendor.qti.esepowermanager@1.1-service
+vendor/bin/hw/vendor.qti.secure_element@1.2-service
 vendor/bin/nqnfcinfo
+vendor/etc/init/vendor.qti.esepowermanager@1.1-service.rc
+vendor/etc/init/vendor.qti.secure_element@1.2-service.rc
+vendor/lib64/hw/vendor.qti.esepowermanager@1.1-impl.so
+vendor/lib64/android.hardware.secure_element@1.0-impl.so
+vendor/lib64/vendor.qti.esepowermanager@1.0.so
+vendor/lib64/vendor.qti.esepowermanager@1.1.so
