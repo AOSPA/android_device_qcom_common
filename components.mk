@@ -74,17 +74,17 @@ ifneq (,$(filter vibrator, $(TARGET_COMMON_QTI_COMPONENTS)))
 include $(DEVICE_PATH)/vibrator/qti-vibrator.mk
 endif
 
-# <= SM8350
+# >= SM8350
 ifneq (,$(filter media, $(TARGET_COMMON_QTI_COMPONENTS)))
 include $(DEVICE_PATH)/media/qti-media.mk
 endif
 
-# >= SM8250
+# <= SM8250
 ifneq (,$(filter media-legacy, $(TARGET_COMMON_QTI_COMPONENTS)))
 include $(DEVICE_PATH)/media-legacy/qti-media-legacy.mk
 endif
 
-# <= SDM845
+# >= SDM845
 ifneq (,$(filter adreno, $(TARGET_COMMON_QTI_COMPONENTS)))
 include $(DEVICE_PATH)/adreno/qti-adreno.mk
 endif
