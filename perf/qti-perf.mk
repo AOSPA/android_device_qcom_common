@@ -20,6 +20,12 @@ PRODUCT_BOOT_JARS += \
     QPerformance \
     UxPerformance
 
+# IRQ Balance
+ifneq (,$(wildcard $(LOCAL_PATH)/perf/msm_irqbalance/$(TARGET_BOARD_PLATFORM)))
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/perf/msm_irqbalance/$(TARGET_BOARD_PLATFORM)/msm_irqbalance.conf:$(TARGET_COPY_OUT_VENDOR)/etc/msm_irqbalance.conf
+endif
+
 # Packages
 PRODUCT_PACKAGES += \
     android.hardware.thermal@2.0 \

@@ -72,7 +72,6 @@ vendor/etc/lm/AdaptLaunchFeature.xml
 vendor/etc/lm/AppClassifierFeature.xml
 vendor/etc/lm/GameOptimizationFeature.xml
 vendor/etc/lm/PreKillFeature.xml
-vendor/etc/msm_irqbalance.conf
 vendor/etc/perf/commonresourceconfigs.xml
 vendor/etc/platform_boost/boost_cap.xml
 vendor/etc/platform_boost/boost_mode.xml
