@@ -20,6 +20,13 @@ PRODUCT_BOOT_JARS += \
     QPerformance \
     UxPerformance
 
+# Configs
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/perf/configs/common/perf/commonresourceconfigs.xml:$(TARGET_COPY_OUT_VENDOR)/etc/perf/commonresourceconfigs.xml \
+    $(foreach file,$(wildcard $(LOCAL_PATH)/perf/configs/$(TARGET_BOARD_PLATFORM)/lm/*),$(file):$(TARGET_COPY_OUT_VENDOR)/etc/lm/$(notdir $(file))) \
+    $(foreach file,$(wildcard $(LOCAL_PATH)/perf/configs/$(TARGET_BOARD_PLATFORM)/perf/*),$(file):$(TARGET_COPY_OUT_VENDOR)/etc/perf/$(notdir $(file))) \
+    $(foreach file,$(wildcard $(LOCAL_PATH)/perf/configs/$(TARGET_BOARD_PLATFORM)/msm_irqbalance.conf),$(file):$(TARGET_COPY_OUT_VENDOR)/etc/$(notdir $(file)))
+
 # Packages
 PRODUCT_PACKAGES += \
     android.hardware.thermal@2.0 \

@@ -65,17 +65,6 @@ vendor/etc/init/vendor.qti.hardware.perf@2.2-service.rc
 vendor/etc/init/vendor.qti.hardware.servicetracker@1.2-service.rc
 vendor/etc/init/vendor.qti.memory.pasrmanager@1.0-service.rc
 vendor/etc/init/vendor.qti.psiclient@1.0-service.rc
-vendor/etc/lm/prekill/prekill_2GB.data
-vendor/etc/lm/prekill/prekill_4GB.data
-vendor/etc/lm/prekill/prekill_6GB.data
-vendor/etc/lm/AdaptLaunchFeature.xml
-vendor/etc/lm/AppClassifierFeature.xml
-vendor/etc/lm/GameOptimizationFeature.xml
-vendor/etc/lm/PreKillFeature.xml
-vendor/etc/msm_irqbalance.conf
-vendor/etc/perf/commonresourceconfigs.xml
-vendor/etc/platform_boost/boost_cap.xml
-vendor/etc/platform_boost/boost_mode.xml
 vendor/etc/pwr/PowerFeatureConfig.xml
 vendor/etc/pwr/VideoPowerOptFeature.xml
 -vendor/etc/vintf/manifest/vendor.qti.hardware.servicetracker@1.2-service.xml
