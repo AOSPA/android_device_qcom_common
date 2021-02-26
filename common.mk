@@ -147,6 +147,12 @@ endif
 # Components
 include $(DEVICE_PATH)/components.mk
 
+# Namespaces
+ifneq ($(call is-board-platform-in-list,$(4_4_FAMILY) $(3_18_FAMILY)),true)
+PRODUCT_SOONG_NAMESPACES += \
+    vendor/qcom/opensource/commonsys-intf/display
+endif
+
 # Power
 # Define all modules and they will be filtered out
 # by the build flags in Android.mk
