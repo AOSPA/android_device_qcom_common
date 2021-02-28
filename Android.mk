@@ -14,9 +14,9 @@
 
 LOCAL_PATH := $(call my-dir)
 
+ifeq ($(TARGET_FWK_SUPPORTS_FULL_VALUEADDS),true)
 include $(call all-makefiles-under,$(LOCAL_PATH))
 
 # Common
-ifeq ($(TARGET_FWK_SUPPORTS_FULL_VALUEADDS),true)
 include vendor/qcom/opensource/core-utils/build/AndroidBoardCommon.mk
 endif
