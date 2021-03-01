@@ -28,6 +28,11 @@ PRODUCT_COPY_FILES += \
     $(foreach file,$(wildcard $(LOCAL_PATH)/perf/configs/$(TARGET_BOARD_PLATFORM)/pwr/*),$(file):$(TARGET_COPY_OUT_VENDOR)/etc/pwr/$(notdir $(file))) \
     $(foreach file,$(wildcard $(LOCAL_PATH)/perf/configs/$(TARGET_BOARD_PLATFORM)/msm_irqbalance.conf),$(file):$(TARGET_COPY_OUT_VENDOR)/etc/$(notdir $(file)))
 
+ifeq ($(call is-board-platform-in-list, msm8937 msm8953 msm8998 qcs605 sdm660 sdm710 sdm845),true)
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/perf/vendor.qti.hardware.iop@2.0-service-disable.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/vendor.qti.hardware.iop@2.0-service-disable.rc
+endif
+
 # Packages
 PRODUCT_PACKAGES += \
     android.hardware.thermal@2.0 \
