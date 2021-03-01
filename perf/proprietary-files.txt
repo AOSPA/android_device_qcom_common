@@ -63,8 +63,6 @@ vendor/etc/init/vendor.qti.hardware.perf@2.2-service.rc
 vendor/etc/init/vendor.qti.hardware.servicetracker@1.2-service.rc
 vendor/etc/init/vendor.qti.memory.pasrmanager@1.0-service.rc
 vendor/etc/init/vendor.qti.psiclient@1.0-service.rc
-vendor/etc/platform_boost/boost_cap.xml
-vendor/etc/platform_boost/boost_mode.xml
 -vendor/etc/vintf/manifest/vendor.qti.hardware.servicetracker@1.2-service.xml
 -vendor/etc/vintf/manifest/vendor.qti.memory.pasrmanager@1.0-service.xml
 vendor/lib/hw/vendor.qti.hardware.servicetracker@1.2-impl.so
