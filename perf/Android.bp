@@ -21,3 +21,9 @@ prebuilt_etc {
     sub_dir: "init",
     vendor: true,
 }
+
+sh_binary {
+    name: "init.aospa.perf.sh",
+    src: "init.aospa.perf.sh",
+    vendor: true,
+}

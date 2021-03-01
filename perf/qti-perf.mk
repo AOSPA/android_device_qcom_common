@@ -32,6 +32,7 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     android.hardware.thermal@2.0 \
     init.aospa.perf.rc \
+    init.aospa.perf.sh \
     libpsi.vendor \
     libtflite \
     vendor.qti.hardware.servicetracker@1.2.vendor
