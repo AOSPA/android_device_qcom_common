@@ -58,8 +58,6 @@ vendor/bin/hw/vendor.qti.hardware.servicetracker@1.2-service
 vendor/bin/hw/vendor.qti.memory.pasrmanager@1.0-service
 vendor/bin/hw/vendor.qti.psiclient@1.0-service
 vendor/bin/msm_irqbalance
-vendor/bin/poweropt-service
-vendor/etc/init/poweropt-service.rc
 vendor/etc/init/vendor.qti.hardware.iop@2.0-service.rc
 vendor/etc/init/vendor.qti.hardware.perf@2.2-service.rc
 vendor/etc/init/vendor.qti.hardware.servicetracker@1.2-service.rc
@@ -77,7 +75,6 @@ vendor/lib/libperfconfig.so
 vendor/lib/libperfgluelayer.so
 vendor/lib/libperfioctl.so
 vendor/lib/libpowercallback.so
-vendor/lib/libpowercore.so
 vendor/lib/libqti-iopd.so
 vendor/lib/libqti-iopd-client.so
 vendor/lib/libqti-perfd.so
@@ -109,7 +106,6 @@ vendor/lib64/libperfconfig.so
 vendor/lib64/libperfgluelayer.so
 vendor/lib64/libperfioctl.so
 vendor/lib64/libpowercallback.so
-vendor/lib64/libpowercore.so
 vendor/lib64/libprekill.so
 vendor/lib64/libqti-iopd.so
 vendor/lib64/libqti-iopd-client.so
