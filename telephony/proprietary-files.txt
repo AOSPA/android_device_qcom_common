@@ -61,6 +61,7 @@ system_ext/etc/spn-conf.xml
 -system_ext/framework/com.qualcomm.qti.uceservice-V2.0-java.jar
 -system_ext/framework/com.qualcomm.qti.uceservice-V2.1-java.jar
 -system_ext/framework/com.qualcomm.qti.uceservice-V2.2-java.jar
+-system_ext/framework/com.qualcomm.qti.uceservice-V2.3-java.jar
 -system_ext/framework/com.quicinc.cne.api-V1.0-java.jar
 -system_ext/framework/com.quicinc.cne.api-V1.1-java.jar
 -system_ext/framework/com.quicinc.cne.constants-V1.0-java.jar
@@ -112,6 +113,7 @@ system_ext/lib64/com.qualcomm.qti.imscmservice@2.2.so
 system_ext/lib64/com.qualcomm.qti.uceservice@2.0.so
 system_ext/lib64/com.qualcomm.qti.uceservice@2.1.so
 system_ext/lib64/com.qualcomm.qti.uceservice@2.2.so
+system_ext/lib64/com.qualcomm.qti.uceservice@2.3.so
 system_ext/lib64/com.quicinc.cne.api@1.0.so
 system_ext/lib64/com.quicinc.cne.api@1.1.so
 system_ext/lib64/com.quicinc.cne.constants@1.0.so
