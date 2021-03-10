@@ -7,7 +7,6 @@
 */
 -->
 
-
 <!--Ids are used in identifying the boosts, increment ids linearly,
     do not modify Ids, or add in between-->
 <!--follow the number format rules while specifying number, can be given
@@ -27,12 +26,12 @@
         <!-- Type="1", main launch boost of 2sec -->
         <Config
             Id="0x00001081" Type="1" Enable="true" Timeout="2000" Target="msmsteppe"
-            Resources="0x40C20000, 0x28, 0x40C1C000, 0x32, 0x40804000, 0xFFF, 0x40804100, 0xFFF, 0x40800000, 1516,
-                       0x40800100, 1516" />
+            Resources="0x40C20000, 0x28, 0x40C1C000, 0x32, 0x40804000, 0xFFF, 0x40804100, 0xFFF, 0x40800000, 0xFFF,
+                       0x40800100, 0xFFF" />
        <Config
            Id="0x00001081" Type="1" Enable="true" Timeout="2000" Target="sdmmagpie"
-           Resources="0x40C20000, 0x28, 0x40C1C000, 0x32, 0x40804000, 0xFFF, 0x40804100, 0xFFF, 0x40800000, 1708,
-                      0x40800100, 1497" />
+           Resources="0x40C20000, 0x28, 0x40C1C000, 0x32, 0x40804000, 0xFFF, 0x40804100, 0xFFF, 0x40800000, 0xFFF,
+                      0x40800100, 0xFFF" />
 
     <!--app lauch boost (disabling packing)-->
         <!-- POWER COLLAPSE resource opcode, value-->
@@ -129,7 +128,7 @@
             Resources="0x40408000, 0x5,
                        0x40C68000, 60, 0x40C68010, 60,
                        0x40C68100, 33, 0x40C68110, 33, 0x40C68120, 33, 0x40C68130, 33, 0x40C68140, 33, 0x40C68150, 33,
-                       0x40800000, 1363,
+                       0x40800000, 2016,
                        0x41448000, 20000 "/>
 
         <Config
@@ -137,7 +136,7 @@
             Resources="0x40408000, 0x5,
                        0x40C68000, 60, 0x40C68010, 60,
                        0x40C68100, 33, 0x40C68110, 33, 0x40C68120, 33, 0x40C68130, 33, 0x40C68140, 33, 0x40C68150, 33,
-                       0x40800000, 1324,
+                       0x40800000, 2169,
                        0x41448000, 20000 "/>
 
     <!--Animation boost -->
@@ -147,11 +146,11 @@
         <!-- CPUBOOST_MIN_FREQ LITTLE Core resource opcode, value-->
         <Config
             Id="0x00001083" Enable="true" Timeout="400" Target="msmsteppe"
-            Resources="0x40804000, 0xFFF, 0x40804100, 0xFFF, 0x40800000, 2208, 0x40800100, 1708" />
+            Resources="0x40804000, 0xFFF, 0x40804100, 0xFFF, 0x40800000, 2016, 0x40800100, 1708" />
 
        <Config
            Id="0x00001083" Enable="true" Timeout="400" Target="sdmmagpie"
-           Resources="0x40804000, 0xFFF, 0x40804100, 0xFFF, 0x40800000, 2438, 0x40800100, 1804" />
+           Resources="0x40804000, 0xFFF, 0x40804100, 0xFFF, 0x40800000, 1843, 0x40800100, 1708" />
 
     <!--Vertical Scroll boost-->
         <!-- CPUBW_MIN_FREQ resource opcode, value-->
@@ -162,11 +161,11 @@
         <!-- Type="1", Vertical Scroll boost -->
         <Config
             Id="0x00001080" Type="1" Enable="true" Target="msmsteppe"
-            Resources="0x43010000, 0x26, 0x40800000, 1017, 0x40800100, 1100, 0x40C00000, 2" />
+            Resources="0x43010000, 0x26, 0x40800000, 1363, 0x40800100, 1363, 0x40C00000, 2" />
 
         <Config
             Id="0x00001080" Type="1" Enable="true" Target="sdmmagpie"
-            Resources="0x43010000, 0x26, 0x40800000, 1094, 0x40800100, 1248, 0x40C00000, 2" />
+            Resources="0x43010000, 0x26, 0x40800000, 1324, 0x40800100, 1612, 0x40C00000, 2" />
 
     <!--Horizontal Scroll boost-->
         <!-- CPUBW_MIN_FREQ resource opcode, value-->
@@ -177,11 +176,11 @@
         <!-- Type="2", Horizontal Scroll boost -->
         <Config
             Id="0x00001080" Type="2" Enable="true" Target="msmsteppe"
-            Resources="0x43010000, 0x26, 0x40800000, 1017, 0x40800100, 1100, 0x40C00000, 2" />
+            Resources="0x43010000, 0x26, 0x40800000, 1363, 0x40800100, 1363, 0x40C00000, 2" />
 
         <Config
             Id="0x00001080" Type="2" Enable="true" Target="sdmmagpie"
-            Resources="0x43010000, 0x26, 0x40800000, 1094, 0x40800100, 1248, 0x40C00000, 2" />
+            Resources="0x43010000, 0x26, 0x40800000, 1324, 0x40800100, 1612, 0x40C00000, 2" />
 
     <!--Pre-Fling boost-->
         <!-- CPUBW_MIN_FREQ resource opcode, value-->
@@ -192,11 +191,11 @@
         <!-- Type="4", Pre-Fling boost -->
         <Config
             Id="0x00001080" Type="4" Enable="true" Timeout="80" Target="msmsteppe"
-            Resources="0x43010000, 0x26, 0x40800000, 1017, 0x40800100, 1100, 0x40C00000, 2" />
+            Resources="0x43010000, 0x26, 0x40800000, 1363, 0x40800100, 1363, 0x40C00000, 2" />
 
         <Config
             Id="0x00001080" Type="4" Enable="true" Timeout="80" Target="sdmmagpie"
-            Resources="0x43010000, 0x26, 0x40800000, 1094, 0x40800100, 1248, 0x40C00000, 2" />
+            Resources="0x43010000, 0x26, 0x40800000, 1324, 0x40800100, 1324, 0x40C00000, 2" />
 
     <!--MTP boost-->
         <!-- SCHEDBOOST resource opcode, value-->
@@ -210,13 +209,13 @@
 
         <Config
             Id="0x00001086" Enable="true" Target="msmsteppe"
-            Resources="0x40C00000, 0x1, 0x40804000, 0xFFF, 0x40804100, 0xFFF, 0x40800000, 1516,
-                       0x40800100, 1516, 0x42C10000, 0x1" />
+            Resources="0x40C00000, 0x1, 0x40804000, 0xFFF, 0x40804100, 0xFFF, 0x40800000, 1708,
+                       0x40800100, 1708, 0x42C10000, 0x1" />
 
         <Config
             Id="0x00001086" Enable="true" Target="sdmmagpie"
-            Resources="0x40C00000, 0x1, 0x40804000, 0xFFF, 0x40804100, 0xFFF, 0x40800000, 1747,
-                       0x40800100, 1516, 0x42C10000, 0x1" />
+            Resources="0x40C00000, 0x1, 0x40804000, 0xFFF, 0x40804100, 0xFFF, 0x40800000, 1708,
+                       0x40800100, 1708, 0x42C10000, 0x1" />
 
     <!--PackageInstall boost-->
         <!-- CPUBOOST_MAX_FREQ BIG Core resource opcode, value-->
@@ -262,11 +261,11 @@
 
         <Config
             Id="0x00001090" Enable="true" Timeout="1000" Target="msmsteppe"
-            Resources="0x40800100, 1000, 0x4280C000, 596" />
+            Resources="0x40800100, 1516, 0x4280C000, 596" />
 
         <Config
             Id="0x00001090" Enable="true" Timeout="1000" Target="sdmmagpie"
-            Resources="0x40800100, 1209, 0x4280C000, 800" />
+            Resources="0x40800100, 1612, 0x4280C000, 800" />
 
     <!--Drag boost-->
         <!-- CPUBOOST_MIN_FREQ BIG CORE resource opcode, value -->
@@ -275,7 +274,7 @@
          <!-- Type="1", Drag boost -->
          <Config
              Id="0x00001087" Type="1" Enable="true" Timeout="0" Target="sdmmagpie"
-             Resources="0x40800000, 1324, 0x40800100, 1248" />
+             Resources="0x40800000, 1708, 0x40800100, 1324" />
 
     <!--Display on Resource -->
         <!-- Display on resource opcode, value -->
