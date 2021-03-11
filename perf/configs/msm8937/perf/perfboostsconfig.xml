@@ -120,15 +120,15 @@
             Resources="0x40C00000, 0x1, 0x40800000, 0x44C, 0x42804000, 0x1" />
 
         <Config
-            Id="0x00001083" Type="1" Enable="true" Timeout="600" Target="sdm439"
+            Id="0x00001083" Enable="true" Timeout="600" Target="sdm439"
             Resources="0x40C00000, 0x1, 0x40800000, 0x44C, 0x42804000, 0x1" />
 
         <Config
-            Id="0x00001083" Type="1" Enable="true" Timeout="600" Target="sdm429"
+            Id="0x00001083" Enable="true" Timeout="600" Target="sdm429"
             Resources="0x40C00000, 0x1, 0x40800000, 0x44C, 0x42804000, 0x1" />
 
         <Config
-            Id="0x00001083" Type="1" Enable="true" Timeout="600" Target="qm215"
+            Id="0x00001083" Enable="true" Timeout="600" Target="qm215"
             Resources="0x40C00000, 0x1, 0x40800000, 0x44C, 0x42804000, 0x1" />
 
     <!--Vertical Scroll boost-->

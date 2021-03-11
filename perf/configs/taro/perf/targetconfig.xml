@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 
 <!--
- * Copyright (c) 2017-2020 Qualcomm Technologies, Inc.
+ * Copyright (c) 2017-2021 Qualcomm Technologies, Inc.
  * All Rights Reserved.
  * Confidential and Proprietary - Qualcomm Technologies, Inc.
 -->
@@ -43,10 +43,10 @@
     <Config1>
 
          <TargetInfo
-             Target="lahaina"
+             Target="taro"
              NumClusters="3"
              TotalNumCores="8"
-             SocIds="415,439,456,501,502"
+             SocIds="457"
              SynCore="1"
              CoreCtlCpu="4"
              MinCoreOnline="0"
@@ -57,41 +57,5 @@
          <ClustersInfo Id="2" NumCores="1" Type="prime" />
 
     </Config1>
-
-    <Config2>
-         <TargetInfo
-             Target="shima"
-             NumClusters="3"
-             TotalNumCores="8"
-             SocIds="450"
-             SynCore="1"
-             CoreCtlCpu="4"
-             MinCoreOnline="0"
-             CpufreqGov="1"
-             MinFpsForTuning="60" />
-
-         <ClustersInfo Id="0" NumCores="4" Type="little" />
-         <ClustersInfo Id="1" NumCores="3" Type="big" />
-         <ClustersInfo Id="2" NumCores="1" Type="prime" />
-
-    </Config2>
-
-    <Config3>
-         <TargetInfo
-             Target="yupik"
-             NumClusters="3"
-             TotalNumCores="8"
-             SocIds="475,499"
-             SynCore="1"
-             CoreCtlCpu="4"
-             MinCoreOnline="0"
-             CpufreqGov="1"
-             MinFpsForTuning="60" />
-
-         <ClustersInfo Id="0" NumCores="4" Type="little" />
-         <ClustersInfo Id="1" NumCores="3" Type="big" />
-         <ClustersInfo Id="2" NumCores="1" Type="prime" />
-
-    </Config3>
 
 </TargetConfig>

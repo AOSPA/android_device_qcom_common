@@ -7,7 +7,7 @@
       Each feature has an xml file to define the feature components
 
   ===========================================================================
-  Copyright (c) 2020 Qualcomm Technologies, Inc.
+  Copyright (c) 2020-2021 Qualcomm Technologies, Inc.
   All Rights Reserved.
   Confidential and Proprietary - Qualcomm Technologies, Inc.
   ===========================================================================
@@ -20,18 +20,6 @@
 <Feature>
     <Name>gPLAFFeature</Name>
     <Libname>libgplaf.so</Libname>
-    <Configs target="shima">
-        <Resources_Big>0x40800200,0x40800000</Resources_Big>
-        <Resources_Lil>0x40800100</Resources_Lil>
-        <Boost_Heavy>2246,1804</Boost_Heavy>
-        <Boost_Light>1651,1324</Boost_Light>
-    </Configs>
-    <Configs target="yupik">
-        <Resources_Big>0x40800200,0x40800000</Resources_Big>
-        <Resources_Lil>0x40800100</Resources_Lil>
-        <Boost_Heavy>2131,1804</Boost_Heavy>
-        <Boost_Light>1651,1324</Boost_Light>
-    </Configs>
     <Triggers>
         <Trigger>
            <Primary>true</Primary>
@@ -57,16 +45,6 @@
            <AsyncType>-1</AsyncType>
         </Trigger>
     </Triggers>
-    <IgnoredApps target="shima">
-        <App>com.google.android.gms</App>
-        <App>com.android.vending</App>
-        <App>com.google.android.projection.gearhead</App>
-    </IgnoredApps>
-    <IgnoredApps target="yupik">
-        <App>com.google.android.gms</App>
-        <App>com.android.vending</App>
-        <App>com.google.android.projection.gearhead</App>
-    </IgnoredApps>
     <SpuriousHintApps>
        <App>PermissionGrantActivity</App>
     </SpuriousHintApps>

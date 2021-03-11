@@ -48,5 +48,11 @@ property Name is called. -->
                 <Prop Name="vendor.appcompact.some_compact_type"  Value="1" Variant="msm8937_32go"/>
                 <Prop Name="vendor.appcompact.full_compact_type"  Value="3" Variant="msm8937_32go"/>
 
+                <!--add the default valuea for sdm429w_law-->
+                <Prop Name="ro.lmk.enable_userspace_lmk" Value="true" Variant="sdm429w_law" />
+                <Prop Name="ro.lmk.use_new_strategy_dup" Value="true" Variant="sdm429w_law" />
+                <Prop Name="vendor.appcompact.enable_app_compact" Value="true" Variant="sdm429w_law" />
+                <Prop Name="vendor.appcompact.some_compact_type"  Value="1" Variant="sdm429w_law"/>
+                <Prop Name="vendor.appcompact.full_compact_type"  Value="3" Variant="sdm429w_law"/>
     </PerfConfigs>
 </PerfConfigsStore>

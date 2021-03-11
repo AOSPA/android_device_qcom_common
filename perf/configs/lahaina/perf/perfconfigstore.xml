@@ -53,7 +53,7 @@ ________________________________________________________________________________
                 <Prop Name="vendor.perf.fps_switch.enable" Value="1" Target="yupik" />
                 <Prop Name="ro.vendor.perf.gfl.tap_ignore_enable" Value="true" Target="yupik" />
                 <Prop Name="ro.vendor.perf.wlc.heavygame" Value="true" Target="yupik" />
-                <Prop Name="ro.vendor.perf.splh" Value="sw" Target="yupik" />
+                <Prop Name="ro.vendor.perf.splh" Value="none" Target="yupik" />
                 <Prop Name="ro.vendor.perf.gplaf" Value="true" Target="yupik" />
                 <Prop Name="ro.vendor.perf.enable.prekill" Value="false" Target="lahaina" />
 

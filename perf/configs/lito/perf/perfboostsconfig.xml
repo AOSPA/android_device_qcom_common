@@ -586,5 +586,28 @@
                            0x40C68000, 0, 0x40C68010, 0, 0x40CC8000, 119,
                            0x40C8C000, 100000000" />
 
+         <!-- PREDECITIVE_LOAD BIG CORE resource opcode, value -->
+         <!-- PREDECITIVE_LOAD LITTLE Core resource opcode, value -->
+         <!-- SCHED_PREFER_SPREAD resource opcode, value -->
+         <!-- SLB_BIG_0, val-->
+         <!-- SLB_PRIME, val-->
+         <!-- WALT_RTG_CFS_BOOST_PRIO resource opcode, value -->
+         <!-- SCHED_COLOC_DOWNMIGRATE_NS resource opcode, value -->
+         <!-- SCHED_WINDOW_TICKS_UPDATE resource opcode, value -->
+         <!-- Type="144" -->
+         <Config
+                Id="0x00001094" Type="144" Enable="true" Target="lito" Timeout="0"
+                Resources="0x41444000, 1, 0x41444100, 1, 0x40CA8000, 2,
+                           0x40C68000, 0, 0x40C68200, 0, 0x40CC8000, 119,
+                           0x40C8C000, 100000000, 0x40CA4000, 2" />
+
+         <!--Large Comp HInt -->
+         <!-- CPU min freq resource opcode, value -->
+         <!-- GPU MIN_FREQUENCY resource opcode,value -->
+         <!-- PID Affine opcode,value -->
+         <Config
+                Id="0x00001097" Type="0" Enable="true" Timeout="7" Target="lito" Fps="144"
+                Resources="0x40800000, 1500, 0x42804000, 0, 0x42C20000, 1" />
+
     </PerfBoost>
 </BoostConfigs>
