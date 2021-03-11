@@ -97,6 +97,9 @@ MASTER_SIDE_CP_TARGET_LIST := \
     sdm710 \
     sdm845
 
+# HIDL
+DEVICE_MATRIX_FILE += $(DEVICE_PATH)/compatibility_matrix.xml
+
 # Include QCOM board utilities.
 include $(DEVICE_PATH)/utils.mk
 
