@@ -16,5 +16,3 @@ system_ext/lib64/vendor.qti.gnss@2.1.so
 system_ext/lib64/vendor.qti.gnss@3.0.so
 system_ext/lib64/vendor.qti.gnss@4.0.so
 -system_ext/priv-app/com.qualcomm.location/com.qualcomm.location.apk
--system_ext/priv-app/xtra_t_app/xtra_t_app.apk
--system_ext/priv-app/xtra_t_app_setup/xtra_t_app_setup.apk
