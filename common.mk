@@ -151,8 +151,7 @@ include $(DEVICE_PATH)/components.mk
 # Define all modules and they will be filtered out
 # by the build flags in Android.mk
 ifneq ($(TARGET_PROVIDES_POWERHAL),true)
-PRODUCT_PACKAGES += \
-    android.hardware.power-service
+$(call inherit-product, vendor/qcom/opensource/power/power-vendor-product.mk)
 endif
 
 # Public Libraries
