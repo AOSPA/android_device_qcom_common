@@ -16,6 +16,24 @@
       "message": "Don\u0027t move them into subdir, that breaks the copy check.\n$(TARGET_BOARD_PLATFORM)/perf/*\n\nStructure is determined by where it is in vendor/etc",
       "revId": "91c41ddd8801a6a9736eb74646b3262bc72bd0a1",
       "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "9755ccc2_12a4c273",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 3
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000469
+      },
+      "writtenOn": "2021-03-14T23:44:27Z",
+      "side": 1,
+      "message": "no that actually fixed the copy check, without moving to sundor none of the perf configs get copied to /vendor/etc/perf, after moving to subdir they do get copied",
+      "parentUuid": "08106c06_ca771bed",
+      "revId": "91c41ddd8801a6a9736eb74646b3262bc72bd0a1",
+      "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
     }
   ]
 }
