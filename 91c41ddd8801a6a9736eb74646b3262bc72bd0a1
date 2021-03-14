@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "08106c06_ca771bed",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 3
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000447
+      },
+      "writtenOn": "2021-03-14T21:27:36Z",
+      "side": 1,
+      "message": "Don\u0027t move them into subdir, that breaks the copy check.\n$(TARGET_BOARD_PLATFORM)/perf/*\n\nStructure is determined by where it is in vendor/etc",
+      "revId": "91c41ddd8801a6a9736eb74646b3262bc72bd0a1",
+      "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
+    }
+  ]
+}
