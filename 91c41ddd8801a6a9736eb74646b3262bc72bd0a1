@@ -70,6 +70,24 @@
       "parentUuid": "e22b2c8d_ec27644a",
       "revId": "91c41ddd8801a6a9736eb74646b3262bc72bd0a1",
       "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "7c4f6b0f_1c1b9f06",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 3
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000447
+      },
+      "writtenOn": "2021-03-15T08:29:37Z",
+      "side": 1,
+      "message": "Ah NVM, all good I was just reading the diff in Gerrit wrong. I thought you were moving it out of the perf subdir to below.",
+      "parentUuid": "e54ec3a8_732c9d3e",
+      "revId": "91c41ddd8801a6a9736eb74646b3262bc72bd0a1",
+      "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
     }
   ]
 }
