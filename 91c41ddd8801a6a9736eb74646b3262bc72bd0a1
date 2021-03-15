@@ -34,6 +34,24 @@
       "parentUuid": "08106c06_ca771bed",
       "revId": "91c41ddd8801a6a9736eb74646b3262bc72bd0a1",
       "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "e22b2c8d_ec27644a",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 3
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000447
+      },
+      "writtenOn": "2021-03-15T07:28:31Z",
+      "side": 1,
+      "message": "Really confused considering it copies fine on SM8250, and the copy lines don\u0027t suggest at all that moving it to a lower subdir would fix anything.\n\nChanging the board platform is good though.",
+      "parentUuid": "9755ccc2_12a4c273",
+      "revId": "91c41ddd8801a6a9736eb74646b3262bc72bd0a1",
+      "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
     }
   ]
 }
