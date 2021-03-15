@@ -52,6 +52,24 @@
       "parentUuid": "9755ccc2_12a4c273",
       "revId": "91c41ddd8801a6a9736eb74646b3262bc72bd0a1",
       "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "e54ec3a8_732c9d3e",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 3
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000469
+      },
+      "writtenOn": "2021-03-15T08:06:53Z",
+      "side": 1,
+      "message": "its getting copied on your kona because there too the perf configs are in a subdir: https://github.com/AOSPA/android_device_qcom_common/tree/ruby/perf/configs/kona/. only sm6150 configs weren\u0027t in subdir so i assumed its some kind of derp\n\nand the copy path says:\n$(LOCAL_PATH)/perf/configs/$(TARGET_BOARD_PLATFORM)/perf/*\nwhich would turn out as device/qcom/common/perf/configs/sm6150/perf/*\nwithout moving to subdir the configs are in \ndevice/qcom/common/perf/configs/sm6150/\nwhich dont get copied at all as it doesnt fall under that path",
+      "parentUuid": "e22b2c8d_ec27644a",
+      "revId": "91c41ddd8801a6a9736eb74646b3262bc72bd0a1",
+      "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
     }
   ]
 }
