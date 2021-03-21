@@ -29,13 +29,37 @@ AUDIO_FEATURE_ENABLED_DYNAMIC_LOG := false
 AUDIO_FEATURE_ENABLED_SSR := false
 BOARD_SUPPORTS_OPENSOURCE_STHAL := false
 
+# OMX Packages
 PRODUCT_PACKAGES += \
     libOmxAacEnc \
     libOmxAmrEnc \
     libOmxEvrcEnc \
     libOmxG711Enc \
-    libOmxQcelp13Enc \
-    libaudiohal
+    libOmxQcelp13Enc
+
+# Audio Packages
+PRODUCT_PACKAGES += \
+    audio.r_submix.default \
+    liba2dpoffload \
+    libaudiohal \
+    libaudio-resampler \
+    libaudioroute \
+    libbatterylistener \
+    libcirrusspkrprot \
+    libcomprcapture \
+    libexthwplugin \
+    libhdmiedid \
+    libhfp \
+    libqcompostprocbundle \
+    libqcomvisualizer \
+    libqcomvoiceprocessing \
+    libsndmonitor \
+    libspkrprot \
+    libvolumelistener
+
+# Permissions
+PRODUCT_COPY_FILES += \
+    frameworks/native/data/etc/android.software.midi.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.software.midi.xml
 
 # Get non-open-source specific aspects.
 $(call inherit-product-if-exists, vendor/qcom/common/audio/audio-vendor.mk)
