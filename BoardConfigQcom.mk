@@ -33,6 +33,7 @@ endif
 TARGET_MOUNT_POINTS_SYMLINKS ?= false
 
 # SEPolicy
+ifneq ($(call is-board-platform-in-list, msm8937 msm8953 msm8998 sdm660 sdm710),true)
 ifneq ($(TARGET_EXCLUDE_QCOM_SEPOLICY),true)
 ifneq ($(BOARD_VENDORIMAGE_FILE_SYSTEM_TYPE),)
 include device/qcom/sepolicy_vndr/SEPolicy.mk
@@ -40,3 +41,6 @@ else
 include device/qcom/sepolicy/SEPolicy.mk
 endif
 endif # Exclude QCOM SEPolicy
+else
+include device/qcom/sepolicy-legacy/SEPolicy.mk
+endif
