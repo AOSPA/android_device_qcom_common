@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "d32ffc00_b1e61526",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000012
+      },
+      "writtenOn": "2021-03-24T15:02:41Z",
+      "side": 1,
+      "message": "Qualcomm does this as well, should we?",
+      "revId": "34983d272e7151ccf85c32ec439b86e26723848a",
+      "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
+    }
+  ]
+}
