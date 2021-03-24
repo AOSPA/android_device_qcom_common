@@ -21,3 +21,15 @@ prebuilt_etc {
     sub_dir: "init",
     vendor: true,
 }
+
+android_app_import {
+    name: "RemoveCafBoost",
+    installable: false,
+
+    overrides: [
+        "PerformanceMode",
+    ],
+
+    apk: "/dev/null",
+    presigned: true,
+}
