@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "d89c853e_c3a77aff",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 3
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000579
+      },
+      "writtenOn": "2021-03-24T17:14:07Z",
+      "side": 1,
+      "message": "the dummy apk generation doesn\u0027t work and idk much blueprint :3",
+      "revId": "715f5ea36a7f6f1a0ea198823362553947d3db2f",
+      "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
+    }
+  ]
+}
