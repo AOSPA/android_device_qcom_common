@@ -144,6 +144,11 @@ else ifeq ($(call is-board-platform-in-list,$(3_18_FAMILY)),true)
 TARGET_KERNEL_VERSION ?= 3.18
 endif
 
+# AOSP
+ifeq ($(TARGET_FWK_SUPPORTS_FULL_VALUEADDS),true)
+$(call inherit-product, $(DEVICE_PATH)/aosp/aosp.mk)
+endif
+
 # Components
 include $(DEVICE_PATH)/components.mk
 
