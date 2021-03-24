@@ -33,6 +33,7 @@ endif
 TARGET_MOUNT_POINTS_SYMLINKS ?= false
 
 # SEPolicy
+ifneq ($(TARGET_USES_LEGACY_SEPOLICY),false)
 ifneq ($(TARGET_EXCLUDE_QCOM_SEPOLICY),true)
 ifneq ($(BOARD_VENDORIMAGE_FILE_SYSTEM_TYPE),)
 include device/qcom/sepolicy_vndr/SEPolicy.mk
@@ -40,3 +41,4 @@ else
 include device/qcom/sepolicy/SEPolicy.mk
 endif
 endif # Exclude QCOM SEPolicy
+endif
