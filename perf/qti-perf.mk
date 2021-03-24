@@ -15,10 +15,15 @@
 PRODUCT_SOONG_NAMESPACES += \
     device/qcom/common/perf
 
+ifeq ($(TARGET_FWK_SUPPORTS_FULL_VALUEADDS),true)
 # Boot Jars
 PRODUCT_BOOT_JARS += \
     QPerformance \
     UxPerformance
+else
+PRODUCT_PACKAGES += \
+    RemoveCafBoost
+endif
 
 # Configs
 PRODUCT_COPY_FILES += \
