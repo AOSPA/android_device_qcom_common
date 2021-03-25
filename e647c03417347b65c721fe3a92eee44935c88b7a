@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "f6998a5a_37b146de",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000579
+      },
+      "writtenOn": "2021-03-25T13:14:42Z",
+      "side": 1,
+      "message": "tested on aosp based rom, works perfectly, no more performancemode spam :D ",
+      "revId": "e647c03417347b65c721fe3a92eee44935c88b7a",
+      "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
+    }
+  ]
+}
