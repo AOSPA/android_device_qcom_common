@@ -16,6 +16,24 @@
       "message": "Qualcomm does this as well, should we?",
       "revId": "34983d272e7151ccf85c32ec439b86e26723848a",
       "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "f3e08106_444a181b",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000447
+      },
+      "writtenOn": "2021-03-25T23:13:01Z",
+      "side": 1,
+      "message": "Yeah I need to apply our changes to the new one though",
+      "parentUuid": "d32ffc00_b1e61526",
+      "revId": "34983d272e7151ccf85c32ec439b86e26723848a",
+      "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
     }
   ]
 }
