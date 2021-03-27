@@ -15,6 +15,12 @@
 PRODUCT_SOONG_NAMESPACES += \
     device/qcom/common/gps
 
+# Configs
+ifeq ($(TARGET_BUILD_VARIANT),user)
+PRODUCT_COPY_FILES += \
+    $(DEVICE_PATH)/gps/configs/gps-nodebug.conf:$(TARGET_COPY_OUT_VENDOR)/etc/gps.conf
+endif
+
 # Flags
 BOARD_VENDOR_QCOM_GPS_LOC_API_HARDWARE := default
 
