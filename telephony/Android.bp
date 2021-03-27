@@ -12,6 +12,9 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
+soong_namespace {
+}
+
 prebuilt_etc {
     name: "init.aospa.diag.rc",
     src: "init.aospa.diag.rc",
