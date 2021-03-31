@@ -113,3 +113,7 @@ endif
 ifneq (,$(filter wfd-legacy, $(TARGET_COMMON_QTI_COMPONENTS)))
 include $(DEVICE_PATH)/wfd-legacy/qti-wfd-legacy.mk
 endif
+
+ifneq (,$(filter adreno-legacy, $(TARGET_COMMON_QTI_COMPONENTS)))
+include $(DEVICE_PATH)/adreno-legacy/qti-adreno-legacy.mk
+endif
