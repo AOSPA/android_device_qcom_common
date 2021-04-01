@@ -16,7 +16,8 @@ DEVICE_FRAMEWORK_MANIFEST_FILE += device/qcom/common/wfd-legacy/framework_manife
 
 PRODUCT_PACKAGES += \
     libnl \
-    libwfdaac
+    libwfdaac \
+    libwfdaac_vendor
 
 PRODUCT_BOOT_JARS += \
     WfdCommon
@@ -25,15 +26,8 @@ PRODUCT_PROPERTY_OVERRIDES += \
     persist.debug.wfd.enable=1 \
     persist.sys.wfd.virtual=0
 
-# Display
-PRODUCT_PACKAGES += \
-    libdisplayconfig \
-    libqdMetaData \
-    libqdMetaData.system
-
-# Media
-PRODUCT_PACKAGES += \
-    libaacwrapper
+# Inherit QCOM display dependencies.
+$(call inherit-product-if-exists, vendor/qcom/opensource/commonsys-intf/display/config/display-product-system.mk)
 
 # Get non-open-source specific aspects.
 $(call inherit-product-if-exists, vendor/qcom/common/wfd-legacy/wfd-legacy-vendor.mk)
