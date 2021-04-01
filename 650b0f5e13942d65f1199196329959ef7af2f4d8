@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "f7ddcaf6_4c622564",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000447
+      },
+      "writtenOn": "2021-04-01T22:40:16Z",
+      "side": 1,
+      "message": "Change the paths to reflect the other components, e.g. prefix with system/lib* and so forth. Also add the vendor libs to this since we did that with the primary WFD component",
+      "revId": "650b0f5e13942d65f1199196329959ef7af2f4d8",
+      "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
+    }
+  ]
+}
