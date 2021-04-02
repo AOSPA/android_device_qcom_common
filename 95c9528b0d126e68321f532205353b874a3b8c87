@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "45976d7b_94c9356d",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 3
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000447
+      },
+      "writtenOn": "2021-04-02T22:35:49Z",
+      "side": 1,
+      "message": "I would prefer it follow the traditional naming scheme for legacy as we\u0027ve done for wfd-legacy \u0026 media-legacy",
+      "revId": "95c9528b0d126e68321f532205353b874a3b8c87",
+      "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
+    }
+  ]
+}
