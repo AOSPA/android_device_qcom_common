@@ -16,6 +16,57 @@
       "message": "we need to double check on the English and confirm the components and their families compability",
       "revId": "3b90e8de6d945ca3167bc4967136aebf46cb73e0",
       "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "fe25f9fb_9cd7682a",
+        "filename": "README.md",
+        "patchSetId": 2
+      },
+      "lineNbr": 17,
+      "author": {
+        "id": 1000447
+      },
+      "writtenOn": "2021-04-05T23:27:06Z",
+      "side": 1,
+      "message": "3.18 is supported here",
+      "revId": "3b90e8de6d945ca3167bc4967136aebf46cb73e0",
+      "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "55618b9a_11776b9d",
+        "filename": "README.md",
+        "patchSetId": 2
+      },
+      "lineNbr": 19,
+      "author": {
+        "id": 1000447
+      },
+      "writtenOn": "2021-04-05T23:27:06Z",
+      "side": 1,
+      "message": "Not sure about 3.18 here.",
+      "revId": "3b90e8de6d945ca3167bc4967136aebf46cb73e0",
+      "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "3231bc6a_889d6cd5",
+        "filename": "README.md",
+        "patchSetId": 2
+      },
+      "lineNbr": 20,
+      "author": {
+        "id": 1000447
+      },
+      "writtenOn": "2021-04-05T23:27:06Z",
+      "side": 1,
+      "message": "NQ NFC should also support 3.18",
+      "revId": "3b90e8de6d945ca3167bc4967136aebf46cb73e0",
+      "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
     }
   ]
 }
