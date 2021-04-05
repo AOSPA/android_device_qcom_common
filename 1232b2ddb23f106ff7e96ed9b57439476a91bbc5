@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "067003c8_5d7548d0",
+        "filename": "adreno-legacy/proprietary-files.txt",
+        "patchSetId": 5
+      },
+      "lineNbr": 38,
+      "author": {
+        "id": 1000447
+      },
+      "writtenOn": "2021-04-05T23:44:31Z",
+      "side": 1,
+      "message": "Drop SDM from the component, if anything its display but its not common I don\u0027t believe between 3.18 -\u003e 4.9",
+      "revId": "1232b2ddb23f106ff7e96ed9b57439476a91bbc5",
+      "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
+    }
+  ]
+}
