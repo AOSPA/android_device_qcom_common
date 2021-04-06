@@ -3,6 +3,23 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "bbd95afc_a66d9d17",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 5
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000427
+      },
+      "writtenOn": "2021-04-06T17:35:31Z",
+      "side": 1,
+      "message": "do we want to add firmware as well?",
+      "revId": "1232b2ddb23f106ff7e96ed9b57439476a91bbc5",
+      "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "067003c8_5d7548d0",
         "filename": "adreno-legacy/proprietary-files.txt",
         "patchSetId": 5
