@@ -34,6 +34,24 @@
       "parentUuid": "067003c8_5d7548d0",
       "revId": "1232b2ddb23f106ff7e96ed9b57439476a91bbc5",
       "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "fb8d9ea4_e8dc369b",
+        "filename": "adreno-legacy/proprietary-files.txt",
+        "patchSetId": 5
+      },
+      "lineNbr": 38,
+      "author": {
+        "id": 1000427
+      },
+      "writtenOn": "2021-04-06T17:01:02Z",
+      "side": 1,
+      "message": "might be but we need more testing to make sure it\u0027s common... works on 8998/660 tho",
+      "parentUuid": "032092de_afdbd7dd",
+      "revId": "1232b2ddb23f106ff7e96ed9b57439476a91bbc5",
+      "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
     }
   ]
 }
