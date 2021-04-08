@@ -19,6 +19,10 @@ PRODUCT_PACKAGES += \
     libwfdaac \
     libwfdaac_vendor
 
+PRODUCT_PACKAGES += \
+    WfdService \
+    WfdCommon
+
 PRODUCT_BOOT_JARS += \
     WfdCommon
 
