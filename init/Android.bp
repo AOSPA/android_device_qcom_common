@@ -103,6 +103,12 @@ sh_binary {
 }
 
 sh_binary {
+    name: "init.veth_ipa_config.sh",
+    src: "init.veth_ipa_config.sh",
+    vendor: true,
+}
+
+sh_binary {
     name: "qca6234-service.sh",
     src: "qca6234-service.sh",
     vendor: true,

@@ -30,5 +30,6 @@ PRODUCT_PACKAGES += \
     init.qcom.sdio.sh \
     init.qcom.sh \
     init.recovery.qcom.rc \
+    init.veth_ipa_config.sh \
     qca6234-service.sh \
     ueventd.qcom.rc
