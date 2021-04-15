@@ -74,9 +74,12 @@ vendor/lib/libperfgluelayer.so
 vendor/lib/libperfioctl.so
 vendor/lib/libqti-iopd.so
 vendor/lib/libqti-iopd-client.so
+vendor/lib/libqti-iopd-client-vendor.so
 vendor/lib/libqti-perfd.so
 vendor/lib/libqti-perfd-client.so
+vendor/lib/libqti-perfd-client-vendor.so
 vendor/lib/libqti-util.so
+vendor/lib/libqti-util-vendor.so
 vendor/lib/libqti-utils.so
 vendor/lib/libskewknob.so
 vendor/lib/vendor.qti.hardware.iop@1.0.so
@@ -105,9 +108,12 @@ vendor/lib64/libperfioctl.so
 vendor/lib64/libprekill.so
 vendor/lib64/libqti-iopd.so
 vendor/lib64/libqti-iopd-client.so
+vendor/lib64/libqti-iopd-client-vendor.so
 vendor/lib64/libqti-perfd.so
 vendor/lib64/libqti-perfd-client.so
+vendor/lib64/libqti-perfd-client-vendor.so
 vendor/lib64/libqti-util.so
+vendor/lib64/libqti-util-vendor.so
 vendor/lib64/libqti-utils.so
 vendor/lib64/libreffeature.so
 vendor/lib64/libskewknob.so

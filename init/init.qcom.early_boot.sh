@@ -267,6 +267,8 @@ case "$target" in
                 setprop vendor.opengles.version 196608
                 setprop persist.graphics.vulkan.disable true
                 setprop vendor.gralloc.disable_ahardware_buffer 1
+                # Disable adsprpcd_sensorspd daemon
+                setprop vendor.fastrpc.disable.adsprpcd_sensorspd.daemon 1
                 ;;
             *)
                 setprop vendor.opengles.version 196608
@@ -420,6 +422,23 @@ case "$target" in
         setprop vendor.media.target_variant "_holi"
         ;;
 esac
+case "$target" in
+       "msm8937")
+          case "$soc_hwid" in
+              386|354|353|303)
+                 # enable qrtr-ns service for kernel 4.14 or above
+                 KernelVersionStr=`cat /proc/sys/kernel/osrelease`
+                 KernelVersionS=${KernelVersionStr:2:2}
+                 KernelVersionA=${KernelVersionStr:0:1}
+                 KernelVersionB=${KernelVersionS%.*}
+
+                 if [ $KernelVersionA -ge 4 ] && [ $KernelVersionB -ge 14 ]; then
+                     setprop ctl.vendor.qrtrns_enable 1
+                 fi
+                 ;;
+           esac
+           ;;
+ esac
 
 baseband=`getprop ro.baseband`
 #enable atfwd daemon all targets except sda, apq, qcs
