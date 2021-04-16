@@ -25,7 +25,9 @@ QCOM_BOARD_PLATFORMS += \
     apq8098_latv \
     atoll \
     bengal \
+    holi \
     kona \
+    lahaina \
     lito \
     mpq8092 \
     msm8226 \
@@ -86,7 +88,6 @@ MASTER_SIDE_CP_TARGET_LIST := \
     apq8098_latv \
     atoll \
     bengal \
-    holi \
     kona \
     lito \
     msm8996 \
@@ -102,7 +103,8 @@ include $(DEVICE_PATH)/utils.mk
 
 # Kernel Families
 5_4_FAMILY := \
-    holi
+    holi \
+    lahaina
 
 4_19_FAMILY := \
     bengal \
