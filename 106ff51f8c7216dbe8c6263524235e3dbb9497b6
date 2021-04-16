@@ -16,6 +16,24 @@
       "message": "some vendors do change kernel such that these are not necessarily the same values.  Google for example does.  Not sure if any others do.  Razer, Essential, and others seem to all be the same as Qualcomm\u0027s defaults.  Might want to confirm in /proc/interrupts for all the 8998 vendors we support that use the QTI perf component.",
       "revId": "106ff51f8c7216dbe8c6263524235e3dbb9497b6",
       "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "57c234b1_a216a343",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000173
+      },
+      "writtenOn": "2021-04-16T07:51:34Z",
+      "side": 1,
+      "message": "same values apply to Xiaomi MSM8998 so I guess we\u0027re good to go since no other devices are supported",
+      "parentUuid": "d0ad3ae5_9ad00f77",
+      "revId": "106ff51f8c7216dbe8c6263524235e3dbb9497b6",
+      "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
     }
   ]
 }
