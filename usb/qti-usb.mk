@@ -18,8 +18,9 @@ PRODUCT_SOONG_NAMESPACES += \
 # Inherit from the USB product definition.
 $(call inherit-product, vendor/qcom/opensource/usb/vendor_product.mk)
 
-ifneq ($(TARGET_KERNEL_VERSION), 4.19)
-PRODUCT_PACKAGES += android.hardware.usb@1.0-service
+ifneq ($(TARGET_KERNEL_VERSION)),$(filter 4.9 4.19,)
+PRODUCT_PACKAGES += \
+    android.hardware.usb@1.0-service
 endif
 
 PRODUCT_COPY_FILES += \
