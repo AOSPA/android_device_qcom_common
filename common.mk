@@ -25,7 +25,9 @@ QCOM_BOARD_PLATFORMS += \
     apq8098_latv \
     atoll \
     bengal \
+    holi \
     kona \
+    lahaina \
     lito \
     mpq8092 \
     msm8226 \
@@ -50,7 +52,9 @@ QCOM_BOARD_PLATFORMS += \
     qcs605 \
     sdm660 \
     sdm710 \
-    sdm845
+    sdm845 \
+    shima \
+    yupik
 
 # List of targets that use video hardware.
 MSM_VIDC_TARGET_LIST := \
@@ -86,7 +90,6 @@ MASTER_SIDE_CP_TARGET_LIST := \
     apq8098_latv \
     atoll \
     bengal \
-    holi \
     kona \
     lito \
     msm8996 \
@@ -102,7 +105,10 @@ include $(DEVICE_PATH)/utils.mk
 
 # Kernel Families
 5_4_FAMILY := \
-    holi
+    holi \
+    lahaina \
+    shima \
+    yupik
 
 4_19_FAMILY := \
     bengal \
