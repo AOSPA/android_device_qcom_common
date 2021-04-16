@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "6908a587_fb27d6c3",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000012
+      },
+      "writtenOn": "2021-04-16T20:24:51Z",
+      "side": 1,
+      "message": "mannar doesn\u0027t seem to be its own target.  also, qualcomm doesn\u0027t do this in device/qcom/common or device/qcom/vendor-common.  do they do it somewhere else now?",
+      "revId": "9e746e041353a26f95001848f465f78c16d2f303",
+      "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
+    }
+  ]
+}
