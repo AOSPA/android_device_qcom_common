@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "4364f08d_a73edd66",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 3
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000225
+      },
+      "writtenOn": "2021-04-20T22:46:25Z",
+      "side": 1,
+      "message": "Lineage env has some devices that set this flag to include QTI BT, making the inclusion optional should be passive to you guys, who have it in your manifest, but allows this repo to co-exist in our env.",
+      "revId": "d57c763aee3549c7b9ada566bbe99ad39ac81a5d",
+      "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
+    }
+  ]
+}
