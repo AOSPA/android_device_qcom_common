@@ -23,10 +23,7 @@ PRODUCT_BOOT_JARS += \
 # Configs
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/perf/configs/common/perf/commonresourceconfigs.xml:$(TARGET_COPY_OUT_VENDOR)/etc/perf/commonresourceconfigs.xml \
-    $(foreach file,$(wildcard $(LOCAL_PATH)/perf/configs/$(TARGET_BOARD_PLATFORM)/lm/*),$(file):$(TARGET_COPY_OUT_VENDOR)/etc/lm/$(notdir $(file))) \
-    $(foreach file,$(wildcard $(LOCAL_PATH)/perf/configs/$(TARGET_BOARD_PLATFORM)/perf/*),$(file):$(TARGET_COPY_OUT_VENDOR)/etc/perf/$(notdir $(file))) \
-    $(foreach file,$(wildcard $(LOCAL_PATH)/perf/configs/$(TARGET_BOARD_PLATFORM)/pwr/*),$(file):$(TARGET_COPY_OUT_VENDOR)/etc/pwr/$(notdir $(file))) \
-    $(foreach file,$(wildcard $(LOCAL_PATH)/perf/configs/$(TARGET_BOARD_PLATFORM)/msm_irqbalance.conf),$(file):$(TARGET_COPY_OUT_VENDOR)/etc/$(notdir $(file)))
+    $(call find-copy-subdir-files,*,$(LOCAL_PATH)/perf/configs/$(TARGET_BOARD_PLATFORM),$(TARGET_COPY_OUT_VENDOR)/etc)
 
 # Disable IOP HAL for select platforms.
 ifeq ($(call is-board-platform-in-list, msm8937 msm8953 msm8998 qcs605 sdm660 sdm710),true)
