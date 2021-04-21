@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "4ec28372_f3c4e1dd",
+        "filename": "wlan/proprietary-files.txt",
+        "patchSetId": 1
+      },
+      "lineNbr": 37,
+      "author": {
+        "id": 1000012
+      },
+      "writtenOn": "2021-04-21T15:47:23Z",
+      "side": 1,
+      "message": "lowi is typically gps, are you sure it\u0027s wifi here?",
+      "revId": "af8bfd48b68150f7f3ab365f397ee6f9e121f4c6",
+      "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
+    }
+  ]
+}
