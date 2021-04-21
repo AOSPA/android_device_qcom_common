@@ -24,7 +24,7 @@ PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.bluetooth.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.bluetooth.xml
 
 # Properties
-ifeq ($(TARGET_USE_QTI_BT_STACK),true)
+ifneq ($(TARGET_USE_QTI_BT_STACK),false)
 PRODUCT_SYSTEM_EXT_PROPERTIES += \
     ro.bluetooth.library_name=libbluetooth_qti.so
 endif
