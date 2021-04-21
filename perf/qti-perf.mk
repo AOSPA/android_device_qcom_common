@@ -44,5 +44,13 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.vendor.extension_library=libqti-perfd-client.so \
     vendor.power.pasr.enabled=true
 
+ifeq ($(call is-board-platform-in-list, lahaina),true)
+PRODUCT_PROPERTY_OVERRIDES += \
+    ro.vendor.beluga.p=0x3 \
+    ro.vendor.beluga.c=0x4800 \
+    ro.vendor.beluga.s=0x900 \
+    ro.vendor.beluga.t=0x240
+endif
+
 # Get non-open-source specific aspects
 $(call inherit-product-if-exists, vendor/qcom/common/perf/perf-vendor.mk)
