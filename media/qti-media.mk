@@ -28,7 +28,8 @@ PRODUCT_COPY_FILES += \
 # Packages
 PRODUCT_PACKAGES += \
     libgui_vendor \
-    libstagefright_softomx.vendor
+    libstagefright_softomx.vendor \
+    libstagefrighthw
 
 # Get non-open-source specific aspects.
 $(call inherit-product-if-exists, vendor/qcom/common/media/media-vendor.mk)
