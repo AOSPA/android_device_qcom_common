@@ -1,0 +1,7 @@
+vendor/bin/init.kernel.post_boot-lahaina.sh
+vendor/bin/init.kernel.post_boot.sh
+vendor/bin/init.kernel.post_boot-shima.sh
+vendor/bin/init.kernel.post_boot-yupik.sh
+vendor/bin/init.qti.kernel.sh
+vendor/bin/vendor_modprobe.sh
+vendor/etc/init/hw/init.qti.kernel.rc

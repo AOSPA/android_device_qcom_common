@@ -33,3 +33,6 @@ PRODUCT_PACKAGES += \
     init.veth_ipa_config.sh \
     qca6234-service.sh \
     ueventd.qcom.rc
+
+# Get non-open-source specific aspects.
+$(call inherit-product-if-exists, vendor/qcom/common/init/init-vendor.mk)
