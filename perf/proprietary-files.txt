@@ -95,6 +95,7 @@ vendor/lib64/hw/vendor.qti.memory.pasrmanager@1.0-impl.so
 vendor/lib64/libadaptlaunch.so
 vendor/lib64/libappclassifier.so
 vendor/lib64/libgameoptfeature.so
+vendor/lib64/libgplaf.so
 vendor/lib64/liblearningmodule.so
 vendor/lib64/liblmutils-ns.so
 vendor/lib64/libmemperfd.so
