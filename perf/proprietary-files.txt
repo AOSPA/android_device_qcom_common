@@ -67,7 +67,6 @@ vendor/etc/init/vendor.qti.psiclient@1.0-service.rc
 -vendor/etc/vintf/manifest/vendor.qti.memory.pasrmanager@1.0-service.xml
 vendor/lib/hw/vendor.qti.hardware.servicetracker@1.2-impl.so
 vendor/lib/hw/vendor.qti.memory.pasrmanager@1.0-impl.so
-vendor/lib/libmemutils.so
 vendor/lib/libpasrutils.so
 vendor/lib/libperfconfig.so
 vendor/lib/libperfgluelayer.so
@@ -99,7 +98,6 @@ vendor/lib64/libgplaf.so
 vendor/lib64/liblearningmodule.so
 vendor/lib64/liblmutils-ns.so
 vendor/lib64/libmemperfd.so
-vendor/lib64/libmemutils.so
 vendor/lib64/libmeters.so
 vendor/lib64/libmeters-ns.so
 vendor/lib64/libpasrutils.so
