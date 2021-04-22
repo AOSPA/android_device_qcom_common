@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "5ed50d34_de373d29",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 3
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000012
+      },
+      "writtenOn": "2021-04-22T13:24:24Z",
+      "side": 1,
+      "message": "shima and yupik are part of the lahaina target",
+      "revId": "12756a3da1aa15d63dd842ccf79c4e96d804e653",
+      "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
+    }
+  ]
+}
