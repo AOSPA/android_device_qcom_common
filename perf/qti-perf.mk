@@ -39,6 +39,11 @@ PRODUCT_PACKAGES += \
     libtflite \
     vendor.qti.hardware.servicetracker@1.2.vendor
 
+ifeq ($(TARGET_KERNEL_VERSION),5.4)
+PRODUCT_PACKAGES += \
+    task_profiles-qti
+endif
+
 # Properties
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.vendor.extension_library=libqti-perfd-client.so \
