@@ -14,6 +14,10 @@
 
 DEVICE_PATH := device/qcom/common
 
+ifeq ($(TARGET_BOARD_PLATFORM),)
+$(error "TARGET_BOARD_PLATFORM is not defined yet, please define in your device makefile so it's accessible to QCOM common.")
+endif
+
 # List of QCOM targets.
 MSMSTEPPE := sm6150
 TRINKET := trinket
