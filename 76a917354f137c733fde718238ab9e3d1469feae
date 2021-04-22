@@ -16,6 +16,24 @@
       "message": "are holi and lahaina the same?",
       "revId": "76a917354f137c733fde718238ab9e3d1469feae",
       "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "dae1463b_3ea22768",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000012
+      },
+      "writtenOn": "2021-04-22T13:24:54Z",
+      "side": 1,
+      "message": "Alex answered yes.",
+      "parentUuid": "5f95d12d_5a2e848d",
+      "revId": "76a917354f137c733fde718238ab9e3d1469feae",
+      "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
     }
   ]
 }
