@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "64ad8307_ee4ff313",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 4
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000012
+      },
+      "writtenOn": "2021-04-22T13:27:36Z",
+      "side": 1,
+      "message": "kill shima and yupik.  if we need those later, we can add them.",
+      "revId": "c1d4a76312093db57e3080095592bf5dd96e458b",
+      "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
+    }
+  ]
+}
