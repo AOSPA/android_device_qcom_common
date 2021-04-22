@@ -34,6 +34,24 @@
       "parentUuid": "4ec28372_f3c4e1dd",
       "revId": "af8bfd48b68150f7f3ab365f397ee6f9e121f4c6",
       "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "c7d68424_db7a508b",
+        "filename": "wlan/proprietary-files.txt",
+        "patchSetId": 1
+      },
+      "lineNbr": 37,
+      "author": {
+        "id": 1000012
+      },
+      "writtenOn": "2021-04-22T13:22:18Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "4d8e73cb_cab3eb52",
+      "revId": "af8bfd48b68150f7f3ab365f397ee6f9e121f4c6",
+      "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
     }
   ]
 }
