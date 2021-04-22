@@ -33,3 +33,15 @@ PRODUCT_PACKAGES += \
     init.veth_ipa_config.sh \
     qca6234-service.sh \
     ueventd.qcom.rc
+
+# Kernel
+ifeq ($(TARGET_KERNEL_VERSION),5.4)
+PRODUCT_COPY_FILES += \
+    $(call find-copy-subdir-files,*,$(LOCAL_PATH)/init/$(TARGET_BOARD_PLATFORM),$(TARGET_COPY_OUT_VENDOR))
+
+PRODUCT_PACKAGES += \
+    init.kernel.post_boot.sh \
+    init.qti.kernel.rc \
+    init.qti.kernel.sh \
+    vendor_modprobe.sh
+endif
