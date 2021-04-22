@@ -16,6 +16,41 @@
       "message": "are the folders and subfolders correctly copied?",
       "revId": "9876b158bd771027fc4a1869470c789e8f290a99",
       "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "eefdbb2e_e96c2675",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000447
+      },
+      "writtenOn": "2021-04-22T09:13:44Z",
+      "side": 1,
+      "message": "Yeah but likely going to wildcard this even if we cover practically all SoCs just in case",
+      "parentUuid": "8b8f588e_b4f419db",
+      "revId": "9876b158bd771027fc4a1869470c789e8f290a99",
+      "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "8b241f9f_920e9536",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000447
+      },
+      "writtenOn": "2021-04-22T09:13:44Z",
+      "side": 1,
+      "message": "Comment removed by: Alexander Koskovich; Reason: dupe comment",
+      "revId": "9876b158bd771027fc4a1869470c789e8f290a99",
+      "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
     }
   ]
 }
