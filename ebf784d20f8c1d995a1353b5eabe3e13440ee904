@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "37aeedf4_39cf78c6",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 6
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000012
+      },
+      "writtenOn": "2021-04-22T22:18:12Z",
+      "side": 1,
+      "message": "not totally sure how SoC specific this is, but we\u0027ll see.  Probably a good approach to start with this and we can revert or expand as needed.",
+      "revId": "ebf784d20f8c1d995a1353b5eabe3e13440ee904",
+      "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
+    }
+  ]
+}
