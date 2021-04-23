@@ -16,6 +16,24 @@
       "message": "why not use nproc?",
       "revId": "dff612535a04124912b9df5ca02c1342bcaa44bc",
       "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "47744671_6f2f1deb",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000447
+      },
+      "writtenOn": "2021-04-23T02:50:49Z",
+      "side": 1,
+      "message": "Just following CAF here, picked from QCOM common",
+      "parentUuid": "cb65b8cb_c065b25b",
+      "revId": "dff612535a04124912b9df5ca02c1342bcaa44bc",
+      "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
     }
   ]
 }
