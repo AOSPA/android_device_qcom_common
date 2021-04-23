@@ -29,12 +29,8 @@ vendor/lib64/libqcodec2_utils.so
 vendor/lib64/libqcodec2_v4l2codec.so
 
 # Video
-vendor/lib/libI420colorconvert.so
 vendor/lib/libfastcrc.so
-vendor/lib/libmm-color-convertor.so
 vendor/lib/libstreamparser.so
 vendor/lib/libvideooptfeature.so
 vendor/lib/libvideoutils.so
-vendor/lib64/libI420colorconvert.so
-vendor/lib64/libmm-color-convertor.so
 vendor/lib64/libvideooptfeature.so
