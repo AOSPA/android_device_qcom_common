@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "12dcdce9_4f18b81f",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000509
+      },
+      "writtenOn": "2021-04-24T11:10:28Z",
+      "side": 1,
+      "message": "Works fine for sdm845",
+      "revId": "d42c3745143615ad6b996b7b4bd64a3c9390f914",
+      "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
+    }
+  ]
+}
