@@ -16,6 +16,24 @@
       "message": "While we\u0027re at it, my OP7T is also looking for `libqc2vppfilter.so`, which also is only on 5.4",
       "revId": "ca537fa62bd7ec7dd402522b370d89b56dc6a5cb",
       "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "fb8dc312_97add535",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 3
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000447
+      },
+      "writtenOn": "2021-04-25T10:39:52Z",
+      "side": 1,
+      "message": "Don\u0027t worry about that it fails on KONA too, it\u0027s safe. CAF doesn\u0027t include it for any targets under 5.4.",
+      "parentUuid": "f40489c1_83dd25c7",
+      "revId": "ca537fa62bd7ec7dd402522b370d89b56dc6a5cb",
+      "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
     }
   ]
 }
