@@ -1,4 +1,4 @@
-# Copyright (C) 2020 Paranoid Android
+# Copyright (C) 2021 Paranoid Android
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -46,9 +46,12 @@ PRODUCT_PACKAGES += \
 $(call inherit-product, vendor/qcom/opensource/data-ipa-cfg-mgr/ipacm_vendor_product.mk)
 
 # Include QCOM WLAN makefiles.
--include device/qcom/wlan/$(TARGET_BOARD_PLATFORM)/wlan.mk
-ifeq ($(call is-board-platform-in-list,msm8998 sdm660),true)
+ifeq ($(call is-board-platform-in-list,sdm845),true)
+-include device/qcom/wlan/skunk/wlan.mk
+else ifeq ($(call is-board-platform-in-list,msm8998 sdm660),true)
 -include device/qcom/wlan/sdm660_64/wlan.mk
+else
+-include device/qcom/wlan/$(TARGET_BOARD_PLATFORM)/wlan.mk
 endif
 
 # Get non-open-source specific aspects.
