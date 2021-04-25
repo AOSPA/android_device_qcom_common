@@ -54,6 +54,8 @@ $(call inherit-product, vendor/qcom/opensource/data-ipa-cfg-mgr/ipacm_vendor_pro
 -include device/qcom/wlan/$(TARGET_BOARD_PLATFORM)/wlan.mk
 ifeq ($(call is-board-platform-in-list,msm8998 sdm660),true)
 -include device/qcom/wlan/sdm660_64/wlan.mk
+else ifeq ($(call is-board-platform-in-list,sdm845),true)
+-include device/qcom/wlan/skunk/wlan.mk
 endif
 
 # Get non-open-source specific aspects.
