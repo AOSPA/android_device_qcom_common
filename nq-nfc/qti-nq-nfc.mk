@@ -16,6 +16,8 @@
 $(call inherit-product, vendor/nxp/opensource/commonsys/packages/apps/Nfc/nfc_system_product.mk)
 $(call inherit-product, vendor/nxp/opensource/halimpl/nfc_vendor_product.mk)
 
+TARGET_USES_NQ_NFC := true
+
 # Packages
 PRODUCT_PACKAGES += \
     se_nq_extn_client \
