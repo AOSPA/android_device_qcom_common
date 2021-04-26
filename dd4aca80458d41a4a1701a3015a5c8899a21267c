@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "26be22c1_f568bbaf",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000447
+      },
+      "writtenOn": "2021-04-26T14:30:34Z",
+      "side": 1,
+      "message": "So far I think this will be used on at least ROG3 \u0026 Miatoll",
+      "revId": "dd4aca80458d41a4a1701a3015a5c8899a21267c",
+      "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
+    }
+  ]
+}
