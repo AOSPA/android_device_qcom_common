@@ -16,6 +16,24 @@
       "message": "can all devices use the aidl or is it only for newer kernels/series?",
       "revId": "6797fef321ce5f9a0ef2b8437c576bb9002f31d3",
       "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "916cda28_fcf10173",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000447
+      },
+      "writtenOn": "2021-04-27T13:05:24Z",
+      "side": 1,
+      "message": "I\u0027ve seen it used as far back as 845, so all QSSI targets and some legacy targets might be able to use it as well I believe?",
+      "parentUuid": "68ac2e00_37895313",
+      "revId": "6797fef321ce5f9a0ef2b8437c576bb9002f31d3",
+      "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
     }
   ]
 }
