@@ -20,5 +20,15 @@ include vendor/qcom/opensource/commonsys-intf/display/config/display-interfaces-
 include vendor/qcom/opensource/commonsys-intf/display/config/display-product-system.mk
 endif
 
-# Get non-open-source specific aspects
+# Permissions
+PRODUCT_COPY_FILES += \
+    frameworks/native/data/etc/android.hardware.touchscreen.multitouch.jazzhand.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.touchscreen.multitouch.jazzhand.xml
+
+# Packages
+PRODUCT_PACKAGES += \
+    libqdutils \
+    libqservice \
+    libtinyxml
+
+# Get non-open-source specific aspects.
 $(call inherit-product-if-exists, vendor/qcom/common/display/display-vendor.mk)
