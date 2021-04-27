@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "2b385d36_5cae702b",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000012
+      },
+      "writtenOn": "2021-04-27T12:48:23Z",
+      "side": 1,
+      "message": "are you sure these are generic? is max fps 60 even on devices with higher frame rates?",
+      "revId": "d1a76b3ff3099c83cef51d3855cc7fef0c19de1c",
+      "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
+    }
+  ]
+}
