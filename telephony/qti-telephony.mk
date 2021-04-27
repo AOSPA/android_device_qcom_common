@@ -31,7 +31,14 @@ PRODUCT_PACKAGES += \
 
 # Properties
 PRODUCT_SYSTEM_EXT_PROPERTIES += \
-    persist.vendor.dpm.feature=11
+    DEVICE_PROVISIONED=1 \
+    persist.vendor.cne.feature=1 \
+    persist.vendor.data.mode=concurrent \
+    persist.vendor.dpm.feature=11 \
+    ril.subscription.types=NV,RUIM \
+    ro.telephony.default_network=33,33 \
+    ro.vendor.use_data_netmgrd=true \
+    telephony.lteOnCdmaDevice=1
 
 ifeq ($(TARGET_BUILD_VARIANT),user)
 PRODUCT_PROPERTY_OVERRIDES += \
