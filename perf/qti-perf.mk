@@ -59,7 +59,8 @@ endif
 
 ifeq ($(TARGET_KERNEL_VERSION),5.4)
 PRODUCT_PROPERTY_OVERRIDES += \
-    ro.vendor.perf.scroll_opt=true
+    ro.vendor.perf.scroll_opt=true \
+    vendor.power.pasr.enabled=true
 endif
 
 # Get non-open-source specific aspects
