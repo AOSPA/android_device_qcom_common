@@ -16,6 +16,24 @@
       "message": "are you sure these are generic? is max fps 60 even on devices with higher frame rates?",
       "revId": "d1a76b3ff3099c83cef51d3855cc7fef0c19de1c",
       "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "b54dd717_8a461b10",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000447
+      },
+      "writtenOn": "2021-04-27T13:17:09Z",
+      "side": 1,
+      "message": "Yeah I\u0027m pretty sure it\u0027s generic, I\u0027ve also seen it on SM6150, it\u0027s QSSI. Yeah its 60 everywhere I\u0027ve seen.",
+      "parentUuid": "2b385d36_5cae702b",
+      "revId": "d1a76b3ff3099c83cef51d3855cc7fef0c19de1c",
+      "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
     }
   ]
 }
