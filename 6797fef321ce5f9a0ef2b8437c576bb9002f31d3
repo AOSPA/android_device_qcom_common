@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "68ac2e00_37895313",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000012
+      },
+      "writtenOn": "2021-04-27T12:50:09Z",
+      "side": 1,
+      "message": "can all devices use the aidl or is it only for newer kernels/series?",
+      "revId": "6797fef321ce5f9a0ef2b8437c576bb9002f31d3",
+      "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
+    }
+  ]
+}
