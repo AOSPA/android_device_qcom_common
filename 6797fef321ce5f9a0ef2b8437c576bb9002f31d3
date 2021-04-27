@@ -34,6 +34,24 @@
       "parentUuid": "68ac2e00_37895313",
       "revId": "6797fef321ce5f9a0ef2b8437c576bb9002f31d3",
       "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "a1a21a28_f240a509",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000447
+      },
+      "writtenOn": "2021-04-27T13:09:29Z",
+      "side": 1,
+      "message": "Have verified it works as far back as SDM450 so this is probably fine.",
+      "parentUuid": "916cda28_fcf10173",
+      "revId": "6797fef321ce5f9a0ef2b8437c576bb9002f31d3",
+      "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
     }
   ]
 }
