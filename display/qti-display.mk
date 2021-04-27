@@ -26,9 +26,11 @@ PRODUCT_COPY_FILES += \
 
 # Packages
 PRODUCT_PACKAGES += \
+    android.hardware.lights-service.qti \
     libqdutils \
     libqservice \
-    libtinyxml
+    libtinyxml \
+    lights.qcom
 
 # Get non-open-source specific aspects.
 $(call inherit-product-if-exists, vendor/qcom/common/display/display-vendor.mk)
