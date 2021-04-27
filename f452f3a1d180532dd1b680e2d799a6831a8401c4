@@ -16,6 +16,24 @@
       "message": "you didn\u0027t provide a value",
       "revId": "f452f3a1d180532dd1b680e2d799a6831a8401c4",
       "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "a951e698_004dda86",
+        "filename": "telephony/qti-telephony.mk",
+        "patchSetId": 1
+      },
+      "lineNbr": 35,
+      "author": {
+        "id": 1000447
+      },
+      "writtenOn": "2021-04-27T13:01:57Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "405dfa87_8948ac68",
+      "revId": "f452f3a1d180532dd1b680e2d799a6831a8401c4",
+      "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
     }
   ]
 }
