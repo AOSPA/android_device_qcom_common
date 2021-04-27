@@ -21,6 +21,18 @@ DEVICE_FRAMEWORK_MANIFEST_FILE += device/qcom/common/telephony/framework_manifes
 # IPACM
 $(call inherit-product, vendor/qcom/opensource/data-ipa-cfg-mgr/ipacm_vendor_product.mk)
 
+# RIL
+ENABLE_VENDOR_RIL_SERVICE := true
+
+PRODUCT_PROPERTY_OVERRIDES += \
+    persist.radio.multisim.config=dsds \
+    persist.vendor.radio.apm_sim_not_pwdn=1 \
+    persist.vendor.radio.custom_ecc=1 \
+    persist.vendor.radio.enableadvancedscan=true \
+    persist.vendor.radio.procedure_bytes=SKIP \
+    persist.vendor.radio.rat_on=combine \
+    persist.vendor.radio.sib16_support=1
+
 # Packages
 PRODUCT_PACKAGES += \
     CellBroadcastReceiver \
