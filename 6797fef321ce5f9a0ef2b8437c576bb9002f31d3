@@ -69,6 +69,24 @@
       "message": "I guess we could opt out by default if TARGET_PROVIDES_LIGHTS_HAL (or whatever the correct flag is) is enabled.",
       "revId": "6797fef321ce5f9a0ef2b8437c576bb9002f31d3",
       "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "a6e21e7b_91dd3677",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000447
+      },
+      "writtenOn": "2021-04-28T23:44:15Z",
+      "side": 1,
+      "message": "Overriding should suffice",
+      "parentUuid": "ac828f8c_d270c3a9",
+      "revId": "6797fef321ce5f9a0ef2b8437c576bb9002f31d3",
+      "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
     }
   ]
 }
