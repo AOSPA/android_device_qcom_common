@@ -12,6 +12,9 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
+PRODUCT_SOONG_NAMESPACES += \
+    device/qcom/common/wlan
+
 BOARD_WLAN_DEVICE := qcwcn
 BOARD_HOSTAPD_DRIVER := NL80211
 BOARD_HOSTAPD_PRIVATE_LIB := lib_driver_cmd_$(BOARD_WLAN_DEVICE)
@@ -41,6 +44,11 @@ PRODUCT_PACKAGES += \
     sigma_dut \
     wpa_supplicant \
     wpa_supplicant.conf
+
+ifeq ($(call is-board-platform-in-list, lahaina),true)
+PRODUCT_PACKAGES += \
+    init.vendor.wlan.rc
+endif
 
 # IPACM
 $(call inherit-product, vendor/qcom/opensource/data-ipa-cfg-mgr/ipacm_vendor_product.mk)

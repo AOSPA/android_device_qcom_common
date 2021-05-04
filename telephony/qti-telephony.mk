@@ -33,6 +33,12 @@ PRODUCT_PROPERTY_OVERRIDES += \
     persist.vendor.radio.rat_on=combine \
     persist.vendor.radio.sib16_support=1
 
+# RMNet
+-include vendor/qcom/opensource/datarmnet/datarmnet_dlkm_vendor_board.mk
+$(call inherit-product-if-exists, vendor/qcom/opensource/datarmnet/datarmnet_dlkm_vendor_product.mk)
+-include vendor/qcom/opensource/datarmnet-ext/datarmnet_ext_dlkm_vendor_board.mk
+$(call inherit-product-if-exists, vendor/qcom/opensource/datarmnet-ext/datarmnet_ext_dlkm_vendor_product.mk)
+
 # Packages
 PRODUCT_PACKAGES += \
     CellBroadcastReceiver \

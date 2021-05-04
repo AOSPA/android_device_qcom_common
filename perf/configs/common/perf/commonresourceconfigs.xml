@@ -110,7 +110,10 @@ need to be added just before the end of it's major group. -->
         <Minor OpcodeValue="0x35" Node="/proc/sys/kernel/sched_min_granularity_ns" />
         <Minor OpcodeValue="0x36" Node="/proc/sys/kernel/walt_low_latency_task_threshold" />
         <Minor OpcodeValue="0x37" Node="/dev/stune/foreground/schedtune.prefer_idle" />
-        <Minor OpcodeValue="0x38" Node="SPECIAL_NODE - sched_up_down_mig" Supported="no"/>
+        <Minor OpcodeValue="0x38" Node="/proc/sys/kernel/%s" Supported="no"/>
+        <Minor OpcodeValue="0x39" Node="/dev/stune/top-app/schedtune.colocate" />
+        <Minor OpcodeValue="0x3A" Node="/dev/cpuctl/top-app/cpu.uclamp.latency_sensitive" />
+        <Minor OpcodeValue="0x3B" Node="/dev/cpuctl/foreground/cpu.uclamp.latency_sensitive" />
     <!-- sched major end -->
 
     <!-- core hotplug major start -->
@@ -264,6 +267,11 @@ need to be added just before the end of it's major group. -->
         <Minor OpcodeValue="0xE" Node="/sys/class/devfreq/soc:qcom,cpu4-llcc-ddr-lat/mem_latency/ratio_ceil" />
         <Minor OpcodeValue="0xF" Node="/sys/class/devfreq/soc:qcom,cpu0-llcc-ddr-lat/mem_latency/stall_floor" />
         <Minor OpcodeValue="0x10" Node="/sys/class/devfreq/soc:qcom,cpu4-llcc-ddr-lat/mem_latency/stall_floor" />
+        <Minor OpcodeValue="0x11" Node="/sys/class/devfreq/18321000.qcom,devfreq-l3:qcom,cpu%d-cpu-l3-lat/max_freq" />
+        <Minor OpcodeValue="0x12" Node="/sys/class/devfreq/soc:qcom,cpu0-cpu-ddr-latfloor/min_freq" />
+        <Minor OpcodeValue="0x13" Node="/sys/class/devfreq/soc:qcom,cpu0-cpu-ddr-latfloor/max_freq" />
+        <Minor OpcodeValue="0x14" Node="/sys/class/devfreq/soc:qcom,cpu0-cpu-llcc-lat/max_freq" />
+        <Minor OpcodeValue="0x15" Node="/sys/class/devfreq/soc:qcom,cpu0-llcc-ddr-lat/max_freq" />
     <!-- memlat major end -->
 
     <!-- npu major start -->

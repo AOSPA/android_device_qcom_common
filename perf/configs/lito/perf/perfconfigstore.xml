@@ -25,7 +25,7 @@ property Name is called. -->
                Variant=bengal       -> bengal 64 bit target
     Resolution="1080p", "2560", "720p", "HD+"
     Kernel: kernel version, examples: "4.19", "5.4", etc
-    Ram: ram size in GB, examples: "1","2","3","4" (4 for target with >= 4GB of RAM as well)
+    Ram: ram size in GB, examples: "1","2","3","4","6","8","10","12" (12 for target with >= 12GB of RAM as well)
 _______________________________________________________________________________________________ -->
 
 <PerfConfigsStore>
