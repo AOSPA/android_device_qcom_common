@@ -26,12 +26,13 @@ as anyway perflock calls of these resources would fail. -->
 
         <Config MajorValue="0x1" MinorValue="0x1" Supported="no" /> <!--  toggle_l2_pc_perf -->
         <Config MajorValue="0x1" MinorValue="0x2" Node="/proc/sys/walt/sched_busy_hyst_ns" />
-
+        <Config MajorValue="0x2" MinorValue="0x0" Node="/sys/kernel/msm_performance/parameters/cpu_min_freq" /> <!-- cpu_min_freq -->
+        <Config MajorValue="0x2" MinorValue="0x1" Node="/sys/kernel/msm_performance/parameters/cpu_max_freq" /> <!-- cpu_max_freq -->
         <Config MajorValue="0x3" MinorValue="0x0" Node="/proc/sys/walt/sched_boost" />
         <Config MajorValue="0x3" MinorValue="0x3" Supported="no" /> <!-- sched_small_task -->
         <Config MajorValue="0x3" MinorValue="0x6" Node="/proc/sys/walt/sched_init_task_load" />
-        <Config MajorValue="0x3" MinorValue="0x7" Node="/proc/sys/walt/sched_upmigrate" />
-        <Config MajorValue="0x3" MinorValue="0x8" Node="/proc/sys/walt/sched_downmigrate" />
+        <Config MajorValue="0x3" MinorValue="0x7" Supported="no" /> <!-- sched_upmigrate -->
+        <Config MajorValue="0x3" MinorValue="0x8" Supported="no" /> <!-- sched_downmigrate -->
         <Config MajorValue="0x3" MinorValue="0xB" Supported="no" /> <!-- sched_spill_nr_run -->
         <Config MajorValue="0x3" MinorValue="0xC" Supported="no" /> <!-- sched_static_cpu_pwr_cost -->
         <Config MajorValue="0x3" MinorValue="0xD" Supported="no" /> <!-- sched_restrict_cluster_spill -->
@@ -49,10 +50,13 @@ as anyway perflock calls of these resources would fail. -->
         <Config MajorValue="0x3" MinorValue="0x26" Node="/proc/sys/walt/sched_window_stats_policy" />
         <Config MajorValue="0x3" MinorValue="0x27" Node="/proc/sys/walt/sched_many_wakeup_threshold" />
         <Config MajorValue="0x3" MinorValue="0x29" Node="/proc/sys/walt/sched_ravg_window_nr_ticks" />
-        <Config MajorValue="0x3" MinorValue="0x2A" Node="/proc/sys/walt/sched_prefer_spread" />
+        <Config MajorValue="0x3" MinorValue="0x2A" Supported="no" /> <!-- sched_prefer_spread -->
         <Config MajorValue="0x3" MinorValue="0x32" Node="/proc/sys/walt/walt_rtg_cfs_boost_prio" />
         <Config MajorValue="0x3" MinorValue="0x33" Node="/proc/sys/walt/sched_force_lb_enable" />
         <Config MajorValue="0x3" MinorValue="0x36" Node="/proc/sys/walt/walt_low_latency_task_threshold	" />
+        <Config MajorValue="0x3" MinorValue="0x37" Supported="no" /> <!-- Enabled till Kernel 4.19 -->
+        <Config MajorValue="0x3" MinorValue="0x38" Node="/proc/sys/walt/%s" Supported="yes"/>
+        <Config MajorValue="0x3" MinorValue="0x39" Supported="no" /> <!-- Enabled till Kernel 4.19 -->
 
         <Config MajorValue="0x6" MinorValue="0x0" Node="/sys/class/devfreq/soc:qcom,cpu-cpu-llcc-bw/min_freq" Target="taro" />
         <Config MajorValue="0x6" MinorValue="0x1" Node="/sys/class/devfreq/soc:qcom,cpu-cpu-llcc-bw/bw_hwmon/decay_rate" Target="taro" />

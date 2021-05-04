@@ -39,6 +39,8 @@ as anyway perflock calls of these resources would fail. -->
         <Config MajorValue="0x3" MinorValue="0x14" Supported="no" /> <!-- sched_enable_thread_grouping -->
         <Config MajorValue="0x3" MinorValue="0x17" Supported="no" /> <!-- sched_freq_aggr_threshold -->
         <Config MajorValue="0x3" MinorValue="0x22" Supported="no" /> <!-- sched_task_unfilter_nr_windows -->
+        <Config MajorValue="0x3" MinorValue="0x37" Supported="no" /> <!-- Enabled till Kernel 4.19 -->
+        <Config MajorValue="0x3" MinorValue="0x39" Supported="no" /> <!-- Enabled till Kernel 4.19 -->
 
         <!--All the cpubw_hmon path are now migrated to new opcodes.Hence unsupporting old ones-->
         <Config MajorValue="0x6" MinorValue="0x0" Supported="no" />
@@ -75,6 +77,7 @@ as anyway perflock calls of these resources would fail. -->
         <Config MajorValue="0xD" MinorValue="0x2" Node="/sys/class/devfreq/fd90100.qcom,cpu6-cpu-l3-lat/mem_latency/ratio_ceil" />
         <Config MajorValue="0xD" MinorValue="0x3" Node="/sys/class/devfreq/fd90100.qcom,cpu0-cpu-l3-lat/mem_latency/stall_floor" />
         <Config MajorValue="0xD" MinorValue="0x4" Node="/sys/class/devfreq/fd90100.qcom,cpu6-cpu-l3-lat/mem_latency/stall_floor" />
+        <Config MajorValue="0xD" MinorValue="0x11" Node="/sys/class/devfreq/fd90100.qcom,cpu%d-cpu-l3-lat/max_freq" />
         <Config MajorValue="0xD" MinorValue="0x5" Supported="no" />
         <Config MajorValue="0xD" MinorValue="0x6" Supported="no" />
         <Config MajorValue="0xD" MinorValue="0x7" Supported="no" />
