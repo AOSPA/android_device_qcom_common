@@ -22,7 +22,7 @@ PRODUCT_BOOT_JARS += \
 
 # Configs
 PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/perf/configs/common/perf/commonresourceconfigs.xml:$(TARGET_COPY_OUT_VENDOR)/etc/perf/commonresourceconfigs.xml \
+    $(call find-copy-subdir-files,*,$(LOCAL_PATH)/perf/configs/common,$(TARGET_COPY_OUT_VENDOR)/etc) \
     $(call find-copy-subdir-files,*,$(LOCAL_PATH)/perf/configs/$(TARGET_BOARD_PLATFORM),$(TARGET_COPY_OUT_VENDOR)/etc)
 
 # Disable IOP HAL for select platforms.

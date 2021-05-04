@@ -39,6 +39,8 @@ as anyway perflock calls of these resources would fail. -->
         <Config MajorValue="0x3" MinorValue="0x14" Supported="no" /> <!-- sched_enable_thread_grouping -->
         <Config MajorValue="0x3" MinorValue="0x17" Supported="no" /> <!-- sched_freq_aggr_threshold -->
         <Config MajorValue="0x3" MinorValue="0x22" Supported="no" /> <!-- sched_task_unfilter_nr_windows -->
+        <Config MajorValue="0x3" MinorValue="0x37" Supported="no" Kernel="5.4" /> <!-- Enabled till Kernel 4.19 -->
+        <Config MajorValue="0x3" MinorValue="0x39" Supported="no" Kernel="5.4" /> <!-- Enabled till Kernel 4.19 -->
 
         <!--All the cpubw_hmon path are now migrated to new opcodes.Hence unsupporting old ones-->
         <Config MajorValue="0x6" MinorValue="0x0" Supported="no" />

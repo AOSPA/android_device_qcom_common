@@ -34,13 +34,11 @@ vendor/bin/cfrtool
 vendor/bin/cnss-daemon
 vendor/bin/cnss_diag
 vendor/bin/hal_proxy_daemon
-vendor/bin/lowirpcd
 vendor/bin/myftm
 vendor/bin/pktlogconf
 vendor/bin/spectraltool
 vendor/bin/vendor_cmd_tool
 vendor/bin/wifilearner
-vendor/etc/init/init.vendor.wlan.rc
 vendor/etc/init/vendor.qti.hardware.wifi.wifilearner@1.0-service.rc
 vendor/lib64/libspectre.so
 vendor/lib64/vendor.qti.hardware.wifi.wifilearner@1.0.so
