@@ -31,6 +31,12 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/perf/vendor.qti.hardware.iop@2.0-service-disable.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/vendor.qti.hardware.iop@2.0-service-disable.rc
 endif
 
+# Disable the poweropt service for non 5.4 platforms.
+ifneq ($(TARGET_KERNEL_VERSION),5.4)
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/perf/poweropt-service-disable.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/poweropt-service-disable.rc
+endif
+
 # Packages
 PRODUCT_PACKAGES += \
     android.hardware.thermal@2.0 \
