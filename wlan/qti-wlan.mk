@@ -42,6 +42,11 @@ PRODUCT_PACKAGES += \
     wpa_supplicant \
     wpa_supplicant.conf
 
+ifeq ($(WIFI_HIDL_FEATURE_AWARE),false)
+PRODUCT_PACKAGES += \
+    init.aospa.wifi.rc
+endif
+
 # IPACM
 $(call inherit-product, vendor/qcom/opensource/data-ipa-cfg-mgr/ipacm_vendor_product.mk)
 
