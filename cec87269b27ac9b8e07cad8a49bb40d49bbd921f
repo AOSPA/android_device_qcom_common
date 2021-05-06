@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "45cc6e09_f231711e",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000447
+      },
+      "writtenOn": "2021-05-06T07:07:43Z",
+      "side": 1,
+      "message": "overrides: [\"android.hardware.lights-service.qti\"]",
+      "revId": "cec87269b27ac9b8e07cad8a49bb40d49bbd921f",
+      "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
+    }
+  ]
+}
