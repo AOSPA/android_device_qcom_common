@@ -1,0 +1,10 @@
+soong_namespace {
+}
+
+prebuilt_hidl_interfaces {
+    name: "hidl_embmssl_interface",
+    interfaces: [
+        "vendor.qti.hardware.embmssl@1.0::IEmbms",
+        "vendor.qti.hardware.embmssl@1.1::IEmbms",
+    ],
+}
