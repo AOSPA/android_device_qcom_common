@@ -16,6 +16,24 @@
       "message": "Is there a runtime condition that can tell whether aware is available or not? I\u0027d like the condition to be in init if possible instead of build time",
       "revId": "f345d60234e0a2b581cceb7cd5aa67b6ad041136",
       "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "aeca148c_3e5da329",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000488
+      },
+      "writtenOn": "2021-05-08T06:54:40Z",
+      "side": 1,
+      "message": "searching",
+      "parentUuid": "f24b0dfd_56e6e9ba",
+      "revId": "f345d60234e0a2b581cceb7cd5aa67b6ad041136",
+      "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
     }
   ]
 }
