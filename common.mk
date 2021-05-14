@@ -153,6 +153,10 @@ endif
 # Components
 include $(DEVICE_PATH)/components.mk
 
+# Compatibility matrix
+DEVICE_FRAMEWORK_COMPATIBILITY_MATRIX_FILE += \
+    vendor/qcom/opensource/core-utils/vendor_framework_compatibility_matrix.xml
+
 # Power
 ifneq ($(TARGET_PROVIDES_POWERHAL),true)
 $(call inherit-product-if-exists, vendor/qcom/opensource/power/power-vendor-product.mk)
