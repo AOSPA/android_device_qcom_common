@@ -150,6 +150,10 @@ else ifeq ($(call is-board-platform-in-list,$(3_18_FAMILY)),true)
 TARGET_KERNEL_VERSION ?= 3.18
 endif
 
+# Compatibility matrix
+DEVICE_FRAMEWORK_COMPATIBILITY_MATRIX_FILE += \
+    vendor/qcom/opensource/core-utils/vendor_framework_compatibility_matrix.xml
+
 # Components
 include $(DEVICE_PATH)/components.mk
 
