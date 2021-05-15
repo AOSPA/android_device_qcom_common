@@ -16,6 +16,23 @@
       "message": "No problems with sdm660",
       "revId": "832de59190dd996820281e78dd4afd55fe13dd9c",
       "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "fab223bf_36e0a8c4",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 3
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000012
+      },
+      "writtenOn": "2021-05-15T16:16:21Z",
+      "side": 1,
+      "message": "I think 710 should match 845. I see it at https://source.codeaurora.org/quic/la/device/qcom/sepolicy_vndr/tree/legacy/vendor/sdm710?h\u003dsepolicy.vndr.lnx.1.0.r14-rel\n\nalso should we use the families defined at https://github.com/AOSPA/android_device_qcom_common/blob/ruby/common.mk#L107 for this file?",
+      "revId": "832de59190dd996820281e78dd4afd55fe13dd9c",
+      "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
     }
   ]
 }
