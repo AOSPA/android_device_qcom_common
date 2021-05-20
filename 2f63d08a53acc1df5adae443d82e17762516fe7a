@@ -33,6 +33,24 @@
       "message": "this section seems to be a duplicate of the section after.  The trigger is different in the section below to make it run after init.qcom.post_boot.sh so the values take effect.",
       "revId": "2f63d08a53acc1df5adae443d82e17762516fe7a",
       "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "c06e02a7_c3c0c599",
+        "filename": "perf/init.aospa.perf.rc",
+        "patchSetId": 1
+      },
+      "lineNbr": 73,
+      "author": {
+        "id": 1000469
+      },
+      "writtenOn": "2021-05-20T16:35:28Z",
+      "side": 1,
+      "message": "That\u0027s because read_ahead is set to 512kb in post_boot script so we need to override it later. But nr_requests isn\u0027t set in post_boot script so we can do it on boot_completed.",
+      "parentUuid": "6638b3c5_81434d53",
+      "revId": "2f63d08a53acc1df5adae443d82e17762516fe7a",
+      "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
     }
   ]
 }
