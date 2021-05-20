@@ -12,6 +12,84 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
+on early-init
+    # Increase readahead to 2MiB.
+    write /sys/block/dm-0/queue/read_ahead_kb 2048
+    write /sys/block/dm-1/queue/read_ahead_kb 2048
+    write /sys/block/dm-2/queue/read_ahead_kb 2048
+    write /sys/block/dm-3/queue/read_ahead_kb 2048
+    write /sys/block/dm-4/queue/read_ahead_kb 2048
+    write /sys/block/dm-5/queue/read_ahead_kb 2048
+    write /sys/block/dm-6/queue/read_ahead_kb 2048
+    write /sys/block/dm-7/queue/read_ahead_kb 2048
+    write /sys/block/dm-8/queue/read_ahead_kb 2048
+    write /sys/block/dm-9/queue/read_ahead_kb 2048
+    write /sys/block/mmcblk0/queue/read_ahead_kb 2048
+    write /sys/block/sda/queue/read_ahead_kb 2048
+    write /sys/block/sdb/queue/read_ahead_kb 2048
+    write /sys/block/sdc/queue/read_ahead_kb 2048
+    write /sys/block/sdd/queue/read_ahead_kb 2048
+    write /sys/block/sde/queue/read_ahead_kb 2048
+    write /sys/block/sdf/queue/read_ahead_kb 2048
+
+    # Increase maximum number of I/O requests.
+    write /sys/block/dm-0/queue/nr_requests 256
+    write /sys/block/dm-1/queue/nr_requests 256
+    write /sys/block/dm-2/queue/nr_requests 256
+    write /sys/block/dm-3/queue/nr_requests 256
+    write /sys/block/dm-4/queue/nr_requests 256
+    write /sys/block/dm-5/queue/nr_requests 256
+    write /sys/block/dm-6/queue/nr_requests 256
+    write /sys/block/dm-7/queue/nr_requests 256
+    write /sys/block/dm-8/queue/nr_requests 256
+    write /sys/block/dm-9/queue/nr_requests 256
+    write /sys/block/mmcblk0/queue/nr_requests 256
+    write /sys/block/sda/queue/nr_requests 256
+    write /sys/block/sdb/queue/nr_requests 256
+    write /sys/block/sdc/queue/nr_requests 256
+    write /sys/block/sdd/queue/nr_requests 256
+    write /sys/block/sde/queue/nr_requests 256
+    write /sys/block/sdf/queue/nr_requests 256
+
+    # Disable I/O stats.
+    write /sys/block/dm-0/queue/iostats 0
+    write /sys/block/dm-1/queue/iostats 0
+    write /sys/block/dm-2/queue/iostats 0
+    write /sys/block/dm-3/queue/iostats 0
+    write /sys/block/dm-4/queue/iostats 0
+    write /sys/block/dm-5/queue/iostats 0
+    write /sys/block/dm-6/queue/iostats 0
+    write /sys/block/dm-7/queue/iostats 0
+    write /sys/block/dm-8/queue/iostats 0
+    write /sys/block/dm-9/queue/iostats 0
+    write /sys/block/mmcblk0/queue/iostats 0
+    write /sys/block/sda/queue/iostats 0
+    write /sys/block/sdb/queue/iostats 0
+    write /sys/block/sdc/queue/iostats 0
+    write /sys/block/sdd/queue/iostats 0
+    write /sys/block/sde/queue/iostats 0
+    write /sys/block/sdf/queue/iostats 0
+
+on property:sys.boot_completed=1
+    # Reset maximum I/O requests for runtime.
+    write /sys/block/dm-0/queue/nr_requests 128
+    write /sys/block/dm-1/queue/nr_requests 128
+    write /sys/block/dm-2/queue/nr_requests 128
+    write /sys/block/dm-3/queue/nr_requests 128
+    write /sys/block/dm-4/queue/nr_requests 128
+    write /sys/block/dm-5/queue/nr_requests 128
+    write /sys/block/dm-6/queue/nr_requests 128
+    write /sys/block/dm-7/queue/nr_requests 128
+    write /sys/block/dm-8/queue/nr_requests 128
+    write /sys/block/dm-9/queue/nr_requests 128
+    write /sys/block/mmcblk0/queue/nr_requests 128
+    write /sys/block/sda/queue/nr_requests 128
+    write /sys/block/sdb/queue/nr_requests 128
+    write /sys/block/sdc/queue/nr_requests 128
+    write /sys/block/sdd/queue/nr_requests 128
+    write /sys/block/sde/queue/nr_requests 128
+    write /sys/block/sdf/queue/nr_requests 128
+
 on property:vendor.post_boot.parsed=1
     # Override readahead to 128KiB.
     write /sys/block/dm-0/queue/read_ahead_kb 128
