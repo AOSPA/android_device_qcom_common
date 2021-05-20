@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "baa652e9_f5d2b87a",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000012
+      },
+      "writtenOn": "2021-05-20T15:41:27Z",
+      "side": 1,
+      "message": "I would like Alex 1 to review this.  Google has gone back and forth.  It seems that they ended up using this configuration on UFS and reverting on eMMC.\n\nHow does boot time compare with and without this change?",
+      "revId": "2f63d08a53acc1df5adae443d82e17762516fe7a",
+      "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "6638b3c5_81434d53",
+        "filename": "perf/init.aospa.perf.rc",
+        "patchSetId": 1
+      },
+      "lineNbr": 73,
+      "author": {
+        "id": 1000012
+      },
+      "writtenOn": "2021-05-20T15:41:27Z",
+      "side": 1,
+      "message": "this section seems to be a duplicate of the section after.  The trigger is different in the section below to make it run after init.qcom.post_boot.sh so the values take effect.",
+      "revId": "2f63d08a53acc1df5adae443d82e17762516fe7a",
+      "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
+    }
+  ]
+}
