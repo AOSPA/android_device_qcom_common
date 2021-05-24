@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "0d4f5ab7_0bc2188b",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 3
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000012
+      },
+      "writtenOn": "2021-05-24T02:40:08Z",
+      "side": 1,
+      "message": "looks like my comment didn\u0027t go through. I think the flag is backwards. Compared to the other places in common where it\u0027s used, this is checking for AOSP by using if value adds is true, but the other places check for CAF using that.",
+      "revId": "39a572942cb9a25be3e8fe01ff443c02775ae354",
+      "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
+    }
+  ]
+}
