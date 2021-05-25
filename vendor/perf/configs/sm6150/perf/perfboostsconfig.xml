@@ -150,7 +150,7 @@
 
        <Config
            Id="0x00001083" Enable="true" Timeout="400" Target="sdmmagpie"
-           Resources="0x40804000, 0xFFF, 0x40804100, 0xFFF, 0x40800000, 1939, 0x40800100, 1708" />
+           Resources="0x40804000, 0xFFF, 0x40804100, 0xFFF, 0x40800000, 1843, 0x40800100, 1708" />
 
     <!--Vertical Scroll boost-->
         <!-- CPUBW_MIN_FREQ resource opcode, value-->
@@ -165,7 +165,7 @@
 
         <Config
             Id="0x00001080" Type="1" Enable="true" Target="sdmmagpie"
-            Resources="0x43010000, 0x26, 0x40800000, 1324, 0x40800100, 1497, 0x40C00000, 2" />
+            Resources="0x43010000, 0x26, 0x40800000, 1324, 0x40800100, 1612, 0x40C00000, 2" />
 
     <!--Horizontal Scroll boost-->
         <!-- CPUBW_MIN_FREQ resource opcode, value-->
@@ -180,7 +180,7 @@
 
         <Config
             Id="0x00001080" Type="2" Enable="true" Target="sdmmagpie"
-            Resources="0x43010000, 0x26, 0x40800000, 1324, 0x40800100, 1324, 0x40C00000, 2" />
+            Resources="0x43010000, 0x26, 0x40800000, 1324, 0x40800100, 1612, 0x40C00000, 2" />
 
     <!--Pre-Fling boost-->
         <!-- CPUBW_MIN_FREQ resource opcode, value-->
@@ -265,7 +265,7 @@
 
         <Config
             Id="0x00001090" Enable="true" Timeout="1000" Target="sdmmagpie"
-            Resources="0x40800100, 1497, 0x4280C000, 800" />
+            Resources="0x40800100, 1612, 0x4280C000, 800" />
 
     <!--Drag boost-->
         <!-- CPUBOOST_MIN_FREQ BIG CORE resource opcode, value -->
