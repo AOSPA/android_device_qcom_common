@@ -53,6 +53,23 @@
       "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "28c9b830_e05830c6",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000062
+      },
+      "writtenOn": "2021-05-29T19:39:00Z",
+      "side": 1,
+      "message": "No, please no.\n\nFew miliseconds faster boot isn\u0027t worth it for possible conflict with other post_boot scripts (e.g., taking values during boot and restoring them later).\n\nI\u0027m fine with disabling iostats altogether. This really isn\u0027t used besides debugging and collecting statistics.",
+      "revId": "2f63d08a53acc1df5adae443d82e17762516fe7a",
+      "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "6638b3c5_81434d53",
