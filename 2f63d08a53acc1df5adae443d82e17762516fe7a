@@ -18,6 +18,23 @@
       "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "75b514f2_52908629",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000011
+      },
+      "writtenOn": "2021-05-29T17:20:18Z",
+      "side": 1,
+      "message": "There are multiple things to consider with this change:\n1. Is there an actual measurable improvement on devices running PA?\n2. iostats is kept disabled even after bootup is complete meaning this change goes beyond boot-time changes only. This change should be evaluated.",
+      "revId": "2f63d08a53acc1df5adae443d82e17762516fe7a",
+      "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "6638b3c5_81434d53",
