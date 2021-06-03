@@ -170,6 +170,8 @@ need to be added just before the end of it's major group. -->
         <Minor OpcodeValue="0xE" Node="SPECIAL_NODE - llcbw_hwmon_hyst_opt" />
         <Minor OpcodeValue="0xF" Node="/sys/class/devfreq/soc:qcom,cpu-cpu-llcc-bw/bw_hwmon/sample_ms" />
         <Minor OpcodeValue="0x10" Node="/sys/class/devfreq/soc:qcom,cpu-cpu-llcc-bw/polling_interval" />
+        <Minor OpcodeValue="0x11" Node="/sys/devices/system/cpu/bus_dcvs/LLCC/190b6400.qcom,bwmon-llcc/min_freq" />
+        <Minor OpcodeValue="0x12" Node="/sys/devices/system/cpu/bus_dcvs/LLCC/190b6400.qcom,bwmon-llcc/max_freq" />
     <!-- cpubw hwmon major end -->
 
     <!-- video major start -->
@@ -244,6 +246,9 @@ need to be added just before the end of it's major group. -->
         <Minor OpcodeValue="0xC" Node="/sys/class/devfreq/soc:qcom,cpu-llcc-ddr-bw/polling_interval" />
         <Minor OpcodeValue="0xD" Node="/sys/class/devfreq/soc:qcom,cpu-llcc-ddr-bw/bw_hwmon/sample_ms" />
         <Minor OpcodeValue="0xE" Node="/sys/class/devfreq/soc:qcom,cpu-llcc-ddr-bw/bw_hwmon/idle_mbps" />
+        <Minor OpcodeValue="0xF" Node="/sys/devices/system/cpu/bus_dcvs/DDR/19091000.qcom,bwmon-ddr/min_freq" />
+        <Minor OpcodeValue="0x10" Node="/sys/devices/system/cpu/bus_dcvs/DDR/19091000.qcom,bwmon-ddr/max_freq" />
+
 
     <!-- llcbw hwmon major end -->
 
@@ -272,6 +277,9 @@ need to be added just before the end of it's major group. -->
         <Minor OpcodeValue="0x13" Node="/sys/class/devfreq/soc:qcom,cpu0-cpu-ddr-latfloor/max_freq" />
         <Minor OpcodeValue="0x14" Node="/sys/class/devfreq/soc:qcom,cpu0-cpu-llcc-lat/max_freq" />
         <Minor OpcodeValue="0x15" Node="/sys/class/devfreq/soc:qcom,cpu0-llcc-ddr-lat/max_freq" />
+        <Minor OpcodeValue="0x16" Node="/sys/devices/system/cpu/bus_dcvs/L3/soc:qcom,memlat:l3:prime/min_freq" />
+        <Minor OpcodeValue="0x17" Node="/sys/devices/system/cpu/bus_dcvs/LLCC/soc:qcom,memlat:llcc:silver/min_freq" />
+        <Minor OpcodeValue="0x18" Node="/sys/devices/system/cpu/bus_dcvs/DDR/soc:qcom,memlat:ddr:silver/min_freq" />
     <!-- memlat major end -->
 
     <!-- npu major start -->
