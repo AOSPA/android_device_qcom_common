@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "805c85b7_83834d40",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 10
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000580
+      },
+      "writtenOn": "2021-06-07T03:53:43Z",
+      "side": 1,
+      "message": "works fine on daisy (msm8953)",
+      "revId": "b71e69f2973ae93ff790fecb9af32bf28612171c",
+      "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
+    }
+  ]
+}
