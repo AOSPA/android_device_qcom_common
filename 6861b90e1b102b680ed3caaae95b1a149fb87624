@@ -16,6 +16,23 @@
       "message": "When thinking about it, the error is useless if you put it under a guard since it would have to be defined to get past the guard. So just keep it where it is and make it a warning.",
       "revId": "6861b90e1b102b680ed3caaae95b1a149fb87624",
       "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "ead3d30d_9682b4ec",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000551
+      },
+      "writtenOn": "2021-06-10T13:45:58Z",
+      "side": 1,
+      "message": "ok on it",
+      "revId": "6861b90e1b102b680ed3caaae95b1a149fb87624",
+      "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
     }
   ]
 }
