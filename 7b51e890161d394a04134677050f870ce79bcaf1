@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "fb0b7bdd_87019d0e",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 3
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000012
+      },
+      "writtenOn": "2021-06-10T15:46:32Z",
+      "side": 1,
+      "message": "language should change to say this is only needed for qualcomm devices and components",
+      "revId": "7b51e890161d394a04134677050f870ce79bcaf1",
+      "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
+    }
+  ]
+}
