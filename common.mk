@@ -14,10 +14,6 @@
 
 DEVICE_PATH := device/qcom/common
 
-ifeq ($(TARGET_BOARD_PLATFORM),)
-$(error "TARGET_BOARD_PLATFORM is not defined yet, please define in your device makefile so it's accessible to QCOM common.")
-endif
-
 # List of QCOM targets.
 MSMSTEPPE := sm6150
 TRINKET := trinket
@@ -151,6 +147,10 @@ TARGET_KERNEL_VERSION ?= 3.18
 endif
 
 ifeq ($(call is-board-platform-in-list,$(QCOM_BOARD_PLATFORMS)),true)
+ifeq ($(TARGET_BOARD_PLATFORM),)
+$(error "TARGET_BOARD_PLATFORM is not defined yet, please define in your device makefile so it's accessible to QCOM common.")
+endif
+
 # Compatibility matrix
 DEVICE_FRAMEWORK_COMPATIBILITY_MATRIX_FILE += \
     vendor/qcom/opensource/core-utils/vendor_framework_compatibility_matrix.xml
