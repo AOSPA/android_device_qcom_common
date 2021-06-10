@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "89cd32ae_e4c3eaf8",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000012
+      },
+      "writtenOn": "2021-06-10T15:47:50Z",
+      "side": 1,
+      "message": "this is a clean way to do this as long as the functionality is needed",
+      "revId": "6bb27596e36755272cc551101016c544a5b49966",
+      "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
+    }
+  ]
+}
