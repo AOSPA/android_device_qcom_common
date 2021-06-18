@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "8e6c726c_bc2b5a87",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 12
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000465
+      },
+      "writtenOn": "2021-06-18T16:22:08Z",
+      "side": 1,
+      "message": "Works as intended and I prefer SoC over families, so it is ready to be merged from my side.",
+      "revId": "3cd81e47df553733963f11f600d1254c577a0e90",
+      "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
+    }
+  ]
+}
