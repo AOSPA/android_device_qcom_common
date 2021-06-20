@@ -70,6 +70,23 @@
       "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "b3e7c209_a619bbda",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000012
+      },
+      "writtenOn": "2021-06-20T02:31:24Z",
+      "side": 1,
+      "message": "Also, https://dumps.tadiphone.dev/dumps/google/redfin/-/blob/redfin-user-S-SPB2.210513.007-7398525-release-keys/vendor/etc/init/hw/init.sm7250.rc Google disables this in S.",
+      "revId": "2f63d08a53acc1df5adae443d82e17762516fe7a",
+      "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "6638b3c5_81434d53",
