@@ -59,7 +59,8 @@ PRODUCT_PACKAGES += \
     libsndmonitor \
     libspkrprot \
     libtinycompress \
-    libvolumelistener
+    libvolumelistener \
+    sound_trigger.primary.$(TARGET_BOARD_PLATFORM)
 
 # Permissions
 PRODUCT_COPY_FILES += \
