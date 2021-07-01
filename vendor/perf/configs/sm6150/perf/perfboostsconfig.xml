@@ -23,16 +23,17 @@
         <!-- CPUBOOST_MAX_FREQ LITTLE Core resource opcode, value-->
         <!-- CPUBOOST_MIN_FREQ BIG Core resource opcode, value-->
         <!-- CPUBOOST_MIN_FREQ LITTLE Core resource opcode, value-->
+        <!-- GPU MIN_FREQUENCY resource opcode, value-->
 
         <!-- Type="1", main launch boost of 2sec -->
         <Config
             Id="0x00001081" Type="1" Enable="true" Timeout="2000" Target="msmsteppe"
             Resources="0x40C20000, 0x28, 0x40C1C000, 0x32, 0x40804000, 0xFFF, 0x40804100, 0xFFF, 0x40800000, 0xFFF,
-                       0x40800100, 0xFFF" />
+                       0x40800100, 0xFFF, 0x4280C000, 596" />
        <Config
            Id="0x00001081" Type="1" Enable="true" Timeout="2000" Target="sdmmagpie"
            Resources="0x40C20000, 0x28, 0x40C1C000, 0x32, 0x40804000, 0xFFF, 0x40804100, 0xFFF, 0x40800000, 0xFFF,
-                      0x40800100, 0xFFF" />
+                      0x40800100, 0xFFF, 0x4280C000, 800" />
 
     <!--app lauch boost (disabling packing)-->
         <!-- POWER COLLAPSE resource opcode, value-->
@@ -158,13 +159,16 @@
         <!-- CPUBOOST_MAX_FREQ LITTLE Core resource opcode, value-->
         <!-- CPUBOOST_MIN_FREQ BIG Core resource opcode, value-->
         <!-- CPUBOOST_MIN_FREQ LITTLE Core resource opcode, value-->
+        <!-- GPU MIN_FREQUENCY resource opcode, value-->
         <Config
             Id="0x00001083" Enable="true" Timeout="400" Target="msmsteppe"
-            Resources="0x40804000, 0xFFF, 0x40804100, 0xFFF, 0x40800000, 2016, 0x40800100, 1708" />
+            Resources="0x40804000, 0xFFF, 0x40804100, 0xFFF, 0x40800000, 2016, 0x40800100, 1708,
+                       0x4280C000, 596" />
 
        <Config
            Id="0x00001083" Enable="true" Timeout="400" Target="sdmmagpie"
-           Resources="0x40804000, 0xFFF, 0x40804100, 0xFFF, 0x40800000, 1843, 0x40800100, 1708" />
+           Resources="0x40804000, 0xFFF, 0x40804100, 0xFFF, 0x40800000, 1843, 0x40800100, 1708,
+                      0x4280C000, 650" />
 
     <!--Vertical Scroll boost-->
         <!-- CPUBW_MIN_FREQ resource opcode, value-->
@@ -201,15 +205,18 @@
         <!-- CPUBOOST_MIN_FREQ BIG CORE resource opcode, value -->
         <!-- CPUBOOST_MIN_FREQ LITTLE Core resource opcode, value -->
         <!-- SCHEDBOOST resource opcode, value-->
+        <!-- GPU MIN_FREQUENCY resource opcode, value-->
 
         <!-- Type="4", Pre-Fling boost -->
         <Config
             Id="0x00001080" Type="4" Enable="true" Timeout="80" Target="msmsteppe"
-            Resources="0x43010000, 0x26, 0x40800000, 1363, 0x40800100, 1363, 0x40C00000, 2" />
+            Resources="0x43010000, 0x26, 0x40800000, 1363, 0x40800100, 1363, 0x40C00000, 2,
+                       0x4280C000, 596" />
 
         <Config
             Id="0x00001080" Type="4" Enable="true" Timeout="80" Target="sdmmagpie"
-            Resources="0x43010000, 0x26, 0x40800000, 1324, 0x40800100, 1324, 0x40C00000, 2" />
+            Resources="0x43010000, 0x26, 0x40800000, 1324, 0x40800100, 1324, 0x40C00000, 2,
+                       0x4280C000, 565" />
 
     <!--MTP boost-->
         <!-- SCHEDBOOST resource opcode, value-->
