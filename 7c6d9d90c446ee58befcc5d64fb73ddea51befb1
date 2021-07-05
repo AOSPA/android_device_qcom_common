@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "c4a54684_10747e19",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000447
+      },
+      "writtenOn": "2021-07-05T19:33:41Z",
+      "side": 1,
+      "message": "Don\u0027t edit upstream overlays with new additions from us",
+      "revId": "7c6d9d90c446ee58befcc5d64fb73ddea51befb1",
+      "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
+    }
+  ]
+}
