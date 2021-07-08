@@ -12,7 +12,7 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-DEVICE_PATH := device/qcom/common
+QCOM_COMMON_PATH := device/qcom/common
 
 ifeq ($(TARGET_BOARD_PLATFORM),)
 $(error "TARGET_BOARD_PLATFORM is not defined yet, please define in your device makefile so it's accessible to QCOM common.")
@@ -103,7 +103,7 @@ MASTER_SIDE_CP_TARGET_LIST := \
     sdm845
 
 # Include QCOM board utilities.
-include $(DEVICE_PATH)/utils.mk
+include $(QCOM_COMMON_PATH)/utils.mk
 
 # Kernel Families
 5_4_FAMILY := \
@@ -158,7 +158,7 @@ DEVICE_FRAMEWORK_COMPATIBILITY_MATRIX_FILE += \
 endif
 
 # Components
-include $(DEVICE_PATH)/components.mk
+include $(QCOM_COMMON_PATH)/components.mk
 
 # Power
 ifneq ($(TARGET_PROVIDES_POWERHAL),true)
@@ -167,12 +167,12 @@ endif
 
 # Public Libraries
 PRODUCT_COPY_FILES += \
-    $(DEVICE_PATH)/public.libraries.system_ext-qti.txt:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/public.libraries-qti.txt
+    $(QCOM_COMMON_PATH)/public.libraries.system_ext-qti.txt:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/public.libraries-qti.txt
 
 # SECCOMP Extensions
 PRODUCT_COPY_FILES += \
-    $(DEVICE_PATH)/seccomp/codec2.software.ext.policy:$(TARGET_COPY_OUT_VENDOR)/etc/seccomp_policy/codec2.software.ext.policy \
-    $(DEVICE_PATH)/seccomp/codec2.vendor.ext.policy:$(TARGET_COPY_OUT_VENDOR)/etc/seccomp_policy/codec2.vendor.ext.policy \
-    $(DEVICE_PATH)/seccomp/mediacodec-seccomp.policy:$(TARGET_COPY_OUT_VENDOR)/etc/seccomp_policy/mediacodec.policy \
-    $(DEVICE_PATH)/seccomp/mediaextractor-seccomp.policy:$(TARGET_COPY_OUT_VENDOR)/etc/seccomp_policy/mediaextractor.policy
+    $(QCOM_COMMON_PATH)/seccomp/codec2.software.ext.policy:$(TARGET_COPY_OUT_VENDOR)/etc/seccomp_policy/codec2.software.ext.policy \
+    $(QCOM_COMMON_PATH)/seccomp/codec2.vendor.ext.policy:$(TARGET_COPY_OUT_VENDOR)/etc/seccomp_policy/codec2.vendor.ext.policy \
+    $(QCOM_COMMON_PATH)/seccomp/mediacodec-seccomp.policy:$(TARGET_COPY_OUT_VENDOR)/etc/seccomp_policy/mediacodec.policy \
+    $(QCOM_COMMON_PATH)/seccomp/mediaextractor-seccomp.policy:$(TARGET_COPY_OUT_VENDOR)/etc/seccomp_policy/mediaextractor.policy
 endif
