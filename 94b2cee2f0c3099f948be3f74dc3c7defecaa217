@@ -16,6 +16,24 @@
       "message": "SEPolicy exists for these?\n\nhttps://source.codeaurora.org/quic/la/device/qcom/sepolicy_vndr/tree/generic/vendor/common/property_contexts?h\u003dLA.UM.9.14.r1-16300-LAHAINA.0#n80",
       "revId": "94b2cee2f0c3099f948be3f74dc3c7defecaa217",
       "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "c4357cc4_7bdeb2a2",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000488
+      },
+      "writtenOn": "2021-07-18T19:40:10Z",
+      "side": 1,
+      "message": "for some reason, these props fail to be set. I think its a good move to take it in system_ext, oneplus does this too.",
+      "parentUuid": "833603fe_4b97e0d2",
+      "revId": "94b2cee2f0c3099f948be3f74dc3c7defecaa217",
+      "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
     }
   ]
 }
