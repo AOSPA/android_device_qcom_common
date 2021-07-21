@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "2b0a3b79_a6daaf6a",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000447
+      },
+      "writtenOn": "2021-07-21T05:27:06Z",
+      "side": 1,
+      "message": "Library hasn\u0027t been built since 4.4, not used on any modern platforms so the commit message is misleading.\n\nifeq ($(call is-board-platform-in-list,msm8909 msm8953 msm8937 msm8952 msm8976 msm8996 msm8998 sdm660),true)",
+      "revId": "fb92f010a27f0223807cc3ab08005ba1e03dfe75",
+      "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
+    }
+  ]
+}
