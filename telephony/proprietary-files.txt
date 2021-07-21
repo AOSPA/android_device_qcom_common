@@ -135,6 +135,7 @@ system_ext/lib64/libembmssqlite.so
 system_ext/lib64/libembmstinyxml.so
 system_ext/lib64/libimscamera_jni.so
 system_ext/lib64/libimsmedia_jni.so
+system_ext/lib64/lib-imscamera.so
 system_ext/lib64/lib-imsvideocodec.so
 system_ext/lib64/lib-imsvtextutils.so
 system_ext/lib64/lib-imsvt.so
