@@ -16,6 +16,23 @@
       "message": "Library hasn\u0027t been built since 4.4, not used on any modern platforms so the commit message is misleading.\n\nifeq ($(call is-board-platform-in-list,msm8909 msm8953 msm8937 msm8952 msm8976 msm8996 msm8998 sdm660),true)",
       "revId": "fb92f010a27f0223807cc3ab08005ba1e03dfe75",
       "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "4a8809f1_e34b2d3d",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000702
+      },
+      "writtenOn": "2021-07-21T07:40:24Z",
+      "side": 1,
+      "message": "Without this lib, cannot access camera while calling someone (only for video over LTE and native video call)\n\nOne Indian guy told me that his camera not turing on, then I sent this blob and his camera is on\n\nI am aware of bad commit message but this is needed for ims video call. \n\nAlso I don\u0027t have these video calling feature on my career or in my country, So idk what the actual cause",
+      "revId": "fb92f010a27f0223807cc3ab08005ba1e03dfe75",
+      "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
     }
   ]
 }
