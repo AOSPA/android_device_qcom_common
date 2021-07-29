@@ -59,5 +59,18 @@ property Name is called. -->
                 <!-- AOSPA Edit: Enable Performance mode for atoll targets -->
                 <Prop Name="vendor.perf.performancemode.support" Value="true" />
 
+                <!--AOSPA Edit: App compaction props from lahaina  -->
+                <Prop Name="vendor.appcompact.enable_app_compact" Value="true" />
+                <Prop Name="vendor.appcompact.full_compact_type"  Value="2" />
+                <Prop Name="vendor.appcompact.some_compact_type"  Value="4" />
+                <Prop Name="vendor.appcompact.compact_throttle_somesome" Value="5000" />
+                <Prop Name="vendor.appcompact.compact_throttle_somefull" Value="10000" />
+                <Prop Name="vendor.appcompact.compact_throttle_fullsome" Value="500" />
+                <Prop Name="vendor.appcompact.compact_throttle_fullfull" Value="10000" />
+                <Prop Name="vendor.appcompact.compact_throttle_bfgs" Value="600000" />
+                <Prop Name="vendor.appcompact.compact_throttle_persistent" Value="600000" />
+                <Prop Name="vendor.appcompact.rss_throttle_kb" Value="12000" />
+                <Prop Name="vendor.appcompact.delta_rss_throttle_kb" Value="8000" />
+
     </PerfConfigs>
 </PerfConfigsStore>
