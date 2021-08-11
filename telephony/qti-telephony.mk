@@ -15,11 +15,15 @@
 PRODUCT_SOONG_NAMESPACES += \
     device/qcom/common/telephony
 
+# APN List
+PRODUCT_COPY_FILES += \
+    $(QCOM_COMMON_PATH)/telephony/apns-conf.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/apns-conf.xml \
+
 # Data Services
 $(call inherit-product, vendor/qcom/opensource/dataservices/dataservices_vendor_product.mk)
 
 # HIDL
-DEVICE_FRAMEWORK_MANIFEST_FILE += device/qcom/common/telephony/framework_manifest.xml
+DEVICE_FRAMEWORK_MANIFEST_FILE += $(QCOM_COMMON_PATH)/telephony/framework_manifest.xml
 
 # IPACM
 $(call inherit-product, vendor/qcom/opensource/data-ipa-cfg-mgr/ipacm_vendor_product.mk)
@@ -42,11 +46,32 @@ PRODUCT_PACKAGES += \
     android.hardware.radio@1.5 \
     android.hardware.radio.config@1.2 \
     android.hardware.radio.deprecated@1.0 \
-    libjson
+    ims-ext-common \
+    ims_ext_common.xml \
+    libjson \
+    Stk \
+    tcmiface \
+    telephony-ext \
+    qti-telephony-hidl-wrapper \
+    qti_telephony_hidl_wrapper.xml \
+    qti-telephony-utils \
+    qti_telephony_utils.xml
+
+PRODUCT_BOOT_JARS += \
+    tcmiface \
+    telephony-ext
+
+# Permissions
+PRODUCT_COPY_FILES += \
+    frameworks/native/data/etc/android.hardware.telephony.gsm.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.telephony.gsm.xml \
+    frameworks/native/data/etc/android.hardware.telephony.cdma.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.telephony.cdma.xml \
+    frameworks/native/data/etc/android.hardware.telephony.ims.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.telephony.ims.xml
 
 # Properties
 PRODUCT_SYSTEM_EXT_PROPERTIES += \
     DEVICE_PROVISIONED=1 \
+    net.tethering.noprovisioning=true \
+    persist.sys.fflag.override.settings_network_and_internet_v2=true \
     persist.vendor.cne.feature=1 \
     persist.vendor.data.mode=concurrent \
     persist.vendor.dpm.feature=11 \
@@ -62,6 +87,14 @@ PRODUCT_PROPERTY_OVERRIDES += \
     persist.vendor.ims.disableIMSLogs=1 \
     persist.vendor.ims.disableQXDMLogs=1
 endif
+
+# Sensitive Phone Numbers list
+PRODUCT_COPY_FILES += \
+    $(QCOM_COMMON_PATH)/telephony/sensitive_pn.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/sensitive_pn.xml
+
+# Sounds
+PRODUCT_PRODUCT_PROPERTIES += \
+    ro.config.ringtone=Leaps_and_bounds.ogg
 
 # Get non-open-source specific aspects.
 $(call inherit-product-if-exists, vendor/qcom/common/telephony/telephony-vendor.mk)
