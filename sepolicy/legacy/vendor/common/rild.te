@@ -80,7 +80,7 @@ add_hwservice(rild, hal_iwlan_hwservice)
 add_hwservice(rild, hal_dataconnection_hwservice)
 hal_server_domain(rild, hal_dataconnection_qti)
 
-get_prop(rild, exported3_radio_prop)
+get_prop(rild, radio_control_prop)
 set_prop(rild, vendor_xlat_prop)
 get_prop(rild, vendor_rild_libpath_prop)
 get_prop(rild, vendor_dataqdp_prop)

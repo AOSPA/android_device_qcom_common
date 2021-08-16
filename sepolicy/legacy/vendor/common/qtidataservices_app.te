@@ -32,7 +32,7 @@ add_hwservice(qtidataservices_app, hal_cacert_hwservice)
 hwbinder_use(qtidataservices_app)
 
 get_prop(qtidataservices_app, cnd_vendor_prop)
-set_prop(qtidataservices_app, exported_radio_prop)
+set_prop(qtidataservices_app, telephony_status_prop)
 
 allow qtidataservices_app { app_api_service activity_service }:service_manager find;
 allow qtidataservices_app self:qipcrtr_socket create_socket_perms_no_ioctl;

@@ -125,7 +125,7 @@ set_prop(qti_init_shell, reschedule_service_prop)
 #Needed for setting hvdcp properties from post_boot
 set_prop(qti_init_shell, hvdcp_opti_prop)
 
-get_prop(qti_init_shell, exported3_radio_prop)
+get_prop(qti_init_shell, radio_control_prop)
 set_prop(qti_init_shell, vendor_gpu_prop)
 
 allow qti_init_shell efs_boot_dev:blk_file r_file_perms;
