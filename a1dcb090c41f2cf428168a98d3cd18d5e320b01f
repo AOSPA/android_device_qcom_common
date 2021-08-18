@@ -16,6 +16,23 @@
       "message": "Wouldn\u0027t this break other chipsets if we ever were to support these?\nThe bare qti-telephony wrappers are required for the device to boot if I can recall correctly.",
       "revId": "a1dcb090c41f2cf428168a98d3cd18d5e320b01f",
       "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "71be3089_ca3c12f5",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000551
+      },
+      "writtenOn": "2021-08-18T16:25:41Z",
+      "side": 1,
+      "message": "My statement being - keep the bare Qualcomm necessities in vendor/pa.",
+      "revId": "a1dcb090c41f2cf428168a98d3cd18d5e320b01f",
+      "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
     }
   ]
 }
