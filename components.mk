@@ -14,12 +14,14 @@
 
 ifeq ($(TARGET_COMMON_QTI_COMPONENTS), all)
 TARGET_COMMON_QTI_COMPONENTS := \
+    adreno \
     audio \
     av \
     bt \
     display \
     gps \
     init \
+    media \
     nq-nfc \
     overlay \
     perf \
@@ -29,17 +31,6 @@ TARGET_COMMON_QTI_COMPONENTS := \
     wfd \
     wlan
 
-ifeq ($(call is-board-platform-in-list,$(5_4_FAMILY)),true)
-TARGET_COMMON_QTI_COMPONENTS += media
-else
-TARGET_COMMON_QTI_COMPONENTS += media-legacy
-endif
-
-ifneq (,$(filter true, $(call is-board-platform-in-list,$(3_18_FAMILY) $(4_4_FAMILY))))
-TARGET_COMMON_QTI_COMPONENTS += adreno-legacy
-else
-TARGET_COMMON_QTI_COMPONENTS += adreno
-endif
 endif
 
 # QTI Common Components
@@ -79,16 +70,6 @@ ifneq (,$(filter vibrator, $(TARGET_COMMON_QTI_COMPONENTS)))
 include $(QCOM_COMMON_PATH)/vibrator/qti-vibrator.mk
 endif
 
-# >= SM8350
-ifneq (,$(filter media, $(TARGET_COMMON_QTI_COMPONENTS)))
-include $(QCOM_COMMON_PATH)/media/qti-media.mk
-endif
-
-# <= SM8250
-ifneq (,$(filter media-legacy, $(TARGET_COMMON_QTI_COMPONENTS)))
-include $(QCOM_COMMON_PATH)/media-legacy/qti-media-legacy.mk
-endif
-
 # >= SDM845
 ifneq (,$(filter adreno, $(TARGET_COMMON_QTI_COMPONENTS)))
 include $(QCOM_COMMON_PATH)/adreno/qti-adreno.mk
@@ -102,6 +83,11 @@ ifneq (,$(filter display, $(TARGET_COMMON_QTI_COMPONENTS)))
 include $(QCOM_COMMON_PATH)/display/qti-display.mk
 endif
 
+# >= SM8350
+ifneq (,$(filter media, $(TARGET_COMMON_QTI_COMPONENTS)))
+include $(QCOM_COMMON_PATH)/media/qti-media.mk
+endif
+
 ifneq (,$(filter nq-nfc, $(TARGET_COMMON_QTI_COMPONENTS)))
 include $(QCOM_COMMON_PATH)/nq-nfc/qti-nq-nfc.mk
 endif
@@ -112,13 +98,4 @@ endif
 
 ifneq (,$(filter wlan, $(TARGET_COMMON_QTI_COMPONENTS)))
 include $(QCOM_COMMON_PATH)/wlan/qti-wlan.mk
-endif
-
-# <= MSM8998
-ifneq (,$(filter wfd-legacy, $(TARGET_COMMON_QTI_COMPONENTS)))
-include $(QCOM_COMMON_PATH)/wfd-legacy/qti-wfd-legacy.mk
-endif
-
-ifneq (,$(filter adreno-legacy, $(TARGET_COMMON_QTI_COMPONENTS)))
-include $(QCOM_COMMON_PATH)/adreno-legacy/qti-adreno-legacy.mk
 endif

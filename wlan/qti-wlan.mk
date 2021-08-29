@@ -63,6 +63,3 @@ else ifeq ($(call is-board-platform-in-list,sm6150),true)
 else
 -include device/qcom/wlan/$(TARGET_BOARD_PLATFORM)/wlan.mk
 endif
-
-# Get non-open-source specific aspects.
-$(call inherit-product-if-exists, vendor/qcom/common/wlan/wlan-vendor.mk)

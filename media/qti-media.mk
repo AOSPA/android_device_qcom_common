@@ -27,15 +27,14 @@ PRODUCT_COPY_FILES += \
 
 # Packages
 PRODUCT_PACKAGES += \
+    libcodec2_hidl@1.0.vendor \
+    libcodec2_vndk.vendor \
     libgui_vendor \
-    libstagefright_softomx.vendor \
-    libstagefrighthw
+    libstagefrighthw \
+    libstagefright_softomx.vendor
 
 # Properties
 PRODUCT_SYSTEM_EXT_PROPERTIES += \
     media.settings.xml=/vendor/etc/media_profiles_vendor.xml \
     media.stagefright.thumbnail.prefer_hw_codecs=true \
     ro.media.recorder-max-base-layer-fps=60
-
-# Get non-open-source specific aspects.
-$(call inherit-product-if-exists, vendor/qcom/common/media/media-vendor.mk)
