@@ -20,6 +20,8 @@ INSTALLED_BOOTIMAGE_TARGET := $(BUILT_BOOTIMAGE_TARGET)
 ifeq ($(PRODUCT_BUILD_RAMDISK_IMAGE),true)
 INSTALLED_RAMDISK_TARGET := $(PRODUCT_OUT)/ramdisk.img
 endif
+endif
+
 ifeq ($(PRODUCT_BUILD_SYSTEM_IMAGE),true)
 INSTALLED_SYSTEMIMAGE := $(PRODUCT_OUT)/system.img
 endif
@@ -33,13 +35,11 @@ INSTALLED_RECOVERYIMAGE_TARGET :=
 endif
 recovery_ramdisk := $(PRODUCT_OUT)/ramdisk-recovery.img
 INSTALLED_USBIMAGE_TARGET := $(PRODUCT_OUT)/usbdisk.img
-endif
 
 #----------------------------------------------------------------------
 # Generate persist image (persist.img)
 #----------------------------------------------------------------------
 ifneq ($(strip $(BOARD_PERSISTIMAGE_PARTITION_SIZE)),)
-ifneq ($(strip $(TARGET_NO_KERNEL)),true)
 
 TARGET_OUT_PERSIST := $(PRODUCT_OUT)/persist
 
@@ -67,7 +67,6 @@ droidcore-unbundled: $(INSTALLED_PERSISTIMAGE_TARGET)
 .PHONY: persistimage
 persistimage: $(INSTALLED_PERSISTIMAGE_TARGET)
 
-endif
 endif
 
 #----------------------------------------------------------------------
