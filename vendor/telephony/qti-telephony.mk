@@ -38,13 +38,17 @@ PRODUCT_PACKAGES += \
     android.hardware.wifi.hostapd@1.0.vendor \
     android.system.net.netd@1.1.vendor
 
+ifneq (,$(filter 3.18 4.4 4.9 4.14 4.19 5.4, $(TARGET_KERNEL_VERSION)))
+PRODUCT_VENDOR_PROPERTIES += \
+    persist.vendor.radio.rat_on=combine
+endif
+
 PRODUCT_VENDOR_PROPERTIES += \
     persist.radio.multisim.config=dsds \
     persist.vendor.radio.apm_sim_not_pwdn=1 \
     persist.vendor.radio.custom_ecc=1 \
     persist.vendor.radio.enableadvancedscan=true \
     persist.vendor.radio.procedure_bytes=SKIP \
-    persist.vendor.radio.rat_on=combine \
     persist.vendor.radio.sib16_support=1
 
 ifeq ($(TARGET_BOARD_PLATFORM), holi)
