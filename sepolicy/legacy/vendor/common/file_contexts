@@ -765,6 +765,9 @@
 #Light AIDL HAL
 /(vendor|system/vendor)/bin/hw/android\.hardware\.lights-service\.qti   u:object_r:hal_light_default_exec:s0
 
+#Memtrack AIDL HAL
+/(vendor|system/vendor)/bin/hw/vendor\.qti.hardware\.memtrack-service   u:object_r:hal_memtrack_default_exec:s0
+
 #wifilearner daemon
 /(vendor|system/vendor)/bin/wifilearner    u:object_r:wifilearnersvc_exec:s0
 
