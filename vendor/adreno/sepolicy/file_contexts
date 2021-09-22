@@ -1,0 +1,4 @@
+# Graphics
+/vendor/lib(64)?/libgpudataproducer\.so                     u:object_r:same_process_hal_file:s0
+/vendor/lib(64)?/egl/libq3dtools_esx\.so                    u:object_r:same_process_hal_file:s0
+/vendor/lib(64)?/egl/libVkLayer_ADRENO_qprofiler\.so        u:object_r:same_process_hal_file:s0

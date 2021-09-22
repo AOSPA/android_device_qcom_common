@@ -1,4 +1,4 @@
-# Copyright (C) 2021 Paranoid Android
+# Copyright (C) 2022 Paranoid Android
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -26,6 +26,9 @@ PRODUCT_VENDOR_PROPERTIES += \
     ro.hardware.egl=adreno \
     ro.hardware.vulkan=adreno \
     ro.opengles.version=196610
+
+# Sepolicy
+BOARD_VENDOR_SEPOLICY_DIRS += $(QCOM_COMMON_PATH)/vendor/adreno/sepolicy/
 
 # Get non-open-source specific aspects.
 $(call inherit-product, vendor/qcom/common/vendor/adreno/adreno-vendor.mk)
