@@ -16,6 +16,23 @@
       "message": "I think we should keep the adreno-legacy or just rename it to adreno-5xx",
       "revId": "4fca667220d50ab86dc34dad66758a48f1662d56",
       "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "48f93962_8604c60b",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000173
+      },
+      "writtenOn": "2021-10-03T09:46:17Z",
+      "side": 1,
+      "message": "We use adreno-legacy aswell as media-legacy. Don\u0027t see the reason we should ditch it. About the wfd-legacy, don\u0027t remember if we\u0027ve finished fixing it",
+      "revId": "4fca667220d50ab86dc34dad66758a48f1662d56",
+      "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
     }
   ]
 }
