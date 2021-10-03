@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "58233119_cb5354b8",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000465
+      },
+      "writtenOn": "2021-10-03T08:18:34Z",
+      "side": 1,
+      "message": "I think we should keep the adreno-legacy or just rename it to adreno-5xx",
+      "revId": "4fca667220d50ab86dc34dad66758a48f1662d56",
+      "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
+    }
+  ]
+}
