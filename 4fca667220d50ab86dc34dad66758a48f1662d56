@@ -33,6 +33,24 @@
       "message": "We use adreno-legacy aswell as media-legacy. Don\u0027t see the reason we should ditch it. About the wfd-legacy, don\u0027t remember if we\u0027ve finished fixing it",
       "revId": "4fca667220d50ab86dc34dad66758a48f1662d56",
       "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "bd57fe89_553ce7a0",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000488
+      },
+      "writtenOn": "2021-10-04T17:18:40Z",
+      "side": 1,
+      "message": "in my opinion, what i feel is that some vendor blobs (leaving adreno aside) could be specifically compiled for a device. I don\u0027t really think mixing stock and BSP blobs is a good idea anyway. Either we make aospa devices used pure BSP blobs so that we can still deliver a bugless firmware or we don\u0027t make it common",
+      "parentUuid": "48f93962_8604c60b",
+      "revId": "4fca667220d50ab86dc34dad66758a48f1662d56",
+      "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
     }
   ]
 }
