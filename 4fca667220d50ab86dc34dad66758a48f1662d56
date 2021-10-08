@@ -51,6 +51,23 @@
       "parentUuid": "48f93962_8604c60b",
       "revId": "4fca667220d50ab86dc34dad66758a48f1662d56",
       "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "178ae8b6_95d69172",
+        "filename": "BoardConfigQcom.mk",
+        "patchSetId": 1
+      },
+      "lineNbr": 23,
+      "author": {
+        "id": 1000012
+      },
+      "writtenOn": "2021-10-08T14:36:14Z",
+      "side": 1,
+      "message": "is indentation not a thing? I never know",
+      "revId": "4fca667220d50ab86dc34dad66758a48f1662d56",
+      "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
     }
   ]
 }
