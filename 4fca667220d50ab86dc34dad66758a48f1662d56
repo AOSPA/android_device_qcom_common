@@ -90,6 +90,24 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "e50ba22d_9377426a",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000173
+      },
+      "writtenOn": "2021-10-08T15:15:57Z",
+      "side": 1,
+      "message": "Although I really agree we should do this \"we make aospa devices used pure BSP blobs so that we can still deliver a bugless firmware\". This is the way we should work and guarantee solid stable builds, with all the benefits that having pure BSP blobs bring",
+      "parentUuid": "f987461f_a9165ebd",
+      "revId": "4fca667220d50ab86dc34dad66758a48f1662d56",
+      "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "178ae8b6_95d69172",
         "filename": "BoardConfigQcom.mk",
         "patchSetId": 1
