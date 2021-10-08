@@ -86,6 +86,23 @@
       "message": "is indentation not a thing? I never know",
       "revId": "4fca667220d50ab86dc34dad66758a48f1662d56",
       "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "37af637d_c8cadcf2",
+        "filename": "media/qti-media.mk",
+        "patchSetId": 1
+      },
+      "lineNbr": 41,
+      "author": {
+        "id": 1000012
+      },
+      "writtenOn": "2021-10-08T14:37:59Z",
+      "side": 1,
+      "message": "even when there\u0027s no blobs, it\u0027s probably good to keep this just in case",
+      "revId": "4fca667220d50ab86dc34dad66758a48f1662d56",
+      "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
     }
   ]
 }
