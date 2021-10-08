@@ -55,6 +55,24 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "f987461f_a9165ebd",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000012
+      },
+      "writtenOn": "2021-10-08T14:37:13Z",
+      "side": 1,
+      "message": "I disagree with this. Adreno blobs are very compatible. Qualcomm even delivers the same ones to multiple devices through the play store and used to have previews on Qualcomm Developer Network.",
+      "parentUuid": "bd57fe89_553ce7a0",
+      "revId": "4fca667220d50ab86dc34dad66758a48f1662d56",
+      "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "178ae8b6_95d69172",
         "filename": "BoardConfigQcom.mk",
         "patchSetId": 1
