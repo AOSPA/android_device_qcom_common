@@ -108,6 +108,24 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "3ebc324d_89c36aff",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000488
+      },
+      "writtenOn": "2021-10-09T09:23:36Z",
+      "side": 1,
+      "message": "@jake i would rather just keep adreno and media, for now, but WFD is still a no from my side.",
+      "parentUuid": "e50ba22d_9377426a",
+      "revId": "4fca667220d50ab86dc34dad66758a48f1662d56",
+      "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "178ae8b6_95d69172",
         "filename": "BoardConfigQcom.mk",
         "patchSetId": 1
