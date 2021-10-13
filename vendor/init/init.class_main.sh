@@ -40,6 +40,8 @@ case "$baseband" in
     setprop ro.vendor.radio.noril yes
     stop vendor.ril-daemon
     stop vendor.qcrild
+    stop vendor.qcrild2
+    stop vendor.qcrild3
 esac
 
 case "$baseband" in
