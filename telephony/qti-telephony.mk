@@ -46,6 +46,10 @@ PRODUCT_PACKAGES += \
     android.hardware.radio@1.5 \
     android.hardware.radio.config@1.2 \
     android.hardware.radio.deprecated@1.0 \
+    extphonelib \
+    extphonelib-product \
+    extphonelib.xml \
+    extphonelib_product.xml \
     ims-ext-common \
     ims_ext_common.xml \
     libjson \
