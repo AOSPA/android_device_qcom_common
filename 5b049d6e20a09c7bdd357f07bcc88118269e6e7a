@@ -16,6 +16,24 @@
       "message": "would be a good idea to add the hardware/interfaces HIDL entries here, add it in this ps pls",
       "revId": "5b049d6e20a09c7bdd357f07bcc88118269e6e7a",
       "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "6ce4a387_f0199b0a",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 3
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000488
+      },
+      "writtenOn": "2021-10-23T20:49:50Z",
+      "side": 1,
+      "message": "or wait, in that case, maybe we could just create a makefile in vendor/aospa and specify common packages that needs to be built for every device in (Not really the QCOM stuff, but everything in general)",
+      "parentUuid": "20a18f88_d873b246",
+      "revId": "5b049d6e20a09c7bdd357f07bcc88118269e6e7a",
+      "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
     }
   ]
 }
