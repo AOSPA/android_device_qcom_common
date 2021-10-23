@@ -16,6 +16,24 @@
       "message": "seems more cosmetic than functional to me",
       "revId": "a5e7f96a95d2b309d2e7bec915e59bc213094e3e",
       "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "66498a8a_fabe7fb6",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000427
+      },
+      "writtenOn": "2021-10-23T19:12:22Z",
+      "side": 1,
+      "message": "but it makes sense if the apk gets updated.",
+      "parentUuid": "5589a6fe_8d81ba3e",
+      "revId": "a5e7f96a95d2b309d2e7bec915e59bc213094e3e",
+      "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
     }
   ]
 }
