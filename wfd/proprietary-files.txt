@@ -1,5 +1,3 @@
-system_ext/bin/rtspclient
-system_ext/bin/rtspserver
 system_ext/bin/sigma_miracasthalservice
 system_ext/bin/wfdservice
 system_ext/etc/init/com.qualcomm.qti.sigma_miracast@1.0-service.rc
@@ -12,7 +10,6 @@ system_ext/lib/com.qualcomm.qti.wifidisplayhal@1.0.so
 system_ext/lib/libmiracastsystem.so
 system_ext/lib/libmmrtpdecoder.so
 system_ext/lib/libmmrtpencoder.so
-system_ext/lib/libsigmautils.so
 system_ext/lib/libwfdavenhancements.so
 system_ext/lib/libwfdclient.so
 system_ext/lib/libwfdcommonutils.so
@@ -37,7 +34,6 @@ system_ext/lib64/hw/vendor.qti.hardware.sigma_miracast@1.0-impl.so
 system_ext/lib64/libmiracastsystem.so
 system_ext/lib64/libmmrtpdecoder.so
 system_ext/lib64/libmmrtpencoder.so
-system_ext/lib64/libsigmautils.so
 system_ext/lib64/libwfdclient.so
 system_ext/lib64/libwfdcommonutils.so
 system_ext/lib64/libwfdconfigutils.so
@@ -57,12 +53,8 @@ system_ext/lib64/vendor.qti.hardware.sigma_miracast@1.0-halimpl.so
 system_ext/lib64/vendor.qti.hardware.wifidisplaysession@1.0.so
 -system_ext/priv-app/WfdService/WfdService.apk
 -system/framework/WfdCommon.jar
-vendor/bin/wfdhdcphalservice
-vendor/bin/wfdvndservice
 vendor/bin/wifidisplayhalservice
-vendor/etc/init/android.hardware.drm@1.1-service.wfdhdcp.rc
 vendor/etc/init/com.qualcomm.qti.wifidisplayhal@1.0-service.rc
-vendor/etc/init/wfdvndservice.rc
 vendor/etc/seccomp_policy/wfdhdcphalservice.policy
 vendor/etc/seccomp_policy/wfdvndservice.policy
 vendor/etc/seccomp_policy/wifidisplayhalservice.policy

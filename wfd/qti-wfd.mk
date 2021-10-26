@@ -15,6 +15,7 @@
 DEVICE_FRAMEWORK_MANIFEST_FILE += device/qcom/common/wfd/framework_manifest.xml
 
 PRODUCT_PACKAGES += \
+    libdisplayconfig.system.qti \
     libnl \
     libwfdaac \
     libwfdaac_vendor
