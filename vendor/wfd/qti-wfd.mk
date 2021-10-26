@@ -12,23 +12,6 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-DEVICE_FRAMEWORK_MANIFEST_FILE += device/qcom/common/system/wfd/framework_manifest.xml
-
-PRODUCT_PACKAGES += \
-    libdisplayconfig.system.qti \
-    libnl \
-    libwfdaac \
-    libwfdaac_vendor
-
-PRODUCT_BOOT_JARS += \
-    WfdCommon
-
-PRODUCT_PROPERTY_OVERRIDES += \
-    persist.debug.wfd.enable=1 \
-    persist.sys.wfd.virtual=0
-
-# Inherit QCOM display dependencies.
-$(call inherit-product-if-exists, vendor/qcom/opensource/commonsys-intf/display/config/display-product-system.mk)
 
 # Get non-open-source specific aspects
-$(call inherit-product-if-exists, vendor/qcom/common/system/wfd/wfd-vendor.mk)
+$(call inherit-product-if-exists, vendor/qcom/common/vendor/wfd/wfd-vendor.mk)
