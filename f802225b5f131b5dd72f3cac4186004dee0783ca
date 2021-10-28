@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "03051f30_37a567ef",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000488
+      },
+      "writtenOn": "2021-10-28T18:24:58Z",
+      "side": 1,
+      "message": "vendor was pushed by anay, so this is a follow up no-op",
+      "revId": "f802225b5f131b5dd72f3cac4186004dee0783ca",
+      "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
+    }
+  ]
+}
