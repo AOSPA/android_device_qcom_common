@@ -39,5 +39,6 @@
         <component>com.android.internal.telephony.TelephonyComponentFactory</component>
         <component>com.android.internal.telephony.MultiSimSettingController</component>
         <component>com.android.internal.telephony.CarrierInfoManager</component>
+        <component>com.android.internal.telephony.CarrierInfoManager</component>
     </components>
 </injection>
