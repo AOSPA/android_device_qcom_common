@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "026de423_139e2556",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 3
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000143
+      },
+      "writtenOn": "2021-11-03T21:23:53Z",
+      "side": 1,
+      "message": "https://gerrit.aospa.co/c/AOSPA/android_hardware_qcom_audio/+/19727 is needed for all hals to work",
+      "revId": "25e69cae5dbb021ddcafb0a7d06cef6cad9e566c",
+      "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
+    }
+  ]
+}
