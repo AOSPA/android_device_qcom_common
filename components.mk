@@ -26,7 +26,6 @@ TARGET_COMMON_QTI_COMPONENTS := \
     telephony \
     usb \
     vibrator \
-    wfd \
     wlan
 
 ifeq ($(call is-board-platform-in-list,$(5_4_FAMILY)),true)
@@ -106,17 +105,8 @@ ifneq (,$(filter nq-nfc, $(TARGET_COMMON_QTI_COMPONENTS)))
 include $(QCOM_COMMON_PATH)/nq-nfc/qti-nq-nfc.mk
 endif
 
-ifneq (,$(filter wfd, $(TARGET_COMMON_QTI_COMPONENTS)))
-include $(QCOM_COMMON_PATH)/wfd/qti-wfd.mk
-endif
-
 ifneq (,$(filter wlan, $(TARGET_COMMON_QTI_COMPONENTS)))
 include $(QCOM_COMMON_PATH)/wlan/qti-wlan.mk
-endif
-
-# <= MSM8998
-ifneq (,$(filter wfd-legacy, $(TARGET_COMMON_QTI_COMPONENTS)))
-include $(QCOM_COMMON_PATH)/wfd-legacy/qti-wfd-legacy.mk
 endif
 
 ifneq (,$(filter adreno-legacy, $(TARGET_COMMON_QTI_COMPONENTS)))
