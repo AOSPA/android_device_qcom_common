@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "3cdc8e35_970e388b",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 3
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000143
+      },
+      "writtenOn": "2021-11-10T09:58:52Z",
+      "side": 1,
+      "message": "they got removed from here:\nhttps://android.googlesource.com/platform/build/+/37aeef03d43ba8e20ff6a0ee238ce4a64d940bcd",
+      "revId": "b33bfe561e35a954232730d146761f8ea0f9e5c9",
+      "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
+    }
+  ]
+}
