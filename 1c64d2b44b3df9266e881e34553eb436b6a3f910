@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "5d0a8579_def0b1da",
+        "filename": "init/ueventd.qcom.rc",
+        "patchSetId": 1
+      },
+      "lineNbr": 218,
+      "author": {
+        "id": 1000488
+      },
+      "writtenOn": "2021-11-12T13:12:18Z",
+      "side": 1,
+      "message": "deprecated.",
+      "revId": "1c64d2b44b3df9266e881e34553eb436b6a3f910",
+      "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
+    }
+  ]
+}
