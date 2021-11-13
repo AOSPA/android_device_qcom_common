@@ -16,6 +16,24 @@
       "message": "should we inherit https://source.codeaurora.org/quic/la/platform/vendor/qcom-opensource/display-commonsys/tree/config/display-product-commonsys.mk?h\u003ddisplay-sys.lnx.12.0.r1-rel instead",
       "revId": "59c83ffe2559e51a6fd24a2b7151bba35f94c3c8",
       "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "58f631cc_14269ea4",
+        "filename": "wfd/qti-wfd.mk",
+        "patchSetId": 1
+      },
+      "lineNbr": 18,
+      "author": {
+        "id": 1000092
+      },
+      "writtenOn": "2021-11-13T14:23:57Z",
+      "side": 1,
+      "message": "Put it into display component?",
+      "parentUuid": "4825a205_f750ef71",
+      "revId": "59c83ffe2559e51a6fd24a2b7151bba35f94c3c8",
+      "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
     }
   ]
 }
