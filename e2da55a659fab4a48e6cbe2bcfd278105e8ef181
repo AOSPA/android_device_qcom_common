@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "a39339f1_40ea19e8",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000173
+      },
+      "writtenOn": "2021-11-14T11:35:27Z",
+      "side": 1,
+      "message": "WIP. STILL LOT TO DO",
+      "revId": "e2da55a659fab4a48e6cbe2bcfd278105e8ef181",
+      "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
+    }
+  ]
+}
