@@ -12,8 +12,6 @@ vendor/lib/libqc2filter.so
 vendor/lib/libqcodec2_basecodec.so
 vendor/lib/libqcodec2_base.so
 vendor/lib/libqcodec2_core.so
-vendor/lib/libqcodec2_hooks.so
-vendor/lib/libqcodec2_mockfilter.so
 vendor/lib/libqcodec2_platform.so
 vendor/lib/libqcodec2_utils.so
 vendor/lib/libqcodec2_v4l2codec.so
@@ -22,8 +20,6 @@ vendor/lib64/libqc2filter.so
 vendor/lib64/libqcodec2_basecodec.so
 vendor/lib64/libqcodec2_base.so
 vendor/lib64/libqcodec2_core.so
-vendor/lib64/libqcodec2_hooks.so
-vendor/lib64/libqcodec2_mockfilter.so
 vendor/lib64/libqcodec2_platform.so
 vendor/lib64/libqcodec2_utils.so
 vendor/lib64/libqcodec2_v4l2codec.so
