@@ -52,6 +52,7 @@ endif
 
 # Properties
 PRODUCT_PROPERTY_OVERRIDES += \
+    ro.vendor.perf-hal.ver=2.2 \
     ro.vendor.extension_library=libqti-perfd-client.so \
     vendor.power.pasr.enabled=true
 
