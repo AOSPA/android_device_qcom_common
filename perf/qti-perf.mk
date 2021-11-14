@@ -53,7 +53,8 @@ endif
 # Properties
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.vendor.extension_library=libqti-perfd-client.so \
-    vendor.power.pasr.enabled=true
+    vendor.power.pasr.enabled=true \
+    vendor.pasr.activemode.enabled=true
 
 ifeq ($(call is-board-platform-in-list, lahaina),true)
 PRODUCT_PROPERTY_OVERRIDES += \
