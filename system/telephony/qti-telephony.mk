@@ -43,9 +43,10 @@ PRODUCT_PROPERTY_OVERRIDES += \
 # Packages
 PRODUCT_PACKAGES += \
     CellBroadcastReceiver \
-    android.hardware.radio@1.5 \
-    android.hardware.radio.config@1.2 \
+    android.hardware.radio@1.6 \
+    android.hardware.radio.config@1.3 \
     android.hardware.radio.deprecated@1.0 \
+    android.system.net.netd@1.1 \
     extphonelib \
     extphonelib-product \
     extphonelib.xml \
