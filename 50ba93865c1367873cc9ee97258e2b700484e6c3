@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "dc2cd219_0e1ce766",
+        "filename": "vendor/perf/qti-perf.mk",
+        "patchSetId": 4
+      },
+      "lineNbr": 50,
+      "author": {
+        "id": 1000173
+      },
+      "writtenOn": "2021-11-16T14:36:15Z",
+      "side": 1,
+      "message": "we should check if it applies to all SOCs.",
+      "revId": "50ba93865c1367873cc9ee97258e2b700484e6c3",
+      "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
+    }
+  ]
+}
