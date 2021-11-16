@@ -78,6 +78,8 @@ vendor.perf.cores_online   u:object_r:vendor_mpctl_prop:s0
 persist.vendor.qti.        u:object_r:vendor_mpctl_prop:s0
 ro.vendor.at_library       u:object_r:vendor_mpctl_prop:s0
 vendor.debug.trace.perf    u:object_r:vendor_mpctl_prop:s0
+vendor.change.cgroup                   u:object_r:vendor_procomp_prop:s0
+vendor.change.cgroup.for.pid           u:object_r:vendor_procomp_prop:s0
 vendor.iop.enable_uxe      u:object_r:vendor_iop_prop:s0
 vendor.perf.iop_v3.enable  u:object_r:vendor_iop_prop:s0
 vendor.perf.iop_v3.enable.debug u:object_r:vendor_iop_prop:s0

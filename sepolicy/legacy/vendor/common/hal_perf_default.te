@@ -113,6 +113,7 @@ hal_client_domain(vendor_hal_perf_default, vendor_hal_qspmhal);
 # Allow hal_perf to set property
 set_prop(vendor_hal_perf_default, vendor_mpctl_prop)
 set_prop(vendor_hal_perf_default, vendor_wlc_public_prop)
+set_prop(vendor_hal_perf_default, vendor_procomp_prop)
 
 #Allow Display Config access
 hal_client_domain(vendor_hal_perf_default, hal_graphics_composer);
