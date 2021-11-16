@@ -65,6 +65,14 @@ neverallow {
     -vold
     } vendor_persist_type: { dir file } *;
 
+neverallow {
+    domain
+    -init
+    -dumpstate
+    -vendor_init
+    -vendor_hal_perf_default
+} vendor_procomp_prop:file *;
+
 allow { domain - coredomain } mnt_vendor_file:lnk_file r_file_perms;
 
 allowxperm domain domain:icmp_socket ioctl { unpriv_sock_ioctls unpriv_tty_ioctls };
