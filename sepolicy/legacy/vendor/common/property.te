@@ -59,6 +59,7 @@ vendor_restricted_prop(vendor_bg_boot_complete_prop);
 vendor_restricted_prop(vendor_opengles_prop);
 vendor_internal_prop(vendor_mdm_helper_prop);
 vendor_restricted_prop(vendor_mpctl_prop);
+vendor_internal_prop(vendor_procomp_prop);
 vendor_restricted_prop(vendor_iop_prop);
 vendor_restricted_prop(vendor_public_vendor_default_prop);
 #Scroll Pre-obtain

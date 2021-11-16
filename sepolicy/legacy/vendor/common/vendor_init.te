@@ -74,6 +74,10 @@ set_prop(vendor_init, vendor_ipacm-diag_prop)
 set_prop(vendor_init, vendor_radio_prop)
 set_prop(vendor_init, vendor_am_prop)
 set_prop(vendor_init, vendor_mpctl_prop)
+get_prop(vendor_init, vendor_procomp_prop)
+allow vendor_init kernel:process setsched;
+allow vendor_init kernel:dir search;
+allow vendor_init kernel:file { open write };
 
 #Access vendor display properties
 set_prop(vendor_init, vendor_display_prop)
