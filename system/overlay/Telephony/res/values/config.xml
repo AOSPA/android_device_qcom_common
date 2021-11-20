@@ -19,7 +19,6 @@
 <!-- Phone app resources that may need to be customized
      for different hardware or product builds. -->
 <resources>
-
     <!-- Determine whether we should show the "listen for instructions" screen after
          successfully placing the OTA call -->
     <integer name="OtaShowListeningScreen">1</integer>
@@ -51,9 +50,11 @@
     <string name="config_ims_mmtel_package">org.codeaurora.ims</string>
 
     <!-- String indicating the package name of the device ImsService implementation for RCS -->
-    <string name="config_ims_rcs_package">org.codeaurora.ims</string>
+    <string name="config_ims_rcs_package">vendor.qti.imsrcs</string>
 
     <!-- Package name for the call-based number verification app -->
     <string name="platform_number_verification_package" translatable="false">com.google.android.gms</string>
 
+    <!-- String indicating the package name of the device GbaService implementation. -->
+    <string name="config_gba_package" translatable="false">com.qualcomm.qti.uimGbaApp</string>
 </resources>
