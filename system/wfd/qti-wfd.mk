@@ -15,14 +15,14 @@
 DEVICE_FRAMEWORK_MANIFEST_FILE += device/qcom/common/system/wfd/framework_manifest.xml
 
 PRODUCT_PACKAGES += \
+    libavservices_minijail \
     libnl \
-    libwfdaac \
-    libwfdaac_vendor
+    libwfdaac
 
 PRODUCT_BOOT_JARS += \
     WfdCommon
 
-PRODUCT_PROPERTY_OVERRIDES += \
+PRODUCT_SYSTEM_EXT_PROPERTIES += \
     persist.debug.wfd.enable=1 \
     persist.sys.wfd.virtual=0
 
