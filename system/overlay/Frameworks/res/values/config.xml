@@ -18,18 +18,6 @@
 
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
 
-   <!-- Average Current for bluetooth controller when idle. 0 by default-->
-   <integer translatable="false" name="config_bluetooth_idle_cur_ma">3</integer>
-
-   <!-- Average Current for bluetooth controller when receiving. 0 by default-->
-   <integer translatable="false" name="config_bluetooth_rx_cur_ma">20</integer>
-
-   <!-- Average Current for bluetooth controller when transmitting. 0 by default-->
-   <integer translatable="false" name="config_bluetooth_tx_cur_ma">33</integer>
-
-   <!-- Operating volatage for bluetooth controller. 0 by default-->
-   <integer translatable="false" name="config_bluetooth_operating_voltage_mv">3700</integer>
-
     <!-- Set to true to add links to Cell Broadcast app from Settings and MMS app. -->
     <bool name="config_cellBroadcastAppLinks">true</bool>
 
@@ -235,6 +223,13 @@
         <item>255</item>
     </integer-array>
 
+    <!-- MMS user agent string -->
+    <string name="config_mms_user_agent" translatable="false">Android-Mms/2.0</string>
+
+    <!-- MMS user agent prolfile url -->
+    <string name="config_mms_user_agent_profile_url" translatable="false"
+            >http://www.google.com/oha/rdf/ua-profile-kila.xml</string>
+
     <!-- Configuration to restart radio upon PDP_DEACTIVATE with
          error cause as Regular deactivation(36). -->
     <!--
@@ -302,7 +297,7 @@
     <bool name="config_showNavigationBar">true</bool>
     <!-- Enable doze mode -->
     <string name="config_dozeComponent">com.android.systemui/com.android.systemui.doze.DozeService</string>
-    <bool name="config_dozeAfterScreenOffByDefault">true</bool>
+    <bool name="config_dozeAfterScreenOff">true</bool>
     <!-- Screen brightness when dozing. -->
     <integer name="config_screenBrightnessDoze">17</integer>
     <bool name="config_powerDecoupleInteractiveModeFromDisplay">false</bool>
@@ -335,10 +330,19 @@
 
     <!-- The default peak refresh rate for a given device. Change this value if you want to allow
          for higher refresh rates to be automatically used out of the box -->
-    <integer name="config_defaultPeakRefreshRate">180</integer>
+    <integer name="config_defaultPeakRefreshRate">240</integer>
+
+    <!-- Whether to select voice/data/sms preference without user confirmation -->
+    <bool name="config_voice_data_sms_auto_fallback">true</bool>
+    <!-- Package names to use with vendor iwlan implementation. -->
+    <string name="config_wlan_data_service_package" translatable="false">vendor.qti.iwlan</string>
+    <string name="config_wlan_network_service_package" translatable="false">vendor.qti.iwlan</string>
+    <string name="config_qualified_networks_service_package" translatable="false">vendor.qti.iwlan</string>
 
     <!-- set to false if we need to show user confirmation
          when alpha identifier is not provided by the UICC -->
     <bool name="config_stkNoAlphaUsrCnf">false</bool>
 
+    <!-- Configure emergency apn as empty(null) apn -->
+    <string name="config_emergency_apn" translatable="false"></string>
 </resources>
