@@ -1,4 +1,4 @@
-# Copyright (c) 2017-2019, The Linux Foundation. All rights reserved.
+# Copyright (c) 2017-2019, 2021, The Linux Foundation. All rights reserved.
 
 # Redistribution and use in source and binary forms, with or without
 # modification, are permitted provided that the following conditions are
@@ -68,6 +68,10 @@ allow hal_graphics_composer_default mnt_vendor_file:dir search;
 
 # Allow dir search in '/oem'
 allow hal_graphics_composer oemfs:dir r_dir_perms;
+
+# Rule for bootanim_system_prop
+allow hal_graphics_composer_default bootanim_system_prop:file { getattr open read };
+allow hal_graphics_composer_default sysfs_graphics:file { getattr open read };
 
 # Allow pps socket access
 unix_socket_connect(hal_graphics_composer_default, pps, mm-pp-daemon)
