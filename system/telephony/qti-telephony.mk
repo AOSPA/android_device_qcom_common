@@ -96,9 +96,5 @@ endif
 PRODUCT_COPY_FILES += \
     $(QCOM_COMMON_PATH)/system/telephony/sensitive_pn.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/sensitive_pn.xml
 
-# Sounds
-PRODUCT_PRODUCT_PROPERTIES += \
-    ro.config.ringtone=Leaps_and_bounds.ogg
-
 # Get non-open-source specific aspects.
 $(call inherit-product-if-exists, vendor/qcom/common/system/telephony/telephony-vendor.mk)
