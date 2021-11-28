@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "4d915987_3ffef8af",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 15
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000173
+      },
+      "writtenOn": "2021-11-28T02:24:13Z",
+      "side": 1,
+      "message": "now works fine. calls are responsive and seems to connect fine. though won\u0027t merge without solving com/qti/dpm/DpmService missing class. 5$ donation for who finds which file is",
+      "revId": "7a91c77abbc8ec631bf1906bbc1104a75f105858",
+      "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
+    }
+  ]
+}
