@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "094fe6cb_8ceefc6f",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 4
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000173
+      },
+      "writtenOn": "2021-11-28T16:46:02Z",
+      "side": 1,
+      "message": "it compiles necessary stuff",
+      "revId": "bf830b82a792a6339117e2ef45c7f8922fc5bb68",
+      "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
+    }
+  ]
+}
