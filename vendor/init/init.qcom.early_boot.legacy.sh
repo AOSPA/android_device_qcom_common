@@ -63,7 +63,8 @@ chown root.usb /dev/hidraw*
 chmod 0660 /dev/hidraw*
 chown system.audio /dev/virt_sndcard_ctl
 chmod 0660 system.audio /dev/virt_sndcard_ctl
-
+chown system.audio /dev/virt-eavb
+chmod 0660 system.audio /dev/virt-eavb
 
 
 target=`getprop ro.board.platform`
