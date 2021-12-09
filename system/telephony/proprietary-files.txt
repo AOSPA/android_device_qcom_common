@@ -32,7 +32,6 @@ product/etc/permissions/UimService.xml
 -system_ext/app/QtiTelephonyService/QtiTelephonyService.apk
 -system_ext/app/SimContact/SimContact.apk
 -system_ext/app/atfwd/atfwd.apk
--system_ext/app/datastatusnotification/datastatusnotification.apk
 -system_ext/app/embms/embms.apk
 -system_ext/app/imssettings/imssettings.apk
 -system_ext/app/uceShimService/uceShimService.apk
