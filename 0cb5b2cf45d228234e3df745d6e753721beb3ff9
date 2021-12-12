@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "0ab8573f_764d16bc",
+        "filename": "system/telephony/proprietary-files.txt",
+        "patchSetId": 2
+      },
+      "lineNbr": 19,
+      "author": {
+        "id": 1000173
+      },
+      "writtenOn": "2021-12-12T12:59:42Z",
+      "side": 0,
+      "message": "this is under product now",
+      "revId": "0cb5b2cf45d228234e3df745d6e753721beb3ff9",
+      "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
+    }
+  ]
+}
