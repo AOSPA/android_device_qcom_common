@@ -16,6 +16,24 @@
       "message": "I\u0027d still prefer to update per component since all the other ones works as expected , only telephony isn\u0027t working poperly ... But we still need to do some changes if we want to merge this ",
       "revId": "9e5c21726404fb694fb4c3b126077da2902b74a5",
       "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "77a76456_dd8581df",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000488
+      },
+      "writtenOn": "2021-12-15T13:45:52Z",
+      "side": 1,
+      "message": "Point is that we can just update it all together instead of squashing it later. Anyway, please do the needful in this patchset as discussed in slack, i.e, push patchset and merge when its complete.",
+      "parentUuid": "7c04618b_5158754f",
+      "revId": "9e5c21726404fb694fb4c3b126077da2902b74a5",
+      "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
     }
   ]
 }
