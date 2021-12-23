@@ -115,4 +115,5 @@
     <allow-in-power-save package="com.qualcomm.location.XT" />
     <allow-in-power-save package="com.qualcomm.location.XT.setup" />
     <hidden-api-whitelisted-app package="com.qti.service.colorservice" />
+    <allow-implicit-broadcast action="org.codeaurora.intent.action.PRE_ALERTING_CALL_INFO" />
 </config>
