@@ -16,6 +16,23 @@
       "message": "so far qperf seems unhappy but I can\u0027t tell if its something with my device or someone else really\n\n`01-10 13:32:41.944  2431  2431 E system_server: No implementation found for java.lang.String com.qualcomm.qti.Performance.native_perf_get_prop(java.lang.String, java.lang.String) (tried Java_com_qualcomm_qti_Performance_native_1perf_1get_1prop and Java_com_qualcomm_qti_Performance_native_1perf_1get_1prop__Ljava_lang_String_2Ljava_lang_String_2)`\n",
       "revId": "f961fab02314b6fcf8b345c8a30af3ea19efd3cf",
       "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "96a9aa11_e383f72d",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000173
+      },
+      "writtenOn": "2021-12-25T11:55:46Z",
+      "side": 1,
+      "message": "we already have a system qssi open change\n",
+      "revId": "f961fab02314b6fcf8b345c8a30af3ea19efd3cf",
+      "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
     }
   ]
 }
