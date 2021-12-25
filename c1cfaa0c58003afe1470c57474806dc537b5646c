@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "4ca7b460_66ac5f15",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 4
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000579
+      },
+      "writtenOn": "2021-12-25T16:13:05Z",
+      "side": 1,
+      "message": "sigma_miracasthalservice64 and wfdservice64 are missing, check 20111",
+      "revId": "c1cfaa0c58003afe1470c57474806dc537b5646c",
+      "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
+    }
+  ]
+}
