@@ -34,8 +34,9 @@ endif
 
 # Packages
 PRODUCT_PACKAGES += \
-    android.hardware.thermal@2.0 \
+    android.hardware.thermal@2.0.vendor \
     init.aospa.perf.rc \
+    libavservices_minijail.vendor \
     libpsi.vendor \
     libtflite \
     vendor.qti.hardware.servicetracker@1.2.vendor
@@ -47,6 +48,7 @@ endif
 
 # Properties
 PRODUCT_PROPERTY_OVERRIDES += \
+    ro.vendor.perf-hal.ver=2.2 \
     ro.vendor.extension_library=libqti-perfd-client.so \
     vendor.power.pasr.enabled=true
 
@@ -61,7 +63,7 @@ endif
 ifeq ($(TARGET_KERNEL_VERSION),5.4)
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.vendor.perf.scroll_opt=true \
-    vendor.power.pasr.enabled=true
+    vendor.pasr.activemode.enabled=true
 endif
 
 # Get non-open-source specific aspects
