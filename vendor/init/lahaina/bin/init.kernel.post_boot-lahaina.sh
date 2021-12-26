@@ -1,5 +1,5 @@
 #=============================================================================
-# Copyright (c) 2020 Qualcomm Technologies, Inc.
+# Copyright (c) 2020-2021 Qualcomm Technologies, Inc.
 # All Rights Reserved.
 # Confidential and Proprietary - Qualcomm Technologies, Inc.
 #
@@ -123,7 +123,6 @@ function configure_memory_parameters() {
 
 	configure_zram_parameters
 	configure_read_ahead_kb_values
-	echo 0 > /proc/sys/vm/page-cluster
 	echo 100 > /proc/sys/vm/swappiness
 }
 
@@ -351,7 +350,7 @@ if [ -f /sys/devices/soc0/select_image ]; then
 fi
 
 # Change console log level as per console config property
-console_config=`getprop persist.console.silent.config`
+console_config=`getprop persist.vendor.console.silent.config`
 case "$console_config" in
 	"1")
 		echo "Enable console config to $console_config"
