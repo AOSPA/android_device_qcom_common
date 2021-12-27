@@ -33,6 +33,24 @@
       "message": "These blobs are part of SDM stack (libsdmcore), not adreno",
       "revId": "197f44e930c0ae619d9a097918a7ac75240f9106",
       "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "b1234365_b8a3b34a",
+        "filename": "vendor/adreno/proprietary-files.txt",
+        "patchSetId": 5
+      },
+      "lineNbr": 25,
+      "author": {
+        "id": 1000173
+      },
+      "writtenOn": "2021-12-27T15:57:36Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "62e239a1_93e5d986",
+      "revId": "197f44e930c0ae619d9a097918a7ac75240f9106",
+      "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
     }
   ]
 }
