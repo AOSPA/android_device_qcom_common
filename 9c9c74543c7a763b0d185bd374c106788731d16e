@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "723f8370_5940c351",
+        "filename": "vendor/perf/proprietary-files.txt",
+        "patchSetId": 6
+      },
+      "lineNbr": 3,
+      "author": {
+        "id": 1000488
+      },
+      "writtenOn": "2021-12-27T19:00:09Z",
+      "side": 1,
+      "message": "device specific",
+      "revId": "9c9c74543c7a763b0d185bd374c106788731d16e",
+      "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
+    }
+  ]
+}
