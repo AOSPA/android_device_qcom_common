@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "670499fb_80e1afb8",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 4
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000012
+      },
+      "writtenOn": "2021-12-30T10:42:51Z",
+      "side": 1,
+      "message": "why are we doing this? it already broke one feature. can we just match CAF? I don\u0027t see any reason to spend time validating for no impact.",
+      "revId": "e8865a331574d5865ebc92ae0e219a8801db7179",
+      "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
+    }
+  ]
+}
