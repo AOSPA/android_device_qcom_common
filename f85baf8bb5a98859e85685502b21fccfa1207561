@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "6545cc1d_ed81267d",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 7
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000465
+      },
+      "writtenOn": "2021-12-31T15:39:37Z",
+      "side": 1,
+      "message": "vendor/lib64/libgameoptfeature.so depends on vendor.qti.qspmhal@1.0.so so please add the 64 bit version of it. The rest looks fine to me",
+      "revId": "f85baf8bb5a98859e85685502b21fccfa1207561",
+      "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
+    }
+  ]
+}
