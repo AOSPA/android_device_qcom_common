@@ -16,6 +16,24 @@
       "message": "device specific",
       "revId": "9c9c74543c7a763b0d185bd374c106788731d16e",
       "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "8a78e504_79eec34f",
+        "filename": "vendor/perf/proprietary-files.txt",
+        "patchSetId": 6
+      },
+      "lineNbr": 3,
+      "author": {
+        "id": 1000173
+      },
+      "writtenOn": "2022-01-08T10:21:16Z",
+      "side": 1,
+      "message": "libcomposerextn.qti depends on the limits hal as @tobi stated",
+      "parentUuid": "723f8370_5940c351",
+      "revId": "9c9c74543c7a763b0d185bd374c106788731d16e",
+      "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
     }
   ]
 }
