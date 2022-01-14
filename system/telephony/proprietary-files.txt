@@ -108,6 +108,7 @@ system_ext/etc/spn-conf.xml
 -system_ext/framework/vendor.qti.ims.callinfo-V1.0-java.jar
 -system_ext/framework/vendor.qti.ims.connection-V1.0-java.jar
 -system_ext/framework/vendor.qti.ims.configservice-V1.0-java.jar
+-system_ext/framework/vendor.qti.ims.connection-V1.0-java.jar
 -system_ext/framework/vendor.qti.ims.factory-V1.0-java.jar
 -system_ext/framework/vendor.qti.ims.factory-V1.1-java.jar
 -system_ext/framework/vendor.qti.ims.factory-V2.0-java.jar

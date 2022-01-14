@@ -150,6 +150,7 @@
         <!-- CPUBOOST_MIN_FREQ PRIME Core resource opcode, value-->
         <!-- CPUBOOST_MIN_FREQ BIG Core resource opcode, value-->
         <!-- CPUBOOST_MIN_FREQ LITTLE Core resource opcode, value-->
+        <!-- CPUBW_MAX_FREQ resource opcode, value-->
         <!-- CPUBW_MIN_FREQ resource opcode, value-->
         <!-- LLCCBW resource opcode, value-->
         <!-- L3 resource opcode, value-->
@@ -161,8 +162,8 @@
                        0x40C74000, 0xF0, 0x40408000, 0x63, 0x40C20000, 0x28,
                        0x40C1C000, 0x3C, 0x40C20200, 0x28, 0x40C1C200, 0x3C,
                        0x42C10000, 0x1, 0x40800200, 0x76C, 0x40800000, 0x76C,
-                       0x40800100, 0x4B0, 0x43010000, 0x50, 0x41828000, 0x3A,
-                       0x43400000, 0x3480" />
+                       0x40800100, 0x4B0, 0x43018000, 0xFF, 0x43010000, 0x50,
+                       0x41828000, 0x3A, 0x43400000, 0x3480" />
 
      <!-- config_enableLaunchBoost6-->
         <!-- SLB_BIG_CORE_1, val-->
