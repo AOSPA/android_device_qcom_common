@@ -21,3 +21,31 @@ prebuilt_etc {
     sub_dir: "init",
     vendor: true,
 }
+
+prebuilt_hidl_interfaces {
+    name: "hidl_SuppTunnelProvider_interface",
+    interfaces: [
+        "vendor.qti.hardware.wigig.supptunnel@1.0::ISuppTunnelProvider",
+    ],
+}
+
+prebuilt_hidl_interfaces {
+    name: "hidl_Wificfr_interface",
+    interfaces: [
+        "vendor.qti.hardware.wifi.wificfr@1.0::IWificfr",
+    ],
+}
+
+prebuilt_hidl_interfaces {
+    name: "hidl_WifiMyFtm_interface",
+    interfaces: [
+        "vendor.qti.hardware.wifi.wifimyftm@1.0::IWifiMyFtm",
+    ],
+}
+
+prebuilt_hidl_interfaces {
+    name: "hidl_WifiStats_interface",
+    interfaces: [
+        "vendor.qti.hardware.wifi.wifilearner@1.0::IWifiStats"
+    ],
+}
