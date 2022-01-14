@@ -117,10 +117,6 @@ include $(QCOM_COMMON_PATH)/vendor/wlan/qti-wlan.mk
 endif
 
 # <= MSM8998
-ifneq (,$(filter wfd-legacy, $(TARGET_COMMON_QTI_COMPONENTS)))
-include $(QCOM_COMMON_PATH)/system/wfd-legacy/qti-wfd-legacy.mk
-endif
-
 ifneq (,$(filter adreno-legacy, $(TARGET_COMMON_QTI_COMPONENTS)))
 include $(QCOM_COMMON_PATH)/vendor/adreno-legacy/qti-adreno-legacy.mk
 endif
