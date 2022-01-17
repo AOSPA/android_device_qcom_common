@@ -1,0 +1,6 @@
+# Apps using TensorFlow rely on cpuinfo to precisely detect the SoC. cpuinfo
+# inspects multiple system properties such as ro.chipname which trigger a
+# denial. These properties are not populated on Pixel, simply ignore any
+# access. See b/210056469.
+system_internal_prop(deprecated_soc_prop)
+dontaudit domain deprecated_soc_prop:file *;
