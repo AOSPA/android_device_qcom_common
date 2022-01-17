@@ -1,0 +1,3 @@
+ro.chipname             u:object_r:deprecated_soc_prop:s0 exact string
+ro.hardware.chipname    u:object_r:deprecated_soc_prop:s0 exact string
+ro.mediatek.platform    u:object_r:deprecated_soc_prop:s0 exact string
