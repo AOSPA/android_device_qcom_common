@@ -372,10 +372,6 @@ case "$target" in
                 ;;
              518)
                 ;;
-            *)
-                # default case is for bengal
-                setprop vendor.netflix.bsp_rev "Q6115-31409-1"
-                ;;
         esac
         ;;
     "sdm710" | "msmpeafowl")
