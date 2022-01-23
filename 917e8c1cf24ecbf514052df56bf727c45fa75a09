@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "ce846eca_5332a198",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000509
+      },
+      "writtenOn": "2022-01-23T15:09:54Z",
+      "side": 1,
+      "message": "It\u0027s fixing missing qcrilhook class error\n\nD AndroidRuntime: Shutting down VM\nE AndroidRuntime: FATAL EXCEPTION: main\nE AndroidRuntime: Process: com.android.phone, PID: 2643\nE AndroidRuntime: java.lang.NoClassDefFoundError: Failed resolution of: Lcom/qualcomm/qcrilhook/QcRilHookCallback;\nE AndroidRuntime: \tat java.lang.Class.newInstance(Native Method)\nE AndroidRuntime: \tat android.app.AppComponentFactory.instantiateService(AppComponentFactory.java:129)\nE AndroidRuntime: \tat android.app.ActivityThread.handleCreateService(ActivityThread.java:4474)\nE AndroidRuntime: \tat android.app.ActivityThread.access$1700(ActivityThread.java:248)\nE AndroidRuntime: \tat android.app.ActivityThread$H.handleMessage(ActivityThread.java:2077)\nE AndroidRuntime: \tat android.os.Handler.dispatchMessage(Handler.java:106)\nE AndroidRuntime: \tat android.os.Looper.loopOnce(Looper.java:201)\nE AndroidRuntime: \tat android.os.Looper.loop(Looper.java:288)\nE AndroidRuntime: \tat android.app.ActivityThread.main(ActivityThread.java:7883)\nE AndroidRuntime: \tat java.lang.reflect.Method.invoke(Native Method)\nE AndroidRuntime: \tat com.android.internal.os.RuntimeInit$MethodAndArgsCaller.run(RuntimeInit.java:548)\nE AndroidRuntime: \tat com.android.internal.os.ZygoteInit.main(ZygoteInit.java:1009)\nE AndroidRuntime: Caused by: java.lang.ClassNotFoundException: com.qualcomm.qcrilhook.QcRilHookCallback\nE AndroidRuntime: \t... 12 more",
+      "revId": "917e8c1cf24ecbf514052df56bf727c45fa75a09",
+      "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
+    }
+  ]
+}
