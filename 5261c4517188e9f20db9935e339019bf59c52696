@@ -16,6 +16,23 @@
       "message": "so based on our recent discussion, this pretty much sums it up",
       "revId": "5261c4517188e9f20db9935e339019bf59c52696",
       "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "b18854e0_c022d139",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000579
+      },
+      "writtenOn": "2022-01-24T12:11:04Z",
+      "side": 1,
+      "message": "all props set fine on kona",
+      "revId": "5261c4517188e9f20db9935e339019bf59c52696",
+      "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
     }
   ]
 }
