@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "c91aede8_d75c071e",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 3
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000012
+      },
+      "writtenOn": "2022-01-24T04:09:41Z",
+      "side": 1,
+      "message": "much better, thanks. we\u0027ve lost gerrit before and that takes comments away plus it\u0027s good to be able to see why changes are made directly from GitHub or terminal.",
+      "revId": "bb410f315f099c7b5cd9fe3b7ed055ba39130951",
+      "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
+    }
+  ]
+}
