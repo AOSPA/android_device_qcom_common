@@ -154,6 +154,24 @@
       "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "4f1c3437_4e4e8d22",
+        "filename": "README.md",
+        "patchSetId": 7
+      },
+      "lineNbr": 39,
+      "author": {
+        "id": 1000760
+      },
+      "writtenOn": "2022-01-26T20:45:40Z",
+      "side": 1,
+      "message": "no, 660 already  booted 4.14, 4.19",
+      "parentUuid": "753a687e_59ad5a36",
+      "revId": "b7739c04a2c5788585441bcf53a4ebc8610abd08",
+      "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "7309b970_2b2f0f26",
