@@ -95,12 +95,11 @@ genfscon sysfs /devices/platform/soc/884000.i2c/i2c-2/2-0010/884000.i2c:qcom,smb
 genfscon sysfs /devices/platform/soc/884000.i2c/i2c-2/2-0018/884000.i2c:qcom,smb1390_slave@18:qcom,charge_pump_slave/power_supply/cp_slave/wakeup u:object_r:sysfs_wakeup:s0
 genfscon sysfs /devices/platform/soc/884000.i2c/i2c-2/2-0025/power_supply/wireless/wakeup u:object_r:sysfs_wakeup:s0
 genfscon sysfs /devices/platform/soc/c440000.qcom,spmi/spmi-0/spmi0-02/c440000.qcom,spmi:qcom,pm8150b@2:qcom,power-on@800/wakeup u:object_r:sysfs_wakeup:s0
-genfscon sysfs /sys/devices/platform/soc/c440000.qcom,spmi/spmi-0/spmi0-02/c440000.qcom,spmi:qcom,pm8150b@2:qcom,qpnp-smb5/wakeup/wakeup u:object_r:sysfs_wakeup:s0
-genfscon sysfs /sys/devices/platform/soc/c440000.qcom,spmi/spmi-0/spmi0-02/c440000.qcom,spmi:qcom,pm8150b@2:qcom,sdam-qnovo@b000/wakeup/wakeup u:object_r:sysfs_wakeup:s0
-genfscon sysfs /sys/devices/platform/soc/c440000.qcom,spmi/spmi-0/spmi0-02/c440000.qcom,spmi:qcom,pm8150b@2:qpnp,fg/wakeup/wakeup u:object_r:sysfs_wakeup:s0
-genfscon sysfs /sys/devices/platform/soc/c440000.qcom,spmi/spmi-0/spmi0-00/c440000.qcom,spmi:qcom,pm8150@0:qcom,power-on@800/wakeup/wakeup u:object_r:sysfs_wakeup:s0
-genfscon sysfs /sys/devices/platform/soc/c440000.qcom,spmi/spmi-0/spmi0-00/c440000.qcom,spmi:qcom,pm8150@0:qcom,pm8150_rtc/wakeup/wakeup u:object_r:sysfs_wakeup:s0
-genfscon sysfs /sys/devices/platform/soc/c440000.qcom,spmi/spmi-0/spmi0-00/c440000.qcom,spmi:qcom,pm8150@0:qcom,pm8150_rtc/rtc/rtc0/wakeup u:object_r:sysfs_wakeup:s0
+genfscon sysfs /devices/platform/soc/c440000.qcom,spmi/spmi-0/spmi0-02/c440000.qcom,spmi:qcom,pm8150b@2:qcom,sdam-qnovo@b000/wakeup/wakeup u:object_r:sysfs_wakeup:s0
+genfscon sysfs /devices/platform/soc/c440000.qcom,spmi/spmi-0/spmi0-02/c440000.qcom,spmi:qcom,pm8150b@2:qpnp,fg/wakeup/wakeup u:object_r:sysfs_wakeup:s0
+genfscon sysfs /devices/platform/soc/c440000.qcom,spmi/spmi-0/spmi0-00/c440000.qcom,spmi:qcom,pm8150@0:qcom,power-on@800/wakeup/wakeup u:object_r:sysfs_wakeup:s0
+genfscon sysfs /devices/platform/soc/c440000.qcom,spmi/spmi-0/spmi0-00/c440000.qcom,spmi:qcom,pm8150@0:qcom,pm8150_rtc/wakeup/wakeup u:object_r:sysfs_wakeup:s0
+genfscon sysfs /devices/platform/soc/c440000.qcom,spmi/spmi-0/spmi0-00/c440000.qcom,spmi:qcom,pm8150@0:qcom,pm8150_rtc/rtc/rtc0/wakeup u:object_r:sysfs_wakeup:s0
 genfscon sysfs /devices/platform/soc/c440000.qcom,spmi/spmi-0/spmi0-02/c440000.qcom,spmi:qcom,pm8150b@2:qcom,qpnp-smb5/wakeup/wakeup u:object_r:sysfs_wakeup:s0
 
 # USB device wakeup nodes
