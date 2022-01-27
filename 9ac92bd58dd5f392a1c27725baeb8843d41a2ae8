@@ -16,6 +16,24 @@
       "message": "no good?",
       "revId": "9ac92bd58dd5f392a1c27725baeb8843d41a2ae8",
       "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "749721f1_bee335a1",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000579
+      },
+      "writtenOn": "2022-01-27T09:34:31Z",
+      "side": 1,
+      "message": "I realised we dont really have *certified* adreno on these feature levels so why lie",
+      "parentUuid": "50a49eb4_bbfd59c5",
+      "revId": "9ac92bd58dd5f392a1c27725baeb8843d41a2ae8",
+      "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
     }
   ]
 }
