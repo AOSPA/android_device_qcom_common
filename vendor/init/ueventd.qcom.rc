@@ -431,6 +431,9 @@ subsystem mem_buf_vm
 /dev/block/platform/soc/7c4000.sdhci/by-name/frp        0600   system     system
 /dev/block/platform/soc/4744000.sdhci/by-name/frp       0600   system     system
 /dev/block/platform/soc/4804000.ufshc/by-name/frp       0600   system     system
+/dev/block/platform/soc/7c4000.sdhci/by-name/rawdump    0660   root       system
+/dev/block/platform/soc/1d84000.ufshc/by-name/rawdump   0660   root       system
+/dev/block/platform/soc/4804000.ufshc/by-name/rawdump   0600   root       system
 
 # This is temporary while using SD card for initial bring-up
 /dev/block/platform/soc/8804000.sdhci/by-name/frp       0600   system     system
