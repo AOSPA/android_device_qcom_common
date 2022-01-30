@@ -16,6 +16,24 @@
       "message": "Not sure if wee need the vendor one",
       "revId": "7c32f41da5fa495614294ece960a10f0fa1508d3",
       "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "de3eaa7b_d2b06ac9",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 3
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000597
+      },
+      "writtenOn": "2022-01-30T08:11:15Z",
+      "side": 1,
+      "message": "We need the vendor interfaces as google removed those libraries from vndk, now the libraries are only accessible to system partition, and are inaccessible to vendor services.",
+      "parentUuid": "10d6728a_112823ea",
+      "revId": "7c32f41da5fa495614294ece960a10f0fa1508d3",
+      "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
     }
   ]
 }
