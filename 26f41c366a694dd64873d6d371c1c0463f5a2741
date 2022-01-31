@@ -1,6 +1,23 @@
 {
   "comments": [
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "be63e08e_c086b7ab",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 4
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000579
+      },
+      "writtenOn": "2022-01-31T16:24:00Z",
+      "side": 1,
+      "message": "also for other people, currently all of our devices are \u003c5.10 and running \u003cS vendor, qcril would still use 1.5 radio and other r interfaces",
+      "revId": "26f41c366a694dd64873d6d371c1c0463f5a2741",
+      "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "a6712456_6b49c6a5",
