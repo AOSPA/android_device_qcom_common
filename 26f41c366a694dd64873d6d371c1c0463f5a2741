@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "a6712456_6b49c6a5",
+        "filename": "system/telephony/qti-telephony.mk",
+        "patchSetId": 4
+      },
+      "lineNbr": 47,
+      "author": {
+        "id": 1000579
+      },
+      "writtenOn": "2022-01-31T04:59:46Z",
+      "side": 1,
+      "message": "\u003cS qcril can\u0027t use s interfaces",
+      "revId": "26f41c366a694dd64873d6d371c1c0463f5a2741",
+      "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
+    }
+  ]
+}
