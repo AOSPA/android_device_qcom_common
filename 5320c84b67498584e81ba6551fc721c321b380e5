@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "541c928f_e7ff66f3",
+        "filename": "vendor/perf/qti-perf.mk",
+        "patchSetId": 3
+      },
+      "lineNbr": 68,
+      "author": {
+        "id": 1000173
+      },
+      "writtenOn": "2022-02-01T10:53:35Z",
+      "side": 1,
+      "message": "will this work on older socs like 8998?",
+      "revId": "5320c84b67498584e81ba6551fc721c321b380e5",
+      "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
+    }
+  ]
+}
