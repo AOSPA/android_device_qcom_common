@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "5140157c_f9763c36",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000579
+      },
+      "writtenOn": "2022-02-01T09:36:09Z",
+      "side": 1,
+      "message": "all three work perfectly fine on airtel, didn\u0027t work before\n",
+      "revId": "fdd30f5fd513d90ccf5523076c19b7d70a3ecd99",
+      "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
+    }
+  ]
+}
