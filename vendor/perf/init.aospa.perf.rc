@@ -1,4 +1,4 @@
-# Copyright (C) 2020 Paranoid Android
+# Copyright (C) 2022 Paranoid Android
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -24,6 +24,46 @@ on property:vendor.post_boot.parsed=1
     write /sys/block/dm-7/queue/read_ahead_kb 128
     write /sys/block/dm-8/queue/read_ahead_kb 128
     write /sys/block/dm-9/queue/read_ahead_kb 128
+    write /sys/block/dm-10/queue/read_ahead_kb 128
+    write /sys/block/dm-11/queue/read_ahead_kb 128
+    write /sys/block/dm-12/queue/read_ahead_kb 128
+    write /sys/block/dm-13/queue/read_ahead_kb 128
+    write /sys/block/dm-14/queue/read_ahead_kb 128
+    write /sys/block/dm-15/queue/read_ahead_kb 128
+    write /sys/block/dm-16/queue/read_ahead_kb 128
+    write /sys/block/dm-17/queue/read_ahead_kb 128
+    write /sys/block/dm-18/queue/read_ahead_kb 128
+    write /sys/block/dm-19/queue/read_ahead_kb 128
+    write /sys/block/dm-20/queue/read_ahead_kb 128
+    write /sys/block/dm-21/queue/read_ahead_kb 128
+    write /sys/block/dm-22/queue/read_ahead_kb 128
+    write /sys/block/dm-23/queue/read_ahead_kb 128
+    write /sys/block/dm-24/queue/read_ahead_kb 128
+    write /sys/block/dm-25/queue/read_ahead_kb 128
+    write /sys/block/dm-26/queue/read_ahead_kb 128
+    write /sys/block/dm-27/queue/read_ahead_kb 128
+    write /sys/block/dm-28/queue/read_ahead_kb 128
+    write /sys/block/dm-29/queue/read_ahead_kb 128
+    write /sys/block/dm-30/queue/read_ahead_kb 128
+    write /sys/block/dm-31/queue/read_ahead_kb 128
+    write /sys/block/dm-32/queue/read_ahead_kb 128
+    write /sys/block/dm-33/queue/read_ahead_kb 128
+    write /sys/block/dm-34/queue/read_ahead_kb 128
+    write /sys/block/dm-35/queue/read_ahead_kb 128
+    write /sys/block/dm-36/queue/read_ahead_kb 128
+    write /sys/block/dm-37/queue/read_ahead_kb 128
+    write /sys/block/dm-38/queue/read_ahead_kb 128
+    write /sys/block/dm-39/queue/read_ahead_kb 128
+    write /sys/block/dm-40/queue/read_ahead_kb 128
+    write /sys/block/dm-41/queue/read_ahead_kb 128
+    write /sys/block/dm-42/queue/read_ahead_kb 128
+    write /sys/block/dm-43/queue/read_ahead_kb 128
+    write /sys/block/dm-44/queue/read_ahead_kb 128
+    write /sys/block/dm-45/queue/read_ahead_kb 128
+    write /sys/block/dm-46/queue/read_ahead_kb 128
+    write /sys/block/dm-47/queue/read_ahead_kb 128
+    write /sys/block/dm-48/queue/read_ahead_kb 128
+    write /sys/block/dm-49/queue/read_ahead_kb 128
     write /sys/block/mmcblk0/queue/read_ahead_kb 128
     write /sys/block/sda/queue/read_ahead_kb 128
     write /sys/block/sdb/queue/read_ahead_kb 128
