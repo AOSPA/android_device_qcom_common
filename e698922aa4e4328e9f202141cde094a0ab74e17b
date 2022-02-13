@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "30061211_ff0d4dff",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 3
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000488
+      },
+      "writtenOn": "2022-02-13T07:54:38Z",
+      "side": 1,
+      "message": "might also wanna do it for devices using \u003e5.4 kernel ",
+      "revId": "e698922aa4e4328e9f202141cde094a0ab74e17b",
+      "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
+    }
+  ]
+}
