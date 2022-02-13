@@ -13,6 +13,8 @@
 # limitations under the License.
 
 on post-fs-data
+    # Disable zram readahead
+    write /proc/sys/vm/page-cluster 0
     # Override readahead to 2MiB during boot
     write /sys/block/dm-0/queue/read_ahead_kb 2048
     write /sys/block/dm-1/queue/read_ahead_kb 2048

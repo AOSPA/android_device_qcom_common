@@ -155,7 +155,6 @@ service kernel-post-boot /vendor/bin/sh /vendor/bin/init.kernel.post_boot.sh
 
 on property:sys.boot_completed=1
     write /dev/kmsg "Boot completed "
-    write /proc/sys/vm/page-cluster 0
     start kernel-boot
     start kernel-post-boot
 
