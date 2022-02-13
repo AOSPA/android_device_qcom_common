@@ -12,8 +12,28 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
+on post-fs-data
+    # Override readahead to 2MiB during boot
+    write /sys/block/dm-0/queue/read_ahead_kb 2048
+    write /sys/block/dm-1/queue/read_ahead_kb 2048
+    write /sys/block/dm-2/queue/read_ahead_kb 2048
+    write /sys/block/dm-3/queue/read_ahead_kb 2048
+    write /sys/block/dm-4/queue/read_ahead_kb 2048
+    write /sys/block/dm-5/queue/read_ahead_kb 2048
+    write /sys/block/dm-6/queue/read_ahead_kb 2048
+    write /sys/block/dm-7/queue/read_ahead_kb 2048
+    write /sys/block/dm-8/queue/read_ahead_kb 2048
+    write /sys/block/dm-9/queue/read_ahead_kb 2048
+    write /sys/block/mmcblk0/queue/read_ahead_kb 2048
+    write /sys/block/sda/queue/read_ahead_kb 2048
+    write /sys/block/sdb/queue/read_ahead_kb 2048
+    write /sys/block/sdc/queue/read_ahead_kb 2048
+    write /sys/block/sdd/queue/read_ahead_kb 2048
+    write /sys/block/sde/queue/read_ahead_kb 2048
+    write /sys/block/sdf/queue/read_ahead_kb 2048
+
 on property:vendor.post_boot.parsed=1
-    # Override readahead to 128KiB.
+    # Reset readahead to 128KiB
     write /sys/block/dm-0/queue/read_ahead_kb 128
     write /sys/block/dm-1/queue/read_ahead_kb 128
     write /sys/block/dm-2/queue/read_ahead_kb 128

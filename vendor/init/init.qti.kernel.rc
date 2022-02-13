@@ -65,11 +65,6 @@ on init
 on post-fs
     chmod 0755 /sys/kernel/debug/tracing
 
-    # set aggressive read ahead for dm-0 and dm-1 during boot up
-    write /sys/block/dm-0/queue/read_ahead_kb 2048
-    write /sys/block/dm-1/queue/read_ahead_kb 2048
-    write /sys/block/dm-2/queue/read_ahead_kb 2048
-
 on early-boot
     # Allow subsystem (modem etc) debugging
     write /sys/kernel/boot_adsp/boot 1
@@ -160,10 +155,6 @@ service kernel-post-boot /vendor/bin/sh /vendor/bin/init.kernel.post_boot.sh
 
 on property:sys.boot_completed=1
     write /dev/kmsg "Boot completed "
-    #Reset read ahead for dm-0, dm-1 and dm-2 to 512kb
-    write /sys/block/dm-0/queue/read_ahead_kb 512
-    write /sys/block/dm-1/queue/read_ahead_kb 512
-    write /sys/block/dm-2/queue/read_ahead_kb 512
     write /proc/sys/vm/page-cluster 0
     start kernel-boot
     start kernel-post-boot
