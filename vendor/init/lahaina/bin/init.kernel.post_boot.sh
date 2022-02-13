@@ -30,6 +30,11 @@
 # ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 #=============================================================================
 
+if [[ "$(getprop vendor.post_boot.custom)" == "true" ]]; then
+  echo "Device overrides post_boot, skipping $0"
+  exit 0
+fi
+
 if [ -f /sys/devices/soc0/soc_id ]; then
 	platformid=`cat /sys/devices/soc0/soc_id`
 fi
