@@ -16,6 +16,24 @@
       "message": "might also wanna do it for devices using \u003e5.4 kernel ",
       "revId": "e698922aa4e4328e9f202141cde094a0ab74e17b",
       "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "243fc912_4aafa6ee",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 3
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000488
+      },
+      "writtenOn": "2022-02-13T07:59:15Z",
+      "side": 1,
+      "message": "\u003e might also wanna do it for devices using \u003e5.4 kernel \n\nmy bad, sorry",
+      "parentUuid": "30061211_ff0d4dff",
+      "revId": "e698922aa4e4328e9f202141cde094a0ab74e17b",
+      "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
     }
   ]
 }
