@@ -210,13 +210,24 @@ IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.-->
         <boolean name="carrier_volte_available_bool" value="true" />
         <boolean name="carrier_wfc_ims_available_bool" value="true" />
         <boolean name="fallback_sms_not_allowed_in_roaming" value="true" />
+        <boolean name="allow_hold_call_during_emergency_bool" value="false" />
     </carrier_config>
 
     <carrier_config mcc="208" mnc="02">
         <boolean name="fallback_sms_not_allowed_in_roaming" value="true" />
     </carrier_config>
 
+    <carrier_config mcc="208" mnc="08">
+        <boolean name="carrier_volte_available_bool" value="true" />
+        <boolean name="carrier_wfc_ims_available_bool" value="true" />
+    </carrier_config>
+
     <carrier_config mcc="208" mnc="09">
+        <boolean name="carrier_volte_available_bool" value="true" />
+        <boolean name="carrier_wfc_ims_available_bool" value="true" />
+    </carrier_config>
+
+    <carrier_config mcc="208" mnc="10">
         <boolean name="carrier_volte_available_bool" value="true" />
         <boolean name="carrier_wfc_ims_available_bool" value="true" />
     </carrier_config>
@@ -605,6 +616,7 @@ IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.-->
         <boolean name="editable_wfc_roaming_mode_bool" value="true" />
         <boolean name="carrier_wfc_supports_ims_preferred_bool" value="true" />
         <int name="carrier_default_wfc_ims_mode_int" value="1" />
+        <boolean name="allow_hold_call_during_emergency_bool" value="false" />
     </carrier_config>
 
     <carrier_config mcc="262" mnc="02">
@@ -1374,6 +1386,7 @@ IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.-->
         <boolean name="allow_video_call_in_low_battery" value="false" />
         <boolean name="config_carrier_cs_retry_available" value="true" />
         <boolean name="carrier_allow_turnoff_ims_bool" value="false"/>
+        <boolean name="allow_hold_call_during_emergency_bool" value="false" />
     </carrier_config>
 
     <carrier_config mcc="450" mnc="03">
@@ -1382,6 +1395,7 @@ IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.-->
         <boolean name="config_carrier_cs_retry_available" value="true" />
         <boolean name="support_add_conference_participants_bool" value="true" />
         <boolean name="carrier_allow_turnoff_ims_bool" value="false"/>
+        <boolean name="allow_hold_call_during_emergency_bool" value="false" />
     </carrier_config>
 
     <carrier_config mcc="450" mnc="05">
@@ -1390,6 +1404,7 @@ IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.-->
         <boolean name="config_carrier_cs_retry_available" value="true" />
         <boolean name="support_add_conference_participants_bool" value="true" />
         <boolean name="carrier_allow_turnoff_ims_bool" value="false"/>
+        <boolean name="allow_hold_call_during_emergency_bool" value="false" />
     </carrier_config>
 
     <carrier_config mcc="450" mnc="06">
@@ -1398,6 +1413,7 @@ IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.-->
         <boolean name="support_adhoc_conference_calls_bool" value="true" />
         <boolean name="support_add_conference_participants_bool" value="true" />
         <boolean name="carrier_allow_turnoff_ims_bool" value="false"/>
+        <boolean name="allow_hold_call_during_emergency_bool" value="false" />
     </carrier_config>
 
     <carrier_config mcc="450" mnc="08">
@@ -1405,6 +1421,7 @@ IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.-->
         <boolean name="allow_video_call_in_low_battery" value="false" />
         <boolean name="config_carrier_cs_retry_available" value="true" />
         <boolean name="carrier_allow_turnoff_ims_bool" value="false"/>
+        <boolean name="allow_hold_call_during_emergency_bool" value="false" />
     </carrier_config>
 
     <carrier_config mcc="454" mnc="00">
@@ -1540,6 +1557,7 @@ IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.-->
         <int-array name="carrier_nr_availabilities_int_array" num="1">
             <item value="1"/>
         </int-array>
+        <boolean name="allow_hold_call_during_emergency_bool" value="false" />
     </carrier_config>
 
     <carrier_config mcc="460" mnc="01">
@@ -1577,6 +1595,7 @@ IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.-->
         <int-array name="carrier_nr_availabilities_int_array" num="1">
             <item value="1"/>
         </int-array>
+        <boolean name="allow_hold_call_during_emergency_bool" value="false" />
     </carrier_config>
 
     <carrier_config mcc="460" mnc="02">
@@ -1644,6 +1663,7 @@ IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.-->
         <int-array name="carrier_nr_availabilities_int_array" num="1">
             <item value="1"/>
         </int-array>
+        <boolean name="allow_hold_call_during_emergency_bool" value="false" />
     </carrier_config>
 
     <carrier_config mcc="460" mnc="03">
@@ -1688,6 +1708,8 @@ IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.-->
         <int-array name="carrier_nr_availabilities_int_array" num="1">
             <item value="1"/>
         </int-array>
+        <boolean name="carrier_video_crs_supported_bool" value="true" />
+        <boolean name="allow_hold_call_during_emergency_bool" value="false" />
     </carrier_config>
 
     <carrier_config mcc="460" mnc="04">
@@ -1723,6 +1745,7 @@ IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.-->
         <boolean name="support_swap_after_merge_bool" value="false"/>
         <boolean name="carrier_allow_transfer_ims_call_bool" value="false" />
         <boolean name="disable_filter_out_conference_host" value="true" />
+        <boolean name="carrier_video_crs_supported_bool" value="true" />
     </carrier_config>
 
     <carrier_config mcc="460" mnc="06">
@@ -1753,6 +1776,7 @@ IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.-->
         <boolean name="allow_hold_video_call_bool" value="false" />
         <boolean name="carrier_allow_transfer_ims_call_bool" value="false" />
         <boolean name="carrier_video_crs_supported_bool" value="true" />
+        <boolean name="allow_hold_call_during_emergency_bool" value="false" />
     </carrier_config>
 
     <carrier_config mcc="460" mnc="07">
@@ -1819,6 +1843,7 @@ IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.-->
         <int-array name="carrier_nr_availabilities_int_array" num="1">
             <item value="1"/>
         </int-array>
+        <boolean name="allow_hold_call_during_emergency_bool" value="false" />
     </carrier_config>
 
     <carrier_config mcc="460" mnc="08">
@@ -1884,6 +1909,7 @@ IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.-->
         <int-array name="carrier_nr_availabilities_int_array" num="1">
             <item value="1"/>
         </int-array>
+        <boolean name="allow_hold_call_during_emergency_bool" value="false" />
     </carrier_config>
 
     <carrier_config mcc="460" mnc="09">
@@ -1916,6 +1942,7 @@ IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.-->
         <int-array name="carrier_nr_availabilities_int_array" num="1">
             <item value="1"/>
         </int-array>
+        <boolean name="allow_hold_call_during_emergency_bool" value="false" />
     </carrier_config>
 
     <carrier_config mcc="460" mnc="10">
@@ -1969,6 +1996,8 @@ IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.-->
         <int-array name="carrier_nr_availabilities_int_array" num="1">
             <item value="1"/>
         </int-array>
+        <boolean name="carrier_video_crs_supported_bool" value="true" />
+        <boolean name="allow_hold_call_during_emergency_bool" value="false" />
     </carrier_config>
 
     <carrier_config mcc="460" mnc="12">
@@ -2001,6 +2030,8 @@ IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.-->
         <boolean name="hide_enabled_5g_bool" value="false" />
         <boolean name="call_barring_visibility_bool" value="false" />
         <boolean name="carrier_allow_transfer_ims_call_bool" value="false" />
+        <boolean name="carrier_video_crs_supported_bool" value="true" />
+        <boolean name="allow_hold_call_during_emergency_bool" value="false" />
     </carrier_config>
 
     <carrier_config mcc="460" mnc="15">
@@ -2383,6 +2414,7 @@ IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.-->
         <boolean name="carrier_call_composer_supported_bool" value="true"/>
         <boolean name="carrier_allow_turnoff_ims_bool" value="false"/>
         <boolean name="use_sms_callback_mode_bool" value="true"/>
+        <boolean name="editable_enhanced_4g_lte_bool" value="false" />
     </carrier_config>
 
     <carrier_config device="kona" mcc="311" mnc="480">
