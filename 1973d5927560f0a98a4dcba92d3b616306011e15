@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "5e0e57aa_98db8428",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000062
+      },
+      "writtenOn": "2022-02-14T04:54:23Z",
+      "side": 1,
+      "message": "Does \"on property:\" work properly for \"ro.\" properties?",
+      "revId": "1973d5927560f0a98a4dcba92d3b616306011e15",
+      "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
+    }
+  ]
+}
