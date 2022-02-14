@@ -145,59 +145,6 @@ init_DMM()
     esac
 }
 
-#
-# For controlling console and shell on console on 8960 - perist.serial.enable 8960
-# On other target use default ro.debuggable property.
-#
-serial=`getprop persist.serial.enable`
-dserial=`getprop ro.debuggable`
-case "$target" in
-    "msm8960")
-        case "$serial" in
-            "0")
-                echo 0 > /sys/devices/platform/msm_serial_hsl.0/console
-                ;;
-            "1")
-                echo 1 > /sys/devices/platform/msm_serial_hsl.0/console
-                start console
-                ;;
-            *)
-                case "$dserial" in
-                     "1")
-                         start console
-                         ;;
-                esac
-                ;;
-        esac
-        ;;
-
-    "msm8610" | "msm8974" | "msm8226")
-	case "$serial" in
-	     "0")
-		echo 0 > /sys/devices/f991f000.serial/console
-		;;
-	     "1")
-		echo 1 > /sys/devices/f991f000.serial/console
-		start console
-		;;
-            *)
-		case "$dserial" in
-                     "1")
-			start console
-			;;
-		esac
-		;;
-	esac
-	;;
-    *)
-        case "$dserial" in
-            "1")
-                start console
-                ;;
-        esac
-        ;;
-esac
-
 case "$target" in
     "msm7630_surf" | "msm7630_1x" | "msm7630_fusion")
         insmod /system/lib/modules/ss_mfcinit.ko
