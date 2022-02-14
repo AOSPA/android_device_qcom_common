@@ -16,6 +16,24 @@
       "message": "Does \"on property:\" work properly for \"ro.\" properties?",
       "revId": "1973d5927560f0a98a4dcba92d3b616306011e15",
       "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "93e280d8_cf54fafe",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000488
+      },
+      "writtenOn": "2022-02-14T05:19:28Z",
+      "side": 1,
+      "message": "yup it does",
+      "parentUuid": "5e0e57aa_98db8428",
+      "revId": "1973d5927560f0a98a4dcba92d3b616306011e15",
+      "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
     }
   ]
 }
