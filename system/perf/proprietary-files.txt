@@ -10,6 +10,7 @@ system_ext/lib/libbeluga.so
 system_ext/lib/libcomposerextn.qti.so
 system_ext/lib/libdolphin.so
 system_ext/lib/liblayerext.qti.so
+system_ext/lib/libqape.qti.so
 system_ext/lib/libqspmsvc.so
 system_ext/lib/libqti-at.so
 system_ext/lib/libqti-iopd-client_system.so
@@ -31,6 +32,7 @@ system_ext/lib64/libbeluga.so
 system_ext/lib64/libcomposerextn.qti.so
 system_ext/lib64/libdolphin.so
 system_ext/lib64/liblayerext.qti.so
+system_ext/lib64/libqape.qti.so
 system_ext/lib64/libqspmsvc.so
 system_ext/lib64/libqti-at.so
 system_ext/lib64/libqti-iopd-client_system.so
