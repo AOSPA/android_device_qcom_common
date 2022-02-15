@@ -40,6 +40,7 @@ system_ext/bin/diag_dci_sample_system
 system_ext/bin/diag_mdlog_system
 system_ext/bin/dpmd
 system_ext/bin/test_diag_system
+system_ext/bin/tcmd
 system_ext/etc/dpm/dpm.conf
 system_ext/etc/init/dpmd.rc
 system_ext/etc/permissions/com.qti.dpmframework.xml
