@@ -40,8 +40,10 @@ system_ext/bin/diag_dci_sample_system
 system_ext/bin/diag_mdlog_system
 system_ext/bin/dpmd
 system_ext/bin/test_diag_system
+system_ext/bin/tcmd
 system_ext/etc/dpm/dpm.conf
 system_ext/etc/init/dpmd.rc
+system_ext/etc/init/tcmd.rc
 system_ext/etc/permissions/com.qti.dpmframework.xml
 system_ext/etc/permissions/com.qualcomm.qti.imscmservice.xml
 system_ext/etc/permissions/com.qualcomm.qti.imscmservice-V2.0-java.xml
@@ -55,6 +57,7 @@ system_ext/etc/permissions/qti_libpermissions.xml
 system_ext/etc/permissions/qti_permissions.xml
 system_ext/etc/permissions/telephony_system-ext_privapp-permissions-qti.xml
 system_ext/etc/permissions/vendor.qti.ims.rcsservice.xml
+system_ext/etc/seccomp_policy/tcmd.policy
 system_ext/etc/sysconfig/qti_whitelist_system_ext.xml
 system_ext/etc/cdma_call_conf.xml
 system_ext/etc/spn-conf.xml
