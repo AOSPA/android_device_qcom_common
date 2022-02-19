@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "fad900dd_44337021",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000062
+      },
+      "writtenOn": "2022-02-19T14:49:42Z",
+      "side": 1,
+      "message": "We can do that in the after this fix, makes more logical sense to fix then clean up later.\n\n@Vishal",
+      "revId": "161ade1a0940cd3501fda78b64d3eec5d350e8d3",
+      "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
+    }
+  ]
+}
