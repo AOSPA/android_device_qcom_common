@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "7a255e2c_4c6a797e",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 1
+      },
+      "lineNbr": 9,
+      "author": {
+        "id": 1000012
+      },
+      "writtenOn": "2022-02-19T14:47:07Z",
+      "side": 1,
+      "message": "learn English!",
+      "revId": "7b82e88b6bd878031267d7b54c4035567c7d9e98",
+      "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
+    }
+  ]
+}
