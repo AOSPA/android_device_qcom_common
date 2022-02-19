@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "99eafba3_0574cffb",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000012
+      },
+      "writtenOn": "2022-02-19T14:47:54Z",
+      "side": 1,
+      "message": "all properties in this file should either be moved to the correct makefile or partition. there should not be product_property_overrides here.",
+      "revId": "3023b514156c1727538733e7901f33874549a614",
+      "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
+    }
+  ]
+}
