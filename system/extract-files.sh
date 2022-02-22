@@ -51,6 +51,16 @@ if [ -z "${SRC}" ]; then
     SRC="adb"
 fi
 
+function blob_fixup() {
+    case "${1}" in
+        system/framework/QXPerformance.jar)
+            mv "${2}" "${2}.tmp"
+            zipalign -p -f 4 "${2}.tmp" "${2}"
+            rm "${2}.tmp"
+            ;;
+    esac
+}
+
 # Initialize the helper
 setup_vendor "${COMPONENT}" "${VENDOR}" "${ANDROID_ROOT}" false "${CLEAN_VENDOR}" "" true
 
