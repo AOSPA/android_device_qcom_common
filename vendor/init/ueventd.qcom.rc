@@ -177,6 +177,9 @@ firmware_directories /vendor/firmware_mnt/image/
 /dev/bus/usb/*                      0660  root    usb
 /dev/hidraw*                        0660  root    usb
 
+#rawdump
+/dev/block/platform/soc/*/by-name/rawdump       0660   root     system
+
 # wlan
 /dev/wcnss_wlan           0660   system     system
 /dev/wcnss_ctrl           0660   system     system
