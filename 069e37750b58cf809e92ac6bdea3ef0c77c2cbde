@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "4d9cd98c_bcaa1006",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000579
+      },
+      "writtenOn": "2022-02-26T15:23:07Z",
+      "side": 1,
+      "message": "boots and works on oneplus msmnile",
+      "revId": "069e37750b58cf809e92ac6bdea3ef0c77c2cbde",
+      "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
+    }
+  ]
+}
