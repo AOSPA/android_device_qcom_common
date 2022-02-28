@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "95b789d9_363edd9f",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 5
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000012
+      },
+      "writtenOn": "2022-02-28T18:04:09Z",
+      "side": 1,
+      "message": "Omkar or Adithya can you diff our file list to the Qualcomm build? especially system but vendor too. obviously anything device specific or some of the Google apps will be missing from theirs, but we could be missing other things. I can help review if needed.",
+      "revId": "bf02e68bceae3962986910a689764dce68ece493",
+      "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
+    }
+  ]
+}
