@@ -52,6 +52,24 @@
       "parentUuid": "c9aa17de_134df20a",
       "revId": "069e37750b58cf809e92ac6bdea3ef0c77c2cbde",
       "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "0a7a5e10_fd277c49",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000101
+      },
+      "writtenOn": "2022-03-01T19:03:39Z",
+      "side": 1,
+      "message": "\u003e \u003e \u003e boots and works on oneplus msmnile\n\u003e \u003e \n\u003e \u003e \n\u003e \u003e vendor/bin/embmsslServer\n\u003e \u003e vendor/etc/init/init.embmssl_server.rc\n\u003e \u003e vendor/lib64/libembmsservice.so\n\u003e \u003e \n\u003e \u003e \n\u003e \u003e can u pull these blobs from qssi bsp into qcom common telephony as well, else the logs are spammed af with \n\u003e \u003e \n\u003e \u003e hwservicemanager: getTransport: Cannot find entry vendor.qti.hardware.embmssl@1.1::IEmbms/embmsslServer0 in either framework or device manifest.\n\u003e \u003e \n\u003e \u003e Also, vendor.qti.memory.pasrmanager is spamming\n\u003e \u003e \n\u003e \u003e  PackageManager: updateAllSharedLibrariesLPw failed: Package com.qti.pasrservice requires unavailable shared library vendor.qti.memory.pasrmanager.V1_0.IPasrManager; failing!\n\u003e \u003e \n\u003e \u003e  E init    : Control message: Could not find \u0027vendor.qti.memory.pasrmanager@1.1::IPasrManager/pasrhal\u0027 for ctl.interface_start from pid: 482 (/system/bin/hwservicemanager)\n\u003e \n\u003e \n\u003e \n\u003e even after adding manifest entry for embmssl, it says something like\n\u003e \n\u003e E init    : Control message: Could not find \u0027vendor.qti.hardware.embmssl@1.1::IEmbms/embmsslServer0\u0027 for ctl.interface_start from pid: 482 (/system/bin/hwservicemanager)\n\nThose should be added device side. We don\u0027t add telephony vendor blobs in our common repo as it differs from platform to platform",
+      "parentUuid": "c987244d_882759dd",
+      "revId": "069e37750b58cf809e92ac6bdea3ef0c77c2cbde",
+      "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
     }
   ]
 }

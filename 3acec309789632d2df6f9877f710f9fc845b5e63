@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "9f6a45b9_e3c32ccc",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 7
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000101
+      },
+      "writtenOn": "2022-03-01T19:03:39Z",
+      "side": 1,
+      "message": "Welp, dialer seems to crash: https://batbin.me/provision",
+      "revId": "3acec309789632d2df6f9877f710f9fc845b5e63",
+      "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
+    }
+  ]
+}
