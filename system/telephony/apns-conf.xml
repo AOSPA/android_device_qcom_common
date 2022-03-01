@@ -2056,7 +2056,67 @@
       mvno_type="spn"
       mvno_match_data="Noverca"
   />
-
+  <apn carrier="Airtel BD"
+      mcc="470"
+      mnc="07"
+      apn="internet"
+      type="default,supl"
+  />
+  <apn carrier="Airtel BD MMS"
+      mcc="470"
+      mnc="07"
+      apn="mms"
+      mmsc="http://10.6.0.21/servlets/mms"
+      mmsproxy="10.6.0.2"
+      mmsport="8080"
+      type="mms"
+  />
+  <apn carrier="Banglalink"
+      mcc="470"
+      mnc="03"
+      apn="blweb"
+      type="default,supl"
+  />
+  <apn carrier="Banglalink-MMS"
+      mcc="470"
+      mnc="03"
+      apn="blmms"
+      mmsc="http://"
+      mmsproxy="10.10.55.34"
+      mmsport="8799"
+      type="mms"
+  />
+  <apn carrier="Grameenphone"
+      mcc="470"
+      mnc="01"
+      apn="gpinternet"
+      type="default,supl"
+  />
+  <apn carrier="Grameenphone"
+      mcc="470"
+      mnc="01"
+      apn="gpinterneth"
+      proxy=""
+      port=""
+      user=""
+      password=""
+      mmsc=""
+      type="default,supl"
+  />
+  <apn carrier="Grameenphone MMS"
+      mcc="470"
+      mnc="01"
+      apn="gpmms"
+      mmsc="http://mms.gpsurf.net/servlets/mms"
+      mmsproxy="10.128.1.2"
+      mmsport="8080" type="mms"
+  />
+  <apn carrier="Tele Talk"
+      mcc="470"
+      mnc="04"
+      apn="wap"
+      type="default,supl"
+  />
   <apn carrier="Jio 4G"
       apn="jionet"
       mcc="222"
@@ -2068,7 +2128,6 @@
       mvno_match_data="8991840,8991854,8991855,8991856,8991857,8991858,8991859,899186,
                        8991870,8991871,8991872,8991873,8991874"
   />
-
   <apn carrier="IMS"
       apn="ims"
       mcc="222"
@@ -2081,7 +2140,6 @@
       mvno_match_data="8991840,8991854,8991855,8991856,8991857,8991858,8991859,899186,
                        8991870,8991871,8991872,8991873,8991874"
   />
-
   <apn carrier="MMS Vodafone"
       mcc="222"
       mnc="10"
