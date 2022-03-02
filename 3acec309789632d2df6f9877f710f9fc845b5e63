@@ -16,6 +16,23 @@
       "message": "Welp, dialer seems to crash: https://batbin.me/provision",
       "revId": "3acec309789632d2df6f9877f710f9fc845b5e63",
       "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "beae5a35_bb317d85",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 7
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000488
+      },
+      "writtenOn": "2022-03-02T05:17:05Z",
+      "side": 1,
+      "message": "please look for any kinds of overlay updates, even if not from a leaked source, use apktool and let me know.",
+      "revId": "3acec309789632d2df6f9877f710f9fc845b5e63",
+      "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
     }
   ]
 }
