@@ -35,6 +35,24 @@
       "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "60ba6fb3_6fbf0200",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 7
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000488
+      },
+      "writtenOn": "2022-03-02T05:20:33Z",
+      "side": 1,
+      "message": "uhh not this again. Which chipset family are you building for again?",
+      "parentUuid": "9f6a45b9_e3c32ccc",
+      "revId": "3acec309789632d2df6f9877f710f9fc845b5e63",
+      "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "62c5f9d4_f83d6198",
