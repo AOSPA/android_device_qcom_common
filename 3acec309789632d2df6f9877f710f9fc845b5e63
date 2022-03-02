@@ -125,6 +125,24 @@
       "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "33a3bbb0_9f11ea3f",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 7
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000101
+      },
+      "writtenOn": "2022-03-02T14:02:53Z",
+      "side": 1,
+      "message": "Nah its ok, it works fine with these blobs: https://github.com/gotenksIN/proprietary_vendor_qcom_common/commit/41d98593cfd4c2937009de5647df17fbf0d0037a\nEarlier I tried Aditya\u0027s and there it crashed. I assume cause of datastatusnotification.apk which u don\u0027t include",
+      "parentUuid": "d1968387_a340d90d",
+      "revId": "3acec309789632d2df6f9877f710f9fc845b5e63",
+      "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "62c5f9d4_f83d6198",
