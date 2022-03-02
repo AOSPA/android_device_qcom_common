@@ -73,6 +73,24 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "8c7833cd_e258388a",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 7
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000579
+      },
+      "writtenOn": "2022-03-02T06:35:45Z",
+      "side": 1,
+      "message": "and uses bsp radio stacks?",
+      "parentUuid": "35c3d35c_3fd355f4",
+      "revId": "3acec309789632d2df6f9877f710f9fc845b5e63",
+      "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "62c5f9d4_f83d6198",
         "filename": "system/audio/proprietary-files.txt",
         "patchSetId": 7
