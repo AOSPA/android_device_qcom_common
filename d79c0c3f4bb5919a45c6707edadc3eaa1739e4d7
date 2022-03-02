@@ -34,6 +34,23 @@
       "parentUuid": "f9585168_9c9ce760",
       "revId": "d79c0c3f4bb5919a45c6707edadc3eaa1739e4d7",
       "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "f2f3a076_48ab92c0",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000579
+      },
+      "writtenOn": "2022-03-02T06:33:18Z",
+      "side": 1,
+      "message": "mcc\u003d\"470\" mnc\u003d\"01\" apns exist already, edit those instead\n",
+      "revId": "d79c0c3f4bb5919a45c6707edadc3eaa1739e4d7",
+      "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
     }
   ]
 }
