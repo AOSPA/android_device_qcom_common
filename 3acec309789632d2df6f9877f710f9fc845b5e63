@@ -179,6 +179,24 @@
       "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "22870d08_92d4ba41",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 7
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000579
+      },
+      "writtenOn": "2022-03-03T08:10:38Z",
+      "side": 1,
+      "message": "unrelated, its perfectly fine on 4.19+ R vendor telephony",
+      "parentUuid": "c46eb758_d27191d7",
+      "revId": "3acec309789632d2df6f9877f710f9fc845b5e63",
+      "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "62c5f9d4_f83d6198",
