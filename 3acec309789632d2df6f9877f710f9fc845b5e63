@@ -215,6 +215,24 @@
       "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "3df7a35d_f9dc5de7",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 7
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000579
+      },
+      "writtenOn": "2022-03-03T12:14:24Z",
+      "side": 1,
+      "message": "https://github.com/gotenksIN/device_xiaomi_alioth/",
+      "parentUuid": "59041eaa_f5aa2637",
+      "revId": "3acec309789632d2df6f9877f710f9fc845b5e63",
+      "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "62c5f9d4_f83d6198",
