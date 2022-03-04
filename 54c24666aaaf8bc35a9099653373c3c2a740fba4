@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "4f77d48e_03313113",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000579
+      },
+      "writtenOn": "2022-03-04T17:20:16Z",
+      "side": 1,
+      "message": "squash with 20915: common: Update to LAHAINA 18900 | QSSI 05800 | https://gerrit.aospa.co/c/AOSPA/android_device_qcom_common/+/20915",
+      "revId": "54c24666aaaf8bc35a9099653373c3c2a740fba4",
+      "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
+    }
+  ]
+}
