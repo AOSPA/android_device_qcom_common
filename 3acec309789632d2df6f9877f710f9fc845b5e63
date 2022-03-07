@@ -268,6 +268,24 @@
       "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "cc213f7b_5ebf0ef0",
+        "filename": "system/audio/proprietary-files.txt",
+        "patchSetId": 7
+      },
+      "lineNbr": 4,
+      "author": {
+        "id": 1000579
+      },
+      "writtenOn": "2022-03-07T08:08:29Z",
+      "side": 1,
+      "message": "not adding to things in device repo which are perfectly fine in vendor",
+      "parentUuid": "62c5f9d4_f83d6198",
+      "revId": "3acec309789632d2df6f9877f710f9fc845b5e63",
+      "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "a66518b3_fba96110",
@@ -281,6 +299,24 @@
       "writtenOn": "2022-03-02T05:19:18Z",
       "side": 1,
       "message": "ditto",
+      "revId": "3acec309789632d2df6f9877f710f9fc845b5e63",
+      "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "28019039_21a532e6",
+        "filename": "system/telephony/proprietary-files.txt",
+        "patchSetId": 7
+      },
+      "lineNbr": 60,
+      "author": {
+        "id": 1000579
+      },
+      "writtenOn": "2022-03-07T08:08:29Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "a66518b3_fba96110",
       "revId": "3acec309789632d2df6f9877f710f9fc845b5e63",
       "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
     }
