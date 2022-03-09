@@ -18,6 +18,24 @@
       "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "580f089f_c3106176",
+        "filename": "README.md",
+        "patchSetId": 14
+      },
+      "lineNbr": 3,
+      "author": {
+        "id": 1000012
+      },
+      "writtenOn": "2022-03-09T14:53:02Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "9c25c6ed_80ab256f",
+      "revId": "ae083856136b48329b0b6493aa5c98f1f6b1c7ed",
+      "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "8a53ad67_9eb72170",
@@ -31,6 +49,24 @@
       "writtenOn": "2022-03-09T13:54:34Z",
       "side": 1,
       "message": "I think it\u0027s more the other way around",
+      "revId": "ae083856136b48329b0b6493aa5c98f1f6b1c7ed",
+      "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "b79dc756_c75aaa20",
+        "filename": "README.md",
+        "patchSetId": 14
+      },
+      "lineNbr": 5,
+      "author": {
+        "id": 1000012
+      },
+      "writtenOn": "2022-03-09T14:53:02Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "8a53ad67_9eb72170",
       "revId": "ae083856136b48329b0b6493aa5c98f1f6b1c7ed",
       "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
     },
@@ -52,6 +88,24 @@
       "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "b9ba9021_60c5cf91",
+        "filename": "README.md",
+        "patchSetId": 14
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 1000012
+      },
+      "writtenOn": "2022-03-09T14:53:02Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "79474613_43a13cfe",
+      "revId": "ae083856136b48329b0b6493aa5c98f1f6b1c7ed",
+      "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "c1926ff4_c789b129",
@@ -65,6 +119,24 @@
       "writtenOn": "2022-03-09T13:54:34Z",
       "side": 1,
       "message": "redundant with the line above",
+      "revId": "ae083856136b48329b0b6493aa5c98f1f6b1c7ed",
+      "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "c1d3e694_1a73be75",
+        "filename": "README.md",
+        "patchSetId": 14
+      },
+      "lineNbr": 30,
+      "author": {
+        "id": 1000012
+      },
+      "writtenOn": "2022-03-09T14:53:02Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "c1926ff4_c789b129",
       "revId": "ae083856136b48329b0b6493aa5c98f1f6b1c7ed",
       "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
     },
@@ -86,6 +158,24 @@
       "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "29566f4a_febe836b",
+        "filename": "README.md",
+        "patchSetId": 14
+      },
+      "lineNbr": 42,
+      "author": {
+        "id": 1000012
+      },
+      "writtenOn": "2022-03-09T14:53:02Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "b04163d4_c0a2eafc",
+      "revId": "ae083856136b48329b0b6493aa5c98f1f6b1c7ed",
+      "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "1b3ca6b2_f4841204",
@@ -99,6 +189,24 @@
       "writtenOn": "2022-03-09T13:54:34Z",
       "side": 1,
       "message": "to inherit the components, define the name of the components...",
+      "revId": "ae083856136b48329b0b6493aa5c98f1f6b1c7ed",
+      "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "8fdbe92e_230c6ad3",
+        "filename": "README.md",
+        "patchSetId": 14
+      },
+      "lineNbr": 43,
+      "author": {
+        "id": 1000012
+      },
+      "writtenOn": "2022-03-09T14:53:02Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "1b3ca6b2_f4841204",
       "revId": "ae083856136b48329b0b6493aa5c98f1f6b1c7ed",
       "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
     }
