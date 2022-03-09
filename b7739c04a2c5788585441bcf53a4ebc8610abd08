@@ -204,6 +204,24 @@
       "message": "don\u0027t use stuff in technical writing",
       "revId": "b7739c04a2c5788585441bcf53a4ebc8610abd08",
       "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "8415a34f_4eadc277",
+        "filename": "README.md",
+        "patchSetId": 7
+      },
+      "lineNbr": 44,
+      "author": {
+        "id": 1000760
+      },
+      "writtenOn": "2022-03-09T10:38:29Z",
+      "side": 1,
+      "message": "have a look now",
+      "parentUuid": "749b777d_276a74db",
+      "revId": "b7739c04a2c5788585441bcf53a4ebc8610abd08",
+      "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
     }
   ]
 }
