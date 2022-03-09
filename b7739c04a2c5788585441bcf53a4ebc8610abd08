@@ -18,6 +18,24 @@
       "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "fbecf65a_992db62c",
+        "filename": "README.md",
+        "patchSetId": 7
+      },
+      "lineNbr": 3,
+      "author": {
+        "id": 1000760
+      },
+      "writtenOn": "2022-03-09T10:44:36Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "31bfb703_4f243a6e",
+      "revId": "b7739c04a2c5788585441bcf53a4ebc8610abd08",
+      "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "2fca07cc_a6f9d296",
@@ -31,6 +49,24 @@
       "writtenOn": "2021-12-27T03:49:03Z",
       "side": 1,
       "message": "SoCs or Platforms",
+      "revId": "b7739c04a2c5788585441bcf53a4ebc8610abd08",
+      "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "36cc52d7_c6e2f5ff",
+        "filename": "README.md",
+        "patchSetId": 7
+      },
+      "lineNbr": 6,
+      "author": {
+        "id": 1000760
+      },
+      "writtenOn": "2022-03-09T10:44:36Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "2fca07cc_a6f9d296",
       "revId": "b7739c04a2c5788585441bcf53a4ebc8610abd08",
       "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
     },
@@ -52,6 +88,24 @@
       "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "24439872_0eb97372",
+        "filename": "README.md",
+        "patchSetId": 7
+      },
+      "lineNbr": 8,
+      "author": {
+        "id": 1000760
+      },
+      "writtenOn": "2022-03-09T10:44:36Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "75ab160a_c7c54204",
+      "revId": "b7739c04a2c5788585441bcf53a4ebc8610abd08",
+      "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "48a3adee_38eb8259",
@@ -65,6 +119,24 @@
       "writtenOn": "2021-12-27T03:49:03Z",
       "side": 1,
       "message": "8953 is in the 4.9 family but it\u0027s 5xx right?",
+      "revId": "b7739c04a2c5788585441bcf53a4ebc8610abd08",
+      "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "182f21a5_676015ca",
+        "filename": "README.md",
+        "patchSetId": 7
+      },
+      "lineNbr": 13,
+      "author": {
+        "id": 1000760
+      },
+      "writtenOn": "2022-03-09T10:44:36Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "48a3adee_38eb8259",
       "revId": "b7739c04a2c5788585441bcf53a4ebc8610abd08",
       "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
     },
@@ -86,6 +158,24 @@
       "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "dfcf7ba1_ff6f46d2",
+        "filename": "README.md",
+        "patchSetId": 7
+      },
+      "lineNbr": 15,
+      "author": {
+        "id": 1000760
+      },
+      "writtenOn": "2022-03-09T10:44:36Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "8c1a5d85_6f19bfa5",
+      "revId": "b7739c04a2c5788585441bcf53a4ebc8610abd08",
+      "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "913c2091_e9f402e4",
@@ -99,6 +189,24 @@
       "writtenOn": "2021-12-27T03:49:03Z",
       "side": 1,
       "message": "skip the first clause",
+      "revId": "b7739c04a2c5788585441bcf53a4ebc8610abd08",
+      "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "18fd2d8d_d455a2f6",
+        "filename": "README.md",
+        "patchSetId": 7
+      },
+      "lineNbr": 31,
+      "author": {
+        "id": 1000760
+      },
+      "writtenOn": "2022-03-09T10:44:36Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "913c2091_e9f402e4",
       "revId": "b7739c04a2c5788585441bcf53a4ebc8610abd08",
       "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
     },
@@ -120,6 +228,24 @@
       "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "c4bbced2_7a0a07cc",
+        "filename": "README.md",
+        "patchSetId": 7
+      },
+      "lineNbr": 35,
+      "author": {
+        "id": 1000760
+      },
+      "writtenOn": "2022-03-09T10:44:36Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "171400de_7e5ff308",
+      "revId": "b7739c04a2c5788585441bcf53a4ebc8610abd08",
+      "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "a2db9707_c0f1d504",
@@ -133,6 +259,24 @@
       "writtenOn": "2021-12-27T03:49:03Z",
       "side": 1,
       "message": "skip AU, we do not support automotive targets. those are in a separate CAF branch.",
+      "revId": "b7739c04a2c5788585441bcf53a4ebc8610abd08",
+      "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "48b4488f_aa553faf",
+        "filename": "README.md",
+        "patchSetId": 7
+      },
+      "lineNbr": 37,
+      "author": {
+        "id": 1000760
+      },
+      "writtenOn": "2022-03-09T10:44:36Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "a2db9707_c0f1d504",
       "revId": "b7739c04a2c5788585441bcf53a4ebc8610abd08",
       "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
     },
@@ -185,6 +329,24 @@
       "writtenOn": "2021-12-27T03:49:03Z",
       "side": 1,
       "message": "Advice not advices",
+      "revId": "b7739c04a2c5788585441bcf53a4ebc8610abd08",
+      "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "19c8a6b2_1b0775d9",
+        "filename": "README.md",
+        "patchSetId": 7
+      },
+      "lineNbr": 42,
+      "author": {
+        "id": 1000760
+      },
+      "writtenOn": "2022-03-09T10:44:36Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "7309b970_2b2f0f26",
       "revId": "b7739c04a2c5788585441bcf53a4ebc8610abd08",
       "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
     },
