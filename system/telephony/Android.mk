@@ -20,5 +20,6 @@ include $(CLEAR_VARS)
 
 $(shell mkdir -p $(TARGET_OUT_SYSTEM_EXT_APPS_PRIVILEGED)/ims/lib/arm64/ && pushd $(TARGET_OUT_SYSTEM_EXT_APPS_PRIVILEGED)/ims/lib/arm64 > /dev/null && ln -s /system_ext/lib64/libimscamera_jni.so libimscamera_jni.so && popd > /dev/null)
 $(shell mkdir -p $(TARGET_OUT_SYSTEM_EXT_APPS_PRIVILEGED)/ims/lib/arm64/ && pushd $(TARGET_OUT_SYSTEM_EXT_APPS_PRIVILEGED)/ims/lib/arm64 > /dev/null && ln -s /system_ext/lib64/libimsmedia_jni.so libimsmedia_jni.so && popd > /dev/null)
+$(shell mkdir -p $(TARGET_OUT_VENDOR_APPS)/CneApp/lib/arm64/vendor/lib64 && pushd $(TARGET_OUT_VENDOR_APPS)/CneApp/lib/arm64 > /dev/null && ln -s /vendor/lib64/libvndfwk_detect_jni.qti.so libvndfwk_detect_jni.qti.so && popd > /dev/null)
 
 endif
