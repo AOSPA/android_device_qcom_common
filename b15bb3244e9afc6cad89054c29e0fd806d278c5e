@@ -33,6 +33,23 @@
       "message": "Will merge after @jake\u0027s approval.",
       "revId": "b15bb3244e9afc6cad89054c29e0fd806d278c5e",
       "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "e13f71f1_6d992e90",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000012
+      },
+      "writtenOn": "2022-03-10T19:51:02Z",
+      "side": 1,
+      "message": "should we move these to their components?\nI have no problem with them. I don\u0027t think the adreno one does anything, it\u0027s probably for one of their testing tools, but it\u0027s not worth worrying about, we can match CAF.",
+      "revId": "b15bb3244e9afc6cad89054c29e0fd806d278c5e",
+      "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
     }
   ]
 }
