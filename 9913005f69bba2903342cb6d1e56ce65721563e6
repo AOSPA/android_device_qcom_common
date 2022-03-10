@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "eb028d07_1a179163",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000062
+      },
+      "writtenOn": "2022-03-10T18:23:02Z",
+      "side": 1,
+      "message": "Just noticed that our vendor image is missing those symlinks.\n\nUntested commit, could be improved.\n\ncc @jake",
+      "revId": "9913005f69bba2903342cb6d1e56ce65721563e6",
+      "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
+    }
+  ]
+}
