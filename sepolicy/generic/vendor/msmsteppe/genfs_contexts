@@ -115,8 +115,8 @@ genfscon sysfs /devices/platform/soc/soc:qcom,kgsl-hyp/subsys6/name           u:
 genfscon sysfs /devices/platform/soc/a600000.ssusb/a600000.dwc3/udc/a600000.dwc3 u:object_r:vendor_sysfs_usb_controller:s0
 
 # USB device wakeup nodes
-genfscon sysfs /devices/platform/soc/a600000.ssusb/wakeup/wakeup u:object_r:sysfs_wakeup:s0
-genfscon sysfs /devices/platform/soc/a800000.hsusb/wakeup/wakeup u:object_r:sysfs_wakeup:s0
+genfscon sysfs /devices/platform/soc/a600000.ssusb/wakeup u:object_r:sysfs_wakeup:s0
+genfscon sysfs /devices/platform/soc/a800000.hsusb/wakeup u:object_r:sysfs_wakeup:s0
 
 #qdss sysfs-node
 genfscon sysfs /devices/platform/soc/6047000.tmc/coresight-tmc-etf u:object_r:vendor_sysfs_qdss_dev:s0
