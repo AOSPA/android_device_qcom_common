@@ -70,5 +70,8 @@ PRODUCT_VENDOR_PROPERTIES += vendor.pasr.activemode.enabled=true
 endif
 endif
 
+# Sepolicy
+BOARD_VENDOR_SEPOLICY_DIRS += $(QCOM_COMMON_PATH)/vendor/perf/sepolicy/
+
 # Get non-open-source specific aspects
 $(call inherit-product-if-exists, vendor/qcom/common/vendor/perf/perf-vendor.mk)
