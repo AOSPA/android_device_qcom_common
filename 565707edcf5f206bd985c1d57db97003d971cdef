@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "4ed306c5_6d257b17",
+        "filename": "vendor/adreno/Android.mk",
+        "patchSetId": 1
+      },
+      "lineNbr": 42,
+      "author": {
+        "id": 1000012
+      },
+      "writtenOn": "2022-03-16T08:11:11Z",
+      "side": 1,
+      "message": "inconsistent space vs tabs",
+      "revId": "565707edcf5f206bd985c1d57db97003d971cdef",
+      "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
+    }
+  ]
+}
