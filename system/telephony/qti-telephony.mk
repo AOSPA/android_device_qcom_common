@@ -12,33 +12,12 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-PRODUCT_SOONG_NAMESPACES += \
-    device/qcom/common/system/telephony
-
 # APN List
 PRODUCT_COPY_FILES += \
-    $(QCOM_COMMON_PATH)/system/telephony/apns-conf.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/apns-conf.xml \
-
-# Data Services
-$(call inherit-product, vendor/qcom/opensource/dataservices/dataservices_vendor_product.mk)
+    $(QCOM_COMMON_PATH)/system/telephony/apns-conf.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/apns-conf.xml
 
 # HIDL
 DEVICE_FRAMEWORK_MANIFEST_FILE += $(QCOM_COMMON_PATH)/system/telephony/framework_manifest.xml
-
-# IPACM
-$(call inherit-product, vendor/qcom/opensource/data-ipa-cfg-mgr/ipacm_vendor_product.mk)
-
-# RIL
-ENABLE_VENDOR_RIL_SERVICE := true
-
-PRODUCT_PROPERTY_OVERRIDES += \
-    persist.radio.multisim.config=dsds \
-    persist.vendor.radio.apm_sim_not_pwdn=1 \
-    persist.vendor.radio.custom_ecc=1 \
-    persist.vendor.radio.enableadvancedscan=true \
-    persist.vendor.radio.procedure_bytes=SKIP \
-    persist.vendor.radio.rat_on=combine \
-    persist.vendor.radio.sib16_support=1
 
 # Packages
 PRODUCT_PACKAGES += \
@@ -69,12 +48,6 @@ PRODUCT_PACKAGES += \
 PRODUCT_BOOT_JARS += \
     tcmiface \
     telephony-ext
-
-# Permissions
-PRODUCT_COPY_FILES += \
-    frameworks/native/data/etc/android.hardware.telephony.gsm.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.telephony.gsm.xml \
-    frameworks/native/data/etc/android.hardware.telephony.cdma.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.telephony.cdma.xml \
-    frameworks/native/data/etc/android.hardware.telephony.ims.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.telephony.ims.xml
 
 # Properties
 PRODUCT_SYSTEM_EXT_PROPERTIES += \
