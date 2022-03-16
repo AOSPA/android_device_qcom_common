@@ -104,6 +104,24 @@
       "parentUuid": "c19afbd5_771a57c7",
       "revId": "7023132299124f3e5545a88a692b6f17ce0179f1",
       "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "63ee3f6f_65e092e3",
+        "filename": "system/telephony/qti-telephony.mk",
+        "patchSetId": 1
+      },
+      "lineNbr": 14,
+      "author": {
+        "id": 1000012
+      },
+      "writtenOn": "2022-03-16T16:44:35Z",
+      "side": 1,
+      "message": "still may be good for debugging. I\u0027m thinking we should define namespaces for all just in case.",
+      "parentUuid": "41abccf4_f9b4af77",
+      "revId": "7023132299124f3e5545a88a692b6f17ce0179f1",
+      "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
     }
   ]
 }
