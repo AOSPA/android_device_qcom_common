@@ -86,6 +86,24 @@
       "message": "I think we still keep namespaces typically here. if nothing else you can see it\u0027s used.",
       "revId": "7023132299124f3e5545a88a692b6f17ce0179f1",
       "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "41abccf4_f9b4af77",
+        "filename": "system/telephony/qti-telephony.mk",
+        "patchSetId": 1
+      },
+      "lineNbr": 14,
+      "author": {
+        "id": 1000579
+      },
+      "writtenOn": "2022-03-16T08:12:20Z",
+      "side": 1,
+      "message": "there is no namespace defined in android.bp in this component anymore so that wouldnt do anything\nalso vendor one will be picked it so vendor/telephony would show up",
+      "parentUuid": "c19afbd5_771a57c7",
+      "revId": "7023132299124f3e5545a88a692b6f17ce0179f1",
+      "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
     }
   ]
 }
