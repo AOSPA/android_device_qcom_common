@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "845043eb_0e682adf",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000012
+      },
+      "writtenOn": "2022-03-16T08:06:29Z",
+      "side": 1,
+      "message": "I\u0027m really not a huge fan of commits like these. best case scenario you\u0027re saving a marginal amount of space, worst you break something. https://github.com/AOSPA/android_device_qcom_common/commit/0e28562477ea1b1dce8ab46967a0d3ed0365346c was needed in Ruby when a similar commit broke media.",
+      "revId": "8ff39a1701e81510c847ca95fb49d4b205bb633c",
+      "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
+    }
+  ]
+}
