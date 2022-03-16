@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "bb5c75a0_c7f3432c",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 3
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000488
+      },
+      "writtenOn": "2022-03-16T10:23:11Z",
+      "side": 1,
+      "message": "whats the vendor tag taken from ",
+      "revId": "c2dc3e4a0a79d7cf375d44c155dd80fbe1084517",
+      "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
+    }
+  ]
+}
