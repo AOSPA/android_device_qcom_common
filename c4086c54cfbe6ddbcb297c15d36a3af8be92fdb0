@@ -33,6 +33,23 @@
       "message": "Please look for other chipsets which might need this change and add in the gaurd. Thankyou!",
       "revId": "c4086c54cfbe6ddbcb297c15d36a3af8be92fdb0",
       "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "e852020d_0aa52118",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000012
+      },
+      "writtenOn": "2022-03-16T16:43:34Z",
+      "side": 1,
+      "message": "should be able to do this for all of 3.18. 4.4 looks like it still uses these flags.",
+      "revId": "c4086c54cfbe6ddbcb297c15d36a3af8be92fdb0",
+      "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
     }
   ]
 }
