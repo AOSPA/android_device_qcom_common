@@ -112,6 +112,7 @@ endif
 
 ifneq (,$(filter wfd, $(TARGET_COMMON_QTI_COMPONENTS)))
 include $(QCOM_COMMON_PATH)/system/wfd/qti-wfd.mk
+include $(QCOM_COMMON_PATH)/vendor/wfd/qti-wfd.mk
 endif
 
 ifneq (,$(filter wlan, $(TARGET_COMMON_QTI_COMPONENTS)))
