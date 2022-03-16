@@ -18,6 +18,13 @@ ifneq (,$(filter wfd, $(TARGET_COMMON_QTI_COMPONENTS)))
 
 include $(CLEAR_VARS)
 
-$(shell mkdir -p $(TARGET_OUT_SYSTEM_EXT_APPS_PRIVILEGED)/WfdService/lib/arm64/ && pushd $(TARGET_OUT_SYSTEM_EXT_APPS_PRIVILEGED)/WfdService/lib/arm64 > /dev/null && ln -s /system_ext/lib64/libwfdnative.so libwfdnative.so && popd > /dev/null)
+WFDSERVICE_SYMLINKS := $(TARGET_OUT_SYSTEM_EXT_APPS_PRIVILEGED)/WfdService/lib/arm64
+$(WFDSERVICE_SYMLINKS): $(LOCAL_INSTALLED_MODULE)
+	@echo "WfdService lib link: $@"
+	@mkdir -p $(dir $@)
+	@rm -rf $@
+	$(hide) ln -sf $(TARGET_OUT_SYSTEM_EXT_SHARED_LIBRARIES)/libwfdnative.so $@/libwfdnative.so
+
+ALL_DEFAULT_INSTALLED_MODULES += $(WFDSERVICE_SYMLINKS)
 
 endif
