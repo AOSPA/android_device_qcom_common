@@ -16,6 +16,23 @@
       "message": "Please confirm if this is working correctly by doing `find out/target/something/system_ext -type l` (as well as vendor).",
       "revId": "7023132299124f3e5545a88a692b6f17ce0179f1",
       "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "80deb361_3604a8b1",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000012
+      },
+      "writtenOn": "2022-03-16T08:02:37Z",
+      "side": 1,
+      "message": "I\u0027d recommend changing adreno in a separate commit. that way if you need to revert, it\u0027s not affected.",
+      "revId": "7023132299124f3e5545a88a692b6f17ce0179f1",
+      "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
     }
   ]
 }
