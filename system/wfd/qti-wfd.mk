@@ -16,8 +16,7 @@ DEVICE_FRAMEWORK_MANIFEST_FILE += device/qcom/common/system/wfd/framework_manife
 
 PRODUCT_PACKAGES += \
     libavservices_minijail \
-    libnl \
-    libwfdaac
+    libnl
 
 PRODUCT_BOOT_JARS += \
     WfdCommon
