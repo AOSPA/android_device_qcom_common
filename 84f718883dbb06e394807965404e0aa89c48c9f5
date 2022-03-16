@@ -16,6 +16,24 @@
       "message": "does this only work for devices with source built display hal?",
       "revId": "84f718883dbb06e394807965404e0aa89c48c9f5",
       "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "72a046fa_dd78466b",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000579
+      },
+      "writtenOn": "2022-03-16T08:48:41Z",
+      "side": 1,
+      "message": "I could not get it working with prebuilt oneplus hwc on op7 atleast\nnow both op msmnile and alioth use oss hwc so it should be fine for those",
+      "parentUuid": "1a784d4f_05471418",
+      "revId": "84f718883dbb06e394807965404e0aa89c48c9f5",
+      "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
     }
   ]
 }
