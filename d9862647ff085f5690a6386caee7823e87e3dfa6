@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "d46081a8_bff9a8b1",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 5
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000012
+      },
+      "writtenOn": "2022-03-16T08:23:38Z",
+      "side": 1,
+      "message": "looks good, my only thought is we could have a comment in adreno-legacy Android.mk saying the symlinks are in adreno. Also depending on symlinks in taro and future chips, it could need to split again, but we can take that as it comes.",
+      "revId": "d9862647ff085f5690a6386caee7823e87e3dfa6",
+      "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
+    }
+  ]
+}
