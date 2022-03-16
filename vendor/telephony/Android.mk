@@ -18,6 +18,12 @@ ifneq (,$(filter telephony, $(TARGET_COMMON_QTI_COMPONENTS)))
 
 include $(CLEAR_VARS)
 
-$(shell mkdir -p $(TARGET_OUT_VENDOR_APPS)/CneApp/lib/arm64/vendor/lib64 && pushd $(TARGET_OUT_VENDOR_APPS)/CneApp/lib/arm64 > /dev/null && ln -s /vendor/lib64/libvndfwk_detect_jni.qti.so libvndfwk_detect_jni.qti.so && popd > /dev/null)
+CNE_SYMLINKS := $(TARGET_OUT_VENDOR_APPS)/CneApp/lib/arm64/
+$(CNE_SYMLINKS): $(LOCAL_INSTALLED_MODULE)
+	@rm -rf $@
+	@mkdir -p $(dir $@)
+	$(hide) ln -sf $(TARGET_OUT_VENDOR_SHARED_LIBRARIES)/libvndfwk_detect_jni.qti.so $@/libvndfwk_detect_jni.qti.so
+
+ALL_DEFAULT_INSTALLED_MODULES += $(CNE_SYMLINKS)
 
 endif
