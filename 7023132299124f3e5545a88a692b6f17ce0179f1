@@ -51,6 +51,23 @@
       "parentUuid": "17e1f4a8_63b90876",
       "revId": "7023132299124f3e5545a88a692b6f17ce0179f1",
       "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "c19afbd5_771a57c7",
+        "filename": "system/telephony/qti-telephony.mk",
+        "patchSetId": 1
+      },
+      "lineNbr": 14,
+      "author": {
+        "id": 1000012
+      },
+      "writtenOn": "2022-03-16T08:03:57Z",
+      "side": 1,
+      "message": "I think we still keep namespaces typically here. if nothing else you can see it\u0027s used.",
+      "revId": "7023132299124f3e5545a88a692b6f17ce0179f1",
+      "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
     }
   ]
 }
