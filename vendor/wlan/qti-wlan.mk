@@ -20,9 +20,6 @@ BOARD_HOSTAPD_DRIVER := NL80211
 BOARD_HOSTAPD_PRIVATE_LIB := lib_driver_cmd_$(BOARD_WLAN_DEVICE)
 BOARD_WPA_SUPPLICANT_DRIVER := NL80211
 BOARD_WPA_SUPPLICANT_PRIVATE_LIB := lib_driver_cmd_$(BOARD_WLAN_DEVICE)
-WIFI_DRIVER_STATE_CTRL_PARAM := "/dev/wlan"
-WIFI_DRIVER_STATE_ON := "ON"
-WIFI_DRIVER_STATE_OFF := "OFF"
 WPA_SUPPLICANT_VERSION := VER_0_8_X
 
 PRODUCT_COPY_FILES += \
@@ -44,6 +41,12 @@ PRODUCT_PACKAGES += \
     sigma_dut \
     wpa_supplicant \
     wpa_supplicant.conf
+
+ifneq ($(call is-board-platform-in-list, msm8953),true)
+WIFI_DRIVER_STATE_CTRL_PARAM := "/dev/wlan"
+WIFI_DRIVER_STATE_ON := "ON"
+WIFI_DRIVER_STATE_OFF := "OFF"
+endif
 
 ifeq ($(call is-board-platform-in-list, lahaina),true)
 PRODUCT_PACKAGES += \
