@@ -16,6 +16,24 @@
       "message": "inconsistent space vs tabs",
       "revId": "565707edcf5f206bd985c1d57db97003d971cdef",
       "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "12ae4cf4_1ed631f4",
+        "filename": "vendor/adreno/Android.mk",
+        "patchSetId": 1
+      },
+      "lineNbr": 42,
+      "author": {
+        "id": 1000579
+      },
+      "writtenOn": "2022-03-16T08:15:40Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "4ed306c5_6d257b17",
+      "revId": "565707edcf5f206bd985c1d57db97003d971cdef",
+      "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
     }
   ]
 }
