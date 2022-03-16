@@ -1,4 +1,4 @@
-# Copyright (C) 2020 Paranoid Android
+# Copyright (C) 2022 Paranoid Android
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -18,16 +18,12 @@ ifneq (,$(filter telephony, $(TARGET_COMMON_QTI_COMPONENTS)))
 
 include $(CLEAR_VARS)
 
-IMS_LIBS := libimscamera_jni.so libimsmedia_jni.so
-IMS_SYMLINKS := $(addprefix $(TARGET_OUT_SYSTEM_EXT_APPS_PRIVILEGED)/ims/lib/arm64/,$(notdir $(IMS_LIBS)))
-$(IMS_SYMLINKS): $(LOCAL_INSTALLED_MODULE)
-	@echo "IMS lib link: $@"
-	@mkdir -p $(dir $@)
+CNE_SYMLINKS := $(TARGET_OUT_VENDOR_APPS)/CneApp/lib/arm64/
+$(CNE_SYMLINKS): $(LOCAL_INSTALLED_MODULE)
 	@rm -rf $@
-	$(hide) ln -sf /system_ext/lib64/$(notdir $@) $@
+	@mkdir -p $(dir $@)/vendor/lib64
+	$(hide) ln -sf /vendor/lib64/libvndfwk_detect_jni.qti.so $@/libvndfwk_detect_jni.qti.so
 
-ALL_DEFAULT_INSTALLED_MODULES += $(IMS_SYMLINKS)
-
-$(shell mkdir -p $(TARGET_OUT_VENDOR_APPS)/CneApp/lib/arm64/vendor/lib64 && pushd $(TARGET_OUT_VENDOR_APPS)/CneApp/lib/arm64 > /dev/null && ln -s /vendor/lib64/libvndfwk_detect_jni.qti.so libvndfwk_detect_jni.qti.so && popd > /dev/null)
+ALL_DEFAULT_INSTALLED_MODULES += $(CNE_SYMLINKS)
 
 endif
