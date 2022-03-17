@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "167a775e_76d5c47e",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000012
+      },
+      "writtenOn": "2022-03-17T06:59:53Z",
+      "side": 1,
+      "message": "I\u0027m fine either way but you could probably just do 8937 and 8953. the other socs are unlikely to be supported and are missing support and definitions elsewhere.\n\n+2 but feel free to change it if you\u0027d like and I can review again.",
+      "revId": "8a4e79535837f641d47218d0a435d66951f25ca7",
+      "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
+    }
+  ]
+}
