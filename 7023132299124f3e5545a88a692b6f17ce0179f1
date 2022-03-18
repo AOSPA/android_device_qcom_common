@@ -122,6 +122,24 @@
       "parentUuid": "41abccf4_f9b4af77",
       "revId": "7023132299124f3e5545a88a692b6f17ce0179f1",
       "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "55cf7bfe_c4ab5f2b",
+        "filename": "system/telephony/qti-telephony.mk",
+        "patchSetId": 1
+      },
+      "lineNbr": 14,
+      "author": {
+        "id": 1000579
+      },
+      "writtenOn": "2022-03-18T04:43:56Z",
+      "side": 1,
+      "message": "I\u0027ll add this in a later commit for all components then?",
+      "parentUuid": "63ee3f6f_65e092e3",
+      "revId": "7023132299124f3e5545a88a692b6f17ce0179f1",
+      "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
     }
   ]
 }
