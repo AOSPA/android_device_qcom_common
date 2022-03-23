@@ -16,6 +16,24 @@
       "message": "only s qcril and newer would use this (same for radio.config) so unsure about having newer versions until taro is brought on roster",
       "revId": "5c2456ec46055be878f52bcf449d94d4df5398f4",
       "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "d9a49445_94e7b1eb",
+        "filename": "vendor/telephony/qti-telephony.mk",
+        "patchSetId": 1
+      },
+      "lineNbr": 28,
+      "author": {
+        "id": 1000173
+      },
+      "writtenOn": "2022-03-23T08:04:18Z",
+      "side": 1,
+      "message": "the point here is that if we have this https://github.com/AOSPA/android_device_qcom_common/blob/sapphire/system/telephony/qti-telephony.mk#L25 makes sense to build vendor packages too",
+      "parentUuid": "7d30b45d_c2a19e95",
+      "revId": "5c2456ec46055be878f52bcf449d94d4df5398f4",
+      "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
     }
   ]
 }
