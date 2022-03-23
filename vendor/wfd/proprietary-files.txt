@@ -9,7 +9,6 @@ vendor/etc/seccomp_policy/wfdvndservice.policy
 vendor/etc/seccomp_policy/wifidisplayhalservice.policy
 vendor/etc/wfdconfig.xml
 vendor/lib/libFileMux_proprietary.so
-vendor/lib/libmiracast.so
 vendor/lib/libmmrtpdecoder_proprietary.so
 vendor/lib/libmmrtpencoder_proprietary.so
 vendor/lib/libwfdcodecv4l2_proprietary.so
@@ -32,6 +31,5 @@ vendor/lib/libwfduibcsinkinterface_proprietary.so
 vendor/lib/libwfduibcsrc_proprietary.so
 vendor/lib/libwfduibcsrcinterface_proprietary.so
 vendor/lib/libwfdutils_proprietary.so
-vendor/lib/vendor.qti.hardware.sigma_miracast@1.0.so
 vendor/lib/vendor.qti.hardware.wifidisplaysession@1.0.so
 vendor/lib/vendor.qti.hardware.wifidisplaysessionl@1.0-halimpl.so
