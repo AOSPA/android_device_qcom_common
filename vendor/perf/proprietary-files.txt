@@ -25,6 +25,7 @@ vendor/lib/libpasrutils.so
 vendor/lib/libperfconfig.so
 vendor/lib/libperfgluelayer.so
 vendor/lib/libperfioctl.so
+vendor/lib/libpowercore.so
 vendor/lib/libqti-iopd.so
 vendor/lib/libqti-iopd-client.so
 vendor/lib/libqti-perfd.so
