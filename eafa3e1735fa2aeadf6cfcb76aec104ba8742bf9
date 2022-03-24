@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "5b8d5c4c_5f78eef3",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000579
+      },
+      "writtenOn": "2022-03-24T04:04:12Z",
+      "side": 1,
+      "message": "liblsmclient.so required by: liblistenjni.qti.so;\nlibpowercore.so required by: libvideooptfeature.so;",
+      "revId": "eafa3e1735fa2aeadf6cfcb76aec104ba8742bf9",
+      "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
+    }
+  ]
+}
