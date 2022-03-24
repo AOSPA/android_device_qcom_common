@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "5ff8d720_fca4456e",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000579
+      },
+      "writtenOn": "2022-03-24T02:47:18Z",
+      "side": 1,
+      "message": "https://github.com/AOSPA/android_hardware_qcom_media/blob/9aad52caa42040247350f6f8642da99d9c7252d3/mm-core/src/common/qc_omx_core.c#L393",
+      "revId": "d6564ac598225d1abe3e90ae560ba1b4b3ae8b5e",
+      "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
+    }
+  ]
+}
