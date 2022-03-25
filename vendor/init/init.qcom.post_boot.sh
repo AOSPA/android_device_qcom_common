@@ -1106,6 +1106,36 @@ case "$target" in
         ;;
 esac
 
+# For Kodiak target for which cdsp is defective, we read remote cdsp status from fastrpc node
+# and if its value is false we disable cdsp daemon by setting the cdsp disable propety to true
+case "$target" in
+	"lahaina")
+		if [ -f /sys/devices/soc0/chip_family ]; then
+			chip_family_id=`cat /sys/devices/soc0/chip_family`
+		else
+			chip_family_id=-1
+		fi
+
+		echo "adsprpc : chip_family_id : $chip_faily_id" > /dev/kmsg
+
+		case "$chip_family_id" in
+			"0x76")
+			if [ -f /sys/devices/platform/soc/soc:qcom,msm_fastrpc/remote_cdsp_status ]; then
+				remote_cdsp_status=`cat /sys/devices/platform/soc/soc:qcom,msm_fastrpc/remote_cdsp_status`
+			else
+				remote_cdsp_status=-1
+			fi
+
+			echo "adsprpc : remote_cdsp_status : $remote_cdsp_status" > /dev/kmsg
+
+			if [ $remote_cdsp_status -eq 0 ]; then
+				setprop vendor.fastrpc.disable.cdsprpcd.daemon 1
+				echo "adsprpc : Disabled cdsp daemon" > /dev/kmsg
+			fi
+		 esac
+		  ;;
+esac
+
 case "$target" in
     "msm7201a_ffa" | "msm7201a_surf")
         echo 500000 > /sys/devices/system/cpu/cpufreq/ondemand/sampling_rate
