@@ -22,6 +22,7 @@ PRODUCT_BOOT_JARS += \
     WfdCommon
 
 PRODUCT_SYSTEM_EXT_PROPERTIES += \
+    debug.sf.enable_hwc_vds=1 \
     persist.debug.wfd.enable=1 \
     persist.sys.wfd.virtual=0
 
