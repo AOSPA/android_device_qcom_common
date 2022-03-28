@@ -98,7 +98,6 @@ struct IQtiMapper : public IBase {
 };
 
 }  // namespace V3_0
-#ifdef SHIM_MODE
 namespace V2_0 {
 
 struct IQtiMapper : public IBase {
@@ -182,5 +181,4 @@ struct IQtiMapper : public IBase {
 };
 
 }  // namespace V2_0
-#endif
 }  // namespace vendor::qti::hardware::display::mapper
