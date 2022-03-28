@@ -29,3 +29,22 @@ PRODUCT_PROPERTY_OVERRIDES += \
 
 # Get non-open-source specific aspects.
 $(call inherit-product, vendor/qcom/common/vendor/adreno/adreno-vendor.mk)
+
+# Use qtimapper-shim for sdm845
+ifeq ($(call is-board-platform-in-list,sdm845),true)
+ifneq (,$(filter 4.9, $(TARGET_KERNEL_VERSION)))
+# Guard for qtimapper-shim usage
+TARGET_USES_QTIMAPPER_SHIM ?= true
+
+ifeq ($(TARGET_USES_QTIMAPPER_SHIM), true)
+# Qtimapper shim
+PRODUCT_PACKAGES += \
+    android.hardware.graphics.mappershim \
+    vendor.qti.hardware.display.mappershim \
+    vendor.qti.hardware.display.mapperextensionsshim
+
+# Use patched adreno blobs with qtimapper-shim
+$(call inherit-product, vendor/qcom/common/vendor/adreno/qtimapper-shim/patched.mk)
+endif
+endif
+endif
