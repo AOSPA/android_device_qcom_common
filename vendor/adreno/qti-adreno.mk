@@ -44,7 +44,10 @@ PRODUCT_PACKAGES += \
     vendor.qti.hardware.display.mapperextensionsshim
 
 # Use patched adreno blobs with qtimapper-shim
-$(call inherit-product, vendor/qcom/common/vendor/adreno/qtimapper-shim/patched.mk)
+PRODUCT_PACKAGES += \
+    libCB-qtimapper-shim \
+    eglSubDriverAndroid-qtimapper-shim \
+    vulkan.adreno-qtimapper-shim
 endif
 endif
 endif

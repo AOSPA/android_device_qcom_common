@@ -22,3 +22,4 @@ export COMPONENT=adreno
 export VENDOR=qcom/common/vendor
 
 "../setup-makefiles.sh" "$@"
+"./setup-qtimapper-shim.sh"
