@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "a841335f_c7483086",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 8
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000579
+      },
+      "writtenOn": "2022-04-02T12:50:16Z",
+      "side": 1,
+      "message": "for some reason building vendor hidl in system component irks me ",
+      "revId": "93c95363d6642ba0bc3f39e386b6e2c20d4f8a49",
+      "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
+    }
+  ]
+}
