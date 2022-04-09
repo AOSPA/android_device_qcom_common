@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "c24e9940_1a6a9b71",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000463
+      },
+      "writtenOn": "2022-04-09T13:46:47Z",
+      "side": 1,
+      "message": "Please take care of wificond too\n\nhttps://android.googlesource.com/device/google/gs101/+/refs/tags/android-12.1.0_r3/device.mk#518",
+      "revId": "466c4b778d950de91139eef9137658665a287295",
+      "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
+    }
+  ]
+}
