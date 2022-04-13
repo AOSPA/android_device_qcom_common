@@ -16,6 +16,23 @@
       "message": "https://github.com/pa-gr/proprietary_vendor_qcom_common/commit/3ab72a3a8d0a120f5cf388d56dd7ca52bf5d77da",
       "revId": "9b2df99ef101c3617d6211ee2e44a3f2b6bffd39",
       "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "b500b69d_614789ba",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000062
+      },
+      "writtenOn": "2022-04-13T22:36:53Z",
+      "side": 1,
+      "message": "Please merge if testing goes well.",
+      "revId": "9b2df99ef101c3617d6211ee2e44a3f2b6bffd39",
+      "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
     }
   ]
 }
