@@ -113,6 +113,7 @@ IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.-->
         <long name="carrier_data_call_apn_retry_after_disconnect_long" value="100" />
         <!-- Config to enable the example android location attribution app by default -->
         <string name="gps.nfw_proxy_apps">com.example.android.locationattribution</string>
+        <boolean name="carrier_cross_sim_ims_available_bool" value="true" />
     </carrier_config>
 
     <carrier_config mcc="001" mnc="01">
