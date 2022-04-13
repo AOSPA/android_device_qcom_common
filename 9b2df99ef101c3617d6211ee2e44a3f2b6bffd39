@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "04787566_3d0247ac",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000469
+      },
+      "writtenOn": "2022-04-13T19:33:12Z",
+      "side": 1,
+      "message": "https://github.com/pa-gr/proprietary_vendor_qcom_common/commit/3ab72a3a8d0a120f5cf388d56dd7ca52bf5d77da",
+      "revId": "9b2df99ef101c3617d6211ee2e44a3f2b6bffd39",
+      "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
+    }
+  ]
+}
