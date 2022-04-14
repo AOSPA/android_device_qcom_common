@@ -16,7 +16,6 @@ vendor/lib/libgsl.so
 vendor/lib/libllvm-glnext.so
 vendor/lib/libllvm-qcom.so
 vendor/lib/librs_adreno.so
-vendor/lib/libscalar.so
 vendor/lib64/egl/eglSubDriverAndroid.so
 vendor/lib64/egl/libEGL_adreno.so
 vendor/lib64/egl/libGLESv1_CM_adreno.so
@@ -35,28 +34,3 @@ vendor/lib64/libgsl.so
 vendor/lib64/libllvm-glnext.so
 vendor/lib64/libllvm-qcom.so
 vendor/lib64/librs_adreno.so
-vendor/lib64/libscalar.so
-
-# SDM
-vendor/bin/mm-pp-dpps
-vendor/bin/hw/vendor.display.color@1.0-service
-vendor/etc/init/vendor.display.color@1.0-service.rc
-vendor/lib/libhdr_tm.so
-vendor/lib/libsdedrm.so
-vendor/lib/libsdm-color.so
-vendor/lib/libsdm-diag.so
--vendor/lib/libsdm-disp-vndapis.so
-vendor/lib/libsdmextension.so
-vendor/lib/libtinyxml2_1.so
-vendor/lib/vendor.display.color@1.0.so
-vendor/lib/vendor.display.postproc@1.0.so
-vendor/lib64/libdisp-aba.so
-vendor/lib64/libhdr_tm.so
-vendor/lib64/libsdedrm.so
-vendor/lib64/libsdm-color.so
-vendor/lib64/libsdm-diag.so
--vendor/lib64/libsdm-disp-vndapis.so
-vendor/lib64/libsdmextension.so
-vendor/lib64/libtinyxml2_1.so
-vendor/lib64/vendor.display.color@1.0.so
-vendor/lib64/vendor.display.postproc@1.0.so
