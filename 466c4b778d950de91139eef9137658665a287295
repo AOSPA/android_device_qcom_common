@@ -34,6 +34,23 @@
       "parentUuid": "c24e9940_1a6a9b71",
       "revId": "466c4b778d950de91139eef9137658665a287295",
       "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "c0136491_e47cc939",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000579
+      },
+      "writtenOn": "2022-04-14T12:25:27Z",
+      "side": 1,
+      "message": "21265: packages: build libwpa_client | https://gerrit.aospa.co/c/AOSPA/android_vendor_aospa/+/21265\n\nas I said before, libwpa_client isn\u0027t dependency of just wifi hal",
+      "revId": "466c4b778d950de91139eef9137658665a287295",
+      "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
     }
   ]
 }
