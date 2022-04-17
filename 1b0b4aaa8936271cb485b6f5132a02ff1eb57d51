@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "cec4ac4f_d7931888",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000760
+      },
+      "writtenOn": "2022-04-17T12:23:25Z",
+      "side": 1,
+      "message": "needed for \n\nhttps://gerrit.aospa.co/c/AOSPA/android_device_qcom_common/+/21304",
+      "revId": "1b0b4aaa8936271cb485b6f5132a02ff1eb57d51",
+      "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
+    }
+  ]
+}
