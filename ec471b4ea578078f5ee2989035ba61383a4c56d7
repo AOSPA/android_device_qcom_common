@@ -16,6 +16,24 @@
       "message": "tested.. boots and works perfectly as intended",
       "revId": "ec471b4ea578078f5ee2989035ba61383a4c56d7",
       "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "e1599fbc_a8158707",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000760
+      },
+      "writtenOn": "2022-04-17T12:21:59Z",
+      "side": 1,
+      "message": "https://github.com/aospa-sdm660/proprietary_vendor_qcom_common/commit/9bec1b86a368fff79fd90a94a19fb12ff6457c60\n\nthe vendor part",
+      "parentUuid": "4eaabef2_df094498",
+      "revId": "ec471b4ea578078f5ee2989035ba61383a4c56d7",
+      "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
     }
   ]
 }
