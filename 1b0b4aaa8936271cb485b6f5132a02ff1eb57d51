@@ -16,6 +16,24 @@
       "message": "needed for \n\nhttps://gerrit.aospa.co/c/AOSPA/android_device_qcom_common/+/21304",
       "revId": "1b0b4aaa8936271cb485b6f5132a02ff1eb57d51",
       "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "cc23513a_f839cb4e",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000760
+      },
+      "writtenOn": "2022-04-17T12:24:22Z",
+      "side": 1,
+      "message": "https://gerrit.aospa.co/c/AOSPA/android_device_qcom_common/+/21305\n\ni mean this one",
+      "parentUuid": "cec4ac4f_d7931888",
+      "revId": "1b0b4aaa8936271cb485b6f5132a02ff1eb57d51",
+      "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
     }
   ]
 }
