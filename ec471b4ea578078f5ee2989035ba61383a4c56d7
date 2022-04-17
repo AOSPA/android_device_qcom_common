@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "4eaabef2_df094498",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000760
+      },
+      "writtenOn": "2022-04-17T12:20:50Z",
+      "side": 1,
+      "message": "tested.. boots and works perfectly as intended",
+      "revId": "ec471b4ea578078f5ee2989035ba61383a4c56d7",
+      "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
+    }
+  ]
+}
