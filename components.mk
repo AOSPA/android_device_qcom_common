@@ -29,7 +29,6 @@ TARGET_COMMON_QTI_COMPONENTS := \
     telephony \
     usb \
     vibrator \
-    wfd \
     wlan
 
 ifeq ($(call is-board-platform-in-list,$(5_4_FAMILY)),true)
@@ -42,6 +41,12 @@ ifneq (,$(filter true, $(call is-board-platform-in-list,$(3_18_FAMILY) $(4_4_FAM
 TARGET_COMMON_QTI_COMPONENTS += adreno-legacy
 else
 TARGET_COMMON_QTI_COMPONENTS += adreno
+endif
+
+ifeq ($(call is-board-platform-in-list,$(3_18_FAMILY) $(4_4_FAMILY) msm8953),true)
+TARGET_COMMON_QTI_COMPONENTS += wfd-legacy
+else
+TARGET_COMMON_QTI_COMPONENTS += wfd
 endif
 endif
 
@@ -121,6 +126,11 @@ include $(QCOM_COMMON_PATH)/vendor/wlan/qti-wlan.mk
 endif
 
 # <= MSM8998
+ifneq (,$(filter wfd-legacy, $(TARGET_COMMON_QTI_COMPONENTS)))
+include $(QCOM_COMMON_PATH)/system/wfd-legacy/qti-wfd-legacy.mk
+include $(QCOM_COMMON_PATH)/vendor/wfd-legacy/qti-wfd-legacy.mk
+endif
+
 ifneq (,$(filter adreno-legacy, $(TARGET_COMMON_QTI_COMPONENTS)))
 include $(QCOM_COMMON_PATH)/vendor/adreno-legacy/qti-adreno-legacy.mk
 endif
