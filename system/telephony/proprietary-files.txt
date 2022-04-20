@@ -34,7 +34,6 @@ product/etc/permissions/UimService.xml
 -system_ext/app/atfwd/atfwd.apk
 -system_ext/app/embms/embms.apk
 -system_ext/app/imssettings/imssettings.apk
--system_ext/app/uceShimService/uceShimService.apk
 system_ext/bin/diag_callback_sample_system
 system_ext/bin/diag_dci_sample_system
 system_ext/bin/diag_mdlog_system
@@ -110,16 +109,20 @@ system_ext/etc/spn-conf.xml
 -system_ext/framework/vendor.qti.ims.callinfo-V1.0-java.jar
 -system_ext/framework/vendor.qti.ims.connection-V1.0-java.jar
 -system_ext/framework/vendor.qti.ims.configservice-V1.0-java.jar
+-system_ext/framework/vendor.qti.ims.configservice-V1.1-java.jar
 -system_ext/framework/vendor.qti.ims.connection-V1.0-java.jar
 -system_ext/framework/vendor.qti.ims.factory-V1.0-java.jar
 -system_ext/framework/vendor.qti.ims.factory-V1.1-java.jar
 -system_ext/framework/vendor.qti.ims.factory-V2.0-java.jar
+-system_ext/framework/vendor.qti.ims.factory-V2.1-java.jar
 -system_ext/framework/vendor.qti.ims.rcsconfig-V1.0-java.jar
 -system_ext/framework/vendor.qti.ims.rcsconfig-V1.1-java.jar
 -system_ext/framework/vendor.qti.ims.rcsconfig-V2.0-java.jar
 -system_ext/framework/vendor.qti.ims.rcsconfig-V2.1-java.jar
 -system_ext/framework/vendor.qti.ims.rcssip-V1.0-java.jar
+-system_ext/framework/vendor.qti.ims.rcssip-V1.1-java.jar
 -system_ext/framework/vendor.qti.ims.rcsuce-V1.0-java.jar
+-system_ext/framework/vendor.qti.ims.rcsuce-V1.1-java.jar
 -system_ext/framework/vendor.qti.latency-V2.0-java.jar
 -system_ext/framework/vendor.qti.latency-V2.1-java.jar
 system_ext/lib64/com.qualcomm.qti.dpm.api@1.0.so
@@ -199,8 +202,6 @@ system_ext/lib64/vendor.qti.hardware.embmssl@1.0-adapter-helper.so
 system_ext/lib64/vendor.qti.hardware.embmssl@1.0.so
 system_ext/lib64/vendor.qti.hardware.embmssl@1.1-adapter-helper.so
 system_ext/lib64/vendor.qti.hardware.embmssl@1.1.so
-system_ext/lib64/vendor.qti.hardware.factory@1.0.so
-system_ext/lib64/vendor.qti.hardware.factory@1.1.so
 system_ext/lib64/vendor.qti.hardware.mwqemadapter@1.0.so
 system_ext/lib64/vendor.qti.hardware.radio.am@1.0.so
 system_ext/lib64/vendor.qti.hardware.radio.ims@1.0.so
@@ -236,16 +237,20 @@ system_ext/lib64/vendor.qti.hardware.slmadapter@1.0.so
 system_ext/lib64/vendor.qti.ims.callcapability@1.0.so
 system_ext/lib64/vendor.qti.ims.callinfo@1.0.so
 system_ext/lib64/vendor.qti.ims.configservice@1.0.so
+system_ext/lib64/vendor.qti.ims.configservice@1.1.so
 system_ext/lib64/vendor.qti.ims.connection@1.0.so
 system_ext/lib64/vendor.qti.ims.factory@1.0.so
 system_ext/lib64/vendor.qti.ims.factory@1.1.so
 system_ext/lib64/vendor.qti.ims.factory@2.0.so
+system_ext/lib64/vendor.qti.ims.factory@2.1.so
 system_ext/lib64/vendor.qti.ims.rcsconfig@1.0.so
 system_ext/lib64/vendor.qti.ims.rcsconfig@1.1.so
 system_ext/lib64/vendor.qti.ims.rcsconfig@2.0.so
 system_ext/lib64/vendor.qti.ims.rcsconfig@2.1.so
 system_ext/lib64/vendor.qti.ims.rcssip@1.0.so
+system_ext/lib64/vendor.qti.ims.rcssip@1.1.so
 system_ext/lib64/vendor.qti.ims.rcsuce@1.0.so
+system_ext/lib64/vendor.qti.ims.rcsuce@1.1.so
 system_ext/lib64/vendor.qti.imsrtpservice@3.0.so
 system_ext/lib64/vendor.qti.latency@2.0.so
 system_ext/lib64/vendor.qti.latency@2.1.so
@@ -255,3 +260,6 @@ system_ext/lib64/vendor.qti.mstatservice@1.0.so
 -system_ext/priv-app/ims/ims.apk
 -system_ext/priv-app/qcrilmsgtunnel/qcrilmsgtunnel.apk
 -system/framework/tcmclient.jar
+
+# uceShimService - from LA.QSSI.12.0.r1-05800-qssi.0
+-system_ext/app/uceShimService/uceShimService.apk|d3a55dbb95418751fc4564964ff18f63b9ff1b3b
