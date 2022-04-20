@@ -18,7 +18,6 @@ system_ext/lib/libqti-perfd-client_system.so
 system_ext/lib/libqti_performance.so
 system_ext/lib/libqti_workloadclassifiermodel.so
 system_ext/lib/libskewknob_system.so
-system_ext/lib/libsmomo.qti.so
 system_ext/lib/libsmomoconfig.qti.so
 system_ext/lib/vendor.qti.hardware.limits@1.0.so
 system_ext/lib/vendor.qti.hardware.limits@1.1.so
@@ -40,7 +39,6 @@ system_ext/lib64/libqti-perfd-client_system.so
 system_ext/lib64/libqti_performance.so
 system_ext/lib64/libqti_workloadclassifiermodel.so
 system_ext/lib64/libskewknob_system.so
-system_ext/lib64/libsmomo.qti.so
 system_ext/lib64/libsmomoconfig.qti.so
 system_ext/lib64/vendor.qti.hardware.limits@1.0.so
 system_ext/lib64/vendor.qti.hardware.limits@1.1.so
