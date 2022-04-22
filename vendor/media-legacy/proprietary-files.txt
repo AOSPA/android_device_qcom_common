@@ -6,6 +6,8 @@ vendor/etc/media_codecs_c2.xml
 vendor/etc/media_codecs_performance_c2.xml
 vendor/etc/seccomp_policy/codec2.vendor.ext-arm.policy
 vendor/etc/seccomp_policy/codec2.vendor.base-arm.policy
+vendor/lib/libC2D2.so
+vendor/lib/libc2d30_bltlib.so
 vendor/lib/libOmxSwVdec.so
 vendor/lib/libOmxSwVencMpeg4.so
 vendor/lib/libOmxVideoDSMode.so
@@ -15,6 +17,8 @@ vendor/lib/libqcodec2_utils.so
 vendor/lib/libqcodec2_platform.so
 vendor/lib/libqcodec2_basecodec.so
 vendor/lib/libqcodec2_v4l2codec.so
+vendor/lib64/libC2D2.so
+vendor/lib64/libc2d30_bltlib.so
 vendor/lib64/libOmxSwVdec.so
 vendor/lib64/libOmxSwVencMpeg4.so
 vendor/lib64/libqcodec2_base.so
