@@ -68,6 +68,23 @@
       "message": "04-22 03:23:45.322 19529 19529 E AndroidRuntime: FATAL EXCEPTION: main\n04-22 03:23:45.322 19529 19529 E AndroidRuntime: Process: com.android.phone, PID: 19529\n04-22 03:23:45.322 19529 19529 E AndroidRuntime: java.lang.SecurityException: getImsFeatureState: Neither user 1001 nor current process has android.permission.READ_PHONE_STATE.\n04-22 03:23:45.322 19529 19529 E AndroidRuntime: \tat android.os.Parcel.createExceptionOrNull(Parcel.java:2425)\n04-22 03:23:45.322 19529 19529 E AndroidRuntime: \tat android.os.Parcel.createException(Parcel.java:2409)\n04-22 03:23:45.322 19529 19529 E AndroidRuntime: \tat android.os.Parcel.readException(Parcel.java:2392)\n04-22 03:23:45.322 19529 19529 E AndroidRuntime: \tat android.os.Parcel.readException(Parcel.java:2334)\n04-22 03:23:45.322 19529 19529 E AndroidRuntime: \tat org.codeaurora.ims.internal.IQtiImsExt$Stub$Proxy.getImsFeatureState(IQtiImsExt.java:1269)\n04-22 03:23:45.322 19529 19529 E AndroidRuntime: \tat org.codeaurora.ims.QtiImsExtManager.checkFeatureStatus(QtiImsExtManager.java:231)\n04-22 03:23:45.322 19529 19529 E AndroidRuntime: \tat org.codeaurora.ims.QtiImsExtManager.validateInvariants(QtiImsExtManager.java:365)\n04-22 03:23:45.322 19529 19529 E AndroidRuntime: \tat org.codeaurora.ims.QtiImsExtManager.isExitScbmFeatureSupported(QtiImsExtManager.java:418)\n04-22 03:23:45.322 19529 19529 E AndroidRuntime: \tat com.qualcomm.qti.internal.telephony.ScbmHandler$3.onConnectionAvailable(ScbmHandler.java:259)\n04-22 03:23:45.322 19529 19529 E AndroidRuntime: \tat org.codeaurora.ims.QtiImsExtConnector$1.onServiceConnected(QtiImsExtConnector.java:170)\n04-22 03:23:45.322 19529 19529 E AndroidRuntime: \tat android.app.LoadedApk$ServiceDispatcher.doConnected(LoadedApk.java:2077)\n04-22 03:23:45.322 19529 19529 E AndroidRuntime: \tat android.app.LoadedApk$ServiceDispatcher$RunConnection.run(LoadedApk.java:2110)\n04-22 03:23:45.322 19529 19529 E AndroidRuntime: \tat android.os.Handler.handleCallback(Handler.java:938)\n04-22 03:23:45.322 19529 19529 E AndroidRuntime: \tat android.os.Handler.dispatchMessage(Handler.java:99)\n04-22 03:23:45.322 19529 19529 E AndroidRuntime: \tat android.os.Looper.loopOnce(Looper.java:201)\n04-22 03:23:45.322 19529 19529 E AndroidRuntime: \tat android.os.Looper.loop(Looper.java:288)\n04-22 03:23:45.322 19529 19529 E AndroidRuntime: \tat android.app.ActivityThread.main(ActivityThread.java:7911)\n04-22 03:23:45.322 19529 19529 E AndroidRuntime: \tat java.lang.reflect.Method.invoke(Native Method)\n04-22 03:23:45.322 19529 19529 E AndroidRuntime: \tat com.android.internal.os.RuntimeInit$MethodAndArgsCaller.run(RuntimeInit.java:548)\n04-22 03:23:45.322 19529 19529 E AndroidRuntime: \tat com.android.internal.os.ZygoteInit.main(ZygoteInit.java:1009)\n",
       "revId": "97cf17d39ec99df4a601f1bfcbf5df0d38bf2846",
       "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "9842d296_db6b5903",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000579
+      },
+      "writtenOn": "2022-04-22T08:13:11Z",
+      "side": 1,
+      "message": "broke telephony since 6500 qssi",
+      "revId": "97cf17d39ec99df4a601f1bfcbf5df0d38bf2846",
+      "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
     }
   ]
 }
