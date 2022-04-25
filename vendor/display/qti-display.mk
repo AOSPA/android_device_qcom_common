@@ -43,7 +43,8 @@ PRODUCT_PACKAGES += \
 
 # Properties
 PRODUCT_VENDOR_PROPERTIES += \
-    debug.sf.predict_hwc_composition_strategy=0
+    debug.sf.predict_hwc_composition_strategy=0 \
+    debug.sf.treat_170m_as_sRGB=1
 
 # Get non-open-source specific aspects.
 $(call inherit-product-if-exists, vendor/qcom/common/vendor/display/display-vendor.mk)
