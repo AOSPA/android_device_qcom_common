@@ -34,6 +34,24 @@
       "parentUuid": "30f0d747_f29ddb59",
       "revId": "e28f71ccb9225c16137aa2d6345347b66a555b87",
       "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "46674709_db1acf23",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 6
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000541
+      },
+      "writtenOn": "2022-04-25T16:34:27Z",
+      "side": 1,
+      "message": "think google modules should be dropped anyway - also causes the sim unlock prompt delay (not happening if not inherited)",
+      "parentUuid": "3aedefa9_35908bff",
+      "revId": "e28f71ccb9225c16137aa2d6345347b66a555b87",
+      "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
     }
   ]
 }
