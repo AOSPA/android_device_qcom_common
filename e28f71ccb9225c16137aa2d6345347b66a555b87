@@ -16,6 +16,24 @@
       "message": "added google modules and now it wants to die",
       "revId": "e28f71ccb9225c16137aa2d6345347b66a555b87",
       "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "3aedefa9_35908bff",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 6
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000579
+      },
+      "writtenOn": "2022-04-25T11:58:05Z",
+      "side": 1,
+      "message": "04-25 17:27:33.681  8505  8524 W IWlanNetworkService: 4 \u003e Response Processed\n04-25 17:27:33.682  2719  2748 E JavaBinder: *** Uncaught remote exception!  (Exceptions are not yet supported across processes.)\n04-25 17:27:33.682  2719  2748 E JavaBinder: java.lang.RuntimeException: android.os.RemoteException: API not available!\n04-25 17:27:33.682  2719  2748 E JavaBinder:    at android.os.Parcel.writeException(Parcel.java:2210)\n04-25 17:27:33.682  2719  2748 E JavaBinder:    at android.os.Binder.execTransactInternal(Binder.java:1203)\n04-25 17:27:33.682  2719  2748 E JavaBinder:    at android.os.Binder.execTransact(Binder.java:1143)\n04-25 17:27:33.682  2719  2748 E JavaBinder: Caused by: android.os.RemoteException: API not available!\n04-25 17:27:33.682  2719  2748 E JavaBinder:    at com.qti.phone.QtiRadioHidl.getQtiRadioCapability(QtiRadioHidl.java:959)\n04-25 17:27:33.682  2719  2748 E JavaBinder:    at com.qti.phone.QtiRadioProxy.getQtiRadioCapability(QtiRadioProxy.java:776)\n04-25 17:27:33.682  2719  2748 E JavaBinder:    at com.qti.phone.ExtTelephonyServiceImpl.getQtiRadioCapability(ExtTelephonyServiceImpl.java:336)\n04-25 17:27:33.682  2719  2748 E JavaBinder:    at com.qti.phone.ExtTelephonyService$1.getQtiRadioCapability(ExtTelephonyService.java:228)\n04-25 17:27:33.682  2719  2748 E JavaBinder:    at com.qti.extphone.IExtPhone$Stub.onTransact(IExtPhone.java:774)\n04-25 17:27:33.682  2719  2748 E JavaBinder:    at android.os.Binder.execTransactInternal(Binder.java:1179)\n04-25 17:27:33.682  2719  2748 E JavaBinder:    ... 1 more\n04-25 17:27:33.683  8427  8427 W System.err: java.lang.NullPointerException: Attempt to invoke virtual method \u0027int com.qti.extphone.Token.get()\u0027 on a null object reference\n04-25 17:27:33.683  8427  8427 W System.err:    at com.qualcomm.qti.internal.telephony.QtiPhoneUtils.getQtiRadioCapability(QtiPhoneUtils.java:180)\n04-25 17:27:33.683  8427  8427 W System.err:    at com.qualcomm.qti.internal.telephony.QtiRIL.getEnhancedRadioCapability(QtiRIL.java:410)\n04-25 17:27:33.683  8427  8427 W System.err:    at com.qualcomm.qti.internal.telephony.dataconnection.QtiDcTracker.handleMessage(QtiDcTracker.java:332)\n04-25 17:27:33.683  8427  8427 W System.err:    at android.os.Handler.dispatchMessage(Handler.java:106)\n04-25 17:27:33.683  8427  8427 W System.err:    at android.os.Looper.loopOnce(Looper.java:201)\n04-25 17:27:33.683  8427  8427 W System.err:    at android.os.Looper.loop(Looper.java:288)\n04-25 17:27:33.683  8427  8427 W System.err:    at android.app.ActivityThread.main(ActivityThread.java:7911)\n04-25 17:27:33.683  8427  8427 W System.err:    at java.lang.reflect.Method.invoke(Native Method)\n04-25 17:27:33.683  8427  8427 W System.err:    at com.android.internal.os.RuntimeInit$MethodAndArgsCaller.run(RuntimeInit.java:548)\n04-25 17:27:33.683  8427  8427 W System.err:    at com.android.internal.os.ZygoteInit.main(ZygoteInit.java:1009)\n04-25 17:27:33.686  2732  2732 E QImsService: ImsConfigImpl : onSubscriptionsChanged unable to process due to SubscriptionInfo is null",
+      "parentUuid": "30f0d747_f29ddb59",
+      "revId": "e28f71ccb9225c16137aa2d6345347b66a555b87",
+      "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
     }
   ]
 }
