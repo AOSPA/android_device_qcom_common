@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "8d037374_f8a4b03a",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 5
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000579
+      },
+      "writtenOn": "2022-04-25T08:33:10Z",
+      "side": 1,
+      "message": "switching to user build seems to have fixed the telephony issues",
+      "revId": "d083708f2a6ed6b3c6f09139e8151e56d4d35cad",
+      "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
+    }
+  ]
+}
