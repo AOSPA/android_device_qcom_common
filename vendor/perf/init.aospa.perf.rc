@@ -36,7 +36,7 @@ on post-fs-data
 
 on property:vendor.post_boot.parsed=1
     # Place restricted tasks on little cluster
-    write /dev/cpuset/restricted/cpus 0-3
+    write /dev/cpuset/restricted/cpus ${persist.device_config.vendor_system_native.restricted_cpuset:-0-3}
     # Reset readahead to 128KiB
     write /sys/block/dm-0/queue/read_ahead_kb 128
     write /sys/block/dm-1/queue/read_ahead_kb 128
@@ -96,6 +96,10 @@ on property:vendor.post_boot.parsed=1
     write /sys/block/sde/queue/read_ahead_kb 128
     write /sys/block/sdf/queue/read_ahead_kb 128
 
+# Cpuset experiment
+on property:persist.device_config.vendor_system_native.restricted_cpuset=*
+    write /dev/cpuset/restricted/cpus ${persist.device_config.vendor_system_native.restricted_cpuset:-0-3}
+    
 on property:ro.board.platform=lahaina
     # Setup foreground cpuset for display composer.
     write /dev/cpuset/foreground/cpus 0-6
