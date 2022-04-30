@@ -49,5 +49,8 @@ PRODUCT_VENDOR_PROPERTIES += \
     debug.sf.treat_170m_as_sRGB=1
 endif
 
+PRODUCT_VENDOR_PROPERTIES += \
+    debug.renderengine.backend=skiaglthreaded
+
 # Get non-open-source specific aspects.
 $(call inherit-product-if-exists, vendor/qcom/common/vendor/display/$(TARGET_KERNEL_VERSION)/display-vendor.mk)
