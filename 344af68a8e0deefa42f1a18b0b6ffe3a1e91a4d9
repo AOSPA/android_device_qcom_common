@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "693aa09a_866cc0ba",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000062
+      },
+      "writtenOn": "2022-05-07T18:06:33Z",
+      "side": 1,
+      "message": "Is 06500 on the commit message still accurate?",
+      "revId": "344af68a8e0deefa42f1a18b0b6ffe3a1e91a4d9",
+      "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
+    }
+  ]
+}
