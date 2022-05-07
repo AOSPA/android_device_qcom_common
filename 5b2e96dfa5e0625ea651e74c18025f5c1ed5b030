@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "c6be46f5_3c2bc8d2",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000469
+      },
+      "writtenOn": "2022-05-07T17:56:42Z",
+      "side": 1,
+      "message": "https://github.com/pa-gr/proprietary_vendor_qcom_common/commits/sapphire",
+      "revId": "5b2e96dfa5e0625ea651e74c18025f5c1ed5b030",
+      "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
+    }
+  ]
+}
