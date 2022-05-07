@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "d9cf8aef_22986ad7",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000469
+      },
+      "writtenOn": "2022-05-07T18:56:12Z",
+      "side": 1,
+      "message": "DNM until c2d libs are added in media-legacy too",
+      "revId": "1d91f33712623e6fa4461f83119d2eaf8766f775",
+      "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
+    }
+  ]
+}
