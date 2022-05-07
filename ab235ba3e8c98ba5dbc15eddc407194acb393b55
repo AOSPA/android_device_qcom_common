@@ -16,6 +16,23 @@
       "message": "https://github.com/gotenksIN/proprietary_vendor_qcom_common/commit/bedb0761a1d4ccd4927ca93b0a69f5ad1f4e30a2",
       "revId": "ab235ba3e8c98ba5dbc15eddc407194acb393b55",
       "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "6628d6c7_26f20c2e",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 11
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000541
+      },
+      "writtenOn": "2022-05-07T17:47:14Z",
+      "side": 1,
+      "message": "seems happy with https://gerrit.aospa.co/c/AOSPA/android_vendor_codeaurora_commonsys_telephony/+/21497",
+      "revId": "ab235ba3e8c98ba5dbc15eddc407194acb393b55",
+      "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
     }
   ]
 }
