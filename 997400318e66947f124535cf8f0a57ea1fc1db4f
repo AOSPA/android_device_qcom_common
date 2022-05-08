@@ -16,6 +16,24 @@
       "message": "Let\u0027s move wfdconfig.xml to device_qcom_common for support mouse input\n\nref: https://github.com/jjpprrrr/device_xiaomi_sdm845-common/commit/28a07eae8ab5c5a51b144b2abb06014227d0083c",
       "revId": "997400318e66947f124535cf8f0a57ea1fc1db4f",
       "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "a2b1f8bf_303779e1",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 11
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000092
+      },
+      "writtenOn": "2022-05-08T13:56:22Z",
+      "side": 1,
+      "message": "What does mouse input mean?",
+      "parentUuid": "5f3316d6_1764b148",
+      "revId": "997400318e66947f124535cf8f0a57ea1fc1db4f",
+      "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
     }
   ]
 }
