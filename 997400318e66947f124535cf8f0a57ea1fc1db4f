@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "5f3316d6_1764b148",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 11
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000509
+      },
+      "writtenOn": "2022-05-08T12:49:25Z",
+      "side": 1,
+      "message": "Let\u0027s move wfdconfig.xml to device_qcom_common for support mouse input\n\nref: https://github.com/jjpprrrr/device_xiaomi_sdm845-common/commit/28a07eae8ab5c5a51b144b2abb06014227d0083c",
+      "revId": "997400318e66947f124535cf8f0a57ea1fc1db4f",
+      "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
+    }
+  ]
+}
