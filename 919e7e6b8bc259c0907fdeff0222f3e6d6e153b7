@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "210a3853_b284d46d",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 3
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000760
+      },
+      "writtenOn": "2022-05-09T16:26:23Z",
+      "side": 1,
+      "message": "wfd doesn\u0027t work for now\n\nhttps://github.com/aospa-sdm660/proprietary_vendor_qcom_common/commit/c3bd459b12c1ac74c08c0705ea525e50e013e83a",
+      "revId": "919e7e6b8bc259c0907fdeff0222f3e6d6e153b7",
+      "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
+    }
+  ]
+}
