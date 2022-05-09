@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "52dd9de0_bd3be5e7",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 3
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000760
+      },
+      "writtenOn": "2022-05-09T16:24:09Z",
+      "side": 1,
+      "message": "tested,  works \n\nhttps://github.com/aospa-sdm660/proprietary_vendor_qcom_common/commit/d6e67ddb3960186b908f4de5170bfeb2eab05fdc",
+      "revId": "8ea66cf07c5a21f1ef09f3690b00bbe4964f7f2c",
+      "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
+    }
+  ]
+}
