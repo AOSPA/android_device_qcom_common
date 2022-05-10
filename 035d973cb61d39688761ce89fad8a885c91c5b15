@@ -16,6 +16,24 @@
       "message": "this would not work on 845 or 710",
       "revId": "035d973cb61d39688761ce89fad8a885c91c5b15",
       "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "67cefcca_d28e756b",
+        "filename": "components.mk",
+        "patchSetId": 4
+      },
+      "lineNbr": 47,
+      "author": {
+        "id": 1000760
+      },
+      "writtenOn": "2022-05-10T22:18:44Z",
+      "side": 1,
+      "message": "\u003e this would not work on 845 or 710\n\nI\u0027ll drop them out of macro",
+      "parentUuid": "9d272bc9_a237893e",
+      "revId": "035d973cb61d39688761ce89fad8a885c91c5b15",
+      "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
     }
   ]
 }
