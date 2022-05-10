@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "38d2edee_620a3679",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 4
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000509
+      },
+      "writtenOn": "2022-05-10T11:15:49Z",
+      "side": 1,
+      "message": "Working fine on msm8953 (Meizu M6 Note m1721)",
+      "revId": "d20f02e2d51811fd72fc96beca80709201901ad5",
+      "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
+    }
+  ]
+}
