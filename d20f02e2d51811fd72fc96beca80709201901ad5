@@ -33,6 +33,24 @@
       "message": "I was wrong, libpvr is not related.\n\nalso, not sure sdm stack should go with adreno, they\u0027re not really the same",
       "revId": "d20f02e2d51811fd72fc96beca80709201901ad5",
       "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "83976bc9_c46c70c0",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 4
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000760
+      },
+      "writtenOn": "2022-05-10T22:17:23Z",
+      "side": 1,
+      "message": "aight, I\u0027ll drop libpvr\n\nbut for sdm, well its common to every soc that uses adreno-legacy except for one blob that is\n\n https://github.com/aospa-sdm660/android_device_asus_sdm660-common/blob/sapphire/proprietary-files.txt#L403\n \n so i guess it\u0027s fine to be here??",
+      "parentUuid": "8df868df_03f4aab8",
+      "revId": "d20f02e2d51811fd72fc96beca80709201901ad5",
+      "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
     }
   ]
 }
