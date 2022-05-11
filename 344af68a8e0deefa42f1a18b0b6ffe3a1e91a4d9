@@ -16,6 +16,23 @@
       "message": "Is 06500 on the commit message still accurate?",
       "revId": "344af68a8e0deefa42f1a18b0b6ffe3a1e91a4d9",
       "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "47fcb86f_8b609d90",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000062
+      },
+      "writtenOn": "2022-05-11T08:41:38Z",
+      "side": 1,
+      "message": "Superseded, please abandon this.",
+      "revId": "344af68a8e0deefa42f1a18b0b6ffe3a1e91a4d9",
+      "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
     }
   ]
 }
