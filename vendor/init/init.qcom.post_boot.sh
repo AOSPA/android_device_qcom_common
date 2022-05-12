@@ -3684,6 +3684,7 @@ case "$target" in
           for cpubw in $device/*cpu-cpu-llcc-bw/devfreq/*cpu-cpu-llcc-bw
           do
 	      cat $cpubw/available_frequencies | cut -d " " -f 1 > $cpubw/min_freq
+	      echo "bw_hwmon" > $cpubw/governor
 	      echo "2288 4577 7110 9155 12298 14236" > $cpubw/bw_hwmon/mbps_zones
 	      echo 4 > $cpubw/bw_hwmon/sample_ms
 	      echo 68 > $cpubw/bw_hwmon/io_percent
@@ -3699,6 +3700,7 @@ case "$target" in
 	  for llccbw in $device/*cpu-llcc-ddr-bw/devfreq/*cpu-llcc-ddr-bw
 	  do
 	      cat $llccbw/available_frequencies | cut -d " " -f 1 > $llccbw/min_freq
+	      echo "bw_hwmon" > $llccbw/governor
 	      echo "1144 1720 2086 2929 3879 5931 6881" > $llccbw/bw_hwmon/mbps_zones
 	      echo 4 > $llccbw/bw_hwmon/sample_ms
 	      echo 68 > $llccbw/bw_hwmon/io_percent
