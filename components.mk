@@ -37,7 +37,7 @@ else
 TARGET_COMMON_QTI_COMPONENTS += media-legacy
 endif
 
-ifneq (,$(filter true, $(call is-board-platform-in-list,$(3_18_FAMILY) $(4_4_FAMILY))))
+ifneq (,$(filter true, $(call is-board-platform-in-list,$(3_18_FAMILY) $(4_4_FAMILY) msm8953)))
 TARGET_COMMON_QTI_COMPONENTS += adreno-legacy
 else
 TARGET_COMMON_QTI_COMPONENTS += adreno
