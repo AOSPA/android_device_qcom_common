@@ -51,6 +51,23 @@
       "parentUuid": "8df868df_03f4aab8",
       "revId": "d20f02e2d51811fd72fc96beca80709201901ad5",
       "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "8dc5dfab_13c409fa",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 4
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000765
+      },
+      "writtenOn": "2022-05-14T22:21:25Z",
+      "side": 1,
+      "message": "Graphics dead on msm8953 after this update.",
+      "revId": "d20f02e2d51811fd72fc96beca80709201901ad5",
+      "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
     }
   ]
 }
