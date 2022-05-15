@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "8c52a0f8_3666f3b3",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 5
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000012
+      },
+      "writtenOn": "2022-05-15T17:25:46Z",
+      "side": 1,
+      "message": "confirmed libpvr is unrelated SECUREMSM +\u003d libpvr",
+      "revId": "15f8ae1bad84a683eca33c6cdd762cb742d306cd",
+      "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
+    }
+  ]
+}
