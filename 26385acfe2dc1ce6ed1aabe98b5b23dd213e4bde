@@ -16,6 +16,23 @@
       "message": "I am_crash: [10043,0,com.qualcomm.wfd.service:wfd_service,545832517,java.lang.UnsatisfiedLinkError,dlopen failed: cannot locate symbol \"_ZN7android11MotionEvent10initializeEiijiNSt3__15arrayIhLm32EEEiiiiiiNS_20MotionClassificationERKNS_2ui9TransformEffffiillmPKNS_17PointerPropertiesEPKNS_13PointerCoordsE\" referenced by \"/system/lib64/libwfdnative.so\"...,Runtime.java,1077]",
       "revId": "26385acfe2dc1ce6ed1aabe98b5b23dd213e4bde",
       "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "c4056930_fef57735",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 5
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000765
+      },
+      "writtenOn": "2022-05-15T08:11:49Z",
+      "side": 1,
+      "message": "WFD is broken on msm8953 (Meizu M6 Note) with this change\n\njava.lang.UnsatisfiedLinkError: dlopen failed: cannot locate symbol \"_ZN7android11MotionEvent10initializeEiijiNSt3__15arrayIhLm32EEEiiiiiiNS_20MotionClassificationERKNS_2ui9TransformEffffiillmPKNS_17PointerPropertiesEPKNS_13PointerCoordsE\" referenced by \"/system/lib64/libwfdnative.so\"...",
+      "revId": "26385acfe2dc1ce6ed1aabe98b5b23dd213e4bde",
+      "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
     }
   ]
 }
