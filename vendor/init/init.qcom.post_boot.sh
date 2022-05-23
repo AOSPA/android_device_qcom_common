@@ -4291,7 +4291,7 @@ case "$target" in
 
         #power/perf tunings for khaje
         case "$soc_id" in
-                 "518" )
+                 "518" | "561")
 
             # Core control parameters on big
             echo 0 > /sys/devices/system/cpu/cpu0/core_ctl/enable
