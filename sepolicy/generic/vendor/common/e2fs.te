@@ -1,0 +1,2 @@
+allow e2fs vendor_sysfs_mmc_host:dir r_dir_perms;
+allow e2fs vendor_sysfs_mmc_host:file r_file_perms;
