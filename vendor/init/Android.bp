@@ -1,4 +1,4 @@
-// Copyright (C) 2021 Paranoid Android
+// Copyright (C) 2021-2022 Paranoid Android
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -34,6 +34,13 @@ prebuilt_etc {
     src: "init.qti.kernel.rc",
     sub_dir: "init/hw",
     vendor: true,
+}
+
+prebuilt_etc {
+    name: "init.recovery.qcom.rc",
+    src: "init.recovery.qcom.rc",
+    sub_dir: "init",
+    recovery: true,
 }
 
 prebuilt_etc {
