@@ -1,0 +1,2 @@
+allow fsck vendor_sysfs_mmc_host:dir r_dir_perms;
+allow fsck vendor_sysfs_mmc_host:file r_file_perms;
