@@ -25,6 +25,8 @@ PRODUCT_PACKAGES += \
     jcos_nq_client
 
 # Permissions
+NFC_PERMISSIONS_DIR ?= $(TARGET_COPY_OUT_VENDOR)/etc/permissions
+
 PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.se.omapi.ese.xml:$(NFC_PERMISSIONS_DIR)/android.hardware.se.omapi.ese.xml \
     frameworks/native/data/etc/android.hardware.se.omapi.uicc.xml:$(NFC_PERMISSIONS_DIR)/android.hardware.se.omapi.uicc.xml
