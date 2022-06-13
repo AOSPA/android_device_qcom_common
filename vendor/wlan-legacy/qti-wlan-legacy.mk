@@ -57,6 +57,16 @@ ifeq ($(call is-board-platform-in-list, kona $(5_4_FAMILY)),true)
 CONFIG_IEEE80211AX := true
 endif
 
+# Enable new flag for talos target
+ifeq ($(call is-board-platform-in-list,sm6150),true)
+# Inject Kbuild options per chip
+#
+# Select proper chip configuration for building WLAN driver module. Currently
+# driver supports only one chip configuration per build.
+#
+WLAN_KBUILD_OPTIONS_wlan := CONFIG_CNSS_SM6150=y
+endif
+
 # IPACM
 PRODUCT_SOONG_NAMESPACES += vendor/qcom/opensource/data-ipa-cfg-mgr-legacy
 $(call inherit-product, vendor/qcom/opensource/data-ipa-cfg-mgr-legacy/ipacm_vendor_product.mk)
