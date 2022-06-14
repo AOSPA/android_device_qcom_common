@@ -20,7 +20,7 @@ PRODUCT_PACKAGES += \
     libavservices_minijail \
     libmediaplayerservice
 
-PRODUCT_SYSTEM_PROPERTIES += \
+PRODUCT_SYSTEM_EXT_PROPERTIES += \
     vendor.mm.enable.qcom_parser=16777215
 
 # Get non-open-source specific aspects
