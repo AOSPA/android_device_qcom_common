@@ -24,7 +24,7 @@ $(call inherit-product, vendor/qcom/opensource/data-ipa-cfg-mgr/ipacm_vendor_pro
 # RIL
 ENABLE_VENDOR_RIL_SERVICE := true
 
-PRODUCT_PROPERTY_OVERRIDES += \
+PRODUCT_VENDOR_PROPERTIES += \
     persist.radio.multisim.config=dsds \
     persist.vendor.radio.apm_sim_not_pwdn=1 \
     persist.vendor.radio.custom_ecc=1 \
