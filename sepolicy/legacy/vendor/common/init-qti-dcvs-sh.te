@@ -33,6 +33,7 @@ init_daemon_domain(vendor_init-qti-dcvs-sh)
 allow vendor_init-qti-dcvs-sh vendor_shell_exec:file rx_file_perms;
 
 # execute toybox/toolbox
+allow vendor_init-qti-dcvs-sh vendor_toolbox_exec:file execute_no_trans;
 allow vendor_init-qti-dcvs-sh self:perf_event { open cpu };
 neverallow vendor_init-qti-dcvs-sh self:perf_event ~{ open cpu };
 
