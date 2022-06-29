@@ -22,9 +22,9 @@ IMS_LIBS := libimscamera_jni.so libimsmedia_jni.so
 
 IMS_SYMLINKS := $(addprefix $(TARGET_OUT_SYSTEM_EXT_APPS_PRIVILEGED)/ims/lib/arm64/,$(notdir $(IMS_LIBS)))
 $(IMS_SYMLINKS): $(LOCAL_INSTALLED_MODULE)
-	@rm -rf $@
 	@mkdir -p $(dir $@)
-	$(hide) ln -sf $(TARGET_OUT_SYSTEM_EXT_SHARED_LIBRARIES)/$(notdir $@) $@
+	@rm -rf $@
+	$(hide) ln -sf /system/system_ext/lib64/$(notdir $@) $@
 
 ALL_DEFAULT_INSTALLED_MODULES += $(IMS_SYMLINKS)
 
