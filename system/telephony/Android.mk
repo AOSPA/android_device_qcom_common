@@ -24,7 +24,7 @@ IMS_SYMLINKS := $(addprefix $(TARGET_OUT_SYSTEM_EXT_APPS_PRIVILEGED)/ims/lib/arm
 $(IMS_SYMLINKS): $(LOCAL_INSTALLED_MODULE)
 	@rm -rf $@
 	@mkdir -p $(dir $@)
-	$(hide) ln -sf $(TARGET_OUT_SYSTEM_EXT_SHARED_LIBRARIES)/$(notdir $@) $@
+	$(hide) ln -sf /system/system_ext/lib64/$(notdir $@) $@
 
 ALL_DEFAULT_INSTALLED_MODULES += $(IMS_SYMLINKS)
 
