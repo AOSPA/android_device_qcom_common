@@ -72,4 +72,21 @@
 
     </Config2>
 
+    <Config3>
+
+         <TargetInfo
+             Target="khaje"
+             NumClusters="2"
+             TotalNumCores="8"
+             SocIds="518"
+             SynCore="1"
+             CoreCtlCpu="4"
+             MinCoreOnline="0"
+             CpufreqGov="1" />
+
+         <ClustersInfo Id="0" NumCores="4" Type="little" />
+         <ClustersInfo Id="1" NumCores="4" Type="big" />
+
+    </Config3>
+
 </TargetConfig>
