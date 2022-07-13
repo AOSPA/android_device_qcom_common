@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "6ccd42e2_0ffde699",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000737
+      },
+      "writtenOn": "2022-07-13T16:29:01Z",
+      "side": 1,
+      "message": "apparently this should only work well in taro.",
+      "revId": "36c7b64e1b2e90ed3e772179a4226a8894ed8337",
+      "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
+    }
+  ]
+}
