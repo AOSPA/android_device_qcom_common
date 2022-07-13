@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "a7568ddc_f6890942",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000012
+      },
+      "writtenOn": "2022-07-13T01:34:53Z",
+      "side": 1,
+      "message": "tell us more about this.  on Lahaina and taro, cpu7 draws much more power than 4-6 because it has higher frequencies and a less efficient architecture, so only allowing critical UX tasks on it saves power.  on other chips like 8998 and 845, I found that there was not enough load on top app to justify reserving an entire CPU for it and allowing the foreground cpuset to use cpu7 improved performance without much impact on power.",
+      "revId": "feb5016804c6279951571345b81e219632c393bd",
+      "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
+    }
+  ]
+}
