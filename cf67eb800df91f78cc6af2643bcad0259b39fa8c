@@ -16,6 +16,23 @@
       "message": "apparently this should only work well in taro.",
       "revId": "cf67eb800df91f78cc6af2643bcad0259b39fa8c",
       "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "01200c25_8de82496",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000012
+      },
+      "writtenOn": "2022-07-15T03:20:52Z",
+      "side": 1,
+      "message": "as far as I know, all recent Qualcomm chips use qcrild and these modems it\u0027s checking for look old, but maybe Alex Jr. or Anay can review.",
+      "revId": "cf67eb800df91f78cc6af2643bcad0259b39fa8c",
+      "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
     }
   ]
 }
