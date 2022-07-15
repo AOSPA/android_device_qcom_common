@@ -16,6 +16,23 @@
       "message": "apparently this should only work well in taro.",
       "revId": "b665fae613bc4131f215b49fc43a04abfec8d4af",
       "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "ff156a58_d714e4d1",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000012
+      },
+      "writtenOn": "2022-07-15T03:19:10Z",
+      "side": 1,
+      "message": "this API looks like it\u0027s been around for a while, are you sure this isn\u0027t good for other devices?",
+      "revId": "b665fae613bc4131f215b49fc43a04abfec8d4af",
+      "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
     }
   ]
 }
