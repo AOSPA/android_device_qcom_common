@@ -33,6 +33,24 @@
       "message": "this API looks like it\u0027s been around for a while, are you sure this isn\u0027t good for other devices?",
       "revId": "b665fae613bc4131f215b49fc43a04abfec8d4af",
       "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "30c4e3c8_f9d59b60",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000447
+      },
+      "writtenOn": "2022-07-15T23:18:27Z",
+      "side": 1,
+      "message": "No, it\u0027s not the default if you take a look in qcril_database on SoCs like lahaina.",
+      "parentUuid": "ff156a58_d714e4d1",
+      "revId": "b665fae613bc4131f215b49fc43a04abfec8d4af",
+      "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
     }
   ]
 }
