@@ -34,8 +34,8 @@
 
        <Config
            Id="0x00001081" Type="1" Enable="true" Timeout="2000" Target="khaje"
-           Resources="0x40C00000, 0x1, 0x40804000, 0xFFF, 0x40804100, 0xFFF, 0x40800000, 1766,
-                      0x40800100, 1516" />
+           Resources="0x40C00000, 0x1, 0x40804000, 0xFFF, 0x40804100, 0xFFF, 0x40800000, 0xFFF,
+                      0x40800100, 0xFFF" />
 
     <!--app lauch boost (disabling packing)-->
         <!-- POWER COLLAPSE resource opcode, value-->
@@ -115,7 +115,7 @@
           Resources="0x40408000, 0x63, 0x40C74000, 0xF0,
                      0x40C68000, 60, 0x40C68010, 60,0x40C68020, 60, 0x40C68030, 60,
                      0x40C58000, 65, 0x40C54000, 71,
-                     0x40800000, 1344,
+                     0x40800000, 1766,
                      0x41448000, 20000"/>
 
     <!--Lightning Launch Base -->
@@ -214,7 +214,7 @@
         <!-- SCHEDBOOST resource opcode, value-->
         <Config
             Id="0x00001080" Type="1" Enable="true" Target="khaje" Fps="60"
-            Resources="0x4303C000, 768000, 0x40800000, 1344, 0x40800100, 1190, 0x40C00000, 2" />
+            Resources="0x4303C000, 768000, 0x40800000, 1344, 0x40800100, 1516, 0x40C00000, 2" />
 
         <!-- DDR_BW_MIN_FREQ_V2 resource opcode, value -->
         <!-- CPUBOOST_MIN_FREQ BIG CORE resource opcode, value -->
@@ -266,7 +266,7 @@
         <!-- SCHEDBOOST resource opcode, value-->
         <Config
             Id="0x00001080" Type="2" Enable="true" Target="khaje" Fps="60"
-            Resources="0x4303C000, 768000, 0x40800000, 1344, 0x40800100, 1190, 0x40C00000, 2" />
+            Resources="0x4303C000, 768000, 0x40800000, 1766, 0x40800100, 1516, 0x40C00000, 2" />
 
         <!-- DDR_BW_MIN_FREQ_V2 resource opcode, value -->
         <!-- CPUBOOST_MIN_FREQ BIG CORE resource opcode, value -->
@@ -370,8 +370,8 @@
             Resources="0x40804000, 0xFFF, 0x40800000, 1401, 0x42C10000, 0x1, 0x40408000, 99, 0x40c74000, 15" />
         <Config
             Id="0x00001086" Enable="true" Target="khaje"
-            Resources="0x40C00000, 0x1, 0x40804000, 0xFFF, 0x40804100, 0xFFF, 0x40800000, 1766,
-                       0x40800100, 1516, 0x42C10000, 0x1, 0x40408000, 99, 0x40c74000, 0x3F,
+            Resources="0x40C00000, 0x1, 0x40804000, 0xFFF, 0x40804100, 0xFFF, 0x40800000, 2208,
+                       0x40800100, 1804, 0x42C10000, 0x1, 0x40408000, 99, 0x40c74000, 0x3F,
                        0x40C48000, 0x3F" />
 
     <!--PackageInstall boost-->
@@ -434,7 +434,7 @@
              Resources="0x40800000, 1056" />
          <Config
              Id="0x00001087" Type="1" Enable="true" Timeout="0" Target="khaje"
-             Resources="0x40800000, 1344, 0x40800100, 1190" />
+             Resources="0x40800000, 1766, 0x40800100, 1516" />
 
         <!-- CPUBOOST_MIN_FREQ BIG CORE resource opcode, value -->
         <!-- CPUBOOST_MIN_FREQ LITTLE Core resource opcode, value -->
@@ -444,7 +444,7 @@
         <!-- DDR_LAT_MINFREQ_GOLD  resource opcode, value -->
          <Config
              Id="0x00001087" Type="1" Enable="true" Timeout="0" Target="khaje" Fps="120"
-             Resources="0x40800000, 1334, 0x40800100, 1190, 0x40C00000, 2,
+             Resources="0x40800000, 1766, 0x40800100, 1516, 0x40C00000, 2,
                         0x4303C000, 768000, 0x43488000, 768000" />
 
     <!--Display on Resource -->
