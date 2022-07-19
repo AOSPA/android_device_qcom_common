@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "0f0e33a9_6c1b3ec1",
+        "filename": "BoardConfigQcom.mk",
+        "patchSetId": 2
+      },
+      "lineNbr": 41,
+      "author": {
+        "id": 1000012
+      },
+      "writtenOn": "2022-07-19T02:39:25Z",
+      "side": 1,
+      "message": "couldn\u0027t you just use this flag",
+      "revId": "5201344c0dec1caffcefb093b035ed2e57601728",
+      "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
+    }
+  ]
+}
