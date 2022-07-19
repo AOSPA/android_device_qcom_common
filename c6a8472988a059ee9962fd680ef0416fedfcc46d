@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "11ae0f32_a3915024",
+        "filename": "BoardConfigQcom.mk",
+        "patchSetId": 3
+      },
+      "lineNbr": 27,
+      "author": {
+        "id": 1000012
+      },
+      "writtenOn": "2022-07-19T02:38:07Z",
+      "side": 1,
+      "message": "+\u003d",
+      "revId": "c6a8472988a059ee9962fd680ef0416fedfcc46d",
+      "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "f9a411ca_29433511",
+        "filename": "config.fs",
+        "patchSetId": 3
+      },
+      "lineNbr": 229,
+      "author": {
+        "id": 1000012
+      },
+      "writtenOn": "2022-07-19T02:38:07Z",
+      "side": 1,
+      "message": "remove this entry",
+      "revId": "c6a8472988a059ee9962fd680ef0416fedfcc46d",
+      "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
+    }
+  ]
+}
