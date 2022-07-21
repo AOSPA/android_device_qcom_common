@@ -106,6 +106,7 @@ endif
 
 ifneq (,$(filter audio, $(TARGET_COMMON_QTI_COMPONENTS)))
 include $(QCOM_COMMON_PATH)/system/audio/qti-audio.mk
+include $(QCOM_COMMON_PATH)/vendor/audio/qti-audio.mk
 endif
 
 ifneq (,$(filter display, $(TARGET_COMMON_QTI_COMPONENTS)))
