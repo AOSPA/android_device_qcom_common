@@ -1,24 +1,31 @@
-# Copyright (C) 2022 Paranoid Android
+#!/bin/bash
+#
+# Copyright (C) 2018-2019 The LineageOS Project
+# Copyright (C) 2020 Paranoid Android
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
 # You may obtain a copy of the License at
 #
-# http://www.apache.org/licenses/LICENSE-2.0
+#      http://www.apache.org/licenses/LICENSE-2.0
 #
 # Unless required by applicable law or agreed to in writing, software
 # distributed under the License is distributed on an "AS IS" BASIS,
 # WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 # See the License for the specific language governing permissions and
 # limitations under the License.
+#
 
-# Inherit from QSSI audio makefiles.
-include $(TOPDIR)vendor/qcom/opensource/commonsys/audio/configs/qssi/qssi.mk
-include $(TOPDIR)vendor/qcom/opensource/commonsys/audio/configs/qssi/audio_system_product.mk
+# If we're being sourced by the common script that we called,
+# stop right here. No need to go down the rabbit hole.
+if [ "${BASH_SOURCE[0]}" != "${0}" ]; then
+    return
+fi
 
-# Audio Packages
-PRODUCT_PACKAGES += \
-    audio.a2dp.default
+set -e
 
-# Get non-open-source specific aspects.
-$(call inherit-product-if-exists, vendor/qcom/common/system/audio/audio-vendor.mk)
+# Required!
+export COMPONENT=audio
+export VENDOR=qcom/common/vendor
+
+"../extract-files.sh" "$@"
