@@ -41,5 +41,9 @@ PRODUCT_PACKAGES += \
     libqdutils \
     libqservice
 
+# Properties
+PRODUCT_VENDOR_PROPERTIES += \
+    debug.sf.predict_hwc_composition_strategy=0
+
 # Get non-open-source specific aspects.
 $(call inherit-product-if-exists, vendor/qcom/common/vendor/display/display-vendor.mk)
