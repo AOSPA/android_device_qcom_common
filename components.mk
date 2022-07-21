@@ -113,6 +113,7 @@ endif
 
 ifneq (,$(filter display, $(TARGET_COMMON_QTI_COMPONENTS)))
 include $(QCOM_COMMON_PATH)/system/display/qti-display.mk
+include $(QCOM_COMMON_PATH)/vendor/display/qti-display.mk
 endif
 
 ifneq (,$(filter nq-nfc, $(TARGET_COMMON_QTI_COMPONENTS)))
