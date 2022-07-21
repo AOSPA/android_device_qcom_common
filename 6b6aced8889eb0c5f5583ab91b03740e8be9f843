@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "3606c4dc_ac04e0b7",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000447
+      },
+      "writtenOn": "2022-07-21T14:15:07Z",
+      "side": 1,
+      "message": "Remove proprietary file \u0026 extract scripts for now until there are actual files.",
+      "revId": "6b6aced8889eb0c5f5583ab91b03740e8be9f843",
+      "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "e9e2026a_7035db7c",
+        "filename": "vendor/bt/qti-bt.mk",
+        "patchSetId": 1
+      },
+      "lineNbr": 17,
+      "author": {
+        "id": 1000447
+      },
+      "writtenOn": "2022-07-21T14:15:07Z",
+      "side": 1,
+      "message": "This isn\u0027t used for anything on /vendor, unless you\u0027re compiling with BSP. I would keep it in system.",
+      "revId": "6b6aced8889eb0c5f5583ab91b03740e8be9f843",
+      "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
+    }
+  ]
+}
