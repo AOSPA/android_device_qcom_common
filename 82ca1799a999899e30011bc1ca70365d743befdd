@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "4d97b33d_d3901d1f",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000447
+      },
+      "writtenOn": "2022-07-21T14:13:44Z",
+      "side": 1,
+      "message": "Remove proprietary file \u0026 extract scripts for now until there are actual files IMO. Otherwise looks good.",
+      "revId": "82ca1799a999899e30011bc1ca70365d743befdd",
+      "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
+    }
+  ]
+}
