@@ -14,14 +14,13 @@
 
 # Include QTI Bluetooth makefiles.
 ifeq ($(TARGET_FWK_SUPPORTS_FULL_VALUEADDS),true)
-$(call inherit-product, vendor/qcom/opensource/commonsys-intf/bluetooth/bt-system-opensource-product.mk)
+include vendor/qcom/opensource/commonsys-intf/bluetooth/bt-commonsys-intf-board.mk
 endif
 
-# Properties
-ifneq ($(TARGET_USE_QTI_BT_STACK),false)
-PRODUCT_SYSTEM_EXT_PROPERTIES += \
-    ro.bluetooth.library_name=libbluetooth_qti.so
-endif
+# Permissions
+PRODUCT_COPY_FILES += \
+    frameworks/native/data/etc/android.hardware.bluetooth_le.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.bluetooth_le.xml \
+    frameworks/native/data/etc/android.hardware.bluetooth.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.bluetooth.xml
 
 # Get non-open-source specific aspects.
-$(call inherit-product-if-exists, vendor/qcom/common/system/bt/bt-vendor.mk)
+$(call inherit-product-if-exists, vendor/qcom/common/vendor/bt/bt-vendor.mk)
