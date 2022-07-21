@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "f75793fd_f0902a84",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000579
+      },
+      "writtenOn": "2022-07-21T15:52:18Z",
+      "side": 1,
+      "message": "i still do not like not having no easy look at signal strength, especially with multisim",
+      "revId": "c5ef2f07ef28260dff4322b148adae0f9bbb5028",
+      "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
+    }
+  ]
+}
