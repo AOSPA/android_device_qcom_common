@@ -57,6 +57,7 @@ endif
 
 ifneq (,$(filter bt, $(TARGET_COMMON_QTI_COMPONENTS)))
 include $(QCOM_COMMON_PATH)/system/bt/qti-bt.mk
+include $(QCOM_COMMON_PATH)/vendor/bt/qti-bt.mk
 endif
 
 ifneq (,$(filter gps, $(TARGET_COMMON_QTI_COMPONENTS)))
