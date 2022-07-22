@@ -42,8 +42,8 @@ PRODUCT_PACKAGES += \
     vendor.qti.hardware.servicetracker@1.2.vendor
 
 ifeq ($(TARGET_KERNEL_VERSION),5.4)
-PRODUCT_PACKAGES += \
-    task_profiles-qti
+PRODUCT_COPY_FILES += \
+    system/core/libprocessgroup/profiles/task_profiles.json:$(TARGET_COPY_OUT_VENDOR)/etc/task_profiles.json
 endif
 
 # Properties

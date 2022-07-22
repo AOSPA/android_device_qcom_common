@@ -1,4 +1,4 @@
-// Copyright (C) 2021 Paranoid Android
+// Copyright (C) 2022 Paranoid Android
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -19,12 +19,5 @@ prebuilt_etc {
     name: "init.aospa.perf.rc",
     src: "init.aospa.perf.rc",
     sub_dir: "init",
-    vendor: true,
-}
-
-prebuilt_etc {
-    name: "task_profiles-qti",
-    filename_from_src: true,
-    src: "task_profiles.json",
     vendor: true,
 }
