@@ -51,6 +51,24 @@
       "parentUuid": "ff156a58_d714e4d1",
       "revId": "b665fae613bc4131f215b49fc43a04abfec8d4af",
       "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "99c0caf5_32a08972",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000737
+      },
+      "writtenOn": "2022-07-23T00:22:48Z",
+      "side": 1,
+      "message": "I tested this commit and the other two about ril that are in vendor:init. Apparently init script is causing strange behavior. But I\u0027m not sure about this one, I\u0027ll check it out. Anyway, it would be better if other people tested and did their review",
+      "parentUuid": "ff156a58_d714e4d1",
+      "revId": "b665fae613bc4131f215b49fc43a04abfec8d4af",
+      "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
     }
   ]
 }
