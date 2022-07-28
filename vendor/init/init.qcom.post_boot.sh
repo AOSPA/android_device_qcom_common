@@ -3679,7 +3679,7 @@ case "$target" in
       do
           for cpubw in $device/*cpu-cpu-llcc-bw/devfreq/*cpu-cpu-llcc-bw
           do
-	      cat $cpubw/available_frequencies | cut -d " " -f 1 > $cpubw/min_freq
+	      echo "bw_hwmon" > $cpubw/governor
 	      echo "2288 4577 7110 9155 12298 14236" > $cpubw/bw_hwmon/mbps_zones
 	      echo 4 > $cpubw/bw_hwmon/sample_ms
 	      echo 68 > $cpubw/bw_hwmon/io_percent
@@ -3694,7 +3694,7 @@ case "$target" in
 
 	  for llccbw in $device/*cpu-llcc-ddr-bw/devfreq/*cpu-llcc-ddr-bw
 	  do
-	      cat $llccbw/available_frequencies | cut -d " " -f 1 > $llccbw/min_freq
+	      echo "bw_hwmon" > $llccbw/governor
 	      echo "1144 1720 2086 2929 3879 5931 6881" > $llccbw/bw_hwmon/mbps_zones
 	      echo 4 > $llccbw/bw_hwmon/sample_ms
 	      echo 68 > $llccbw/bw_hwmon/io_percent
@@ -3705,30 +3705,6 @@ case "$target" in
 	      echo 250 > $llccbw/bw_hwmon/up_scale
 	      echo 1600 > $llccbw/bw_hwmon/idle_mbps
               echo 40 > $llccbw/polling_interval
-	  done
-
-	  #Enable mem_latency governor for L3, LLCC, and DDR scaling
-	  for memlat in $device/*cpu*-lat/devfreq/*cpu*-lat
-	  do
-	      cat $memlat/available_frequencies | cut -d " " -f 1 > $memlat/min_freq
-	  done
-
-	  #Enable compute governor for gold latfloor
-	  for latfloor in $device/*cpu-ddr-latfloor*/devfreq/*cpu-ddr-latfloor*
-	  do
-	      cat $latfloor/available_frequencies | cut -d " " -f 1 > $latfloor/min_freq
-	  done
-
-	  #Gold L3 ratio ceil
-	  for l3silver in $device/*cpu0-cpu-l3-lat/devfreq/*cpu0-cpu-l3-lat
-	  do
-	      cat $l3silver/available_frequencies | cut -d " " -f 1 > $l3silver/min_freq
-	  done
-
-	  #Gold L3 ratio ceil
-	  for l3gold in $device/*cpu6-cpu-l3-lat/devfreq/*cpu6-cpu-l3-lat
-	  do
-	      cat $l3gold/available_frequencies | cut -d " " -f 1 > $l3gold/min_freq
 	  done
       done
 
@@ -3804,7 +3780,7 @@ case "$target" in
             do
                 for cpubw in $device/*cpu-cpu-llcc-bw/devfreq/*cpu-cpu-llcc-bw
                 do
-                    cat $cpubw/available_frequencies | cut -d " " -f 1 > $cpubw/min_freq
+                    echo "bw_hwmon" > $cpubw/governor
                     echo "2288 4577 7110 9155 12298 14236" > $cpubw/bw_hwmon/mbps_zones
                     echo 4 > $cpubw/bw_hwmon/sample_ms
                     echo 68 > $cpubw/bw_hwmon/io_percent
@@ -3819,7 +3795,7 @@ case "$target" in
 
                 for llccbw in $device/*cpu-llcc-ddr-bw/devfreq/*cpu-llcc-ddr-bw
                 do
-                    cat $llccbw/available_frequencies | cut -d " " -f 1 > $llccbw/min_freq
+                    echo "bw_hwmon" > $llccbw/governor
                     echo "1144 1720 2086 2929 3879 5931 6881" > $llccbw/bw_hwmon/mbps_zones
                     echo 4 > $llccbw/bw_hwmon/sample_ms
                     echo 68 > $llccbw/bw_hwmon/io_percent
@@ -5392,7 +5368,7 @@ case "$target" in
 		do
 		    for cpubw in $device/*cpu-cpu-llcc-bw/devfreq/*cpu-cpu-llcc-bw
 		    do
-			cat $cpubw/available_frequencies | cut -d " " -f 1 > $cpubw/min_freq
+			echo "bw_hwmon" > $cpubw/governor
 			echo "2288 4577 7110 9155 12298 14236 15258" > $cpubw/bw_hwmon/mbps_zones
 			echo 4 > $cpubw/bw_hwmon/sample_ms
 			echo 50 > $cpubw/bw_hwmon/io_percent
@@ -5403,73 +5379,42 @@ case "$target" in
 			echo 250 > $cpubw/bw_hwmon/up_scale
 			echo 1600 > $cpubw/bw_hwmon/idle_mbps
 			echo 14236 > $cpubw/max_freq
-	                echo 40 > $cpubw/polling_interval
+        	        echo 40 > $cpubw/polling_interval
 		    done
 
 		    for llccbw in $device/*cpu-llcc-ddr-bw/devfreq/*cpu-llcc-ddr-bw
-		    do
-			cat $llccbw/available_frequencies | cut -d " " -f 1 > $llccbw/min_freq
-			echo "1720 2929 3879 5931 6881 7980" > $llccbw/bw_hwmon/mbps_zones
-			echo 4 > $llccbw/bw_hwmon/sample_ms
-			echo 80 > $llccbw/bw_hwmon/io_percent
-			echo 20 > $llccbw/bw_hwmon/hist_memory
-			echo 10 > $llccbw/bw_hwmon/hyst_length
-			echo 30 > $llccbw/bw_hwmon/down_thres
-			echo 0 > $llccbw/bw_hwmon/guard_band_mbps
-			echo 250 > $llccbw/bw_hwmon/up_scale
-			echo 1600 > $llccbw/bw_hwmon/idle_mbps
-			echo 6881 > $llccbw/max_freq
-	                echo 40 > $llccbw/polling_interval
+	    		do
+				echo "bw_hwmon" > $llccbw/governor
+				echo "1720 2929 3879 5931 6881 7980" > $llccbw/bw_hwmon/mbps_zones
+				echo 4 > $llccbw/bw_hwmon/sample_ms
+				echo 80 > $llccbw/bw_hwmon/io_percent
+				echo 20 > $llccbw/bw_hwmon/hist_memory
+				echo 10 > $llccbw/bw_hwmon/hyst_length
+				echo 30 > $llccbw/bw_hwmon/down_thres
+				echo 0 > $llccbw/bw_hwmon/guard_band_mbps
+				echo 250 > $llccbw/bw_hwmon/up_scale
+				echo 1600 > $llccbw/bw_hwmon/idle_mbps
+				echo 6881 > $llccbw/max_freq
+                		echo 40 > $llccbw/polling_interval
 		    done
 
 		    for npubw in $device/*npu-npu-ddr-bw/devfreq/*npu-npu-ddr-bw
-		    do
-			echo 1 > /sys/devices/virtual/npu/msm_npu/pwr
-			cat $npubw/available_frequencies | cut -d " " -f 1 > $npubw/min_freq
-			echo "1720 2929 3879 5931 6881 7980" > $npubw/bw_hwmon/mbps_zones
-			echo 4 > $npubw/bw_hwmon/sample_ms
-			echo 80 > $npubw/bw_hwmon/io_percent
-			echo 20 > $npubw/bw_hwmon/hist_memory
-			echo 6  > $npubw/bw_hwmon/hyst_length
-			echo 30 > $npubw/bw_hwmon/down_thres
-			echo 0 > $npubw/bw_hwmon/guard_band_mbps
-			echo 250 > $npubw/bw_hwmon/up_scale
-			echo 0 > $npubw/bw_hwmon/idle_mbps
-	                echo 40 > $npubw/polling_interval
-			echo 0 > /sys/devices/virtual/npu/msm_npu/pwr
-		    done
-
-		    #Enable mem_latency governor for L3, LLCC, and DDR scaling
-		    for memlat in $device/*cpu*-lat/devfreq/*cpu*-lat
-		    do
-			cat $memlat/available_frequencies | cut -d " " -f 1 > $memlat/min_freq
-		    done
-
-		    #Enable compute governor for gold latfloor
-		    for latfloor in $device/*cpu-ddr-latfloor*/devfreq/*cpu-ddr-latfloor*
-		    do
-			cat $latfloor/available_frequencies | cut -d " " -f 1 > $latfloor/min_freq
-		    done
-
-		    #Gold L3 ratio ceil
-		    for l3silver in $device/*cpu0-cpu-l3-lat/devfreq/*cpu0-cpu-l3-lat
-		    do
-			cat $l3silver/available_frequencies | cut -d " " -f 1 > $l3silver/min_freq
-		    done
-
-		    #Gold L3 ratio ceil
-		    for l3gold in $device/*cpu4-cpu-l3-lat/devfreq/*cpu4-cpu-l3-lat
-		    do
-			cat $l3gold/available_frequencies | cut -d " " -f 1 > $l3gold/min_freq
-		    done
-
-		    #Prime L3 ratio ceil
-		    for l3prime in $device/*cpu7-cpu-l3-lat/devfreq/*cpu7-cpu-l3-lat
-		    do
-			cat $l3prime/available_frequencies | cut -d " " -f 1 > $l3prime/min_freq
-		    done
-
-		done
+			do
+				echo 1 > /sys/devices/virtual/npu/msm_npu/pwr
+				echo "bw_hwmon" > $npubw/governor
+				echo "1720 2929 3879 5931 6881 7980" > $npubw/bw_hwmon/mbps_zones
+				echo 4 > $npubw/bw_hwmon/sample_ms
+				echo 80 > $npubw/bw_hwmon/io_percent
+				echo 20 > $npubw/bw_hwmon/hist_memory
+				echo 6  > $npubw/bw_hwmon/hyst_length
+				echo 30 > $npubw/bw_hwmon/down_thres
+				echo 0 > $npubw/bw_hwmon/guard_band_mbps
+				echo 250 > $npubw/bw_hwmon/up_scale
+				echo 0 > $npubw/bw_hwmon/idle_mbps
+		                echo 40 > $npubw/polling_interval
+				echo 0 > /sys/devices/virtual/npu/msm_npu/pwr
+	                      done
+	           done
 	fi
 	# memlat specific settings are moved to seperate file under
 	# device/target specific folder
@@ -5607,7 +5552,7 @@ case "$target" in
 	do
 	    for cpubw in $device/*cpu-cpu-llcc-bw/devfreq/*cpu-cpu-llcc-bw
 	    do
-		cat $cpubw/available_frequencies | cut -d " " -f 1 > $cpubw/min_freq
+		echo "bw_hwmon" > $cpubw/governor
 		echo 40 > $cpubw/polling_interval
 		echo "2288 4577 7110 9155 12298 14236 15258" > $cpubw/bw_hwmon/mbps_zones
 		echo 4 > $cpubw/bw_hwmon/sample_ms
@@ -5623,7 +5568,7 @@ case "$target" in
 
 	    for llccbw in $device/*cpu-llcc-ddr-bw/devfreq/*cpu-llcc-ddr-bw
 	    do
-		cat $llccbw/available_frequencies | cut -d " " -f 1 > $llccbw/min_freq
+		echo "bw_hwmon" > $llccbw/governor
 		echo 40 > $llccbw/polling_interval
 		echo "1720 2929 3879 5931 6881 7980" > $llccbw/bw_hwmon/mbps_zones
 		echo 4 > $llccbw/bw_hwmon/sample_ms
@@ -5640,7 +5585,7 @@ case "$target" in
 	    for npubw in $device/*npu-npu-ddr-bw/devfreq/*npu-npu-ddr-bw
 	    do
 		echo 1 > /sys/devices/virtual/npu/msm_npu/pwr
-		cat $npubw/available_frequencies | cut -d " " -f 1 > $npubw/min_freq
+		echo "bw_hwmon" > $npubw/governor
 		echo 40 > $npubw/polling_interval
 		echo "1720 2929 3879 5931 6881 7980" > $npubw/bw_hwmon/mbps_zones
 		echo 4 > $npubw/bw_hwmon/sample_ms
@@ -5657,7 +5602,7 @@ case "$target" in
 	    #Enable mem_latency governor for L3, LLCC, and DDR scaling
 	    for memlat in $device/*cpu*-lat/devfreq/*cpu*-lat
 	    do
-		cat $memlat/available_frequencies | cut -d " " -f 1 > $memlat/min_freq
+		echo "mem_latency" > $memlat/governor
 		echo 10 > $memlat/polling_interval
 		echo 400 > $memlat/mem_latency/ratio_ceil
 	    done
@@ -5671,21 +5616,19 @@ case "$target" in
 	    #Enable compute governor for gold latfloor
 	    for latfloor in $device/*cpu-ddr-latfloor*/devfreq/*cpu-ddr-latfloor*
 	    do
-		cat $latfloor/available_frequencies | cut -d " " -f 1 > $latfloor/min_freq
+		echo "compute" > $latfloor/governor
 		echo 10 > $latfloor/polling_interval
 	    done
 
 	    #Gold L3 ratio ceil
 	    for l3gold in $device/*cpu4-cpu-l3-lat/devfreq/*cpu4-cpu-l3-lat
 	    do
-		cat $l3gold/available_frequencies | cut -d " " -f 1 > $l3gold/min_freq
 		echo 4000 > $l3gold/mem_latency/ratio_ceil
 	    done
 
 	    #Prime L3 ratio ceil
 	    for l3prime in $device/*cpu7-cpu-l3-lat/devfreq/*cpu7-cpu-l3-lat
 	    do
-		cat $l3prime/available_frequencies | cut -d " " -f 1 > $l3prime/min_freq
 		echo 20000 > $l3prime/mem_latency/ratio_ceil
 	    done
 	done
