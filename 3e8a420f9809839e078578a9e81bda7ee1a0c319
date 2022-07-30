@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "2a320c01_fba3af5a",
+        "filename": "vendor/bt/qti-bt.mk",
+        "patchSetId": 1
+      },
+      "lineNbr": 22,
+      "author": {
+        "id": 1000012
+      },
+      "writtenOn": "2022-07-30T03:53:46Z",
+      "side": 1,
+      "message": "whitespace",
+      "revId": "3e8a420f9809839e078578a9e81bda7ee1a0c319",
+      "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
+    }
+  ]
+}
