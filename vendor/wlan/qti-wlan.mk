@@ -50,6 +50,11 @@ PRODUCT_PACKAGES += \
     init.vendor.wlan.rc
 endif
 
+# Enable IEEE 802.11ax support
+ifeq ($(call is-board-platform-in-list, kona lahaina),true)
+CONFIG_IEEE80211AX := true
+endif
+
 # IPACM
 $(call inherit-product, vendor/qcom/opensource/data-ipa-cfg-mgr/ipacm_vendor_product.mk)
 
