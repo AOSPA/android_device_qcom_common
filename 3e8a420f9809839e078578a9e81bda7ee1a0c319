@@ -33,6 +33,24 @@
       "message": "whitespace",
       "revId": "3e8a420f9809839e078578a9e81bda7ee1a0c319",
       "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "e6d36d80_7759ce87",
+        "filename": "vendor/bt/qti-bt.mk",
+        "patchSetId": 1
+      },
+      "lineNbr": 22,
+      "author": {
+        "id": 1000737
+      },
+      "writtenOn": "2022-07-30T15:33:23Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "2a320c01_fba3af5a",
+      "revId": "3e8a420f9809839e078578a9e81bda7ee1a0c319",
+      "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
     }
   ]
 }
