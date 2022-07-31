@@ -48,8 +48,7 @@
 
     <!-- config_enableLaunchBoostv3-->
         <!-- SCHEDBOOST resource opcode, value-->
-        <!-- SCHED GROUP DOWNMIGRATE resource opcode, value-->
-        <!-- SCHED GROUP UPMIGRATE resource opcode, value-->
+        <!-- SCHED GROUP UP DOWN MIGRATE resource opcode, value-->
         <!-- SCHED_BUSY_HYSTERSIS_CPU_MASK resource opcode, value-->
         <!-- LPM Bias resource opcode, value-->
         <!-- SCHED_UP_DOWN MIGRATE resource opcode, value -->
@@ -58,14 +57,13 @@
         <!-- Type="3", FA launch boost of 15sec -->
         <Config
             Id="0x00001081" Type="3" Enable="true" Timeout="15000" Target="taro"
-            Resources="0x40C00000, 0x3, 0x40C58000, 0x2D, 0x40C54000, 0x41,
+            Resources="0x40C00000, 0x3, 0x40CF4000, 0x0041002D,
                       0x40C74000, 0xF0, 0x40408000, 0x63, 0x40CE0000, 0x003C0028,
                       0x40CE0200, 0x003C0028" />
 
     <!-- config_gameBoost-->
         <!-- SCHEDBOOST resource opcode, value-->
-        <!-- SCHED GROUP DOWNMIGRATE resource opcode, value-->
-        <!-- SCHED GROUP UPMIGRATE resource opcode, value-->
+        <!-- SCHED GROUP UP DOWN MIGRATE resource opcode, value-->
         <!-- SCHED_BUSY_HYSTERSIS_CPU_MASK resource opcode, value-->
         <!-- LPM Bias resource opcode, value-->
         <!-- SCHED UP_DOWN_MIGRATE resource opcode, value -->
@@ -81,7 +79,7 @@
         <!-- Type="6", FA launch boost of 2sec -->
         <Config
             Id="0x00001081" Type="6" Enable="true" Timeout="2000" Target="taro"
-            Resources="0x40C00000, 0x1, 0x40C58000, 0x2D, 0x40C54000, 0x41,
+            Resources="0x40C00000, 0x1, 0x40CF4000, 0x0041002D,
                        0x40C74000, 0xF0, 0x40408000, 0x63, 0x40CE0000, 0x003C0028,
                        0x40CE0200, 0x003C0028, 0x42C10000, 0x1, 0x40800200, 0x76C,
                        0x40800000, 0x76C, 0x40800100, 0x4B0, 0x41844000, 0x927C0,

@@ -107,6 +107,13 @@ as anyway perflock calls of these resources would fail. -->
         <Config MajorValue="0x6" MinorValue="0x7" Kernel="4.19" Supported="no" />
         <Config MajorValue="0x6" MinorValue="0x8" Kernel="4.19" Supported="no" />
         <Config MajorValue="0x6" MinorValue="0x9" Kernel="4.19" Supported="no" />
+        <Config MajorValue="0x6" MinorValue="0xA" Supported="no" />
+        <Config MajorValue="0x6" MinorValue="0xB" Supported="no" />
+        <Config MajorValue="0x6" MinorValue="0xC" Supported="no" />
+        <Config MajorValue="0x6" MinorValue="0xD" Supported="no" />
+        <Config MajorValue="0x6" MinorValue="0xE" Supported="no" />
+        <Config MajorValue="0x6" MinorValue="0xF" Supported="no" />
+        <Config MajorValue="0x6" MinorValue="0x10" Supported="no"/>
 
         <Config MajorValue="0xB" MinorValue="0x2" Kernel="4.19" Node="/sys/devices/system/cpu/cpu_boost/input_boost_freq" /> <!-- input_boost_freq on kernel 4.19 -->
 
@@ -118,6 +125,17 @@ as anyway perflock calls of these resources would fail. -->
 
         <Config MajorValue="0xC" MinorValue="0xA" Kernel="4.19" Supported="no" /> <!-- cpubw_hmon_low_power_ceil_mbps -->
         <Config MajorValue="0xC" MinorValue="0xB" Kernel="4.19" Supported="no" /> <!-- cpubw_hmon_low_power_io_percent -->
+        <Config MajorValue="0xC" MinorValue="0x4" Supported="no" />
+        <Config MajorValue="0xC" MinorValue="0x5" Supported="no" />
+        <Config MajorValue="0xC" MinorValue="0x6" Supported="no" />
+        <Config MajorValue="0xC" MinorValue="0x7" Supported="no" />
+        <Config MajorValue="0xC" MinorValue="0x8" Supported="no" />
+        <Config MajorValue="0xC" MinorValue="0x9" Supported="no" />
+        <Config MajorValue="0xC" MinorValue="0xA" Supported="no" />
+        <Config MajorValue="0xC" MinorValue="0xB" Supported="no" />
+        <Config MajorValue="0xC" MinorValue="0xC" Supported="no" />
+        <Config MajorValue="0xC" MinorValue="0xD" Supported="no" />
+        <Config MajorValue="0xC" MinorValue="0xE" Supported="no" />
 
         <Config MajorValue="0xD" MinorValue="0x0" Supported="no" /> <!--  l3_min_freq -->
 

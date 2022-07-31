@@ -71,6 +71,7 @@ as anyway perflock calls of these resources would fail. -->
         <Config MajorValue="0xC" MinorValue="0xC" Node="/sys/class/devfreq/soc:qcom,cpu-cpu-ddr-bw/polling_interval"  />
         <Config MajorValue="0xC" MinorValue="0xD" Node="/sys/class/devfreq/soc:qcom,cpu-cpu-ddr-bw/bw_hwmon/sample_ms" />
         <Config MajorValue="0xC" MinorValue="0xE" Node="/sys/class/devfreq/soc:qcom,cpu-cpu-ddr-bw/bw_hwmon/idle_mbps" />
+        <Config MajorValue="0xC" MinorValue="0x11" Node="/sys/class/devfreq/soc:qcom,cpu-cpu-ddr-bw/bw_hwmon/use_ab" />
 
         <Config MajorValue="0xD" MinorValue="0x0" Node="/sys/class/devfreq/fd90100.qcom,cpu%d-cpu-l3-lat/min_freq" />
         <Config MajorValue="0xD" MinorValue="0x1" Node="/sys/class/devfreq/fd90100.qcom,cpu0-cpu-l3-lat/mem_latency/ratio_ceil" />

@@ -39,12 +39,30 @@ as anyway perflock calls of these resources would fail. -->
 
         <Config MajorValue="0x6" MinorValue="0x4" Supported="no" /> <!-- cpubw_hmon_low_power_ceil_mbps -->
         <Config MajorValue="0x6" MinorValue="0x5" Supported="no" /> <!-- cpubw_hmon_low_power_io_percent -->
+        <Config MajorValue="0x6" MinorValue="0xA" Supported="no" />
+        <Config MajorValue="0x6" MinorValue="0xB" Supported="no" />
+        <Config MajorValue="0x6" MinorValue="0xC" Supported="no" />
+        <Config MajorValue="0x6" MinorValue="0xD" Supported="no" />
+        <Config MajorValue="0x6" MinorValue="0xE" Supported="no" />
+        <Config MajorValue="0x6" MinorValue="0xF" Supported="no" />
+        <Config MajorValue="0x6" MinorValue="0x10" Supported="no"/>
 
         <!-- All the minors of LLCBW_HWMON major are not supported. -->
         <Config MajorValue="0xC" MinorValue="0x0" Supported="no" />
         <Config MajorValue="0xC" MinorValue="0x1" Supported="no" />
         <Config MajorValue="0xC" MinorValue="0x2" Supported="no" />
         <Config MajorValue="0xC" MinorValue="0x3" Supported="no" />
+        <Config MajorValue="0xC" MinorValue="0x4" Supported="no" />
+        <Config MajorValue="0xC" MinorValue="0x5" Supported="no" />
+        <Config MajorValue="0xC" MinorValue="0x6" Supported="no" />
+        <Config MajorValue="0xC" MinorValue="0x7" Supported="no" />
+        <Config MajorValue="0xC" MinorValue="0x8" Supported="no" />
+        <Config MajorValue="0xC" MinorValue="0x9" Supported="no" />
+        <Config MajorValue="0xC" MinorValue="0xA" Supported="no" />
+        <Config MajorValue="0xC" MinorValue="0xB" Supported="no" />
+        <Config MajorValue="0xC" MinorValue="0xC" Supported="no" />
+        <Config MajorValue="0xC" MinorValue="0xD" Supported="no" />
+        <Config MajorValue="0xC" MinorValue="0xE" Supported="no" />
 
         <Config MajorValue="0xD" MinorValue="0x2" Node="/sys/class/devfreq/soc:qcom,memlat-cpu6/mem_latency/ratio_ceil"/> <!-- l2_memlat_ratio_ceil_1 -->
         <Config MajorValue="0xD" MinorValue="0x4" Node="/sys/class/devfreq/soc:qcom,memlat-cpu6/mem_latency/stall_floor"/> <!-- memlat_stall_floor -->
