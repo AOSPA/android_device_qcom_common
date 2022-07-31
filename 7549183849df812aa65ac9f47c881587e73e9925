@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "ef6b8764_a98685d7",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000012
+      },
+      "writtenOn": "2022-07-31T21:25:54Z",
+      "side": 1,
+      "message": "The changes applied are:\nhttps://github.com/AOSPA/android_system_core/commit/8c604e8615ec9b26af0e84a0b7f2e04b34b3dc7e\nhttps://github.com/AOSPA/android_system_core/commit/1b53c2496dca274bd3f8173780a7d6562b5cc016\nhttps://github.com/AOSPA/android_system_core/commit/b90e23efc70be2906d3315cc08bb61579d0d7195\nhttps://github.com/AOSPA/android_system_core/commit/ab87979a006cedd067b988d1dfd6c617270302d5\nhttps://github.com/AOSPA/android_system_core/commit/6d6b71e582251bc8935e0d4f21362f5753a8d8ef\nhttps://github.com/AOSPA/android_system_core/commit/3745ce7aa84e9007c94cb64ac631f4fa15efe051\nhttps://github.com/AOSPA/android_system_core/commit/567dd77c816b4a8d8fb17eddb8bd894e24beeb18\n\nhttps://gist.github.com/xboxfanj/dde2909035f2ba68dacaa4ab296924a9",
+      "revId": "7549183849df812aa65ac9f47c881587e73e9925",
+      "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
+    }
+  ]
+}
