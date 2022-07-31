@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "204c95bf_c4f3431d",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000012
+      },
+      "writtenOn": "2022-07-31T16:16:42Z",
+      "side": 1,
+      "message": "do we also need to enable these?\n\nCONFIG_ACS :\u003d true\nCONFIG_IEEE80211AC :\u003d true\n",
+      "revId": "0f249ec10bf41624b610417745d842b7e598ec61",
+      "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
+    }
+  ]
+}
