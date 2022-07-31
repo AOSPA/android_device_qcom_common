@@ -139,11 +139,6 @@
                    <AsyncType>1</AsyncType>
                 </Trigger>
 
-                <Trigger>
-                   <Primary>true</Primary>
-                   <AsyncId>VENDOR_HINT_WORKLOAD_HEAVY</AsyncId>
-                   <AsyncType>1</AsyncType>
-                </Trigger>
             </Triggers>
             <Configs>
                 <FPS_NODE>/sys/class/drm/sde-crtc-0/measured_fps</FPS_NODE>

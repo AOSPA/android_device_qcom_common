@@ -7,7 +7,7 @@
       Each feature has an xml file to define the components
 
   ===========================================================================
-  Copyright (c) 2020 Qualcomm Technologies, Inc.
+  Copyright (c) 2020-2021 Qualcomm Technologies, Inc.
   All Rights Reserved.
   Confidential and Proprietary - Qualcomm Technologies, Inc.
   ===========================================================================
@@ -40,6 +40,22 @@
                     <Primary>true</Primary>
                     <AsyncId>VENDOR_HINT_APP_WORKLOAD_TYPE</AsyncId>
                 </Trigger>
+                <Trigger>
+                    <Primary>true</Primary>
+                    <AsyncId>VENDOR_HINT_ACTIVITY_START</AsyncId>
+                </Trigger>
+                <Trigger>
+                    <Primary>true</Primary>
+                    <AsyncId>VENDOR_HINT_ACTIVITY_RESUME</AsyncId>
+                </Trigger>
+                <Trigger>
+                    <Primary>true</Primary>
+                    <AsyncId>VENDOR_HINT_ACTIVITY_STOP</AsyncId>
+                </Trigger>
+                <Trigger>
+                    <Primary>true</Primary>
+                    <AsyncId>VENDOR_HINT_ACTIVITY_PAUSE</AsyncId>
+                </Trigger>
             </Triggers>
             <Samples>300</Samples>
             <Fields>
@@ -47,4 +63,7 @@
             </Fields>
         </Meter>
     </Meters>
+    <SpuriousHintApps>
+        <App>com.android.permissioncontroller</App>
+    </SpuriousHintApps>
 </Feature>

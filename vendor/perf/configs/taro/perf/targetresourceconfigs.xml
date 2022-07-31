@@ -38,8 +38,8 @@ as anyway perflock calls of these resources would fail. -->
         <Config MajorValue="0x3" MinorValue="0xD" Supported="no" /> <!-- sched_restrict_cluster_spill -->
         <Config MajorValue="0x3" MinorValue="0x13" Supported="no" /> <!-- sched_set_freq_aggr -->
         <Config MajorValue="0x3" MinorValue="0x14" Supported="no" /> <!-- sched_enable_thread_grouping -->
-        <Config MajorValue="0x3" MinorValue="0x15" Node="/proc/sys/walt/sched_group_upmigrate" />
-        <Config MajorValue="0x3" MinorValue="0x16" Node="/proc/sys/walt/sched_group_downmigrate" />
+        <Config MajorValue="0x3" MinorValue="0x15" Supported="no" /> <!-- sched_group_upmigrate -->
+        <Config MajorValue="0x3" MinorValue="0x16" Supported="no" /> <!-- sched_group_downmigrate -->
         <Config MajorValue="0x3" MinorValue="0x17" Supported="no" /> <!-- sched_freq_aggr_threshold -->
         <Config MajorValue="0x3" MinorValue="0x1D" Node="/proc/sys/walt/sched_busy_hysteresis_enable_cpus" />
         <Config MajorValue="0x3" MinorValue="0x1E" Node="/proc/sys/walt/sched_min_task_util_for_colocation" />
@@ -57,6 +57,7 @@ as anyway perflock calls of these resources would fail. -->
         <Config MajorValue="0x3" MinorValue="0x37" Supported="no" /> <!-- Enabled till Kernel 4.19 -->
         <Config MajorValue="0x3" MinorValue="0x38" Node="/proc/sys/walt/%s" Supported="yes"/>
         <Config MajorValue="0x3" MinorValue="0x39" Supported="no" /> <!-- Enabled till Kernel 4.19 -->
+        <Config MajorValue="0x3" MinorValue="0x3D" Node="/proc/sys/walt/%s" Supported="yes"/>
 
         <Config MajorValue="0x6" MinorValue="0x0" Supported="no" Target="taro" />
         <Config MajorValue="0x6" MinorValue="0x1" Node="/sys/devices/system/cpu/bus_dcvs/LLCC/190b6400.qcom,bwmon-llcc/decay_rate" Target="taro" />

@@ -53,6 +53,14 @@ as anyway perflock calls of these resources would fail. -->
         <Config MajorValue="0x5" MinorValue="0x10" Supported="no" /> <!-- schedutil/hispeed_load -->
         <Config MajorValue="0x5" MinorValue="0x11" Supported="no" /> <!-- schedutil/pl -->
 
+        <Config MajorValue="0x6" MinorValue="0xA" Supported="no" />
+        <Config MajorValue="0x6" MinorValue="0xB" Supported="no" />
+        <Config MajorValue="0x6" MinorValue="0xC" Supported="no" />
+        <Config MajorValue="0x6" MinorValue="0xD" Supported="no" />
+        <Config MajorValue="0x6" MinorValue="0xE" Supported="no" />
+        <Config MajorValue="0x6" MinorValue="0xF" Supported="no" />
+        <Config MajorValue="0x6" MinorValue="0x10" Supported="no"/>
+
         <Config MajorValue="0xB" MinorValue="0x6" Supported="no" /> <!-- enable_process_reclaim -->
 
         <!-- All the minors of LLCBW_HWMON MAJOR are not supported -->
@@ -60,6 +68,17 @@ as anyway perflock calls of these resources would fail. -->
         <Config MajorValue="0xC" MinorValue="0x1" Supported="no" />
         <Config MajorValue="0xC" MinorValue="0x2" Supported="no" />
         <Config MajorValue="0xC" MinorValue="0x3" Supported="no" />
+        <Config MajorValue="0xC" MinorValue="0x4" Supported="no" />
+        <Config MajorValue="0xC" MinorValue="0x5" Supported="no" />
+        <Config MajorValue="0xC" MinorValue="0x6" Supported="no" />
+        <Config MajorValue="0xC" MinorValue="0x7" Supported="no" />
+        <Config MajorValue="0xC" MinorValue="0x8" Supported="no" />
+        <Config MajorValue="0xC" MinorValue="0x9" Supported="no" />
+        <Config MajorValue="0xC" MinorValue="0xA" Supported="no" />
+        <Config MajorValue="0xC" MinorValue="0xB" Supported="no" />
+        <Config MajorValue="0xC" MinorValue="0xC" Supported="no" />
+        <Config MajorValue="0xC" MinorValue="0xD" Supported="no" />
+        <Config MajorValue="0xC" MinorValue="0xE" Supported="no" />
 
         <Config MajorValue="0xD" MinorValue="0x0" Supported="no" /> <!--  l3_min_freq -->
 

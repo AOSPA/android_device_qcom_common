@@ -91,7 +91,7 @@
              Target="sdm429"
              NumClusters="1"
              TotalNumCores="4"
-             SocIds="354,364,437"
+             SocIds="354,364,416,437"
              SynCore="1"
              MinCoreOnline="0"
              CpufreqGov="1"
@@ -115,21 +115,5 @@
          <ClustersInfo Id="0" NumCores="4" Type="big" />
 
     </Config5>
-
-    <Config6>
-         <TargetInfo
-             Target="sdm429w_law"
-             NumClusters="1"
-             TotalNumCores="4"
-             SocIds="416"
-             SynCore="1"
-             CoreCtlCpu="0"
-             MinCoreOnline="0"
-             CpufreqGov="1"
-             GovInstanceType="1" />
-
-         <ClustersInfo Id="0" NumCores="4" Type="big" />
-
-    </Config6>
 
 </TargetConfig>
