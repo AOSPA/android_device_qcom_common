@@ -16,6 +16,24 @@
       "message": "that\u0027s how aosp intends to enable it\nhttps://cs.android.com/android/platform/superproject/+/master:external/wpa_supplicant_8/hostapd/android.config;l\u003d136?q\u003dWIFI_FEATURE_HOSTAPD_11AX%20",
       "revId": "ef26d061df789c5258e11e520d499a3ba6730983",
       "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "da7a47a1_21ab0e6f",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 3
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000697
+      },
+      "writtenOn": "2022-08-01T14:03:46Z",
+      "side": 1,
+      "message": "its fine even without that flag being enabled\n\nas CONFIG_IEEE80211AX is enabled from parent makefile\n\nYou can confirm by adding\nifeq ($(flag),y)\n$(info \"flag enabled\")\nendif\n\nin android.config below hostapd 11ax flag",
+      "parentUuid": "f6e49324_d61b37f6",
+      "revId": "ef26d061df789c5258e11e520d499a3ba6730983",
+      "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
     }
   ]
 }
