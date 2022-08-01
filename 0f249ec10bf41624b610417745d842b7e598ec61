@@ -52,6 +52,24 @@
       "parentUuid": "104b3024_01ea6e59",
       "revId": "0f249ec10bf41624b610417745d842b7e598ec61",
       "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "e89ac7e2_770ba215",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000697
+      },
+      "writtenOn": "2022-08-01T16:24:47Z",
+      "side": 1,
+      "message": "11AC config is enabled by default on wpa_supplicant as well\ntest on lunch by using this patch https://pastebin.com/JMA9Y6hm",
+      "parentUuid": "b47b471f_5988d1cc",
+      "revId": "0f249ec10bf41624b610417745d842b7e598ec61",
+      "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
     }
   ]
 }
