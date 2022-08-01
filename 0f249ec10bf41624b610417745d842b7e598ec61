@@ -34,6 +34,24 @@
       "parentUuid": "204c95bf_c4f3431d",
       "revId": "0f249ec10bf41624b610417745d842b7e598ec61",
       "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "b47b471f_5988d1cc",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000012
+      },
+      "writtenOn": "2022-08-01T15:39:44Z",
+      "side": 1,
+      "message": "802.11 AC is not enabled by default in wpa_supplicant, it only is in hostapd\nhttps://git.codelinaro.org/clo/la/platform/external/wpa_supplicant_8/-/blame/49ac81ae0c406cb50587efc63a8d23ad442c5c1b/wpa_supplicant/android.config\n\nhttps://w1.fi/cgit/hostap/commit/wpa_supplicant/android.config?id\u003d577e794eba6c838022379dbad033ff93fed30977\n\nQualcomm\u0027s change in the BoardConfig would apply to both binaries I believe.",
+      "parentUuid": "104b3024_01ea6e59",
+      "revId": "0f249ec10bf41624b610417745d842b7e598ec61",
+      "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
     }
   ]
 }
