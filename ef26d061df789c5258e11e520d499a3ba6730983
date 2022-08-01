@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "f6e49324_d61b37f6",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 3
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000579
+      },
+      "writtenOn": "2022-08-01T12:53:04Z",
+      "side": 1,
+      "message": "that\u0027s how aosp intends to enable it\nhttps://cs.android.com/android/platform/superproject/+/master:external/wpa_supplicant_8/hostapd/android.config;l\u003d136?q\u003dWIFI_FEATURE_HOSTAPD_11AX%20",
+      "revId": "ef26d061df789c5258e11e520d499a3ba6730983",
+      "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
+    }
+  ]
+}
