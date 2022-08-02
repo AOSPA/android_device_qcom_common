@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "009d085f_53698451",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000012
+      },
+      "writtenOn": "2022-08-02T01:15:39Z",
+      "side": 1,
+      "message": "this is from Qualcomm so should be fine.  if changes need to be made, we can do it retroactively.",
+      "revId": "363c69992eab58ce3315fd7b0d20f539c38326de",
+      "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
+    }
+  ]
+}
