@@ -97,3 +97,6 @@ on property:vendor.post_boot.parsed=1
 on property:ro.board.platform=lahaina
     # Setup foreground cpuset for display composer.
     write /dev/cpuset/foreground/cpus 0-6
+
+# Set property when finished so this can be overridden
+setprop persist.sys.aospa.perf.complete 1
