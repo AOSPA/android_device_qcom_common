@@ -33,6 +33,23 @@
       "message": "are there any recent apq targets?",
       "revId": "36c7b64e1b2e90ed3e772179a4226a8894ed8337",
       "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "f316d6bd_f7de2038",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000012
+      },
+      "writtenOn": "2022-08-08T05:50:54Z",
+      "side": 1,
+      "message": "still looks good to me since this shouldn\u0027t affect msm targets",
+      "revId": "36c7b64e1b2e90ed3e772179a4226a8894ed8337",
+      "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
     }
   ]
 }
