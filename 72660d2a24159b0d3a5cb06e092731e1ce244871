@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "d06e3ec8_eac01298",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000012
+      },
+      "writtenOn": "2022-08-08T05:50:03Z",
+      "side": 1,
+      "message": "this is fine for consistency sake but I don\u0027t think anyone ships this apk",
+      "revId": "72660d2a24159b0d3a5cb06e092731e1ce244871",
+      "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
+    }
+  ]
+}
