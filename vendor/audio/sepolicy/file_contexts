@@ -1,0 +1,2 @@
+# Wakeup nodes
+/sys/devices/platform/soc/soc:qcom,msm-audio-apr/soc:qcom,msm-audio-apr:qcom,q6core-audio/soc:qcom,msm-audio-apr:qcom,q6core-audio:sound/Listen\s[0-9]+\sAudio\sService/wakeup/wakeup[0-9]+(/.*)? u:object_r:sysfs_wakeup:s0

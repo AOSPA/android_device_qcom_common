@@ -60,5 +60,8 @@ PRODUCT_PACKAGES += \
 PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.software.midi.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.software.midi.xml
 
+# Sepolicy
+BOARD_VENDOR_SEPOLICY_DIRS += $(QCOM_COMMON_PATH)/vendor/audio/sepolicy/
+
 # Get non-open-source specific aspects.
 $(call inherit-product-if-exists, vendor/qcom/common/vendor/audio/audio-vendor.mk)
