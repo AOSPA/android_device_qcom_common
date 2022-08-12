@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "64a445a7_35701126",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 3
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000012
+      },
+      "writtenOn": "2022-08-12T06:21:07Z",
+      "side": 1,
+      "message": "will look for other opportunities to compare OEM configs.\n",
+      "revId": "f0c3ab0ee418dc5e4280d748fde26ac3fee13757",
+      "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
+    }
+  ]
+}
