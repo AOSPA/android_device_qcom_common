@@ -144,6 +144,29 @@ service vendor.audio_tc53 /vendor/bin/mm-audio-ftm -tc 53
     disabled
     oneshot
 
+service vendor.audio_tc1 /vendor/bin/mm-audio-ftm -tc 1
+    user audio
+    group audio
+    disabled
+    oneshot
+
+service vendor.audio_tc2 /vendor/bin/mm-audio-ftm -tc 2
+    user audio
+    group audio
+    disabled
+    oneshot
+
+service vendor.audio_tc3 /vendor/bin/mm-audio-ftm -tc 3
+    user audio
+    group audio
+    disabled
+    oneshot
+
+service vendor.audio_tc4 /vendor/bin/mm-audio-ftm -tc 4
+    user audio
+    group audio
+    disabled
+    oneshot
 
 service vendor.audio_tc51 /vendor/bin/mm-audio-ftm -tc 51
     user audio
