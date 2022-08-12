@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "d7ba1490_d005a086",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000012
+      },
+      "writtenOn": "2022-08-12T06:20:13Z",
+      "side": 1,
+      "message": "Let\u0027s take this for now and if we need to make it SoC specific at some point, we can.",
+      "revId": "2da7b2f7f70dbbfd430caf6257ead2c1e7e860b5",
+      "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
+    }
+  ]
+}
