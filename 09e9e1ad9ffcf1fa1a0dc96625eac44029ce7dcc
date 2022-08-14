@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "4c62c39a_cec4b321",
+        "filename": "vendor/bt/qti-bt.mk",
+        "patchSetId": 2
+      },
+      "lineNbr": 24,
+      "author": {
+        "id": 1000465
+      },
+      "writtenOn": "2022-08-14T20:24:15Z",
+      "side": 1,
+      "message": "I don\u0027t think this is needed for qti bt",
+      "revId": "09e9e1ad9ffcf1fa1a0dc96625eac44029ce7dcc",
+      "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
+    }
+  ]
+}
