@@ -18,6 +18,9 @@ else
 -include $(TOPDIR)vendor/qcom/opensource/audio-hal/primary-hal/configs/$(TARGET_BOARD_PLATFORM)/$(TARGET_BOARD_PLATFORM).mk
 endif
 
+# Build Qualcomm common audio overlay
+TARGET_USES_RRO := true
+
 # Override proprietary definitions from SoC audio HAL Makefiles.
 AUDIO_FEATURE_ENABLED_DYNAMIC_LOG := false
 BOARD_SUPPORTS_OPENSOURCE_STHAL := false
