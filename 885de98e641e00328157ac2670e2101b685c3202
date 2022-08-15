@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "d9f14862_d13b169f",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 3
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000173
+      },
+      "writtenOn": "2022-08-15T09:07:26Z",
+      "side": 1,
+      "message": "how about vendor.qti.hardware.fm@1.0.vendor?",
+      "revId": "885de98e641e00328157ac2670e2101b685c3202",
+      "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
+    }
+  ]
+}
