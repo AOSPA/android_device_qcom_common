@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "7d2c052f_5c222a1d",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000012
+      },
+      "writtenOn": "2022-08-16T20:52:00Z",
+      "side": 1,
+      "message": "this would override vendor/aospa.  pinner will just skip files it can\u0027t access.",
+      "revId": "5de3f52341bfcac4deee150b849c4c4007a8f29a",
+      "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
+    }
+  ]
+}
