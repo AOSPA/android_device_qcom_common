@@ -1,4 +1,4 @@
-# Copyright (C) 2021 Paranoid Android
+# Copyright (C) 2022 Paranoid Android
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -18,11 +18,11 @@ PRODUCT_SOONG_NAMESPACES += \
 # Inherit from the USB product definition.
 $(call inherit-product, vendor/qcom/opensource/usb/vendor_product.mk)
 
-ifeq ($(TARGET_KERNEL_VERSION),5.4)
+ifneq (,$(filter 5.4 5.10, $(TARGET_KERNEL_VERSION)))
 TARGET_HAS_DIAG_ROUTER := true
 endif
 
-ifeq (,$(filter 4.19 5.4, $(TARGET_KERNEL_VERSION)))
+ifeq (,$(filter 4.19 5.4 5.10, $(TARGET_KERNEL_VERSION)))
 PRODUCT_PACKAGES += android.hardware.usb@1.0-service
 endif
 

@@ -1,4 +1,4 @@
-# Copyright (C) 2021 Paranoid Android
+# Copyright (C) 2022 Paranoid Android
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -35,7 +35,7 @@ PRODUCT_PACKAGES += \
     ueventd.qcom.rc
 
 # Kernel
-ifeq ($(TARGET_KERNEL_VERSION),5.4)
+ifneq (,$(filter 5.4 5.10, $(TARGET_KERNEL_VERSION)))
 PRODUCT_COPY_FILES += \
     $(call find-copy-subdir-files,*,$(QCOM_COMMON_PATH)/vendor/init/$(TARGET_BOARD_PLATFORM),$(TARGET_COPY_OUT_VENDOR))
 

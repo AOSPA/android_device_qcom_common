@@ -53,10 +53,12 @@ QCOM_BOARD_PLATFORMS += \
     msmnile \
     msmnile_au \
     msm_bronze \
+    parrot \
     qcs605 \
     sdm660 \
     sdm710 \
-    sdm845
+    sdm845 \
+    taro
 
 # List of targets that use video hardware.
 MSM_VIDC_TARGET_LIST := \
@@ -106,6 +108,10 @@ MASTER_SIDE_CP_TARGET_LIST := \
 include $(QCOM_COMMON_PATH)/utils.mk
 
 # Kernel Families
+5_10_FAMILY := \
+    parrot \
+    taro
+
 5_4_FAMILY := \
     holi \
     lahaina
@@ -136,7 +142,9 @@ include $(QCOM_COMMON_PATH)/utils.mk
     msm8937 \
     msm8996
 
-ifeq ($(call is-board-platform-in-list,$(5_4_FAMILY)),true)
+ifeq ($(call is-board-platform-in-list,$(5_10_FAMILY)),true)
+TARGET_KERNEL_VERSION ?= 5.10
+else ifeq ($(call is-board-platform-in-list,$(5_4_FAMILY)),true)
 TARGET_KERNEL_VERSION ?= 5.4
 else ifeq ($(call is-board-platform-in-list,$(4_19_FAMILY)),true)
 TARGET_KERNEL_VERSION ?= 4.19

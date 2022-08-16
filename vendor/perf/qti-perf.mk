@@ -1,4 +1,4 @@
-# Copyright (C) 2021 Paranoid Android
+# Copyright (C) 2022 Paranoid Android
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -26,8 +26,8 @@ PRODUCT_COPY_FILES += \
     $(QCOM_COMMON_PATH)/vendor/perf/vendor.qti.hardware.iop@2.0-service-disable.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/vendor.qti.hardware.iop@2.0-service-disable.rc
 endif
 
-# Disable the poweropt service for non 5.4 platforms.
-ifneq ($(TARGET_KERNEL_VERSION),5.4)
+# Disable the poweropt service for <5.4 platforms.
+ifeq (,$(filter 5.4 5.10, $(TARGET_KERNEL_VERSION)))
 PRODUCT_COPY_FILES += \
     $(QCOM_COMMON_PATH)/vendor/perf/poweropt-service-disable.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/poweropt-service-disable.rc
 endif
@@ -41,6 +41,7 @@ PRODUCT_PACKAGES += \
     libtflite \
     vendor.qti.hardware.servicetracker@1.2.vendor
 
+# Only copy task_profiles.json for 5.4 targets.
 ifeq ($(TARGET_KERNEL_VERSION),5.4)
 PRODUCT_COPY_FILES += \
     system/core/libprocessgroup/profiles/task_profiles.json:$(TARGET_COPY_OUT_VENDOR)/etc/task_profiles.json
