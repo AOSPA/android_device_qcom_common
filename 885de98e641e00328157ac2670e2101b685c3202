@@ -52,6 +52,24 @@
       "parentUuid": "3f8886dd_4d4fbf23",
       "revId": "885de98e641e00328157ac2670e2101b685c3202",
       "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "10511f62_e2fbc546",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 3
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000737
+      },
+      "writtenOn": "2022-08-16T05:11:53Z",
+      "side": 1,
+      "message": "Every device that uses FM defines this: BOARD_HAVE_QCOM_FM in device tree, so we can build it here inside this flag, so it will only be activated for devices that have the flag enabled.",
+      "parentUuid": "43321662_7a54a414",
+      "revId": "885de98e641e00328157ac2670e2101b685c3202",
+      "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
     }
   ]
 }
