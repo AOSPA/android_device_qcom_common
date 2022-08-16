@@ -34,6 +34,24 @@
       "parentUuid": "7d2c052f_5c222a1d",
       "revId": "5de3f52341bfcac4deee150b849c4c4007a8f29a",
       "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "c4ba260a_d99291fe",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000012
+      },
+      "writtenOn": "2022-08-16T21:04:31Z",
+      "side": 1,
+      "message": "yeah, overlays don\u0027t concatenate arrays.  would be cool though.",
+      "parentUuid": "fdf0b110_01d222b7",
+      "revId": "5de3f52341bfcac4deee150b849c4c4007a8f29a",
+      "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
     }
   ]
 }
