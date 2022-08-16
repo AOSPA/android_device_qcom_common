@@ -52,6 +52,24 @@
       "parentUuid": "fdf0b110_01d222b7",
       "revId": "5de3f52341bfcac4deee150b849c4c4007a8f29a",
       "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "4846863d_383a9700",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000737
+      },
+      "writtenOn": "2022-08-16T21:07:34Z",
+      "side": 1,
+      "message": "I will abandon these two commits then",
+      "parentUuid": "c4ba260a_d99291fe",
+      "revId": "5de3f52341bfcac4deee150b849c4c4007a8f29a",
+      "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
     }
   ]
 }
