@@ -16,6 +16,24 @@
       "message": "this would override vendor/aospa.  pinner will just skip files it can\u0027t access.",
       "revId": "5de3f52341bfcac4deee150b849c4c4007a8f29a",
       "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "fdf0b110_01d222b7",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000737
+      },
+      "writtenOn": "2022-08-16T21:04:01Z",
+      "side": 1,
+      "message": "I see, I planned to do this just to keep things more organized, but it currently doesn\u0027t affect Pixel 6, so it will look like it is now",
+      "parentUuid": "7d2c052f_5c222a1d",
+      "revId": "5de3f52341bfcac4deee150b849c4c4007a8f29a",
+      "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
     }
   ]
 }
