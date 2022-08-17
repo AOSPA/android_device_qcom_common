@@ -29,10 +29,8 @@ PRODUCT_PACKAGES += \
     vendor.qti.hardware.btconfigstore@2.0.vendor
 
 # FM
-ifeq ($(BOARD_HAVE_QCOM_FM),true)
 PRODUCT_PACKAGES += \
     vendor.qti.hardware.fm@1.0.vendor
-endif
 
 # Permissions
 PRODUCT_COPY_FILES += \
