@@ -2,7 +2,7 @@ system/bin/wfdservice
 system/etc/init/wfdservice.rc
 system/etc/wfdconfig.xml
 system/etc/wfdconfigsink.xml
--system/framework/WfdCommon.jar
+system/framework/WfdCommon.jar
 system/lib/com.qualcomm.qti.wifidisplayhal@1.0.so
 system/lib/libmmrtpdecoder.so
 system/lib/libmmrtpencoder.so
@@ -30,4 +30,4 @@ system/lib64/libmmrtpencoder.so
 system/lib64/libshim_wfd.so
 system/lib64/libwfdclient.so
 system/lib64/libwfdnative.so
--system/priv-app/WfdService/WfdService.apk
+system/priv-app/WfdService/WfdService.apk
