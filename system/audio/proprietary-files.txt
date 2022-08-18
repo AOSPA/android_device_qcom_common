@@ -2,8 +2,8 @@ system_ext/bin/qxrsplitauxservice
 system_ext/etc/init/sxrauxd_ext.rc
 system_ext/etc/permissions/audiosphere.xml
 system_ext/etc/seccomp_policy/sxraux-arm.policy
--system_ext/framework/audiosphere.jar
--system_ext/framework/vendor.qti.voiceprint-V1.0-java.jar
+system_ext/framework/audiosphere.jar
+system_ext/framework/vendor.qti.voiceprint-V1.0-java.jar
 system_ext/lib/libbinauralrenderer_wrapper.qti.so
 system_ext/lib/libhoaeffects_csim.so
 system_ext/lib/libhoaeffects.qti.so
