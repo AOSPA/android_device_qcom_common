@@ -12,9 +12,6 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-# HIDL
-DEVICE_FRAMEWORK_MANIFEST_FILE += $(QCOM_COMMON_PATH)/system/telephony/framework_manifest.xml
-
 # Packages
 PRODUCT_PACKAGES += \
     android.hardware.radio@1.6 \
