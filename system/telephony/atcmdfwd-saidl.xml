@@ -1,0 +1,7 @@
+<manifest version="1.0" type="framework">
+    <hal format="aidl">
+        <name>vendor.qti.hardware.radio.atcmdfwd</name>
+        <version>1</version>
+        <fqname>IAtCmdFwd/AtCmdFwdAidl</fqname>
+    </hal>
+</manifest>
