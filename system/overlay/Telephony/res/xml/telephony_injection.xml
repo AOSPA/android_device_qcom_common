@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!--
-  Copyright (c) 2019 Qualcomm Technologies, Inc.
+  Copyright (c) 2019, 2022 Qualcomm Technologies, Inc.
   All Rights Reserved.
   Confidential and Proprietary - Qualcomm Technologies, Inc.
 
@@ -39,12 +39,19 @@
         <component>com.android.internal.telephony.SubscriptionController</component>
         <component>com.android.internal.telephony.SubscriptionInfoUpdater</component>
         <component>com.android.internal.telephony.GsmCdmaPhone</component>
-        <component>com.android.internal.telephony.PhoneSwitcher</component>
+        <component>com.android.internal.telephony.data.PhoneSwitcher</component>
         <component>com.android.internal.telephony.IccPhoneBookInterfaceManager</component>
+        <component>com.android.internal.telephony.IccSmsInterfaceManager</component>
         <component>com.android.internal.telephony.dataconnection.DcTracker</component>
         <component>com.android.internal.telephony.RIL</component>
         <component>com.android.internal.telephony.TelephonyComponentFactory</component>
         <component>com.android.internal.telephony.MultiSimSettingController</component>
         <component>com.android.internal.telephony.CarrierInfoManager</component>
+        <component>com.android.internal.telephony.data.DataNetworkController</component>
+        <component>com.android.internal.telephony.data.DataConfigManager</component>
+        <component>com.android.internal.telephony.data.DataProfileManager</component>
+        <component>com.android.internal.telephony.data.DataRetryManager</component>
+        <component>com.android.internal.telephony.data.TelephonyNetworkAgent</component>
+        <component>com.android.internal.telephony.data.DataSettingsManager</component>
     </components>
 </injection>
