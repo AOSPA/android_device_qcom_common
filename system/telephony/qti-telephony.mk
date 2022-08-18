@@ -13,7 +13,7 @@
 # limitations under the License.
 
 # HIDL
-DEVICE_FRAMEWORK_MANIFEST_FILE += $(QCOM_COMMON_PATH)/system/telephony/framework_manifest.xml
+SYSTEM_EXT_MANIFEST_FILES += $(QCOM_COMMON_PATH)/system/telephony/atcmdfwd-saidl.xml
 
 # Packages
 PRODUCT_PACKAGES += \
