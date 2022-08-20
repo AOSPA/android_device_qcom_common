@@ -12,7 +12,7 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-# Current system tag :- LA.QSSI.12.0.r1-07100-qssi.0
+# Current system tag :- LA.QSSI.12.0.r1-08300-qssi.0 
 # Current vendor tag :- LA.UM.9.14.r1-19300.01-LAHAINA.QSSI12.0
 
 ifeq ($(TARGET_COMMON_QTI_COMPONENTS), all)
