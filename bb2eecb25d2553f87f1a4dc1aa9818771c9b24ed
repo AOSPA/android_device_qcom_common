@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "d88b990e_8319b156",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 7
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000697
+      },
+      "writtenOn": "2022-08-20T12:07:47Z",
+      "side": 1,
+      "message": "original patch is supposed to enable CONFIG_IEEE80211AX https://github.com/ZVNexus/android_device_asus_obiwan/commit/b3b978fca862fcf13492337d42cf179f6e25cbd5\n\nand my patch https://gerrit.aospa.co/c/AOSPA/android_device_qcom_common/+/22617\nEnables this flag according to commit: https://github.com/AOSPA/android_external_wpa_supplicant_8/commit/35d8ea48c36ff97e4a4e7e63af7df2af35b30593\n\nSo i either the flag be changed or authorship",
+      "revId": "bb2eecb25d2553f87f1a4dc1aa9818771c9b24ed",
+      "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
+    }
+  ]
+}
