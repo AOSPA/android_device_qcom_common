@@ -58,6 +58,7 @@ system_ext/etc/permissions/telephony_system-ext_privapp-permissions-qti.xml
 system_ext/etc/permissions/vendor.qti.ims.rcsservice.xml
 system_ext/etc/seccomp_policy/tcmd.policy
 system_ext/etc/sysconfig/qti_whitelist_system_ext.xml
+system_ext/etc/sysconfig/whitelist_com.qualcomm.qti.uceShimService.xml
 system_ext/etc/cdma_call_conf.xml
 system_ext/etc/spn-conf.xml
 system_ext/framework/ActivityExt.jar
