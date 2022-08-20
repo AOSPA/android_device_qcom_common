@@ -34,6 +34,7 @@ system_ext/app/SimContact/SimContact.apk
 system_ext/app/atfwd/atfwd.apk
 system_ext/app/embms/embms.apk
 system_ext/app/imssettings/imssettings.apk
+system_ext/app/uceShimService/uceShimService.apk
 system_ext/bin/diag_callback_sample_system
 system_ext/bin/diag_dci_sample_system
 system_ext/bin/diag_mdlog_system
@@ -58,6 +59,7 @@ system_ext/etc/permissions/telephony_system-ext_privapp-permissions-qti.xml
 system_ext/etc/permissions/vendor.qti.ims.rcsservice.xml
 system_ext/etc/seccomp_policy/tcmd.policy
 system_ext/etc/sysconfig/qti_whitelist_system_ext.xml
+system_ext/etc/sysconfig/whitelist_com.qualcomm.qti.uceShimService.xml
 system_ext/etc/cdma_call_conf.xml
 system_ext/etc/spn-conf.xml
 system_ext/framework/ActivityExt.jar
@@ -260,6 +262,3 @@ system_ext/priv-app/dpmserviceapp/dpmserviceapp.apk
 system_ext/priv-app/ims/ims.apk
 system_ext/priv-app/qcrilmsgtunnel/qcrilmsgtunnel.apk
 system/framework/tcmclient.jar
-
-# uceShimService - from LA.QSSI.12.0.r1-05800-qssi.0
-system_ext/app/uceShimService/uceShimService.apk|d3a55dbb95418751fc4564964ff18f63b9ff1b3b
