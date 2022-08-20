@@ -16,10 +16,25 @@
 -include hardware/qcom/display/config/display-board.mk
 -include hardware/qcom/display/config/display-product.mk
 
+# Enable Legacy Lights HAL for <5.10 targets
+ifneq (,$(filter 3.18 4.4 4.9 4.14 4.19 5.4, $(TARGET_KERNEL_VERSION)))
+
 # Lights AIDL Soong Configs
 SOONG_CONFIG_NAMESPACES += lights
 SOONG_CONFIG_lights += lighttargets
 SOONG_CONFIG_lights_lighttargets := lightaidlV1target
+
+# Lights HAL
+PRODUCT_PACKAGES += \
+    android.hardware.lights-service.qti \
+    lights.qcom
+
+else # > 5.10
+
+# Include QTI AIDL Lights HAL for 5.10
+-include vendor/qcom/opensource/lights/lights-vendor-product.mk
+
+endif
 
 # Permissions
 PRODUCT_COPY_FILES += \
@@ -28,10 +43,8 @@ PRODUCT_COPY_FILES += \
 # Packages
 PRODUCT_PACKAGES += \
     android.hardware.graphics.common-V1-ndk_platform.vendor \
-    android.hardware.lights-service.qti \
     libqdutils \
-    libqservice \
-    lights.qcom
+    libqservice
 
 # Get non-open-source specific aspects.
 $(call inherit-product-if-exists, vendor/qcom/common/vendor/display/display-vendor.mk)
