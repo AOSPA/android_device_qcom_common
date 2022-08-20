@@ -16,6 +16,24 @@
       "message": "device/qcom/wlan\nmsmnile/hostapd.conf:773:#ieee80211ax: Whether IEEE 802.11ax (HE) is enabled\nmsmnile/hostapd.conf:776:#ieee80211ax\u003d1\n",
       "revId": "028aa765c51aebf4e3e9cc66ee638d23dbbc33ac",
       "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "b7f81d2b_542f7040",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000579
+      },
+      "writtenOn": "2022-08-20T10:57:09Z",
+      "side": 1,
+      "message": "doesn\u0027t support wifi 6 soft ap :(",
+      "parentUuid": "09a8eb98_1b508250",
+      "revId": "028aa765c51aebf4e3e9cc66ee638d23dbbc33ac",
+      "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
     }
   ]
 }
