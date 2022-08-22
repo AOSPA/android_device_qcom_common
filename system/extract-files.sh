@@ -62,6 +62,10 @@ function blob_fixup() {
         system/lib64/libwfdnative.so | system/lib/libwfdnative.so | system/lib/libwfdservice.so | system/lib/libwfdcommonutils.so | system/lib/libwfdmmsrc.so | system/lib/libwfdmmsink.so)
             "${PATCHELF}" --add-needed "libshim_wfd.so" "${2}"
             ;;
+
+        system_ext/etc/permissions/*.xml)
+            sed -i "s|\"/system_ext/|\"/system/system_ext/|g" "${2}"
+            ;;
     esac
 }
 
