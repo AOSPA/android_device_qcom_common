@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "47edff00_d34ee748",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000579
+      },
+      "writtenOn": "2022-08-22T10:02:39Z",
+      "side": 1,
+      "message": "goddamn why don\u0027t older phones like loading qcrilhook framework lib :( ",
+      "revId": "9c48ba1c135fbb736bb0a4c94812adde7e1964e2",
+      "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
+    }
+  ]
+}
