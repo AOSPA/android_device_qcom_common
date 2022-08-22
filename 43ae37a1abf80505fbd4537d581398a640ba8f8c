@@ -16,6 +16,23 @@
       "message": "https://github.com/gotenksIN/proprietary_vendor_qcom_common/commit/8c2bf0fa1018e86824cdba4a93caea6e65c9864d",
       "revId": "43ae37a1abf80505fbd4537d581398a640ba8f8c",
       "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "7ad2ea6a_f9f76abf",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 7
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000579
+      },
+      "writtenOn": "2022-08-22T06:00:18Z",
+      "side": 1,
+      "message": "alioth and op7 are fine ",
+      "revId": "43ae37a1abf80505fbd4537d581398a640ba8f8c",
+      "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
     }
   ]
 }
