@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "dfd35abd_bb7a6ad9",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 8
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000579
+      },
+      "writtenOn": "2022-08-23T03:46:44Z",
+      "side": 1,
+      "message": "anyone who has phones which support this, can you turn wifi hotspot on at 5/6Ghz, connect it to any modern wlan device and see if 802.11ax/wifi 6 shows up, no wifi 6 isn\u0027t supposed to be 6ghz only",
+      "revId": "7cda7a720bba91b15bb4951f98f4ae69335f2a9b",
+      "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
+    }
+  ]
+}
