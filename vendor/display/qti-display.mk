@@ -16,11 +16,6 @@
 -include hardware/qcom/display/config/display-board.mk
 -include hardware/qcom/display/config/display-product.mk
 
-# Lights AIDL Soong Configs
-SOONG_CONFIG_NAMESPACES += lights
-SOONG_CONFIG_lights += lighttargets
-SOONG_CONFIG_lights_lighttargets := lightaidlV1target
-
 # Permissions
 PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.touchscreen.multitouch.jazzhand.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.touchscreen.multitouch.jazzhand.xml
