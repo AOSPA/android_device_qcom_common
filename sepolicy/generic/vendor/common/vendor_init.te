@@ -1,3 +1,6 @@
+# Allow init.aospa.perf.rc to read CPUSets
+allow vendor_init cgroup:file r_file_perms;
+
 # Allow init.qcom.post_boot.sh to set watermark_scale_factor
 allow vendor_qti_init_shell proc_watermark_scale_factor:file w_file_perms;
 
