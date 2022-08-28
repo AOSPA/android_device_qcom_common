@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "8ecdaf85_99381a07",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000579
+      },
+      "writtenOn": "2022-08-28T08:57:30Z",
+      "side": 1,
+      "message": "could also be we have to remove _platform? didn\u0027t check yet, wait to verify with Taro and Lahaina vendor that nothing breaks",
+      "revId": "39a01a77c20b9370ea305639bc0a2baf231b9f31",
+      "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
+    }
+  ]
+}
