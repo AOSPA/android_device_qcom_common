@@ -16,6 +16,23 @@
       "message": "I\u0027m fine doing this here or vendor/aospa",
       "revId": "7363006c48acd87688166750d4425647d994a07b",
       "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "c4db3d83_1b52d9d9",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000579
+      },
+      "writtenOn": "2022-08-29T18:09:53Z",
+      "side": 1,
+      "message": "on phone and about to sleep so not going to edit directly, we can label it as VNDK compat or something and guard it because upcoming devices will be using aidls for this\nthere\u0027s probably lot of older stuff here which isn\u0027t exactly compatible with taro or 5.15 qcom, but i would like that newer stuff would be \nI like this change and CR -2 is only as a blocker so I can check up on this tomorrow morning ",
+      "revId": "7363006c48acd87688166750d4425647d994a07b",
+      "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
     }
   ]
 }
