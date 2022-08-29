@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "e9231126_3760cc39",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000012
+      },
+      "writtenOn": "2022-08-29T17:58:40Z",
+      "side": 1,
+      "message": "I\u0027m fine doing this here or vendor/aospa",
+      "revId": "7363006c48acd87688166750d4425647d994a07b",
+      "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
+    }
+  ]
+}
