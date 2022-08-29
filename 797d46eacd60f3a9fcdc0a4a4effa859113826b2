@@ -52,6 +52,24 @@
       "parentUuid": "7ec2a217_7f358acc",
       "revId": "797d46eacd60f3a9fcdc0a4a4effa859113826b2",
       "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "77996fb0_304a2744",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000579
+      },
+      "writtenOn": "2022-08-29T17:43:21Z",
+      "side": 1,
+      "message": "╰─❯ rg --binary android.hardware.wifi.hostapd\nbin/mutualex: binary file matches (found \"\\u{0}\" byte around offset 7)\n\nlib/android.hardware.wifi.hostapd@1.0.so: binary file matches (found \"\\u{0}\" byte around offset 7)",
+      "parentUuid": "bb6cbe5e_8b75dd3e",
+      "revId": "797d46eacd60f3a9fcdc0a4a4effa859113826b2",
+      "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
     }
   ]
 }
