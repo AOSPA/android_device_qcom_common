@@ -16,6 +16,24 @@
       "message": "so far observed on phone1 and alioth",
       "revId": "797d46eacd60f3a9fcdc0a4a4effa859113826b2",
       "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "7ec2a217_7f358acc",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000737
+      },
+      "writtenOn": "2022-08-29T17:22:03Z",
+      "side": 1,
+      "message": "Wouldn\u0027t it be better to add in Wlan ?",
+      "parentUuid": "3176b4e9_c555bd92",
+      "revId": "797d46eacd60f3a9fcdc0a4a4effa859113826b2",
+      "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
     }
   ]
 }
