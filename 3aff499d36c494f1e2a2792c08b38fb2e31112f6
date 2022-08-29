@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "b1593313_9d73ddee",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 10
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000579
+      },
+      "writtenOn": "2022-08-29T14:52:57Z",
+      "side": 1,
+      "message": "tested on alioth and lmi, 802.11ax over 5GHz works as expected",
+      "revId": "3aff499d36c494f1e2a2792c08b38fb2e31112f6",
+      "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
+    }
+  ]
+}
