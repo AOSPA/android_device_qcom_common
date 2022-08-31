@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "e7e63fc0_602406d3",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000697
+      },
+      "writtenOn": "2022-08-31T13:55:22Z",
+      "side": 1,
+      "message": "There seems to a selinux denial with this patch\n\nW init    : type\u003d1400 audit(0.0:44): avc: denied { getattr } for path\u003d\"/dev/cpuset/system-background/cpus\" dev\u003d\"cgroup\" ino\u003d63 scontext\u003du:r:vendor_init:s0 tcontext\u003du:object_r:cgroup:s0 tclass\u003dfile permissive\u003d0\n",
+      "revId": "6c606d6f59568481e13fd0d403b755d88023bcdc",
+      "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
+    }
+  ]
+}
