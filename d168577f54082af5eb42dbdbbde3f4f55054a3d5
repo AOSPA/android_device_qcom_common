@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "81e93f97_c9cdd1ad",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000579
+      },
+      "writtenOn": "2022-09-02T05:08:36Z",
+      "side": 1,
+      "message": "its build with dependencies by whatever needs it, feel free to merge",
+      "revId": "d168577f54082af5eb42dbdbbde3f4f55054a3d5",
+      "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
+    }
+  ]
+}
