@@ -51,29 +51,21 @@ case "$target" in
                ;;
            518)
                setprop vendor.media.target.version 3
-               if [ $build_codename -le "12" ]; then
-                   setprop vendor.netflix.bsp_rev "Q6115-31409-1"
-               fi
+               setprop vendor.netflix.bsp_rev "Q6115-31409-1"
                ;;
            *)
                sku_ver=`cat /sys/devices/platform/soc/5a00000.qcom,vidc/sku_version` 2> /dev/null
                if [ $sku_ver -eq 1 ]; then
                    setprop vendor.media.target.version 1
                fi
-               if [ $build_codename -le "12" ]; then
-                   setprop vendor.netflix.bsp_rev "Q6115-31409-1"
-               fi
+               setprop vendor.netflix.bsp_rev "Q6115-31409-1"
                ;;
        esac
        ;;
    "kona")
-       if [ $build_codename -le "12" ]; then
-           setprop vendor.netflix.bsp_rev "Q8250-19134-1"
-       fi
+       setprop vendor.netflix.bsp_rev "Q8250-19134-1"
        ;;
    "lito")
-       if [ $build_codename -le "12" ]; then
-           setprop vendor.netflix.bsp_rev "Q7250-19133-1"
-       fi
+       setprop vendor.netflix.bsp_rev "Q7250-19133-1"
        ;;
 esac
