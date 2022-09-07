@@ -21,6 +21,7 @@ endif
 PRODUCT_PACKAGES += \
     android.hardware.bluetooth@1.1.vendor \
     android.hardware.bluetooth.audio-impl \
+    android.hardware.bluetooth.audio@2.1-impl \
     audio.bluetooth.default \
     com.dsi.ant@1.0.vendor \
     com.qualcomm.qti.bluetooth_audio@1.0.vendor \
