@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "6da5005e_518e1b37",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000012
+      },
+      "writtenOn": "2022-09-08T17:21:20Z",
+      "side": 1,
+      "message": "I still don\u0027t think this is right.  Here\u0027s a Qualcomm commit for reference:\nhttps://source.codeaurora.org/quic/la/device/qcom/common/commit/?h\u003dqcom-devices.lnx.6.0.r3-rel\u0026id\u003d7b606eb866716e1a0bad5ccc19f88a52116e011",
+      "revId": "b5ee20f933171f8fc3a2dc1c4c491162f3047a71",
+      "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
+    }
+  ]
+}
