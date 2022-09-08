@@ -62,5 +62,15 @@ PRODUCT_VENDOR_PROPERTIES += \
 
 endif
 
+#---------------------------------------------------------------------------------------------------
+# Runtime Codec2.0 enablement
+#---------------------------------------------------------------------------------------------------
+# TODO(PC): Override ccodec selection option back to defult (4).
+#           QSSI is forcing this to '1'. Must be reverted
+ifeq ($(call is-board-platform-in-list, bengal), true)
+    $(warning "Default Codec2.0 Enabled")
+    PRODUCT_PROPERTY_OVERRIDES += debug.stagefright.ccodec=4
+endif
+
 # Get non-open-source specific aspects.
 $(call inherit-product-if-exists, vendor/qcom/common/vendor/media/media-vendor.mk)
