@@ -59,6 +59,12 @@ PRODUCT_VENDOR_PROPERTIES += \
     vendor.audio.c2.preferred=true \
     vendor.qc2audio.suspend.enabled=true \
     vendor.qc2audio.per_frame.flac.dec.enabled=true
+
+ifeq ($(call is-board-platform-in-list, bengal), true)
+    $(warning "Default Codec2.0 Enabled")
+    PRODUCT_PROPERTY_OVERRIDES += debug.stagefright.ccodec=4
+endif
+
 endif
 
 # Get non-open-source specific aspects.
