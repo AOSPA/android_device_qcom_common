@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "a52b3d35_abbcc95f",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000012
+      },
+      "writtenOn": "2022-09-10T02:49:08Z",
+      "side": 1,
+      "message": "this is already building for me.  \n\nSpacewar:/vendor # find -name libbluetooth_audio_session*\n./lib/libbluetooth_audio_session.so\n./lib/libbluetooth_audio_session_aidl.so\n./lib/libbluetooth_audio_session_qti.so\n./lib/libbluetooth_audio_session_qti_2_1.so\n./lib64/libbluetooth_audio_session.so\n./lib64/libbluetooth_audio_session_aidl.so\n./lib64/libbluetooth_audio_session_qti.so\n./lib64/libbluetooth_audio_session_qti_2_1.so",
+      "revId": "818d874ca1f3fcd560f25dea2a13ce707a34e384",
+      "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
+    }
+  ]
+}
