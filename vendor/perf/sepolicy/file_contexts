@@ -1,0 +1,2 @@
+# Poweropt-service
+/(vendor|system/vendor)/bin/poweropt-service     u:object_r:vendor_poweroptservice_exec:s0

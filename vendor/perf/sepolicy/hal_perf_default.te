@@ -1,1 +1,2 @@
 r_dir_file(vendor_hal_perf_default, system_server)
+binder_call(vendor_hal_perf_default, vendor_poweroptservice)

@@ -1,0 +1,20 @@
+type vendor_poweroptservice, domain;
+type vendor_poweroptservice_exec, exec_type, vendor_file_type, file_type;
+
+init_daemon_domain(vendor_poweroptservice)
+
+hwbinder_use(vendor_poweroptservice)
+
+hal_client_domain(vendor_poweroptservice, vendor_hal_perf)
+hal_client_domain(vendor_poweroptservice, hal_graphics_composer)
+
+get_prop(vendor_poweroptservice, vendor_mpctl_prop)
+
+r_dir_file(vendor_poweroptservice, vendor_sysfs_graphics)
+r_dir_file(vendor_poweroptservice, vendor_sysfs_kgsl)
+r_dir_file(vendor_poweroptservice, sysfs_android_usb)
+
+allow vendor_poweroptservice vendor_qdisplay_service:service_manager find;
+allow vendor_poweroptservice input_device:dir r_dir_perms;
+allow vendor_poweroptservice input_device:chr_file rw_file_perms;
+dontaudit vendor_poweroptservice self:capability kill;
