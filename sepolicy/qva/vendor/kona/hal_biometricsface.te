@@ -1,0 +1,65 @@
+# Copyright (c) 2019, The Linux Foundation. All rights reserved.
+#
+# Redistribution and use in source and binary forms, with or without
+# modification, are permitted provided that the following conditions are
+# met:
+#     * Redistributions of source code must retain the above copyright
+#       notice, this list of conditions and the following disclaimer.
+#     * Redistributions in binary form must reproduce the above
+#       copyright notice, this list of conditions and the following
+#       disclaimer in the documentation and/or other materials provided
+#       with the distribution.
+#     * Neither the name of The Linux Foundation nor the names of its
+#       contributors may be used to endorse or promote products derived
+#       from this software without specific prior written permission.
+#
+# THIS SOFTWARE IS PROVIDED "AS IS" AND ANY EXPRESS OR IMPLIED
+# WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF
+# MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NON-INFRINGEMENT
+# ARE DISCLAIMED.  IN NO EVENT SHALL THE COPYRIGHT OWNER OR CONTRIBUTORS
+# BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR
+# CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF
+# SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR
+# BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY,
+# WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE
+# OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN
+# IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+
+type vendor_biometricsface, domain;
+type vendor_biometricsface_exec, exec_type, vendor_file_type, file_type;
+
+init_daemon_domain(vendor_biometricsface)
+
+hal_server_domain(vendor_biometricsface, hal_face)
+
+r_dir_file(vendor_biometricsface, adsprpcd_file)
+
+#  Access for ion_memory
+allow vendor_biometricsface ion_device:chr_file rw_file_perms;
+
+#  Access for qseecom_memory
+allow vendor_biometricsface tee_device:chr_file rw_file_perms;
+
+#  Access for DSP/QDSP device
+allow vendor_biometricsface vendor_qdsp_device:chr_file rw_file_perms;
+allow vendor_biometricsface vendor_dsp_device:chr_file rw_file_perms;
+
+#  Access for sdcard
+userdebug_or_eng(`
+allow vendor_biometricsface sdcard_type:dir rw_dir_perms;
+allow vendor_biometricsface sdcard_type:file create_file_perms;
+')
+
+#Access for graphics buffer
+hal_client_domain(vendor_biometricsface, hal_graphics_allocator);
+
+#  Access for /data/vendor/misc/face3d_dir
+allow vendor_biometricsface vendor_biometricsface_data_file:dir create_dir_perms;
+allow vendor_biometricsface vendor_biometricsface_data_file:file create_file_perms;
+
+# Allow to read persist.biometrics.face3d.producer,adsprpc prop
+get_prop(vendor_biometricsface, vendor_face3d_producer_prop);
+get_prop(vendor_biometricsface, vendor_adsprpc_prop);
+
+allow vendor_biometricsface fwk_camera_hwservice:hwservice_manager find;
+allow vendor_biometricsface hidl_token_hwservice:hwservice_manager find;
