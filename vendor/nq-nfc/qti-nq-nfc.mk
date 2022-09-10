@@ -1,4 +1,4 @@
-# Copyright (C) 2021 Paranoid Android
+# Copyright (C) 2022 Paranoid Android
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -34,6 +34,9 @@ endif
 PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.se.omapi.ese.xml:$(NFC_PERMISSIONS_DIR)/android.hardware.se.omapi.ese.xml \
     frameworks/native/data/etc/android.hardware.se.omapi.uicc.xml:$(NFC_PERMISSIONS_DIR)/android.hardware.se.omapi.uicc.xml
+
+# Sepolicy
+BOARD_VENDOR_SEPOLICY_DIRS += $(QCOM_COMMON_PATH)/vendor/nq-nfc/sepolicy/
 
 # Get non-open-source specific aspects.
 $(call inherit-product-if-exists, vendor/qcom/common/vendor/nq-nfc/nq-nfc-vendor.mk)
