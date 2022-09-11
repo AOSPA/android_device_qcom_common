@@ -1,4 +1,4 @@
-# Copyright (c) 2019-2020, The Linux Foundation. All rights reserved.
+# Copyright (c) 2021, The Linux Foundation. All rights reserved.
 
 # Redistribution and use in source and binary forms, with or without
 # modification, are permitted provided that the following conditions are
@@ -25,24 +25,30 @@
 # OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN
 # IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
+# Define domain
+type hal_display_demura_default, domain;
+hal_server_domain(hal_display_demura_default, vendor_hal_display_demura)
+type hal_display_demura_default_exec, exec_type, vendor_file_type, file_type;
+init_daemon_domain(hal_display_demura_default)
 
-type vendor_poweroptservice, domain;
-type vendor_poweroptservice_exec, exec_type, vendor_file_type, file_type;
+# Allow hwbinder call from hal client to server
+binder_call(vendor_hal_display_demura_client, vendor_hal_display_demura_server)
+binder_call(vendor_hal_display_demura_server, vendor_hal_display_demura_client)
 
-init_daemon_domain(vendor_poweroptservice)
+# Add hwservice related rules
+hal_attribute_hwservice(vendor_hal_display_demura, vendor_hal_display_demura_hwservice)
 
-hwbinder_use(vendor_poweroptservice)
+# Rule for vndbinder usage
+allow vendor_hal_display_demura vendor_qdisplay_service:service_manager find;
+vndbinder_use(vendor_hal_display_demura);
 
-hal_client_domain(vendor_poweroptservice, vendor_hal_perf)
-hal_client_domain(vendor_poweroptservice, hal_graphics_composer)
+# Allow reading/writing to "/data/vendor/display"
+allow hal_display_demura_default vendor_display_vendor_data_file:dir create_dir_perms;
+allow hal_display_demura_default vendor_display_vendor_data_file:file create_file_perms;
 
-get_prop(vendor_poweroptservice, vendor_mpctl_prop)
+# Allow only directory search to '/mnt/vendor/persist/'
+allow hal_display_demura_default mnt_vendor_file:dir search;
 
-r_dir_file(vendor_poweroptservice, vendor_sysfs_graphics)
-r_dir_file(vendor_poweroptservice, vendor_sysfs_kgsl)
-r_dir_file(vendor_poweroptservice, sysfs_android_usb)
-
-allow vendor_poweroptservice vendor_qdisplay_service:service_manager find;
-allow vendor_poweroptservice input_device:dir r_dir_perms;
-allow vendor_poweroptservice input_device:chr_file rw_file_perms;
-dontaudit vendor_poweroptservice self:capability kill;
+# Allow reading/writing to '/mnt/vendor/persist/display/*'
+allow hal_display_demura_default vendor_persist_display_file:dir rw_dir_perms;
+allow hal_display_demura_default vendor_persist_display_file:file create_file_perms;

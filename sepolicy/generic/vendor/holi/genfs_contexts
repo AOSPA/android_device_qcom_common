@@ -40,10 +40,19 @@ genfscon sysfs /devices/platform/soc/1c40000.qcom,spmi/spmi-0/spmi0-02/1c40000.q
 genfscon sysfs /devices/platform/soc/1c40000.qcom,spmi/spmi-0/spmi0-02/1c40000.qcom,spmi:qcom,pm7250b@2:qcom,qpnp-smb5/power_supply/pc_port u:object_r:vendor_sysfs_usb_supply:s0
 genfscon sysfs /devices/platform/soc/1c40000.qcom,spmi/spmi-0/spmi0-02/1c40000.qcom,spmi:qcom,pm7250b@2:qcom,qpnp-smb5/power_supply/usb u:object_r:vendor_sysfs_usb_supply:s0
 genfscon sysfs /devices/platform/soc/1c40000.qcom,spmi/spmi-0/spmi0-02/1c40000.qcom,spmi:qcom,pm7250b@2:qcom,usb-pdphy@1700/usbpd/usbpd0 u:object_r:vendor_sysfs_usbpd_device:s0
+
+genfscon sysfs /devices/platform/soc/1c40000.qcom,spmi/spmi-0/0-02/1c40000.qcom,spmi:qcom,pm7250b@2:qcom,qpnp-smb5/power_supply/battery u:object_r:vendor_sysfs_battery_supply:s0
+genfscon sysfs /devices/platform/soc/1c40000.qcom,spmi/spmi-0/0-02/1c40000.qcom,spmi:qcom,pm7250b@2:qcom,qpnp-smb5/power_supply/dc u:object_r:vendor_sysfs_battery_supply:s0
+genfscon sysfs /devices/platform/soc/1c40000.qcom,spmi/spmi-0/0-02/1c40000.qcom,spmi:qcom,pm7250b@2:qpnp,qg/power_supply/bms u:object_r:vendor_sysfs_battery_supply:s0
+genfscon sysfs /devices/platform/soc/1c40000.qcom,spmi/spmi-0/0-02/1c40000.qcom,spmi:qcom,pm7250b@2:qcom,qpnp-smb5/power_supply/pc_port u:object_r:vendor_sysfs_usb_supply:s0
+genfscon sysfs /devices/platform/soc/1c40000.qcom,spmi/spmi-0/0-02/1c40000.qcom,spmi:qcom,pm7250b@2:qcom,qpnp-smb5/power_supply/usb u:object_r:vendor_sysfs_usb_supply:s0
+genfscon sysfs /devices/platform/soc/1c40000.qcom,spmi/spmi-0/0-02/1c40000.qcom,spmi:qcom,pm7250b@2:qcom,usb-pdphy@1700/usbpd/usbpd0 u:object_r:vendor_sysfs_usbpd_device:s0
+
 genfscon sysfs /class/qcom-battery u:object_r:vendor_sysfs_battery_supply:s0
 genfscon sysfs /devices/platform/soc/4c90000.i2c/i2c-2/2-000c/4c90000.i2c:qcom,smb1355@c:qcom,smb1355-charger@1000/power_supply/parallel u:object_r:vendor_sysfs_battery_supply:s0
 genfscon sysfs /devices/platform/soc/4c90000.i2c/i2c-2/2-0034/4c90000.i2c:qcom,smb1396@34:qcom,div2_cp/power_supply/charge_pump_master u:object_r:vendor_sysfs_battery_supply:s0
 genfscon sysfs /devices/platform/soc/4c90000.i2c/i2c-2/2-0035/4c90000.i2c:qcom,smb1396@35:qcom,div2_cp_slave/power_supply/cp_slave u:object_r:vendor_sysfs_battery_supply:s0
+genfscon sysfs /devices/platform/soc/4c90000.i2c/i2c-2/2-0034/4c90000.i2c:qcom,smb1394@34:qcom,div2_cp_pry/power_supply/charge_pump_master u:object_r:vendor_sysfs_battery_supply:s0
 
 #IIO device nodes
 genfscon sysfs /bus/iio/devices u:object_r:vendor_sysfs_battery_supply:s0
@@ -55,6 +64,18 @@ genfscon sysfs /devices/platform/soc/1c40000.qcom,spmi/spmi-0/spmi0-05/1c40000.q
 genfscon sysfs /devices/platform/soc/1c40000.qcom,spmi/spmi-0/spmi0-05/1c40000.qcom,spmi:qcom,pm6150l@5:qcom,leds@d000/leds/green u:object_r:vendor_sysfs_graphics:s0
 genfscon sysfs /devices/platform/soc/1c40000.qcom,spmi/spmi-0/spmi0-05/1c40000.qcom,spmi:qcom,pm6150l@5:qcom,leds@d000/leds/blue u:object_r:vendor_sysfs_graphics:s0
 genfscon sysfs /devices/platform/soc/1c40000.qcom,spmi/spmi-0/spmi0-05/1c40000.qcom,spmi:qcom,pm6150l@5:qcom,leds@d300/leds u:object_r:sysfs_leds:s0
+
+genfscon sysfs /devices/platform/soc/1c40000.qcom,spmi/spmi-0/0-03/1c40000.qcom,spmi:qcom,pm7250b@3:qcom,vibrator@5300/leds/vibrator u:object_r:sysfs_leds:s0
+genfscon sysfs /devices/platform/soc/1c40000.qcom,spmi/spmi-0/0-06/1c40000.qcom,spmi:qcom,pmk8350@0:rtc@6100/rtc/rtc0 u:object_r:sysfs_rtc:s0
+genfscon sysfs /devices/platform/soc/1c40000.qcom,spmi/spmi-0/0-05/1c40000.qcom,spmi:qcom,pm6150l@5:qcom,leds@d000/leds/red u:object_r:vendor_sysfs_graphics:s0
+genfscon sysfs /devices/platform/soc/1c40000.qcom,spmi/spmi-0/0-05/1c40000.qcom,spmi:qcom,pm6150l@5:qcom,leds@d000/leds/green u:object_r:vendor_sysfs_graphics:s0
+genfscon sysfs /devices/platform/soc/1c40000.qcom,spmi/spmi-0/0-05/1c40000.qcom,spmi:qcom,pm6150l@5:qcom,leds@d000/leds/blue u:object_r:vendor_sysfs_graphics:s0
+genfscon sysfs /devices/platform/soc/1c40000.qcom,spmi/spmi-0/0-05/1c40000.qcom,spmi:qcom,pm6150l@5:qcom,leds@d300/leds u:object_r:sysfs_leds:s0
+
+genfscon sysfs /devices/platform/soc/4c90000.i2c/i2c-2/2-0064/leds/red u:object_r:vendor_sysfs_graphics:s0
+genfscon sysfs /devices/platform/soc/4c90000.i2c/i2c-2/2-0064/leds/green u:object_r:vendor_sysfs_graphics:s0
+genfscon sysfs /devices/platform/soc/4c90000.i2c/i2c-2/2-0064/leds/blue u:object_r:vendor_sysfs_graphics:s0
+genfscon sysfs /devices/platform/soc/4c90000.i2c/i2c-2/2-0064/leds u:object_r:sysfs_leds:s0
 
 # PMIC devices wakeup nodes
 genfscon sysfs /devices/platform/soc/1c40000.qcom,spmi/spmi-0/spmi0-02/1c40000.qcom,spmi:qcom,pm7250b@2:qcom,qpnp-smb5/power_supply/battery/wakeup u:object_r:sysfs_wakeup:s0
@@ -71,6 +92,21 @@ genfscon sysfs /devices/platform/soc/1c40000.qcom,spmi/spmi-0/spmi0-04/1c40000.q
 genfscon sysfs /devices/platform/soc/1c40000.qcom,spmi/spmi-0/spmi0-00/1c40000.qcom,spmi:qcom,pm6350@0:qcom,power-on@800/wakeup/wakeup u:object_r:sysfs_wakeup:s0
 genfscon sysfs /devices/platform/soc/1c40000.qcom,spmi/spmi-0/spmi0-02/1c40000.qcom,spmi:qcom,pm7250b@2:qcom,power-on@800/wakeup/wakeup u:object_r:sysfs_wakeup:s0
 genfscon sysfs /devices/platform/soc/1c40000.qcom,spmi/spmi-0/spmi0-02/c440000.qcom,spmi:qcom,pm7250b@2:qcom,qpnp-smb5/wakeup/wakeup u:object_r:sysfs_wakeup:s0
+
+genfscon sysfs /devices/platform/soc/1c40000.qcom,spmi/spmi-0/0-02/1c40000.qcom,spmi:qcom,pm7250b@2:qcom,qpnp-smb5/power_supply/battery/wakeup u:object_r:sysfs_wakeup:s0
+genfscon sysfs /devices/platform/soc/1c40000.qcom,spmi/spmi-0/0-02/1c40000.qcom,spmi:qcom,pm7250b@2:qcom,qpnp-smb5/power_supply/dc/wakeup u:object_r:sysfs_wakeup:s0
+genfscon sysfs /devices/platform/soc/1c40000.qcom,spmi/spmi-0/0-02/1c40000.qcom,spmi:qcom,pm7250b@2:qpnp,qg/power_supply/bms/wakeup u:object_r:sysfs_wakeup:s0
+genfscon sysfs /devices/platform/soc/1c40000.qcom,spmi/spmi-0/0-02/1c40000.qcom,spmi:qcom,pm7250b@2:qcom,qpnp-smb5/power_supply/pc_port/wakeup u:object_r:sysfs_wakeup:s0
+genfscon sysfs /devices/platform/soc/1c40000.qcom,spmi/spmi-0/0-02/c440000.qcom,spmi:qcom,pm7250b@2:qcom,qpnp-smb5/power_supply/usb/wakeup u:object_r:sysfs_wakeup:s0
+genfscon sysfs /devices/platform/soc/1c40000.qcom,spmi/spmi-0/0-06/1c40000.qcom,spmi:qcom,pmk8350@0:rtc@6100/rtc/rtc0/wakeup u:object_r:sysfs_wakeup:s0
+genfscon sysfs /devices/platform/soc/1c40000.qcom,spmi/spmi-0/0-06/1c40000.qcom,spmi:qcom,pmk8350@0:rtc@6100/wakeup/wakeup u:object_r:sysfs_wakeup:s0
+genfscon sysfs /devices/platform/soc/1c40000.qcom,spmi/spmi-0/0-04/1c40000.qcom,spmi:qcom,pm6150l@4:qcom,power-on@800/wakeup/wakeup u:object_r:sysfs_wakeup:s0
+genfscon sysfs /devices/platform/soc/1c40000.qcom,spmi/spmi-0/0-00/1c40000.qcom,spmi:qcom,pm6350@0:qcom,power-on@800/wakeup/wakeup u:object_r:sysfs_wakeup:s0
+genfscon sysfs /devices/platform/soc/1c40000.qcom,spmi/spmi-0/0-02/1c40000.qcom,spmi:qcom,pm7250b@2:qcom,power-on@800/wakeup/wakeup u:object_r:sysfs_wakeup:s0
+genfscon sysfs /devices/platform/soc/1c40000.qcom,spmi/spmi-0/0-02/c440000.qcom,spmi:qcom,pm7250b@2:qcom,qpnp-smb5/wakeup/wakeup u:object_r:sysfs_wakeup:s0
+
+# USB device wakeup nodes
+genfscon sysfs /devices/platform/soc/4e00000.ssusb/wakeup/wakeup u:object_r:sysfs_wakeup:s0
 
 # DCVS nodes
 genfscon sysfs /devices/platform/soc/fd90100.qcom,cpu0-cpu-l3-lat/devfreq u:object_r:vendor_sysfs_devfreq:s0
@@ -89,6 +125,9 @@ genfscon sysfs /devices/platform/soc/soc:qcom,cpu6-cpu-ddr-latfloor/devfreq u:ob
 genfscon sysfs /sys/devices/system/cpu/memlat/c0_memlat/cpu0-cpu-l3-lat u:object_r:vendor_sysfs_devfreq:s0
 genfscon sysfs /sys/devices/system/cpu/memlat/c6_memlat/cpu6-cpu-l3-lat u:object_r:vendor_sysfs_devfreq:s0
 
+#net sysfs
+genfscon sysfs /devices/platform/soc/c800000.qcom,icnss/net u:object_r:sysfs_net:s0
+
 #qdss sysfs-node
 genfscon sysfs /devices/platform/soc/8047000.tmc/coresight-tmc-etf u:object_r:vendor_sysfs_qdss_dev:s0
 genfscon sysfs /devices/platform/soc/8048000.tmc/coresight-tmc-etr u:object_r:vendor_sysfs_qdss_dev:s0
@@ -103,3 +142,18 @@ genfscon sysfs /devices/platform/soc/5e00000.qcom,mdss_mdp/drm/card0/sde-crtc-2/
 genfscon sysfs /devices/platform/soc/5e00000.qcom,mdss_mdp/power/control                             u:object_r:vendor_sysfs_graphics:s0
 
 genfscon sysfs /devices/platform/soc/8a03000.csr/coresight-swao-csr u:object_r:vendor_sysfs_qdss_dev:s0
+
+#usbpd device
+genfscon sysfs /devices/platform/soc/1c40000.qcom,spmi/spmi-0/spmi0-02/1c40000.qcom,spmi:qcom,pm7250b@2:qcom,usb-pdphy@1700/usbpd/usbpd0/wakeup u:object_r:sysfs_wakeup:s0
+genfscon sysfs /devices/platform/soc/1c40000.qcom,spmi/spmi-0/0-02/1c40000.qcom,spmi:qcom,pm7250b@2:qcom,usb-pdphy@1700/usbpd/usbpd0/wakeup u:object_r:sysfs_wakeup:s0
+
+#scsi nodes
+genfscon sysfs /devices/platform/soc/4804000.ufshc/host0/target0:0:0/0:0:0:0/scsi_generic  u:object_r:vendor_sysfs_scsi_target:s0
+genfscon sysfs /devices/platform/soc/4804000.ufshc/host0/target0:0:0/0:0:0:1/scsi_generic  u:object_r:vendor_sysfs_scsi_target:s0
+genfscon sysfs /devices/platform/soc/4804000.ufshc/host0/target0:0:0/0:0:0:2/scsi_generic  u:object_r:vendor_sysfs_scsi_target:s0
+genfscon sysfs /devices/platform/soc/4804000.ufshc/host0/target0:0:0/0:0:0:3/scsi_generic  u:object_r:vendor_sysfs_scsi_target:s0
+genfscon sysfs /devices/platform/soc/4804000.ufshc/host0/target0:0:0/0:0:0:4/scsi_generic  u:object_r:vendor_sysfs_scsi_target:s0
+genfscon sysfs /devices/platform/soc/4804000.ufshc/host0/target0:0:0/0:0:0:5/scsi_generic  u:object_r:vendor_sysfs_scsi_target:s0
+
+# Feature configs for Mannar
+genfscon sysfs /devices/platform/soc/soc:qfprom@0/feat_conf8 u:object_r:vendor_sysfs_qfprom:s0

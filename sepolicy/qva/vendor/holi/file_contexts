@@ -1,4 +1,4 @@
-# Copyright (c) 2020, The Linux Foundation. All rights reserved.
+# Copyright (c) 2021, The Linux Foundation. All rights reserved.
 #
 # Redistribution and use in source and binary forms, with or without
 # modification, are permitted provided that the following conditions are
@@ -13,7 +13,7 @@
 #       contributors may be used to endorse or promote products derived
 #       from this software without specific prior written permission.
 #
-# THIS SOFTWARE IS PROVIDED"AS IS" AND ANY EXPRESS OR IMPLIED
+# THIS SOFTWARE IS PROVIDED "AS IS" AND ANY EXPRESS OR IMPLIED
 # WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF
 # MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NON-INFRINGEMENT
 # ARE DISCLAIMED.  IN NO EVENT SHALL THE COPYRIGHT OWNER OR CONTRIBUTORS
@@ -25,19 +25,8 @@
 # OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN
 # IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
-get_prop(vendor_keymasterd, vendor_tee_listener_prop)
-allow vendor_keymasterd tee_device:chr_file rw_file_perms;
+#camera
+/sys/firmware/devicetree/base/memory/ddr_device_type                               u:object_r:vendor_sysfs_ddr:s0
 
-# Alloc acess to ion_device
-allow vendor_keymasterd ion_device:chr_file r_file_perms;
-
-# allow access to /dev/spcom
-allow vendor_keymasterd vendor_spcom_device:chr_file rw_file_perms;
-allow vendor_keymasterd vendor_sp_keymaster_ssr_device:chr_file rw_file_perms;
-allow vendor_keymasterd vendor_spss_utils_device:chr_file rw_file_perms;
-
-#allow access to skp
-allow vendor_keymasterd vendor_skp_device:chr_file rw_file_perms;
-allow vendor_keymasterd vendor_sp_keymaster_device:chr_file rw_file_perms;
-allow vendor_keymasterd vendor_sp_ssr_device:chr_file rw_file_perms;
-get_prop(vendor_keymasterd, vendor_spcomlib_prop)
+#eID
+/(vendor|system/vendor)/bin/hw/vendor\.qti\.hardware\.eid@1\.0-service             u:object_r:vendor_hal_eid_qti_exec:s0

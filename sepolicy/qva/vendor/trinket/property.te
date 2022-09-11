@@ -26,4 +26,4 @@
 # IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
 #properites for init.qcom.sh script
-type vendor_media_trinket_version_prop, property_type;
+vendor_internal_prop(vendor_media_trinket_version_prop);
