@@ -133,6 +133,3 @@
 # limits Partitions
 /dev/block/platform/soc/1d84000.ufshc/by-name/limits                u:object_r:vendor_limits_block_device:s0
 /dev/block/platform/soc/1d84000.ufshc/by-name/limits-cdsp           u:object_r:vendor_limits_block_device:s0
-
-# usbpd device
-/sys/devices/platform/soc/c440000.qcom,spmi/spmi-0/spmi0-02/c440000.qcom,spmi:qcom,pm8150b@2:qcom,usb-pdphy@1700/usbpd/usbpd0/wakeup[0-99] u:object_r:sysfs_wakeup:s0

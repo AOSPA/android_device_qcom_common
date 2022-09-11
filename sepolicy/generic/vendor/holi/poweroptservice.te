@@ -1,4 +1,4 @@
-# Copyright (c) 2021, The Linux Foundation. All rights reserved.
+# Copyright (c) 2019-2020, The Linux Foundation. All rights reserved.
 
 # Redistribution and use in source and binary forms, with or without
 # modification, are permitted provided that the following conditions are
@@ -26,32 +26,23 @@
 # IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
 
-type vendor_hal_poweroptservice_qti, domain;
-#mark as hal server domain
-hal_server_domain(vendor_hal_poweroptservice_qti, vendor_hal_poweroptservice)
+type vendor_poweroptservice, domain;
+type vendor_poweroptservice_exec, exec_type, vendor_file_type, file_type;
 
-type vendor_hal_poweroptservice_qti_exec, exec_type, vendor_file_type, file_type;
-init_daemon_domain(vendor_hal_poweroptservice_qti)
+init_daemon_domain(vendor_poweroptservice)
 
-#allow hwbinder call bw client and server
-binder_call(vendor_hal_poweroptservice_client, vendor_hal_poweroptservice_server)
-binder_call(vendor_hal_poweroptservice_server, vendor_hal_poweroptservice_client)
+hwbinder_use(vendor_poweroptservice)
 
-#allow service to be added to hwservice list
-hal_attribute_hwservice(vendor_hal_poweroptservice, vendor_hal_poweroptservice_hwservice)
+hal_client_domain(vendor_poweroptservice, vendor_hal_perf)
+hal_client_domain(vendor_poweroptservice, hal_graphics_composer)
 
-hal_client_domain(vendor_hal_poweroptservice_qti, vendor_hal_perf)
-hal_client_domain(vendor_hal_poweroptservice_qti, hal_graphics_composer)
+get_prop(vendor_poweroptservice, vendor_mpctl_prop)
 
-get_prop(vendor_hal_poweroptservice_qti, vendor_mpctl_prop)
+r_dir_file(vendor_poweroptservice, vendor_sysfs_graphics)
+r_dir_file(vendor_poweroptservice, vendor_sysfs_kgsl)
+r_dir_file(vendor_poweroptservice, sysfs_android_usb)
 
-r_dir_file(vendor_hal_poweroptservice_qti, vendor_sysfs_graphics)
-r_dir_file(vendor_hal_poweroptservice_qti, vendor_sysfs_kgsl)
-r_dir_file(vendor_hal_poweroptservice_qti, sysfs_android_usb)
-
-allow vendor_hal_poweroptservice_qti vendor_qdisplay_service:service_manager find;
-allow vendor_hal_poweroptservice_qti input_device:dir r_dir_perms;
-allow vendor_hal_poweroptservice_qti input_device:chr_file rw_file_perms;
-
-allow vendor_hal_poweroptservice_qti vendor_sysfs_scsi_host:dir r_dir_perms;
-allow vendor_hal_poweroptservice_qti vendor_sysfs_scsi_host:file rw_file_perms;
+allow vendor_poweroptservice vendor_qdisplay_service:service_manager find;
+allow vendor_poweroptservice input_device:dir r_dir_perms;
+allow vendor_poweroptservice input_device:chr_file r_file_perms;
+dontaudit vendor_poweroptservice self:capability kill;
