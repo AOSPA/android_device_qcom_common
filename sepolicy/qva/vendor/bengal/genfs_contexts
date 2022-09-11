@@ -1,4 +1,4 @@
-# Copyright (c) 2019-2020, The Linux Foundation. All rights reserved.
+# Copyright (c) 2019-2021, The Linux Foundation. All rights reserved.
 #
 # Redistribution and use in source and binary forms, with or without
 # modification, are permitted provided that the following conditions are
@@ -78,6 +78,34 @@ genfscon sysfs /devices/platform/soc/1c40000.qcom,spmi/spmi-0/spmi0-00/1c40000.q
 genfscon sysfs /devices/platform/soc/1c40000.qcom,spmi/spmi-0/spmi0-00/1c40000.qcom,spmi:qcom,pm2250@0:qcom,power-on@800/wakeup/wakeup u:object_r:sysfs_wakeup:s0
 genfscon sysfs /devices/platform/soc/1c40000.qcom,spmi/spmi-0/spmi0-00/1c40000.qcom,spmi:qcom,pm2250@0:qcom,pm2250_rtc/wakeup/wakeup u:object_r:sysfs_wakeup:s0
 genfscon sysfs /devices/platform/soc/1c40000.qcom,spmi/spmi-0/spmi0-00/1c40000.qcom,spmi:qcom,pm2250@0:qcom,qpnp-smblite/wakeup/wakeup u:object_r:sysfs_wakeup:s0
+genfscon sysfs /devices/platform/soc/4a84000.i2c/i2c-0/0-0064/leds/red u:object_r:vendor_sysfs_graphics:s0
+genfscon sysfs /devices/platform/soc/4a84000.i2c/i2c-0/0-0064/leds/green u:object_r:vendor_sysfs_graphics:s0
+genfscon sysfs /devices/platform/soc/4a84000.i2c/i2c-0/0-0064/leds/blue u:object_r:vendor_sysfs_graphics:s0
+genfscon sysfs /devices/platform/soc/4a84000.i2c/i2c-0/0-0064/leds u:object_r:sysfs_leds:s0
+
+#pm7250b sysfs nodes
+genfscon sysfs /devices/platform/soc/1c40000.qcom,spmi/spmi-0/spmi0-02/1c40000.qcom,spmi:qcom,pm7250b@2:qcom,qpnp-smb5/power_supply/battery u:object_r:vendor_sysfs_battery_supply:s0
+genfscon sysfs /devices/platform/soc/1c40000.qcom,spmi/spmi-0/spmi0-02/1c40000.qcom,spmi:qcom,pm7250b@2:qcom,qpnp-smb5/power_supply/dc u:object_r:vendor_sysfs_battery_supply:s0
+genfscon sysfs /devices/platform/soc/1c40000.qcom,spmi/spmi-0/spmi0-02/1c40000.qcom,spmi:qcom,pm7250b@2:qcom,qpnp-smb5/power_supply/main u:object_r:vendor_sysfs_battery_supply:s0
+genfscon sysfs /devices/platform/soc/1c40000.qcom,spmi/spmi-0/spmi0-02/1c40000.qcom,spmi:qcom,pm7250b@2:qpnp,qg/power_supply/bms u:object_r:vendor_sysfs_battery_supply:s0
+genfscon sysfs /devices/platform/soc/1c40000.qcom,spmi/spmi-0/spmi0-02/1c40000.qcom,spmi:qcom,pm7250b@2:qcom,qpnp-smb5/power_supply/pc_port u:object_r:vendor_sysfs_usb_supply:s0
+genfscon sysfs /devices/platform/soc/1c40000.qcom,spmi/spmi-0/spmi0-02/1c40000.qcom,spmi:qcom,pm7250b@2:qcom,qpnp-smb5/power_supply/usb u:object_r:vendor_sysfs_usb_supply:s0
+genfscon sysfs /devices/platform/soc/1c40000.qcom,spmi/spmi-0/spmi0-02/1c40000.qcom,spmi:qcom,pm7250b@2:qcom,usb-pdphy@1700/usbpd/usbpd0 u:object_r:vendor_sysfs_usbpd_device:s0
+genfscon sysfs /devices/platform/soc/1c40000.qcom,spmi/spmi-0/spmi0-03/1c40000.qcom,spmi:qcom,pm7250b@3:qcom,vibrator@5300/leds/vibrator u:object_r:sysfs_leds:s0
+genfscon sysfs /devices/platform/soc/4a84000.i2c/i2c-0/0-0034/4a84000.i2c:qcom,smb1394@34:qcom,div2_cp_pry/power_supply/charge_pump_master u:object_r:vendor_sysfs_battery_supply:s0
+
+#PMIC(PM7250b) devices wakeup nodes
+genfscon sysfs /devices/platform/soc/1c40000.qcom,spmi/spmi-0/spmi0-02/1c40000.qcom,spmi:qcom,pm7250b@2:qcom,qpnp-smb5/power_supply/battery/wakeup u:object_r:sysfs_wakeup:s0
+genfscon sysfs /devices/platform/soc/1c40000.qcom,spmi/spmi-0/spmi0-02/1c40000.qcom,spmi:qcom,pm7250b@2:qcom,qpnp-smb5/power_supply/dc/wakeup u:object_r:sysfs_wakeup:s0
+genfscon sysfs /devices/platform/soc/1c40000.qcom,spmi/spmi-0/spmi0-02/1c40000.qcom,spmi:qcom,pm7250b@2:qcom,qpnp-smb5/power_supply/main/wakeup u:object_r:sysfs_wakeup:s0
+genfscon sysfs /devices/platform/soc/1c40000.qcom,spmi/spmi-0/spmi0-02/1c40000.qcom,spmi:qcom,pm7250b@2:qpnp,qg/power_supply/bms/wakeup u:object_r:sysfs_wakeup:s0
+genfscon sysfs /devices/platform/soc/1c40000.qcom,spmi/spmi-0/spmi0-02/1c40000.qcom,spmi:qcom,pm7250b@2:qcom,qpnp-smb5/power_supply/pc_port/wakeup  u:object_r:sysfs_wakeup:s0
+genfscon sysfs /devices/platform/soc/1c40000.qcom,spmi/spmi-0/spmi0-02/1c40000.qcom,spmi:qcom,pm7250b@2:qcom,qpnp-smb5/power_supply/usb/wakeup u:object_r:sysfs_wakeup:s0
+genfscon sysfs /devices/platform/soc/1c40000.qcom,spmi/spmi-0/spmi0-02/1c40000.qcom,spmi:qcom,pm7250b@2:qcom,qpnp-smb5/wakeup/wakeup u:object_r:sysfs_wakeup:s0
+genfscon sysfs /devices/platform/soc/1c40000.qcom,spmi/spmi-0/spmi0-02/1c40000.qcom,spmi:qcom,pm7250b@2:qcom,power-on@800/wakeup/wakeup u:object_r:sysfs_wakeup:s0
+
+# USB device wakeup nodes
+genfscon sysfs /devices/platform/soc/4e00000.ssusb/wakeup/wakeup u:object_r:sysfs_wakeup:s0
 
 #qdss sysfs-node
 genfscon sysfs /devices/platform/soc/8047000.tmc/coresight-tmc-etf u:object_r:vendor_sysfs_qdss_dev:s0
@@ -99,4 +127,53 @@ genfscon sysfs /devices/platform/soc/soc:qcom,cpu-cpu-ddr-bw/devfreq u:object_r:
 genfscon sysfs /devices/platform/soc/c800000.qcom,icnss u:object_r:sysfs_net:s0
 
 #fps sysfs-node
+genfscon sysfs /devices/platform/soc/5e00000.qcom,mdss_mdp/drm/card0/sde-crtc-0/measured_fps u:object_r:vendor_sysfs_graphics:s0
+genfscon sysfs /devices/platform/soc/5e00000.qcom,mdss_mdp/drm/card0/sde-crtc-1/measured_fps u:object_r:vendor_sysfs_graphics:s0
+genfscon sysfs /devices/platform/soc/5e00000.qcom,mdss_mdp/drm/card0/sde-crtc-2/measured_fps u:object_r:vendor_sysfs_graphics:s0
+genfscon sysfs /devices/platform/soc/5e00000.qcom,mdss_mdp/drm/card0/sde-crtc-0/fps_periodicity_ms u:object_r:vendor_sysfs_graphics:s0
+genfscon sysfs /devices/platform/soc/5e00000.qcom,mdss_mdp/drm/card0/sde-crtc-1/fps_periodicity_ms u:object_r:vendor_sysfs_graphics:s0
+genfscon sysfs /devices/platform/soc/5e00000.qcom,mdss_mdp/drm/card0/sde-crtc-2/fps_periodicity_ms u:object_r:vendor_sysfs_graphics:s0
 
+#ssr nodes
+genfscon sysfs /devices/platform/soc/5ab0000.qcom,venus/subsys1/name u:object_r:vendor_sysfs_ssr:s0
+
+#wakeup sysfs nodes listed by SuspendSepolicyTests.sh
+genfscon sysfs /devices/platform/soc/1c40000.qcom,spmi/spmi-0/spmi0-00/1c40000.qcom,spmi:qcom,pm6125@0:qcom,power-on@800/wakeup u:object_r:sysfs_wakeup:s0
+genfscon sysfs /devices/platform/soc/1c40000.qcom,spmi/spmi-0/spmi0-02/1c40000.qcom,spmi:qcom,pmi632@2:qcom,power-on@800/wakeup u:object_r:sysfs_wakeup:s0
+genfscon sysfs /devices/platform/soc/5ab0000.qcom,venus/wakeup u:object_r:sysfs_wakeup:s0
+genfscon sysfs /devices/platform/soc/c800000.qcom,icnss/wakeup u:object_r:sysfs_wakeup:s0
+genfscon sysfs /devices/platform/soc/6080000.qcom,mss/wakeup u:object_r:sysfs_wakeup:s0
+genfscon sysfs /devices/platform/soc/soc:qcom,ipa_fws/wakeup u:object_r:sysfs_wakeup:s0
+genfscon sysfs /devices/platform/soc/soc:qcom,kgsl-hyp/wakeup u:object_r:sysfs_wakeup:s0
+genfscon sysfs /devices/platform/soc/1610000.qcom,msm-eud/wakeup u:object_r:sysfs_wakeup:s0
+genfscon sysfs /devices/platform/soc/5800000.qcom,ipa/wakeup u:object_r:sysfs_wakeup:s0
+genfscon sysfs /devices/platform/soc/soc:qcom,smp2p_sleepstate/wakeup u:object_r:sysfs_wakeup:s0
+genfscon sysfs /devices/platform/soc/4a8c000.qcom,qup_uart/wakeup u:object_r:sysfs_wakeup:s0
+genfscon sysfs /devices/virtual/diag/diag/wakeup23 u:object_r:sysfs_wakeup:s0
+genfscon sysfs /devices/platform/soc/4e00000.ssusb/wakeup u:object_r:sysfs_wakeup:s0
+genfscon sysfs /devices/platform/soc/1c40000.qcom,spmi/spmi-0/spmi0-00/1c40000.qcom,spmi:qcom,pm6125@0:qcom,pm6125_rtc/wakeup u:object_r:sysfs_wakeup:s0
+genfscon sysfs /devices/platform/soc/4a84000.i2c/i2c-0/0-0028/wakeup u:object_r:sysfs_wakeup:s0
+genfscon sysfs /devices/platform/soc/1c40000.qcom,spmi/spmi-0/spmi0-02/1c40000.qcom,spmi:qcom,pmi632@2:qcom,qpnp-smb5/wakeup u:object_r:sysfs_wakeup:s0
+genfscon sysfs /devices/platform/soc/soc:gpio_keys/wakeup u:object_r:sysfs_wakeup:s0
+genfscon sysfs /devices/platform/soc/soc:qcom,smp2p-modem/wakeup u:object_r:sysfs_wakeup:s0
+genfscon sysfs /devices/platform/soc/4a88000.i2c/i2c-1/1-0020/synaptics_tcm.0/wakeup u:object_r:sysfs_wakeup:s0
+genfscon sysfs /devices/virtual/misc/msm_aac/wakeup42 u:object_r:sysfs_wakeup:s0
+genfscon sysfs /devices/virtual/misc/msm_alac/wakeup43 u:object_r:sysfs_wakeup:s0
+genfscon sysfs /devices/virtual/misc/msm_amrnb/wakeup44 u:object_r:sysfs_wakeup:s0
+genfscon sysfs /devices/virtual/misc/msm_amrwb/wakeup45 u:object_r:sysfs_wakeup:s0
+genfscon sysfs /devices/virtual/misc/msm_amrwbplus/wakeup46 u:object_r:sysfs_wakeup:s0
+genfscon sysfs /devices/virtual/misc/msm_ape/wakeup47 u:object_r:sysfs_wakeup:s0
+genfscon sysfs /devices/virtual/misc/msm_evrc/wakeup48 u:object_r:sysfs_wakeup:s0
+genfscon sysfs /devices/virtual/misc/msm_g711alaw/wakeup49 u:object_r:sysfs_wakeup:s0
+genfscon sysfs /devices/platform/soc/soc:qcom,smp2p-adsp/wakeup u:object_r:sysfs_wakeup:s0
+genfscon sysfs /devices/virtual/misc/msm_g711mlaw/wakeup50 u:object_r:sysfs_wakeup:s0
+genfscon sysfs /devices/virtual/misc/msm_mp3/wakeup51 u:object_r:sysfs_wakeup:s0
+genfscon sysfs /devices/virtual/misc/msm_multi_aac/wakeup52 u:object_r:sysfs_wakeup:s0
+genfscon sysfs /devices/virtual/misc/msm_qcelp/wakeup53 u:object_r:sysfs_wakeup:s0
+genfscon sysfs /devices/virtual/misc/msm_wma/wakeup54 u:object_r:sysfs_wakeup:s0
+genfscon sysfs /devices/virtual/misc/msm_wmapro/wakeup55 u:object_r:sysfs_wakeup:s0
+genfscon sysfs /devices/platform/soc/soc:qcom,smp2p-cdsp/wakeup u:object_r:sysfs_wakeup:s0
+genfscon sysfs /devices/platform/soc/soc:qcom,msm-audio-apr/soc:qcom,msm-audio-apr:qcom,q6core-audio/soc:qcom,msm-audio-apr:qcom,q6core-audio:bolero-cdc/rx-macro/rx_swr_ctrl/wakeup u:object_r:sysfs_wakeup:s0
+genfscon sysfs /devices/platform/soc/ab00000.qcom,lpass/wakeup u:object_r:sysfs_wakeup:s0
+genfscon sysfs /devices/platform/soc/soc:qcom,msm-audio-apr/soc:qcom,msm-audio-apr:qcom,q6core-audio/soc:qcom,msm-audio-apr:qcom,q6core-audio:bolero-cdc/va-macro/va_swr_ctrl/wakeup u:object_r:sysfs_wakeup:s0
+genfscon sysfs /devices/platform/soc/b300000.qcom,turing/wakeup u:object_r:sysfs_wakeup:s0

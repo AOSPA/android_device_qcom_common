@@ -1,4 +1,4 @@
-# Copyright (c) 2020, The Linux Foundation. All rights reserved.
+# Copyright (c) 2021, The Linux Foundation. All rights reserved.
 #
 # Redistribution and use in source and binary forms, with or without
 # modification, are permitted provided that the following conditions are
@@ -25,19 +25,14 @@
 # OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN
 # IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
-get_prop(vendor_keymasterd, vendor_tee_listener_prop)
-allow vendor_keymasterd tee_device:chr_file rw_file_perms;
+type vendor_diagcommd, domain;
+type vendor_diagcommd_exec, exec_type, vendor_file_type, file_type;
 
-# Alloc acess to ion_device
-allow vendor_keymasterd ion_device:chr_file r_file_perms;
+init_daemon_domain(vendor_diagcommd)
 
-# allow access to /dev/spcom
-allow vendor_keymasterd vendor_spcom_device:chr_file rw_file_perms;
-allow vendor_keymasterd vendor_sp_keymaster_ssr_device:chr_file rw_file_perms;
-allow vendor_keymasterd vendor_spss_utils_device:chr_file rw_file_perms;
+# Alloc access to ion_device
+allow vendor_diagcommd ion_device:chr_file r_file_perms;
 
-#allow access to skp
-allow vendor_keymasterd vendor_skp_device:chr_file rw_file_perms;
-allow vendor_keymasterd vendor_sp_keymaster_device:chr_file rw_file_perms;
-allow vendor_keymasterd vendor_sp_ssr_device:chr_file rw_file_perms;
-get_prop(vendor_keymasterd, vendor_spcomlib_prop)
+# Allow vendor_diagcommd to interract with qseecom
+allow vendor_diagcommd tee_device:chr_file rw_file_perms;
+

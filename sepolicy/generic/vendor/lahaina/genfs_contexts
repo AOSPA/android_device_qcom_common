@@ -1,0 +1,89 @@
+# Copyright (c) 2020 - 2021, The Linux Foundation. All rights reserved.
+#
+# Redistribution and use in source and binary forms, with or without
+# modification, are permitted provided that the following conditions are
+# met:
+#     * Redistributions of source code must retain the above copyright
+#       notice, this list of conditions and the following disclaimer.
+#     * Redistributions in binary form must reproduce the above
+#       copyright notice, this list of conditions and the following
+#       disclaimer in the documentation and/or other materials provided
+#       with the distribution.
+#     * Neither the name of The Linux Foundation nor the names of its
+#       contributors may be used to endorse or promote products derived
+#       from this software without specific prior written permission.
+#
+# THIS SOFTWARE IS PROVIDED "AS IS" AND ANY EXPRESS OR IMPLIED
+# WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF
+# MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NON-INFRINGEMENT
+# ARE DISCLAIMED.  IN NO EVENT SHALL THE COPYRIGHT OWNER OR CONTRIBUTORS
+# BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR
+# CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF
+# SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR
+# BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY,
+# WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE
+# OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN
+# IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+
+# LED device nodes
+genfscon sysfs /devices/platform/soc/c440000.qcom,spmi/spmi-0/0-02/c440000.qcom,spmi:qcom,pm8350c@2:qcom,leds@ef00/leds/red u:object_r:vendor_sysfs_graphics:s0
+genfscon sysfs /devices/platform/soc/c440000.qcom,spmi/spmi-0/0-02/c440000.qcom,spmi:qcom,pm8350c@2:qcom,leds@ef00/leds/green u:object_r:vendor_sysfs_graphics:s0
+genfscon sysfs /devices/platform/soc/c440000.qcom,spmi/spmi-0/0-02/c440000.qcom,spmi:qcom,pm8350c@2:qcom,leds@ef00/leds/blue u:object_r:vendor_sysfs_graphics:s0
+
+# Vibrator nodes needed for a Lahaina variant
+genfscon sysfs /devices/platform/soc/c440000.qcom,spmi/spmi-0/spmi0-03/c440000.qcom,spmi:qcom,pm7325b@3:qcom,vibrator@df00/leds/vibrator u:object_r:sysfs_leds:s0
+genfscon sysfs /devices/platform/soc/c440000.qcom,spmi/spmi-0/0-03/c440000.qcom,spmi:qcom,pm7325b@3:qcom,vibrator@df00/leds/vibrator u:object_r:sysfs_leds:s0
+genfscon sysfs /devices/platform/soc/c440000.qcom,spmi/spmi-0/spmi0-09/c440000.qcom,spmi:qcom,pm7250b@3:qcom,vibrator@5300/leds/vibrator u:object_r:sysfs_leds:s0
+genfscon sysfs /devices/platform/soc/c440000.qcom,spmi/spmi-0/0-09/c440000.qcom,spmi:qcom,pm7250b@3:qcom,vibrator@5300/leds/vibrator u:object_r:sysfs_leds:s0
+
+# PMIC devices wakeup nodes
+genfscon sysfs /devices/platform/soc/c440000.qcom,spmi/spmi-0/0-00/c440000.qcom,spmi:qcom,pmk8350@0:pon_hlos@1300/wakeup/wakeup u:object_r:sysfs_wakeup:s0
+genfscon sysfs /devices/platform/soc/c440000.qcom,spmi/spmi-0/0-00/c440000.qcom,spmi:qcom,pmk8350@0:pon_pbs@800/wakeup/wakeup u:object_r:sysfs_wakeup:s0
+genfscon sysfs /devices/platform/soc/c440000.qcom,spmi/spmi-0/0-00/c440000.qcom,spmi:qcom,pmk8350@0:rtc@6100/wakeup/wakeup u:object_r:sysfs_wakeup:s0
+genfscon sysfs /devices/platform/soc/c440000.qcom,spmi/spmi-0/0-00/c440000.qcom,spmi:qcom,pmk8350@0:rtc@6100/rtc/rtc0/wakeup/ u:object_r:sysfs_wakeup:s0
+
+genfscon sysfs /devices/virtual/misc/msm_multi_aac/wakeup u:object_r:sysfs_wakeup:s0
+genfscon sysfs /devices/virtual/misc/msm_g711mlaw/wakeup u:object_r:sysfs_wakeup:s0
+
+# PMIC UI peripherals
+genfscon sysfs /devices/platform/soc/c440000.qcom,spmi/spmi-0/spmi0-00/c440000.qcom,spmi:qcom,pmk8350@0:rtc@6100/rtc/rtc0 u:object_r:sysfs_rtc:s0
+
+# Wakeup node needed for a Lahaina variant
+genfscon sysfs /devices/platform/soc/soc:gpio_keys/wakeup/wakeup u:object_r:sysfs_wakeup:s0
+
+# USB device controller and wakeup nodes
+genfscon sysfs /devices/platform/soc/a600000.ssusb/a600000.dwc3/udc/a600000.dwc3 u:object_r:vendor_sysfs_usb_controller:s0
+genfscon sysfs /devices/platform/soc/a600000.ssusb/wakeup/wakeup u:object_r:sysfs_wakeup:s0
+genfscon sysfs /devices/platform/soc/a800000.ssusb/a800000.dwc3/udc/a800000.dwc3 u:object_r:vendor_sysfs_usb_controller:s0
+genfscon sysfs /devices/platform/soc/a800000.ssusb/wakeup/wakeup u:object_r:sysfs_wakeup:s0
+
+# CPUCP nodes
+genfscon sysfs /devices/system/cpu/memlat/c0_memlat/cpu0-cpu-l3-lat u:object_r:vendor_sysfs_devfreq:s0
+genfscon sysfs /devices/system/cpu/memlat/c4_memlat/cpu4-cpu-l3-lat u:object_r:vendor_sysfs_devfreq:s0
+genfscon sysfs /devices/system/cpu/memlat/c7_memlat/cpu7-cpu-l3-lat u:object_r:vendor_sysfs_devfreq:s0
+
+#Trusted UI
+genfscon sysfs /devices/platform/soc/990000.i2c/i2c-0/0-0049/trusted_touch_enable u:object_r:vendor_sysfs_trusted_touch_enable:s0
+genfscon sysfs /devices/platform/soc/990000.i2c/i2c-0/0-0038/trusted_touch_enable u:object_r:vendor_sysfs_trusted_touch_enable:s0
+genfscon sysfs /devices/platform/soc/988000.i2c/i2c-1/1-0038/trusted_touch_enable u:object_r:vendor_sysfs_trusted_touch_enable:s0
+genfscon sysfs /devices/platform/soc/a94000.i2c/i2c-0/0-0062/trusted_touch_enable u:object_r:vendor_sysfs_trusted_touch_enable:s0
+genfscon sysfs /devices/platform/soc/a94000.i2c/i2c-2/2-0062/trusted_touch_enable u:object_r:vendor_sysfs_trusted_touch_enable:s0
+
+genfscon sysfs /devices/platform/soc/990000.i2c/i2c-0/0-0049/trusted_touch_event u:object_r:vendor_sysfs_trusted_touch_event:s0
+genfscon sysfs /devices/platform/soc/990000.i2c/i2c-0/0-0038/trusted_touch_event u:object_r:vendor_sysfs_trusted_touch_event:s0
+genfscon sysfs /devices/platform/soc/988000.i2c/i2c-1/1-0038/trusted_touch_event u:object_r:vendor_sysfs_trusted_touch_event:s0
+genfscon sysfs /devices/platform/soc/a94000.i2c/i2c-0/0-0062/trusted_touch_event u:object_r:vendor_sysfs_trusted_touch_event:s0
+genfscon sysfs /devices/platform/soc/a94000.i2c/i2c-2/2-0062/trusted_touch_event u:object_r:vendor_sysfs_trusted_touch_event:s0
+
+genfscon sysfs /devices/platform/soc/990000.i2c/i2c-0/0-0049/trusted_touch_type u:object_r:vendor_sysfs_trusted_touch_type:s0
+genfscon sysfs /devices/platform/soc/990000.i2c/i2c-0/0-0038/trusted_touch_type u:object_r:vendor_sysfs_trusted_touch_type:s0
+genfscon sysfs /devices/platform/soc/988000.i2c/i2c-1/1-0038/trusted_touch_type u:object_r:vendor_sysfs_trusted_touch_type:s0
+
+# Feature configs for Cedros
+genfscon sysfs /devices/platform/soc/soc:qfprom@0/feat_conf_m7 u:object_r:vendor_sysfs_qfprom:s0
+genfscon sysfs /devices/platform/soc/soc:qcom,msm-audio-apr/soc:qcom,msm-audio-apr:qcom,q6core-audio/soc:qcom,msm-audio-apr:qcom,q6core-audio:bolero-cdc/tx-macro/tx_swr_ctrl/wakeup u:object_r:sysfs_wakeup:s0
+genfscon sysfs /devices/platform/soc/soc:qcom,msm-audio-apr/soc:qcom,msm-audio-apr:qcom,q6core-audio/soc:qcom,msm-audio-apr:qcom,q6core-audio:bolero-cdc/rx-macro/rx_swr_ctrl/wakeup u:object_r:sysfs_wakeup:s0
+genfscon sysfs /devices/platform/soc/soc:qcom,msm-audio-apr/soc:qcom,msm-audio-apr:qcom,q6core-audio/soc:qcom,msm-audio-apr:qcom,q6core-audio:bolero-cdc/wsa-macro/wsa_swr_ctrl/wakeup u:object_r:sysfs_wakeup:s0
+
+#net for kodiak
+genfscon sysfs /devices/platform/soc/17a10040.qcom,wcn6750/net u:object_r:sysfs_net:s0

@@ -66,6 +66,9 @@ genfscon sysfs /devices/platform/soc/c440000.qcom,spmi/spmi-0/spmi0-04/c440000.q
 genfscon sysfs /devices/platform/soc/c440000.qcom,spmi/spmi-0/spmi0-06/c440000.qcom,spmi:qcom,pmk8350@6:rtc@6100/wakeup/wakeup u:object_r:sysfs_wakeup:s0
 genfscon sysfs /devices/platform/soc/c440000.qcom,spmi/spmi-0/spmi0-06/c440000.qcom,spmi:qcom,pmk8350@6:rtc@6100/rtc/rtc0/wakeup u:object_r:sysfs_wakeup:s0
 
+# USB device wakeup nodes
+genfscon sysfs /devices/platform/soc/a600000.ssusb/wakeup/wakeup u:object_r:sysfs_wakeup:s0
+
 #qdss sysfs-node
 genfscon sysfs /devices/platform/soc/6b05000.tmc/coresight-tmc-etf u:object_r:vendor_sysfs_qdss_dev:s0
 genfscon sysfs /devices/platform/soc/6048000.tmc/coresight-tmc-etr u:object_r:vendor_sysfs_qdss_dev:s0
@@ -114,3 +117,5 @@ genfscon sysfs /devices/platform/soc/ae00000.qcom,mdss_mdp/drm/card0/sde-crtc-0/
 genfscon sysfs /devices/platform/soc/ae00000.qcom,mdss_mdp/drm/card0/sde-crtc-1/fps_periodicity_ms u:object_r:vendor_sysfs_graphics:s0
 genfscon sysfs /devices/platform/soc/ae00000.qcom,mdss_mdp/drm/card0/sde-crtc-0/fps_periodicity_ms u:object_r:vendor_sysfs_graphics:s0
 
+# usbpd device
+genfscon sysfs /devices/platform/soc/c440000.qcom,spmi/spmi-0/spmi0-02/c440000.qcom,spmi:qcom,pm7250b@2:qcom,usb-pdphy@1700/usbpd/usbpd0/wakeup u:object_r:sysfs_wakeup:s0

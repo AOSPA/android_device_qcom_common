@@ -1,4 +1,4 @@
-# Copyright (c) 2020, The Linux Foundation. All rights reserved.
+# Copyright (c) 2020-2021, The Linux Foundation. All rights reserved.
 #
 # Redistribution and use in source and binary forms, with or without
 # modification, are permitted provided that the following conditions are
@@ -167,7 +167,7 @@
 ###################################
 # sysfs files
 #
-/sys/devices/platform/soc/1b40000.qfprom/qfprom0/feat_conf10            u:object_r:vendor_sysfs_qfprom:s0
+/sys/devices/platform/soc/1b40000.qfprom/qfprom0/feat_conf1[0-1]            u:object_r:vendor_sysfs_qfprom:s0
 /sys/devices/platform/soc/4744000.sdhci/mmc_host/mmc0/mmc0:0001/block/mmcblk0/queue/read_ahead_kb u:object_r:vendor_sysfs_mmc_host:s0
 /sys/devices/virtual/bdi/[0-9]+:[0-9]+/read_ahead_kb                                              u:object_r:vendor_sysfs_mmc_host:s0
 
@@ -179,7 +179,7 @@
 #SSR nodes
 /sys/devices/platform/soc/ab00000.qcom,lpass/subsys[0-9]+/name   u:object_r:vendor_sysfs_ssr:s0
 /sys/devices/platform/soc/b300000.qcom,turing/subsys[0-9]+/name  u:object_r:vendor_sysfs_ssr:s0
-/sys/devices/platform/soc/5ab0000.qcom,venus/subsys2[0-9]+/name   u:object_r:vendor_sysfs_ssr:s0
+/sys/devices/platform/soc/5ab0000.qcom,venus/subsys[0-9]+/name   u:object_r:vendor_sysfs_ssr:s0
 /sys/devices/platform/soc/6080000.qcom,mss/subsys[0-9]+/name     u:object_r:vendor_sysfs_ssr:s0
 /sys/devices/platform/soc/soc:qcom,ipa_fws/subsys[0-9]+/name     u:object_r:vendor_sysfs_ssr:s0
 /sys/devices/platform/soc/soc:qcom,kgsl-hyp/subsys[0-9]+/name    u:object_r:vendor_sysfs_ssr:s0
@@ -194,3 +194,6 @@
 
 #Brightness
 /sys/devices/platform/soc/5e00000.qcom,mdss_mdp/backlight(/.*)?  u:object_r:vendor_sysfs_graphics:s0
+
+#Graphics
+/sys/devices/platform/soc/5900000.qcom,kgsl-3d0/kgsl/kgsl-3d0/gpubusy u:object_r:vendor_sysfs_kgsl_gpubusy:s0

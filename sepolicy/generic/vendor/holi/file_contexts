@@ -1,4 +1,4 @@
-# Copyright (c) 2020 The Linux Foundation. All rights reserved.
+# Copyright (c) 2020, The Linux Foundation. All rights reserved.
 #
 # Redistribution and use in source and binary forms, with or without
 # modification, are permitted provided that the following conditions are
@@ -104,6 +104,9 @@
 # Block devices for the drive that holds the xbl_a and xbl_b partitions.
 /dev/block/platform/soc/4804000.ufshc/sd[bc]                        u:object_r:vendor_xbl_block_device:s0
 
+# Block device for hal_bootctl
+/dev/block/sdf                                                  u:object_r:boot_block_device:s0
+
 #eMMC Devices
 /dev/block/platform/soc/4744000.sdhci/by-name/abl_[ab]          u:object_r:vendor_custom_ab_block_device:s0
 /dev/block/platform/soc/4744000.sdhci/by-name/apdp_[ab]         u:object_r:vendor_custom_ab_block_device:s0
@@ -183,11 +186,20 @@
 /sys/devices/platform/soc/1c40000.qcom,spmi/spmi-0/spmi0-02/1c40000.qcom,spmi:qcom,pm7250b@2:vadc@3100/iio:device[0-9](/.*?) u:object_r:vendor_sysfs_battery_supply:s0
 /sys/devices/platform/soc/1c40000.qcom,spmi/spmi-0/spmi0-04/1c40000.qcom,spmi:qcom,pm6150l@4:vadc@3100/iio:device[0-9](/.*?) u:object_r:vendor_sysfs_battery_supply:s0
 /sys/devices/platform/soc/1c40000.qcom,spmi/spmi-0/spmi0-06/1c40000.qcom,spmi:qcom,pmk8350@0:vadc@3100/iio:device[0-9](/.*?) u:object_r:vendor_sysfs_battery_supply:s0
+/sys/devices/platform/soc/1c40000.qcom,spmi/spmi-0/spmi0-00/1c40000.qcom,spmi:qcom,pm6125@0:vadc@3100/iio:device[0-9](/.*?) u:object_r:vendor_sysfs_battery_supply:s0
 /sys/devices/platform/soc/1c40000.qcom,spmi/spmi-0/spmi0-02/1c40000.qcom,spmi:qcom,pm7250b@2:qcom,qpnp-smb5/iio:device[0-9](/.*?) u:object_r:vendor_sysfs_battery_supply:s0
 /sys/devices/platform/soc/1c40000.qcom,spmi/spmi-0/spmi0-02/1c40000.qcom,spmi:qcom,pm7250b@2:qpnp,qg/iio:device[0-9](/.*?) u:object_r:vendor_sysfs_battery_supply:s0
+/sys/devices/platform/soc/1c40000.qcom,spmi/spmi-0/0-02/1c40000.qcom,spmi:qcom,pm7250b@2:vadc@3100/iio:device[0-9](/.*?) u:object_r:vendor_sysfs_battery_supply:s0
+/sys/devices/platform/soc/1c40000.qcom,spmi/spmi-0/0-04/1c40000.qcom,spmi:qcom,pm6150l@4:vadc@3100/iio:device[0-9](/.*?) u:object_r:vendor_sysfs_battery_supply:s0
+/sys/devices/platform/soc/1c40000.qcom,spmi/spmi-0/0-06/1c40000.qcom,spmi:qcom,pmk8350@0:vadc@3100/iio:device[0-9](/.*?) u:object_r:vendor_sysfs_battery_supply:s0
+/sys/devices/platform/soc/1c40000.qcom,spmi/spmi-0/0-00/1c40000.qcom,spmi:qcom,pm6125@0:vadc@3100/iio:device[0-9](/.*?) u:object_r:vendor_sysfs_battery_supply:s0
+/sys/devices/platform/soc/1c40000.qcom,spmi/spmi-0/0-02/1c40000.qcom,spmi:qcom,pm7250b@2:qcom,qpnp-smb5/iio:device[0-9](/.*?) u:object_r:vendor_sysfs_battery_supply:s0
+/sys/devices/platform/soc/1c40000.qcom,spmi/spmi-0/0-02/1c40000.qcom,spmi:qcom,pm7250b@2:qpnp,qg/iio:device[0-9](/.*?) u:object_r:vendor_sysfs_battery_supply:s0
 /sys/devices/platform/soc/4c90000.i2c/i2c-2/2-000c/4c90000.i2c:qcom,smb1355@c:qcom,smb1355-charger@1000/iio:device[0-9](/.*?) u:object_r:vendor_sysfs_battery_supply:s0
 /sys/devices/platform/soc/4c90000.i2c/i2c-2/2-0034/4c90000.i2c:qcom,smb1396@34:qcom,div2_cp/iio:device[0-9](/.*?) u:object_r:vendor_sysfs_battery_supply:s0
 /sys/devices/platform/soc/4c90000.i2c/i2c-2/2-0035/4c90000.i2c:qcom,smb1396@35:qcom,div2_cp_slave/iio:device[0-9](/.*?) u:object_r:vendor_sysfs_battery_supply:s0
+/sys/devices/platform/soc/4c90000.i2c/i2c-1/1-0034/4c90000.i2c:qcom,smb1394@34:qcom,div2_cp_pry/iio:device[0-9](/.*?) u:object_r:vendor_sysfs_battery_supply:s0
+/sys/devices/platform/soc/4c90000.i2c/i2c-2/2-0034/4c90000.i2c:qcom,smb1394@34:qcom,div2_cp_pry/iio:device[0-9](/.*?) u:object_r:vendor_sysfs_battery_supply:s0
 /sys/class/drm/card0/device/power/control      u:object_r:vendor_sysfs_graphics:s0
 
 #SSR nodes
@@ -213,7 +225,12 @@
 /sys/devices/platform/soc/5e00000.qcom,mdss_mdp/backlight(/.*)?  u:object_r:vendor_sysfs_graphics:s0
 
 # Feature configs
-/sys/devices/platform/soc/780000.qfprom/qfprom0/feat_conf* u:object_r:vendor_sysfs_qfprom:s0
+/sys/devices/platform/soc/soc:qfprom@0/feat_conf[0-9] u:object_r:vendor_sysfs_qfprom:s0
+
+#Display nodes
+/sys/devices/platform/soc/ae00000.qcom,mdss_mdp/drm/card0/card0-DP-1/enabled u:object_r:vendor_sysfs_graphics:s0
+/sys/devices/platform/soc/ae00000.qcom,mdss_mdp/drm/card0/card0-DSI-2/enabled u:object_r:vendor_sysfs_graphics:s0
+/sys/devices/platform/soc/ae00000.qcom,mdss_mdp/drm/card0/card0-Virtual-1/enabled u:object_r:vendor_sysfs_graphics:s0
 
 #poweropt-service
-/(vendor|system/vendor)/bin/poweropt-service u:object_r:vendor_hal_poweroptservice_qti_exec:s0
+/(vendor|system/vendor)/bin/poweropt-service u:object_r:vendor_poweroptservice_exec:s0
