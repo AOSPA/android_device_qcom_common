@@ -16,6 +16,24 @@
       "message": "22569: ASoC: lsm: Do not create any wakeup_source for keyword detection | https://gerrit.aospa.co/c/AOSPA/android_kernel_xiaomi_sm8250/+/22569",
       "revId": "3a3e8f7a719fca4d695eff15edc02ccca751555d",
       "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "2e5addff_6a177b59",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000737
+      },
+      "writtenOn": "2022-09-12T11:37:37Z",
+      "side": 1,
+      "message": "Sure, i use prebuilt kernel, so I\u0027ll set it to my specific device tree.",
+      "parentUuid": "591eb4be_685581ab",
+      "revId": "3a3e8f7a719fca4d695eff15edc02ccca751555d",
+      "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
     }
   ]
 }
