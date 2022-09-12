@@ -45,6 +45,8 @@ need to be added just before the end of it's major group. -->
     <Major OpcodeValue="0x2" />
         <Minor OpcodeValue="0x0" Node="/sys/module/msm_performance/parameters/cpu_min_freq" />
         <Minor OpcodeValue="0x1" Node="/sys/module/msm_performance/parameters/cpu_max_freq" />
+        <Minor OpcodeValue="0x2" Node="/sys/devices/system/cpu/cpufreq/policy4/walt/adaptive_low_freq" />
+        <Minor OpcodeValue="0x3" Node="/sys/devices/system/cpu/cpufreq/policy4/walt/adaptive_high_freq" />
     <!-- cpufreq major end -->
 
     <!-- sched major start -->
@@ -62,11 +64,11 @@ need to be added just before the end of it's major group. -->
         <Minor OpcodeValue="0x7" Node="/proc/sys/kernel/sched_upmigrate" />
         <Minor OpcodeValue="0x8" Node="/proc/sys/kernel/sched_downmigrate" />
         <Minor OpcodeValue="0x9" Node="/proc/sys/kernel/sched_mostly_idle_freq" Supported="no" />
-        <Minor OpcodeValue="0xA" Node="SPECIAL_NODE - sched_add_group" />
+        <Minor OpcodeValue="0xA" Node="SPECIAL_NODE - sched_add_group" Supported="no" />
         <Minor OpcodeValue="0xB" Node="/proc/sys/kernel/sched_spill_nr_run" />
         <Minor OpcodeValue="0xC" Node="/sys/devices/system/cpu/cpu0/sched_static_cpu_pwr_cost" />
         <Minor OpcodeValue="0xD" Node="/proc/sys/kernel/sched_restrict_cluster_spill" />
-        <Minor OpcodeValue="0xE" Node="SPECIAL_NODE - sched_freq_add_group" />
+        <Minor OpcodeValue="0xE" Node="SPECIAL_NODE - sched_freq_add_group" Supported="no" />
         <Minor OpcodeValue="0xF" Node="/dev/cpuset/top-app/cpus" />
         <Minor OpcodeValue="0x10" Node="/dev/cpuset/foreground/cpus" />
         <Minor OpcodeValue="0x11" Node="/dev/cpuset/system-background/cpus" />
@@ -114,13 +116,17 @@ need to be added just before the end of it's major group. -->
         <Minor OpcodeValue="0x39" Node="/dev/stune/top-app/schedtune.colocate" Supported="no" />
         <Minor OpcodeValue="0x3A" Node="/dev/cpuctl/top-app/cpu.uclamp.latency_sensitive" />
         <Minor OpcodeValue="0x3B" Node="/dev/cpuctl/foreground/cpu.uclamp.latency_sensitive" />
+        <Minor OpcodeValue="0x3C" Node="/proc/%d/sched_wake_up_idle" />
         <Minor OpcodeValue="0x3D" Node="/proc/sys/kernel/%s" Supported="no"/>
+        <Minor OpcodeValue="0x3E" Node="/proc/sys/walt/sched_util_busy_hyst_cpu_ns" />
+        <Minor OpcodeValue="0x3F" Node="/proc/sys/walt/sched_min_task_util_for_uclamp" />
     <!-- sched major end -->
 
     <!-- core hotplug major start -->
     <Major OpcodeValue="0x4" />
         <Minor OpcodeValue="0x0" Node="SPECIAL_NODE - lock_min_cores" />
         <Minor OpcodeValue="0x1" Node="SPECIAL_NODE - lock_max_cores" />
+        <Minor OpcodeValue="0x2" Node="/sys/devices/system/cpu/cpu0/core_ctl/enable" />
     <!-- core hotplug major end-->
 
     <!-- interactive major start -->
@@ -147,6 +153,9 @@ need to be added just before the end of it's major group. -->
         <Minor OpcodeValue="0x11" Node="/sys/devices/system/cpu/cpu0/cpufreq/schedutil/pl" />
         <Minor OpcodeValue="0x12" Node="/sys/devices/system/cpu/cpu0/cpufreq/schedutil/down_rate_limit_us" />
         <Minor OpcodeValue="0x13" Node="/sys/devices/system/cpu/cpu0/cpufreq/schedutil/rtg_boost_freq" />
+        <Minor OpcodeValue="0x14" Node="/sys/devices/system/cpu/cpu0/cpufreq/walt/target_load_thresh" />
+        <Minor OpcodeValue="0x15" Node="/sys/devices/system/cpu/cpu0/cpufreq/walt/target_load_shift" />
+        <Minor OpcodeValue="0x16" Node="/sys/devices/system/cpu/cpu0/cpufreq/walt/up_rate_limit_us" />
     <!-- interactive major end -->
 
     <!-- cpubw hwmon major start -->
@@ -171,6 +180,8 @@ need to be added just before the end of it's major group. -->
         <Minor OpcodeValue="0xE" Node="SPECIAL_NODE - llcbw_hwmon_hyst_opt" />
         <Minor OpcodeValue="0xF" Node="/sys/class/devfreq/soc:qcom,cpu-cpu-llcc-bw/bw_hwmon/sample_ms" />
         <Minor OpcodeValue="0x10" Node="/sys/class/devfreq/soc:qcom,cpu-cpu-llcc-bw/polling_interval" />
+        <!--Here onwards are the path for new frequency opcodes for  CPU_LLCC_BW V2 nodes to support
+             new values from kernel 5.10 onwards-->
         <Minor OpcodeValue="0x11" Node="/sys/devices/system/cpu/bus_dcvs/LLCC/190b6400.qcom,bwmon-llcc/min_freq" />
         <Minor OpcodeValue="0x12" Node="/sys/devices/system/cpu/bus_dcvs/LLCC/190b6400.qcom,bwmon-llcc/max_freq" />
     <!-- cpubw hwmon major end -->
@@ -213,6 +224,7 @@ need to be added just before the end of it's major group. -->
         <Minor OpcodeValue="0x8" Node="/sys/class/kgsl/kgsl/proc/%d/state" />
         <Minor OpcodeValue="0x9" Node="/sys/class/kgsl/kgsl/proc/%d/state" />
         <Minor OpcodeValue="0xA" Node="/sys/class/kgsl/kgsl-3d0/devfreq/mod_percent" />
+        <Minor OpcodeValue="0xB" Node="/sys/class/kgsl/kgsl-3d0/idle_timer" />
     <!-- gpu major end -->
 
     <!-- misc major start -->
@@ -225,6 +237,7 @@ need to be added just before the end of it's major group. -->
         <Minor OpcodeValue="0x5" Node="SPECIAL_NODE - dummy_or_keep_alive" />
         <Minor OpcodeValue="0x6" Node="/sys/module/process_reclaim/parameters/enable_process_reclaim" />
         <Minor OpcodeValue="0x7" Node="SPECIAL_NODE - disable_pasr" />
+        <Minor OpcodeValue="0xC" Node="/proc/sys/walt/sched_pipeline" />
     <!-- misc major end -->
 
     <!-- llcbw hwmon major start -->
@@ -247,9 +260,12 @@ need to be added just before the end of it's major group. -->
         <Minor OpcodeValue="0xC" Node="/sys/class/devfreq/soc:qcom,cpu-llcc-ddr-bw/polling_interval" />
         <Minor OpcodeValue="0xD" Node="/sys/class/devfreq/soc:qcom,cpu-llcc-ddr-bw/bw_hwmon/sample_ms" />
         <Minor OpcodeValue="0xE" Node="/sys/class/devfreq/soc:qcom,cpu-llcc-ddr-bw/bw_hwmon/idle_mbps" />
+        <!--Here onwards are the path for new frequency opcodes for LLCC_DDR_BW V2 nodes to support
+            new values from kernel 5.10 onwards-->
         <Minor OpcodeValue="0xF" Node="/sys/devices/system/cpu/bus_dcvs/DDR/19091000.qcom,bwmon-ddr/min_freq" />
         <Minor OpcodeValue="0x10" Node="/sys/devices/system/cpu/bus_dcvs/DDR/19091000.qcom,bwmon-ddr/max_freq" />
         <Minor OpcodeValue="0x11" Node="/sys/class/devfreq/soc:qcom,cpu-llcc-ddr-bw/bw_hwmon/use_ab" />
+        <Minor OpcodeValue="0x12" Node="/sys/devices/system/cpu/bus_dcvs/DDR/19091000.qcom,bwmon-ddr/ab_scale" />
 
     <!-- llcbw hwmon major end -->
 
@@ -281,6 +297,19 @@ need to be added just before the end of it's major group. -->
         <Minor OpcodeValue="0x16" Node="/sys/devices/system/cpu/bus_dcvs/L3/soc:qcom,memlat:l3:prime/min_freq" />
         <Minor OpcodeValue="0x17" Node="/sys/devices/system/cpu/bus_dcvs/LLCC/soc:qcom,memlat:llcc:silver/min_freq" />
         <Minor OpcodeValue="0x18" Node="/sys/devices/system/cpu/bus_dcvs/DDR/soc:qcom,memlat:ddr:silver/min_freq" />
+        <Minor OpcodeValue="0x19" Node="/sys/devices/system/cpu/bus_dcvs/DDR/soc:qcom,memlat:ddr:gold/freq_scale_pct" />
+        <Minor OpcodeValue="0x1A" Node="/sys/devices/system/cpu/bus_dcvs/memlat_settings/sample_ms" />
+        <Minor OpcodeValue="0x1B" Node="/sys/devices/system/cpu/bus_dcvs/DDR/soc:qcom,memlat:ddr:gold-compute/max_freq" />
+        <Minor OpcodeValue="0x1C" Node="/sys/devices/system/cpu/bus_dcvs/LLCC/soc:qcom,memlat:llcc:gold-compute/max_freq" />
+        <Minor OpcodeValue="0x1D" Node="/sys/devices/system/cpu/bus_dcvs/DDR/soc:qcom,memlat:ddr:prime-latfloor/ipm_ceil" />
+        <Minor OpcodeValue="0x1E" Node="/sys/devices/system/cpu/bus_dcvs/DDR/memlat/adaptive_high_freq" />
+        <Minor OpcodeValue="0x1F" Node="/sys/devices/system/cpu/bus_dcvs/DDR/memlat/adaptive_low_freq" />
+        <Minor OpcodeValue="0x20" Node="/sys/devices/system/cpu/bus_dcvs/L3/soc:qcom,memlat:l3:gold/min_freq" />
+        <Minor OpcodeValue="0x21" Node="/sys/devices/system/cpu/bus_dcvs/DDR/soc:qcom,memlat:ddr:prime/min_freq" />
+        <Minor OpcodeValue="0x22" Node="/sys/devices/system/cpu/bus_dcvs/DDR/soc:qcom,memlat:ddr:gold/min_freq" />
+        <Minor OpcodeValue="0x23" Node="/sys/devices/system/cpu/bus_dcvs/LLCC/soc:qcom,memlat:llcc:gold/min_freq" />
+        <Minor OpcodeValue="0x24" Node="/sys/devices/system/cpu/bus_dcvs/DDR/soc:qcom,memlat:ddr:gold/spm_thres" />
+        <Minor OpcodeValue="0x25" Node="/sys/devices/system/cpu/bus_dcvs/DDR/soc:qcom,memlat:ddr:prime/spm_thres" />
     <!-- memlat major end -->
 
     <!-- npu major start -->
@@ -294,6 +323,11 @@ need to be added just before the end of it's major group. -->
         <Minor OpcodeValue="0x4" Node="/sys/class/devfreq/soc:qcom,npu-llcc-ddr-bw/bw_hwmon/io_percent" />
         <Minor OpcodeValue="0x5" Node="SPECIAL_NODE - npu_ddr_llcbw_hwmon_hyst_opt" />
     <!-- npu major end -->
+
+    <!-- sched2 major start -->
+    <Major OpcodeValue="0xF" />
+        <Minor OpcodeValue="0x0" Node="/proc/sys/walt/sched_asymcap_boost" />
+    <!-- sched2 major end -->
 
     </PerfResources>
 </ResourceConfigs>
