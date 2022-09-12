@@ -17,8 +17,7 @@
     <PerfBoost>
 
     <!--app lauch boost-->
-        <!-- SCHED DOWNMIGRATE resource opcode, value-->
-        <!-- SCHED UPMIGRATE resource opcode, value-->
+        <!-- SCHED_UP_DOWN MIGRATE resource opcode, value-->
         <!-- CPUBOOST_MAX_FREQ BIG Core resource opcode, value-->
         <!-- CPUBOOST_MAX_FREQ LITTLE Core resource opcode, value-->
         <!-- CPUBOOST_MIN_FREQ BIG Core resource opcode, value-->
@@ -26,12 +25,12 @@
         <!-- Type="1", main launch boost of 2sec -->
         <Config
             Id="0x00001081" Type="1" Enable="true" Timeout="2000" Target="holi"
-            Resources="0x40C20000, 0x28, 0x40C1C000, 0x32, 0x40804000, 0xFFF, 0x40804100, 0xFFF,
+            Resources="0x40CE0000, 0x00320028, 0x40804000, 0xFFF, 0x40804100, 0xFFF,
                        0x40800000, 1535, 0x40800100, 1478" />
 
         <Config
             Id="0x00001081" Type="1" Enable="true" Timeout="2000" Target="blair"
-            Resources="0x40C20000, 0x28, 0x40C1C000, 0x32, 0x40804000, 0xFFF, 0x40804100, 0xFFF,
+            Resources="0x40CE0000, 0x00320028, 0x40804000, 0xFFF, 0x40804100, 0xFFF,
                        0x40800000, 1516, 0x40800100, 1516" />
 
 
@@ -45,11 +44,7 @@
         <!-- Type="2", launch boost for disable packing 1.5sec -->
 
         <Config
-            Id="0x00001081" Type="2" Enable="true" Timeout="1500" Target="holi"
-            Resources="0x40400000, 0x1, 0x42C10000, 0x1, 0x43010000, 59, 0x43400000, 0x2DC0, 0x4281C000, 1500" />
-
-        <Config
-            Id="0x00001081" Type="2" Enable="true" Timeout="1500" Target="blair"
+            Id="0x00001081" Type="2" Enable="true" Timeout="1500" Target="holi,blair"
             Resources="0x40400000, 0x1, 0x42C10000, 0x1, 0x43010000, 59, 0x43400000, 0x2DC0, 0x4281C000, 1500" />
 
     <!-- config_enableLaunchBoostv3-->
@@ -57,36 +52,25 @@
         <!-- SCHED GROUP DOWNMIGRATE resource opcode, value-->
         <!-- SCHED GROUP UPMIGRATE resource opcode, value-->
         <!-- LPM Bias resource opcode, value-->
-        <!-- BUSY_HYSTERESIS_ENABLE_CPUS, val-->
 
         <!-- Type="3", FA launch boost of 15sec -->
         <Config
-            Id="0x00001081" Type="3" Enable="true" Timeout="15000" Target="holi"
+            Id="0x00001081" Type="3" Enable="true" Timeout="15000" Target="holi,blair"
            Resources="0x40C00000, 0x3, 0x40C58000, 85, 0x40C54000, 100, 0x40408000, 0x63" />
-
-        <Config
-            Id="0x00001081" Type="3" Enable="true" Timeout="15000" Target="blair"
-           Resources="0x40C00000, 0x3, 0x40C58000, 85, 0x40C54000, 100, 0x40408000, 0x5, 0x40C74000, 0xC0" />
 
      <!-- config_gameBoost-->
          <!-- SCHEDBOOST resource opcode, value-->
          <!-- SCHED GROUP DOWNMIGRATE resource opcode, value-->
          <!-- SCHED GROUP UPMIGRATE resource opcode, value-->
          <!-- LPM Bias resource opcode, value-->
-         <!-- BUSY_HYSTERESIS_ENABLE_CPUS, val-->
 
          <!-- Type="4", FA launch boost of 15sec -->
         <Config
-            Id="0x00001081" Type="4" Enable="true" Timeout="15000" Target="holi"
+            Id="0x00001081" Type="4" Enable="true" Timeout="15000" Target="holi,blair"
            Resources="0x40C00000, 0x3, 0x40C58000, 85, 0x40C54000, 100, 0x40408000, 0x63" />
-
-        <Config
-            Id="0x00001081" Type="4" Enable="true" Timeout="15000" Target="blair"
-           Resources="0x40C00000, 0x3, 0x40C58000, 85, 0x40C54000, 100, 0x40408000, 0x5, 0x40C74000, 0xC0" />
 
      <!-- config_enableLaunchBoost6-->
         <!-- LPM_BIAS resource opcode, val ms-->
-        <!-- BUSY_HYSTERESIS_ENABLE_CPUS, val-->
         <!-- SLB_BIG, val, SLB_BIG, val-->
         <!-- MIN_FREQ_BIG, val MHz -->
         <!-- CPU_DOWN_FREQ_THRESHOLD_US, val us -->
@@ -101,7 +85,6 @@
         <Config
             Id="0x00001081" Type="6" Enable="true" Timeout="2000" Target="blair"
             Resources="0x40408000, 0x5,
-                       0x40C74000, 0xC0,
                        0x40C68000, 60, 0x40C68010, 60,
                        0x40800000, 1228,
                        0x41448000, 20000" />
@@ -109,11 +92,7 @@
     <!--app launch boost (attach application) -->
         <!-- SCHED_TASK_BOOST resource opcode, value-->
         <Config
-            Id="0x00001081" Type="103" Enable="true" Timeout="2000" Target="holi"
-            Resources="0x40C80000, 0x0" />
-
-        <Config
-            Id="0x00001081" Type="103" Enable="true" Timeout="2000" Target="blair"
+            Id="0x00001081" Type="103" Enable="true" Timeout="2000" Target="holi,blair"
             Resources="0x40C80000, 0x0" />
 
     <!--Animation boost -->
@@ -153,11 +132,7 @@
         <!-- LPM Bias resource opcode, value-->
 
         <Config
-            Id="0x00001080" Type="1" Enable="true" Target="holi" Fps="90"
-            Resources="0x43010000, 0x26, 0x40800000, 1651, 0x40800100, 940, 0x40C00000, 2,
-                       0x40C74000, 0xC0, 0x40408000, 0x27" />
-        <Config
-            Id="0x00001080" Type="1" Enable="true" Target="blair" Fps="90"
+            Id="0x00001080" Type="1" Enable="true" Target="holi,blair" Fps="90"
             Resources="0x43010000, 0x26, 0x40800000, 1651, 0x40800100, 940, 0x40C00000, 2,
                        0x40C74000, 0xC0, 0x40408000, 0x27" />
 
@@ -201,11 +176,7 @@
         <!-- LPM Bias resource opcode, value-->
 
         <Config
-            Id="0x00001080" Type="2" Enable="true" Target="holi" Fps="90"
-            Resources="0x43010000, 0x26, 0x40800000, 1651, 0x40800100, 940, 0x40C00000, 2,
-                       0x40C74000, 0xC0, 0x40408000, 0x27" />
-        <Config
-            Id="0x00001080" Type="2" Enable="true" Target="blair" Fps="90"
+            Id="0x00001080" Type="2" Enable="true" Target="holi,blair" Fps="90"
             Resources="0x43010000, 0x26, 0x40800000, 1651, 0x40800100, 940, 0x40C00000, 2,
                        0x40C74000, 0xC0, 0x40408000, 0x27" />
 
@@ -249,32 +220,19 @@
         <!-- LPM Bias resource opcode, value-->
 
         <Config
-            Id="0x00001080" Type="4" Enable="true" Timeout="115" Target="holi" Fps="90"
-            Resources="0x43010000, 0x26, 0x40800000, 1651, 0x40800100, 940, 0x40C00000, 2,
-                       0x40C74000, 0xC0, 0x40408000, 0x27" />
-        <Config
-            Id="0x00001080" Type="4" Enable="true" Timeout="115" Target="blair" Fps="90"
+            Id="0x00001080" Type="4" Enable="true" Timeout="115" Target="holi,blair" Fps="90"
             Resources="0x43010000, 0x26, 0x40800000, 1651, 0x40800100, 940, 0x40C00000, 2,
                        0x40C74000, 0xC0, 0x40408000, 0x27" />
 
         <Config
-            Id="0x00001080" Type="4" Enable="true" Timeout="115" Target="holi" Fps="120"
-            Resources="0x43010000, 0x26, 0x40800000, 2035, 0x40800100, 1478, 0x40C00000, 2,
-                       0x40C74000, 0xC0, 0x40408000, 0x27" />
-        <Config
-            Id="0x00001080" Type="4" Enable="true" Timeout="115" Target="blair" Fps="120"
+            Id="0x00001080" Type="4" Enable="true" Timeout="115" Target="holi,blair" Fps="120"
             Resources="0x43010000, 0x26, 0x40800000, 2035, 0x40800100, 1478, 0x40C00000, 2,
                        0x40C74000, 0xC0, 0x40408000, 0x27" />
 
         <Config
-            Id="0x00001080" Type="4" Enable="true" Timeout="115" Target="holi" Fps="144"
+            Id="0x00001080" Type="4" Enable="true" Timeout="115" Target="holi,blair" Fps="144"
             Resources="0x43010000, 0x26, 0x40800000, 2035, 0x40800100, 1478, 0x40C00000, 2,
                        0x40C74000, 0xC0, 0x40408000, 0x27" />
-        <Config
-            Id="0x00001080" Type="4" Enable="true" Timeout="115" Target="blair" Fps="144"
-            Resources="0x43010000, 0x26, 0x40800000, 2035, 0x40800100, 1478, 0x40C00000, 2,
-                       0x40C74000, 0xC0, 0x40408000, 0x27" />
-
 
     <!--MTP boost-->
         <!-- SCHEDBOOST resource opcode, value-->
@@ -303,12 +261,7 @@
         <!-- SCHED_FORCE_LB_ENABLE resource opcode, value-->
         <!-- Type="", Package Install boost -->
         <Config
-            Id="0x00001088" Enable="true" Target="holi"
-            Resources="0x40804000, 0xFFF, 0x40804100, 0xFFF, 0x40800000, 0xFFF,
-                       0x40800100, 0xFFF, 0x40C00000, 0x2,  0x40CA0000, 0,
-                       0x40CCC000, 0" />
-        <Config
-            Id="0x00001088" Enable="true" Target="blair"
+            Id="0x00001088" Enable="true" Target="holi,blair"
             Resources="0x40804000, 0xFFF, 0x40804100, 0xFFF, 0x40800000, 0xFFF,
                        0x40800100, 0xFFF, 0x40C00000, 0x2,  0x40CA0000, 0,
                        0x40CCC000, 0" />
@@ -321,23 +274,16 @@
         <!-- CPUBOOST_MIN_FREQ LITTLE Core resource opcode, value-->
         <!-- Type="", Rotation latency boost -->
         <Config
-            Id="0x00001089" Enable="true" Timeout="1500" Target="holi"
+            Id="0x00001089" Enable="true" Timeout="1500" Target="holi,blair"
             Resources="0x40C00000, 0x1, 0x40804000, 0xFFF, 0x40804100, 0xFFF, 0x40800000,0xFFF,
                        0x40800100,0xFFF" />
-        <Config
-            Id="0x00001089" Enable="true" Timeout="1500" Target="blair"
-            Resources="0x40C00000, 0x1, 0x40804000, 0xFFF, 0x40804100, 0xFFF, 0x40800000,0xFFF,
-                       0x40800100, 0xFFF" />
 
     <!--Rotation animation boost-->
         <!-- CPUBOOST_MIN_FREQ LITTLE Core resource opcode, value-->
         <!-- GPU_MIN_POWER_LEVEL resource opcode,value-->
         <!-- Type="", Rotation animation boost -->
         <Config
-            Id="0x00001090" Enable="true" Timeout="1000" Target="holi"
-            Resources="0x40800100, 940, 0x42804000, 0" />
-        <Config
-            Id="0x00001090" Enable="true" Timeout="1000" Target="blair"
+            Id="0x00001090" Enable="true" Timeout="1000" Target="holi,blair"
             Resources="0x40800100, 940, 0x42804000, 0" />
 
     <!--Drag boost-->
@@ -371,20 +317,13 @@
     <!--Display on Resource -->
          <!-- Display on resource opcode, value -->
         <Config
-                Id="0x00001041" Enable="true" Timeout="0" Target="holi"
-                Resources="0x40000000, 1" />
-        <Config
-                Id="0x00001041" Enable="true" Timeout="0" Target="blair"
+                Id="0x00001041" Enable="true" Timeout="0" Target="holi,blair"
                 Resources="0x40000000, 1" />
 
     <!--Display off Resource -->
          <!-- Display on resource opcode, value -->
          <Config
-                Id="0x00001040" Enable="true" Timeout="0" Target="holi"
-                Resources="0x40000000, 0x0" />
-
-         <Config
-                Id="0x00001040" Enable="true" Timeout="0" Target="blair"
+                Id="0x00001040" Enable="true" Timeout="0" Target="holi,blair"
                 Resources="0x40000000, 0x0" />
 
     <!--FPS Update Resource-->
@@ -394,58 +333,23 @@
          <!-- SCHED_WINDOW_TICKS_UPDATE resource opcode, value -->
          <!-- Type="60" -->
          <Config
-                Id="0x00001094" Type="60" Enable="true" Target="holi" Timeout="0"
-               Resources="0x41444000, 0, 0x41444100, 0, 0x40CA8000, 0, 0x40CA4000, 5" />
-         <Config
-                Id="0x00001094" Type="60" Enable="true" Target="blair" Timeout="0"
+                Id="0x00001094" Type="60" Enable="true" Target="holi,blair" Timeout="0"
                Resources="0x41444000, 0, 0x41444100, 0, 0x40CA8000, 0, 0x40CA4000, 5" />
 
          <!-- Type="90" -->
          <Config
-                Id="0x00001094" Type="90" Enable="true" Target="holi" Timeout="0"
-                Resources="0x41444000, 1, 0x41444100, 1, 0x40CA8000, 2, 0x40CA4000, 3" />
-         <Config
-                Id="0x00001094" Type="90" Enable="true" Target="blair" Timeout="0"
+                Id="0x00001094" Type="90" Enable="true" Target="holi,blair" Timeout="0"
                 Resources="0x41444000, 1, 0x41444100, 1, 0x40CA8000, 2, 0x40CA4000, 3" />
 
          <!-- Type="120" -->
          <Config
-                Id="0x00001094" Type="120" Enable="true" Target="holi" Timeout="0"
+                Id="0x00001094" Type="120" Enable="true" Target="holi,blair" Timeout="0"
                 Resources="0x41444000, 1, 0x41444100, 1, 0x40CA8000, 2, 0x40CA4000, 2" />
-
-
-         <!-- WALT_RTG_CFS_BOOST_PRIO resource opcode, value -->
-         <!-- WALT_LOW_LATENCY_TASK_THRESHOLD resource opcode, value -->
-         <!-- Type="120" -->
-
-         <Config
-                Id="0x00001094" Type="120" Enable="true" Target="blair" Timeout="0"
-                Resources="0x41444000, 1, 0x41444100, 1, 0x40CA8000, 2, 0x40CA4000, 2,
-                           0x40CC8000, 119, 0x40CD8000, 100" />
 
          <!-- Type="144" -->
          <Config
-                Id="0x00001094" Type="144" Enable="true" Target="holi" Timeout="0"
+                Id="0x00001094" Type="144" Enable="true" Target="holi,blair" Timeout="0"
                 Resources="0x41444000, 1, 0x41444100, 1, 0x40CA8000, 2, 0x40CA4000, 2" />
-
-          <!-- SLB_BIG_0, val-->
-          <!-- SLB_BIG_1, val-->
-          <!-- WALT_RTG_CFS_BOOST_PRIO resource opcode, value -->
-          <!-- SCHED_COLOC_DOWNMIGRATE_NS resource opcode, value -->
-          <!-- WALT_LOW_LATENCY_TASK_THRESHOLD resource opcode, value -->
-          <!-- MIN_ONLINE_CPU_CLUSTER_BIG opcode, value-->
-          <!-- SCHED_MIN_TASK_UTIL_FOR_COLOCATION, value-->
-          <!-- SCHED_MIN_TASK_UTIL_FOR_BOOST, value-->
-          <!-- CPU min freq resource opcode, value -->
-          <!-- SCHED_BUSY_HYSTERESIS_ENABLE_COLOC_CPUS opcode, value -->
-          <!-- Type="144" -->
-
-           <Config
-                  Id="0x00001094" Type="144" Enable="true" Target="blair" Timeout="0"
-                  Resources="0x41444000, 1, 0x41444100, 1, 0x40CA8000, 2, 0x40CA4000, 2,
-                             0x40C68000, 0, 0x40C68010, 0, 0x40CC8000, 119,
-                             0x40C8C000, 100000000, 0x40CD8000, 100, 0x41000000, 3, 0x40C78000, 0,
-                             0x40C7C000, 0, 0x40800100, 806, 0x40C90000, 0x70" />
 
      <!--FPS Immediate Update from within Perfd Resource-->
           <!-- PREDECITIVE_LOAD BIG CORE resource opcode, value -->
@@ -454,57 +358,23 @@
           <!-- SCHED_WINDOW_TICKS_UPDATE resource opcode, value -->
           <!-- Type="60" -->
           <Config
-                 Id="0x0000109B" Type="60" Enable="true" Target="holi" Timeout="0"
-                Resources="0x41444000, 0, 0x41444100, 0, 0x40CA8000, 0, 0x40CA4000, 5" />
-          <Config
-                 Id="0x0000109B" Type="60" Enable="true" Target="blair" Timeout="0"
+                 Id="0x0000109B" Type="60" Enable="true" Target="holi,blair" Timeout="0"
                 Resources="0x41444000, 0, 0x41444100, 0, 0x40CA8000, 0, 0x40CA4000, 5" />
 
           <!-- Type="90" -->
           <Config
-                 Id="0x0000109B" Type="90" Enable="true" Target="holi" Timeout="0"
-                 Resources="0x41444000, 1, 0x41444100, 1, 0x40CA8000, 2, 0x40CA4000, 3" />
-          <Config
-                 Id="0x0000109B" Type="90" Enable="true" Target="blair" Timeout="0"
+                 Id="0x0000109B" Type="90" Enable="true" Target="holi,blair" Timeout="0"
                  Resources="0x41444000, 1, 0x41444100, 1, 0x40CA8000, 2, 0x40CA4000, 3" />
 
           <!-- Type="120" -->
           <Config
-                 Id="0x0000109B" Type="120" Enable="true" Target="holi" Timeout="0"
+                 Id="0x0000109B" Type="120" Enable="true" Target="holi,blair" Timeout="0"
                  Resources="0x41444000, 1, 0x41444100, 1, 0x40CA8000, 2, 0x40CA4000, 2" />
-
-         <!-- WALT_RTG_CFS_BOOST_PRIO resource opcode, value -->
-         <!-- WALT_LOW_LATENCY_TASK_THRESHOLD resource opcode, value -->
-         <!-- Type="120" -->
-
-          <Config
-                 Id="0x0000109B" Type="120" Enable="true" Target="blair" Timeout="0"
-                 Resources="0x41444000, 1, 0x41444100, 1, 0x40CA8000, 2, 0x40CA4000, 2,
-                            0x40CC8000, 119, 0x40CD8000, 100" />
 
           <!-- Type="144" -->
           <Config
-                 Id="0x0000109B" Type="144" Enable="true" Target="holi" Timeout="0"
+                 Id="0x0000109B" Type="144" Enable="true" Target="holi,blair" Timeout="0"
                  Resources="0x41444000, 1, 0x41444100, 1, 0x40CA8000, 2, 0x40CA4000, 2" />
-
-         <!-- SLB_BIG_0, val-->
-         <!-- SLB_BIG_1, val-->
-         <!-- WALT_RTG_CFS_BOOST_PRIO resource opcode, value -->
-         <!-- SCHED_COLOC_DOWNMIGRATE_NS resource opcode, value -->
-         <!-- WALT_LOW_LATENCY_TASK_THRESHOLD resource opcode, value -->
-         <!-- MIN_ONLINE_CPU_CLUSTER_BIG opcode, value-->
-         <!-- SCHED_MIN_TASK_UTIL_FOR_COLOCATION, value-->
-         <!-- SCHED_MIN_TASK_UTIL_FOR_BOOST, value-->
-         <!-- CPU min freq resource opcode, value -->
-         <!-- SCHED_BUSY_HYSTERESIS_ENABLE_COLOC_CPUS opcode, value -->
-         <!-- Type="144" -->
-
-          <Config
-                 Id="0x0000109B" Type="144" Enable="true" Target="blair" Timeout="0"
-                 Resources="0x41444000, 1, 0x41444100, 1, 0x40CA8000, 2, 0x40CA4000, 2,
-                            0x40C68000, 0, 0x40C68010, 0, 0x40CC8000, 119,
-                            0x40C8C000, 100000000, 0x40CD8000, 100, 0x41000000, 3, 0x40C78000, 0,
-                            0x40C7C000, 0, 0x40800100, 806, 0x40C90000, 0x70" />
 
     <!--Large Comp HInt -->
         <!-- CPU min freq resource opcode, value -->
