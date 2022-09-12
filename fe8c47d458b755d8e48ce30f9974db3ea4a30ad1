@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "b5b9171f_d6859bf9",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000012
+      },
+      "writtenOn": "2022-09-12T16:44:06Z",
+      "side": 1,
+      "message": "09-12 11:40:39.350   865   865 W HidlServiceManagement: Waited one second for vendor.qti.hardware.perf@2.1::IPerf/default\n09-12 11:40:39.354   461   461 I hwservicemanager: Since vendor.qti.hardware.perf@2.1::IPerf/default is not registered, trying to start it as a lazy HAL.\n09-12 11:40:39.355   865   865 I HidlServiceManagement: getService: Trying again for vendor.qti.hardware.perf@2.1::IPerf/default...\n09-12 11:40:39.357   461 15410 W libc    : Unable to set property \"ctl.interface_start\" to \"vendor.qti.hardware.perf@2.1::IPerf/default\": error code: 0x20",
+      "revId": "fe8c47d458b755d8e48ce30f9974db3ea4a30ad1",
+      "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
+    }
+  ]
+}
