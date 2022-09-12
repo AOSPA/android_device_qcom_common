@@ -49,7 +49,7 @@ endif
 
 # Properties
 PRODUCT_VENDOR_PROPERTIES += \
-    ro.vendor.perf-hal.ver=2.2 \
+    ro.vendor.perf-hal.ver=2.3 \
     ro.vendor.extension_library=libqti-perfd-client.so \
     vendor.power.pasr.enabled=true \
     ro.vendor.qspm.enable=true
