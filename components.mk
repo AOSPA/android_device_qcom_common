@@ -94,7 +94,10 @@ endif
 
 ifneq (,$(filter perf, $(TARGET_COMMON_QTI_COMPONENTS)))
 include $(QCOM_COMMON_PATH)/system/perf/qti-perf.mk
+ifeq ($(call is-board-platform-in-list,$(5_4_FAMILY) $(5_10_FAMILY),true)
 include $(QCOM_COMMON_PATH)/vendor/perf/qti-perf.mk
+else
+include $(QCOM_COMMON_PATH)/vendor/perf-legacy/qti-perf-legacy.mk
 endif
 
 ifneq (,$(filter telephony, $(TARGET_COMMON_QTI_COMPONENTS)))

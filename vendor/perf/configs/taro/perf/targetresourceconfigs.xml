@@ -72,7 +72,7 @@ as anyway perflock calls of these resources would fail. -->
         <Config MajorValue="0x3" MinorValue="0x37" Supported="no" /> <!-- Enabled till Kernel 4.19 -->
         <Config MajorValue="0x3" MinorValue="0x38" Node="/proc/sys/walt/%s" Supported="yes"/>
         <Config MajorValue="0x3" MinorValue="0x39" Supported="no" /> <!-- Enabled till Kernel 4.19 -->
-        <Config MajorValue="0x3" MinorValue="0x3C" Node="/proc/sys/walt/sched_wake_up_idle" />
+        <Config MajorValue="0x3" MinorValue="0x3C" Supported="no" />
         <Config MajorValue="0x3" MinorValue="0x3D" Node="/proc/sys/walt/%s" Supported="yes"/>
 
         <Config MajorValue="0x5" MinorValue="0xF" Node="/sys/devices/system/cpu/cpu0/cpufreq/walt/hispeed_freq" />
