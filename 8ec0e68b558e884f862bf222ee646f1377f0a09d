@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "7e0059ec_63d33e87",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000012
+      },
+      "writtenOn": "2022-09-12T16:43:01Z",
+      "side": 1,
+      "message": "perf service needs work:\n\nCan either\n1. Pin the existing blobs so HIDLs work.\n2. Add an override manifest so existing devices can use AIDL.",
+      "revId": "8ec0e68b558e884f862bf222ee646f1377f0a09d",
+      "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
+    }
+  ]
+}
