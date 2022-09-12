@@ -12,6 +12,8 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
+# Current tag - LA.VENDOR.1.0.r1-16000-WAIPIO.QSSI13.0
+
 PRODUCT_SOONG_NAMESPACES += \
     device/qcom/common/vendor/perf
 
@@ -49,7 +51,7 @@ endif
 
 # Properties
 PRODUCT_VENDOR_PROPERTIES += \
-    ro.vendor.perf-hal.ver=2.2 \
+    ro.vendor.perf-hal.ver=2.3 \
     ro.vendor.extension_library=libqti-perfd-client.so \
     vendor.power.pasr.enabled=true \
     ro.vendor.qspm.enable=true
