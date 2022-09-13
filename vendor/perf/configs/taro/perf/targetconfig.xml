@@ -33,7 +33,8 @@
         Other Fields
         * Type, whther a "little" or "big" cluster.
         (Type is mandatory, If there is more than one cluster.)
-        * MaxFrequency, Any limitations for max frequency for that cluster.
+        * MaxFrequency, in KHz. Any limitations for max frequency for that cluster.
+        * CappedMaxFreq, in MHZ. Any limittaion on Max freq if value passed is OxFFFF
     -->
 
     <!-- For targets sharing the same platfrom, we can have seperate config tag for each
@@ -46,7 +47,7 @@
              Target="taro"
              NumClusters="3"
              TotalNumCores="8"
-             SocIds="457"
+             SocIds="457,482,552"
              SynCore="1"
              CoreCtlCpu="4"
              MinCoreOnline="0"
@@ -57,5 +58,42 @@
          <ClustersInfo Id="2" NumCores="1" Type="prime" />
 
     </Config1>
+
+    <Config2>
+
+         <TargetInfo
+             Target="diwali"
+             NumClusters="3"
+             TotalNumCores="8"
+             SocIds="506,547,564"
+             SynCore="1"
+             CoreCtlCpu="4"
+             MinCoreOnline="0"
+             CpufreqGov="1"
+             MinFpsForTuning="48" />
+
+         <ClustersInfo Id="0" NumCores="4" Type="little" />
+         <ClustersInfo Id="1" NumCores="3" Type="big" />
+         <ClustersInfo Id="2" NumCores="1" Type="prime" />
+
+    </Config2>
+
+    <Config3>
+
+         <TargetInfo
+             Target="cape"
+             NumClusters="3"
+             TotalNumCores="8"
+             SocIds="530,531,540,591"
+             SynCore="1"
+             CoreCtlCpu="4"
+             MinCoreOnline="0"
+             CpufreqGov="1" />
+
+         <ClustersInfo Id="0" NumCores="4" Type="little" CappedMaxFreq="1804800"/>
+         <ClustersInfo Id="1" NumCores="3" Type="big" />
+         <ClustersInfo Id="2" NumCores="1" Type="prime" />
+
+    </Config3>
 
 </TargetConfig>
