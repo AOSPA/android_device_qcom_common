@@ -1,13 +1,13 @@
 <!--
 /******************************************************************************
-  @file    AdaptLaunchFeature.xml
-  @brief   Implementation of Android Framework Learning Module
+  @file    LightningLaunchesFeature.xml
+  @brief   Configuration of Lightning Lightning Launches Feature
 
   DESCRIPTION
       Each feature has an xml file to define the components
 
   ===========================================================================
-  Copyright (c) 2019-2021 Qualcomm Technologies, Inc.
+  Copyright (c) 2021 Qualcomm Technologies, Inc.
   All Rights Reserved.
   Confidential and Proprietary - Qualcomm Technologies, Inc.
   ===========================================================================
@@ -17,8 +17,8 @@
     Follows "Data goes into elements, metadata goes into attributes"
  -->
 <Feature>
-    <Name>AdaptLaunch</Name>
-    <Libname>libadaptlaunch.so</Libname>
+    <Name>LightningLaunches</Name>
+    <Libname>liblightninglaunches.so</Libname>
     <Configs target="taro">
         <Enable>1</Enable>
         <Cluster>0,1,2</Cluster>
@@ -34,25 +34,20 @@
         <Cluster2>0,690,80,1600,120,2000</Cluster2>
     </Configs>
     <Configs target="diwali">
-        <Enable>0</Enable>
+        <Enable>1</Enable>
         <Cluster>0,1,2</Cluster>
         <Cluster0>0,600,20,800,40,1500</Cluster0>
         <Cluster1>0,690,80,1600,120,2000</Cluster1>
         <Cluster2>0,690,80,1600,120,2000</Cluster2>
     </Configs>
     <Meters>
-        <SamplesRequired>4</SamplesRequired>
         <Meter>
-            <Name>VmRss</Name>
+            <Name>Launch</Name>
             <Triggers>
                 <Trigger>
                     <Primary>true</Primary>
                     <AsyncId>VENDOR_HINT_FIRST_LAUNCH_BOOST</AsyncId>
                     <AsyncType>1</AsyncType>
-                </Trigger>
-                <Trigger>
-                    <Primary>false</Primary>
-                    <AsyncId>VENDOR_HINT_TAP_EVENT</AsyncId>
                 </Trigger>
                 <Trigger>
                     <Primary>true</Primary>
@@ -74,11 +69,16 @@
                     <Primary>true</Primary>
                     <AsyncId>VENDOR_HINT_ACTIVITY_PAUSE</AsyncId>
                 </Trigger>
+                <Trigger>
+                    <Primary>true</Primary>
+                    <AsyncId>VENDOR_HINT_DISPLAY_OFF</AsyncId>
+                </Trigger>
+                <Trigger>
+                    <Primary>false</Primary>
+                    <AsyncId>VENDOR_HINT_FD_COUNT</AsyncId>
+                    <AsyncType>0</AsyncType>
+                </Trigger>
             </Triggers>
-            <Samples>300</Samples>
-            <Fields>
-                <Field>VmRss:</Field>
-            </Fields>
         </Meter>
     </Meters>
     <SpuriousHintApps>
