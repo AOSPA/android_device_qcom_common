@@ -25,6 +25,9 @@ value:2908
 [AID_VENDOR_QTR]
 value:2909
 
+[AID_VENDOR_QCC]
+value:2914
+
 [AID_VENDOR_NXP_STRONGBOX]
 value:2910
 
