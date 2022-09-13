@@ -1,5 +1,5 @@
 #=============================================================================
-# Copyright (c) 2021 Qualcomm Technologies, Inc.
+# Copyright (c) 2021-2022 Qualcomm Technologies, Inc.
 # All Rights Reserved.
 # Confidential and Proprietary - Qualcomm Technologies, Inc.
 #=============================================================================
@@ -46,6 +46,10 @@ echo 0 > /proc/sys/walt/sched_coloc_busy_hysteresis_enable_cpus
 echo 255 > /proc/sys/walt/sched_util_busy_hysteresis_enable_cpus
 echo 8500000 8500000 8500000 8500000 5000000 5000000 5000000 2000000 > /proc/sys/walt/sched_util_busy_hyst_cpu_ns
 echo 1 1 1 1 15 15 15 15 > /proc/sys/walt/sched_util_busy_hyst_cpu_util
+
+# Setting SPM parameters
+echo 1200:1708000 2100:3196000 > /sys/devices/system/cpu/bus_dcvs/DDR/soc:qcom,memlat:ddr:gold/spm_freq_map
+echo 1200:1708000 2100:3196000 > /sys/devices/system/cpu/bus_dcvs/DDR/soc:qcom,memlat:ddr:prime/spm_freq_map
 
 # cpuset parameters
 echo 0-3 > /dev/cpuset/background/cpus
@@ -201,5 +205,10 @@ case "$console_config" in
 		echo "Enable console config to $console_config"
 	;;
 esac
+
+
+# Disable wsf for diwali targets beacause we are using efk.
+# wsf Range : 1..1000 So set to bare minimum value 1.
+echo 1 > /proc/sys/vm/watermark_scale_factor
 
 setprop vendor.post_boot.parsed 1
