@@ -122,7 +122,6 @@ endif
 # Generate device tree overlay image (dtbo.img)
 #----------------------------------------------------------------------
 ifneq ($(strip $(TARGET_NO_KERNEL)),true)
-ifeq ($(TARGET_PREBUILT_KERNEL),)
 ifeq ($(strip $(BOARD_KERNEL_SEPARATED_DTBO)),true)
 
 MKDTIMG := $(HOST_OUT_EXECUTABLES)/mkdtimg$(HOST_EXECUTABLE_SUFFIX)
@@ -145,7 +144,6 @@ endef
 $(BOARD_PREBUILT_DTBOIMAGE): $(MKDTIMG) $(INSTALLED_KERNEL_TARGET)
 	$(build-dtboimage-target)
 
-endif
 endif
 endif
 
