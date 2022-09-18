@@ -20,6 +20,8 @@ INSTALLED_BOOTIMAGE_TARGET := $(BUILT_BOOTIMAGE_TARGET)
 ifeq ($(PRODUCT_BUILD_RAMDISK_IMAGE),true)
 INSTALLED_RAMDISK_TARGET := $(PRODUCT_OUT)/ramdisk.img
 endif
+endif
+
 ifeq ($(PRODUCT_BUILD_SYSTEM_IMAGE),true)
 INSTALLED_SYSTEMIMAGE := $(PRODUCT_OUT)/system.img
 endif
@@ -33,13 +35,11 @@ INSTALLED_RECOVERYIMAGE_TARGET :=
 endif
 recovery_ramdisk := $(PRODUCT_OUT)/ramdisk-recovery.img
 INSTALLED_USBIMAGE_TARGET := $(PRODUCT_OUT)/usbdisk.img
-endif
 
 #----------------------------------------------------------------------
 # Generate persist image (persist.img)
 #----------------------------------------------------------------------
 ifneq ($(strip $(BOARD_PERSISTIMAGE_PARTITION_SIZE)),)
-ifneq ($(strip $(TARGET_NO_KERNEL)),true)
 
 TARGET_OUT_PERSIST := $(PRODUCT_OUT)/persist
 
@@ -62,11 +62,11 @@ $(INSTALLED_PERSISTIMAGE_TARGET): $(MKEXTUSERIMG) $(MAKE_EXT4FS) $(INTERNAL_PERS
 ALL_DEFAULT_INSTALLED_MODULES += $(INSTALLED_PERSISTIMAGE_TARGET)
 ALL_MODULES.$(LOCAL_MODULE).INSTALLED += $(INSTALLED_PERSISTIMAGE_TARGET)
 droidcore: $(INSTALLED_PERSISTIMAGE_TARGET)
+droidcore-unbundled: $(INSTALLED_PERSISTIMAGE_TARGET)
 
 .PHONY: persistimage
 persistimage: $(INSTALLED_PERSISTIMAGE_TARGET)
 
-endif
 endif
 
 #----------------------------------------------------------------------
@@ -93,6 +93,7 @@ $(INSTALLED_METADATAIMAGE_TARGET): $(MKEXTUSERIMG) $(MAKE_EXT4FS)
 ALL_DEFAULT_INSTALLED_MODULES += $(INSTALLED_METADATAIMAGE_TARGET)
 ALL_MODULES.$(LOCAL_MODULE).INSTALLED += $(INSTALLED_METADATAIMAGE_TARGET)
 droidcore: $(INSTALLED_METADATAIMAGE_TARGET)
+droidcore-unbundled: $(INSTALLED_METADATAIMAGE_TARGET)
 
 .PHONY: metadataimage
 metadataimage: $(INSTALLED_METADATAIMAGE_TARGET)
@@ -241,6 +242,7 @@ kernelclean:
 	$(hide) if [ -f "$(PRODUCT_OUT)/kernel" ]; then  rm $(PRODUCT_OUT)/kernel; fi
 	@echo "kernel cleanup done"
 
+ifeq ($(TARGET_COMPILE_WITH_MSM_KERNEL),true)
 # Set correct dependency for kernel modules
 ifneq ($(KERNEL_MODULES_INSTALL),)
 ifneq ($(BOARD_VENDOR_KERNEL_MODULES),)
@@ -248,6 +250,7 @@ $(BOARD_VENDOR_KERNEL_MODULES): $(INSTALLED_BOOTIMAGE_TARGET)
 endif
 ifneq ($(BOARD_RECOVERY_KERNEL_MODULES),)
 $(BOARD_RECOVERY_KERNEL_MODULES): $(INSTALLED_BOOTIMAGE_TARGET)
+endif
 endif
 endif
 
