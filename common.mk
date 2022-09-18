@@ -141,6 +141,12 @@ include $(QCOM_COMMON_PATH)/components.mk
 # Filesystem
 TARGET_FS_CONFIG_GEN += $(QCOM_COMMON_PATH)/config.fs
 
+# Kernel
+ifeq ($(call is-board-platform-in-list,$(5_10_FAMILY)),true)
+include vendor/qcom/proprietary/kernel-platform/kernel-platform-product.mk
+include vendor/qcom/proprietary/kernel-platform/kernel-platform-board.mk
+endif
+
 # Power
 ifneq ($(TARGET_PROVIDES_POWERHAL),true)
 $(call inherit-product-if-exists, vendor/qcom/opensource/power/power-vendor-product.mk)
