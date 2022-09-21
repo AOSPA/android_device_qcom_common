@@ -1,5 +1,5 @@
 #=============================================================================
-# Copyright (c) 2019-2022 Qualcomm Technologies, Inc.
+# Copyright (c) 2019-2021 Qualcomm Technologies, Inc.
 # All Rights Reserved.
 # Confidential and Proprietary - Qualcomm Technologies, Inc.
 #
@@ -39,11 +39,8 @@ function configure_zram_parameters() {
 	MemTotalStr=`cat /proc/meminfo | grep MemTotal`
 	MemTotal=${MemTotalStr:16:8}
 
-	low_ram=`getprop ro.config.low_ram`
-
-	# Zram disk - 75% for Go and < 2GB devices .
-	# For >2GB Non-Go devices, size = 50% of RAM size. Limit the size to 4GB.
-	# And enable lz4 zram compression for Go targets.
+	# Zram disk - 75% for < 2GB devices .
+	# For >2GB Non-Go devices, size = 50% of RAM size. Max 4GB.
 
 	let RamSizeGB="( $MemTotal / 1048576 ) + 1"
 	diskSizeUnit=M
@@ -53,11 +50,12 @@ function configure_zram_parameters() {
 		let zRamSizeMB="( $RamSizeGB * 1024 ) / 2"
 	fi
 
-	# use MB avoid 32 bit overflow
 	if [ $zRamSizeMB -gt 4096 ]; then
 		let zRamSizeMB=4096
 	fi
 
+	# And enable lz4 zram compression for Go targets.
+	low_ram=`getprop ro.config.low_ram`
 	if [ "$low_ram" == "true" ]; then
 		echo lz4 > /sys/block/zram0/comp_algorithm
 	fi
@@ -68,8 +66,8 @@ function configure_zram_parameters() {
 		fi
 		echo "$zRamSizeMB""$diskSizeUnit" > /sys/block/zram0/disksize
 
-		# ZRAM may use more memory than it saves if SLAB_STORE_USER
-		# debug option is enabled.
+		# ZRAM may use more memory than it saves if
+		# SLAB_STORE_USER debug option is enabled.
 		if [ -e /sys/kernel/slab/zs_handle ]; then
 			echo 0 > /sys/kernel/slab/zs_handle/store_user
 		fi
@@ -98,51 +96,26 @@ function configure_read_ahead_kb_values() {
 	else
 		ra_kb=512
 	fi
+	for dm in $dmpts; do
+		echo $ra_kb > $dm
+	done
 	if [ -f /sys/block/mmcblk0/bdi/read_ahead_kb ]; then
 		echo $ra_kb > /sys/block/mmcblk0/bdi/read_ahead_kb
 	fi
 	if [ -f /sys/block/mmcblk0rpmb/bdi/read_ahead_kb ]; then
 		echo $ra_kb > /sys/block/mmcblk0rpmb/bdi/read_ahead_kb
 	fi
-	for dm in $dmpts; do
-		echo $ra_kb > $dm
-	done
 }
 
 function configure_memory_parameters() {
-	# Set Memory parameters.
-	#
-	# Set per_process_reclaim tuning parameters
-	# All targets will use vmpressure range 50-70,
-	# All targets will use 512 pages swap size.
-	#
-	# Set Low memory killer minfree parameters
-	# 32 bit Non-Go, all memory configurations will use 15K series
-	# 32 bit Go, all memory configurations will use uLMK + Memcg
-	# 64 bit will use Google default LMK series.
-	#
-	# Set ALMK parameters (usually above the highest minfree values)
-	# vmpressure_file_min threshold is always set slightly higher
-	# than LMK minfree's last bin value for all targets. It is calculated as
-	# vmpressure_file_min = (last bin - second last bin ) + last bin
-	#
-	# Set allocstall_threshold to 0 for all targets.
-	#
-
 	configure_zram_parameters
 	configure_read_ahead_kb_values
+
 	echo 100 > /proc/sys/vm/swappiness
 
 	# Disable periodic kcompactd wakeups. We do not use THP, so having many
 	# huge pages is not as necessary.
 	echo 0 > /proc/sys/vm/compaction_proactiveness
-
-	# With THP enabled, the kernel greatly increases min_free_kbytes over its
-	# default value. Disable THP to prevent resetting of min_free_kbytes
-	# value during online/offline pages.
-	if [ -f /sys/kernel/mm/transparent_hugepage/enabled ]; then
-		echo never > /sys/kernel/mm/transparent_hugepage/enabled
-	fi
 
 	MemTotalStr=`cat /proc/meminfo | grep MemTotal`
 	MemTotal=${MemTotalStr:16:8}
@@ -158,28 +131,32 @@ function configure_memory_parameters() {
 	else
 		echo 4096 > /proc/sys/vm/min_free_kbytes
 	fi
+	# Disable wsf for all targets beacause we are using efk.
+	# wsf Range : 1..1000 So set to bare minimum value 1.
+	echo 1 > /proc/sys/vm/watermark_scale_factor
+
+	#Set per-app max kgsl reclaim limit and per shrinker call limit
+	if [ -f /sys/class/kgsl/kgsl/page_reclaim_per_call ]; then
+		echo 38400 > /sys/class/kgsl/kgsl/page_reclaim_per_call
+	fi
+	if [ -f /sys/class/kgsl/kgsl/max_reclaim_limit ]; then
+		echo 25600 > /sys/class/kgsl/kgsl/max_reclaim_limit
+	fi
 }
 
+# Set Memory parameters.
 configure_memory_parameters
 
-if [ -f /sys/devices/soc0/chip_family ]; then
-	chipfamily=`cat /sys/devices/soc0/chip_family`
+if [ -f /sys/devices/soc0/soc_id ]; then
+	platformid=`cat /sys/devices/soc0/soc_id`
 fi
 
-case "$chipfamily" in
-    "0x74")
-	/vendor/bin/sh /vendor/bin/init.kernel.post_boot-taro.sh
-	;;
-
-    "0x7B"|"0x7b")
-	/vendor/bin/sh /vendor/bin/init.kernel.post_boot-diwali.sh
-	;;
-
-    "0x82")
-	/vendor/bin/sh /vendor/bin/init.kernel.post_boot-cape.sh
-	;;
-     *)
-	echo "***WARNING***: Invalid chip family\n\t No postboot settings applied!!\n"
-	;;
+case "$platformid" in
+	"537")
+		/vendor/bin/sh /vendor/bin/init.kernel.post_boot-parrot.sh
+		;;
+	*)
+		echo "***WARNING***: Invalid SoC ID\n\t No postboot settings applied!!\n"
+		;;
 esac
 
