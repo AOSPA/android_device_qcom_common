@@ -1,6 +1,6 @@
 #! /vendor/bin/sh
 
-# Copyright (c) 2012-2013,2016,2018-2021 The Linux Foundation. All rights reserved.
+# Copyright (c) 2012-2013,2016,2018-2020 The Linux Foundation. All rights reserved.
 #
 # Redistribution and use in source and binary forms, with or without
 # modification, are permitted provided that the following conditions are met:
@@ -25,10 +25,6 @@
 # WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR
 # OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF
 # ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-#
-#Changes from Qualcomm Innovation Center are provided under the following license:
-#Copyright (c) 2022 Qualcomm Innovation Center, Inc. All rights reserved.
-#SPDX-License-Identifier: BSD-3-Clause-Clear
 #
 
 export PATH=/vendor/bin
@@ -259,9 +255,6 @@ case "$target" in
         # 196610 is decimal for 0x30002 to report version 3.2
         case "$soc_hwid" in
             294|295|296|297|298|313|353|354|363|364)
-                # Disable adsprpcd_sensorspd daemon
-                setprop vendor.fastrpc.disable.adsprpcd_sensorspd.daemon 1
-
                 setprop vendor.opengles.version 196610
                 if [ $soc_hwid = 354 ]
                 then
@@ -269,13 +262,10 @@ case "$target" in
                     log -t BOOT -p i "SDM429 early_boot prop set for: HwID '$soc_hwid'"
                 fi
                 ;;
-            303|307|308|309|320|386|436)
+            303|307|308|309|320)
                 # Vulkan is not supported for 8917 variants
                 setprop vendor.opengles.version 196608
                 setprop persist.graphics.vulkan.disable true
-                setprop vendor.gralloc.disable_ahardware_buffer 1
-                # Disable adsprpcd_sensorspd daemon
-                setprop vendor.fastrpc.disable.adsprpcd_sensorspd.daemon 1
                 ;;
             *)
                 setprop vendor.opengles.version 196608
@@ -345,40 +335,20 @@ case "$target" in
                     setprop vendor.media.target.version 3
                 fi
                 ;;
-            476)
-                # Fraser soc_id 476
-                setprop vendor.display.enable_qsync_idle 1
-                ;;
         esac
         ;;
     "bengal")
         case "$soc_hwid" in
-            441|473)
-                # 441 is for scuba and 473 for scuba iot qcm
+            441)
                 setprop vendor.fastrpc.disable.cdsprpcd.daemon 1
-                setprop vendor.media.target.version 2
                 setprop vendor.gralloc.disable_ubwc 1
-                setprop vendor.display.enhance_idle_time 1
-                setprop vendor.netflix.bsp_rev ""
+
                 # 196609 is decimal for 0x30001 to report version 3.1
                 setprop vendor.opengles.version 196609
-                sku_ver=`cat /sys/devices/platform/soc/5a00000.qcom,vidc1/sku_version` 2> /dev/null
-                if [ $sku_ver -eq 1 ]; then
-                   setprop vendor.media.target.version 3
-                fi
                 ;;
-            471|474)
-                # 471 is for scuba APQ and 474 for scuba iot qcs
-                setprop vendor.fastrpc.disable.cdsprpcd.daemon 1
+            471)
+                #scuba APQ
                 setprop vendor.gralloc.disable_ubwc 1
-                setprop vendor.display.enhance_idle_time 1
-                setprop vendor.netflix.bsp_rev ""
-                ;;
-            518|561|586)
-                setprop vendor.media.target.version 3
-                ;;
-            585)
-                setprop vendor.media.target.version 4
                 ;;
         esac
         ;;
@@ -431,23 +401,6 @@ case "$target" in
         setprop vendor.media.target_variant "_holi"
         ;;
 esac
-case "$target" in
-       "msm8937")
-          case "$soc_hwid" in
-              386|354|353|303)
-                 # enable qrtr-ns service for kernel 4.14 or above
-                 KernelVersionStr=`cat /proc/sys/kernel/osrelease`
-                 KernelVersionS=${KernelVersionStr:2:2}
-                 KernelVersionA=${KernelVersionStr:0:1}
-                 KernelVersionB=${KernelVersionS%.*}
-
-                 if [ $KernelVersionA -ge 4 ] && [ $KernelVersionB -ge 14 ]; then
-                     setprop init.svc.vendor.qrtrns.enable 1
-                 fi
-                 ;;
-           esac
-           ;;
- esac
 
 baseband=`getprop ro.baseband`
 #enable atfwd daemon all targets except sda, apq, qcs
@@ -496,14 +449,6 @@ esac
 
 case "$product" in
         "msmnile_gvmq")
-         setprop vendor.display.lcd_density 160
-         ;;
-        *)
-        ;;
-esac
-
-case "$product" in
-        "msmnile_gvmgh")
          setprop vendor.display.lcd_density 160
          ;;
         *)
