@@ -1,0 +1,4 @@
+dontaudit vendor_hal_gnss_qti vendor_pd_locater_dbg_prop:file r_file_perms;
+dontaudit hal_wifi_default persist_vendor_debug_wifi_prop:file r_file_perms;
+dontaudit gmscore_app { adsprpcd_file bt_firmware_file firmware_file }:filesystem getattr;
+dontaudit gmscore_app hal_memtrack_hwservice:hwservice_manager find;
