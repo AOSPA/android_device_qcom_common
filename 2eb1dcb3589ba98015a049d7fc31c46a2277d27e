@@ -16,6 +16,23 @@
       "message": "This is taking away some current stuff from other platforms, Example: bengal and khaje.",
       "revId": "2eb1dcb3589ba98015a049d7fc31c46a2277d27e",
       "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "427a7b6c_4400b221",
+        "filename": "vendor/init/ueventd.qcom.rc",
+        "patchSetId": 1
+      },
+      "lineNbr": 198,
+      "author": {
+        "id": 1000737
+      },
+      "writtenOn": "2022-09-21T23:51:24Z",
+      "side": 1,
+      "message": "I believe this soc/1880000.qcom is being defined only for taro platform, or am I wrong?",
+      "revId": "2eb1dcb3589ba98015a049d7fc31c46a2277d27e",
+      "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
     }
   ]
 }
