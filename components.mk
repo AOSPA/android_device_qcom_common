@@ -31,6 +31,10 @@ TARGET_COMMON_QTI_COMPONENTS := \
     vibrator \
     wlan
 
+ifeq ($(call is-board-platform-in-list,$(5_10_FAMILY)),true)
+TARGET_COMMON_QTI_COMPONENTS += dlkm
+endif
+
 ifeq ($(call is-board-platform-in-list,$(5_4_FAMILY)),true)
 TARGET_COMMON_QTI_COMPONENTS += media
 else
@@ -58,6 +62,10 @@ endif
 ifneq (,$(filter bt, $(TARGET_COMMON_QTI_COMPONENTS)))
 include $(QCOM_COMMON_PATH)/system/bt/qti-bt.mk
 include $(QCOM_COMMON_PATH)/vendor/bt/qti-bt.mk
+endif
+
+ifneq (,$(filter dlkm, $(TARGET_COMMON_QTI_COMPONENTS)))
+include $(QCOM_COMMON_PATH)/dlkm/qti-dlkm.mk
 endif
 
 ifneq (,$(filter gps, $(TARGET_COMMON_QTI_COMPONENTS)))
