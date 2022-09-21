@@ -30,9 +30,6 @@
 # OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN
 # IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
-# allow qcc-trd to add and find vendor service
-add_service(vendor_qcc_trd, vendor_qtrsdkservice_service)
-
 # allow qcc-trd to add qccvndhal service to hwservicemanager
 hal_server_domain(vendor_qcc_trd, vendor_hal_qccvndhal)
 hal_attribute_hwservice(vendor_hal_qccvndhal, vendor_hal_qccvndhal_hwservice)
