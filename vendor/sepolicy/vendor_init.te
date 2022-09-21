@@ -1,2 +1,9 @@
 # Allow init.qcom.post_boot.sh to set watermark_scale_factor
 allow vendor_qti_init_shell proc_watermark_scale_factor:file w_file_perms;
+
+# Allow init.qcom.usb.sh to create files in uvc.0
+allow vendor_qti_init_shell configfs:dir create_dir_perms;
+allow vendor_qti_init_shell configfs:{
+  file
+  lnk_file
+} create_file_perms;
