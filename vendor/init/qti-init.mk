@@ -15,6 +15,12 @@
 PRODUCT_SOONG_NAMESPACES += \
     device/qcom/common/vendor/init
 
+# Override audio service for pre-5.10 targets
+ifeq (,$(filter 5.10, $(TARGET_KERNEL_VERSION)))
+PRODUCT_PACKAGES += \
+    android.hardware.audio.service.rc
+endif
+
 # Init
 PRODUCT_PACKAGES += \
     init.class_main.sh \
@@ -42,5 +48,6 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     init.qti.kernel.rc \
     init.qti.kernel.sh \
+    init.qti.write.sh \
     vendor_modprobe.sh
 endif

@@ -16,6 +16,13 @@ soong_namespace {
 }
 
 prebuilt_etc {
+    name: "android.hardware.audio.service.rc",
+    src: "android.hardware.audio.service.rc",
+    sub_dir: "init",
+    vendor: true,
+}
+
+prebuilt_etc {
     name: "init.qcom.factory.rc",
     src: "init.qcom.factory.rc",
     sub_dir: "init/hw",
@@ -120,6 +127,12 @@ sh_binary {
 sh_binary {
     name: "init.qti.kernel.sh",
     src: "init.qti.kernel.sh",
+    vendor: true,
+}
+
+sh_binary {
+    name: "init.qti.write.sh",
+    src: "init.qti.write.sh",
     vendor: true,
 }
 
