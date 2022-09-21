@@ -124,6 +124,12 @@ sh_binary {
 }
 
 sh_binary {
+    name: "init.qti.write.sh",
+    src: "init.qti.write.sh",
+    vendor: true,
+}
+
+sh_binary {
     name: "init.veth_ipa_config.sh",
     src: "init.veth_ipa_config.sh",
     vendor: true,
