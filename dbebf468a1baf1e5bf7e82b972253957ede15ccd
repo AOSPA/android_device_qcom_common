@@ -16,6 +16,24 @@
       "message": "https://github.com/AOSPA/android_device_qcom_common/commit/2e49ccaf281b5a70490314e3257d0639a7543d17",
       "revId": "dbebf468a1baf1e5bf7e82b972253957ede15ccd",
       "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "b7cbc58f_da71d186",
+        "filename": "vendor/init/init.qcom.post_boot.sh",
+        "patchSetId": 1
+      },
+      "lineNbr": 30,
+      "author": {
+        "id": 1000447
+      },
+      "writtenOn": "2022-09-21T23:54:44Z",
+      "side": 0,
+      "message": "Done",
+      "parentUuid": "78124243_e90d6029",
+      "revId": "dbebf468a1baf1e5bf7e82b972253957ede15ccd",
+      "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
     }
   ]
 }
