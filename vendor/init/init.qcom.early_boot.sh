@@ -1,6 +1,6 @@
 #! /vendor/bin/sh
 
-# Copyright (c) 2012-2013,2016,2018-2021 The Linux Foundation. All rights reserved.
+# Copyright (c) 2012-2013,2016,2018-2020 The Linux Foundation. All rights reserved.
 #
 # Redistribution and use in source and binary forms, with or without
 # modification, are permitted provided that the following conditions are met:
@@ -257,7 +257,7 @@ case "$target" in
             294|295|296|297|298|313|353|354|363|364)
                 # Disable adsprpcd_sensorspd daemon
                 setprop vendor.fastrpc.disable.adsprpcd_sensorspd.daemon 1
-
+                
                 setprop vendor.opengles.version 196610
                 if [ $soc_hwid = 354 ]
                 then
@@ -344,7 +344,6 @@ case "$target" in
             476)
                 # Fraser soc_id 476
                 setprop vendor.display.enable_qsync_idle 1
-                ;;
         esac
         ;;
     "bengal")
@@ -356,6 +355,7 @@ case "$target" in
                 setprop vendor.gralloc.disable_ubwc 1
                 setprop vendor.display.enhance_idle_time 1
                 setprop vendor.netflix.bsp_rev ""
+
                 # 196609 is decimal for 0x30001 to report version 3.1
                 setprop vendor.opengles.version 196609
                 sku_ver=`cat /sys/devices/platform/soc/5a00000.qcom,vidc1/sku_version` 2> /dev/null
@@ -441,7 +441,7 @@ case "$target" in
            esac
            ;;
  esac
-
+ 
 baseband=`getprop ro.baseband`
 #enable atfwd daemon all targets except sda, apq, qcs
 case "$baseband" in
@@ -489,14 +489,6 @@ esac
 
 case "$product" in
         "msmnile_gvmq")
-         setprop vendor.display.lcd_density 160
-         ;;
-        *)
-        ;;
-esac
-
-case "$product" in
-        "msmnile_gvmgh")
          setprop vendor.display.lcd_density 160
          ;;
         *)
