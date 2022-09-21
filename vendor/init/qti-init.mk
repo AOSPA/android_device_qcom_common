@@ -42,5 +42,6 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     init.qti.kernel.rc \
     init.qti.kernel.sh \
+    init.qti.write.sh \
     vendor_modprobe.sh
 endif
