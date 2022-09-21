@@ -1,4 +1,4 @@
-// Copyright (C) 2021-2022 Paranoid Android
+// Copyright (C) 2022 Paranoid Android
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -13,13 +13,6 @@
 // limitations under the License.
 
 soong_namespace {
-}
-
-prebuilt_etc {
-    name: "init.qcom.factory.rc",
-    src: "init.qcom.factory.rc",
-    sub_dir: "init/hw",
-    vendor: true,
 }
 
 prebuilt_etc {
@@ -120,6 +113,12 @@ sh_binary {
 sh_binary {
     name: "init.qti.kernel.sh",
     src: "init.qti.kernel.sh",
+    vendor: true,
+}
+
+sh_binary {
+    name: "init.qti.write.sh",
+    src: "init.qti.write.sh",
     vendor: true,
 }
 
