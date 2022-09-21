@@ -106,6 +106,7 @@ function configure_memory_parameters() {
 	echo 1 > /proc/sys/vm/watermark_scale_factor
 	configure_zram_parameters
 	configure_read_ahead_kb_values
+	echo 0 > /proc/sys/vm/page-cluster
 
 	#Spawn 2 kswapd threads which can help in fast reclaiming of pages
 	echo 2 > /proc/sys/vm/kswapd_threads
