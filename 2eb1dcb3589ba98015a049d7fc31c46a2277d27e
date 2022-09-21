@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "d60e1030_dce96f19",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000737
+      },
+      "writtenOn": "2022-09-21T23:42:23Z",
+      "side": 1,
+      "message": "This is taking away some current stuff from other platforms, Example: bengal and khaje.",
+      "revId": "2eb1dcb3589ba98015a049d7fc31c46a2277d27e",
+      "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
+    }
+  ]
+}
