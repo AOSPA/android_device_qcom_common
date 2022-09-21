@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "4a4e0ee4_982ebe1b",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000737
+      },
+      "writtenOn": "2022-09-21T13:07:02Z",
+      "side": 1,
+      "message": "Wouldn\u0027t it be better to add in init component ?",
+      "revId": "301d74a199995cf2fbce86ebd50e170316e80a97",
+      "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
+    }
+  ]
+}
