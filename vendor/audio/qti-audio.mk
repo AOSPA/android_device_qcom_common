@@ -23,6 +23,7 @@ TARGET_USES_RRO := true
 
 # Override proprietary definitions from SoC audio HAL Makefiles.
 AUDIO_FEATURE_ENABLED_DYNAMIC_LOG := false
+AUDIO_FEATURE_ENABLED_LSM_HIDL := false
 BOARD_SUPPORTS_OPENSOURCE_STHAL := false
 
 # OMX Packages
