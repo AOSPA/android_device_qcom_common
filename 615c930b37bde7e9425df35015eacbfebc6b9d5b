@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "caab3e82_c9cfac00",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000447
+      },
+      "writtenOn": "2022-09-22T21:30:01Z",
+      "side": 1,
+      "message": "Audio HAL can\u0027t compile anyways without BSP headers",
+      "revId": "615c930b37bde7e9425df35015eacbfebc6b9d5b",
+      "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
+    }
+  ]
+}
