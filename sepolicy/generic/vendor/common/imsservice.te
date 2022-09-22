@@ -1,0 +1,7 @@
+allow vendor_ims_service self:{
+    netlink_generic_socket
+    qipcrtr_socket
+    socket
+    tipc_socket
+} create_socket_perms_no_ioctl;
+unix_socket_connect(vendor_ims_service, vendor_ims_service, vendor_ims_service)
