@@ -36,6 +36,24 @@
       "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "ece12fc7_f917e3d4",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000737
+      },
+      "writtenOn": "2022-09-22T00:03:51Z",
+      "side": 1,
+      "message": "yes, this is a possibility( Perhaps the best possibility)or we can just pick specific commits, I was doing this before, whenever a new commit comes out for a specific platform, I pick it and see if it will work for everyone and won\u0027t cause problems, it\u0027s usually done that way, jake helps with the Reviews too.",
+      "parentUuid": "90f52c07_a13a670e",
+      "revId": "2eb1dcb3589ba98015a049d7fc31c46a2277d27e",
+      "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "427a7b6c_4400b221",
@@ -67,6 +85,24 @@
       "side": 1,
       "message": "1880000.qcom is not taro specific",
       "parentUuid": "427a7b6c_4400b221",
+      "revId": "2eb1dcb3589ba98015a049d7fc31c46a2277d27e",
+      "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "78b75891_5441e5d5",
+        "filename": "vendor/init/ueventd.qcom.rc",
+        "patchSetId": 1
+      },
+      "lineNbr": 198,
+      "author": {
+        "id": 1000737
+      },
+      "writtenOn": "2022-09-22T00:03:51Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "7e808a4e_a0ff604d",
       "revId": "2eb1dcb3589ba98015a049d7fc31c46a2277d27e",
       "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
     }
