@@ -1,2 +1,8 @@
 #Android NN Driver
 /vendor/bin/hw/android\.hardware\.neuralnetworks@1\.3-service-qti   u:object_r:vendor_hal_neuralnetworks_default_exec:s0
+
+# IMS
+/dev/socket/ims_qmid            u:object_r:vendor_ims_service_socket:s0
+/vendor/bin/imsqmidaemon        u:object_r:vendor_ims_service_exec:s0
+/vendor/bin/imsdatadaemon       u:object_r:vendor_ims_service_exec:s0
+/vendor/bin/imsrcsd             u:object_r:vendor_ims_service_exec:s0
