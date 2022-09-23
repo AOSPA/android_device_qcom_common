@@ -76,7 +76,7 @@ ifneq (,$(filter init, $(TARGET_COMMON_QTI_COMPONENTS)))
 endif
 
 ifneq (,$(filter media, $(TARGET_COMMON_QTI_COMPONENTS)))
-  ifeq ($(call is-board-platform-in-list,$(5_4_FAMILY),true)
+  ifeq ($(call is-board-platform-in-list,$(5_4_FAMILY) ($(5_10_FAMILY),true)
     include $(QCOM_COMMON_PATH)/vendor/media/qti-media.mk
   else
     include $(QCOM_COMMON_PATH)/vendor/media-legacy/qti-media-legacy.mk
