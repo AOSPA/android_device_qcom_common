@@ -31,7 +31,7 @@ TARGET_COMMON_QTI_COMPONENTS := \
     vibrator \
     wlan
 
-ifeq ($(call is-board-platform-in-list,$(5_4_FAMILY)),true)
+ifeq ($(call is-board-platform-in-list,$(5_4_FAMILY) $(5_10_FAMILY)),true)
 TARGET_COMMON_QTI_COMPONENTS += media
 else
 TARGET_COMMON_QTI_COMPONENTS += media-legacy
