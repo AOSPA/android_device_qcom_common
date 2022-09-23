@@ -1,7 +1,0 @@
-# WIGIG
-system_ext/framework/vendor.qti.hardware.wigig.netperftuner-V1.0-java.jar
-system_ext/framework/vendor.qti.hardware.wigig.supptunnel-V1.0-java.jar
-system_ext/lib/vendor.qti.hardware.wigig.netperftuner@1.0.so
-system_ext/lib/vendor.qti.hardware.wigig.supptunnel@1.0.so
-system_ext/lib64/vendor.qti.hardware.wigig.netperftuner@1.0.so
-system_ext/lib64/vendor.qti.hardware.wigig.supptunnel@1.0.so
