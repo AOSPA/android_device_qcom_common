@@ -1,25 +1,5 @@
 # WIGIG
-vendor/bin/ftm_flows_test
-vendor/bin/ftmtest
-vendor/bin/host_manager_11ad
-vendor/bin/shell_11ad
-vendor/bin/wigig_wiburn
-vendor/bin/wigighalsvc
-vendor/bin/wigignpt
-vendor/etc/configstore/wigig.xml
-vendor/etc/init/vendor.qti.hardware.wigig.supptunnel@1.0-service.rc
-vendor/etc/wifi/aoa_cldb_falcon.bin
-vendor/etc/wifi/aoa_cldb_swl14.bin
-vendor/etc/wifi/wigig_p2p_supplicant.conf
-vendor/etc/wifi/wigig_supplicant.conf
-vendor/firmware/wigig/wigig.ini
-vendor/lib64/libaoa.so
-vendor/lib64/libwigig_flashaccess.so
-vendor/lib64/libwigig_ftm_flows.so
-vendor/lib64/libwigig_pciaccess.so
-vendor/lib64/libwigig_utils.so
 vendor/lib64/vendor.qti.hardware.wigig.netperftuner@1.0.so
-vendor/lib64/vendor.qti.hardware.wigig.supptunnel@1.0.so
 
 # WLAN
 vendor/bin/athdiag
