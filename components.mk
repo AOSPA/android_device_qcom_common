@@ -125,7 +125,6 @@ include $(QCOM_COMMON_PATH)/system/wfd/qti-wfd.mk
 endif
 
 ifneq (,$(filter wlan, $(TARGET_COMMON_QTI_COMPONENTS)))
-include $(QCOM_COMMON_PATH)/system/wlan/qti-wlan.mk
 include $(QCOM_COMMON_PATH)/vendor/wlan/qti-wlan.mk
 endif
 
