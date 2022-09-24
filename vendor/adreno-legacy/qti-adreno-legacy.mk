@@ -12,6 +12,8 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
+# Current tag - LA.UM.10.6.2.r1-01600-89xx.0
+
 # Dependencies
 PRODUCT_PACKAGES += \
     vendor.qti.hardware.display.mapper@2.0.vendor
