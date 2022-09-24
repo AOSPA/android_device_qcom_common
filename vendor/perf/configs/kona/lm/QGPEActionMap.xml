@@ -1,0 +1,97 @@
+<!--
+/******************************************************************************
+  @file    QGPEActionMap.xml
+  @brief   Gaming Performance Engine Action Map
+
+  DESCRIPTION
+
+  ===========================================================================
+  Copyright (c) 2021 Qualcomm Technologies, Inc.
+  All Rights Reserved.
+  Confidential and Proprietary - Qualcomm Technologies, Inc.
+  ===========================================================================
+******************************************************************************/
+-->
+<QGPEActionProfiles>
+    <Group ActionCat="CPUFreqScaling">
+        <Opcode Resource="0x40C68000,0x40C68010,0x40C68020,0x40C680200" Name="SLB_BIG" Supported="Yes">
+            <Level Val="0" Pos="0"/>
+            <Level Val="2" Pos="1"/>
+            <Level Val="4" Pos="2"/>
+        </Opcode>
+        <Opcode Resource="0x40C68100,0x40C68110,0x40C68120,0x40C68130" Name="SLB_LITTLE" Supported="Yes">
+            <Level Val="0" Pos="0"/>
+            <Level Val="2" Pos="1"/>
+            <Level Val="4" Pos="2"/>
+        </Opcode>
+        <Opcode Resource="0x40C84000" Name="SCHED_USER_HINT" Supported="Yes">
+            <Level Val="120" Pos="0"/>
+        </Opcode>
+        <Opcode Resource="0x4144C100" Name="RTG_BOOST_FREQ" Supported="Yes">
+            <Level Val="860000" Pos="0"/>
+            <Level Val="1000000" Pos="1"/>
+            <Level Val="1200000" Pos="2"/>
+        </Opcode>
+        <Opcode Resource="0x40800200" Name="MIN_FREQ_CLUSTER_PRIME_CORE_0" Supported="Yes">
+            <Level Val="1000" Pos="0"/>
+        </Opcode>
+        <Opcode Resource="0x40800000" Name="MIN_FREQ_CLUSTER_BIG_CORE_0" Supported="Yes">
+            <Level Val="1000" Pos="0"/>
+        </Opcode>
+        <Opcode Resource="0x40800100" Name="MIN_FREQ_CLUSTER_LITTLE_CORE_0" Supported="Yes">
+            <Level Val="1000" Pos="0"/>
+        </Opcode>
+    </Group>
+    <Group ActionCat="Sched">
+        <Opcode Resource="0x40C78000" Name="SCHED_MIN_TASK_UTIL_FOR_COLOCATION" Supported="Yes">
+            <Level Val="0" Pos="0"/>
+        </Opcode>
+        <Opcode Resource="0x40C7C000" Name="SCHED_MIN_TASK_UTIL_FOR_BOOST" Supported="Yes">
+            <Level Val="0" Pos="0"/>
+        </Opcode>
+        <Opcode Resource="0x40C74000" Name="SCHED_BUSY_HYSTERSIS_CPU_MASK" Supported="Yes">
+            <Level Val="0xf0" Pos="0"/>
+        </Opcode>
+        <Opcode Resource="0x40C9C000" Name="SCHED_MANY_WAKE_UP" Supported="Yes">
+            <Level Val="4" Pos="0"/>
+        </Opcode>
+        <Opcode Resource="0x40C58000" Name="SCHED_GROUP_DOWNMIGRATE" Supported="Yes">
+        </Opcode>
+        <Opcode Resource="0x40C54000" Name="SCHED_GROUP_UPMIGRATE" Supported="Yes">
+        </Opcode>
+    </Group>
+    <Group ActionCat="SchedUtil">
+        <Opcode Resource="0x41448000" Name="SCHEDUTIL_DOWN_RATE_LIMIT_CLUSTER_BIG" Supported="Yes">
+            <Level Val="19000" Pos="0"/>
+        </Opcode>
+        <Opcode Resource="0x41448100" Name="SCHEDUTIL_DOWN_RATE_LIMIT_CLUSTER_LITTLE" Supported="Yes">
+            <Level Val="19000" Pos="0"/>
+        </Opcode>
+    </Group>
+    <Group ActionCat="Misc">
+        <Opcode Resource="0x41444000" Name="PL_BIG" Supported="Yes">
+            <Level Val="1" Pos="0"/>
+        </Opcode>
+        <Opcode Resource="0x41444200" Name="PL_BIGP" Supported="Yes">
+            <Level Val="1" Pos="0"/>
+        </Opcode>
+
+        <Opcode Resource="0x40414000" Name="LPM_IPI" Supported="Yes">
+            <Level Val="0" Pos="0"/>
+        </Opcode>
+        <Opcode Resource="0x40408000" Name="LPM_BIAS_HYST" Supported="Yes">
+            <Level Val="99" Pos="0"/>
+        </Opcode>
+        <Opcode Resource="0x41800000" Name="CPUBW_HWMON_MIN_FREQ" Supported="Yes">
+            <Level Val="30" Pos="0"/>
+        </Opcode>
+        <Opcode Resource="0x43000000" Name="CPUBW_HWMON_MIN_FREQ" Supported="Yes">
+            <Level Val="90" Pos="0"/>
+        </Opcode>
+        <Opcode Resource="0x43400000" Name="L3_MEMLAT_MIN_FREQ" Supported="Yes">
+            <Level Val="9000" Pos="0"/>
+        </Opcode>
+        <Opcode Resource="0x41000000" Name="MIN_ONLINE_CPU_CLUSTER_BIG" Supported="Yes">
+        </Opcode>
+    </Group>
+</QGPEActionProfiles>
