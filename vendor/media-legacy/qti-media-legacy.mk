@@ -1,4 +1,4 @@
-# Copyright (C) 2021 Paranoid Android
+# Copyright (C) 2022 Paranoid Android
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -11,6 +11,8 @@
 # WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 # See the License for the specific language governing permissions and
 # limitations under the License.
+
+# Current tag - LA.UM.9.12.r1-14100.02-SMxx50.QSSI12.0
 
 # Inherit configuration from the HAL.
 $(call inherit-product-if-exists, hardware/qcom/media/product.mk)
