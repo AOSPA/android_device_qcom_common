@@ -1,5 +1,5 @@
 #=============================================================================
-# Copyright (c) 2019-2021 Qualcomm Technologies, Inc.
+# Copyright (c) 2020-2021 Qualcomm Technologies, Inc.
 # All Rights Reserved.
 # Confidential and Proprietary - Qualcomm Technologies, Inc.
 #
@@ -30,28 +30,38 @@
 # ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 #=============================================================================
 
-if [[ "$(getprop vendor.post_boot.custom)" == "true" ]]; then
-  echo "Device overrides post_boot, skipping $0"
-  exit 0
+
+rev=`cat /sys/devices/soc0/revision`
+ddr_type=`od -An -tx /proc/device-tree/memory/ddr_device_type`
+ddr_type4="07"
+ddr_type5="08"
+
+# Let kernel know our image version/variant/crm_version
+if [ -f /sys/devices/soc0/select_image ]; then
+	image_version="10:"
+	image_version+=`getprop ro.build.id`
+	image_version+=":"
+	image_version+=`getprop ro.build.version.incremental`
+	image_variant=`getprop ro.product.name`
+	image_variant+="-"
+	image_variant+=`getprop ro.build.type`
+	oem_version=`getprop ro.build.version.codename`
+	echo 10 > /sys/devices/soc0/select_image
+	echo $image_version > /sys/devices/soc0/image_version
+	echo $image_variant > /sys/devices/soc0/image_variant
+	echo $oem_version > /sys/devices/soc0/image_crm_version
 fi
 
-if [ -f /sys/devices/soc0/soc_id ]; then
-	platformid=`cat /sys/devices/soc0/soc_id`
-fi
-
-case "$platformid" in
-    "415"|"439"|"456"|"501"|"502")
-	/vendor/bin/sh /vendor/bin/init.kernel.post_boot-lahaina.sh
+# Change console log level as per console config property
+console_config=`getprop persist.vendor.console.silent.config`
+case "$console_config" in
+	"1")
+		echo "Enable console config to $console_config"
+		echo 0 > /proc/sys/kernel/printk
 	;;
-
-    "450")
-	/vendor/bin/sh /vendor/bin/init.kernel.post_boot-shima.sh
-	;;
-    "475"|"499"|"487"|"488"|"498"|"497"|"515")
-	/vendor/bin/sh /vendor/bin/init.kernel.post_boot-yupik.sh
-	;;
-     *)
-	echo "***WARNING***: Invalid SoC ID\n\t No postboot settings applied!!\n"
+	*)
+		echo "Enable console config to $console_config"
 	;;
 esac
 
+setprop vendor.post_boot.parsed 1
