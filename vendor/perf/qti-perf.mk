@@ -70,5 +70,10 @@ PRODUCT_VENDOR_PROPERTIES += vendor.pasr.activemode.enabled=true
 endif
 endif
 
+ifeq ($(TARGET_KERNEL_VERSION),5.4)
+PRODUCT_PROPERTY_OVERRIDES += \
+    ro.vendor.perf.scroll_opt=true
+endif
+
 # Get non-open-source specific aspects
 $(call inherit-product-if-exists, vendor/qcom/common/vendor/perf/perf-vendor.mk)
