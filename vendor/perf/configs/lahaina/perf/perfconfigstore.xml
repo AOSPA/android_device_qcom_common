@@ -45,19 +45,16 @@ ________________________________________________________________________________
                 <Prop Name="vendor.perf.pfar.enable" Value="1" Target="shima" />
                 <Prop Name="vendor.perf.fps_switch.enable" Value="1" Target="shima" />
                 <Prop Name="ro.vendor.perf.gfl.tap_ignore_enable" Value="true" Target="shima" />
-                <Prop Name="ro.vendor.perf.wlc.heavygame" Value="true" Target="shima" />
                 <Prop Name="ro.vendor.perf.splh" Value="sw" Target="shima" />
                 <Prop Name="ro.vendor.perf.gplaf" Value="true" Target="shima" />
                 <Prop Name="vendor.debug.enable.memperfd" Value="true" Target="yupik" />
                 <Prop Name="vendor.perf.pfar.enable" Value="1" Target="yupik" />
                 <Prop Name="vendor.perf.fps_switch.enable" Value="1" Target="yupik" />
                 <Prop Name="ro.vendor.perf.gfl.tap_ignore_enable" Value="true" Target="yupik" />
-                <Prop Name="ro.vendor.perf.wlc.heavygame" Value="false" Target="yupik" />
                 <Prop Name="ro.vendor.perf.splh" Value="hw" Target="yupik" />
                 <Prop Name="ro.vendor.perf.gplaf" Value="true" Target="yupik" />
                 <Prop Name="ro.vendor.perf.enable.prekill" Value="false" Target="lahaina" />
                 <Prop Name="ro.vendor.perf.splh" Value="none" Target="lahaina" />
-                <Prop Name="ro.vendor.perf.gplaf" Value="false" Target="lahaina" />
 
                 <!--System Properties -->
                 <Prop Name="ro.lmk.kill_heaviest_task_dup" Value="true" />
@@ -78,7 +75,7 @@ ________________________________________________________________________________
                 <Prop Name="ro.lmk.enable_preferred_apps" Value="true" />
                 <Prop Name="vendor.appcompact.enable_app_compact" Value="true" />
                 <Prop Name="vendor.appcompact.full_compact_type" Value="2" />
-                <Prop Name="vendor.appcompact.some_compact_type" Value="4" />
+                <Prop Name="vendor.appcompact.some_compact_type" Value="2" />
                 <Prop Name="vendor.appcompact.compact_throttle_somesome" Value="5000" />
                 <Prop Name="vendor.appcompact.compact_throttle_somefull" Value="10000" />
                 <Prop Name="vendor.appcompact.compact_throttle_fullsome" Value="500" />
@@ -136,6 +133,9 @@ ________________________________________________________________________________
                 <Prop Name="vendor.perf.pfar2.boost_level" Value="1" Target="yupik"/>
                 <Prop Name="vendor.perf.pfar2.disable_pl" Value="1" Target="yupik"/>
                 <Prop Name="vendor.perf.pfar2.disable_core_ctl" Value="1" Target="yupik"/>
+                <Prop Name="ro.vendor.perf.qgpe" Value="true"/>
+                <Prop Name="ro.vendor.perf.qhf" Value="true" Target="lahaina"/>
+                <Prop Name="ro.vendor.perf.qape" Value="true" Target="lahaina"/>
 
     </PerfConfigs>
 </PerfConfigsStore>

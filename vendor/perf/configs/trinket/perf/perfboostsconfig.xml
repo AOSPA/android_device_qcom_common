@@ -67,8 +67,7 @@
         <!-- GO_HISPEED_LOAD_INTERACTIVE_CLUSTER_LITTLE resource opcode, value-->
         <!-- HISPEED_FREQ_INTERACTIVE_CLUSTER_BIG resource opcode, value-->
         <!-- HISPEED_FREQ_INTERACTIVE_CLUSTER_LITTLE resource opcode, value-->
-        <!-- SCHED DOWNMIGRATE resource opcode, value-->
-        <!-- SCHED UPMIGRATE resource opcode, value-->
+        <!-- SCHED_UP_DOWN MIGRATE resource opcode, value-->
 
         <!-- Type="5", Adaptive Launch boost -->
         <Config
@@ -76,7 +75,7 @@
             Resources="0x41000100, 0x4, 0x41000000, 0x4,
                        0x41440000, 0x28, 0x41440100, 0x28,
                        0x4143C000, 0xFFF, 0x4143C100, 0xFFF,
-                       0x40C20000, 0x28, 0x40C1C000, 0x32" />
+                       0x40CE0000, 0x00320028" />
 
     <!-- config_enableLaunchBoost6-->
        <!-- LPM_BIAS resource opcode, val ms-->
