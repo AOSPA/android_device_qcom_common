@@ -1,0 +1,251 @@
+<!--
+/******************************************************************************
+  @file   QGPE.xml
+  @brief  Gaming Performance Engine xml
+
+  DESCRIPTION
+      Each feature has an xml file to define the feature components
+
+  ===========================================================================
+  Copyright (c) 2021 Qualcomm Technologies, Inc.
+  All Rights Reserved.
+  Confidential and Proprietary - Qualcomm Technologies, Inc.
+  ===========================================================================
+******************************************************************************/
+-->
+<!--
+    Follows "Data goes into elements, metadata goes into attributes"
+ -->
+
+<Feature>
+    <Name>APEngine</Name>
+    <Libname>libapengine.so</Libname>
+    <Configs target="lito">
+        <STUTTER_SCALE>10</STUTTER_SCALE>
+        <THERMAL_MONITOR>0</THERMAL_MONITOR>
+        <THERMAL_MONITOR_RULES>GAME_OPT_TSENS_RULE1,GAME_OPT_TSENS_RULE2,GAME_OPT_TSENS_RULE3</THERMAL_MONITOR_RULES>
+        <!-- FPS threshold values in the order: Increase, Aggressive Increase, Decrease -->
+        <FPS_30_THRESHOLD>0.6, 1.0, 0.4</FPS_30_THRESHOLD>
+        <FPS_35_THRESHOLD>0.6, 1.0, 0.4</FPS_35_THRESHOLD>
+        <FPS_40_THRESHOLD>0.6, 1.0, 0.4</FPS_40_THRESHOLD>
+        <FPS_60_THRESHOLD>0.6, 1.0, 0.4</FPS_60_THRESHOLD>
+        <FPS_90_THRESHOLD>2.0, 5.0, 1.0</FPS_90_THRESHOLD>
+        <FPS_120_THRESHOLD>2.0, 5.0, 1.0</FPS_120_THRESHOLD>
+        <FPS_144_THRESHOLD>2.0, 5.0, 1.0</FPS_144_THRESHOLD>
+        <GROUP_UPMIGRATE_PATH>/proc/sys/kernel/sched_group_upmigrate</GROUP_UPMIGRATE_PATH>
+        <GROUP_DOWNMIGRATE_PATH>/proc/sys/kernel/sched_group_downmigrate</GROUP_DOWNMIGRATE_PATH>
+        <BIG_CLUSTER_ID>6,7</BIG_CLUSTER_ID>
+    </Configs>
+    <Configs target="lagoon">
+        <STUTTER_SCALE>10</STUTTER_SCALE>
+        <THERMAL_MONITOR>0</THERMAL_MONITOR>
+        <THERMAL_MONITOR_RULES>GAME_OPT_TSENS_RULE1,GAME_OPT_TSENS_RULE2,GAME_OPT_TSENS_RULE3</THERMAL_MONITOR_RULES>
+        <!-- FPS threshold values in the order: Increase, Aggressive Increase, Decrease -->
+        <FPS_30_THRESHOLD>0.6, 1.0, 0.4</FPS_30_THRESHOLD>
+        <FPS_35_THRESHOLD>0.6, 1.0, 0.4</FPS_35_THRESHOLD>
+        <FPS_40_THRESHOLD>0.6, 1.0, 0.4</FPS_40_THRESHOLD>
+        <FPS_60_THRESHOLD>0.6, 1.0, 0.4</FPS_60_THRESHOLD>
+        <FPS_90_THRESHOLD>2.0, 5.0, 1.0</FPS_90_THRESHOLD>
+        <FPS_120_THRESHOLD>2.0, 5.0, 1.0</FPS_120_THRESHOLD>
+        <FPS_144_THRESHOLD>2.0, 5.0, 1.0</FPS_144_THRESHOLD>
+        <GROUP_UPMIGRATE_PATH>/proc/sys/kernel/sched_group_upmigrate</GROUP_UPMIGRATE_PATH>
+        <GROUP_DOWNMIGRATE_PATH>/proc/sys/kernel/sched_group_downmigrate</GROUP_DOWNMIGRATE_PATH>
+        <BIG_CLUSTER_ID>6,7</BIG_CLUSTER_ID>
+    </Configs>
+    <Profiles>
+        <Profile target="lito">
+            <!-- Colocation v3 1 GHz, Predictive Load 1, Sched Many Wake Up Threshold 4 ,LPM IPI Prediction 0 -->
+            <PROACTIVE_DEFAULT>
+                0x4144C100,860000,0x41444000,1,0x41444200,1,0x40C9C000,4,0x40414000,0
+            </PROACTIVE_DEFAULT>
+            <PROACTIVE_SKEW2>
+                0x4144C100,860000,0x41444000,1,0x41444200,1,0x40C9C000,4,0x40414000,0
+            </PROACTIVE_SKEW2>
+        </Profile>
+
+        <Profile target="lagoon">
+            <!-- Colocation v3 1 GHz, Predictive Load 1, Sched Many Wake Up Threshold 4 ,LPM IPI Prediction 0 -->
+            <PROACTIVE_DEFAULT>
+                0x4144C100,860000,0x41444000,1,0x41444200,1,0x40C9C000,4,0x40414000,0
+            </PROACTIVE_DEFAULT>
+            <PROACTIVE_SKEW2>
+                0x4144C100,860000,0x41444000,1,0x41444200,1,0x40C9C000,4,0x40414000,0
+            </PROACTIVE_SKEW2>
+        </Profile>
+    </Profiles>
+
+    <Meters>
+        <SamplesRequired>4</SamplesRequired>
+
+        <Meter>
+            <Name>Fps</Name>
+            <Triggers>
+                <Trigger>
+                   <Primary>true</Primary>
+                   <AsyncId>VENDOR_HINT_ACTIVITY_START</AsyncId>
+                   <AsyncType>-1</AsyncType>
+                </Trigger>
+
+                <Trigger>
+                    <Primary>true</Primary>
+                    <AsyncId>VENDOR_HINT_ACTIVITY_PAUSE</AsyncId>
+                    <AsyncType>-1</AsyncType>
+                </Trigger>
+
+                <Trigger>
+                    <Primary>true</Primary>
+                    <AsyncId>VENDOR_HINT_ACTIVITY_RESUME</AsyncId>
+                    <AsyncType>-1</AsyncType>
+                </Trigger>
+
+                <Trigger>
+                   <Primary>true</Primary>
+                   <AsyncId>VENDOR_HINT_ACTIVITY_STOP</AsyncId>
+                   <AsyncType>-1</AsyncType>
+                </Trigger>
+
+            </Triggers>
+
+            <Configs>
+                <FPS_NODE>/sys/class/drm/sde-crtc-0/measured_fps</FPS_NODE>
+                <FPS_PERIODICITY_NODE>/sys/class/drm/sde-crtc-0/fps_periodicity_ms</FPS_PERIODICITY_NODE>
+            </Configs>
+            <Samples>100</Samples>
+        </Meter>
+
+        <Meter>
+            <Name>SchedParams</Name>
+            <Triggers>
+                <Trigger>
+                   <Primary>true</Primary>
+                   <AsyncId>VENDOR_HINT_ACTIVITY_START</AsyncId>
+                   <AsyncType>-1</AsyncType>
+                </Trigger>
+
+                <Trigger>
+                    <Primary>true</Primary>
+                    <AsyncId>VENDOR_HINT_ACTIVITY_PAUSE</AsyncId>
+                    <AsyncType>-1</AsyncType>
+                </Trigger>
+
+                <Trigger>
+                    <Primary>true</Primary>
+                    <AsyncId>VENDOR_HINT_ACTIVITY_RESUME</AsyncId>
+                    <AsyncType>-1</AsyncType>
+                </Trigger>
+
+                <Trigger>
+                   <Primary>true</Primary>
+                   <AsyncId>VENDOR_HINT_ACTIVITY_STOP</AsyncId>
+                   <AsyncType>-1</AsyncType>
+                </Trigger>
+            </Triggers>
+            <Samples>100</Samples>
+        </Meter>
+
+        <Meter>
+            <Name>Gpu</Name>
+            <Triggers>
+                <Trigger>
+                   <Primary>true</Primary>
+                   <AsyncId>VENDOR_HINT_ACTIVITY_START</AsyncId>
+                   <AsyncType>-1</AsyncType>
+                </Trigger>
+
+                <Trigger>
+                    <Primary>true</Primary>
+                    <AsyncId>VENDOR_HINT_ACTIVITY_PAUSE</AsyncId>
+                    <AsyncType>-1</AsyncType>
+                </Trigger>
+
+                <Trigger>
+                    <Primary>true</Primary>
+                    <AsyncId>VENDOR_HINT_ACTIVITY_RESUME</AsyncId>
+                    <AsyncType>-1</AsyncType>
+                </Trigger>
+
+                <Trigger>
+                   <Primary>true</Primary>
+                   <AsyncId>VENDOR_HINT_ACTIVITY_STOP</AsyncId>
+                   <AsyncType>-1</AsyncType>
+                </Trigger>
+
+
+            </Triggers>
+
+            <Configs>
+                <GPU_AVAILABLE_FREQUENCIES>/sys/class/kgsl/kgsl-3d0/gpu_available_frequencies</GPU_AVAILABLE_FREQUENCIES>
+                <GPU_CLOCK_STATS>/sys/class/kgsl/kgsl-3d0/gpu_clock_stats</GPU_CLOCK_STATS>
+                <GPU_CLK>/sys/class/kgsl/kgsl-3d0/gpuclk</GPU_CLK>
+                <GPU_BUSY_PERCENTAGE>/sys/class/kgsl/kgsl-3d0/gpu_busy_percentage</GPU_BUSY_PERCENTAGE>
+            </Configs>
+            <Samples>100</Samples>
+        </Meter>
+    </Meters>
+
+    <Triggers>
+        <Trigger>
+           <Primary>true</Primary>
+           <AsyncId>VENDOR_HINT_THERMAL_UPDATE</AsyncId>
+           <AsyncType>-1</AsyncType>
+        </Trigger>
+        <Trigger>
+           <Primary>true</Primary>
+           <AsyncId>VENDOR_HINT_APP_WORKLOAD_TYPE</AsyncId>
+           <AsyncType>1</AsyncType>
+        </Trigger>
+
+        <Trigger>
+           <Primary>true</Primary>
+           <AsyncId>VENDOR_HINT_HEADROOM_REGULATOR</AsyncId>
+           <AsyncType>-1</AsyncType>
+        </Trigger>
+
+        <Trigger>
+           <Primary>true</Primary>
+           <AsyncId>VENDOR_HINT_TAP_EVENT</AsyncId>
+           <AsyncType>-1</AsyncType>
+        </Trigger>
+        <Trigger>
+           <Primary>true</Primary>
+           <AsyncId>VENDOR_HINT_SENSOR_DATA</AsyncId>
+           <AsyncType>1</AsyncType>
+        </Trigger>
+        <Trigger>
+           <Primary>true</Primary>
+           <AsyncId>VENDOR_HINT_TOGGLE_GAMEOPT</AsyncId>
+           <AsyncType>1</AsyncType>
+        </Trigger>
+
+        <Trigger>
+           <Primary>true</Primary>
+           <AsyncId>VENDOR_HINT_PICARD_TOP_APP</AsyncId>
+           <AsyncType>1</AsyncType>
+        </Trigger>
+        <Trigger>
+           <Primary>true</Primary>
+           <AsyncId>VENDOR_HINT_PICARD_RENDER_RATE</AsyncId>
+           <AsyncType>1</AsyncType>
+        </Trigger>
+        <Trigger>
+           <Primary>true</Primary>
+           <AsyncId>VENDOR_HINT_PICARD_LOW_LAT</AsyncId>
+           <AsyncType>1</AsyncType>
+        </Trigger>
+        <Trigger>
+           <Primary>true</Primary>
+           <AsyncId>VENDOR_HINT_PICARD_HIGH_CPUUTIL</AsyncId>
+           <AsyncType>1</AsyncType>
+        </Trigger>
+        <Trigger>
+           <Primary>true</Primary>
+           <AsyncId>VENDOR_HINT_PICARD_LOAD_CHANGED</AsyncId>
+           <AsyncType>1</AsyncType>
+        </Trigger>
+    </Triggers>
+    <IgnoredApps>
+        <App>com.google.android.gms</App>
+        <App>com.android.vending</App>
+        <App>com.google.android.projection.gearhead</App>
+    </IgnoredApps>
+</Feature>
