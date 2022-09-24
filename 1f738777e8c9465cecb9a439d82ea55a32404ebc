@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "7ee83e74_032651da",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000012
+      },
+      "writtenOn": "2022-09-24T09:45:33Z",
+      "side": 1,
+      "message": "Supposedly this is fixed by https://git.codelinaro.org/clo/la/platform/frameworks/base/-/commit/7d7ab89f2859642edf2fbe24b91e4d153a6ea88e",
+      "revId": "1f738777e8c9465cecb9a439d82ea55a32404ebc",
+      "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
+    }
+  ]
+}
