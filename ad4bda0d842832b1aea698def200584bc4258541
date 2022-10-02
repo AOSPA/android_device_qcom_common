@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "d19821d5_bd1eab68",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000465
+      },
+      "writtenOn": "2022-10-02T22:03:13Z",
+      "side": 1,
+      "message": "https://github.com/AOSPA/android_kernel_build/blob/b55901761172cb020b3e1ce6a09188e0c6aa7823/kernel_definitions.mk#L190 sets TARGET_PREBUILT_KERNEL before it reaches the TARGET_PREBUILT_KERNEL guard of f7b61b275389c205f62f9c902764191f8c64516b for me, therefore the dtbo target is missing and the build fails.",
+      "revId": "ad4bda0d842832b1aea698def200584bc4258541",
+      "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
+    }
+  ]
+}
