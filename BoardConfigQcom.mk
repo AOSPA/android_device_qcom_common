@@ -44,3 +44,6 @@ endif # Exclude QCOM SEPolicy
 else
 include device/qcom/sepolicy-legacy/SEPolicy.mk
 endif
+
+# Hacks
+BUILD_BROKEN_ELF_PREBUILT_PRODUCT_COPY_FILES := true
