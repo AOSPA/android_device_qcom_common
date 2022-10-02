@@ -166,6 +166,7 @@ DEVICE_FRAMEWORK_COMPATIBILITY_MATRIX_FILE += \
 endif
 
 # Components
+BUILD_BROKEN_ELF_PREBUILT_PRODUCT_COPY_FILES := true
 include $(QCOM_COMMON_PATH)/components.mk
 
 # Filesystem
