@@ -16,6 +16,23 @@
       "message": "https://github.com/gotenksIN/proprietary_vendor_qcom_common/commit/d33a0ac4427ee10fd8f05f90834ce6610a32ba27",
       "revId": "73d7268bcf6bfd2d500541ec430bf50bb161ba5b",
       "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "e982dc65_fe33a067",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000488
+      },
+      "writtenOn": "2022-10-03T04:53:45Z",
+      "side": 1,
+      "message": "LGTM",
+      "revId": "73d7268bcf6bfd2d500541ec430bf50bb161ba5b",
+      "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
     }
   ]
 }
