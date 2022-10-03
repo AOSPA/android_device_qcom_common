@@ -23,13 +23,13 @@ PRODUCT_COPY_FILES += \
 # Disable IOP HAL for select platforms.
 ifeq ($(call is-board-platform-in-list, msm8937 msm8953 msm8998 qcs605 sdm660 sdm710),true)
 PRODUCT_COPY_FILES += \
-    $(QCOM_COMMON_PATH)/vendor/perf/vendor.qti.hardware.iop@2.0-service-disable.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/vendor.qti.hardware.iop@2.0-service-disable.rc
+    $(QCOM_COMMON_PATH)/vendor/perf/etc/vendor.qti.hardware.iop@2.0-service-disable.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/vendor.qti.hardware.iop@2.0-service-disable.rc
 endif
 
-# Disable the poweropt service for <5.4 platforms.
-ifeq (,$(filter 5.4 5.10, $(TARGET_KERNEL_VERSION)))
+# Enable the poweropt service for >5.4 platforms.
+ifneq (,$(filter 5.4 5.10, $(TARGET_KERNEL_VERSION)))
 PRODUCT_COPY_FILES += \
-    $(QCOM_COMMON_PATH)/vendor/perf/poweropt-service-disable.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/poweropt-service-disable.rc
+    $(QCOM_COMMON_PATH)/vendor/perf/etc/poweropt-service.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/poweropt-service.rc
 endif
 
 # Packages
