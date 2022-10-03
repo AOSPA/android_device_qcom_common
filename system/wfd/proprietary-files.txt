@@ -1,3 +1,4 @@
+system/framework/WfdCommon.jar
 system_ext/bin/wfdservice
 system_ext/bin/wfdservice64
 system_ext/etc/init/wfdservice.rc
@@ -21,10 +22,10 @@ system_ext/lib/libwfdrtsp.so
 system_ext/lib/libwfdservice.so
 system_ext/lib/libwfdsinksm.so
 system_ext/lib/libwfduibcinterface.so
-system_ext/lib/libwfduibcsinkinterface.so
 system_ext/lib/libwfduibcsink.so
-system_ext/lib/libwfduibcsrcinterface.so
+system_ext/lib/libwfduibcsinkinterface.so
 system_ext/lib/libwfduibcsrc.so
+system_ext/lib/libwfduibcsrcinterface.so
 system_ext/lib/vendor.qti.hardware.wifidisplaysession@1.0.so
 system_ext/lib64/libmmrtpdecoder.so
 system_ext/lib64/libmmrtpencoder.so
@@ -41,10 +42,9 @@ system_ext/lib64/libwfdrtsp.so
 system_ext/lib64/libwfdservice.so
 system_ext/lib64/libwfdsinksm.so
 system_ext/lib64/libwfduibcinterface.so
-system_ext/lib64/libwfduibcsinkinterface.so
 system_ext/lib64/libwfduibcsink.so
-system_ext/lib64/libwfduibcsrcinterface.so
+system_ext/lib64/libwfduibcsinkinterface.so
 system_ext/lib64/libwfduibcsrc.so
+system_ext/lib64/libwfduibcsrcinterface.so
 system_ext/lib64/vendor.qti.hardware.wifidisplaysession@1.0.so
 system_ext/priv-app/WfdService/WfdService.apk
-system/framework/WfdCommon.jar
