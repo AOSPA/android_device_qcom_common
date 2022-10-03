@@ -7,7 +7,6 @@ vendor/bin/hw/vendor.qti.psiclient@1.0-service
 vendor/bin/msm_irqbalance
 vendor/bin/poweropt-service
 vendor/bin/vendor.qti.qspmhal@1.0-service
-vendor/etc/init/poweropt-service.rc
 vendor/etc/init/vendor.qti.hardware.iop@2.0-service.rc
 vendor/etc/init/vendor.qti.hardware.perf@2.2-service.rc
 vendor/etc/init/vendor.qti.hardware.servicetracker@1.2-service.rc
