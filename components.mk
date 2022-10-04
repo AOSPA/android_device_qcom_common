@@ -23,7 +23,7 @@ TARGET_COMMON_QTI_COMPONENTS := \
     display \
     gps \
     init \
-    nq-nfc \
+    nfc \
     overlay \
     perf \
     telephony \
@@ -124,8 +124,8 @@ include $(QCOM_COMMON_PATH)/system/display/qti-display.mk
 include $(QCOM_COMMON_PATH)/vendor/display/qti-display.mk
 endif
 
-ifneq (,$(filter nq-nfc, $(TARGET_COMMON_QTI_COMPONENTS)))
-include $(QCOM_COMMON_PATH)/vendor/nq-nfc/qti-nq-nfc.mk
+ifneq (,$(filter nfc, $(TARGET_COMMON_QTI_COMPONENTS)))
+include $(QCOM_COMMON_PATH)/vendor/nfc/qti-nfc.mk
 endif
 
 ifneq (,$(filter wfd, $(TARGET_COMMON_QTI_COMPONENTS)))
