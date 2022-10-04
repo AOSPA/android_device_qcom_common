@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "f36127eb_b86498e0",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 15
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000012
+      },
+      "writtenOn": "2022-10-04T03:08:32Z",
+      "side": 1,
+      "message": "I don\u0027t think the common configs should be added to taro",
+      "revId": "2d72e173c9c9d38fe98962b34f97c0ac19156289",
+      "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
+    }
+  ]
+}
