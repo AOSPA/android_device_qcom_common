@@ -16,10 +16,16 @@
 # limitations under the License.
 #
 
+# If we're being sourced by the common script that we called,
+# stop right here. No need to go down the rabbit hole.
+if [ "${BASH_SOURCE[0]}" != "${0}" ]; then
+    return
+fi
+
 set -e
 
 # Required!
-export COMPONENT=nq-nfc
+export COMPONENT=nfc
 export VENDOR=qcom/common/vendor
 
-"../setup-makefiles.sh" "$@"
+"../extract-files.sh" "$@"
