@@ -12,6 +12,9 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
+PRODUCT_SOONG_NAMESPACES += \
+    device/qcom/common/vendor/media
+
 # Inherit configuration from the HAL.
 $(call inherit-product-if-exists, hardware/qcom/media/product.mk)
 
