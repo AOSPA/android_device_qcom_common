@@ -16,6 +16,24 @@
       "message": "init.aospa.perf.rc",
       "revId": "f401ba705eff1ad63cdca5b1fde5540f0571d4d6",
       "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "4d73e50d_88727548",
+        "filename": "vendor/init/init.qcom.rc",
+        "patchSetId": 6
+      },
+      "lineNbr": 361,
+      "author": {
+        "id": 1000737
+      },
+      "writtenOn": "2022-10-08T01:20:34Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "fce88e28_5382cfe3",
+      "revId": "f401ba705eff1ad63cdca5b1fde5540f0571d4d6",
+      "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
     }
   ]
 }
