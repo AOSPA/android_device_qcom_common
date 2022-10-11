@@ -34,6 +34,40 @@
       "parentUuid": "44b6b1bb_48e3f1da",
       "revId": "9a59f6f3012efe303444dc91c54ce5fc020e77ee",
       "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "33134296_0eeb9f7e",
+        "filename": "vendor/init/init.qti.kernel.rc",
+        "patchSetId": 9
+      },
+      "lineNbr": 74,
+      "author": {
+        "id": 1000012
+      },
+      "writtenOn": "2022-10-11T01:05:42Z",
+      "side": 1,
+      "message": "where is this file?",
+      "revId": "9a59f6f3012efe303444dc91c54ce5fc020e77ee",
+      "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "b3a683fb_1f605f35",
+        "filename": "vendor/init/ueventd.qcom.rc",
+        "patchSetId": 9
+      },
+      "lineNbr": 259,
+      "author": {
+        "id": 1000012
+      },
+      "writtenOn": "2022-10-11T01:05:42Z",
+      "side": 1,
+      "message": "may need",
+      "revId": "9a59f6f3012efe303444dc91c54ce5fc020e77ee",
+      "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
     }
   ]
 }

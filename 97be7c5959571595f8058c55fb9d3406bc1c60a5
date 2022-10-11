@@ -1,0 +1,72 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "75e40ba6_635afced",
+        "filename": "vendor/init/init.qcom.rc",
+        "patchSetId": 9
+      },
+      "lineNbr": 83,
+      "author": {
+        "id": 1000012
+      },
+      "writtenOn": "2022-10-11T01:05:42Z",
+      "side": 0,
+      "message": "do we need?",
+      "revId": "97be7c5959571595f8058c55fb9d3406bc1c60a5",
+      "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "9262eb35_a8d64b9f",
+        "filename": "vendor/init/init.qcom.rc",
+        "patchSetId": 9
+      },
+      "lineNbr": 329,
+      "author": {
+        "id": 1000012
+      },
+      "writtenOn": "2022-10-11T01:05:42Z",
+      "side": 0,
+      "message": "are these elsewhere on all targets?",
+      "revId": "97be7c5959571595f8058c55fb9d3406bc1c60a5",
+      "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "49087741_1c92f24e",
+        "filename": "vendor/init/init.qti.kernel.rc",
+        "patchSetId": 9
+      },
+      "lineNbr": 35,
+      "author": {
+        "id": 1000012
+      },
+      "writtenOn": "2022-10-11T01:05:42Z",
+      "side": 0,
+      "message": "we may need this on some targets right?",
+      "revId": "97be7c5959571595f8058c55fb9d3406bc1c60a5",
+      "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "4ee96bd8_d1b3b9b7",
+        "filename": "vendor/init/ueventd.qcom.rc",
+        "patchSetId": 9
+      },
+      "lineNbr": 193,
+      "author": {
+        "id": 1000012
+      },
+      "writtenOn": "2022-10-11T01:05:42Z",
+      "side": 0,
+      "message": "may need",
+      "revId": "97be7c5959571595f8058c55fb9d3406bc1c60a5",
+      "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
+    }
+  ]
+}
