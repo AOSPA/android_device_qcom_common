@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "7084d32e_64e4ab69",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 3
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000012
+      },
+      "writtenOn": "2022-10-11T01:06:31Z",
+      "side": 1,
+      "message": "would we be better off having these centrally?  generally there\u0027s only one or two sources at a time right?",
+      "revId": "7d81684675dbf89f96059f2882eeebd25864cd3d",
+      "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
+    }
+  ]
+}
