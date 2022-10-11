@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "44b6b1bb_48e3f1da",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 9
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000737
+      },
+      "writtenOn": "2022-10-11T00:11:59Z",
+      "side": 1,
+      "message": "Don\u0027t change init.qcom.post_boot all at once, it affects too much at once. It is better to compare and make changes calmly.",
+      "revId": "9a59f6f3012efe303444dc91c54ce5fc020e77ee",
+      "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
+    }
+  ]
+}
