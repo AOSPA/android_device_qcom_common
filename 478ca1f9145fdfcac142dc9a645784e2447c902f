@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "0cd38ab1_c575d2d5",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000012
+      },
+      "writtenOn": "2022-10-11T00:59:03Z",
+      "side": 1,
+      "message": "why are we copying this file at all?  isn\u0027t it just for factory testing?",
+      "revId": "478ca1f9145fdfcac142dc9a645784e2447c902f",
+      "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
+    }
+  ]
+}
