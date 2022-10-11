@@ -16,6 +16,24 @@
       "message": "Don\u0027t change init.qcom.post_boot all at once, it affects too much at once. It is better to compare and make changes calmly.",
       "revId": "9a59f6f3012efe303444dc91c54ce5fc020e77ee",
       "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "c2909093_6eabb59c",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 9
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000012
+      },
+      "writtenOn": "2022-10-11T01:01:25Z",
+      "side": 1,
+      "message": "there\u0027s no value in the changes in that file.  it\u0027s not used on 5.4 and later.  none of the changes are recent.",
+      "parentUuid": "44b6b1bb_48e3f1da",
+      "revId": "9a59f6f3012efe303444dc91c54ce5fc020e77ee",
+      "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
     }
   ]
 }
