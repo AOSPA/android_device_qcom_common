@@ -34,6 +34,24 @@
       "parentUuid": "fce88e28_5382cfe3",
       "revId": "f401ba705eff1ad63cdca5b1fde5540f0571d4d6",
       "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "7d3c2e21_0275e63d",
+        "filename": "vendor/init/init.qcom.rc",
+        "patchSetId": 6
+      },
+      "lineNbr": 361,
+      "author": {
+        "id": 1000012
+      },
+      "writtenOn": "2022-10-11T01:02:07Z",
+      "side": 1,
+      "message": "disagree with this.  restore it and if we want to change it, we override in our file.",
+      "parentUuid": "4d73e50d_88727548",
+      "revId": "f401ba705eff1ad63cdca5b1fde5540f0571d4d6",
+      "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
     }
   ]
 }
