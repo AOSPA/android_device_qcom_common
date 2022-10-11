@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "92b2e8aa_3203f2b8",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000012
+      },
+      "writtenOn": "2022-10-11T01:08:38Z",
+      "side": 1,
+      "message": "what repo is this from?  is it actually used by Qualcomm?  seems like they should only be using the qssi device tree since it\u0027s system so we could probably copy from there directly.",
+      "revId": "f48ab95795e11d12e01ca5dd6d6ef9cc528a27d9",
+      "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
+    }
+  ]
+}
