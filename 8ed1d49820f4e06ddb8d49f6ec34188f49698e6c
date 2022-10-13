@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "8405d1c8_1d71f7be",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000012
+      },
+      "writtenOn": "2022-10-13T00:02:37Z",
+      "side": 1,
+      "message": "shouldn\u0027t really apply to any of our devices, all should be msm",
+      "revId": "8ed1d49820f4e06ddb8d49f6ec34188f49698e6c",
+      "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
+    }
+  ]
+}
