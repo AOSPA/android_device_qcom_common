@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "ea24738f_4ffd0c57",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000012
+      },
+      "writtenOn": "2022-10-13T00:04:11Z",
+      "side": 1,
+      "message": "isn\u0027t this dependent on reverting https://github.com/AOSPA/android_device_qcom_common/commit/92779f89823acc3b0a599e79f9929d2fb6e1b55f",
+      "revId": "3811ec339237771a8d6ef8617c1215ce7f29ce3c",
+      "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
+    }
+  ]
+}
