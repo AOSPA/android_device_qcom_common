@@ -16,6 +16,24 @@
       "message": "I\u0027m confused on what belongs in components vs sepolicy vendor.  please explain.",
       "revId": "e7116706f1710bd091c7c2261ee0558bb39e777a",
       "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "19ced15c_d37b2ee1",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 3
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000012
+      },
+      "writtenOn": "2022-10-13T00:13:49Z",
+      "side": 1,
+      "message": "really meant what goes in qcom common sepolicy vs qcom sepolicy vndr",
+      "parentUuid": "6470cb62_cea0ed67",
+      "revId": "e7116706f1710bd091c7c2261ee0558bb39e777a",
+      "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
     }
   ]
 }
