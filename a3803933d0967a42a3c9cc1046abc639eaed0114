@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "4219ca09_360707c8",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000012
+      },
+      "writtenOn": "2022-10-13T22:50:13Z",
+      "side": 1,
+      "message": "I really do not think this version of the xml is used.  I think only device/qcom/qssi is used, so we may want to just inherit that.",
+      "revId": "a3803933d0967a42a3c9cc1046abc639eaed0114",
+      "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
+    }
+  ]
+}
