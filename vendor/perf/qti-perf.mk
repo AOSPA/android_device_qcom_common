@@ -51,8 +51,9 @@ endif
 PRODUCT_VENDOR_PROPERTIES += \
     ro.vendor.perf-hal.ver=2.2 \
     ro.vendor.extension_library=libqti-perfd-client.so \
-    vendor.power.pasr.enabled=true \
-    ro.vendor.qspm.enable=true
+    ro.vendor.perf.scroll_opt=true \
+    ro.vendor.qspm.enable=true \
+    vendor.power.pasr.enabled=true
 
 ifeq ($(call is-board-platform-in-list, kona lahaina parrot taro),true)
 PRODUCT_VENDOR_PROPERTIES += \
@@ -68,11 +69,6 @@ PRODUCT_VENDOR_PROPERTIES += vendor.pasr.activemode.enabled=false
 else
 PRODUCT_VENDOR_PROPERTIES += vendor.pasr.activemode.enabled=true
 endif
-endif
-
-ifeq ($(TARGET_KERNEL_VERSION),5.4)
-PRODUCT_PROPERTY_OVERRIDES += \
-    ro.vendor.perf.scroll_opt=true
 endif
 
 # Get non-open-source specific aspects
