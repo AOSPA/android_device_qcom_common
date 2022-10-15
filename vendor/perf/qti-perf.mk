@@ -54,7 +54,7 @@ PRODUCT_VENDOR_PROPERTIES += \
     vendor.power.pasr.enabled=true \
     ro.vendor.qspm.enable=true
 
-ifeq ($(call is-board-platform-in-list, kona lahaina taro),true)
+ifeq ($(call is-board-platform-in-list, kona lahaina parrot taro),true)
 PRODUCT_VENDOR_PROPERTIES += \
     ro.vendor.beluga.p=0x3 \
     ro.vendor.beluga.c=0x4800 \
