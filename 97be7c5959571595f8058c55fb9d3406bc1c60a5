@@ -54,6 +54,23 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "dc53ab07_c329091d",
+        "filename": "vendor/init/ueventd.qcom.rc",
+        "patchSetId": 9
+      },
+      "lineNbr": 191,
+      "author": {
+        "id": 1000012
+      },
+      "writtenOn": "2022-10-16T03:39:33Z",
+      "side": 0,
+      "message": "should probably leave this as is",
+      "revId": "97be7c5959571595f8058c55fb9d3406bc1c60a5",
+      "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "4ee96bd8_d1b3b9b7",
         "filename": "vendor/init/ueventd.qcom.rc",
         "patchSetId": 9
