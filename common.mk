@@ -37,6 +37,7 @@ QCOM_BOARD_PLATFORMS += \
     msm8998 \
     msmnile \
     parrot \
+    qssi \
     sdm660 \
     sdm710 \
     sdm845 \
