@@ -1,6 +1,0 @@
-libupdateprof.qti.so
-libthermalclient.qti.so
-libdiag_system.qti.so
-libqape.qti.so
-libqesdk_ndk_platform.qti.so
-liblistenjni.qti.so
