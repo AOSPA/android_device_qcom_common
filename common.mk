@@ -74,7 +74,9 @@ MASTER_SIDE_CP_TARGET_LIST := \
     sdm845
 
 # Include QCOM board utilities.
-include $(QCOM_COMMON_PATH)/utils.mk
+ifeq ($(TARGET_FWK_SUPPORTS_FULL_VALUEADDS),true)
+include vendor/qcom/opensource/core-utils/build/utils.mk
+endif
 
 # Kernel Families
 5_10_FAMILY := \
