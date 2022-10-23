@@ -20,6 +20,24 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "cbc237b2_bc282e37",
+        "filename": "vendor/init/init.qcom.rc",
+        "patchSetId": 9
+      },
+      "lineNbr": 83,
+      "author": {
+        "id": 1000012
+      },
+      "writtenOn": "2022-10-23T07:39:49Z",
+      "side": 0,
+      "message": "from https://source.codeaurora.org/quic/la/device/qcom/common/commit/rootdir/etc/init.qcom.rc?h\u003dqcom-devices.lnx.6.0.r3-rel\u0026id\u003d6cbb4582f2399b380de10735c0a9e61492bc7a4c",
+      "parentUuid": "75e40ba6_635afced",
+      "revId": "97be7c5959571595f8058c55fb9d3406bc1c60a5",
+      "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "9262eb35_a8d64b9f",
         "filename": "vendor/init/init.qcom.rc",
         "patchSetId": 9
@@ -31,6 +49,24 @@
       "writtenOn": "2022-10-11T01:05:42Z",
       "side": 0,
       "message": "are these elsewhere on all targets?",
+      "revId": "97be7c5959571595f8058c55fb9d3406bc1c60a5",
+      "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "721a4eea_15ede9a1",
+        "filename": "vendor/init/init.qcom.rc",
+        "patchSetId": 9
+      },
+      "lineNbr": 329,
+      "author": {
+        "id": 1000012
+      },
+      "writtenOn": "2022-10-23T07:39:49Z",
+      "side": 0,
+      "message": "nope, let\u0027s leave em here for now.",
+      "parentUuid": "9262eb35_a8d64b9f",
       "revId": "97be7c5959571595f8058c55fb9d3406bc1c60a5",
       "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
     },
@@ -69,6 +105,24 @@
       "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "6082ef3b_fbcb7c96",
+        "filename": "vendor/init/ueventd.qcom.rc",
+        "patchSetId": 9
+      },
+      "lineNbr": 191,
+      "author": {
+        "id": 1000012
+      },
+      "writtenOn": "2022-10-23T07:39:49Z",
+      "side": 0,
+      "message": "https://source.codeaurora.org/quic/la/device/qcom/common/commit/?h\u003dqcom-devices.lnx.6.0.r3-rel\u0026id\u003d697df16c4f10796d354d947ef1b2ce3ac1c8a0a4",
+      "parentUuid": "dc53ab07_c329091d",
+      "revId": "97be7c5959571595f8058c55fb9d3406bc1c60a5",
+      "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "4ee96bd8_d1b3b9b7",
@@ -82,6 +136,24 @@
       "writtenOn": "2022-10-11T01:05:42Z",
       "side": 0,
       "message": "may need",
+      "revId": "97be7c5959571595f8058c55fb9d3406bc1c60a5",
+      "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "ca479e52_c803b922",
+        "filename": "vendor/init/ueventd.qcom.rc",
+        "patchSetId": 9
+      },
+      "lineNbr": 193,
+      "author": {
+        "id": 1000012
+      },
+      "writtenOn": "2022-10-23T07:39:49Z",
+      "side": 0,
+      "message": "missing https://source.codeaurora.org/quic/la/device/qcom/common/commit/?h\u003dqcom-devices.lnx.6.0.r3-rel\u0026id\u003d8dba47ce7eed62445c042247332d386d26f243e2",
+      "parentUuid": "4ee96bd8_d1b3b9b7",
       "revId": "97be7c5959571595f8058c55fb9d3406bc1c60a5",
       "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
     }

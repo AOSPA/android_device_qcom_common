@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "c370b0da_480edde0",
+        "filename": "vendor/init/ueventd.qcom.rc",
+        "patchSetId": 11
+      },
+      "lineNbr": 65,
+      "author": {
+        "id": 1000012
+      },
+      "writtenOn": "2022-10-23T07:39:49Z",
+      "side": 0,
+      "message": "doorbell enablement.",
+      "revId": "b306db90c9ee4f905b31066d005906bee5ec8229",
+      "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
+    }
+  ]
+}

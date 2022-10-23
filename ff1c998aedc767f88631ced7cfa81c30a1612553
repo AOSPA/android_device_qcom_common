@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "4f798861_a689b72a",
+        "filename": "vendor/init/init.qcom.rc",
+        "patchSetId": 11
+      },
+      "lineNbr": 524,
+      "author": {
+        "id": 1000012
+      },
+      "writtenOn": "2022-10-23T07:39:49Z",
+      "side": 1,
+      "message": "do we need https://git.codelinaro.org/clo/la/device/qcom/common/-/commit/4e1af79f3b543f201694eba65215545c00a1a44e?",
+      "revId": "ff1c998aedc767f88631ced7cfa81c30a1612553",
+      "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
+    }
+  ]
+}
