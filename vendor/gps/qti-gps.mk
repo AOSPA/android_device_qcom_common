@@ -21,6 +21,12 @@ BOARD_VENDOR_QCOM_GPS_LOC_API_HARDWARE := default
 # Inherit the GPS HAL.
 $(call inherit-product-if-exists, hardware/qcom/gps/gps_vendor_product.mk)
 
+# Location Launcher Service for pre-5.10 targets
+ifeq (,$(filter 5.10, $(TARGET_KERNEL_VERSION)))
+PRODUCT_PACKAGES += \
+    loc-launcher.rc
+endif
+
 # Overlays
 PRODUCT_PACKAGES += \
     QCOMGPSFrameworksOverlay
