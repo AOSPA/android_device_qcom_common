@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "bc52f7cb_a98a4a66",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 3
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000012
+      },
+      "writtenOn": "2022-10-23T04:11:41Z",
+      "side": 1,
+      "message": "may not need this.  qssi defines this in device/qcom/qssi/base.mk.",
+      "revId": "77758d6d26f62857df0d89094d3427f5176f4d8f",
+      "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
+    }
+  ]
+}
