@@ -18,6 +18,12 @@ else
 -include $(TOPDIR)vendor/qcom/opensource/audio-hal/primary-hal/configs/$(TARGET_BOARD_PLATFORM)/$(TARGET_BOARD_PLATFORM).mk
 endif
 
+# Override audio service for pre-5.10 targets
+ifeq (,$(filter 5.10, $(TARGET_KERNEL_VERSION)))
+PRODUCT_PACKAGES += \
+    android.hardware.audio.service.rc
+endif
+
 # Build Qualcomm common audio overlay
 TARGET_USES_RRO := true
 
