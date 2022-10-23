@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "60375d56_6bf56bd3",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000447
+      },
+      "writtenOn": "2022-10-23T19:50:54Z",
+      "side": 1,
+      "message": "The entire GPS stack is in proprietary-files.txt, unless we move GPS to vendor/gps at some point, keep it in device tree.",
+      "revId": "2bbb995599272a5762ae791e110a67296933fb17",
+      "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
+    }
+  ]
+}
