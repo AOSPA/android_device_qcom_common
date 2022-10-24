@@ -15,6 +15,18 @@
 PRODUCT_SOONG_NAMESPACES += \
     device/qcom/common/vendor/init
 
+# Add legacy services and permissions for pre-5.10 targets
+ifeq (,$(filter 5.10, $(TARGET_KERNEL_VERSION)))
+PRODUCT_PACKAGES += \
+    init.qcom.early_boot.legacy.sh \
+    init.qcom.legacy.rc \
+    init.qcom.post_boot.legacy.sh
+else
+PRODUCT_PACKAGES += \
+    init.qcom.early_boot.sh \
+    init.qcom.post_boot.sh
+endif
+
 # Init
 PRODUCT_PACKAGES += \
     init.class_main.sh \
@@ -22,9 +34,7 @@ PRODUCT_PACKAGES += \
     init.mdm.sh \
     init.qcom.class_core.sh \
     init.qcom.coex.sh \
-    init.qcom.early_boot.sh \
     init.qcom.efs.sync.sh \
-    init.qcom.post_boot.sh \
     init.qcom.rc \
     init.qcom.sdio.sh \
     init.qcom.sh \
