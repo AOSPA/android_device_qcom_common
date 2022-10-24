@@ -30,6 +30,8 @@ import /vendor/etc/init/hw/init.qcom.usb.rc
 import /vendor/etc/init/hw/init.qcom.test.rc
 import /vendor/etc/init/hw/init.target.rc
 import /vendor/etc/init/hw/init.qcom.factory.rc
+# PA Legacy Devices
+import /vendor/etc/init/hw/init.qcom.legacy.rc
 
 on early-init
     mount tracefs tracefs /sys/kernel/tracing
