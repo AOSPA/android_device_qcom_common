@@ -61,3 +61,5 @@ allow mediaserver surfaceflinger:unix_stream_socket rw_socket_perms;
 
 hal_client_domain(mediaserver, hal_graphics_composer)
 #binder_call(mediaserver, hal_display_config);
+
+hal_client_domain(mediaserver, vendor_hal_qspmhal)

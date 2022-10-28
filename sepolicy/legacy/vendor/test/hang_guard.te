@@ -1,4 +1,4 @@
-# Copyright (c) 2019-2020, The Linux Foundation. All rights reserved.
+# Copyright (c) 2020, The Linux Foundation. All rights reserved.
 #
 # Redistribution and use in source and binary forms, with or without
 # modification, are permitted provided that the following conditions are
@@ -25,32 +25,27 @@
 # OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN
 # IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
-hal_client_domain(vendor_location_app, hal_perf)
+type hang_guard, domain, mlstrustedsubject;
+type hang_guard_exec, exec_type, vendor_file_type, file_type;
 
-#Permissions for JDWP
+init_daemon_domain(hang_guard)
+
 userdebug_or_eng(`
-  allow vendor_location_app { adbd su }:unix_stream_socket connectto;
-  allow vendor_location_app mediaserver_service:service_manager find;
-  allow vendor_location_app audioserver_service:service_manager find;
-  diag_use(vendor_location_app)
+  allow hang_guard self:global_capability_class_set kill;
+  allow hang_guard kmsg_device:chr_file w_file_perms;
+  allow hang_guard domain:process { signal sigstop sigkill };
+
+  # sh
+  # allow hang_guard { shell_exec toolbox_exec }:file rx_file_perms;
+
+  # look through /proc
+  allow hang_guard domain:dir r_dir_perms;
+  allow hang_guard domain:file r_file_perms;
+  allow hang_guard domain:lnk_file read;
+
+  # write into sysrq
+  allow hang_guard proc_sysrq:file w_file_perms;
+
+  # reboot
+  set_prop(hang_guard, powerctl_prop)
 ')
-
-get_prop(vendor_location_app, vendor_mpctl_prop)
-get_prop(vendor_location_app, vendor_iop_prop)
-
-#allow location_app to access gnss hal
-hal_client_domain(vendor_location_app, hal_gnss)
-
-allow vendor_location_app mediametrics_service:service_manager find;
-allow vendor_location_app surfaceflinger_service:service_manager find;
-allow vendor_location_app location_data_file:dir rw_dir_perms;
-allow vendor_location_app self:socket create_socket_perms;
-allow vendor_location_app anr_data_file:dir rw_dir_perms;
-allow vendor_location_app anr_data_file:file rw_file_perms;
-allow vendor_location_app activity_service:service_manager find;
-allow vendor_location_app radio_service:service_manager find;
-# ioctlcmd=c302
-allowxperm vendor_location_app self:socket ioctl msm_sock_ipc_ioctls;
-allow vendor_location_app self:qipcrtr_socket create_socket_perms_no_ioctl;
-allow vendor_location_app sysfs_data:file r_file_perms;
-unix_socket_connect(vendor_location_app, vendor_dpmtcm, vendor_dpmd)

@@ -195,6 +195,7 @@ type sysfs_hsic_host_rdy, sysfs_type, fs_type;
 
 # Files accessed by qcom-system-daemon
 type sysfs_socinfo, fs_type, sysfs_type;
+type vendor_sysfs_public, fs_type, sysfs_type;
 
 type qlogd_socket, file_type, mlstrustedobject;
 #Defines the files (configs, dumps, etc) used by display processes

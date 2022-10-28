@@ -45,6 +45,7 @@ genfscon sysfs /devices/platform/soc/soc:qcom,l3-cpu6/devfreq u:object_r:sysfs_d
 genfscon sysfs /devices/platform/soc/soc:qcom,mincpubw/devfreq u:object_r:sysfs_devfreq:s0
 genfscon sysfs /devices/platform/soc/soc:qcom,llccbw/devfreq u:object_r:sysfs_devfreq:s0
 genfscon sysfs /module/big_cluster_min_freq_adjust u:object_r:sysfs_devfreq:s0
+genfscon sysfs /devices/soc0                             u:object_r:sysfs_socinfo:s0
 genfscon sysfs /devices/soc/soc:qcom,cpubw/devfreq u:object_r:sysfs_devfreq:s0
 genfscon sysfs /devices/soc/soc:qcom,memlat-cpu0/devfreq u:object_r:sysfs_devfreq:s0
 genfscon sysfs /devices/soc/soc:qcom,memlat-cpu2/devfreq u:object_r:sysfs_devfreq:s0
@@ -65,6 +66,10 @@ genfscon sysfs /devices/platform/soc/soc:qcom,msm-ext-disp/extcon/extcon0/name u
 genfscon sysfs /devices/platform/soc/soc:qcom,msm-ext-disp/extcon/extcon0/cable.0/ u:object_r:sysfs_graphics:s0
 
 genfscon sysfs /devices/platform/soc/soc:qcom,mdm3/esoc0 u:object_r:sysfs_esoc:s0
+genfscon sysfs /devices/soc0/soc_id                                     u:object_r:vendor_sysfs_public:s0
+genfscon sysfs /devices/system/soc/soc0/id                              u:object_r:vendor_sysfs_public:s0
+genfscon sysfs /devices/soc0/family                                     u:object_r:vendor_sysfs_public:s0
+
 genfscon sysfs /devices/platform/soc/soc:qcom,msm-ext-disp/extcon/extcon1/name u:object_r:sysfs_graphics:s0
 genfscon sysfs /devices/platform/soc/soc:qcom,msm-ext-disp/extcon/extcon1/cable.0/ u:object_r:sysfs_graphics:s0
 genfscon sysfs /devices/system/memory/ u:object_r:sysfs_memory_offline:s0

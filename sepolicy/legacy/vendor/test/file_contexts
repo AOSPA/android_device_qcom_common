@@ -93,6 +93,9 @@
 /(vendor|system/vendor)/bin/loc_api_app                         u:object_r:location_exec:s0
 /(vendor|system/vendor)/bin/test_loc_api_client                 u:object_r:location_exec:s0
 
+#Context for hang_guard
+/(vendor|system/vendor)/bin/hang_guard        u:object_r:hang_guard_exec:s0
+
 /(vendor|system/vendor)/bin/sns.*               u:object_r:sensors_test_exec:s0
 #for testscripts support
 /(vendor|system/vendor)/bin/init\.qcom\.vendor\.testscripts\.sh u:object_r:vendor-qti-testscripts_exec:s0

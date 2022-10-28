@@ -62,19 +62,19 @@ r_dir_file({system_server
  mediaserver
  cameraserver
  surfaceflinger
- usta_app}, system_gles_data_file);
+ vendor_usta_app}, system_gles_data_file);
 
 allow {system_server
  system_app
  mediaserver
  cameraserver
  surfaceflinger
- usta_app} system_gles_data_file:dir create_dir_perms;
+ vendor_usta_app} system_gles_data_file:dir create_dir_perms;
 
 allow {system_server
  system_app
  mediaserver
  cameraserver
  surfaceflinger
- usta_app} system_gles_data_file:file create_file_perms;
+ vendor_usta_app} system_gles_data_file:file create_file_perms;
 ')

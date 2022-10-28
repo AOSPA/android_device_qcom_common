@@ -38,8 +38,8 @@ userdebug_or_eng(`
   allow system_app su:unix_dgram_socket sendto;
 
   # Access to tombstone segfaults
-  allow system_app tombstone_data_file:dir r_dir_perms;
-  allow system_app tombstone_data_file:file r_file_perms;
+  allow system_app vendor_tombstone_data_file:dir r_dir_perms;
+  allow system_app vendor_tombstone_data_file:file r_file_perms;
   diag_use(system_app)
 
 ')

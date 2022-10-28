@@ -48,3 +48,6 @@ allow tlocd self:{ socket qipcrtr_socket } create_socket_perms;
 allowxperm tlocd self:{ socket qipcrtr_socket } ioctl msm_sock_ipc_ioctls;
 
 allow tlocd ion_device:chr_file rw_file_perms;
+
+# Allow search of location vendor data files
+allow tlocd location_data_file:dir search;

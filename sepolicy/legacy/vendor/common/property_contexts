@@ -56,6 +56,9 @@ ctl.vendor.ipacm-diag      u:object_r:vendor_ipacm-diag_prop:s0
 ctl.vendor.dataqti         u:object_r:vendor_dataqti_prop:s0
 ctl.vendor.dataadpl         u:object_r:vendor_dataadpl_prop:s0
 ctl.vendor.sensors                u:object_r:sensors_prop:s0
+persist.vendor.sensors.    u:object_r:sensors_prop:s0
+ro.vendor.sensors.         u:object_r:sensors_prop:s0
+
 ctl.vendor.msm_irqbalance         u:object_r:vendor_msm_irqbalance_prop:s0
 ctl.vendor.msm_irqbl_sdm630       u:object_r:vendor_msm_irqbl_sdm630_prop:s0
 vendor.slpi.               u:object_r:slpi_prop:s0
@@ -213,6 +216,9 @@ vendor.fastrpc.                  u:object_r:adsprpc_prop:s0
 
 #qvr properties
 vendor.qvr                       u:object_r:qvr_prop:s0
+
+#qteeconnector
+persist.vendor.qteeconnector.    u:object_r:vendor_qteeconnector_opti_prop:s0
 
 #bt lazyhal property
 ro.vendor.bt.enablelazyhal       u:object_r:bluetooth_prop:s0 exact bool

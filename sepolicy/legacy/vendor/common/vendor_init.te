@@ -98,6 +98,9 @@ set_prop(vendor_init, public_vendor_default_prop)
 set_prop(vendor_init, vendor_opengles_prop)
 
 get_prop(vendor_init, vendor_video_prop)
+
+set_prop(vendor_init, vendor_qteeconnector_opti_prop)
+
 set_prop(vendor_init, vendor_sys_video_prop)
 
 #Acess vendor hvdcp properties
@@ -119,3 +122,6 @@ userdebug_or_eng(`
 ')
 
 set_prop(vendor_init, vendor_persist_dpm_prop)
+
+# allow vendor_init to use wait for qseecom
+allow vendor_init tee_device:chr_file getattr;

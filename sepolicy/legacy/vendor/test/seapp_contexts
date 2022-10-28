@@ -44,7 +44,7 @@ user=_app seinfo=platform name=com.qti.qualcomm.npudemo domain=npu_app type=app_
 user=_app seinfo=platform name=com.qti.vtloopback domain=vtloopback_app type=app_data_file levelfrom=all
 
 #Add new domain for usta app
-user=system seinfo=platform name=com.qualcomm.qti.usta domain=usta_app type=system_app_data_file
+user=_app seinfo=platform name=com.qualcomm.qti.usta domain=vendor_usta_app type=app_data_file levelFrom=all
 
 #Add new domain for ustaservice app
 # Needed for USTA test app

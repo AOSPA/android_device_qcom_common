@@ -1,4 +1,4 @@
-# Copyright (c) 2017, The Linux Foundation. All rights reserved.
+# Copyright (c) 2020-2021, The Linux Foundation. All rights reserved.
 
 # Redistribution and use in source and binary forms, with or without
 # modification, are permitted provided that the following conditions are
@@ -25,37 +25,18 @@
 # OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN
 # IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
+type vendor_hal_limits_qti, domain;
+hal_server_domain(vendor_hal_limits_qti, vendor_hal_limits)
 
-userdebug_or_eng(`
-    diag_use(hal_sensors)
-    allow hal_sensors debugfs_tracing:file { open write };
-')
-set_prop(hal_sensors, slpi_prop);
-allow hal_sensors self:{ socket qipcrtr_socket } create_socket_perms;
-allowxperm hal_sensors self:{ socket qipcrtr_socket } ioctl msm_sock_ipc_ioctls;
+# Allow hwbinder call from hal client to server and vice-versa
+binder_call(vendor_hal_limits_client, vendor_hal_limits_server)
+binder_call(vendor_hal_limits_server, vendor_hal_limits_client)
 
-allow hal_sensors sysfs_data:file r_file_perms;
+# Allow hwservice related rules
+hal_attribute_hwservice(vendor_hal_limits, vendor_hal_limits_hwservice)
 
-# Allow access to ion memory allocation device
-allow hal_sensors ion_device:chr_file rw_file_perms;
-allow hal_sensors hal_graphics_allocator:fd use;
+type vendor_hal_limits_qti_exec, exec_type, vendor_file_type, file_type;
+init_daemon_domain(vendor_hal_limits_qti)
 
-# Allow access to FastRPC
-allow hal_sensors qdsp_device:chr_file r_file_perms;
-allow hal_sensors xdsp_device:chr_file r_file_perms;
-
-allow hal_sensors sysfs_sensors:dir r_dir_perms;
-allow hal_sensors sysfs_sensors:file rw_file_perms;
-allow hal_sensors sysfs_sensors:lnk_file read;
-allow hal_sensors input_device:dir r_dir_perms;
-allow hal_sensors input_device:chr_file r_file_perms;
-#following to set the ssr
-allow hal_sensors_default sysfs_slpi:dir search;
-allow hal_sensors_default sysfs_slpi:file w_file_perms;
-allow hal_sensors_default sensors_persist_file:file create_file_perms;
-allow hal_sensors_default sensors_persist_file:dir create_dir_perms;
-allow hal_sensors_default mnt_vendor_file:dir r_dir_perms;
-allow hal_sensors_default hal_graphics_mapper_hwservice:hwservice_manager find;
-
-get_prop(hal_sensors_default, adsprpc_prop);
-get_prop(hal_sensors_default, sensors_prop)
+# Allow access to thermal hal
+hal_client_domain(vendor_hal_limits_qti, hal_thermal)

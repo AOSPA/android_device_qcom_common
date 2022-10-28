@@ -1,4 +1,4 @@
-# Copyright (c) 2017, The Linux Foundation. All rights reserved.
+# Copyright (c) 2020, The Linux Foundation. All rights reserved.
 
 # Redistribution and use in source and binary forms, with or without
 # modification, are permitted provided that the following conditions are
@@ -25,37 +25,18 @@
 # OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN
 # IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
+user=system seinfo=platform name=com.qualcomm.dsdstesterapp domain=mst_test_app type=system_app_data_file
 
-userdebug_or_eng(`
-    diag_use(hal_sensors)
-    allow hal_sensors debugfs_tracing:file { open write };
-')
-set_prop(hal_sensors, slpi_prop);
-allow hal_sensors self:{ socket qipcrtr_socket } create_socket_perms;
-allowxperm hal_sensors self:{ socket qipcrtr_socket } ioctl msm_sock_ipc_ioctls;
+user=system seinfo=platform name=com.qualcomm.qti.dsdslogger domain=mst_test_app type=system_app_data_file
 
-allow hal_sensors sysfs_data:file r_file_perms;
+user=system seinfo=platform name=com.qualcomm.scriptmanager domain=mst_test_app type=system_app_data_file
 
-# Allow access to ion memory allocation device
-allow hal_sensors ion_device:chr_file rw_file_perms;
-allow hal_sensors hal_graphics_allocator:fd use;
+user=system seinfo=platform name=com.qualcomm.testhelper domain=mst_test_app type=system_app_data_file
 
-# Allow access to FastRPC
-allow hal_sensors qdsp_device:chr_file r_file_perms;
-allow hal_sensors xdsp_device:chr_file r_file_perms;
+user=system seinfo=platform name=com.qualcomm.fst.CrashMonitor domain=mst_test_app type=system_app_data_file
 
-allow hal_sensors sysfs_sensors:dir r_dir_perms;
-allow hal_sensors sysfs_sensors:file rw_file_perms;
-allow hal_sensors sysfs_sensors:lnk_file read;
-allow hal_sensors input_device:dir r_dir_perms;
-allow hal_sensors input_device:chr_file r_file_perms;
-#following to set the ssr
-allow hal_sensors_default sysfs_slpi:dir search;
-allow hal_sensors_default sysfs_slpi:file w_file_perms;
-allow hal_sensors_default sensors_persist_file:file create_file_perms;
-allow hal_sensors_default sensors_persist_file:dir create_dir_perms;
-allow hal_sensors_default mnt_vendor_file:dir r_dir_perms;
-allow hal_sensors_default hal_graphics_mapper_hwservice:hwservice_manager find;
+user=system seinfo=platform name=com.qualcomm.fst.STE domain=mst_test_app type=system_app_data_file
 
-get_prop(hal_sensors_default, adsprpc_prop);
-get_prop(hal_sensors_default, sensors_prop)
+user=system seinfo=platform name=com.qualcomm.fst.executor domain=mst_test_app type=system_app_data_file
+
+user=system seinfo=platform name=com.qualcomm.fst.sniffer domain=mst_test_app type=system_app_data_file

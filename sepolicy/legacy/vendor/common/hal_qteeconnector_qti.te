@@ -50,9 +50,15 @@ hal_client_domain(vendor_hal_qteeconnector_qti, hal_graphics_allocator)
 #Allow access to tee device
 allow vendor_hal_qteeconnector_qti tee_device:chr_file rw_file_perms;
 
+#Allow access to /dev/vndbinder
+vndbinder_use(vendor_hal_qteeconnector);
+
 #Allow access to firmware
 allow vendor_hal_qteeconnector firmware_file:dir r_dir_perms;
 allow vendor_hal_qteeconnector firmware_file:file r_file_perms;
+
+#Allow access to persist.vendor.qteeconnector.
+get_prop(vendor_hal_qteeconnector, vendor_qteeconnector_opti_prop)
 
 #Allow access to session files
 allow vendor_hal_qteeconnector data_qtee_file:dir create_dir_perms;

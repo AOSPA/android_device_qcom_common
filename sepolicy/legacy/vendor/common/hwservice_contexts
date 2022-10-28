@@ -1,4 +1,4 @@
-# Copyright (c) 2017-2019, 2020, The Linux Foundation. All rights reserved.
+# Copyright (c) 2017-2019, 2020-2021, The Linux Foundation. All rights reserved.
 #
 # Redistribution and use in source and binary forms, with or without
 # modification, are permitted provided that the following conditions are
@@ -52,6 +52,7 @@ com.qualcomm.qti.bluetooth_audio::IBluetoothAudio            u:object_r:hal_audi
 vendor.qti.hardware.btconfigstore::IBTConfigStore            u:object_r:hal_btconfigstore_hwservice:s0
 com.qualcomm.qti.ant::IAntHci                                u:object_r:hal_bluetooth_hwservice:s0
 vendor.qti.hardware.wipower::IWipower                        u:object_r:hal_bluetooth_hwservice:s0
+vendor.qti.hardware.limits::ILimits                          u:object_r:vendor_hal_limits_hwservice:s0
 vendor.qti.hardware.perf::IPerf                              u:object_r:hal_perf_hwservice:s0
 com.qualcomm.qti.wifidisplayhal::IHDCPSession                u:object_r:wifidisplayhalservice_hwservice:s0
 vendor.qti.hardware.iop::IIop                                u:object_r:hal_iop_hwservice:s0

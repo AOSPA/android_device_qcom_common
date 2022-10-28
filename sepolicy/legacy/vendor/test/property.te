@@ -24,10 +24,10 @@
 # WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE
 # OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN
 # IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-type sensors_dbg_prop, property_type;
+vendor_restricted_prop(sensors_dbg_prop);
 
 #WiFi Display
-type wfd_vendor_debug_prop, property_type;
+vendor_restricted_prop(wfd_vendor_debug_prop);
 
 #debugutils HAL
-type vendor_dbg_brkpoint_prop, property_type;
+vendor_restricted_prop(vendor_dbg_brkpoint_prop);

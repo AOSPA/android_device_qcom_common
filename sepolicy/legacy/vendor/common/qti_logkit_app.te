@@ -48,8 +48,8 @@ userdebug_or_eng(`
   r_dir_file(qti_logkit_app, firmware_file);
 
   # Access to tombstone segfaults
-  allow qti_logkit_app tombstone_data_file:dir r_dir_perms;
-  allow qti_logkit_app tombstone_data_file:file r_file_perms;
+  allow qti_logkit_app vendor_tombstone_data_file:dir r_dir_perms;
+  allow qti_logkit_app vendor_tombstone_data_file:file r_file_perms;
   diag_use(qti_logkit_app)
 ')
 
