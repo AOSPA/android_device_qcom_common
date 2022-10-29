@@ -21,6 +21,8 @@ PRODUCT_PACKAGES += \
     init.qcom.early_boot.legacy.sh \
     init.qcom.legacy.rc \
     init.qcom.post_boot.legacy.sh
+
+BOARD_VENDOR_SEPOLICY_DIRS += $(QCOM_COMMON_PATH)/vendor/init/sepolicy/
 else
 PRODUCT_PACKAGES += \
     init.qcom.post_boot.sh
