@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "c31cabe3_7fbb632a",
+        "filename": "vendor/init/sepolicy/file_contexts",
+        "patchSetId": 1
+      },
+      "lineNbr": 1,
+      "author": {
+        "id": 1000012
+      },
+      "writtenOn": "2022-10-29T16:11:02Z",
+      "side": 1,
+      "message": "post boot shouldn\u0027t be necessary, it should be copying to the normal path.",
+      "revId": "b5577cbf2effb9ce57516d4e8c136298bfd4dde5",
+      "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
+    }
+  ]
+}
