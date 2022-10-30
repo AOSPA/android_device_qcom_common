@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "bc3357b8_17f855ee",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 26
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000737
+      },
+      "writtenOn": "2022-10-30T03:19:32Z",
+      "side": 1,
+      "message": "For me, along with legacy commit, everything is working fine.",
+      "revId": "748ef12e20aab7b70ae576e1e2d6367cf541e855",
+      "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
+    }
+  ]
+}
