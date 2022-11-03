@@ -16,6 +16,23 @@
       "message": "why @sm8150 ?",
       "revId": "8d477f2bbc7118fcd0212732f15b44326bb349eb",
       "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "b1a4c00f_cf38683b",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000012
+      },
+      "writtenOn": "2022-11-03T14:47:05Z",
+      "side": 1,
+      "message": "I agree, Chris.  Omkar and/or Utsav, I think we\u0027re better off moving this to file_contexts and using wildcards so it hits all possible paths regardless of SoC.",
+      "revId": "8d477f2bbc7118fcd0212732f15b44326bb349eb",
+      "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
     }
   ]
 }
