@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "53ecd44d_c510fac9",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 19
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000012
+      },
+      "writtenOn": "2022-11-03T17:04:21Z",
+      "side": 1,
+      "message": "why only include for user?  if these aren\u0027t denials we care about, skip for all.",
+      "revId": "7ade423ec8648d908596f85a7b3f250df9ec812e",
+      "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
+    }
+  ]
+}
