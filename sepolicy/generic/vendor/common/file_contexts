@@ -6,3 +6,6 @@
 /vendor/bin/imsqmidaemon        u:object_r:vendor_ims_service_exec:s0
 /vendor/bin/imsdatadaemon       u:object_r:vendor_ims_service_exec:s0
 /vendor/bin/imsrcsd             u:object_r:vendor_ims_service_exec:s0
+
+# Camera
+/vendor/lib(64)?/libipebpsstriping\.so		            u:object_r:same_process_hal_file:s0
