@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "d79958cb_dd8e0d65",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 8
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000012
+      },
+      "writtenOn": "2022-11-03T17:03:11Z",
+      "side": 1,
+      "message": "do we need to label other things we pinned or are we good?",
+      "revId": "03f523a67fbe74defb1a65aeccaa5a6015fbe5a3",
+      "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
+    }
+  ]
+}
