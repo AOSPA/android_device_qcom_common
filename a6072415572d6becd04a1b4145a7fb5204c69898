@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "c272e202_18db7398",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 6
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000579
+      },
+      "writtenOn": "2022-11-04T05:44:15Z",
+      "side": 1,
+      "message": "if alex 2 says its fine for taro/zf9, I dont mind",
+      "revId": "a6072415572d6becd04a1b4145a7fb5204c69898",
+      "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
+    }
+  ]
+}
