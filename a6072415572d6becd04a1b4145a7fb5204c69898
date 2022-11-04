@@ -16,6 +16,23 @@
       "message": "if alex 2 says its fine for taro/zf9, I dont mind",
       "revId": "a6072415572d6becd04a1b4145a7fb5204c69898",
       "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "42501124_d473d836",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 6
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000012
+      },
+      "writtenOn": "2022-11-04T07:35:17Z",
+      "side": 1,
+      "message": "don\u0027t duplicate the same Hal in both conditions, build unfortunately if it\u0027s true for both. also are all these hals needed and not built by other makefiles? why does 5.10 need to be separated?",
+      "revId": "a6072415572d6becd04a1b4145a7fb5204c69898",
+      "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
     }
   ]
 }
