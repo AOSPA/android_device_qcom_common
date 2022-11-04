@@ -13,3 +13,6 @@
 # Label read_ahead_kb and discard_max_bytes in /data partition
 /sys/devices(/platform)?/soc/[a-f0-9]+.ufshc/host0/target0:0:0/0:0:0:[0-9]+/block/sda/queue/read_ahead_kb u:object_r:vendor_sysfs_scsi_target:s0
 /sys/devices(/platform)?/soc/[a-f0-9]+.ufshc/host0/target0:0:0/0:0:0:[0-9]+/block/sda/queue/discard_max_bytes u:object_r:vendor_sysfs_scsi_target:s0
+
+# Persist files
+/mnt/vendor/persist/wlan(/.*)?                                      u:object_r:vendor_persist_wcnss_service_file:s0
