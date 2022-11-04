@@ -51,6 +51,24 @@
       "parentUuid": "42501124_d473d836",
       "revId": "a6072415572d6becd04a1b4145a7fb5204c69898",
       "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "fb74b617_7920f4ac",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 6
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000737
+      },
+      "writtenOn": "2022-11-04T10:31:32Z",
+      "side": 1,
+      "message": "\u003e 5.10 is separate because maybe it\u0027s better not to build some variants for devices lower than that. Mainly ndk_plataform. And I got this based on Alex zenfone 9 tree.",
+      "parentUuid": "b4de535a_6227fd89",
+      "revId": "a6072415572d6becd04a1b4145a7fb5204c69898",
+      "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
     }
   ]
 }
