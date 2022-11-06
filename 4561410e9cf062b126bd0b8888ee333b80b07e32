@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "82d187a9_22f0a0db",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000012
+      },
+      "writtenOn": "2022-11-06T19:30:39Z",
+      "side": 1,
+      "message": "Fixes boot on Nothing Phone (1) because we are not building with modules.",
+      "revId": "4561410e9cf062b126bd0b8888ee333b80b07e32",
+      "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
+    }
+  ]
+}
