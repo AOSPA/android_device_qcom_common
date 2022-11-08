@@ -9,6 +9,7 @@
 
 # Camera
 /vendor/lib(64)?/libipebpsstriping\.so		            u:object_r:same_process_hal_file:s0
+/vendor/lib(64)?/libipebpsstriping170\.so                   u:object_r:same_process_hal_file:s0
 
 # Label read_ahead_kb and discard_max_bytes in /data partition
 /sys/devices(/platform)?/soc/[a-f0-9]+.ufshc/host0/target0:0:0/0:0:0:[0-9]+/block/sda/queue/read_ahead_kb u:object_r:vendor_sysfs_scsi_target:s0
