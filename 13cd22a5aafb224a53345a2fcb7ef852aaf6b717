@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "22a6150c_29d14a18",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 3
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000579
+      },
+      "writtenOn": "2022-11-09T05:12:48Z",
+      "side": 1,
+      "message": "11-09 09:59:29.921  3832  3832 W co.aospa.sense: type\u003d1400 audit(0.0:25): avc: denied { read } for name\u003d\"u:object_r:vendor_persist_camera_prop:s0\" dev\u003d\"tmpfs\" ino\u003d2981 scontext\u003du:r:system_app:s0 tcontext\u003du:object_r:vendor_persist_camera_prop:s0 tclass\u003dfile permissive\u003d0\n11-09 10:00:10.841  7479  7479 W CameraX-core_ca: type\u003d1400 audit(0.0:81): avc: denied { read } for name\u003d\"u:object_r:vendor_persist_camera_prop:s0\" dev\u003d\"tmpfs\" ino\u003d2981 scontext\u003du:r:untrusted_app:s0:c237,c256,c512,c768 tcontext\u003du:object_r:vendor_persist_camera_prop:s0 tclass\u003dfile permissive\u003d0 app\u003dorg.lineageos.aperture.dev\n11-09 10:00:12.582  2666  6180 W CameraManagerGlobal: ignore the torch status update of camera: 5\n11-09 10:00:12.582  3832  4047 W CameraManagerGlobal: ignore the torch status update of camera: 6\n11-09 10:00:12.577  3832  3832 W binder:3832_4: type\u003d1400 audit(0.0:125): avc: denied { read } for name\u003d\"u:object_r:vendor_persist_camera_prop:s0\" dev\u003d\"tmpfs\" ino\u003d2981 scontext\u003du:r:system_app:s0 tcontext\u003du:object_r:vendor_persist_camera_prop:s0 tclass\u003dfile permissive\u003d0",
+      "revId": "13cd22a5aafb224a53345a2fcb7ef852aaf6b717",
+      "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
+    }
+  ]
+}
