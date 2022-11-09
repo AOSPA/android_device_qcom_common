@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "6f0f74c9_13e575a5",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000012
+      },
+      "writtenOn": "2022-11-09T04:18:37Z",
+      "side": 1,
+      "message": "I don\u0027t really like adding default prop to rules.  can we label this?",
+      "revId": "00f930b995d9a88d8e2e248cbd88916b46fec703",
+      "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
+    }
+  ]
+}
