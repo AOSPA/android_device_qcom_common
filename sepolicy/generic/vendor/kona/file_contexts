@@ -57,6 +57,7 @@
 /dev/block/platform/soc/1d84000.ufshc/by-name/apdp_[ab]             u:object_r:vendor_custom_ab_block_device:s0
 /dev/block/platform/soc/1d84000.ufshc/by-name/bluetooth_[ab]        u:object_r:vendor_modem_block_device:s0
 /dev/block/platform/soc/1d84000.ufshc/by-name/boot_[ab]             u:object_r:boot_block_device:s0
+/dev/block/platform/soc/1d84000.ufshc/by-name/vendor_boot_[ab]      u:object_r:boot_block_device:s0
 /dev/block/platform/soc/1d84000.ufshc/by-name/cmnlib_[ab]           u:object_r:vendor_custom_ab_block_device:s0
 /dev/block/platform/soc/1d84000.ufshc/by-name/cmnlib64_[ab]         u:object_r:vendor_custom_ab_block_device:s0
 /dev/block/platform/soc/1d84000.ufshc/by-name/core_nhlos_[ab]       u:object_r:vendor_custom_ab_block_device:s0
