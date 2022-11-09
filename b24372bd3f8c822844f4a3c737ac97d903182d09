@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "db4901cd_55b9d79e",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000579
+      },
+      "writtenOn": "2022-11-09T04:02:56Z",
+      "side": 1,
+      "message": "certified NN moment\n11-09 09:05:32.387   937   937 W neuralnetworks@: type\u003d1400 audit(0.0:40): avc: denied { read } for name\u003d\"u:object_r:default_prop:s0\" dev\u003d\"tmpfs\" ino\u003d12554 scontext\u003du:r:vendor_hal_neuralnetworks_default:s0 tcontext\u003du:object_r:default_prop:s0 tclass\u003dfile permissive\u003d0\n11-09 09:05:32.392   937   937 W libc    : Access denied finding property \"zeroth.debuglog.logmask\"",
+      "revId": "b24372bd3f8c822844f4a3c737ac97d903182d09",
+      "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
+    }
+  ]
+}
