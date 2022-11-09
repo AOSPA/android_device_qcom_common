@@ -17,3 +17,6 @@
 
 # Persist files
 /mnt/vendor/persist/wlan(/.*)?                                      u:object_r:vendor_persist_wcnss_service_file:s0
+
+# vendor_sysfs_data
+/sys/devices/platform/soc/soc:qcom,ipa_fws@[a-f0-9]+/subsys[0-9]+/name  u:object_r:vendor_sysfs_data:s0
