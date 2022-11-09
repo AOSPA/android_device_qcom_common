@@ -1,0 +1,1 @@
+get_prop(hal_secure_element_default, vendor_nfc_nq_prop)
