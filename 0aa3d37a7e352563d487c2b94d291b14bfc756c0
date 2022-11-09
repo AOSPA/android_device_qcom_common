@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "d8db1a97_c370997a",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000579
+      },
+      "writtenOn": "2022-11-09T04:41:16Z",
+      "side": 1,
+      "message": "11-09 09:59:20.214  1028  1028 W HwBinder:1028_1: type\u003d1400 audit(0.0:24): avc: denied { read } for name\u003d\"u:object_r:vendor_nfc_nq_prop:s0\" dev\u003d\"tmpfs\" ino\u003d2976 scontext\u003du:r:hal_secure_element_default:s0 tcontext\u003du:object_r:vendor_nfc_nq_prop:s0 tclass\u003dfile permissive\u003d0\n11-09 09:59:20.219  1028  1073 W libc    : Access denied finding property \"vendor.qti.nfc.chipid\"\n11-09 09:59:20.219  1028  1073 D GPQeSE-HAL: Chip-id retrieved \u003d 0x00\n11-09 09:59:20.219  2635  2635 I SecureElement-Terminal-eSE1: OnStateChange:true reason:eSE has been initialised",
+      "revId": "0aa3d37a7e352563d487c2b94d291b14bfc756c0",
+      "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
+    }
+  ]
+}
