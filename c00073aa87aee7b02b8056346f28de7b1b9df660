@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "533f91ce_397ea2ac",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000012
+      },
+      "writtenOn": "2022-11-09T00:01:49Z",
+      "side": 1,
+      "message": "Hmm not denials per se but am getting \n11-08 17:47:26.288  3649  6138 W libc    : Access denied finding property \"ro.chipname\"\n11-08 17:49:38.293  5403  5426 W libc    : Access denied finding property \"ro.mediatek.platform\"\n11-08 17:49:38.293  5403  5426 W libc    : Access denied finding property \"ro.chipname\"\n11-08 17:49:38.293  5403  5426 W libc    : Access denied finding property \"ro.hardware.chipname\"\n",
+      "revId": "c00073aa87aee7b02b8056346f28de7b1b9df660",
+      "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
+    }
+  ]
+}
