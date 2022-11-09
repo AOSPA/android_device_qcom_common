@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "6a09024f_9ff77c72",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 3
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000012
+      },
+      "writtenOn": "2022-11-09T05:20:24Z",
+      "side": 1,
+      "message": "name the policy the same as the domain, why not use get_prop?",
+      "revId": "6e906afb9b03fe5867cca49fbcf41650adb43454",
+      "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
+    }
+  ]
+}
