@@ -59,9 +59,6 @@
 /sys/devices/platform/soc/5c00000.qcom,ssc/subsys[0-9]+/restart_level           u:object_r:vendor_sysfs_ssr_toggle:s0
 /sys/devices/platform/soc/soc:qcom,kgsl-hyp/subsys[0-9]+/restart_level          u:object_r:vendor_sysfs_ssr_toggle:s0
 
-#poweropt-service
-/(vendor|system/vendor)/bin/poweropt-service     u:object_r:vendor_poweroptservice_exec:s0
-
 # graphics/display DRM-KMS node
 /sys/devices/platform/soc/[a-f0-9]+.qcom,mdss_mdp/drm/card([0-3])+/sde-crtc-([0-9])+/lineptr_value u:object_r:vendor_sysfs_graphics:s0
 
