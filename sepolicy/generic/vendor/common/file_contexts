@@ -17,3 +17,7 @@
 
 # Persist files
 /mnt/vendor/persist/wlan(/.*)?                                      u:object_r:vendor_persist_wcnss_service_file:s0
+
+# Poweropt-service
+/(vendor|system/vendor)/bin/poweropt-service                        u:object_r:vendor_hal_poweroptservice_qti_exec:s0
+/data/vendor/pwr(/.*)?                                              u:object_r:vendor_pm_data_file:s0
