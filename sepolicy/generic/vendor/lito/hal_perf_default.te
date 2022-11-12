@@ -27,4 +27,3 @@
 
 allow vendor_hal_perf_default self:capability kill;
 allow vendor_hal_perf_default {appdomain}:process sigkill;
-binder_call(vendor_hal_perf_default, vendor_poweroptservice)

@@ -134,6 +134,3 @@
 # limits Partitions
 /dev/block/platform/soc/1d84000.ufshc/by-name/limits                u:object_r:vendor_limits_block_device:s0
 /dev/block/platform/soc/1d84000.ufshc/by-name/limits-cdsp           u:object_r:vendor_limits_block_device:s0
-
-#poweropt-service
-/(vendor|system/vendor)/bin/poweropt-service     u:object_r:vendor_poweroptservice_exec:s0
