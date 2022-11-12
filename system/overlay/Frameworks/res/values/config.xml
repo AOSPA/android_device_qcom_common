@@ -342,8 +342,6 @@
         <item>264</item>
         <item>265</item>
     </integer-array>
-    <!-- Boolean indicating if current platform supports HFP inband ringing -->
-    <bool name="config_bluetooth_hfp_inband_ringing_support">true</bool>
 
     <!-- The default refresh rate for a given device. If a non-zero value is set for
          config_defaultPeakRefreshRate, then config_defaultRefreshRate may be set to 0, in that case
