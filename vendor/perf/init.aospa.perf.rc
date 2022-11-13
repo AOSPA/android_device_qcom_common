@@ -35,6 +35,7 @@ on post-fs-data
     write /sys/block/sdf/queue/read_ahead_kb 2048
 
 on property:vendor.post_boot.parsed=1
+    write /dev/cpuset/audio-app/cpus 1-2
     # Set restricted cpuset to the same CPUs as system-background
     copy /dev/cpuset/system-background/cpus /dev/cpuset/restricted/cpus
     # Reset readahead to 128KiB
