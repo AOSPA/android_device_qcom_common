@@ -94,13 +94,6 @@ sh_binary {
 }
 
 sh_binary {
-    name: "init.qcom.early_boot.legacy.sh",
-    filename: "init.qcom.early_boot.sh",
-    src: "init.qcom.early_boot.legacy.sh",
-    vendor: true,
-}
-
-sh_binary {
     name: "init.qcom.efs.sync.sh",
     src: "init.qcom.efs.sync.sh",
     vendor: true,
@@ -109,13 +102,6 @@ sh_binary {
 sh_binary {
     name: "init.qcom.post_boot.sh",
     src: "init.qcom.post_boot.sh",
-    vendor: true,
-}
-
-sh_binary {
-    name: "init.qcom.post_boot.legacy.sh",
-    filename: "init.qcom.post_boot.sh",
-    src: "init.qcom.post_boot.legacy.sh",
     vendor: true,
 }
 

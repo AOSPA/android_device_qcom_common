@@ -17,10 +17,12 @@ PRODUCT_SOONG_NAMESPACES += \
 
 # Add legacy services and permissions for pre-5.10 targets
 ifeq (,$(filter 5.10, $(TARGET_KERNEL_VERSION)))
+PRODUCT_COPY_FILES += \
+    $(QCOM_COMMON_PATH)/vendor/init/init.qcom.early_boot.legacy.sh:$(TARGET_COPY_OUT_VENDOR)/bin/init.qcom.early_boot.sh \
+    $(QCOM_COMMON_PATH)/vendor/init/init.qcom.post_boot.legacy.sh:$(TARGET_COPY_OUT_VENDOR)/bin/init.qcom.post_boot.sh
+
 PRODUCT_PACKAGES += \
-    init.qcom.early_boot.legacy.sh \
-    init.qcom.legacy.rc \
-    init.qcom.post_boot.legacy.sh
+    init.qcom.legacy.rc
 else
 PRODUCT_PACKAGES += \
     init.qcom.early_boot.sh \
