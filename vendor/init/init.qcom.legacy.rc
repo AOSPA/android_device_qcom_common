@@ -33,6 +33,7 @@ on post-fs
     chmod 0755 /sys/kernel/debug/tracing
 
 on early-boot
+    exec u:r:vendor_qti_init_shell:s0 -- /vendor/bin/init.qcom.early_boot.legacy.sh
     # Allow subsystem (modem etc) debugging
     write /sys/kernel/boot_adsp/boot 1
     write /sys/kernel/boot_cdsp/boot 1
@@ -81,3 +82,14 @@ service vendor.audio-hal /vendor/bin/hw/android.hardware.audio.service
     ioprio rt 4
     writepid /dev/cpuset/foreground/tasks /dev/stune/foreground/tasks
     onrestart restart audioserver
+
+
+service qcom-post-boot-legacy /vendor/bin/init.qcom.post_boot.legacy.sh
+    class late_start
+    user root
+    group root system wakelock graphics
+    disabled
+    oneshot
+
+on property:sys.boot_completed=1
+    start qcom-post-boot-legacy
