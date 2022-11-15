@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "e2bd9514_3e0c256a",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000012
+      },
+      "writtenOn": "2022-11-15T22:04:34Z",
+      "side": 1,
+      "message": "not needed, these copy to the same paths as the normal scripts ",
+      "revId": "36ce37d4de7858de771dc194da00b8e2044be4aa",
+      "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
+    }
+  ]
+}
