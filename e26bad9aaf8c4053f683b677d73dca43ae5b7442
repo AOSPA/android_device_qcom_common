@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "9c93e9f2_e9f05812",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000579
+      },
+      "writtenOn": "2022-11-16T09:16:36Z",
+      "side": 1,
+      "message": "https://github.com/gotenksIN/proprietary_vendor_qcom_common/commit/2c5f579f7a7e450d5567e4091175ba98d6f4fa5c",
+      "revId": "e26bad9aaf8c4053f683b677d73dca43ae5b7442",
+      "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
+    }
+  ]
+}
