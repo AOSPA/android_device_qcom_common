@@ -51,6 +51,7 @@
         <component>com.android.internal.telephony.data.DataConfigManager</component>
         <component>com.android.internal.telephony.data.DataProfileManager</component>
         <component>com.android.internal.telephony.data.DataRetryManager</component>
+        <component>com.android.internal.telephony.data.DataServiceManager</component>
         <component>com.android.internal.telephony.data.TelephonyNetworkAgent</component>
         <component>com.android.internal.telephony.data.DataSettingsManager</component>
     </components>
