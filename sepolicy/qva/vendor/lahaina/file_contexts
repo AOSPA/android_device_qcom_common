@@ -27,3 +27,6 @@
 
 #camera
 /sys/firmware/devicetree/base/memory/ddr_device_type                               u:object_r:vendor_sysfs_ddr:s0
+
+# Face HAL
+/(vendor|system/vendor)/bin/hw/android\.hardware\.biometrics\.face@1\.0-service.faceauth    u:object_r:vendor_biometricsface_exec:s0
