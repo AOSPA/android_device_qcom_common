@@ -237,6 +237,7 @@ system_ext/lib64/vendor.qti.hardware.radio.qtiradio@2.3.so
 system_ext/lib64/vendor.qti.hardware.radio.qtiradio@2.4.so
 system_ext/lib64/vendor.qti.hardware.radio.qtiradio@2.5.so
 system_ext/lib64/vendor.qti.hardware.radio.qtiradio@2.6.so
+system_ext/lib64/vendor.qti.hardware.radio.qtiradio@2.7.so
 system_ext/lib64/vendor.qti.hardware.radio.uim@1.0.so
 system_ext/lib64/vendor.qti.hardware.radio.uim@1.1.so
 system_ext/lib64/vendor.qti.hardware.radio.uim@1.2.so
