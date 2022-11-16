@@ -32,7 +32,9 @@ ifneq ($(call is-board-platform-in-list, msm8937 msm8953 msm8996 msm8998 sdm660)
 ifneq ($(TARGET_EXCLUDE_QCOM_SEPOLICY),true)
 ifneq ($(BOARD_VENDORIMAGE_FILE_SYSTEM_TYPE),)
 include device/qcom/sepolicy_vndr/SEPolicy.mk
+ifneq ($(TARGET_EXCLUDE_QCOM_SEPOLICY_COMMON_ONLY),true)
 include device/qcom/common/sepolicy/SEPolicy.mk
+endif
 else
 include device/qcom/sepolicy/SEPolicy.mk
 endif
