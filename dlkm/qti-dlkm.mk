@@ -40,6 +40,10 @@ include $(QCOM_COMMON_PATH)/dlkm/kernel-platform.mk
 -include vendor/qcom/opensource/mmrm-driver/mmrm_kernel_board.mk
 -include vendor/qcom/opensource/mmrm-driver/mmrm_kernel_product.mk
 
+# Soong
+PRODUCT_SOONG_NAMESPACES += \
+    device/qcom/common/dlkm
+
 # Video
 -include vendor/qcom/opensource/video-driver/video_kernel_board.mk
 -include vendor/qcom/opensource/video-driver/video_kernel_product.mk

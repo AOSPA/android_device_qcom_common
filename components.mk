@@ -33,10 +33,83 @@ TARGET_COMMON_QTI_COMPONENTS := \
     vibrator \
     wfd \
     wlan
+
+ifeq ($(call is-board-platform-in-list,$(5_10_FAMILY)),true)
+TARGET_COMMON_QTI_COMPONENTS += dlkm
+endif
+
+ifeq ($(call is-board-platform-in-list,$(5_4_FAMILY)),true)
+TARGET_COMMON_QTI_COMPONENTS += media
+else
+TARGET_COMMON_QTI_COMPONENTS += media-legacy
+endif
+
+ifneq (,$(filter true, $(call is-board-platform-in-list,$(3_18_FAMILY) $(4_4_FAMILY) msm8953)))
+TARGET_COMMON_QTI_COMPONENTS += adreno-legacy
+else
+TARGET_COMMON_QTI_COMPONENTS += adreno
+endif
+
+ifeq ($(call is-board-platform-in-list,$(3_18_FAMILY) $(4_4_FAMILY) msm8953),true)
+TARGET_COMMON_QTI_COMPONENTS += wfd-legacy
+else
+TARGET_COMMON_QTI_COMPONENTS += wfd
+endif
 endif
 
 # QTI Common Components
 
+ifneq (,$(filter bt, $(TARGET_COMMON_QTI_COMPONENTS)))
+include $(QCOM_COMMON_PATH)/system/bt/qti-bt.mk
+include $(QCOM_COMMON_PATH)/vendor/bt/qti-bt.mk
+endif
+
+ifneq (,$(filter dlkm, $(TARGET_COMMON_QTI_COMPONENTS)))
+include $(QCOM_COMMON_PATH)/dlkm/qti-dlkm.mk
+endif
+
+ifneq (,$(filter gps, $(TARGET_COMMON_QTI_COMPONENTS)))
+include $(QCOM_COMMON_PATH)/system/gps/qti-gps.mk
+include $(QCOM_COMMON_PATH)/vendor/gps/qti-gps.mk
+endif
+
+ifneq (,$(filter init, $(TARGET_COMMON_QTI_COMPONENTS)))
+include $(QCOM_COMMON_PATH)/vendor/init/qti-init.mk
+endif
+
+ifneq (,$(filter overlay, $(TARGET_COMMON_QTI_COMPONENTS)))
+include $(QCOM_COMMON_PATH)/system/overlay/qti-overlay.mk
+endif
+
+ifneq (,$(filter perf, $(TARGET_COMMON_QTI_COMPONENTS)))
+include $(QCOM_COMMON_PATH)/system/perf/qti-perf.mk
+include $(QCOM_COMMON_PATH)/vendor/perf/qti-perf.mk
+endif
+
+ifneq (,$(filter telephony, $(TARGET_COMMON_QTI_COMPONENTS)))
+include $(QCOM_COMMON_PATH)/system/telephony/qti-telephony.mk
+include $(QCOM_COMMON_PATH)/vendor/telephony/qti-telephony.mk
+endif
+
+ifneq (,$(filter usb, $(TARGET_COMMON_QTI_COMPONENTS)))
+include $(QCOM_COMMON_PATH)/vendor/usb/qti-usb.mk
+endif
+
+ifneq (,$(filter vibrator, $(TARGET_COMMON_QTI_COMPONENTS)))
+include $(QCOM_COMMON_PATH)/vendor/vibrator/qti-vibrator.mk
+endif
+
+# >= SM8350
+ifneq (,$(filter media, $(TARGET_COMMON_QTI_COMPONENTS)))
+include $(QCOM_COMMON_PATH)/vendor/media/qti-media.mk
+endif
+
+# <= SM8250
+ifneq (,$(filter media-legacy, $(TARGET_COMMON_QTI_COMPONENTS)))
+include $(QCOM_COMMON_PATH)/vendor/media-legacy/qti-media-legacy.mk
+endif
+
+# >= SDM845
 ifneq (,$(filter adreno, $(TARGET_COMMON_QTI_COMPONENTS)))
   ifeq ($(call is-board-platform-in-list,$(5_10_FAMILY)),true)
     include $(QCOM_COMMON_PATH)/vendor/adreno/qti-adreno.mk
