@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "f566537a_a68a1937",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000012
+      },
+      "writtenOn": "2022-11-24T06:49:38Z",
+      "side": 1,
+      "message": "without this, there may be flickering in some circumstances.",
+      "revId": "dc9df695e6c9fbba9a82d6e17ecc15c3b8dd1519",
+      "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
+    }
+  ]
+}
