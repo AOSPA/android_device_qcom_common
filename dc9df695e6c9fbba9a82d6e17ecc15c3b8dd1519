@@ -16,6 +16,23 @@
       "message": "without this, there may be flickering in some circumstances.",
       "revId": "dc9df695e6c9fbba9a82d6e17ecc15c3b8dd1519",
       "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "d034cf29_71089e98",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000012
+      },
+      "writtenOn": "2022-11-27T06:57:02Z",
+      "side": 1,
+      "message": "we probably don\u0027t want this for all devices.  not sure who to scope to though.  170M is probably not supported by anything existing.",
+      "revId": "dc9df695e6c9fbba9a82d6e17ecc15c3b8dd1519",
+      "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
     }
   ]
 }
