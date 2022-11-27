@@ -33,6 +33,23 @@
       "message": "we probably don\u0027t want this for all devices.  not sure who to scope to though.  170M is probably not supported by anything existing.",
       "revId": "dc9df695e6c9fbba9a82d6e17ecc15c3b8dd1519",
       "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "d7a36dd4_88ec6661",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000012
+      },
+      "writtenOn": "2022-11-27T06:57:52Z",
+      "side": 1,
+      "message": "Qualcomm does this on 5.10, so we should probably follow suit on 5.4, 4.19, 4.14, and 4.9 I\u0027m thinking.",
+      "revId": "dc9df695e6c9fbba9a82d6e17ecc15c3b8dd1519",
+      "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
     }
   ]
 }
