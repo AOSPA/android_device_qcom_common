@@ -41,6 +41,12 @@ PRODUCT_SYSTEM_EXT_PROPERTIES += \
     media.stagefright.thumbnail.prefer_hw_codecs=true \
     ro.media.recorder-max-base-layer-fps=60
 
+PRODUCT_VENDOR_PROPERTIES += \
+    debug.c2.use_dmabufheaps=1 \
+    vendor.audio.c2.preferred=true \
+    vendor.qc2audio.suspend.enabled=true \
+    vendor.qc2audio.per_frame.flac.dec.enabled=true
+
 ifeq ($(TARGET_BOARD_PLATFORM), bengal)
 # Media Profiles
 PRODUCT_COPY_FILES += \
