@@ -47,6 +47,16 @@ PRODUCT_VENDOR_PROPERTIES += \
     persist.vendor.radio.rat_on=combine \
     persist.vendor.radio.sib16_support=1
 
+ifeq ($(TARGET_BOARD_PLATFORM), holi)
+# Vendor property to enable fetching of QoS parameters via IQtiRadio HAL
+PRODUCT_PROPERTY_OVERRIDES += \
+    persist.vendor.radio.fetchqos=true
+
+#property to enable single ims registration
+PRODUCT_PROPERTY_OVERRIDES += \
+     persist.vendor.rcs.singlereg.feature=1
+endif
+
 # Permissions
 PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.telephony.gsm.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.telephony.gsm.xml \
