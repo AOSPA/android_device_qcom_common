@@ -50,6 +50,11 @@ PRODUCT_PACKAGES += \
     libcodec2_vndk.vendor \
     libplatformconfig
 
+PRODUCT_VENDOR_PROPERTIES += \
+    debug.c2.use_dmabufheaps=1 \
+    vendor.audio.c2.preferred=true \
+    vendor.qc2audio.suspend.enabled=true \
+    vendor.qc2audio.per_frame.flac.dec.enabled=true
 endif
 
 # Get non-open-source specific aspects.
