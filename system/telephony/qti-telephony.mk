@@ -39,6 +39,12 @@ PRODUCT_SYSTEM_EXT_PROPERTIES += \
     telephony.active_modems.max_count=2 \
     telephony.lteOnCdmaDevice=1
 
+ifeq ($(TARGET_BOARD_PLATFORM), holi)
+# System prop to enable fetching of QoS parameters via IQtiRadio HAL
+PRODUCT_SYSTEM_EXT_PROPERTIES += \
+    persist.vendor.radio.fetchqos=true
+endif
+
 # Force voLTE/voWIFI/viLTE
 PRODUCT_SYSTEM_EXT_PROPERTIES += \
     persist.dbg.volte_avail_ovr=1 \
