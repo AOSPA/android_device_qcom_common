@@ -45,7 +45,8 @@ PRODUCT_PACKAGES += \
 # These are already set on 5.10+.
 ifneq (,$(filter 3.18 4.4 4.9 4.14 4.19 5.4, $(TARGET_KERNEL_VERSION)))
 PRODUCT_VENDOR_PROPERTIES += \
-    debug.sf.predict_hwc_composition_strategy=0
+    debug.sf.predict_hwc_composition_strategy=0 \
+    debug.sf.treat_170m_as_sRGB=1
 endif
 
 # Get non-open-source specific aspects.
