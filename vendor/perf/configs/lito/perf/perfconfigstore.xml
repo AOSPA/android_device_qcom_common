@@ -42,7 +42,6 @@ ________________________________________________________________________________
                 <Prop Name="vendor.perf.pfar.enable" Value="1"/>
                 <Prop Name="vendor.perf.fps_switch.enable" Value="1"/>
                 <Prop Name="ro.vendor.perf.gfl.tap_ignore_enable" Value="true"/>
-                <Prop Name="ro.vendor.perf.wlc.heavygame" Value="true"/>
 
                 <!--System Properties -->
                 <Prop Name="ro.vendor.qti.sys.fw.bservice_age" Value="300000" />
@@ -66,6 +65,7 @@ ________________________________________________________________________________
                 <Prop Name="vendor.perf.gestureflingboost.enable" Value="true" />
                 <Prop Name="ro.vendor.qti.sys.fw.bg_apps_limit" Value="60" />
                 <Prop Name="ro.vendor.at_library" Value="libqti-at.so" />
+                <Prop Name="ro.vendor.perf.qgpe" Value="true"/>
 
     </PerfConfigs>
 </PerfConfigsStore>
