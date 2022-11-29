@@ -89,17 +89,15 @@
         <!-- SCHED GROUP UPMIGRATE resource opcode, value-->
         <!-- SCHED_BUSY_HYSTERSIS_CPU_MASK resource opcode, value-->
         <!-- LPM Bias resource opcode, value-->
-        <!-- SCHED DOWNMIGRATE resource opcode, value -->
-        <!-- SCHED UPMIGRATE resource opcode, value -->
-        <!-- SCHED DOWNMIGRATE PRIME resource opcode, value -->
-        <!-- SCHED UPMIGRATE PRIME resource opcode, value -->
+        <!-- SCHED_UP_DOWN MIGRATE resource opcode, value -->
+        <!-- SCHED_UP_DOWN MIGRATE PRIME resource opcode, value -->
 
         <!-- Type="3", FA launch boost of 15sec -->
         <Config
             Id="0x00001081" Type="3" Enable="true" Timeout="15000" Target="lahaina"
             Resources="0x40C00000, 0x3, 0x40C58000, 0x2D, 0x40C54000, 0x41,
-                      0x40C74000, 0xF0, 0x40408000, 0x63, 0x40C20000, 0x28,
-                      0x40C1C000, 0x3C, 0x40C20200, 0x28, 0x40C1C200, 0x3C" />
+                      0x40C74000, 0xF0, 0x40408000, 0x63, 0x40CE0000, 0x003C0028,
+                      0x40CE0200, 0x003C0028" />
 
         <!-- SCHEDBOOST resource opcode, value-->
         <!-- SCHED GROUP DOWNMIGRATE resource opcode, value-->
@@ -142,15 +140,12 @@
         <!-- SCHED GROUP UPMIGRATE resource opcode, value-->
         <!-- SCHED_BUSY_HYSTERSIS_CPU_MASK resource opcode, value-->
         <!-- LPM Bias resource opcode, value-->
-        <!-- SCHED DOWNMIGRATE resource opcode, value -->
-        <!-- SCHED UPMIGRATE resource opcode, value -->
-        <!-- SCHED DOWNMIGRATE PRIME resource opcode, value -->
-        <!-- SCHED UPMIGRATE PRIME resource opcode, value -->
+        <!-- SCHED UP_DOWN_MIGRATE resource opcode, value -->
+        <!-- SCHED UP_DOWN_MIGRATE PRIME resource opcode, value -->
         <!-- STORAGE CLK SCALING resource opcode, value-->
         <!-- CPUBOOST_MIN_FREQ PRIME Core resource opcode, value-->
         <!-- CPUBOOST_MIN_FREQ BIG Core resource opcode, value-->
         <!-- CPUBOOST_MIN_FREQ LITTLE Core resource opcode, value-->
-        <!-- CPUBW_MAX_FREQ resource opcode, value-->
         <!-- CPUBW_MIN_FREQ resource opcode, value-->
         <!-- LLCCBW resource opcode, value-->
         <!-- L3 resource opcode, value-->
@@ -159,10 +154,9 @@
         <Config
             Id="0x00001081" Type="6" Enable="true" Timeout="2000" Target="lahaina"
             Resources="0x40C00000, 0x1, 0x40C58000, 0x2D, 0x40C54000, 0x41,
-                       0x40C74000, 0xF0, 0x40408000, 0x63, 0x40C20000, 0x28,
-                       0x40C1C000, 0x3C, 0x40C20200, 0x28, 0x40C1C200, 0x3C,
-                       0x42C10000, 0x1, 0x40800200, 0x76C, 0x40800000, 0x76C,
-                       0x40800100, 0x4B0, 0x43018000, 0xFF, 0x43010000, 0x50,
+                       0x40C74000, 0xF0, 0x40408000, 0x63, 0x40CE0000, 0x003C0028,
+                       0x40CE0200, 0x003C0028, 0x42C10000, 0x1, 0x40800200, 0x76C,
+                       0x40800000, 0x76C, 0x40800100, 0x4B0, 0x43010000, 0x50,
                        0x41828000, 0x3A, 0x43400000, 0x3480" />
 
      <!-- config_enableLaunchBoost6-->
@@ -255,8 +249,7 @@
         <!-- SCHED_MIN_TASK_UTIL_FOR_BOOST, value-->
         <!-- SCHED_PREFER_SPREAD resource opcode, value -->
         <!-- MIN_ONLINE_CPU_CLUSTER_PRIME opcode, value-->
-        <!-- SCHED DOWNMIGRATE PRIME resource opcode, value -->
-        <!-- SCHED UPMIGRATE PRIME resource opcode, value -->
+        <!-- SCHED UP_DOWN MIGRATE PRIME resource opcode, value -->
 
         <!-- Type="1", Vertical Scroll boost -->
         <Config
@@ -274,13 +267,13 @@
             Resources="0x41828000, 0x19, 0x40800000, 1000, 0x40800100, 1000, 0x40800200, 1000,
                        0x40C00000, 0x2, 0x43400000, 0x1F40, 0x40C74000, 0xFF, 0x40408000, 0x63,
                        0x41000000, 3, 0x40C78000, 0, 0x40C7C000, 0, 0x40CA8000, 4,
-                       0x41000200, 1, 0x40C20200, 0xA, 0x40C1C200, 0x23" />
+                       0x41000200, 1, 0x40CE0200, 0x0023000A" />
         <Config
             Id="0x00001080" Type="1" Enable="true" Target="lahaina" Fps="144"
             Resources="0x41828000, 0x19, 0x40800000, 1300, 0x40800100, 1100, 0x40800200, 1300,
                        0x40C00000, 0x2, 0x43400000, 0x2AF8, 0x40C74000, 0xFF, 0x40408000, 0x63,
                        0x41000000, 3, 0x40C78000, 0, 0x40C7C000, 0, 0x40CA8000, 4,
-                       0x41000200, 1, 0x40C20200, 0xA, 0x40C1C200, 0x23" />
+                       0x41000200, 1, 0x40CE0200, 0x0023000A" />
 
         <!-- CPUBW_MIN_FREQ resource opcode, value-->
         <!-- CPUBOOST_MIN_FREQ BIG CORE resource opcode, value -->
@@ -350,19 +343,20 @@
         <!-- MIN_ONLINE_CPU_CLUSTER_BIG opcode, value-->
         <!-- SCHED_MIN_TASK_UTIL_FOR_COLOCATION, value-->
         <!-- SCHED_MIN_TASK_UTIL_FOR_BOOST, value-->
+        <!-- LLCBW_MIN_FREQ resource opcode, value-->
         <!-- L3_MEMLAT_MIN_FREQ resource opcode, value -->
 
         <Config
             Id="0x00001080" Type="1" Enable="true" Target="shima" Fps="144"
             Resources="0x43010000, 0x26, 0x40800000, 1900, 0x40800100, 1516, 0x40800200, 1862,
                        0x40C00000, 2, 0x40C74000, 0xF0, 0x40408000, 0x27, 0x41000000, 3,
-                       0x40C78000, 0, 0x40C7C000, 0, 0x43400000, 0x1F40" />
+                       0x40C78000, 0, 0x40C7C000, 0, 0x43010000, 0x11, 0x43400000, 0x1F40" />
 
         <Config
             Id="0x00001080" Type="1" Enable="true" Target="yupik" Fps="144"
             Resources="0x43010000, 0x26, 0x40800000, 1900, 0x40800100, 1516, 0x40800200, 1862,
                        0x40C00000, 2, 0x40C74000, 0xF0, 0x40408000, 0x27, 0x41000000, 3,
-                       0x40C78000, 0, 0x40C7C000, 0, 0x43400000, 0x1F40" />
+                       0x40C78000, 0, 0x40C7C000, 0, 0x43010000, 0x11, 0x43400000, 0x1F40" />
 
 
     <!--Horizontal Scroll boost-->
@@ -434,19 +428,20 @@
         <!-- MIN_ONLINE_CPU_CLUSTER_BIG opcode, value-->
         <!-- SCHED_MIN_TASK_UTIL_FOR_COLOCATION, value-->
         <!-- SCHED_MIN_TASK_UTIL_FOR_BOOST, value-->
+        <!-- LLCBW_MIN_FREQ resource opcode, value-->
         <!-- L3_MEMLAT_MIN_FREQ resource opcode, value -->
 
         <Config
             Id="0x00001080" Type="2" Enable="true" Target="shima" Fps="144"
             Resources="0x43010000, 0x26, 0x40800000, 1900, 0x40800100, 1516, 0x40800200, 1862,
                        0x40C00000, 2, 0x40C74000, 0xF0, 0x40408000, 0x27, 0x41000000, 3,
-                       0x40C78000, 0, 0x40C7C000, 0, 0x43400000, 0x1F40" />
+                       0x40C78000, 0, 0x40C7C000, 0, 0x43010000, 0x11, 0x43400000, 0x1F40" />
 
         <Config
             Id="0x00001080" Type="2" Enable="true" Target="yupik" Fps="144"
             Resources="0x43010000, 0x26, 0x40800000, 1900, 0x40800100, 1516, 0x40800200, 1862,
                        0x40C00000, 2, 0x40C74000, 0xF0, 0x40408000, 0x27, 0x41000000, 3,
-                       0x40C78000, 0, 0x40C7C000, 0, 0x43400000, 0x1F40" />
+                       0x40C78000, 0, 0x40C7C000, 0, 0x43010000, 0x11, 0x43400000, 0x1F40" />
 
     <!--Prefling Scroll boost-->
         <!-- LLCBW_MIN_FREQ resource opcode, value-->
@@ -463,8 +458,7 @@
         <!-- SCHED_MIN_TASK_UTIL_FOR_BOOST, value-->
         <!-- SCHED_PREFER_SPREAD resource opcode, value -->
         <!-- MIN_ONLINE_CPU_CLUSTER_PRIME opcode, value-->
-        <!-- SCHED DOWNMIGRATE PRIME resource opcode, value -->
-        <!-- SCHED UPMIGRATE PRIME resource opcode, value -->
+        <!-- SCHED UP_DOWN MIGRATE PRIME resource opcode, value -->
         <!-- TIMEOUT 80ms -->
         <!-- Type="4", Prefling boost -->
         <Config
@@ -482,13 +476,13 @@
             Resources="0x41828000, 0x19, 0x40800000, 1000, 0x40800100, 1000, 0x40800200, 1000,
                        0x40C00000, 0x2, 0x43400000, 0x1F40, 0x40C74000, 0xFF, 0x40408000, 0x63,
                        0x41000000, 3, 0x40C78000, 0, 0x40C7C000, 0, 0x40CA8000, 4,
-                       0x41000200, 1, 0x40C20200, 0xA, 0x40C1C200, 0x23" />
+                       0x41000200, 1, 0x40CE0200, 0x0023000A" />
         <Config
             Id="0x00001080" Type="4" Enable="true" Timeout="80" Target="lahaina" Fps="144"
             Resources="0x41828000, 0x19, 0x40800000, 1300, 0x40800100, 1100, 0x40800200, 1300,
                        0x40C00000, 0x2, 0x43400000, 0x2AF8, 0x40C74000, 0xFF, 0x40408000, 0x63,
                        0x41000000, 3, 0x40C78000, 0, 0x40C7C000, 0, 0x40CA8000, 4,
-                       0x41000200, 1, 0x40C20200, 0xA, 0x40C1C200, 0x23" />
+                       0x41000200, 1, 0x40CE0200, 0x0023000A" />
 
         <!-- CPUBW_MIN_FREQ resource opcode, value-->
         <!-- CPUBOOST_MIN_FREQ BIG CORE resource opcode, value -->
@@ -559,19 +553,20 @@
         <!-- MIN_ONLINE_CPU_CLUSTER_BIG opcode, value-->
         <!-- SCHED_MIN_TASK_UTIL_FOR_COLOCATION, value-->
         <!-- SCHED_MIN_TASK_UTIL_FOR_BOOST, value-->
+        <!-- LLCBW_MIN_FREQ resource opcode, value-->
         <!-- L3_MEMLAT_MIN_FREQ resource opcode, value -->
 
         <Config
             Id="0x00001080" Type="4" Enable="true" Timeout="115" Target="shima" Fps="144"
             Resources="0x43010000, 0x26, 0x40800000, 1900, 0x40800100, 1516, 0x40800200, 1862,
                        0x40C00000, 2, 0x40C74000, 0xF0, 0x40408000, 0x27, 0x41000000, 3,
-                       0x40C78000, 0, 0x40C7C000, 0, 0x43400000, 0x1F40" />
+                       0x40C78000, 0, 0x40C7C000, 0, 0x43010000, 0x11, 0x43400000, 0x1F40" />
 
         <Config
             Id="0x00001080" Type="4" Enable="true" Timeout="115" Target="yupik" Fps="144"
             Resources="0x43010000, 0x26, 0x40800000, 1900, 0x40800100, 1516, 0x40800200, 1862,
                        0x40C00000, 2, 0x40C74000, 0xF0, 0x40408000, 0x27, 0x41000000, 3,
-                       0x40C78000, 0, 0x40C7C000, 0, 0x43400000, 0x1F40" />
+                       0x40C78000, 0, 0x40C7C000, 0, 0x43010000, 0x11, 0x43400000, 0x1F40" />
 
     <!--MTP boost-->
         <!-- SCHEDBOOST resource opcode, value-->
@@ -621,8 +616,7 @@
         <!-- SCHED_MIN_TASK_UTIL_FOR_BOOST, value-->
         <!-- SCHED_PREFER_SPREAD resource opcode, value -->
         <!-- MIN_ONLINE_CPU_CLUSTER_PRIME opcode, value-->
-        <!-- SCHED DOWNMIGRATE PRIME resource opcode, value -->
-        <!-- SCHED UPMIGRATE PRIME resource opcode, value -->
+        <!-- SCHED UP_DOWN MIGRATE PRIME resource opcode, value -->
         <!-- Type="1", Drag boost -->
         <Config
             Id="0x00001087" Type="1" Enable="true" Timeout="0" Target="lahaina" Fps="60"
@@ -639,13 +633,13 @@
             Resources="0x41828000, 0x11, 0x40800000, 1000, 0x40800100, 1000, 0x40800200, 1000,
                        0x40C00000, 0x2, 0x43400000, 0x1F40, 0x40C74000, 0xFF, 0x40408000, 0x63,
                        0x41000000, 3, 0x40C78000, 0, 0x40C7C000, 0, 0x40CA8000, 4,
-                       0x41000200, 1, 0x40C20200, 0xA, 0x40C1C200, 0x23" />
+                       0x41000200, 1, 0x40CE0200, 0x0023000A" />
         <Config
             Id="0x00001087" Type="1" Enable="true" Timeout="0" Target="lahaina" Fps="144"
             Resources="0x41828000, 0x11, 0x40800000, 1300, 0x40800100, 1100, 0x40800200, 1300,
                        0x40C00000, 0x2, 0x43400000, 0x2AF8, 0x40C74000, 0xFF, 0x40408000, 0x63,
                        0x41000000, 3, 0x40C78000, 0, 0x40C7C000, 0, 0x40CA8000, 4,
-                       0x41000200, 1, 0x40C20200, 0xA, 0x40C1C200, 0x23" />
+                       0x41000200, 1, 0x40CE0200, 0x0023000A" />
 
         <!-- CPUBOOST_MIN_FREQ BIG CORE resource opcode, value -->
         <!-- CPUBOOST_MIN_FREQ LITTLE Core resource opcode, value -->
