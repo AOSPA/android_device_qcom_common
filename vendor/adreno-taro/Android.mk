@@ -14,7 +14,7 @@
 
 LOCAL_PATH := $(call my-dir)
 
-ifneq (,$(filter adreno, $(TARGET_COMMON_QTI_COMPONENTS)))
+ifneq (,$(filter adreno-taro, $(TARGET_COMMON_QTI_COMPONENTS)))
 
 include $(CLEAR_VARS)
 

@@ -38,9 +38,11 @@ TARGET_COMMON_QTI_COMPONENTS += media-legacy
 endif
 
 ifneq (,$(filter true, $(call is-board-platform-in-list,$(3_18_FAMILY) $(4_4_FAMILY) msm8953)))
-TARGET_COMMON_QTI_COMPONENTS += adreno-legacy
+TARGET_COMMON_QTI_COMPONENTS += adreno-5xx
+else ifneq (,$(filter true, $(call is-board-platform-in-list,$(5_4_FAMILY) $(5_10_FAMILY))))
+TARGET_COMMON_QTI_COMPONENTS += adreno-taro
 else
-TARGET_COMMON_QTI_COMPONENTS += adreno
+TARGET_COMMON_QTI_COMPONENTS += adreno-6xx-legacy
 endif
 
 ifeq ($(call is-board-platform-in-list,$(3_18_FAMILY) $(4_4_FAMILY) msm8953),true)
@@ -92,6 +94,10 @@ include $(QCOM_COMMON_PATH)/vendor/vibrator/qti-vibrator.mk
 endif
 
 # >= SM8350
+ifneq (,$(filter adreno-taro, $(TARGET_COMMON_QTI_COMPONENTS)))
+include $(QCOM_COMMON_PATH)/vendor/adreno-taro/qti-adreno-taro.mk
+endif
+
 ifneq (,$(filter media, $(TARGET_COMMON_QTI_COMPONENTS)))
 include $(QCOM_COMMON_PATH)/vendor/media/qti-media.mk
 endif
@@ -101,9 +107,9 @@ ifneq (,$(filter media-legacy, $(TARGET_COMMON_QTI_COMPONENTS)))
 include $(QCOM_COMMON_PATH)/vendor/media-legacy/qti-media-legacy.mk
 endif
 
-# >= SDM845
-ifneq (,$(filter adreno, $(TARGET_COMMON_QTI_COMPONENTS)))
-include $(QCOM_COMMON_PATH)/vendor/adreno/qti-adreno.mk
+# >= SDM845 && <= SM8250
+ifneq (,$(filter adreno-6xx-legacy, $(TARGET_COMMON_QTI_COMPONENTS)))
+include $(QCOM_COMMON_PATH)/vendor/adreno-6xx-legacy/qti-adreno-6xx-legacy.mk
 endif
 
 ifneq (,$(filter audio, $(TARGET_COMMON_QTI_COMPONENTS)))
@@ -135,6 +141,6 @@ include $(QCOM_COMMON_PATH)/system/wfd-legacy/qti-wfd-legacy.mk
 include $(QCOM_COMMON_PATH)/vendor/wfd-legacy/qti-wfd-legacy.mk
 endif
 
-ifneq (,$(filter adreno-legacy, $(TARGET_COMMON_QTI_COMPONENTS)))
-include $(QCOM_COMMON_PATH)/vendor/adreno-legacy/qti-adreno-legacy.mk
+ifneq (,$(filter adreno-5xx, $(TARGET_COMMON_QTI_COMPONENTS)))
+include $(QCOM_COMMON_PATH)/vendor/adreno-5xx/qti-adreno-5xx.mk
 endif
