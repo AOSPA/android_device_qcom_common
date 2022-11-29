@@ -12,7 +12,9 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-# Current tag - LA.VENDOR.1.0.r1-16000-WAIPIO.QSSI13.0
+# Dependencies
+PRODUCT_PACKAGES += \
+    vendor.qti.hardware.display.mapper@2.0.vendor
 
 # Permissions
 PRODUCT_COPY_FILES += \
@@ -20,15 +22,13 @@ PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.vulkan.level-1.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.vulkan.level-1.xml \
     frameworks/native/data/etc/android.hardware.vulkan.version-1_1.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.vulkan.version-1_1.xml \
     frameworks/native/data/etc/android.hardware.vulkan.compute-0.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.vulkan.compute-0.xml \
-    frameworks/native/data/etc/android.software.opengles.deqp.level-2021-03-01.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.software.opengles.deqp.level.xml \
-    frameworks/native/data/etc/android.software.vulkan.deqp.level-2021-03-01.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.software.vulkan.deqp.level.xml
+    frameworks/native/data/etc/android.software.vulkan.deqp.level-2020-03-01.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.software.vulkan.deqp.level.xml
 
 # Properties
 PRODUCT_VENDOR_PROPERTIES += \
     ro.hardware.egl=adreno \
     ro.hardware.vulkan=adreno \
-    ro.opengles.version=196610 \
-    graphics.gpu.profiler.support=true
+    ro.opengles.version=196610
 
 # Get non-open-source specific aspects.
-$(call inherit-product, vendor/qcom/common/vendor/adreno/adreno-vendor.mk)
+$(call inherit-product, vendor/qcom/common/vendor/adreno-5xx/adreno-5xx-vendor.mk)
