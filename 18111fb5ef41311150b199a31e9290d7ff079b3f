@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "fcbaa2cc_849018b1",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 3
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000012
+      },
+      "writtenOn": "2022-11-29T07:56:14Z",
+      "side": 1,
+      "message": "as is, this will break non-main components such as legacy.  We\u0027ll need new conditions for the Android.mks and anywhere else we\u0027re checking.",
+      "revId": "18111fb5ef41311150b199a31e9290d7ff079b3f",
+      "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
+    }
+  ]
+}
