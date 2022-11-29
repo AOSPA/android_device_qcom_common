@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+ * Copyright (c) 2019 Qualcomm Technologies, Inc.
+ * All Rights Reserved.
+ * Confidential and Proprietary - Qualcomm Technologies, Inc.
+-->
+
+<!-- This is PerfConfigsStore file which returns the value when a
+particular property name is invoked -->
+
+<!-- This file supports only Prop tag, which has the following fields
+* Name, to identify the name of the property. The names of the
+properties have been classified into Vendor and System property.
+* Value, the new value to be returned as string when respective
+property Name is called. -->
+
+<PerfConfigsStore>
+    <PerfConfigs>
+
+                <!--Vendor Properties -->
+                <Prop Name="vendor.debug.enable.lm" Value="true" />
+                <Prop Name="vendor.iop.enable_uxe" Value="1" />
+                <Prop Name="ro.lmk.enable_preferred_apps" Value="true" />
+                <Prop Name="vendor.enable.prefetch" Value="false" />
+                <Prop Name="vendor.iop.enable_prefetch_ofr" Value="0" />
+                <Prop Name="vendor.perf.iop_v3.enable" Value="false" />
+                <Prop Name="vendor.perf.iop_v3.enable.debug" Value="false" />
+                <Prop Name="vendor.debug.enable.memperfd" Value="true" />
+                <Prop Name="vendor.perf.pfar.enable" Value="1"/>
+
+                <!--System Properties -->
+                <Prop Name="ro.vendor.qti.sys.fw.bservice_age" Value="300000" />
+                <Prop Name="ro.vendor.qti.sys.fw.bservice_limit" Value="15" />
+                <Prop Name="ro.vendor.qti.sys.fw.bservice_enable" Value="true" />
+                <Prop Name="ro.vendor.qti.sys.fw.use_trim_settings" Value="true" />
+                <Prop Name="ro.vendor.qti.sys.fw.empty_app_percent" Value="50" />
+                <Prop Name="ro.vendor.qti.sys.fw.trim_empty_percent" Value="100" />
+                <Prop Name="ro.vendor.qti.sys.fw.trim_cache_percent" Value="100" />
+                <Prop Name="ro.vendor.qti.sys.fw.trim_enable_memory" Value="4294967296" />
+                <Prop Name="ro.vendor.qti.am.reschedule_service" Value="true" />
+                <Prop Name="ro.vendor.iocgrp.config" Value="0" />
+                <Prop Name="ro.lmk.kill_heaviest_task_dup" Value="true" />
+                <Prop Name="ro.lmk.enhance_batch_kill" Value="false" />
+                <Prop Name="ro.lmk.enable_watermark_check" Value="true" />
+                <Prop Name="ro.lmk.enable_userspace_lmk" Value="true" />
+                <Prop Name="ro.lmk.use_new_strategy_dup" Value="true"/>
+                <Prop Name="vendor.perf.gestureflingboost.enable" Value="true" />
+                <Prop Name="ro.vendor.qti.sys.fw.bg_apps_limit" Value="60" />
+                <Prop Name="ro.vendor.at_library" Value="libqti-at.so" />
+                <Prop Name="vendor.appcompact.enable_app_compact" Value="true" />
+                <Prop Name="vendor.appcompact.full_compact_type"  Value="2" />
+                <Prop Name="vendor.appcompact.some_compact_type"  Value="4" />
+                <Prop Name="vendor.perf.bgt.enable" Value="true" />
+
+                <!--Mention all the target/kernel specific properties at the end of xml file
+                    All the default valuea are kept above-->
+                <Prop Name="ro.vendor.qti.sys.fw.bservice_age" Value="5000" Variant="bengal_32" />
+                <Prop Name="ro.vendor.qti.sys.fw.bg_apps_limit" Value="32"  Variant="bengal_32" />
+                <Prop Name="ro.vendor.qti.sys.fw.bservice_limit" Value="5"  Variant="bengal_32" />
+                <Prop Name="ro.lmk.kill_heaviest_task_dup"    Value="false" Variant="bengal_32" />
+                <Prop Name="vendor.iop.enable_uxe"               Value="0"  Variant="bengal_32" />
+                <Prop Name="ro.lmk.enable_preferred_apps"     Value="false" Variant="bengal_32"/>
+                <Prop Name="ro.lmk.psi_window_size_ms"          Value="500" Variant="bengal_32"/>
+                <Prop Name="ro.lmk.psi_poll_period_scrit_ms"    Value="100" Variant="bengal_32"/>
+                <Prop Name="ro.lmk.psi_scrit_complete_stall_ms" Value="85"  Variant="bengal_32"/>
+
+                <Prop Name="ro.vendor.qti.sys.fw.bservice_age" Value="5000" Variant="bengal_32go" />
+                <Prop Name="ro.vendor.qti.sys.fw.bservice_limit" Value="5"  Variant="bengal_32go" />
+                <Prop Name="ro.vendor.qti.sys.fw.bg_apps_limit" Value="32"  Variant="bengal_32go" />
+                <Prop Name="ro.lmk.kill_heaviest_task_dup" Value="false"    Variant="bengal_32go" />
+                <Prop Name="vendor.iop.enable_uxe"             Value="0"    Variant="bengal_32go" />
+                <Prop Name="ro.lmk.enable_preferred_apps"    Value="false"  Variant="bengal_32go"/>
+                <Prop Name="ro.lmk.psi_window_size_ms"         Value="500"  Variant="bengal_32go"/>
+                <Prop Name="ro.lmk.psi_poll_period_scrit_ms"   Value="100"  Variant="bengal_32go"/>
+                <Prop Name="ro.lmk.psi_scrit_complete_stall_ms" Value="85"  Variant="bengal_32go"/>
+
+                <!--Mention all the khaje specific properties here -->
+                <Prop Name="ro.lmk.enable_preferred_apps"        Value="false" Target="khaje" Ram="3" />
+                <Prop Name="ro.lmk.kill_heaviest_task_dup"       Value="false" Target="khaje" Ram="3" />
+                <Prop Name="ro.lmk.psi_window_size_ms"           Value="500"   Target="khaje" Ram="3" />
+                <Prop Name="ro.lmk.psi_poll_period_scrit_ms"     Value="100"   Target="khaje" Ram="3" />
+                <Prop Name="ro.lmk.psi_scrit_complete_stall_ms"  Value="85"    Target="khaje" Ram="3" />
+                <Prop Name="vendor.iop.enable_uxe"               Value="0"     Target="khaje" Ram="3" />
+                <Prop Name="ro.vendor.qti.sys.fw.bservice_limit" Value="5"     Target="khaje" Ram="3" />
+                <Prop Name="ro.vendor.qti.sys.fw.bservice_age"   Value="5000"  Target="khaje" Ram="3" />
+                <Prop Name="ro.vendor.qti.sys.fw.bg_apps_limit"  Value="32"    Target="khaje" Ram="3" />
+                <Prop Name="ro.vendor.qti.sys.fw.bg_apps_limit"  Value="32"    Target="khaje" Ram="4" />
+
+    </PerfConfigs>
+</PerfConfigsStore>

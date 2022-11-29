@@ -17,8 +17,7 @@
     <PerfBoost>
 
     <!--app lauch boost-->
-        <!-- SCHED DOWNMIGRATE resource opcode, value-->
-        <!-- SCHED UPMIGRATE resource opcode, value-->
+        <!-- SCHED_UP_DOWN MIGRATE resource opcode, value-->
         <!-- CPUBOOST_MAX_FREQ BIG Core resource opcode, value-->
         <!-- CPUBOOST_MAX_FREQ LITTLE Core resource opcode, value-->
         <!-- CPUBOOST_MIN_FREQ BIG Core resource opcode, value-->
@@ -27,7 +26,7 @@
         <!-- Type="1", main launch boost of 2sec -->
        <Config
            Id="0x00001081" Type="1" Enable="true" Timeout="2000"
-           Resources="0x40C20000, 0x28, 0x40C1C000, 0x32, 0x40804000, 0xFFF, 0x40804100, 0xFFF, 0x40800000, 1516,
+           Resources="0x40CE0000, 0x00320028, 0x40804000, 0xFFF, 0x40804100, 0xFFF, 0x40800000, 1516,
                       0x40800100, 1516" />
 
 

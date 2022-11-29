@@ -33,6 +33,8 @@ as anyway perflock calls of these resources would fail. -->
 
         <Config MajorValue="0x3" MinorValue="0x3" Supported="no" /> <!-- sched_small_task -->
         <Config MajorValue="0x3" MinorValue="0x6" Supported="no" /> <!-- sched_init_task_load -->
+        <Config MajorValue="0x3" MinorValue="0x7" Supported="no" /> <!-- sched_upmigrate -->
+        <Config MajorValue="0x3" MinorValue="0x8" Supported="no" /> <!-- sched_downmigrate -->
         <Config MajorValue="0x3" MinorValue="0xB" Supported="no" /> <!-- sched_spill_nr_run -->
         <Config MajorValue="0x3" MinorValue="0xC" Supported="no" /> <!-- sched_static_cpu_pwr_cost -->
         <Config MajorValue="0x3" MinorValue="0xD" Supported="no" /> <!-- sched_restrict_cluster_spill -->
@@ -42,6 +44,7 @@ as anyway perflock calls of these resources would fail. -->
         <Config MajorValue="0x3" MinorValue="0x22" Supported="no" Target="shima" /> <!-- sched_task_unfilter_nr_windows -->
         <Config MajorValue="0x3" MinorValue="0x22" Supported="no" Target="yupik" /> <!-- sched_task_unfilter_nr_windows -->
         <Config MajorValue="0x3" MinorValue="0x37" Supported="no" /> <!-- Enabled till Kernel 4.19 -->
+        <Config MajorValue="0x3" MinorValue="0x38" Node="/proc/sys/kernel/%s" Supported="yes"/>
         <Config MajorValue="0x3" MinorValue="0x39" Supported="no" /> <!-- Enabled till Kernel 4.19 -->
 
         <Config MajorValue="0x6" MinorValue="0x0" Supported="no" Target="lahaina" />
