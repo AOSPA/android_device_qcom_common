@@ -16,6 +16,24 @@
       "message": "any specific testing on this or just followed 845 and higher?",
       "revId": "4ff9b449607f82219e09f3217215cceff5ca6b38",
       "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "81d69a7f_f5adaa71",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 3
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000737
+      },
+      "writtenOn": "2022-11-29T02:59:00Z",
+      "side": 1,
+      "message": "Qualcomm add in Feb for bengal on target.rc, I think lito has that set too. I think these values ​​can be set for all.",
+      "parentUuid": "48f4bab8_125952d5",
+      "revId": "4ff9b449607f82219e09f3217215cceff5ca6b38",
+      "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
     }
   ]
 }
