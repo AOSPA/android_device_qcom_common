@@ -1,0 +1,101 @@
+# Copyright (C) 2022 Paranoid Android
+#
+# Licensed under the Apache License, Version 2.0 (the "License");
+# you may not use this file except in compliance with the License.
+# You may obtain a copy of the License at
+#
+# http://www.apache.org/licenses/LICENSE-2.0
+#
+# Unless required by applicable law or agreed to in writing, software
+# distributed under the License is distributed on an "AS IS" BASIS,
+# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+# See the License for the specific language governing permissions and
+# limitations under the License.
+
+on post-fs-data
+    # Disable zram readahead
+    write /proc/sys/vm/page-cluster 0
+    # Override readahead to 2MiB during boot
+    write /sys/block/dm-0/queue/read_ahead_kb 2048
+    write /sys/block/dm-1/queue/read_ahead_kb 2048
+    write /sys/block/dm-2/queue/read_ahead_kb 2048
+    write /sys/block/dm-3/queue/read_ahead_kb 2048
+    write /sys/block/dm-4/queue/read_ahead_kb 2048
+    write /sys/block/dm-5/queue/read_ahead_kb 2048
+    write /sys/block/dm-6/queue/read_ahead_kb 2048
+    write /sys/block/dm-7/queue/read_ahead_kb 2048
+    write /sys/block/dm-8/queue/read_ahead_kb 2048
+    write /sys/block/dm-9/queue/read_ahead_kb 2048
+    write /sys/block/mmcblk0/queue/read_ahead_kb 2048
+    write /sys/block/sda/queue/read_ahead_kb 2048
+    write /sys/block/sdb/queue/read_ahead_kb 2048
+    write /sys/block/sdc/queue/read_ahead_kb 2048
+    write /sys/block/sdd/queue/read_ahead_kb 2048
+    write /sys/block/sde/queue/read_ahead_kb 2048
+    write /sys/block/sdf/queue/read_ahead_kb 2048
+
+on property:vendor.post_boot.parsed=1
+    # Set restricted cpuset to the same CPUs as system-background
+    copy /dev/cpuset/system-background/cpus /dev/cpuset/restricted/cpus
+    # Reset readahead to 128KiB
+    write /sys/block/dm-0/queue/read_ahead_kb 128
+    write /sys/block/dm-1/queue/read_ahead_kb 128
+    write /sys/block/dm-2/queue/read_ahead_kb 128
+    write /sys/block/dm-3/queue/read_ahead_kb 128
+    write /sys/block/dm-4/queue/read_ahead_kb 128
+    write /sys/block/dm-5/queue/read_ahead_kb 128
+    write /sys/block/dm-6/queue/read_ahead_kb 128
+    write /sys/block/dm-7/queue/read_ahead_kb 128
+    write /sys/block/dm-8/queue/read_ahead_kb 128
+    write /sys/block/dm-9/queue/read_ahead_kb 128
+    write /sys/block/dm-10/queue/read_ahead_kb 128
+    write /sys/block/dm-11/queue/read_ahead_kb 128
+    write /sys/block/dm-12/queue/read_ahead_kb 128
+    write /sys/block/dm-13/queue/read_ahead_kb 128
+    write /sys/block/dm-14/queue/read_ahead_kb 128
+    write /sys/block/dm-15/queue/read_ahead_kb 128
+    write /sys/block/dm-16/queue/read_ahead_kb 128
+    write /sys/block/dm-17/queue/read_ahead_kb 128
+    write /sys/block/dm-18/queue/read_ahead_kb 128
+    write /sys/block/dm-19/queue/read_ahead_kb 128
+    write /sys/block/dm-20/queue/read_ahead_kb 128
+    write /sys/block/dm-21/queue/read_ahead_kb 128
+    write /sys/block/dm-22/queue/read_ahead_kb 128
+    write /sys/block/dm-23/queue/read_ahead_kb 128
+    write /sys/block/dm-24/queue/read_ahead_kb 128
+    write /sys/block/dm-25/queue/read_ahead_kb 128
+    write /sys/block/dm-26/queue/read_ahead_kb 128
+    write /sys/block/dm-27/queue/read_ahead_kb 128
+    write /sys/block/dm-28/queue/read_ahead_kb 128
+    write /sys/block/dm-29/queue/read_ahead_kb 128
+    write /sys/block/dm-30/queue/read_ahead_kb 128
+    write /sys/block/dm-31/queue/read_ahead_kb 128
+    write /sys/block/dm-32/queue/read_ahead_kb 128
+    write /sys/block/dm-33/queue/read_ahead_kb 128
+    write /sys/block/dm-34/queue/read_ahead_kb 128
+    write /sys/block/dm-35/queue/read_ahead_kb 128
+    write /sys/block/dm-36/queue/read_ahead_kb 128
+    write /sys/block/dm-37/queue/read_ahead_kb 128
+    write /sys/block/dm-38/queue/read_ahead_kb 128
+    write /sys/block/dm-39/queue/read_ahead_kb 128
+    write /sys/block/dm-40/queue/read_ahead_kb 128
+    write /sys/block/dm-41/queue/read_ahead_kb 128
+    write /sys/block/dm-42/queue/read_ahead_kb 128
+    write /sys/block/dm-43/queue/read_ahead_kb 128
+    write /sys/block/dm-44/queue/read_ahead_kb 128
+    write /sys/block/dm-45/queue/read_ahead_kb 128
+    write /sys/block/dm-46/queue/read_ahead_kb 128
+    write /sys/block/dm-47/queue/read_ahead_kb 128
+    write /sys/block/dm-48/queue/read_ahead_kb 128
+    write /sys/block/dm-49/queue/read_ahead_kb 128
+    write /sys/block/mmcblk0/queue/read_ahead_kb 128
+    write /sys/block/sda/queue/read_ahead_kb 128
+    write /sys/block/sdb/queue/read_ahead_kb 128
+    write /sys/block/sdc/queue/read_ahead_kb 128
+    write /sys/block/sdd/queue/read_ahead_kb 128
+    write /sys/block/sde/queue/read_ahead_kb 128
+    write /sys/block/sdf/queue/read_ahead_kb 128
+
+on property:ro.board.platform=lahaina
+    # Setup foreground cpuset for display composer.
+    write /dev/cpuset/foreground/cpus 0-6
