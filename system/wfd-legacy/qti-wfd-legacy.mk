@@ -12,6 +12,8 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
+TARGET_WFD_COMPONENT_VARIANT := wfd-legacy
+
 DEVICE_FRAMEWORK_MANIFEST_FILE += device/qcom/common/system/wfd-legacy/configs/vintf/framework_manifest.xml
 
 PRODUCT_PACKAGES += \

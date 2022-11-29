@@ -1,3 +1,5 @@
+ifeq ($(TARGET_MEDIA_COMPONENT_VARIANT),media-legacy)
+
 LOCAL_PATH := $(call my-dir)
 
 ifeq ($(BUILD_BROKEN_USES_BUILD_COPY_HEADERS),true)
