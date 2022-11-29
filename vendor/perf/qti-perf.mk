@@ -12,13 +12,18 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
+# Current tag - LA.VENDOR.1.0.r1-16000-WAIPIO.QSSI13.0
+
 PRODUCT_SOONG_NAMESPACES += \
     device/qcom/common/vendor/perf
+
+TARGET_PERF_COMPONENT_VARIANT := perf
 
 # Configs
 PRODUCT_COPY_FILES += \
     $(call find-copy-subdir-files,*,$(QCOM_COMMON_PATH)/vendor/perf/configs/common,$(TARGET_COPY_OUT_VENDOR)/etc) \
-    $(call find-copy-subdir-files,*,$(QCOM_COMMON_PATH)/vendor/perf/configs/$(TARGET_BOARD_PLATFORM),$(TARGET_COPY_OUT_VENDOR)/etc)
+    $(call find-copy-subdir-files,*,$(QCOM_COMMON_PATH)/vendor/perf/configs/$(TARGET_BOARD_PLATFORM),$(TARGET_COPY_OUT_VENDOR)/etc) \
+    $(call find-copy-subdir-files,*,$(QCOM_COMMON_PATH)/vendor/perf/configs/test,$(TARGET_COPY_OUT_VENDOR)/etc)
 
 # Disable IOP HAL for select platforms.
 ifeq ($(call is-board-platform-in-list, msm8937 msm8953 msm8998 qcs605 sdm660 sdm710),true)
@@ -49,7 +54,7 @@ endif
 
 # Properties
 PRODUCT_VENDOR_PROPERTIES += \
-    ro.vendor.perf-hal.ver=2.2 \
+    ro.vendor.perf-hal.ver=2.3 \
     ro.vendor.extension_library=libqti-perfd-client.so \
     ro.vendor.perf.scroll_opt=true \
     ro.vendor.qspm.enable=true \
