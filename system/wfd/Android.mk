@@ -14,7 +14,7 @@
 
 LOCAL_PATH := $(call my-dir)
 
-ifneq (,$(filter wfd, $(TARGET_COMMON_QTI_COMPONENTS)))
+ifeq ($(TARGET_WFD_COMPONENT_VARIANT),wfd)
 
 include $(CLEAR_VARS)
 
