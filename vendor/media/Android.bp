@@ -1,0 +1,9 @@
+soong_namespace {
+}
+
+prebuilt_hidl_interfaces {
+    name: "hidl_qconfig_interface",
+    interfaces: [
+        "vendor.qti.hardware.qconfig@1.0::IQConfig",
+    ],
+}
