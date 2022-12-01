@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "5cb7f011_5a06d53a",
+        "filename": "system/telephony/qti-telephony.mk",
+        "patchSetId": 1
+      },
+      "lineNbr": 44,
+      "author": {
+        "id": 1000012
+      },
+      "writtenOn": "2022-12-01T20:57:37Z",
+      "side": 1,
+      "message": "do we need this twice?",
+      "revId": "16c4abe92d7acf6b00ee8024b478037f5574ccfb",
+      "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
+    }
+  ]
+}
