@@ -51,7 +51,9 @@ PRODUCT_COPY_FILES += \
 # Packages
 PRODUCT_PACKAGES += \
     libcodec2_hidl@1.0.vendor \
-    libcodec2_vndk.vendor
+    libcodec2_vndk.vendor \
+    init.qti.media.bengal.rc \
+    init.qti.media.bengal.sh
 
 PRODUCT_VENDOR_PROPERTIES += \
     debug.c2.use_dmabufheaps=1 \
