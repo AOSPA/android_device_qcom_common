@@ -46,13 +46,15 @@ PRODUCT_SYSTEM_EXT_PROPERTIES += \
 ifeq ($(TARGET_BOARD_PLATFORM), bengal)
 # Media Profiles
 PRODUCT_COPY_FILES += \
-    device/qcom/common/vendor/media/media_profiles.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_profiles.xml
+    device/qcom/common/vendor/media/media_profiles.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_profiles.xml \
+    $(TOPDIR)device/qcom/common/vendor/media/init.qti.media.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/init.qti.media.rc \
+    $(TOPDIR)device/qcom/common/vendor/media/init.qti.media.sh:$(TARGET_COPY_OUT_VENDOR)/bin/init.qti.media.sh
 
 # Packages
 PRODUCT_PACKAGES += \
     libcodec2_hidl@1.0.vendor \
     libcodec2_vndk.vendor
-
+    
 PRODUCT_VENDOR_PROPERTIES += \
     debug.c2.use_dmabufheaps=1 \
     vendor.audio.c2.preferred=true \
