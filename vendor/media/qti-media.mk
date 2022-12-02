@@ -49,6 +49,9 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     libcodec2_hidl@1.0.vendor \
     libcodec2_vndk.vendor
+
+PRODUCT_PACKAGES += \
+    init.qti.media.sh
 endif
 
 # Get non-open-source specific aspects.
