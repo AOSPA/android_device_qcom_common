@@ -51,5 +51,10 @@ PRODUCT_PACKAGES += \
     libcodec2_vndk.vendor
 endif
 
+ifeq ($(call is-board-platform-in-list,$(5_10_FAMILY)),true)
+PRODUCT_PACKAGES += \
+    init.qti.media.sh
+endif
+ 
 # Get non-open-source specific aspects.
 $(call inherit-product-if-exists, vendor/qcom/common/vendor/media/media-vendor.mk)
