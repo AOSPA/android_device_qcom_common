@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "febfbb7a_2d90ae25",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000012
+      },
+      "writtenOn": "2022-12-03T17:59:59Z",
+      "side": 1,
+      "message": "should this just go in the root of the component? I don\u0027t see the need for the folder.",
+      "revId": "33b224486021e0888f2ba6703e56d9c133b33325",
+      "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
+    }
+  ]
+}
