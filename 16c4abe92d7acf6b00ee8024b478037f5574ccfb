@@ -52,6 +52,24 @@
       "parentUuid": "0d451afa_d2b72a21",
       "revId": "16c4abe92d7acf6b00ee8024b478037f5574ccfb",
       "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "d47dc211_1723b13a",
+        "filename": "system/telephony/qti-telephony.mk",
+        "patchSetId": 1
+      },
+      "lineNbr": 44,
+      "author": {
+        "id": 1000737
+      },
+      "writtenOn": "2022-12-03T12:40:11Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "59606e6e_a86a7304",
+      "revId": "16c4abe92d7acf6b00ee8024b478037f5574ccfb",
+      "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
     }
   ]
 }
