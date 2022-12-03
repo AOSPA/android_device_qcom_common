@@ -37,6 +37,54 @@
     <Meters>
         <SamplesRequired>4</SamplesRequired>
         <Meter>
+            <Name>MinDDR</Name>
+            <Triggers>
+                <Trigger>
+                   <Primary>true</Primary>
+                   <AsyncId>VENDOR_HINT_APP_WORKLOAD_TYPE</AsyncId>
+                   <AsyncType>1</AsyncType>
+                </Trigger>
+
+                <Trigger>
+                   <Primary>true</Primary>
+                   <AsyncId>VENDOR_HINT_TAP_EVENT</AsyncId>
+                   <AsyncType>-1</AsyncType>
+                </Trigger>
+
+                <Trigger>
+                   <Primary>true</Primary>
+                   <AsyncId>VENDOR_HINT_ACTIVITY_START</AsyncId>
+                   <AsyncType>-1</AsyncType>
+                </Trigger>
+
+                <Trigger>
+                    <Primary>true</Primary>
+                    <AsyncId>VENDOR_HINT_ACTIVITY_PAUSE</AsyncId>
+                    <AsyncType>-1</AsyncType>
+                </Trigger>
+
+                <Trigger>
+                    <Primary>true</Primary>
+                    <AsyncId>VENDOR_HINT_ACTIVITY_RESUME</AsyncId>
+                    <AsyncType>-1</AsyncType>
+                </Trigger>
+
+                <Trigger>
+                   <Primary>true</Primary>
+                   <AsyncId>VENDOR_HINT_ACTIVITY_STOP</AsyncId>
+                   <AsyncType>-1</AsyncType>
+                </Trigger>
+
+            </Triggers>
+            <Configs>
+                <MEMLAT_FREQ_VOTE_LITTLE_PATH>/sys/class/devfreq/soc:qcom,cpu0-llcc-ddr-lat/cur_freq</MEMLAT_FREQ_VOTE_LITTLE_PATH>
+                <MEMLAT_FREQ_VOTE_BIG_PATH>/sys/class/devfreq/soc:qcom,cpu6-llcc-ddr-lat/cur_freq</MEMLAT_FREQ_VOTE_BIG_PATH>
+                <MEMLAT_AVAIL_FREQ_LITTLE_PATH>/sys/class/devfreq/soc:qcom,cpu0-llcc-ddr-lat/available_frequencies</MEMLAT_AVAIL_FREQ_LITTLE_PATH>
+            </Configs>
+            <Samples>100</Samples>
+        </Meter>
+
+        <Meter>
             <Name>Fps</Name>
             <Triggers>
                 <Trigger>
