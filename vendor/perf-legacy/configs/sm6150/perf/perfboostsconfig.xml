@@ -53,6 +53,19 @@
            Resources="0x40400000, 0x1, 0x42C10000, 0x1, 0x43010000, 59,
                       0x41828000, 806, 0x43400000, 1190, 0x4281C000, 1500" />
 
+    <!--app resume boost-->
+        <!-- SCHEDBOOST resource opcode, value-->
+        <!-- CPUBOOST_MAX_FREQ BIG Core resource opcode, value-->
+        <!-- CPUBOOST_MAX_FREQ LITTLE Core resource opcode, value-->
+        <!-- CPUBOOST_MIN_FREQ BIG Core resource opcode, value-->
+        <!-- CPUBOOST_MIN_FREQ LITTLE Core resource opcode, value-->
+
+        <!-- Type="1", main launch boost of 2sec -->
+        <Config
+            Id="0x00001082" Type="1" Enable="true" Timeout="400" Target="sdmmagpie"
+            Resources="0x40C20000, 0x28, 0x40C1C000, 0x32, 0x40804000, 0xFFF, 0x40804100, 0xFFF, 0x40800000, 0xFFF,
+                       0x40800100, 0xFFF" />
+
     <!-- config_enableLaunchBoostv3-->
         <!-- SCHEDBOOST resource opcode, value-->
         <!-- SCHED GROUP DOWNMIGRATE resource opcode, value-->
