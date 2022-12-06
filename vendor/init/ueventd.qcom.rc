@@ -86,7 +86,7 @@ subsystem mem_buf_vm
 /dev/ion                  0664   system     system
 /dev/membuf               0664   system     system
 /dev/mem_buf_vm/*         0444   system     system
-/dev/dma_heap/qcom,*      0444   system     system
+/dev/dma_heap/qcom,*      0664   system     system
 /dev/rtc0                 0660   system     system
 /dev/smd0                 0660   system     system
 /dev/smd4                 0660   system     system
