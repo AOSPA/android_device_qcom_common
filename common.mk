@@ -180,6 +180,11 @@ ifneq ($(TARGET_PROVIDES_POWERHAL),true)
 $(call inherit-product-if-exists, vendor/qcom/opensource/power/power-vendor-product.mk)
 endif
 
+# Enable adpf cpu hint session for SurfaceFlinger and HWUI
+PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
+    debug.sf.enable_adpf_cpu_hint=true \
+    debug.hwui.use_hint_manager=true
+
 # Public Libraries
 PRODUCT_COPY_FILES += \
     device/qcom/qssi/public.libraries.product-qti.txt:$(TARGET_COPY_OUT_PRODUCT)/etc/public.libraries-qti.txt \
