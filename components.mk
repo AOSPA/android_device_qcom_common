@@ -49,7 +49,11 @@ endif
 
 ifneq (,$(filter audio, $(TARGET_COMMON_QTI_COMPONENTS)))
   include $(QCOM_COMMON_PATH)/system/audio/qti-audio.mk
-  include $(QCOM_COMMON_PATH)/vendor/audio/qti-audio.mk
+    ifeq ($(call is-board-platform-in-list,$(5_10_FAMILY)),true)
+    include $(QCOM_COMMON_PATH)/vendor/audio-ar/qti-audio-ar.mk
+  else 
+    include $(QCOM_COMMON_PATH)/vendor/audio/qti-audio.mk
+  endif
 endif
 
 ifneq (,$(filter av, $(TARGET_COMMON_QTI_COMPONENTS)))
