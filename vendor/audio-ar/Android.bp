@@ -1,0 +1,7 @@
+prebuilt_hidl_interfaces {
+    name: "hidl_audio_agm_pal_interfaces",
+    interfaces: [
+        "vendor.qti.hardware.AGMIPC@1.0::IAGM",
+        "vendor.qti.hardware.pal@1.0::IPAL",
+    ],
+}
