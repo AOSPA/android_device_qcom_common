@@ -8,6 +8,13 @@ prebuilt_etc {
     vendor: true,
 }
 
+prebuilt_etc {
+    name: "init.qti.media.5-4.rc",
+    fil-4name: "init.qti.media.rc",
+    src: "init.qti.media.5-4.rc",
+    vendor: true,
+}
+
 prebuilt_hidl_interfaces {
     name: "hidl_qconfig_interface",
     interfaces: [
@@ -19,5 +26,12 @@ sh_binary {
     name: "init.qti.media.bengal.sh",
     filename: "init.qti.media.sh",
     src: "init.qti.media.bengal.sh",
+    vendor: true,
+}
+
+sh_binary {
+    name: "init.qti.media.5-4.sh",
+    filename: "init.qti.media.sh",
+    src: "init.qti.media.5-4.sh",
     vendor: true,
 }

@@ -62,5 +62,12 @@ PRODUCT_VENDOR_PROPERTIES += \
     vendor.qc2audio.per_frame.flac.dec.enabled=true
 endif
 
+ifeq ($(call is-board-platform-in-list,$(5_4_FAMILY)),true)
+# Packages
+PRODUCT_PACKAGES += \
+    init.qti.media.5-4.rc \
+    init.qti.media.5-4.sh
+endif
+
 # Get non-open-source specific aspects.
 $(call inherit-product-if-exists, vendor/qcom/common/vendor/media/media-vendor.mk)
