@@ -16,6 +16,24 @@
       "message": "the makefile is unguarded.  also should probably use bp since all other ramdisk files do in components.  we only use mk here when we have to (for shell commands or headers needed by libraries in other makefiles).",
       "revId": "c8af5852c38c2806e244025a1e9e04d4e1b45592",
       "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "41f51931_4a7c63a9",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 3
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000737
+      },
+      "writtenOn": "2022-12-12T00:18:08Z",
+      "side": 1,
+      "message": "I redid it using copy files, if defining a module for that will give duplication error with of media hal",
+      "parentUuid": "2380123d_ba3aeecd",
+      "revId": "c8af5852c38c2806e244025a1e9e04d4e1b45592",
+      "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
     }
   ]
 }
