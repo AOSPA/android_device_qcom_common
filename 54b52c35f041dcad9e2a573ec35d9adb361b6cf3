@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "a8170c3f_b5676295",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 4
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000012
+      },
+      "writtenOn": "2022-12-12T00:25:54Z",
+      "side": 1,
+      "message": "we should probably name these files .bengal",
+      "revId": "54b52c35f041dcad9e2a573ec35d9adb361b6cf3",
+      "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "ba6ba311_2a93b861",
+        "filename": "vendor/media/qti-media.mk",
+        "patchSetId": 4
+      },
+      "lineNbr": 57,
+      "author": {
+        "id": 1000012
+      },
+      "writtenOn": "2022-12-12T00:25:54Z",
+      "side": 1,
+      "message": "whitespace",
+      "revId": "54b52c35f041dcad9e2a573ec35d9adb361b6cf3",
+      "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
+    }
+  ]
+}
