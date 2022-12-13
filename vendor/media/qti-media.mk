@@ -44,9 +44,9 @@ PRODUCT_SYSTEM_EXT_PROPERTIES += \
     ro.media.recorder-max-base-layer-fps=60
 
 ifeq ($(TARGET_BOARD_PLATFORM), bengal)
-# Media Profiles
 PRODUCT_COPY_FILES += \
-    device/qcom/common/vendor/media/media_profiles.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_profiles.xml
+    device/qcom/common/vendor/media/init.qti.media.bengal.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/init.qti.media.rc \
+    device/qcom/common/vendor/media/init.qti.media.bengal.sh:$(TARGET_COPY_OUT_VENDOR)/bin/init.qti.media.sh
 
 # Packages
 PRODUCT_PACKAGES += \
