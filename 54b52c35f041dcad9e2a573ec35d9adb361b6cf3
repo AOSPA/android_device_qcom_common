@@ -87,6 +87,24 @@
       "message": "whitespace",
       "revId": "54b52c35f041dcad9e2a573ec35d9adb361b6cf3",
       "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "be3d1037_e72e9fc8",
+        "filename": "vendor/media/qti-media.mk",
+        "patchSetId": 4
+      },
+      "lineNbr": 57,
+      "author": {
+        "id": 1000012
+      },
+      "writtenOn": "2022-12-13T17:31:20Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "ba6ba311_2a93b861",
+      "revId": "54b52c35f041dcad9e2a573ec35d9adb361b6cf3",
+      "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
     }
   ]
 }

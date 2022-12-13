@@ -16,6 +16,24 @@
       "message": "don\u0027t need to define in bp if you\u0027re not using bp.",
       "revId": "1a5476bd139ba76b9583c6b2105648a535f74f43",
       "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "b454f2f0_f8cf4bb8",
+        "filename": "vendor/media/Android.bp",
+        "patchSetId": 6
+      },
+      "lineNbr": 8,
+      "author": {
+        "id": 1000012
+      },
+      "writtenOn": "2022-12-13T17:31:20Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "5f486eb6_772f8e4f",
+      "revId": "1a5476bd139ba76b9583c6b2105648a535f74f43",
+      "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
     }
   ]
 }

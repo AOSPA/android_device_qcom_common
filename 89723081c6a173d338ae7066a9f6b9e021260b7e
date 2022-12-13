@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "776e125b_29bcb62a",
+        "filename": "vendor/media/Android.bp",
+        "patchSetId": 8
+      },
+      "lineNbr": 9,
+      "author": {
+        "id": 1000012
+      },
+      "writtenOn": "2022-12-13T17:31:20Z",
+      "side": 1,
+      "message": "maybe restore this file from gerrit since nothing is changing.",
+      "revId": "89723081c6a173d338ae7066a9f6b9e021260b7e",
+      "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
+    }
+  ]
+}
