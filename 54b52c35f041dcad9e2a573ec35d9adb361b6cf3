@@ -36,6 +36,24 @@
       "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "1ea246ff_14dc7c77",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 4
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000737
+      },
+      "writtenOn": "2022-12-13T02:30:01Z",
+      "side": 1,
+      "message": "so the right way will be using copy files.",
+      "parentUuid": "45956a53_bf9f4b8b",
+      "revId": "54b52c35f041dcad9e2a573ec35d9adb361b6cf3",
+      "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "ba6ba311_2a93b861",
