@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "00586312_00924180",
+        "filename": "vendor/media/qti-media.mk",
+        "patchSetId": 1
+      },
+      "lineNbr": 63,
+      "author": {
+        "id": 1000012
+      },
+      "writtenOn": "2022-12-13T17:26:57Z",
+      "side": 1,
+      "message": "why are we checking for bengal twice here?",
+      "revId": "639ea1e363aef14824a16065a5a4b3f2a89ee8e1",
+      "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
+    }
+  ]
+}
