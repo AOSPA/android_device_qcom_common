@@ -65,7 +65,7 @@ endif
 #           QSSI is forcing this to '1'. Must be reverted
 ifeq ($(call is-board-platform-in-list, bengal), true)
     $(warning "Default Codec2.0 Enabled")
-    PRODUCT_PROPERTY_OVERRIDES += debug.stagefright.ccodec=4
+    PRODUCT_ODM_PROPERTIES += debug.stagefright.ccodec=4
 endif
 
 # Get non-open-source specific aspects.
