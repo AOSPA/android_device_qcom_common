@@ -62,7 +62,7 @@ PRODUCT_VENDOR_PROPERTIES += \
 
 ifeq ($(call is-board-platform-in-list, bengal), true)
     $(warning "Default Codec2.0 Enabled")
-    PRODUCT_PROPERTY_OVERRIDES += debug.stagefright.ccodec=4
+    PRODUCT_ODM_OVERRIDES += debug.stagefright.ccodec=4
 endif
 
 endif
