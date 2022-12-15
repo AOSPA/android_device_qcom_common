@@ -16,6 +16,24 @@
       "message": "maybe restore this file from gerrit since nothing is changing.",
       "revId": "89723081c6a173d338ae7066a9f6b9e021260b7e",
       "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "998faa3f_764bb56b",
+        "filename": "vendor/media/Android.bp",
+        "patchSetId": 8
+      },
+      "lineNbr": 9,
+      "author": {
+        "id": 1000737
+      },
+      "writtenOn": "2022-12-15T11:32:25Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "776e125b_29bcb62a",
+      "revId": "89723081c6a173d338ae7066a9f6b9e021260b7e",
+      "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
     }
   ]
 }
