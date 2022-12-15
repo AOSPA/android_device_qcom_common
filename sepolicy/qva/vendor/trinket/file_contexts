@@ -86,6 +86,8 @@
 /dev/block/platform/soc/4804000.ufshc/by-name/super             u:object_r:super_block_device:s0
 /dev/block/platform/soc/4804000.ufshc/by-name/vbmeta_system_[ab] u:object_r:vendor_custom_ab_block_device:s0
 /dev/block/platform/soc/4804000.ufshc/by-name/recovery_[ab]     u:object_r:recovery_block_device:s0
+/dev/block/platform/soc/4804000.ufshc/by-name/vendor_boot_[ab]  u:object_r:boot_block_device:s0
+/dev/block/platform/soc/4804000.ufshc/by-name/init_boot_[ab]    u:object_r:boot_block_device:s0
 
 # Block device holding the GPT, where the A/B attributes are stored.
 /dev/block/platform/soc/4804000.ufshc/sd[ade]                   u:object_r:vendor_gpt_block_device:s0
@@ -129,6 +131,8 @@
 /dev/block/platform/soc/4744000.sdhci/by-name/uefisecapp_[ab]   u:object_r:vendor_uefi_block_device:s0
 /dev/block/platform/soc/4744000.sdhci/by-name/vbmeta_system_[ab] u:object_r:vendor_custom_ab_block_device:s0
 /dev/block/platform/soc/4744000.sdhci/by-name/recovery_[ab]     u:object_r:recovery_block_device:s0
+/dev/block/platform/soc/4744000.sdhci/by-name/vendor_boot_[ab]  u:object_r:boot_block_device:s0
+/dev/block/platform/soc/4744000.sdhci/by-name/init_boot_[ab]    u:object_r:boot_block_device:s0
 
 #non A/B
 /dev/block/platform/soc/4744000.sdhci/by-name/system                            u:object_r:system_block_device:s0
