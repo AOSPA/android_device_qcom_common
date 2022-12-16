@@ -70,6 +70,24 @@
       "parentUuid": "dc9846cb_e000011f",
       "revId": "639ea1e363aef14824a16065a5a4b3f2a89ee8e1",
       "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "71a637f0_9af06764",
+        "filename": "vendor/media/qti-media.mk",
+        "patchSetId": 1
+      },
+      "lineNbr": 63,
+      "author": {
+        "id": 1000012
+      },
+      "writtenOn": "2022-12-16T10:07:33Z",
+      "side": 1,
+      "message": "why not leave the comments and kill the condition?\n\nanyway if you insist I\u0027ll merge it as is.",
+      "parentUuid": "642312f4_3a550bb2",
+      "revId": "639ea1e363aef14824a16065a5a4b3f2a89ee8e1",
+      "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
     }
   ]
 }
