@@ -41,4 +41,4 @@ PRODUCT_SYSTEM_EXT_PROPERTIES += \
     ro.media.recorder-max-base-layer-fps=60
 
 # Get non-open-source specific aspects.
-$(call inherit-product-if-exists, vendor/qcom/common/vendor/media-5.4/media-vendor.mk)
+$(call inherit-product-if-exists, vendor/qcom/common/vendor/media-5.4/media-5.4-vendor.mk)
