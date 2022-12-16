@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "2cbaf4c4_1ae105ab",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 4
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000012
+      },
+      "writtenOn": "2022-12-16T05:38:02Z",
+      "side": 1,
+      "message": "do we need a matching change in sepolicy_vndr for taro and others?",
+      "revId": "e3fe77540e50aaa0624615a30e3d6e7e8c9cbe5f",
+      "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
+    }
+  ]
+}
