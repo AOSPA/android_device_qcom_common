@@ -52,6 +52,24 @@
       "parentUuid": "fcc2083a_359869fd",
       "revId": "4edfc582bcae3fe896525e140414cce4327439a9",
       "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "b2ec81ba_1e06ab46",
+        "filename": "vendor/media/qti-media.mk",
+        "patchSetId": 10
+      },
+      "lineNbr": 49,
+      "author": {
+        "id": 1000737
+      },
+      "writtenOn": "2022-12-16T10:18:29Z",
+      "side": 0,
+      "message": "https://github.com/AOSPA/android_device_qcom_common/commit/a2fec66f9916e2702a9be03862db1fc16a6c03e5",
+      "parentUuid": "643e91ae_3b42f8a1",
+      "revId": "4edfc582bcae3fe896525e140414cce4327439a9",
+      "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
     }
   ]
 }
