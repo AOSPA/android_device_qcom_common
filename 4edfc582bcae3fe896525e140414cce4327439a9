@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "771a08c6_5349ce28",
+        "filename": "vendor/media/qti-media.mk",
+        "patchSetId": 10
+      },
+      "lineNbr": 49,
+      "author": {
+        "id": 1000012
+      },
+      "writtenOn": "2022-12-16T05:37:41Z",
+      "side": 0,
+      "message": "do we really want this? seems device specific.",
+      "revId": "4edfc582bcae3fe896525e140414cce4327439a9",
+      "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
+    }
+  ]
+}
