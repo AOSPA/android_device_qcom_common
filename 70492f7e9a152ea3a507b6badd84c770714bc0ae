@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "9f52d2a4_f1ad5cb0",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000012
+      },
+      "writtenOn": "2022-12-18T01:42:19Z",
+      "side": 1,
+      "message": "I don\u0027t see a good reason to kill this.",
+      "revId": "70492f7e9a152ea3a507b6badd84c770714bc0ae",
+      "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
+    }
+  ]
+}
