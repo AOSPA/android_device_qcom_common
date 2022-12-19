@@ -32,6 +32,8 @@ PRODUCT_COPY_FILES += \
 
 PRODUCT_PACKAGES += \
     android.hardware.wifi@1.0-service \
+    android.hardware.wifi.supplicant \
+    android.hardware.wifi.hostapd \
     fstman \
     fstman.ini \
     hostapd \
