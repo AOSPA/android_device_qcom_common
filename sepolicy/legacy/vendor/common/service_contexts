@@ -42,3 +42,4 @@ dts_eagle_service                              u:object_r:dtseagleservice_servic
 com.qualcomm.qti.secota.service.SecotaNService u:object_r:secotad_service:s0
 com.qualcomm.qti.seemp.health                  u:object_r:seemp_health_daemon_service:s0
 com.qualcomm.qti.uceservice                    u:object_r:imsrcs_service:s0
+vendor.qti.hardware.wifi.supplicant.ISupplicantVendor/default    u:object_r:hal_wifi_supplicant_service:s0
