@@ -60,8 +60,8 @@ ifneq ($(KERNEL_MODULES_OUT),)
 PRODUCT_PACKAGES += \
     vendor_modprobe.sh
 else
-PRODUCT_PACKAGES += \
-    vendor_modprobe_no_modules.sh
+PRODUCT_VENDOR_PROPERTIES += \
+    vendor.all.modules.ready=1
 endif
 
 endif
