@@ -146,10 +146,3 @@ sh_binary {
     src: "vendor_modprobe.sh",
     vendor: true,
 }
-
-sh_binary {
-    name: "vendor_modprobe_no_modules.sh",
-    filename: "vendor_modprobe.sh",
-    src: "vendor_modprobe_no_modules.sh",
-    vendor: true,
-}
