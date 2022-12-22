@@ -27,7 +27,6 @@ system_ext/app/DeviceInfo/DeviceInfo.apk
 system_ext/app/DeviceStatisticsService/DeviceStatisticsService.apk
 system_ext/app/DynamicDDSService/DynamicDDSService.apk
 system_ext/app/ImsRcsService/ImsRcsService.apk
-system_ext/app/QTIDiagServices/QTIDiagServices.apk
 system_ext/app/QtiTelephony/QtiTelephony.apk
 system_ext/app/QtiTelephonyService/QtiTelephonyService.apk
 system_ext/app/SimContact/SimContact.apk
@@ -151,7 +150,6 @@ system_ext/lib64/com.quicinc.cne.server@1.0.so
 system_ext/lib64/com.quicinc.cne.server@2.0.so
 system_ext/lib64/com.quicinc.cne.server@2.1.so
 system_ext/lib64/com.quicinc.cne.server@2.2.so
-system_ext/lib64/libDiagService.so
 system_ext/lib64/libdiag_system.so
 system_ext/lib64/libdiag_system.qti.so
 system_ext/lib64/libdpmctmgr.so
