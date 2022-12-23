@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "a7f31395_791980d5",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000579
+      },
+      "writtenOn": "2022-12-23T17:22:21Z",
+      "side": 1,
+      "message": "required after 8300 merge, will revert whenever taro sepolicy_vndr merges it",
+      "revId": "f19af84df4605b98e4ae76adfea3424c29a991f8",
+      "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
+    }
+  ]
+}
