@@ -28,6 +28,12 @@ PRODUCT_COPY_FILES += \
     $(QCOM_COMMON_PATH)/vendor/perf-legacy/vendor.qti.hardware.iop@2.0-service-disable.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/vendor.qti.hardware.iop@2.0-service-disable.rc
 endif
 
+# Disable PASR Manager HAL for <4.14 platforms
+ifneq (,$(filter 3.18 4.4 4.9, $(TARGET_KERNEL_VERSION)))
+PRODUCT_COPY_FILES += \
+    $(QCOM_COMMON_PATH)/vendor/perf-legacy/vendor.qti.memory.pasrmanager@1.0-service-disable.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/vendor.qti.memory.pasrmanager@1.0-service-disable.rc
+endif
+
 # Disable the poweropt service for <5.4 platforms.
 ifeq (,$(filter 5.4 5.10, $(TARGET_KERNEL_VERSION)))
 PRODUCT_COPY_FILES += \
