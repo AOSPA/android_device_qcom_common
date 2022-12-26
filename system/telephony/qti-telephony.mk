@@ -12,7 +12,8 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-# HIDL
+# AIDL / HIDL
+DEVICE_FRAMEWORK_MANIFEST_FILE += $(COMMON_PATH)/system/telephony/framework_manifest.xml
 SYSTEM_EXT_MANIFEST_FILES += $(QCOM_COMMON_PATH)/system/telephony/atcmdfwd-saidl.xml
 
 # Packages
