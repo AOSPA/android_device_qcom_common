@@ -1,0 +1,2 @@
+allow radio vendor_hal_atfwd_hwservice:hwservice_manager find;
+allow radio hidl_base_hwservice:hwservice_manager add;
