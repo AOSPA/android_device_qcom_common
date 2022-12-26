@@ -15,6 +15,8 @@
 PRODUCT_SOONG_NAMESPACES += \
     device/qcom/common/vendor/telephony
 
+DEVICE_FRAMEWORK_MANIFEST_FILE := $(COMMON_PATH)/vendor/telephony/framework_manifest.xml
+
 # Data Services
 $(call inherit-product, vendor/qcom/opensource/dataservices/dataservices_vendor_product.mk)
 
