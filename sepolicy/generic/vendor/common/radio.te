@@ -1,0 +1,1 @@
+allow radio vendor_hal_atfwd_hwservice:hwservice_manager { find };
