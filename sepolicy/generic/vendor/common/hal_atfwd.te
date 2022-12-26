@@ -1,0 +1,2 @@
+binder_call(atfwd, vendor_qtelephony);
+allow atfwd vendor_hal_atfwd_hwservice:hwservice_manager find;
