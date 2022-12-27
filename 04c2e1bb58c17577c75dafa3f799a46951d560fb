@@ -16,6 +16,23 @@
       "message": "Need vendor blobs",
       "revId": "04c2e1bb58c17577c75dafa3f799a46951d560fb",
       "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "e0e0a2bf_9d48c760",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000551
+      },
+      "writtenOn": "2022-12-27T16:02:16Z",
+      "side": 1,
+      "message": "when gib",
+      "revId": "04c2e1bb58c17577c75dafa3f799a46951d560fb",
+      "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
     }
   ]
 }
