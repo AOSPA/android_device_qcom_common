@@ -49,8 +49,8 @@ fi
 # Update permissions
 chown system.system /sys/devices/platform/soc/18800000.qcom,icnss/net/wlan*/queues/rx-*/rps_cpus
 chmod 0660 /sys/devices/platform/soc/17a10040.qcom,wcn6750/net/wlan*/queues/rx-*/rps_cpus
-chown system.graphics /sys/class/drm/sde-crtc-*/lineptr_value
-chmod 0664 /sys/class/drm/sde-crtc-*/lineptr_value
+chown system.graphics /sys/devices/platform/soc/ae00000.qcom,mdss_mdp/drm/card*/sde-crtc-* lineptr_value
+chmod 0664 /sys/devices/platform/soc/ae00000.qcom,mdss_mdp/drm/card*/sde-crtc-* lineptr_value
 chmod system.system /dev/hgsl
 chmod 0666 /dev/hgsl
 chmod system.audio /dev/spidev22.0
