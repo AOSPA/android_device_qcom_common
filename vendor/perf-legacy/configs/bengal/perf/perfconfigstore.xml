@@ -49,7 +49,7 @@ property Name is called. -->
                 <Prop Name="ro.vendor.at_library" Value="libqti-at.so" />
                 <Prop Name="vendor.appcompact.enable_app_compact" Value="true" />
                 <Prop Name="vendor.appcompact.full_compact_type"  Value="2" />
-                <Prop Name="vendor.appcompact.some_compact_type"  Value="4" />
+                <Prop Name="vendor.appcompact.some_compact_type"  Value="2" />
                 <Prop Name="vendor.perf.bgt.enable" Value="true" />
 
                 <!--Mention all the target/kernel specific properties at the end of xml file
@@ -73,18 +73,5 @@ property Name is called. -->
                 <Prop Name="ro.lmk.psi_window_size_ms"         Value="500"  Variant="bengal_32go"/>
                 <Prop Name="ro.lmk.psi_poll_period_scrit_ms"   Value="100"  Variant="bengal_32go"/>
                 <Prop Name="ro.lmk.psi_scrit_complete_stall_ms" Value="85"  Variant="bengal_32go"/>
-
-                <!--Mention all the khaje specific properties here -->
-                <Prop Name="ro.lmk.enable_preferred_apps"        Value="false" Target="khaje" Ram="3" />
-                <Prop Name="ro.lmk.kill_heaviest_task_dup"       Value="false" Target="khaje" Ram="3" />
-                <Prop Name="ro.lmk.psi_window_size_ms"           Value="500"   Target="khaje" Ram="3" />
-                <Prop Name="ro.lmk.psi_poll_period_scrit_ms"     Value="100"   Target="khaje" Ram="3" />
-                <Prop Name="ro.lmk.psi_scrit_complete_stall_ms"  Value="85"    Target="khaje" Ram="3" />
-                <Prop Name="vendor.iop.enable_uxe"               Value="0"     Target="khaje" Ram="3" />
-                <Prop Name="ro.vendor.qti.sys.fw.bservice_limit" Value="5"     Target="khaje" Ram="3" />
-                <Prop Name="ro.vendor.qti.sys.fw.bservice_age"   Value="5000"  Target="khaje" Ram="3" />
-                <Prop Name="ro.vendor.qti.sys.fw.bg_apps_limit"  Value="32"    Target="khaje" Ram="3" />
-                <Prop Name="ro.vendor.qti.sys.fw.bg_apps_limit"  Value="32"    Target="khaje" Ram="4" />
-
     </PerfConfigs>
 </PerfConfigsStore>
