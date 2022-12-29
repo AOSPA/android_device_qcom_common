@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "6491a58c_d3e52159",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000737
+      },
+      "writtenOn": "2022-12-29T19:01:12Z",
+      "side": 1,
+      "message": "Need vendor support for QGPE enable",
+      "revId": "fb3fcc933376e803d3f45ea35c7656f02584063d",
+      "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
+    }
+  ]
+}
