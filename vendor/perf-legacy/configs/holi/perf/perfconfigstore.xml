@@ -72,7 +72,7 @@ ________________________________________________________________________________
                 <Prop Name="ro.vendor.at_library" Value="libqti-at.so" />
                 <Prop Name="vendor.appcompact.enable_app_compact" Value="true" />
                 <Prop Name="vendor.appcompact.full_compact_type"  Value="2" />
-                <Prop Name="vendor.appcompact.some_compact_type"  Value="4" />
+                <Prop Name="vendor.appcompact.some_compact_type"  Value="2" />
                 <Prop Name="vendor.appcompact.compact_throttle_somesome" Value="5000" />
                 <Prop Name="vendor.appcompact.compact_throttle_somefull" Value="10000" />
                 <Prop Name="vendor.appcompact.compact_throttle_fullsome" Value="500" />
