@@ -21,7 +21,10 @@ dontaudit {
   vendor_hal_gnss_qti
 } vendor_pd_locater_dbg_prop:file r_file_perms;
 
+dontaudit fsck self:capability kill;
 dontaudit gmscore_app { bt_firmware_file firmware_file }:filesystem getattr;
 dontaudit hal_wifi_default persist_vendor_debug_wifi_prop:file r_file_perms;
 dontaudit kernel self:qipcrtr_socket create;
+dontaudit linkerconfig self:capability kill;
+dontaudit vdc self:capability kill;
 dontaudit vendor_hal_capabilityconfigstore_qti_default vendor_cap_configstore_dbg_prop:file r_file_perms;
