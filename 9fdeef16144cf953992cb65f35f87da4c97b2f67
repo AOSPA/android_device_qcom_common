@@ -16,6 +16,23 @@
       "message": "should this be guarded to older targets?",
       "revId": "9fdeef16144cf953992cb65f35f87da4c97b2f67",
       "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "19ec5d0e_e6996e25",
+        "filename": "vendor/telephony/qti-telephony.mk",
+        "patchSetId": 1
+      },
+      "lineNbr": 18,
+      "author": {
+        "id": 1000012
+      },
+      "writtenOn": "2023-01-02T04:40:30Z",
+      "side": 1,
+      "message": "Use +\u003d so we don\u0027t override from elsewhere.",
+      "revId": "9fdeef16144cf953992cb65f35f87da4c97b2f67",
+      "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
     }
   ]
 }
