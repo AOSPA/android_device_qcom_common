@@ -16,6 +16,24 @@
       "message": "Disable for you plataform",
       "revId": "c3574afcfb04eeee365694af6c0346a75360ff2b",
       "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "4999204f_2c1ef255",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000429
+      },
+      "writtenOn": "2023-01-02T01:51:43Z",
+      "side": 1,
+      "message": "i tried doing the \"disable\" thing that we have for iop, but it did not work on this one. here\u0027s the spammy log:\n\n01-02 09:43:56.566 W/HidlServiceManagement(685): Waited one second for vendor.qti.memory.pasrmanager@1.1::IPasrManager/pasrhal\n01-02 09:43:56.567 I/hwservicemanager(446): Since vendor.qti.memory.pasrmanager@1.1::IPasrManager/pasrhal is not registered, trying to start it as a lazy HAL.\n01-02 09:43:56.567 I/HidlServiceManagement(685): getService: Trying again for vendor.qti.memory.pasrmanager@1.1::IPasrManager/pasrhal...\n01-02 09:43:56.566 W/HidlServiceManagement(685): Waited one second for vendor.qti.memory.pasrmanager@1.1::IPasrManager/pasrhal\n01-02 09:43:56.569 I/hwservicemanager(446): Tried to start vendor.qti.memory.pasrmanager@1.1::IPasrManager/pasrhal as a lazy service, but was unable to. Usually this happens when a service is not installed, but if the service is intended to be used as a lazy service, then it may be configured incorrectly.",
+      "parentUuid": "239e440e_abb5659a",
+      "revId": "c3574afcfb04eeee365694af6c0346a75360ff2b",
+      "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
     }
   ]
 }
