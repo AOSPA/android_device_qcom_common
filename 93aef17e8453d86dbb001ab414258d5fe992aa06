@@ -88,6 +88,24 @@
       "parentUuid": "aebaf033_747f1bf7",
       "revId": "93aef17e8453d86dbb001ab414258d5fe992aa06",
       "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "1db7b39a_3060835a",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000737
+      },
+      "writtenOn": "2023-01-03T10:49:13Z",
+      "side": 1,
+      "message": "taro, and anyone before taro use this: https://git.codelinaro.org/clo/la/platform/vendor/qcom/taro/-/blob/LA.VENDOR.1.0.r1-19500-WAIPIO.QSSI13.0/framework_manifest.xml",
+      "parentUuid": "5650387b_a8aeacd9",
+      "revId": "93aef17e8453d86dbb001ab414258d5fe992aa06",
+      "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
     }
   ]
 }
