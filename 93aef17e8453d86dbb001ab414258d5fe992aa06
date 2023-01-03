@@ -16,6 +16,24 @@
       "message": "why is this not needed on T launch? why is it not there on qssi and taro?",
       "revId": "93aef17e8453d86dbb001ab414258d5fe992aa06",
       "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "b14719f1_4fae6676",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000737
+      },
+      "writtenOn": "2023-01-03T02:25:59Z",
+      "side": 1,
+      "message": "Apparently this has been moved to system AIDL.",
+      "parentUuid": "190fbd46_abcdae04",
+      "revId": "93aef17e8453d86dbb001ab414258d5fe992aa06",
+      "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
     }
   ]
 }
