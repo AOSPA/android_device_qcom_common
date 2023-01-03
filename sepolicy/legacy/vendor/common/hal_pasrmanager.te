@@ -31,6 +31,9 @@ type hal_pasrmanager_memory_qti_exec, exec_type, vendor_file_type, file_type;
 type hal_pasrmanager_qti, domain;
 type hal_pasrmanager_qti_exec, exec_type, vendor_file_type, file_type;
 
+allow hal_pasrmanager_memory_qti hal_pasrmanager_memory_hwservice:hwservice_manager { find add };
+allow hal_pasrmanager_memory_qti hidl_base_hwservice:hwservice_manager add;
+
 # Allow permissions required for this HAL server to offer a
 # HAL implementation of the specified type over HwBinder
 hal_server_domain(hal_pasrmanager_memory_qti, hal_pasrmanager_memory)
