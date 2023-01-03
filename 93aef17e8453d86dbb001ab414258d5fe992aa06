@@ -52,6 +52,24 @@
       "parentUuid": "b14719f1_4fae6676",
       "revId": "93aef17e8453d86dbb001ab414258d5fe992aa06",
       "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "aebaf033_747f1bf7",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000737
+      },
+      "writtenOn": "2023-01-03T02:27:47Z",
+      "side": 1,
+      "message": "Taro still uses hidl vendor definition, about kalama it is not possible to know yet",
+      "parentUuid": "cc93b2c1_8fca069c",
+      "revId": "93aef17e8453d86dbb001ab414258d5fe992aa06",
+      "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
     }
   ]
 }
