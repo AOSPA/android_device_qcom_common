@@ -72,4 +72,5 @@ hal_client_domain(platform_app, hal_btconfigstore);
 get_prop(platform_app, audio_config_prop)
 get_prop(platform_app, vendor_display_notch_prop)
 get_prop(platform_app, build_bootimage_prop)
+get_prop(platform_app, vendor_pasr_prop)
 allow platform_app cgroup:file w_file_perms;
