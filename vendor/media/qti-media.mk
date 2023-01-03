@@ -72,5 +72,11 @@ ifeq ($(call is-board-platform-in-list, bengal), true)
     PRODUCT_ODM_PROPERTIES += debug.stagefright.ccodec=4
 endif
 
+ifeq ($(TARGET_BOARD_PLATFORM), lahaina)
+#enable c2 based encoders/decoders as default NT decoders/encoders
+PRODUCT_VENDOR_PROPERTIES += \
+    vendor.audio.c2.preferred=true
+endif
+
 # Get non-open-source specific aspects.
 $(call inherit-product-if-exists, vendor/qcom/common/vendor/media/media-vendor.mk)
