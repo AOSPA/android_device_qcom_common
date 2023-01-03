@@ -70,6 +70,24 @@
       "parentUuid": "cc93b2c1_8fca069c",
       "revId": "93aef17e8453d86dbb001ab414258d5fe992aa06",
       "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "5650387b_a8aeacd9",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000012
+      },
+      "writtenOn": "2023-01-03T06:17:49Z",
+      "side": 1,
+      "message": "https://dumps.tadiphone.dev/dumps/xiaomi/mivendor/-/blob/missi_phone_cn-user-13-TKQ1.220905.001-V14.0.8.0.TMKCNDM-release-keys/system_ext/etc/vintf/manifest/atcmdfwd-saidl.xml on kalama\n\nsystem on taro\nhttps://dumps.tadiphone.dev/dumps/asus/asus_ai2202/-/blob/qssi-user-12-SKQ1.220406.001-32.2050.2050.43-release-keys/system/system/etc/vintf/manifest.xml\n\nsystem on Lahaina\nhttps://dumps.tadiphone.dev/dumps/nothing/spacewar/-/blob/qssi-user-13-TKQ1.220915.002-1671077980-release-keys/system/system/etc/vintf/manifest.xml",
+      "parentUuid": "aebaf033_747f1bf7",
+      "revId": "93aef17e8453d86dbb001ab414258d5fe992aa06",
+      "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
     }
   ]
 }
