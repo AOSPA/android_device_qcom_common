@@ -33,6 +33,23 @@
       "message": "when gib",
       "revId": "04c2e1bb58c17577c75dafa3f799a46951d560fb",
       "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "5e6d8918_84c51c81",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000551
+      },
+      "writtenOn": "2023-01-03T10:02:56Z",
+      "side": 1,
+      "message": "shall not be merged since it requires a blob in vendor",
+      "revId": "04c2e1bb58c17577c75dafa3f799a46951d560fb",
+      "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
     }
   ]
 }
