@@ -47,6 +47,7 @@ binder_call(hal_pasrmanager_memory_client, hal_pasrmanager_memory_server)
 # Add pasrmanager to hwservice_manager and allow it to be discovered
 #hal_attribute_hwservice(hal_pasrmanager_memory, hal_pasrmanager_memory_hwservice)
 
+add_hwservice(hal_pasrmanager_memory_qti, hal_pasrmanager_memory_hwservice)
 add_hwservice(hal_pasrmanager_server, hal_pasrmanager_hwservice)
 allow hal_pasrmanager_client hal_pasrmanager_hwservice:hwservice_manager find;
 
