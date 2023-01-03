@@ -34,6 +34,24 @@
       "parentUuid": "190fbd46_abcdae04",
       "revId": "93aef17e8453d86dbb001ab414258d5fe992aa06",
       "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "cc93b2c1_8fca069c",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000737
+      },
+      "writtenOn": "2023-01-03T02:26:20Z",
+      "side": 1,
+      "message": "look: https://github.com/AOSPA/android_device_qcom_common/commit/d7c1ba1f940a7c3da5cb1d4fd5d01ea52be29a4d#diff-3225f7a1cf50713c15fa0831746c0a83f8c9f64d206013e68f13b99d5b9076a1R16",
+      "parentUuid": "b14719f1_4fae6676",
+      "revId": "93aef17e8453d86dbb001ab414258d5fe992aa06",
+      "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
     }
   ]
 }
