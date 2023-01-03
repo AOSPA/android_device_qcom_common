@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "53827b28_7e464cb3",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000737
+      },
+      "writtenOn": "2023-01-03T02:30:48Z",
+      "side": 1,
+      "message": "Apparently the props that are used in Bengal cause a bootloop in Lahaina when using this component. Lahaina uses the same media Hal as Taro platform, and is booting with 5.10 vendor blobs too. I believe it was only necessary to tweak C2 props, this definition should support it properly.",
+      "revId": "b7fd1f501b56abb14f8f22b1248b043e87966849",
+      "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
+    }
+  ]
+}
