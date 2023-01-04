@@ -1,5 +1,4 @@
 runtime_resource_overlay {
     name: "SystemUIResCommon",
     product_specific: true,
-    sdk_version: "current",
 }
