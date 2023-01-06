@@ -39,3 +39,4 @@ allow untrusted_app gba_auth_service:service_manager find;
 #      some addtional change.
 # allow untrusted apps to access hal_perf
 # hal_client_domain(untrusted_app, hal_perf);
+get_prop(untrusted_app_29, vendor_persist_camera_prop)

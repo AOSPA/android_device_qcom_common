@@ -33,12 +33,12 @@ type vendor_usta_app, domain, mlstrustedsubject;
 
 app_domain(vendor_usta_app)
 hal_client_domain(vendor_usta_app, vendor_hal_perf)
-get_prop(vendor_usta_app, sensors_prop)
+get_prop(vendor_usta_app, vendor_sensors_prop)
 
 #allow only vendor_usta_app with userdebug to access ioctl
 userdebug_or_eng(`
   diag_use(vendor_usta_app)
-  get_prop(vendor_usta_app, sensors_dbg_prop)
+  get_prop(vendor_usta_app, vendor_sensors_dbg_prop)
   allowxperm vendor_usta_app self:{ socket qipcrtr_socket } ioctl msm_sock_ipc_ioctls;
   allow vendor_usta_app self:{ socket qipcrtr_socket } create_socket_perms;
   allow vendor_usta_app xdsp_device:chr_file r_file_perms;

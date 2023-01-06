@@ -79,8 +79,8 @@ allow mm-qcamerad xdsp_device:chr_file rw_file_perms;
 
 #allow mm-qcamerad to access /dsp
 r_dir_file(mm-qcamerad, adsprpcd_file);
-#allow mm-qcamerad to access adsprpc_prop
-get_prop(mm-qcamerad, adsprpc_prop)
+#allow mm-qcamerad to access vendor_adsprpc_prop
+get_prop(mm-qcamerad, vendor_adsprpc_prop)
 
 r_dir_file(mm-qcamerad, firmware_file)
 allow mm-qcamerad graphics_device:dir r_dir_perms;
