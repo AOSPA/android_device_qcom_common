@@ -42,3 +42,4 @@ r_dir_file(kernel, vendor_firmware_file)
 # Allow kernel to schedule process to different cpuset
 # when the current cpu is hotplugged out
 allow kernel domain:process setsched;
+allow kernel self:capability kill;

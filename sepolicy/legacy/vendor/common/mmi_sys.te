@@ -37,6 +37,4 @@ hal_client_domain(vendor_mmi_sys, vendor_hal_factory_qti);
 #diag
 userdebug_or_eng(`
     diag_use(vendor_mmi_sys)
-    hal_client_domain(vendor_mmi_sys, vendor_hal_diaghal)
-    hal_client_domain(vendor_mmi_sys, hal_allocator)
 ')
