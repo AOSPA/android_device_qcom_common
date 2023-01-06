@@ -64,6 +64,11 @@ hal_client_domain(platform_app, hal_scve)
 get_prop(platform_app, vendor_mpctl_prop)
 #fm
 hal_client_domain(platform_app, hal_fm);
+hal_client_domain(platform_app, hal_fingerprint);
 allow platform_app fm_radio_device:chr_file r_file_perms;
 #allow platform app to access btconfigstore hal
 hal_client_domain(platform_app, hal_btconfigstore);
+
+get_prop(platform_app, vendor_display_notch_prop)
+get_prop(platform_app, build_bootimage_prop)
+allow platform_app cgroup:file w_file_perms;

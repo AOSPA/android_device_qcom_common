@@ -100,3 +100,6 @@ r_dir_file(thermal-engine, sysfs_uio_file)
 r_dir_file(thermal-engine, adsprpcd_file);
 allow thermal-engine qdsp_device:chr_file r_file_perms;
 allow thermal-engine ion_device:chr_file r_file_perms;
+
+allow thermal-engine sysfs_devfreq:dir r_dir_perms;
+allow thermal-engine sysfs_soc:dir r_dir_perms;
