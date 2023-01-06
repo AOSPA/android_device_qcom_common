@@ -47,7 +47,7 @@ allow rmt_storage self:capability {
     setpcap
 };
 
-set_prop(rmt_storage, ctl_vendor_rmt_storage_prop)
+set_prop(rmt_storage, vendor_ctl_vendor_rmt_storage_prop)
 
 #For Wakelocks
 wakelock_use(rmt_storage)

@@ -58,6 +58,6 @@ allow hal_imsrtp ion_device:chr_file r_file_perms;
 
 allow hal_imsrtp sysfs_data:file r_file_perms;
 
-get_prop(hal_imsrtp, qcom_ims_prop)
+get_prop(hal_imsrtp, vendor_qcom_ims_prop)
 
 binder_call(hal_imsrtp, vendor_qtelephony)

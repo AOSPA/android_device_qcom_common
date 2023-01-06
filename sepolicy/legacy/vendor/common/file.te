@@ -195,6 +195,7 @@ type sysfs_hsic_host_rdy, sysfs_type, fs_type;
 
 # Files accessed by qcom-system-daemon
 type sysfs_socinfo, fs_type, sysfs_type;
+type sysfs_soc, sysfs_type, fs_type;
 type vendor_sysfs_public, fs_type, sysfs_type;
 
 type qlogd_socket, file_type, mlstrustedobject;
@@ -236,7 +237,7 @@ type qfp-daemon_data_file, file_type, data_file_type;
 type persist_qti_fp_file, file_type, vendor_persist_type;
 
 # imshelper_app file types
-type imshelper_app_data_file, file_type, data_file_type;
+type vendor_imshelper_app_data_file, file_type, data_file_type;
 
 # RIDL data files
 type RIDL_data_file, file_type, data_file_type;
@@ -286,6 +287,7 @@ type nfc_vendor_data_file, file_type, data_file_type;
 # kgsl file type for sysfs access
 type sysfs_kgsl, sysfs_type, fs_type;
 type sysfs_kgsl_proc, sysfs_type, fs_type;
+type sysfs_kgsl_shell, sysfs_type, fs_type;
 # kgsl snapshot file type for sysfs access
 type sysfs_kgsl_snapshot, sysfs_type, fs_type;
 # kgsl gpu model file type for sysfs access
@@ -416,6 +418,8 @@ type vendor_capabilityconfigstore_data_file, file_type, data_file_type;
 #sensor log files
 type sensors_vendor_data_file, file_type, data_file_type;
 
-type vendor_sysfs_devicetree_cpu, sysfs_type, fs_type;
-
 type vendor_sysfs_kgsl_gpuclk, sysfs_type, fs_type;
+
+#slub-debug
+type sysfs_slab_zshandle_storeuser, fs_type, sysfs_type;
+type sysfs_slab_zspage_storeuser, fs_type, sysfs_type;

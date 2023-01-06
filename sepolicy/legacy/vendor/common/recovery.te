@@ -50,5 +50,6 @@ recovery_only(`
     # Enable adb on configfs devices
     allow recovery configfs:file rw_file_perms;
     allow recovery configfs:dir rw_dir_perms;
+    set_prop(recovery, ffs_control_prop);
     get_prop(recovery, vendor_boot_mode_prop)
 ')
