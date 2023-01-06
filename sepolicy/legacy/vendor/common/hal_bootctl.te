@@ -64,3 +64,6 @@ allow hal_bootctl sysfs_scsi_target:dir r_dir_perms;
 
 # Allow boot_control_hal to write to the XBL devices.
 allow hal_bootctl xbl_block_device:blk_file rw_file_perms;
+
+# Read dir permission for dt_firmware
+allow hal_bootctl sysfs_dt_firmware_android:dir r_dir_perms;

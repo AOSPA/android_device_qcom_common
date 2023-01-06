@@ -1,4 +1,4 @@
-# Copyright (c) 2019, The Linux Foundation. All rights reserved.
+# Copyright (c) 2019-2020, The Linux Foundation. All rights reserved.
 #
 # Redistribution and use in source and binary forms, with or without
 # modification, are permitted provided that the following conditions are
@@ -28,7 +28,7 @@
 #mediacodec need intraction with audio device nodes
 allow mediacodec msm_aac_in_device:chr_file rw_file_perms;
 
-get_prop(mediacodec, adsprpc_prop)
+get_prop(mediacodec, vendor_adsprpc_prop)
 
 #Allow mediacodec to access proc_net files
 allow mediacodec proc_net:file r_file_perms;
@@ -38,7 +38,7 @@ allow mediacodec xdsp_device:chr_file r_file_perms;
 
 #Allow mediacodec to access service manager wfdnativemm_service
 allow mediacodec wfdnativemm_service:service_manager find;
-binder_call(mediacodec, wifidisplayhalservice_qti);
+hal_client_domain(mediacodec, wifidisplayhalservice)
 
 #Allow mediacodec to access vendor_media_data_file files
 allow mediacodec vendor_media_data_file:dir create_dir_perms;
@@ -58,3 +58,6 @@ allow mediacodec audio_device:chr_file rw_file_perms;
 
 #Allow mediacodec to access configstore
 hal_client_domain(mediacodec, hal_capabilityconfigstore_qti)
+
+allow mediacodec sysfs_soc:dir r_dir_perms;
+get_prop(mediacodec, vendor_audio_prop)

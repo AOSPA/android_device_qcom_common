@@ -40,9 +40,8 @@ get_prop(hal_rcsservice, hwservicemanager_prop)
 add_hwservice(hal_rcsservice, hal_imscallinfo_hwservice)
 #add imsfactory to HIDl interface
 add_hwservice(hal_rcsservice, vendor_hal_imsfactory_hwservice)
-
 # allow read datad property
-get_prop(hal_rcsservice, qcom_ims_prop)
+get_prop(hal_rcsservice, vendor_qcom_ims_prop)
 
 # allow imsrcsd to connect to imsdatad over socket
 allow hal_rcsservice self: { socket qipcrtr_socket } create_socket_perms;
@@ -66,5 +65,5 @@ userdebug_or_eng(`
   binder_call(hal_rcsservice, radio)
 ')
 
-set_prop(hal_rcsservice, ctl_vendor_imsrcsservice_prop)
-set_prop(hal_rcsservice, qcom_ims_prop)
+set_prop(hal_rcsservice, vendor_ctl_vendor_imsrcsservice_prop)
+set_prop(hal_rcsservice, vendor_qcom_ims_prop)
