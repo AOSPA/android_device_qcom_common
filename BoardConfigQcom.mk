@@ -1,4 +1,4 @@
-# Copyright (C) 2022 Paranoid Android
+# Copyright (C) 2023 Paranoid Android
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -28,15 +28,11 @@ endif
 TARGET_MOUNT_POINTS_SYMLINKS ?= false
 
 # SEPolicy
-ifneq ($(call is-board-platform-in-list, msm8937 msm8953 msm8996 msm8998 sdm660),true)
 ifneq ($(TARGET_EXCLUDE_QCOM_SEPOLICY),true)
-ifneq ($(BOARD_VENDORIMAGE_FILE_SYSTEM_TYPE),)
+ifneq ($(call is-board-platform-in-list, msm8937 msm8953 msm8998 sdm660),true)
 include device/qcom/sepolicy_vndr/SEPolicy.mk
-include device/qcom/common/sepolicy/SEPolicy.mk
-else
+else # if (8937 || 8953 || 8998 || 660)
 include device/qcom/sepolicy/SEPolicy.mk
-endif
+endif # !(8937 || 8953 || 8998 || 660)
+include device/qcom/common/sepolicy/SEPolicy.mk
 endif # Exclude QCOM SEPolicy
-else
-include device/qcom/sepolicy-legacy/SEPolicy.mk
-endif

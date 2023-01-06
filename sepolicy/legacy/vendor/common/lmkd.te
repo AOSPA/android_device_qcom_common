@@ -29,3 +29,6 @@ allow lmkd hal_perf_hwservice:hwservice_manager find;
 allow lmkd hal_perf_default:binder call;
 allow lmkd hwservicemanager:binder call;
 get_prop(lmkd, hwservicemanager_prop);
+
+# Used by LMKD to work with EPOLLWAKEUP events.
+allow lmkd self:global_capability2_class_set block_suspend;
