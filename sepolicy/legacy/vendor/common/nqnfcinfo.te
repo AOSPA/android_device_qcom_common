@@ -31,7 +31,7 @@ type nqnfcinfo_exec, exec_type, vendor_file_type, file_type;
 # Started by init
 init_daemon_domain(nqnfcinfo)
 
-set_prop(nqnfcinfo, nfc_nq_prop);
+set_prop(nqnfcinfo, vendor_nfc_nq_prop);
 
 # Access device nodes inside /dev/nq-nci
 allow nqnfcinfo nfc_device:chr_file rw_file_perms;

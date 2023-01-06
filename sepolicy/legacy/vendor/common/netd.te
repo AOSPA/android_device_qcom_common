@@ -1,4 +1,4 @@
-# Copyright (c) 2019, The Linux Foundation. All rights reserved.
+# Copyright (c) 2019-2020, The Linux Foundation. All rights reserved.
 #
 # Redistribution and use in source and binary forms, with or without
 # modification, are permitted provided that the following conditions are
@@ -33,7 +33,7 @@ binder_use(netd);
 allow netd netd:packet_socket create_socket_perms_no_ioctl;
 
 allow netd vendor_wfdservice:fd use;
-#allow netd vendor_wfdservice:tcp_socket rw_socket_perms;
+#allow netd wfdservice:tcp_socket rw_socket_perms;
 hal_client_domain(netd, wifidisplayhalservice);
 
 #allow netd to use privileged sock ioctls
