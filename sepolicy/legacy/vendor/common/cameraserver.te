@@ -48,8 +48,8 @@ allow cameraserver qdsp_device:chr_file r_file_perms;
 allow cameraserver xdsp_device:chr_file r_file_perms;
 get_prop(cameraserver, camera_prop)
 
-#allow cameraserver to read adsprpc_prop
-get_prop(cameraserver, adsprpc_prop)
+#allow cameraserver to read vendor_adsprpc_prop
+get_prop(cameraserver, vendor_adsprpc_prop)
 
 #need this in full_treble for camera perview
 allow cameraserver hal_allocator:fd use;

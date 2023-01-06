@@ -109,3 +109,12 @@ allow netmgrd sysfs_net:file rw_file_perms;
 userdebug_or_eng(`
   r_dir_file(netmgrd, sysfs_diag)
 ')
+
+allow netmgrd sysfs_soc:dir r_dir_perms;
+
+# Allow netmgrd to set vendor properties
+set_prop(netmgrd, vendor_data_ko_prop)
+
+# Allow netmgrd to use shsusrd properties
+set_prop(netmgrd, vendor_data_shsusr_prop)
+set_prop(netmgrd, vendor_data_qmipriod_prop)
