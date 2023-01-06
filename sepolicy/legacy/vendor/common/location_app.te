@@ -26,6 +26,7 @@
 # IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
 hal_client_domain(vendor_location_app, hal_perf)
+qmux_socket(vendor_location_app)
 
 #Permissions for JDWP
 userdebug_or_eng(`

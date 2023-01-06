@@ -24,12 +24,14 @@
 # WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE
 # OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN
 # IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-persist.vendor.debug.sensors.             u:object_r:sensors_dbg_prop:s0
 
 #Wifi Display
-persist.vendor.debug.mux.                    u:object_r:wfd_vendor_debug_prop:s0
-persist.vendor.debug.rtp.                    u:object_r:wfd_vendor_debug_prop:s0
-persist.vendor.debug.wfd.                    u:object_r:wfd_vendor_debug_prop:s0
+persist.vendor.debug.mux.                    u:object_r:vendor_wfd_vendor_debug_prop:s0
+persist.vendor.debug.rtp.                    u:object_r:vendor_wfd_vendor_debug_prop:s0
+persist.vendor.debug.wfd.                    u:object_r:vendor_wfd_vendor_debug_prop:s0
+
+persist.vendor.debug.sensors.             u:object_r:vendor_sensors_dbg_prop:s0
 
 #debugutils HAL
 vendor.debug.breakpoint.continue  u:object_r:vendor_dbg_brkpoint_prop:s0
+

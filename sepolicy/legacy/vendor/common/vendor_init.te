@@ -88,23 +88,21 @@ set_prop(vendor_init, vendor_rild_libpath_prop)
 #Blocked by neverallow vendor_init { file_type fs_type }:file execute_no_trans;
 #allow vendor_init vendor_toolbox_exec:file rx_file_perms;
 
-set_prop(vendor_init, cnd_vendor_prop)
+set_prop(vendor_init, vendor_cnd_vendor_prop)
 
 #Access vendor gpu freq properties
 set_prop(vendor_init, vendor_gpu_prop)
-set_prop(vendor_init, public_vendor_default_prop)
+set_prop(vendor_init, vendor_public_vendor_default_prop)
 
 #allow vendor GPU property
 set_prop(vendor_init, vendor_opengles_prop)
 
 get_prop(vendor_init, vendor_video_prop)
-
-set_prop(vendor_init, vendor_qteeconnector_opti_prop)
-
+get_prop(vendor_init, persist_debug_prop)
 set_prop(vendor_init, vendor_sys_video_prop)
 
 #Acess vendor hvdcp properties
-set_prop(vendor_init, hvdcp_opti_prop)
+set_prop(vendor_init, vendor_hvdcp_opti_prop)
 
 # Allow timezone to be overrided by vendor
 set_prop(vendor_init, exported_system_prop)
@@ -113,7 +111,14 @@ set_prop(vendor_init, exported_system_prop)
 set_prop(vendor_init, vendor_bluetooth_prop)
 
 # Access vendor sensor properties
-set_prop(vendor_init, sensors_prop)
+set_prop(vendor_init, vendor_sensors_prop)
+
+# Access qteeconnector properties
+set_prop(vendor_init, vendor_qteeconnector_opti_prop)
+
+set_prop(vendor_init, vendor_dcvs_prop)
+
+set_prop(vendor_init, vendor_freq_prop)
 
 #Access vendor wigig properties, mainly for on-demand module loading
 set_prop(vendor_init, vendor_wigig_prop)
@@ -121,7 +126,9 @@ userdebug_or_eng(`
   allow vendor_init proc_security:file rw_file_perms;
 ')
 
+allow vendor_init tee_device:chr_file getattr;
+allow vendor_init ipa_dev:file create_file_perms;
+
 set_prop(vendor_init, vendor_persist_dpm_prop)
 
-# allow vendor_init to use wait for qseecom
-allow vendor_init tee_device:chr_file getattr;
+allow vendor_init block_device:lnk_file setattr;
