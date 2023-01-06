@@ -53,5 +53,5 @@ allow sec_nvm persist_secnvm_file:file create_file_perms;
 allow sec_nvm ion_device:chr_file rw_file_perms;
 
 # Allow set/get prop to set/check if app is loaded
-set_prop(sec_nvm, spcomlib_prop)
+set_prop(sec_nvm, vendor_spcomlib_prop)
 allow sec_nvm sysfs_data:file r_file_perms;

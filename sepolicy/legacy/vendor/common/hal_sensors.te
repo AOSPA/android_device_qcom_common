@@ -28,9 +28,10 @@
 
 userdebug_or_eng(`
     diag_use(hal_sensors)
+    get_prop(hal_sensors_default, vendor_sensors_dbg_prop)
     allow hal_sensors debugfs_tracing:file { open write };
 ')
-set_prop(hal_sensors, slpi_prop);
+set_prop(hal_sensors, vendor_slpi_prop);
 allow hal_sensors self:{ socket qipcrtr_socket } create_socket_perms;
 allowxperm hal_sensors self:{ socket qipcrtr_socket } ioctl msm_sock_ipc_ioctls;
 
@@ -52,9 +53,11 @@ allow hal_sensors input_device:chr_file r_file_perms;
 #following to set the ssr
 allow hal_sensors_default sysfs_slpi:dir search;
 allow hal_sensors_default sysfs_slpi:file w_file_perms;
+
 allow hal_sensors_default sensors_persist_file:file create_file_perms;
 allow hal_sensors_default sensors_persist_file:dir create_dir_perms;
 allow hal_sensors_default mnt_vendor_file:dir r_dir_perms;
+
 allow hal_sensors_default hal_graphics_mapper_hwservice:hwservice_manager find;
 
 get_prop(hal_sensors_default, adsprpc_prop);

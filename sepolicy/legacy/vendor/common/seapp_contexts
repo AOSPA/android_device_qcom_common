@@ -42,7 +42,7 @@ user=_app seinfo=platform name=com.qualcomm.timeservice domain=timeservice_app t
 user=system seinfo=platform name=com.qualcomm.qti.logkit domain=qti_logkit_app type=system_app_data_file
 
 #Add new domain for imshelper service
-user=system seinfo=platform name=.imshelperservice domain=imshelper_app type=radio_data_file
+user=system seinfo=platform name=.imshelperservice domain=imshelper_app type=imshelper_app_data_file
 
 #Add new domain for perfdump app
 user=system seinfo=platform name=com.qualcomm.qti.perfdump domain=perfdump_app type=system_app_data_file

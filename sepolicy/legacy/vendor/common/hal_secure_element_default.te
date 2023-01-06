@@ -29,7 +29,7 @@
 hal_client_domain(hal_secure_element_default, hal_esepowermanager)
 
 #Allow access to the qteeconnector
-hal_client_domain(hal_secure_element_default, vendor_hal_qteeconnector)
+hal_client_domain(hal_secure_element_default, hal_qteeconnector)
 
 # Allow secure-element HAL to retrieve NFC vendor properties
 get_prop(hal_secure_element_default, nfc_nq_prop)

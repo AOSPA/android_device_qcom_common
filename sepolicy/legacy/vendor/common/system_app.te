@@ -38,8 +38,8 @@ userdebug_or_eng(`
   allow system_app su:unix_dgram_socket sendto;
 
   # Access to tombstone segfaults
-  allow system_app vendor_tombstone_data_file:dir r_dir_perms;
-  allow system_app vendor_tombstone_data_file:file r_file_perms;
+  allow system_app tombstone_data_file:dir r_dir_perms;
+  allow system_app tombstone_data_file:file r_file_perms;
   diag_use(system_app)
 
 ')
@@ -159,7 +159,7 @@ hal_client_domain(system_app, hal_perf)
 
 #allow system app to interact with the esepowermanager
 hal_client_domain(system_app, hal_esepowermanager)
-get_prop(system_app, fm_prop)
+get_prop(system_app, vendor_fm_prop)
 
 #allow system_app access factory
 hal_client_domain(system_app, vendor_hal_factory_qti);

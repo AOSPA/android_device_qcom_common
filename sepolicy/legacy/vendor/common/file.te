@@ -195,6 +195,7 @@ type sysfs_hsic_host_rdy, sysfs_type, fs_type;
 
 # Files accessed by qcom-system-daemon
 type sysfs_socinfo, fs_type, sysfs_type;
+type sysfs_soc, sysfs_type, fs_type;
 type vendor_sysfs_public, fs_type, sysfs_type;
 
 type qlogd_socket, file_type, mlstrustedobject;
@@ -416,6 +417,8 @@ type vendor_capabilityconfigstore_data_file, file_type, data_file_type;
 #sensor log files
 type sensors_vendor_data_file, file_type, data_file_type;
 
-type vendor_sysfs_devicetree_cpu, sysfs_type, fs_type;
-
 type vendor_sysfs_kgsl_gpuclk, sysfs_type, fs_type;
+
+#slub-debug
+type sysfs_slab_zshandle_storeuser, fs_type, sysfs_type;
+type sysfs_slab_zspage_storeuser, fs_type, sysfs_type;

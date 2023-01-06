@@ -38,3 +38,4 @@ allow hal_wifi_supplicant_default proc_net:file write;
 # # Allow wpa_supplicant to send back wifi information to cnd
 allow hal_wifi_supplicant_default { cnd ims }:unix_dgram_socket sendto;
 
+allow hal_wifi_supplicant_default self:qipcrtr_socket create_socket_perms_no_ioctl;

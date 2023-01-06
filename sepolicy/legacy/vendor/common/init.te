@@ -33,6 +33,8 @@ allow init {
     cache_file
     mnt_vendor_file
     storage_file
+    debugfs_tracing_debug
+    oemfs
 }:dir mounton;
 allow init kmsg_device:chr_file write;
 
@@ -67,6 +69,7 @@ allow init sysfs_boot_adsp:file write;
 allow init sysfs_slpi:file write;
 allow init sysfs_graphics:file setattr;
 
+allow init socket_device:sock_file create_file_perms;
 
 #load /vendor/lib/modules/qca_cld3/qca_cld3_wlan.ko
 #load /vendor/lib/modules/wil6210.ko
@@ -87,3 +90,6 @@ allow init {
 #Blocked by neverallow vendor_init { file_type fs_type -init_exec }:file entrypoint;
 #domain_trans(init, vendor_init_exec, vendor_init);
 allow init mnt_vendor_file:lnk_file r_file_perms;
+
+allow init firmware_file:filesystem getattr;
+allow init proc:file w_file_perms;

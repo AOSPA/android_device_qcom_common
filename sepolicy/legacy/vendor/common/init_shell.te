@@ -75,31 +75,31 @@ allow qti_init_shell self:capability {
 };
 
 # For  property starting with hw
-# freq_prop - for setting frequency from postboot script
+# vendor_freq_prop - for setting frequency from postboot script
 # vendor_mpctl_prop - for setting ctl.mpdecision property from postboot script
 # vendor_bluetooth_prop - for setting bt related properties from postboot script
 # ctl_vendor_qmuxd_prop/ctl_vendor_netmgrd_prop - Needed in order to set properties on qmuxd and netmgrd processes
-set_prop(qti_init_shell, freq_prop)
+set_prop(qti_init_shell, vendor_freq_prop)
 set_prop(qti_init_shell, vendor_mpctl_prop)
 set_prop(qti_init_shell, vendor_bluetooth_prop)
-set_prop(qti_init_shell, sensors_prop)
+set_prop(qti_init_shell, vendor_sensors_prop)
 set_prop(qti_init_shell, vendor_msm_irqbalance_prop)
 set_prop(qti_init_shell, vendor_msm_irqbl_sdm630_prop)
 set_prop(qti_init_shell, vendor_ipacm_prop)
 set_prop(qti_init_shell, vendor_ipacm-diag_prop)
 set_prop(qti_init_shell, vendor_dataqti_prop)
 set_prop(qti_init_shell, vendor_dataadpl_prop)
-#set_prop(qti_init_shell, ctl_rildaemon_prop)
-set_prop(qti_init_shell, ctl_qcrild_prop)
-set_prop(qti_init_shell, ctl_vendor_rild_prop)
-set_prop(qti_init_shell, ctl_vendor_qmuxd_prop)
-set_prop(qti_init_shell, ctl_vendor_netmgrd_prop)
-set_prop(qti_init_shell, ctl_vendor_port-bridge_prop)
+#set_prop(qti_init_shell, vendor_ctl_rildaemon_prop)
+set_prop(qti_init_shell, vendor_ctl_qcrild_prop)
+set_prop(qti_init_shell, vendor_ctl_vendor_rild_prop)
+set_prop(qti_init_shell, vendor_ctl_vendor_qmuxd_prop)
+set_prop(qti_init_shell, vendor_ctl_vendor_netmgrd_prop)
+set_prop(qti_init_shell, vendor_ctl_vendor_port-bridge_prop)
 set_prop(qti_init_shell, vendor_display_prop)
-set_prop(qti_init_shell, scr_enabled_prop)
+set_prop(qti_init_shell, vendor_scr_enabled_prop)
 set_prop(qti_init_shell, vendor_opengles_prop)
 set_prop(qti_init_shell, vendor_mdm_helper_prop)
-set_prop(qti_init_shell, fm_prop)
+set_prop(qti_init_shell, vendor_fm_prop)
 set_prop(qti_init_shell, vendor_alarm_boot_prop)
 set_prop(qti_init_shell, vendor_gralloc_prop)
 set_prop(qti_init_shell, vendor_audio_prop)
@@ -109,23 +109,26 @@ userdebug_or_eng(`
 #set_prop(qti_init_shell, ctl_console_prop)
 set_prop(qti_init_shell, vendor_coresight_prop)
 set_prop(qti_init_shell, vendor_audio_debug_prop)
+set_prop(qti_init_shell, vendor_vm_bms_debug_prop)
 ')
+
+set_prop(vendor_qti_init_shell,vendor_dcvs_prop)
 #Needed for starting vm_bms executable post-boot
 set_prop(qti_init_shell, vendor_vm_bms_prop)
 set_prop(qti_init_shell, vendor_usb_prop)
 #Needed for setting hwui properties in post_boot
-set_prop(qti_init_shell, hwui_prop)
-set_prop(qti_init_shell, graphics_vulkan_prop)
+set_prop(qti_init_shell, vendor_hwui_prop)
+set_prop(qti_init_shell, vendor_graphics_vulkan_prop)
 #Needed for setting vendor_cgroup_follow properties from post_boot
 set_prop(qti_init_shell, vendor_cgroup_follow_prop)
 #Needed for setting bservice properties from post_boot
-set_prop(qti_init_shell, bservice_prop)
+set_prop(qti_init_shell, vendor_bservice_prop)
 #Needed for setting DSR properties from post_boot
-set_prop(qti_init_shell, reschedule_service_prop)
+set_prop(qti_init_shell, vendor_reschedule_service_prop)
 #Needed for setting hvdcp properties from post_boot
-set_prop(qti_init_shell, hvdcp_opti_prop)
+set_prop(qti_init_shell, vendor_hvdcp_opti_prop)
 
-get_prop(qti_init_shell, radio_control_prop)
+get_prop(qti_init_shell, exported3_radio_prop)
 set_prop(qti_init_shell, vendor_gpu_prop)
 
 allow qti_init_shell efs_boot_dev:blk_file r_file_perms;
@@ -139,6 +142,8 @@ allow qti_init_shell {
     sysfs_lowmemorykiller
     sysfs_mmc_host
     sysfs_process_reclaim
+    sysfs_dm
+    sysfs_net
 }:file w_file_perms;
 
 allow qti_init_shell sysfs_vmpressure:file write;
@@ -222,7 +227,7 @@ allow qti_init_shell vendor_mbn_data_file:dir create_dir_perms;
 allow qti_init_shell vendor_mbn_data_file:file create_file_perms;
 
 set_prop(qti_init_shell, vendor_rild_libpath_prop);
-set_prop(qti_init_shell, ctl_vendor_hbtp_prop)
+set_prop(qti_init_shell, vendor_ctl_vendor_hbtp_prop)
 set_prop(qti_init_shell, vendor_radio_prop)
 
 allow qti_init_shell fm_qsoc_patches_exec:file rx_file_perms;
@@ -275,5 +280,15 @@ allow qti_init_shell vendor_fm_data_file:dir ra_dir_perms;
 allow qti_init_shell sysfs_android_usb:dir r_dir_perms;
 allow qti_init_shell sysfs_android_usb:file rw_file_perms;
 
-# allow read permisison for hvdcp_opti properties
-get_prop(qti_init_shell,  hvdcp_opti_prop)
+# allow read permisison for vendor_hvdcp_opti properties
+get_prop(qti_init_shell,  vendor_hvdcp_opti_prop)
+
+#allow set permission for vendor.fastrpc properties
+set_prop(qti_init_shell, vendor_adsprpc_prop)
+
+dontaudit qti_init_shell self:capability dac_override;
+
+#allow configuring slub debug options
+allow qti_init_shell sysfs_slab_zshandle_storeuser:file w_file_perms;
+allow qti_init_shell sysfs_slab_zspage_storeuser:file w_file_perms;
+dontaudit qti_init_shell default_prop:file read;

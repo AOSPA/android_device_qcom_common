@@ -106,9 +106,11 @@ allow sensors xdsp_device:chr_file r_file_perms;
 
 # For reading dir/files on /dsp
 r_dir_file(sensors, adsprpcd_file)
-# For reading adsprpc_prop
-get_prop(sensors, adsprpc_prop)
+# For reading vendor_adsprpc_prop
+get_prop(sensors, vendor_adsprpc_prop)
 
 #allow access for sensors_vendor_data_file  partition for ODL
 allow sensors sensors_vendor_data_file:dir create_dir_perms;
 allow sensors sensors_vendor_data_file:file create_file_perms;
+
+allow sensors sysfs_soc:dir r_dir_perms;
