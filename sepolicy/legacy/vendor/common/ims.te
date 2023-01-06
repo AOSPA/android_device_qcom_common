@@ -59,8 +59,8 @@ allow ims {
 # Talk to qumuxd via ims_socket
 unix_socket_connect(ims, ims, qmuxd)
 
-set_prop(ims, qcom_ims_prop)
-set_prop(ims, ctl_vendor_imsrcsservice_prop)
+set_prop(ims, vendor_qcom_ims_prop)
+set_prop(ims, vendor_ctl_vendor_imsrcsservice_prop)
 
 # permissions for communication with CNE in LBO use case
 unix_socket_connect(ims, cnd, cnd)
@@ -83,7 +83,7 @@ allowxperm ims self:udp_socket ioctl priv_sock_ioctls;
 allow ims sysfs_data:file r_file_perms;
 hwbinder_use(ims)
 get_prop(ims, hwservicemanager_prop)
-get_prop(ims, qcom_ims_prop)
-get_prop(ims, cnd_vendor_prop)
+get_prop(ims, vendor_qcom_ims_prop)
+get_prop(ims, vendor_cnd_vendor_prop)
 allow ims hal_datafactory_hwservice:hwservice_manager find;
 binder_call(ims, cnd)

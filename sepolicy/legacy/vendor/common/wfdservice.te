@@ -1,4 +1,4 @@
-# Copyright (c) 2019 The Linux Foundation. All rights reserved.
+# Copyright (c) 2017, 2019-2020 The Linux Foundation. All rights reserved.
 #
 # Redistribution and use in source and binary forms, with or without
 # modification, are permitted provided that the following conditions are
@@ -25,4 +25,43 @@
 # OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN
 # IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
-hal_client_domain(vendor_wfdservice, wifidisplayhalservice);
+#allow access to sysfs to know HDMI repeater state
+allow vendor_wfdservice sysfs_graphics:file rw_file_perms;
+allow vendor_wfdservice sysfs_graphics:dir r_dir_perms;
+
+#Allow hardware binder use
+hwbinder_use(vendor_wfdservice)
+get_prop(vendor_wfdservice, hwservicemanager_prop)
+
+#Allow hal graphics mapper permissions
+hal_client_domain(vendor_wfdservice, hal_graphics_composer);
+
+#Allow hal graphics allocator permissions
+hal_client_domain(vendor_wfdservice, hal_graphics_allocator);
+
+hal_client_domain(vendor_wfdservice, vendor_wifidisplayhalservice);
+
+#Denial seen - SELinux : avc:  denied  { find } for interface=com.qualcomm.qti.wifidisplayhal::IHDCPSession
+#pid=3530 scontext=u:r:vendor_wfdservice:s0 tcontext=u:object_r:vendor_wifidisplayhalservice_hwservice:s0 tclass=hwservice_manager
+allow vendor_wfdservice vendor_wifidisplayhalservice_hwservice:hwservice_manager find;
+
+#Allow for property access
+get_prop(vendor_wfdservice, vendor_gralloc_prop)
+get_prop(vendor_wfdservice, vendor_video_prop)
+
+# Add the rule for wfd to access /proc/asound/pcm file
+r_dir_file(vendor_wfdservice, proc_asound)
+
+# Add the rule for wfd to access /proc/asound/card0/state file
+r_dir_file(vendor_wfdservice, proc_audiod)
+
+# Fix sink avc denials
+allow vendor_wfdservice mediametrics:binder call;
+allow vendor_wfdservice vendor_audio_prop:file read;
+allow vendor_wfdservice vendor_audio_prop:file open;
+allow vendor_wfdservice vendor_audio_prop:file getattr;
+
+# Fix source avc denials
+allow vendor_wfdservice vendor_default_prop:file read;
+allow vendor_wfdservice vendor_default_prop:file open;
+allow vendor_wfdservice vendor_default_prop:file getattr;

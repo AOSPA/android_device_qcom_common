@@ -31,5 +31,5 @@ allow vendor_fm_app sysfs_kgsl:file r_file_perms;
 allow vendor_fm_app sysfs_kgsl:dir search;
 hal_client_domain(vendor_fm_app, hal_fm);
 hal_client_domain(vendor_fm_app, hal_btconfigstore);
-allow vendor_fm_app hal_perf_hwservice:hwservice_manager find;
 get_prop(vendor_fm_app, vendor_bluetooth_prop)
+allow vendor_fm_app hal_perf_hwservice:hwservice_manager find;

@@ -40,7 +40,7 @@ r_dir_file(vendor_qvrd, sysfs_kgsl)
 # Allow access to ADSP & SLPI
 allow vendor_qvrd { ion_device qdsp_device dsp_device xdsp_device }:chr_file r_file_perms;
 
-get_prop(vendor_qvrd, adsprpc_prop)
+get_prop(vendor_qvrd, vendor_adsprpc_prop)
 
 #
 # Display

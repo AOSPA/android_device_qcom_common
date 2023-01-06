@@ -86,3 +86,6 @@ hal_client_domain(bluetooth, hal_perf);
 
 #allow bluetooth to make binder call to gpuservice
 binder_call(bluetooth, gpuservice);
+
+#Allow bluetooth to read the property
+get_prop(bluetooth, vendor_bluetooth_prop)

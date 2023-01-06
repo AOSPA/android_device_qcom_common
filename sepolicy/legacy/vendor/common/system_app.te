@@ -159,7 +159,7 @@ hal_client_domain(system_app, hal_perf)
 
 #allow system app to interact with the esepowermanager
 hal_client_domain(system_app, hal_esepowermanager)
-get_prop(system_app, fm_prop)
+get_prop(system_app, vendor_fm_prop)
 
 #allow system_app access factory
 hal_client_domain(system_app, vendor_hal_factory_qti);
