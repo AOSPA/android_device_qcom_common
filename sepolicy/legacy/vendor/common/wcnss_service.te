@@ -75,6 +75,7 @@ allow wcnss_service vfat:file create_file_perms;
 allow wcnss_service sdcardfs:dir create_dir_perms;
 allow wcnss_service sdcardfs:file create_file_perms;
 allow wcnss_service mnt_vendor_file:file rw_file_perms;
+allow wcnss_service kmsg_device:chr_file { write open };
 
 # This is needed for ptt_socket app to write logs file collected to sdcard
 r_dir_file(wcnss_service, proc_wifi_dbg)
@@ -94,3 +95,12 @@ hal_client_domain(wcnss_service, hal_perf)
 
 # allow to read /sys/class/net file
 r_dir_file(wcnss_service, sysfs_net);
+
+allow wcnss_service property_socket:sock_file write;
+allow wcnss_service sysfs_soc:dir r_dir_perms;
+allow wcnss_service init:unix_stream_socket connectto;
+dontaudit wcnss_service wifi_data_file:dir search;
+
+allow wcnss_service wifi_vendor_wpa_socket:dir create_dir_perms;
+allow wcnss_service wifi_vendor_wpa_socket:sock_file create_file_perms;
+allow wcnss_service wifi_vendor_wpa_socket:file create_file_perms;

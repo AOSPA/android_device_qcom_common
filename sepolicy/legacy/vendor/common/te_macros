@@ -74,6 +74,17 @@ get_prop($1, vendor_per_mgr_state_prop);
 ')
 
 #####################################
+# cnd_nims_socket_perm(clientdomain)
+# allow cnd to read /proc/pid/cmdline to get appname
+# allow cnd to use inet socket created by app.
+define(`cnd_nims_socket_perm', `
+allow cnd $1:dir r_dir_perms;
+allow cnd $1:file r_file_perms;
+allow cnd $1:fd use;
+allow cnd $1:tcp_socket rw_socket_perms;
+')
+
+#####################################
 # diag_use(clientdomain)
 # allow clientdomain to read/write to diag
 define(`diag_use', `

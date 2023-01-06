@@ -42,7 +42,7 @@ allow hal_wigig_client hal_wigig_hwservice:hwservice_manager find;
 add_hwservice(hal_wigig, hal_wigig_hwservice)
 
 # allow start/stop services via ctl.start and ctl.stop
-set_prop(hal_wigig, ctl_vendor_wigigsvc_prop)
+set_prop(hal_wigig, vendor_ctl_vendor_wigigsvc_prop)
 
 # access wigig properties
 # need to write vendor.wigig.driver/read vendor.wigig.driver.probed
