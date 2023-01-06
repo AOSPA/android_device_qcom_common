@@ -1,4 +1,4 @@
-# Copyright (c) 2017, The Linux Foundation. All rights reserved.
+# Copyright (c) 2017, 2020 The Linux Foundation. All rights reserved.
 
 # Redistribution and use in source and binary forms, with or without
 # modification, are permitted provided that the following conditions are
@@ -30,4 +30,3 @@ display.qservice                               u:object_r:qdisplay_service:s0
 com.qualcomm.qti.qseeproxy                     u:object_r:qseeproxy_service:s0
 eSEPowerManagerService                         u:object_r:esepmdaemon_service:s0
 wfd.native.mm.service                          u:object_r:wfdnativemm_service:s0
-wfdhdcpvndservice                              u:object_r:wfdhdcpvndservice_service:s0
