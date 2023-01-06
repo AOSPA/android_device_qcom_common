@@ -29,8 +29,8 @@ app_domain(imshelper_app);
 unix_socket_connect(imshelper_app, ims, ims)
 allow imshelper_app app_api_service:service_manager find;
 
-allow qsee_svc_app imshelper_app_data_file:dir create_dir_perms;
-allow qsee_svc_app imshelper_app_data_file:file create_file_perms;
+#allow qsee_svc_app vendor_imshelper_app_data_file:dir create_dir_perms;
+#allow qsee_svc_app vendor_imshelper_app_data_file:file create_file_perms;
 
 allow imshelper_app system_app_data_file:dir { getattr search };
 allow imshelper_app radio_data_file:dir { getattr search };
