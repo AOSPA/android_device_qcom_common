@@ -35,6 +35,6 @@ binder_call(vtloopback_app, hal_imsrtp)
 allow vtloopback_app hal_imsrtp_hwservice:hwservice_manager find;
 allow vtloopback_app cameraserver_service:service_manager find;
 allow vtloopback_app mediaserver_service:service_manager find;
-get_prop(vtloopback_app, qcom_ims_prop)
+get_prop(vtloopback_app, vendor_qcom_ims_prop)
 allow vtloopback_app { app_api_service activity_service }:service_manager find;
 ')

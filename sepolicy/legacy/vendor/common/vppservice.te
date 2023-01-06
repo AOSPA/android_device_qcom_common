@@ -41,7 +41,7 @@ binder_call(hal_vpp_server, hal_vpp_client)
 
 # allow vppservice to access adsprpcd
 r_dir_file(vendor_vppservice, adsprpcd_file);
-get_prop(vendor_vppservice, adsprpc_prop)
+get_prop(vendor_vppservice, vendor_adsprpc_prop)
 r_dir_file(vendor_vppservice, firmware_file);
 
 #allow access to vppservice (/data/vendor/vpp)

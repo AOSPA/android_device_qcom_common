@@ -64,4 +64,8 @@ hal_client_domain(hal_audio_default, hal_health)
 
 #allow acess to wcd_cpe
 allow hal_audio sysfs_audio:file rw_file_perms;
-allow hal_audio sysfs_audio:dir r_dir_perms ;
+allow hal_audio sysfs_audio:dir r_dir_perms;
+
+allow hal_audio_default sysfs_soc:dir r_dir_perms;
+
+dontaudit hal_audio_default default_prop:file read;

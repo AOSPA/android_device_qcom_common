@@ -26,7 +26,7 @@
 #IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
 # Set NFC properties
-get_prop(nfc, nfc_nq_prop)
+get_prop(nfc, vendor_nfc_nq_prop)
 #qmux_socket(nfc);
 #allow nfc nfc_data_file:file x_file_perms;
 allow nfc self:socket create_socket_perms_no_ioctl;
