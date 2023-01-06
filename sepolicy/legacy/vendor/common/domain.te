@@ -25,16 +25,18 @@
 # OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN
 # IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
-r_dir_file({domain - isolated_app -untrusted_app_all }, sysfs_socinfo);
-r_dir_file({domain - isolated_app -untrusted_app_all }, sysfs_esoc);
-r_dir_file({domain - isolated_app -untrusted_app_all }, sysfs_ssr);
+r_dir_file({domain - isolated_app - untrusted_app_all }, sysfs_socinfo);
+r_dir_file({domain - isolated_app - untrusted_app_all }, sysfs_soc);
+r_dir_file({domain - isolated_app - untrusted_app_all }, sysfs_esoc);
+r_dir_file({domain - isolated_app - untrusted_app_all }, sysfs_ssr);
 
 #Reding of standard chip details need this
 allow untrusted_app_all {
         sysfs_socinfo
+        sysfs_soc
         sysfs_esoc
         sysfs_ssr
-        }:dir search ;
+        }:dir search;
 r_dir_file({domain - isolated_app }, vendor_sysfs_public);
 
 dontaudit domain kernel:system module_request;
@@ -70,9 +72,10 @@ allowxperm domain domain:icmp_socket ioctl { unpriv_sock_ioctls unpriv_tty_ioctl
 # For compliance testing test suite reads vendor_security_path_level
 # Which is the public readable property “ ro.vendor.build.security_patch
 get_prop(domain, vendor_security_patch_level_prop)
-get_prop(domain, public_vendor_default_prop)
+get_prop(domain, vendor_public_vendor_default_prop)
 
 allow domain qti_debugfs:dir search;
+
 # allow all context to read sysfs_kgsl
 allow { domain - isolated_app } sysfs_kgsl:dir search;
 # allow all context to read gpu model

@@ -60,6 +60,6 @@ r_dir_file(spdaemon, firmware_file);
 use_vendor_per_mgr(spdaemon)
 
 # Allow set/get prop to set/check if app is loaded
-set_prop(spdaemon, spcomlib_prop)
+set_prop(spdaemon, vendor_spcomlib_prop)
 
 allow spdaemon sysfs_data:file r_file_perms;

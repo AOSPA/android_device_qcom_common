@@ -31,7 +31,7 @@ hal_server_domain(vendor_hal_factory_qti_default, vendor_hal_factory_qti)
 type vendor_hal_factory_qti_default_exec, exec_type, vendor_file_type, file_type;
 init_daemon_domain(vendor_hal_factory_qti_default)
 
-set_prop(vendor_hal_factory_qti, ctl_vendor_mmid_prop)
+set_prop(vendor_hal_factory_qti, vendor_ctl_vendor_mmid_prop)
 
 # Allow read/write to mmi socket
 allow vendor_hal_factory_qti vendor_mmi_socket:sock_file rw_file_perms;

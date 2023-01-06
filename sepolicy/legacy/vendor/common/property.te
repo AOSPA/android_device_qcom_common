@@ -26,160 +26,167 @@
 # IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
 # property for uicc_daemon
-vendor_restricted_prop(qcom_ims_prop)
-vendor_internal_prop(ctl_vendor_qmuxd_prop)
-vendor_internal_prop(ctl_vendor_netmgrd_prop)
-vendor_internal_prop(ctl_vendor_port-bridge_prop)
-vendor_internal_prop(ctl_qcrild_prop)
-vendor_restricted_prop(vendor_tee_listener_prop)
-vendor_internal_prop(ctl_vendor_rild_prop)
+vendor_restricted_prop(vendor_qcom_ims_prop);
+vendor_internal_prop(vendor_ctl_vendor_qmuxd_prop);
+vendor_internal_prop(vendor_ctl_vendor_netmgrd_prop);
+vendor_internal_prop(vendor_ctl_vendor_port-bridge_prop);
+vendor_internal_prop(vendor_ctl_qcrild_prop);
+vendor_restricted_prop(vendor_tee_listener_prop);
+vendor_internal_prop(vendor_ctl_vendor_rild_prop);
 
 # property for LKCore ctl start
-vendor_restricted_prop(ctl_LKCore_prop)
+vendor_restricted_prop(vendor_ctl_LKCore_prop);
 
-vendor_internal_prop(freq_prop)
-vendor_internal_prop(vendor_vm_bms_prop) #To start vm_bms
-vendor_internal_prop(vendor_dataqti_prop)
-vendor_internal_prop(vendor_dataadpl_prop)
-vendor_internal_prop(vendor_dataqdp_prop)
-vendor_internal_prop(vendor_ipacm_prop)
-vendor_internal_prop(vendor_ipacm-diag_prop)
-vendor_restricted_prop(cnd_vendor_prop)
-vendor_internal_prop(sensors_prop)
-vendor_restricted_prop(slpi_prop)
-vendor_internal_prop(vendor_msm_irqbalance_prop)
-vendor_internal_prop(vendor_msm_irqbl_sdm630_prop)
-vendor_restricted_prop(camera_prop)
-vendor_internal_prop(spcomlib_prop)
-vendor_restricted_prop(vendor_display_prop)
-vendor_restricted_prop(scr_enabled_prop)
-vendor_restricted_prop(bg_daemon_prop)
-vendor_restricted_prop(bg_boot_complete_prop)
-vendor_restricted_prop(vendor_opengles_prop)
-vendor_internal_prop(vendor_mdm_helper_prop)
-vendor_restricted_prop(vendor_mpctl_prop)
-vendor_restricted_prop(vendor_iop_prop)
-vendor_restricted_prop(public_vendor_default_prop)
+vendor_internal_prop(vendor_freq_prop);
+vendor_internal_prop(vendor_vm_bms_prop); #To start vm_bms
+vendor_internal_prop(vendor_vm_bms_debug_prop);
+vendor_internal_prop(vendor_dataqti_prop);
+vendor_internal_prop(vendor_dataadpl_prop);
+vendor_internal_prop(vendor_dataqdp_prop);
+vendor_internal_prop(vendor_ipacm_prop);
+vendor_internal_prop(vendor_ipacm-diag_prop);
+vendor_restricted_prop(vendor_cnd_vendor_prop);
+vendor_internal_prop(vendor_sensors_prop);
+vendor_restricted_prop(vendor_slpi_prop);
+vendor_internal_prop(vendor_msm_irqbalance_prop);
+vendor_internal_prop(vendor_msm_irqbl_sdm630_prop);
+vendor_restricted_prop(camera_prop);
+vendor_internal_prop(vendor_spcomlib_prop);
+vendor_restricted_prop(vendor_display_prop);
+vendor_restricted_prop(vendor_scr_enabled_prop);
+vendor_restricted_prop(vendor_bg_daemon_prop);
+vendor_restricted_prop(vendor_bg_boot_complete_prop);
+vendor_restricted_prop(vendor_opengles_prop);
+vendor_internal_prop(vendor_mdm_helper_prop);
+vendor_restricted_prop(vendor_mpctl_prop);
+vendor_restricted_prop(vendor_iop_prop);
+vendor_restricted_prop(vendor_public_vendor_default_prop);
 #Scroll Pre-obtain
-vendor_restricted_prop(vendor_scroll_prop)
+vendor_restricted_prop(vendor_scroll_prop);
 
 # properties for ActivityManager tuning
-vendor_restricted_prop(vendor_am_prop)
+vendor_restricted_prop(vendor_am_prop);
 
 #Needed for  ubwc support
-vendor_restricted_prop(vendor_gralloc_prop)
+vendor_restricted_prop(vendor_gralloc_prop);
 
-vendor_restricted_prop(fm_prop)
-vendor_restricted_prop(chgdiabled_prop)
+vendor_restricted_prop(vendor_fm_prop);
+vendor_restricted_prop(chgdiabled_prop);
 
 vendor_restricted_prop(vendor_xlat_prop);
 
 # property for location
-vendor_internal_prop(location_prop)
+vendor_internal_prop(vendor_location_prop);
 
 #properites for init.qcom.sh script
-vendor_internal_prop(vendor_usb_prop)
+vendor_internal_prop(vendor_usb_prop);
 
-vendor_restricted_prop(vendor_coresight_prop)
-
-
-vendor_restricted_prop(vendor_alarm_boot_prop)
+vendor_restricted_prop(vendor_coresight_prop);
 
 
-vendor_restricted_prop(vendor_wifi_ftmd_prop)
+vendor_restricted_prop(vendor_alarm_boot_prop);
+
+
+vendor_restricted_prop(vendor_wifi_ftmd_prop);
+
+vendor_internal_prop(vendor_wifi_version);
 
 # WIGIG
-vendor_internal_prop(vendor_wigig_prop)
-vendor_internal_prop(ctl_vendor_wigigsvc_prop)
+vendor_internal_prop(vendor_wigig_prop);
+vendor_internal_prop(vendor_ctl_vendor_wigigsvc_prop);
 
 #HWUI property
-vendor_restricted_prop(hwui_prop)
+vendor_restricted_prop(vendor_hwui_prop);
 
-vendor_restricted_prop(graphics_vulkan_prop)
+vendor_restricted_prop(vendor_graphics_vulkan_prop);
 
 #cgroup follow
-vendor_restricted_prop(vendor_cgroup_follow_prop)
+vendor_restricted_prop(vendor_cgroup_follow_prop);
 
 #Bservice property
-vendor_restricted_prop(bservice_prop)
+vendor_restricted_prop(vendor_bservice_prop);
 
 #Delayed Service Reschedule property
-vendor_restricted_prop(reschedule_service_prop)
+vendor_restricted_prop(vendor_reschedule_service_prop);
 
 #boot mode property
-vendor_internal_prop(vendor_boot_mode_prop)
+vendor_internal_prop(vendor_boot_mode_prop);
 #properties for nfc
-vendor_restricted_prop(nfc_nq_prop)
+vendor_restricted_prop(vendor_nfc_nq_prop);
 
-vendor_internal_prop(vendor_rild_libpath_prop)
+vendor_internal_prop(vendor_rild_libpath_prop);
 
 #Peripheral manager
-vendor_restricted_prop(vendor_per_mgr_state_prop)
+vendor_restricted_prop(vendor_per_mgr_state_prop);
 
-vendor_internal_prop(vendor_system_prop)
+vendor_internal_prop(vendor_system_prop);
 
 # Bluetooth props
-vendor_restricted_prop(vendor_bluetooth_prop)
+vendor_restricted_prop(vendor_bluetooth_prop);
 
 # HBTP
-vendor_internal_prop(ctl_vendor_hbtp_prop)
+vendor_internal_prop(vendor_ctl_vendor_hbtp_prop);
 
 # factory properties
-vendor_internal_prop(ctl_vendor_mmid_prop)
+vendor_internal_prop(vendor_ctl_vendor_mmid_prop);
 
 #qcc property
-#vendor_internal_prop(vendor_qdma_prop)
 vendor_public_prop(vendor_qcc_prop);
 
 #imsrcsservice
-vendor_restricted_prop(ctl_vendor_imsrcsservice_prop)
+vendor_restricted_prop(vendor_ctl_vendor_imsrcsservice_prop);
 
 #mmi
-vendor_internal_prop(vendor_mmi_prop)
+vendor_internal_prop(vendor_mmi_prop);
 
 #time service
-vendor_internal_prop(vendor_time_service_prop)
-vendor_restricted_prop(vendor_radio_prop)
+vendor_internal_prop(vendor_time_service_prop);
+vendor_restricted_prop(vendor_radio_prop);
 
 # Audio props
-vendor_restricted_prop(vendor_audio_prop)
+vendor_restricted_prop(vendor_audio_prop);
 
 # Audio debug props
-vendor_internal_prop(vendor_audio_debug_prop)
+vendor_internal_prop(vendor_audio_debug_prop);
 
 #ss-restart
-vendor_internal_prop(vendor_ssr_prop)
+vendor_internal_prop(vendor_ssr_prop);
 
 #ss-services (PD)
-vendor_internal_prop(vendor_pd_locater_dbg_prop)
+vendor_internal_prop(vendor_pd_locater_dbg_prop);
 
 #qdcmss property
-vendor_internal_prop(vendor_qdcmss_prop)
+vendor_internal_prop(vendor_qdcmss_prop);
 
 # Wifi Softap
-vendor_restricted_prop(vendor_softap_prop)
+vendor_restricted_prop(vendor_softap_prop);
 
 #mm-video
-vendor_restricted_prop(vendor_video_prop)
+vendor_restricted_prop(vendor_video_prop);
 
 #qtccconnector
 vendor_internal_prop(vendor_qteeconnector_opti_prop)
 
-
 #rmt_storage
-vendor_internal_prop(ctl_vendor_rmt_storage_prop)
+vendor_internal_prop(vendor_ctl_vendor_rmt_storage_prop);
 
-vendor_restricted_prop(vendor_gpu_prop)
+vendor_restricted_prop(vendor_gpu_prop);
 
-vendor_internal_prop(vendor_data_ko_prop)
+vendor_internal_prop(vendor_data_ko_prop);
+
+#shsusrd props
+vendor_restricted_prop(vendor_data_shsusr_prop);
+vendor_restricted_prop(vendor_data_qmipriod_prop);
 
 #hvdcp_opti
-vendor_internal_prop(hvdcp_opti_prop)
+vendor_internal_prop(vendor_hvdcp_opti_prop);
 #adsprpc props
-vendor_restricted_prop(adsprpc_prop)
+vendor_restricted_prop(vendor_adsprpc_prop);
 
 #qvr property
-vendor_restricted_prop(qvr_prop)
+vendor_restricted_prop(vendor_qvr_prop);
 
 #capabilityconfigstore hal (CCHAL)
-vendor_internal_prop(vendor_cap_configstore_dbg_prop)
+vendor_internal_prop(vendor_cap_configstore_dbg_prop);
+
+vendor_internal_prop(vendor_dcvs_prop);

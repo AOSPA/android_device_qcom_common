@@ -61,7 +61,7 @@ allow cnd self:{
 allow cnd self:netlink_tcpdiag_socket nlmsg_read;
 
 # allow cnd to set cnd property
-set_prop(cnd, cnd_vendor_prop)
+set_prop(cnd, vendor_cnd_vendor_prop)
 
 # allow cnd to access cnd_data_file
 allow cnd cnd_data_file:file create_file_perms;
@@ -113,6 +113,7 @@ allow cnd sysfs_data:file r_file_perms;
 
 add_hwservice(cnd, hal_latency_hwservice)
 add_hwservice(cnd, hal_datafactory_hwservice)
+add_hwservice(cnd, vendor_hal_mwqemadapter_hwservice)
 hwbinder_use(cnd)
 get_prop(cnd, hwservicemanager_prop)
 binder_call(cnd, vendor_dataservice_app)

@@ -44,4 +44,4 @@ allow hal_keymaster_qti skp_device:chr_file rw_file_perms;
 allow hal_keymaster_qti sp_keymaster_device:chr_file rw_file_perms;
 allow hal_keymaster_qti sp_ssr_device:chr_file rw_file_perms;
 
-get_prop(hal_keymaster_qti, spcomlib_prop)
+get_prop(hal_keymaster_qti, vendor_spcomlib_prop)

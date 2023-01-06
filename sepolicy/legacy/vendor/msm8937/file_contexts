@@ -1,0 +1,100 @@
+# Copyright (c) 2015, The Linux Foundation. All rights reserved.
+#
+# Redistribution and use in source and binary forms, with or without
+# modification, are permitted provided that the following conditions are
+# met:
+#     * Redistributions of source code must retain the above copyright
+#       notice, this list of conditions and the following disclaimer.
+#     * Redistributions in binary form must reproduce the above
+#       copyright notice, this list of conditions and the following
+#       disclaimer in the documentation and/or other materials provided
+#       with the distribution.
+#     * Neither the name of The Linux Foundation nor the names of its
+#       contributors may be used to endorse or promote products derived
+#       from this software without specific prior written permission.
+#
+# THIS SOFTWARE IS PROVIDED "AS IS" AND ANY EXPRESS OR IMPLIED
+# WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF
+# MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NON-INFRINGEMENT
+# ARE DISCLAIMED.  IN NO EVENT SHALL THE COPYRIGHT OWNER OR CONTRIBUTORS
+# BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR
+# CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF
+# SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR
+# BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY,
+# WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE
+# OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN
+# IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+
+###################################
+# Primary storage device nodes
+#
+/dev/mmcblk0rpmb                                                    u:object_r:rpmb_device:s0
+/dev/block/mmcblk0                                                  u:object_r:root_block_device:s0
+/dev/block/mmcblk0rpmb                                              u:object_r:rpmb_device:s0
+
+#Using soc instead of soc.0 for 3.18 kernel
+/dev/block/platform/soc/7824900.sdhci/by-name/fsg                   u:object_r:modem_efs_partition_device:s0
+/dev/block/platform/soc/7824900.sdhci/by-name/fsc                   u:object_r:modem_efs_partition_device:s0
+/dev/block/platform/soc/7824900.sdhci/by-name/modemst1              u:object_r:modem_efs_partition_device:s0
+/dev/block/platform/soc/7824900.sdhci/by-name/modemst2              u:object_r:modem_efs_partition_device:s0
+/dev/block/platform/soc/7824900.sdhci/by-name/ssd                   u:object_r:ssd_device:s0
+/dev/block/platform/soc/7824900.sdhci/by-name/misc                  u:object_r:misc_block_device:s0
+/dev/block/platform/soc/7824900.sdhci/by-name/system                u:object_r:system_block_device:s0
+/dev/block/platform/soc/7824900.sdhci/by-name/userdata              u:object_r:userdata_block_device:s0
+/dev/block/platform/soc/7824900.sdhci/by-name/dip                   u:object_r:dip_device:s0
+/dev/block/platform/soc/7824900.sdhci/by-name/mdtp                  u:object_r:mdtp_device:s0
+/dev/block/platform/soc/7824900.sdhci/by-name/config                u:object_r:frp_block_device:s0
+/dev/block/platform/soc/7824900.sdhci/by-name/boot                  u:object_r:boot_block_device:s0
+/dev/block/platform/soc/7824900.sdhci/by-name/recovery              u:object_r:recovery_block_device:s0
+/dev/block/platform/soc/7824900.sdhci/by-name/cache                 u:object_r:cache_block_device:s0
+/dev/block/platform/soc/7824900.sdhci/by-name/logdump               u:object_r:logdump_partition:s0
+/dev/block/platform/soc/7824900.sdhci/by-name/super                 u:object_r:super_block_device:s0
+
+
+
+#rawdump partition
+/dev/block/platform/soc/7824900.sdhci/by-name/rawdump               u:object_r:rawdump_block_device:s0
+/sys/kernel/dload/emmc_dload                                        u:object_r:sysfs_emmc_dload:s0
+
+############################################################################################
+#Same hal process libs
+#
+/vendor/lib(64)?/hw/gralloc\.msm8937\.so   u:object_r:same_process_hal_file:s0
+/vendor/lib(64)?/hw/vulkan\.msm8937\.so    u:object_r:same_process_hal_file:s0
+
+#For adreno libs
+/vendor/lib(64)?/libsc-a3xx\.so                                     u:object_r:same_process_hal_file:s0
+
+# Single hal process
+/(vendor|system/vendor)/bin/hw/hal-server             u:object_r:hal-server_exec:s0
+
+# FBE
+/(vendor|system/vendor)/bin/init.qti.qseecomd.sh      u:object_r:init-qti-fbe-sh_exec:s0
+
+##################################
+# A/B partitions.
+#EMMC
+/dev/block/platform/soc/7824900.sdhci/by-name/aboot_[ab]            u:object_r:custom_ab_block_device:s0
+/dev/block/platform/soc/7824900.sdhci/by-name/boot_[ab]             u:object_r:boot_block_device:s0
+/dev/block/platform/soc/7824900.sdhci/by-name/cmnlib_[ab]           u:object_r:custom_ab_block_device:s0
+/dev/block/platform/soc/7824900.sdhci/by-name/cmnlib64_[ab]         u:object_r:custom_ab_block_device:s0
+/dev/block/platform/soc/7824900.sdhci/by-name/devcfg_[ab]           u:object_r:custom_ab_block_device:s0
+/dev/block/platform/soc/7824900.sdhci/by-name/mdtp_[ab]             u:object_r:mdtp_device:s0
+/dev/block/platform/soc/7824900.sdhci/by-name/keymaster_[ab]        u:object_r:custom_ab_block_device:s0
+/dev/block/platform/soc/7824900.sdhci/by-name/modem_[ab]            u:object_r:modem_block_device:s0
+/dev/block/platform/soc/7824900.sdhci/by-name/dsp_[ab]              u:object_r:custom_ab_block_device:s0
+/dev/block/platform/soc/7824900.sdhci/by-name/dtbo_[ab]             u:object_r:custom_ab_block_device:s0
+/dev/block/platform/soc/7824900.sdhci/by-name/pmic_[ab]             u:object_r:custom_ab_block_device:s0
+/dev/block/platform/soc/7824900.sdhci/by-name/rpm_[ab]              u:object_r:custom_ab_block_device:s0
+/dev/block/platform/soc/7824900.sdhci/by-name/system_[ab]           u:object_r:system_block_device:s0
+/dev/block/platform/soc/7824900.sdhci/by-name/tz_[ab]               u:object_r:custom_ab_block_device:s0
+/dev/block/platform/soc/7824900.sdhci/by-name/ImageFv_[ab]          u:object_r:custom_ab_block_device:s0
+/dev/block/platform/soc/7824900.sdhci/by-name/vendor_[ab]           u:object_r:system_block_device:s0
+/dev/block/platform/soc/7824900.sdhci/by-name/sbl1_[ab]             u:object_r:xbl_block_device:s0
+/dev/block/platform/soc/7824900.sdhci/by-name/recovery_[ab]         u:object_r:recovery_block_device:s0
+/dev/block/platform/soc/7824900.sdhci/by-name/vbmeta_[ab]           u:object_r:custom_ab_block_device:s0
+/dev/block/platform/soc/7824900.sdhci/by-name/vbmeta_system_[ab]    u:object_r:custom_ab_block_device:s0
+
+#sysfs
+/sys/devices(/platform)?/soc/1b00000.qcom,msm-cam/video4linux/video[0-33]/name(/.*)?  u:object_r:sysfs_jpeg:s0
+/sys/devices(/platform)?/soc/1d00000.qcom,vidc/video4linux/video[0-33]/name(/.*)?  u:object_r:sysfs_graphics:s0
