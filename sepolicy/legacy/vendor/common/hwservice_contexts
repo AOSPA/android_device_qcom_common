@@ -25,6 +25,8 @@
 # OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN
 # IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
+com.qualcomm.qti.wifidisplayhal::IHDCPSession                u:object_r:vendor_wifidisplayhalservice_hwservice:s0
+com.qualcomm.qti.wifidisplayhal::IDSManager                  u:object_r:vendor_wifidisplayhalservice_hwservice:s0
 vendor.qti.hardware.fingerprint::IQtiExtendedFingerprint     u:object_r:hal_fingerprint_hwservice:s0
 vendor.qti.hardware.radio.am::IQcRilAudio                    u:object_r:hal_telephony_hwservice:s0
 vendor.qti.hardware.radio.config::IConfig                    u:object_r:hal_telephony_hwservice:s0
@@ -54,9 +56,7 @@ com.qualcomm.qti.ant::IAntHci                                u:object_r:hal_blue
 vendor.qti.hardware.wipower::IWipower                        u:object_r:hal_bluetooth_hwservice:s0
 vendor.qti.hardware.limits::ILimits                          u:object_r:vendor_hal_limits_hwservice:s0
 vendor.qti.hardware.perf::IPerf                              u:object_r:hal_perf_hwservice:s0
-com.qualcomm.qti.wifidisplayhal::IHDCPSession                u:object_r:wifidisplayhalservice_hwservice:s0
 vendor.qti.hardware.iop::IIop                                u:object_r:hal_iop_hwservice:s0
-com.qualcomm.qti.wifidisplayhal::IDSManager                  u:object_r:wifidisplayhalservice_hwservice:s0
 vendor.qti.hardware.alarm::IAlarm                            u:object_r:hal_alarm_qti_hwservice:s0
 com.qualcomm.qti.uceservice::IUceService                     u:object_r:hal_imsrcsd_hwservice:s0
 vendor.qti.ims.callinfo::IService                            u:object_r:hal_imscallinfo_hwservice:s0
@@ -70,13 +70,14 @@ vendor.qti.hardware.data.connection::IDataConnection         u:object_r:hal_data
 vendor.qti.hardware.vpp::IHidlVppService                     u:object_r:hal_vpp_hwservice:s0
 vendor.qti.hardware.wigig.supptunnel::ISuppTunnelProvider    u:object_r:hal_wigig_hwservice:s0
 vendor.qti.hardware.wigig.netperftuner::INetPerfTuner        u:object_r:hal_wigig_npt_hwservice:s0
-vendor.qti.hardware.fstman::IFstManager                      u:object_r:hal_fstman_hwservice:s0
 vendor.qti.hardware.qteeconnector::IAppConnector             u:object_r:vendor_hal_qteeconnector_hwservice:s0
 vendor.qti.hardware.qteeconnector::IGPAppConnector           u:object_r:vendor_hal_qteeconnector_hwservice:s0
+vendor.qti.hardware.fstman::IFstManager                      u:object_r:hal_fstman_hwservice:s0
 vendor.qti.esepowermanager::IEsePowerManager                 u:object_r:hal_esepowermanager_hwservice:s0
 vendor.qti.voiceprint::IQtiVoicePrintService                 u:object_r:hal_voiceprint_hwservice:s0
 vendor.qti.hardware.servicetracker::IDebugUtils              u:object_r:hal_debugutils_hwservice:s0
 vendor.qti.power.pasrmanager::IPasrManager                   u:object_r:hal_pasrmanager_hwservice:s0
+vendor.qti.memory.pasrmanager::IPasrManager                  u:object_r:hal_pasrmanager_memory_hwservice:s0
 # Below rules are added to support the devices that are using the HALs before they are moved to
 # vendor.qti.hardware. They are used as it is to maintain the integrity of the software.
 vendor.qti.qcril.am::IQcRilAudio                             u:object_r:hal_telephony_hwservice:s0
@@ -99,10 +100,10 @@ vendor.qti.hardware.scve.objecttracker::IObjectTracker          u:object_r:hal_s
 vendor.qti.hardware.wifi.hostapd::IHostapdVendor             u:object_r:hal_wifi_hostapd_hwservice:s0
 vendor.qti.hardware.wifi.wifilearner::IWifiStats             u:object_r:hal_wifilearner_hwservice:s0
 vendor.qti.hardware.fm::IFmHci                               u:object_r:hal_fm_hwservice:s0
-vendor.qti.hardware.wifidisplaysession::IWifiDisplaySession  u:object_r:wifidisplayhalservice_hwservice:s0
-vendor.qti.hardware.wifidisplaysession::IWifiDisplaySessionVideoTrack    u:object_r:wifidisplayhalservice_hwservice:s0
-vendor.qti.hardware.wifidisplaysession::IWifiDisplaySessionAudioTrack    u:object_r:wifidisplayhalservice_hwservice:s0
-vendor.qti.hardware.wifidisplaysession::IWifiDisplaySessionImageTrack    u:object_r:wifidisplayhalservice_hwservice:s0
+vendor.qti.hardware.wifidisplaysession::IWifiDisplaySession  u:object_r:vendor_wifidisplayhalservice_hwservice:s0
+vendor.qti.hardware.wifidisplaysession::IWifiDisplaySessionVideoTrack    u:object_r:vendor_wifidisplayhalservice_hwservice:s0
+vendor.qti.hardware.wifidisplaysession::IWifiDisplaySessionAudioTrack    u:object_r:vendor_wifidisplayhalservice_hwservice:s0
+vendor.qti.hardware.wifidisplaysession::IWifiDisplaySessionImageTrack    u:object_r:vendor_wifidisplayhalservice_hwservice:s0
 vendor.qti.hardware.bluetooth_audio::IBluetoothAudioProvidersFactory u:object_r:hal_audio_hwservice:s0
 vendor.qti.hardware.display.mapper::IQtiMapper               u:object_r:hal_graphics_mapper_hwservice:s0
 vendor.qti.hardware.cryptfshw::ICryptfsHw                    u:object_r:hal_keymaster_hwservice:s0
@@ -111,5 +112,7 @@ vendor.qti.hardware.bluetooth_sar::IBluetoothSar             u:object_r:hal_blue
 com.dsi.ant::IAnt                                            u:object_r:hal_bluetooth_hwservice:s0
 vendor.qti.hardware.qseecom::IQSEECom                        u:object_r:hal_qseecom_hwservice:s0
 vendor.qti.hardware.perf::IPerfCallback                      u:object_r:hal_perfcallback_hwservice:s0
+vendor.qti.hardware.mwqemadapter::IMwqemAdapter              u:object_r:vendor_hal_mwqemadapter_hwservice:s0
 vendor.qti.hardware.dsp::IDspService                         u:object_r:vendor_hal_dspmanager_hwservice:s0
 vendor.qti.hardware.qccvndhal::IQccvndhal                     u:object_r:vendor_hal_qccvndhal_hwservice:s0
+vendor.qti.hardware.embmssl::IEmbms                          u:object_r:vendor_hal_embmssl_hwservice:s0

@@ -37,6 +37,9 @@ unix_socket_connect(hal_wifi, location, location)
 allow hal_wifi_default wifihal_socket:dir rw_dir_perms;
 allow hal_wifi_default wifihal_socket:sock_file create_file_perms;
 
+# Write wlan driver/fw version into property
+set_prop(hal_wifi_default, vendor_wifi_version)
+
 allow hal_wifi wlan_device:chr_file rw_file_perms;
 allow hal_wifi self:capability sys_module;
 allow hal_wifi kernel:key search;

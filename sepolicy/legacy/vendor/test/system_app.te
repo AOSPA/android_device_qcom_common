@@ -35,10 +35,3 @@ userdebug_or_eng(`
 
   allow system_app self:socket create_socket_perms_no_ioctl;
 ')
-
-userdebug_or_eng(`
-  # allow system_app access diag hal
-  diag_use(system_app)
-  hal_client_domain(system_app, vendor_hal_diaghal)
-  hal_client_domain(system_app, hal_allocator)
-')

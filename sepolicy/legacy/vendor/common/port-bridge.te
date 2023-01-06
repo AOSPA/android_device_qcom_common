@@ -56,3 +56,5 @@ allow port-bridge sysfs_data:file r_file_perms;
 
 allow port-bridge port-bridge_socket:dir w_dir_perms;
 allow port-bridge port-bridge_socket:sock_file create_file_perms;
+
+allow port-bridge sysfs_soc:dir r_dir_perms;
