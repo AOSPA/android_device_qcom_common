@@ -54,3 +54,9 @@ allow vm_bms self:capability { setpcap setgid setuid };
 
 #allow vm_bms to block the system suspend and get wake lock
 wakelock_use(vm_bms)
+
+#allow start and stop of vm_bms via ctl.start/ctl.stop
+set_prop(vm_bms, vendor_vm_bms_prop)
+userdebug_or_eng(`
+set_prop(vm_bms, vendor_vm_bms_debug_prop)
+')

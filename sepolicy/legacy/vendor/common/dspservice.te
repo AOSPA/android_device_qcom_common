@@ -47,7 +47,7 @@ hal_attribute_hwservice(vendor_hal_dspmanager, vendor_hal_dspmanager_hwservice)
 r_dir_file(vendor_dspservice, adsprpcd_file)
 
 # For reading "vendor.fastrpc." properties
-get_prop(vendor_dspservice, adsprpc_prop)
+get_prop(vendor_dspservice, vendor_adsprpc_prop)
 
 # Allow access to adsprpc secure and non-secure devices
 allow vendor_dspservice qdsp_device:chr_file r_file_perms;

@@ -42,9 +42,9 @@ attribute hal_perf;
 attribute hal_perf_client;
 attribute hal_perf_server;
 
-attribute wifidisplayhalservice;
-attribute wifidisplayhalservice_client;
-attribute wifidisplayhalservice_server;
+attribute vendor_wifidisplayhalservice;
+attribute vendor_wifidisplayhalservice_client;
+attribute vendor_wifidisplayhalservice_server;
 
 attribute hal_alarm_qti;
 attribute hal_alarm_qti_client;

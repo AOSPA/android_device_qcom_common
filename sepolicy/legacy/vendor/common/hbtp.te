@@ -64,11 +64,12 @@ allow hbtp self:netlink_kobject_uevent_socket { create read setopt bind };
 allow hbtp sysfs_wake_lock:file r_file_perms;
 
 # Allow the service to change to system from root
-allow hbtp self:capability { setgid setuid };
+allow hbtp self:capability { setgid setuid sys_nice };
+
 
 # Allow load touch driver as touchPD
 r_dir_file(hbtp, adsprpcd_file)
-get_prop(hbtp, adsprpc_prop)
+get_prop(hbtp, vendor_adsprpc_prop)
 
 # Allow the service to access wakelock capability
 wakelock_use(hbtp)
@@ -81,3 +82,5 @@ binder_call(hal_hbtp_server, hal_hbtp_client)
 add_hwservice(hal_hbtp_server, hal_hbtp_hwservice)
 allow hal_hbtp_client hal_hbtp_hwservice:hwservice_manager find;
 hal_client_domain(hbtp, hal_allocator);
+
+allow hbtp sysfs_soc:dir r_dir_perms;
