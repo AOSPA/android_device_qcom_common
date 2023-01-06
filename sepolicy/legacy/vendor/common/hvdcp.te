@@ -71,6 +71,6 @@ allow hvdcp mnt_vendor_file:dir search;
 allow hvdcp persist_hvdcp_file:dir rw_dir_perms;
 allow hvdcp persist_hvdcp_file:file create_file_perms;
 
-set_prop(hvdcp,  hvdcp_opti_prop)
+set_prop(hvdcp,  vendor_hvdcp_opti_prop)
 
 wakelock_use(hvdcp)
