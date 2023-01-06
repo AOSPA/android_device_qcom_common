@@ -35,8 +35,8 @@ init_daemon_domain(cdsprpcd)
 # For reading dir/files on /dsp
 r_dir_file(cdsprpcd, adsprpcd_file)
 
-# For reading adsprpc_prop
-get_prop(cdsprpcd, adsprpc_prop)
+# For reading vendor_adsprpc_prop
+get_prop(cdsprpcd, vendor_adsprpc_prop)
 
 allow cdsprpcd qdsp_device:chr_file r_file_perms;
 allow cdsprpcd ion_device:chr_file r_file_perms;
@@ -44,3 +44,4 @@ allow cdsprpcd ion_device:chr_file r_file_perms;
 r_dir_file(cdsprpcd, sysfs_devfreq)
 allow cdsprpcd sysfs_devfreq_l3cdsp:dir r_dir_perms;
 allow cdsprpcd sysfs_devfreq_l3cdsp:file rw_file_perms;
+allow cdsprpcd xdsp_device:chr_file r_file_perms;

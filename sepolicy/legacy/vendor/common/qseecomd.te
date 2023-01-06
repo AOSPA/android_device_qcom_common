@@ -38,10 +38,14 @@ allow tee self:capability {
 # for anti-rollback protection
 allow tee block_device:dir r_dir_perms;
 allow tee rpmb_device:blk_file rw_file_perms;
+allow tee rpmb_device:chr_file rw_file_perms;
 allowxperm tee rpmb_device:blk_file ioctl { MMC_IOC_CMD };
 
 #For Wakelocks
 wakelock_use(tee)
+
+#allow tee acess for SFS
+allow tee tmpfs:dir read;
 
 # Need to figure out how many scsi generic devices are preset
 # before being able to identify which one is rpmb device
@@ -120,3 +124,5 @@ allow tee graphics_device:chr_file rw_file_perms;
 # Allow access to qsee data file
 allow tee data_qsee_file:dir create_dir_perms;
 allow tee data_qsee_file:file create_file_perms;
+
+allow tee rpmb_device:chr_file { getattr open read write };

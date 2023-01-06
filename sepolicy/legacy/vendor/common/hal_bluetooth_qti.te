@@ -76,3 +76,11 @@ allow hal_bluetooth_qti self:{ socket qipcrtr_socket } create_socket_perms_no_io
 
 hal_server_domain(hal_bluetooth_qti, hal_fm)
 hal_server_domain(hal_bluetooth_qti, hal_btconfigstore)
+
+allow hal_bluetooth_qti vendor_fm_data_file:dir search;
+allow hal_bluetooth_qti fm_radio_device:chr_file r_file_perms;
+allow hal_bluetooth_qti vendor_fm_data_file:chr_file r_file_perms;
+allow hal_bluetooth_qti sysfs_fm:file write;
+# allow rw create file access to fm patchdownloader
+allow hal_bluetooth_qti vendor_fm_data_file:file create_file_perms;
+allow hal_bluetooth_qti vendor_fm_data_file:dir ra_dir_perms;

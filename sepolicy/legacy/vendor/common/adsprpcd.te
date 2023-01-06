@@ -38,8 +38,8 @@ allow adsprpcd xdsp_device:chr_file r_file_perms;
 # For reading dir/files on /dsp
 r_dir_file(adsprpcd, adsprpcd_file)
 
-# For reading adsprpc_prop
-get_prop(adsprpcd, adsprpc_prop)
+# For reading vendor_adsprpc_prop
+get_prop(adsprpcd, vendor_adsprpc_prop)
 
 allow adsprpcd ion_device:chr_file r_file_perms;
 allow adsprpcd mnt_vendor_file:dir r_dir_perms;
