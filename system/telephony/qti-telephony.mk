@@ -48,5 +48,7 @@ PRODUCT_SYSTEM_EXT_PROPERTIES += \
     persist.vendor.ims.disableQXDMLogs=1
 endif
 
+ifneq ($(BOARD_VENDOR),motorola)
 # Get non-open-source specific aspects.
 $(call inherit-product-if-exists, vendor/qcom/common/system/telephony/telephony-vendor.mk)
+endif
