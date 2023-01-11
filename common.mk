@@ -174,6 +174,7 @@ PRODUCT_PACKAGES += \
     android.hardware.drm@1.4.vendor \
     android.hardware.gatekeeper@1.0.vendor \
     android.hardware.keymaster@4.1.vendor \
+    android.hardware.authsecret@1.0.vendor \
     vendor.qti.hardware.camera.device@1.0.vendor \
     vendor.qti.hardware.camera.postproc@1.0.vendor
 ifneq (,$(filter 5.10, $(TARGET_KERNEL_VERSION)))
