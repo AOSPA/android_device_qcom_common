@@ -16,6 +16,24 @@
       "message": "I think not using the component altogether would be a better solution",
       "revId": "6281bf3ad59db8763cde0d17c0e7b35882d73c31",
       "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "ca9f85ce_8b2cf2b9",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000012
+      },
+      "writtenOn": "2023-01-12T04:33:54Z",
+      "side": 1,
+      "message": "I agree with Gagan.",
+      "parentUuid": "f448616f_5f376218",
+      "revId": "6281bf3ad59db8763cde0d17c0e7b35882d73c31",
+      "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
     }
   ]
 }
