@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "9495977b_bd84b00b",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000579
+      },
+      "writtenOn": "2023-01-14T13:58:01Z",
+      "side": 1,
+      "message": "https://github.com/AOSPA/android_device_qcom_sepolicy_vndr/commit/bb390989ee02d24978bdfa18fb40295e0db6623c should take care of it for non legacy",
+      "revId": "5df56cf030d285c6e0f22a9b84ef44a83f3b0b00",
+      "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
+    }
+  ]
+}
