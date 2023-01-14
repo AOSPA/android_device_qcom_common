@@ -20,3 +20,7 @@
 
 # Persist files
 /mnt/vendor/persist/wlan(/.*)?                                      u:object_r:vendor_persist_wcnss_service_file:s0
+
+# DRM
+/(vendor|system/vendor)/bin/hw/android\.hardware\.drm@1\.[1-4]-service.clearkey      u:object_r:vendor_hal_drm_widevine_exec:s0
+
