@@ -26,6 +26,7 @@ product/framework/uimservicelibrary.jar
 system_ext/app/DeviceInfo/DeviceInfo.apk
 system_ext/app/DeviceStatisticsService/DeviceStatisticsService.apk
 system_ext/app/DynamicDDSService/DynamicDDSService.apk
+system_ext/app/ImsDataChannelService/ImsDataChannelService.apk
 system_ext/app/ImsRcsService/ImsRcsService.apk
 system_ext/app/QtiTelephony/QtiTelephony.apk
 system_ext/app/QtiTelephonyService/QtiTelephonyService.apk
@@ -47,6 +48,7 @@ system_ext/etc/permissions/com.qti.dpmframework.xml
 system_ext/etc/permissions/com.qualcomm.qti.imscmservice-V2.0-java.xml
 system_ext/etc/permissions/com.qualcomm.qti.imscmservice-V2.1-java.xml
 system_ext/etc/permissions/com.qualcomm.qti.imscmservice-V2.2-java.xml
+system_ext/etc/permissions/datachannellib.xml
 system_ext/etc/permissions/dpmapi.xml
 system_ext/etc/permissions/embms-noship_product_privapp_permissions_qti.xml
 system_ext/etc/permissions/embms.xml
@@ -54,6 +56,7 @@ system_ext/etc/permissions/qcrilhook.xml
 system_ext/etc/permissions/qti_libpermissions.xml
 system_ext/etc/permissions/qti_permissions.xml
 system_ext/etc/permissions/telephony_system-ext_privapp-permissions-qti.xml
+system_ext/etc/permissions/vendor.qti.imsdcservice.xml
 system_ext/etc/permissions/vendor.qti.ims.rcsservice.xml
 system_ext/etc/seccomp_policy/tcmd.policy
 system_ext/etc/sysconfig/qti_whitelist_system_ext.xml
@@ -73,6 +76,7 @@ system_ext/framework/com.quicinc.cne.api-V1.1-java.jar
 system_ext/framework/com.quicinc.cne.constants-V1.0-java.jar
 system_ext/framework/com.quicinc.cne.constants-V2.0-java.jar
 system_ext/framework/com.quicinc.cne.constants-V2.1-java.jar
+system_ext/framework/datachannellib.jar
 system_ext/framework/dpmapi.jar
 system_ext/framework/embmslibrary.jar
 system_ext/framework/qcrilhook.jar
@@ -115,6 +119,7 @@ system_ext/framework/vendor.qti.ims.connection-V1.0-java.jar
 system_ext/framework/vendor.qti.ims.configservice-V1.0-java.jar
 system_ext/framework/vendor.qti.ims.configservice-V1.1-java.jar
 system_ext/framework/vendor.qti.ims.connection-V1.0-java.jar
+system_ext/framework/vendor.qti.ims.datachannelservice-V1-java.jar
 system_ext/framework/vendor.qti.ims.factory-V1.0-java.jar
 system_ext/framework/vendor.qti.ims.factory-V1.1-java.jar
 system_ext/framework/vendor.qti.ims.factory-V2.0-java.jar
@@ -249,6 +254,7 @@ system_ext/lib64/vendor.qti.ims.callinfo@1.0.so
 system_ext/lib64/vendor.qti.ims.configservice@1.0.so
 system_ext/lib64/vendor.qti.ims.configservice@1.1.so
 system_ext/lib64/vendor.qti.ims.connection@1.0.so
+system_ext/lib64/vendor.qti.ims.datachannelservice-V1-ndk.so
 system_ext/lib64/vendor.qti.ims.factory@1.0.so
 system_ext/lib64/vendor.qti.ims.factory@1.1.so
 system_ext/lib64/vendor.qti.ims.factory@2.0.so
