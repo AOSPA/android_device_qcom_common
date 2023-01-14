@@ -16,6 +16,9 @@ vendor/etc/seccomp_policy/codec2.vendor.ext-arm64.policy
 vendor/etc/vintf/manifest/c2_manifest_vendor.xml
 vendor/etc/vintf/manifest/c2_manifest_vendor_audio.xml
 vendor/etc/vintf/manifest/vendor.qti.hardware.qconfig@1.0-service.xml
+vendor/lib/libC2D2.so
+vendor/lib/libc2d30_bltlib.so
+vendor/lib/libEvrcSwCodec.so
 vendor/lib/libQcelp13SwCodec.so
 vendor/lib/libqc2audio_base.so
 vendor/lib/libqc2audio_basecodec.so
@@ -41,6 +44,9 @@ vendor/lib/libqcodec2_v4l2codec.so
 vendor/lib/libqconfigclient.so
 vendor/lib/qti.video.utils.videobufferlayout.so
 vendor/lib/vendor.qti.hardware.qconfig@1.0.so
+vendor/lib64/libC2D2.so
+vendor/lib64/libc2d30_bltlib.so
+vendor/lib64/libEvrcSwCodec.so
 vendor/lib64/libQcelp13SwCodec.so
 vendor/lib64/libqc2audio_base.so
 vendor/lib64/libqc2audio_basecodec.so
