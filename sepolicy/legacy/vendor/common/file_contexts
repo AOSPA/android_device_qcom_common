@@ -266,7 +266,7 @@
 /(vendor|system/vendor)/bin/subsystem_ramdump   u:object_r:vendor_subsystem_ramdump_exec:s0
 /(vendor|system/vendor)/bin/ssr_diag            u:object_r:vendor_ssr_diag_exec:s0
 /(vendor|system/vendor)/bin/hw/qcrild           u:object_r:rild_exec:s0
-/(vendor|system/vendor)/bin/hw/android\.hardware\.drm@1\.[1-3]-service.clearkey   u:object_r:hal_drm_clearkey_exec:s0
+/(vendor|system/vendor)/bin/hw/android\.hardware\.drm@1\.[1-4]-service.clearkey   u:object_r:hal_drm_clearkey_exec:s0
 /(vendor|system/vendor)/bin/hw/android\.hardware\.drm@1\.[2-3]-service-lazy.clearkey    u:object_r:hal_drm_clearkey_exec:s0
 /(vendor|system/vendor)/bin/hw/android\.hardware\.drm@1\.[1-3]-service.widevine   u:object_r:hal_drm_widevine_exec:s0
 /(vendor|system/vendor)/bin/hw/android\.hardware\.drm@1\.[2-3]-service-lazy.widevine    u:object_r:hal_drm_widevine_exec:s0
