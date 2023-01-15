@@ -6,6 +6,9 @@
 
 include $(QCOM_COMMON_PATH)/dlkm/kernel-platform.mk
 
+PRODUCT_SOONG_NAMESPACES += \
+    device/qcom/common/dlkm
+
 # Audio
 -include vendor/qcom/opensource/audio-kernel/audio_kernel_product_board.mk
 -include vendor/qcom/opensource/audio-kernel/audio_kernel_vendor_board.mk
