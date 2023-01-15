@@ -1,0 +1,11 @@
+kernel_headers {
+    name: "qti_kernel_headers",
+    vendor_available: true,
+    recovery_available: true,
+}
+
+kernel_headers {
+    name: "qti_display_kernel_headers",
+    vendor_available: true,
+    recovery_available: true,
+}
