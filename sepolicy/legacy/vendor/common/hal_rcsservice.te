@@ -43,6 +43,8 @@ add_hwservice(hal_rcsservice, vendor_hal_imsfactory_hwservice)
 # allow read datad property
 get_prop(hal_rcsservice, vendor_qcom_ims_prop)
 
+allow hal_rcsservice diag_device:chr_file rw_file_perms;
+
 # allow imsrcsd to connect to imsdatad over socket
 allow hal_rcsservice self: { socket qipcrtr_socket } create_socket_perms;
 allowxperm hal_rcsservice self:{ socket qipcrtr_socket } ioctl msm_sock_ipc_ioctls;

@@ -36,6 +36,8 @@ net_domain(ims)
 # Talk to qmuxd
 qmux_socket(ims)
 
+allow ims diag_device:chr_file rw_file_perms;
+
 allow ims self:capability net_bind_service;
 
 # Use generic netlink socket

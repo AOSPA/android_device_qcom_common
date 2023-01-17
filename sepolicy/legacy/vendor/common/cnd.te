@@ -35,6 +35,8 @@ init_daemon_domain(cnd)
 # associate netdomain as an attribute of cnd domain
 net_domain(cnd)
 
+allow cnd diag_device:chr_file rw_file_perms;
+
 allow cnd smem_log_device:chr_file rw_file_perms;
 
 # allow cnd the following capability
