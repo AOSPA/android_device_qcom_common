@@ -1,0 +1,18 @@
+dontaudit {
+  adpl
+  cnd
+  hal_audio_default
+  hal_graphics_composer_default
+  hal_imsrtp
+  hal_rcsservice
+  hal_sensors_default
+  hal_tetheroffload_default
+  ims
+  netmgrd
+  qti
+  rild
+  sensors
+  system_app
+} diag_device:chr_file rw_file_perms;
+
+dontaudit surfaceflinger vendor_firmware_file:dir search;
