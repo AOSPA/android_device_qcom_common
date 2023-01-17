@@ -90,6 +90,8 @@ use_vendor_per_mgr(wcnss_service)
 hwbinder_use(wcnss_service)
 get_prop(wcnss_service, hwservicemanager_prop)
 
+set_prop(wcnss_service, vendor_wifi_version)
+
 #access to perflock
 hal_client_domain(wcnss_service, hal_perf)
 

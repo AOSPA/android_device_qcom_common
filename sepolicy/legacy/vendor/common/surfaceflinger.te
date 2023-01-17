@@ -27,6 +27,8 @@
 
 allow surfaceflinger sysfs_graphics:file rw_file_perms;
 
+allow surfaceflinger vendor_firmware_file:dir r_dir_perms;
+
 # Use open file provided by poweroffhandler
 binder_call(surfaceflinger, poweroffhandler);
 
