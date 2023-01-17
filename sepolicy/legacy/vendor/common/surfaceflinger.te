@@ -26,6 +26,7 @@
 # IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
 allow surfaceflinger sysfs_graphics:file rw_file_perms;
+allow surfaceflinger vendor_firmware_file:dir search;
 
 # Use open file provided by poweroffhandler
 binder_call(surfaceflinger, poweroffhandler);
