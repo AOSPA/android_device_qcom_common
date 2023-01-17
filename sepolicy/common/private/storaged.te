@@ -1,0 +1,1 @@
+allow storaged debugfs_mmc:file r_file_perms;
