@@ -35,6 +35,7 @@ init_daemon_domain(hal_bluetooth_qti)
 set_prop(hal_bluetooth, vendor_bluetooth_prop)
 
 r_dir_file(hal_bluetooth_qti, firmware_file)
+r_dir_file(hal_bluetooth_qti, ramdump_vendor_data_file)
 
 allow hal_bluetooth {
     serial_device
