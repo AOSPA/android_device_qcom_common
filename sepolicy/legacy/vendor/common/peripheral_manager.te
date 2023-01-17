@@ -40,7 +40,7 @@ allow vendor_per_mgr self:{ socket qipcrtr_socket } create_socket_perms;
 allowxperm vendor_per_mgr self:{ socket qipcrtr_socket } ioctl msm_sock_ipc_ioctls;
 
 # Needed by ipc_router
-allow vendor_per_mgr self:capability net_bind_service;
+allow vendor_per_mgr self:capability { net_bind_service net_raw };
 
 # Needed to power on the peripheral
 allow vendor_per_mgr ssr_device:chr_file r_file_perms;
