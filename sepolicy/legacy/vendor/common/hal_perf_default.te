@@ -34,6 +34,8 @@ init_daemon_domain(hal_perf_default)
 # Allow hwbinder call from hal client to server
 binder_call(hal_perf_client, hal_perf_server)
 
+binder_call(hal_perf_default, hal_pasrmanager_memory_qti)
+
 # Add hwservice related rules
 add_hwservice(hal_perf_server, hal_perf_hwservice)
 allow hal_perf_client hal_perf_hwservice:hwservice_manager find;
