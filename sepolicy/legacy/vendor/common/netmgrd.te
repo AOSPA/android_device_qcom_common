@@ -49,6 +49,8 @@ allow netmgrd netmgrd:capability {
     kill
 };
 
+allow netmgrd diag_device:chr_file rw_file_perms;
+
 #Allow logging
 allow netmgrd smem_log_device:chr_file rw_file_perms;
 allow netmgrd netmgrd_data_file:file create_file_perms;

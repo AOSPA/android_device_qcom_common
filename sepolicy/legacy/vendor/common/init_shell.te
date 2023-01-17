@@ -62,6 +62,8 @@ allow qti_init_shell vm_bms_device:chr_file getattr;
 
 allow qti_init_shell gpu_device:chr_file getattr;
 
+allow qti_init_shell system_data_file:dir getattr;
+
 # for insmod of iris ko, this is needed.
 # needed by most of the services
 # fowner and fsetid are needed for chmod display nodes.
@@ -137,6 +139,7 @@ allow qti_init_shell efs_boot_dev:blk_file r_file_perms;
 allow qti_init_shell { serial_device userdebug_or_eng(`qdss_device') }:chr_file rw_file_perms;
 
 allow qti_init_shell {
+    sysfs
     sysfs_devices_system_cpu
     sysfs_thermal
     sysfs_lowmemorykiller
@@ -214,6 +217,7 @@ allow qti_init_shell sysfs_zram:file w_file_perms;
 # To get GPU frequencies  and set attributes
 allow qti_init_shell sysfs_kgsl:file { r_file_perms setattr };
 
+allow qti_init_shell proc_boot_reason:file r_file_perms;
 allow qti_init_shell proc:file r_file_perms;
 allow qti_init_shell rootfs:file r_file_perms;
 
@@ -288,6 +292,8 @@ get_prop(qti_init_shell,  vendor_hvdcp_opti_prop)
 set_prop(qti_init_shell, vendor_adsprpc_prop)
 
 dontaudit qti_init_shell self:capability dac_override;
+
+
 
 #allow configuring slub debug options
 allow qti_init_shell sysfs_slab_zshandle_storeuser:file w_file_perms;

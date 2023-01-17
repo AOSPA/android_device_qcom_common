@@ -36,7 +36,7 @@ allow hal_sensors self:{ socket qipcrtr_socket } create_socket_perms;
 allowxperm hal_sensors self:{ socket qipcrtr_socket } ioctl msm_sock_ipc_ioctls;
 
 allow hal_sensors sysfs_data:file r_file_perms;
-
+allow hal_sensors_default diag_device:chr_file rw_file_perms;
 # Allow access to ion memory allocation device
 allow hal_sensors ion_device:chr_file rw_file_perms;
 allow hal_sensors hal_graphics_allocator:fd use;

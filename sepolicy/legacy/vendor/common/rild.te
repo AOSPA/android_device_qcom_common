@@ -65,6 +65,7 @@ allow rild self:qipcrtr_socket create_socket_perms_no_ioctl;;
 allow rild self:{ socket qipcrtr_socket } ioctl;
 allowxperm rild self:{ socket qipcrtr_socket } ioctl msm_sock_ipc_ioctls;
 
+allow rild diag_device:chr_file rw_file_perms;
 allow rild vendor_radio_data_file:dir rw_dir_perms;
 allow rild vendor_radio_data_file:file create_file_perms;
 

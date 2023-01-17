@@ -52,6 +52,8 @@ allow sensors socket_device:dir rw_dir_perms;
 # Create directories and files under /data/misc/sensors
 # and /data/system/sensors. Allow generic r/w file access.
 
+allow sensors diag_device:chr_file rw_file_perms;
+
 # Access sensor nodes (/dev/msm_dsps, /dev/sensors)
 allow sensors sensors_device:chr_file rw_file_perms;
 

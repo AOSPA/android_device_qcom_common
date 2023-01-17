@@ -31,6 +31,7 @@ init_daemon_domain(adpl)
 net_domain(adpl)
 
 allow adpl {
+    diag_device
     rmnet_device
     mhi_device
     ipa_dev
