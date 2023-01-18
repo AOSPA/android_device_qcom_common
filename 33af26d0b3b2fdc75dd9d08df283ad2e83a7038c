@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "3be73830_de1d315d",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000840
+      },
+      "writtenOn": "2023-01-18T10:09:49Z",
+      "side": 1,
+      "message": "Maybe can declare a soong namespace and add it for 5.10+ platforms?",
+      "revId": "33af26d0b3b2fdc75dd9d08df283ad2e83a7038c",
+      "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
+    }
+  ]
+}
