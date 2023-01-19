@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "ac1c894e_0ae1e9b0",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 5
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000429
+      },
+      "writtenOn": "2023-01-19T23:33:00Z",
+      "side": 1,
+      "message": "device/qcom/common/sepolicy/common/public/hub_app.te:3:ERROR \u0027unknown type hub_app\u0027 at token \u0027;\u0027 on line 37794:",
+      "revId": "4d151b419111171fafe3c306ebd050f88dc612d3",
+      "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
+    }
+  ]
+}
