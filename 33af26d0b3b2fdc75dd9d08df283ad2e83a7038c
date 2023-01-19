@@ -16,6 +16,24 @@
       "message": "Maybe can declare a soong namespace and add it for 5.10+ platforms?",
       "revId": "33af26d0b3b2fdc75dd9d08df283ad2e83a7038c",
       "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "59fc084b_ffbc63e5",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000579
+      },
+      "writtenOn": "2023-01-19T08:37:08Z",
+      "side": 1,
+      "message": "that wont work since ipacm wont be able to access this from its soong namespace",
+      "parentUuid": "3be73830_de1d315d",
+      "revId": "33af26d0b3b2fdc75dd9d08df283ad2e83a7038c",
+      "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
     }
   ]
 }
