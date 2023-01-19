@@ -5,20 +5,12 @@ ifeq ($(TARGET_SEPOLICY_DIR),)
 endif
 
 ifeq (,$(filter sdm845 sdm710, $(TARGET_BOARD_PLATFORM)))
-    SYSTEM_EXT_PRIVATE_SEPOLICY_DIRS += \
-        $(COMMON_SEPOLICY_PATH)/generic/private/common
-    SYSTEM_EXT_PUBLIC_SEPOLICY_DIRS += \
-        $(COMMON_SEPOLICY_PATH)/generic/public/common
     BOARD_VENDOR_SEPOLICY_DIRS += \
         $(COMMON_SEPOLICY_PATH)/generic/vendor/common \
         $(COMMON_SEPOLICY_PATH)/qva/vendor/common \
         $(COMMON_SEPOLICY_PATH)/generic/vendor/$(TARGET_SEPOLICY_DIR) \
         $(COMMON_SEPOLICY_PATH)/qva/vendor/$(TARGET_SEPOLICY_DIR)
 else # 845 and 710
-    SYSTEM_EXT_PRIVATE_SEPOLICY_DIRS += \
-        $(COMMON_SEPOLICY_PATH)/legacy/private/common
-    SYSTEM_EXT_PUBLIC_SEPOLICY_DIRS += \
-        $(COMMON_SEPOLICY_PATH)/legacy/public/common
     BOARD_VENDOR_SEPOLICY_DIRS += \
         $(COMMON_SEPOLICY_PATH)/legacy/vendor/ssg \
         $(COMMON_SEPOLICY_PATH)/legacy/vendor/common \
@@ -31,3 +23,9 @@ else # 845 and 710
     endif
 
 endif # 845 and 710
+
+# Common system policies
+SYSTEM_EXT_PRIVATE_SEPOLICY_DIRS += \
+    $(COMMON_SEPOLICY_PATH)/common/private
+SYSTEM_EXT_PUBLIC_SEPOLICY_DIRS += \
+    $(COMMON_SEPOLICY_PATH)/common/public
