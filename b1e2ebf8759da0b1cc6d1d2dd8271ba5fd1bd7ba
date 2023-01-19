@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "c2ed87bf_89655953",
+        "filename": "sepolicy/common/private/common/appdomain.te",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000465
+      },
+      "writtenOn": "2023-01-19T17:11:43Z",
+      "side": 0,
+      "message": "IMO just sepolicy/common/private is better than having 2 times \"common\" in the path. Same applies for everything below but hub_app.te",
+      "revId": "b1e2ebf8759da0b1cc6d1d2dd8271ba5fd1bd7ba",
+      "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
+    }
+  ]
+}

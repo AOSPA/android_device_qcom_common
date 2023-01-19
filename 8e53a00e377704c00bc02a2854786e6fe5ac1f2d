@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "1df0fc47_55d8bb82",
+        "filename": "sepolicy/SEPolicy.mk",
+        "patchSetId": 1
+      },
+      "lineNbr": 31,
+      "author": {
+        "id": 1000465
+      },
+      "writtenOn": "2023-01-19T17:11:43Z",
+      "side": 1,
+      "message": "common/common -\u003e common/public",
+      "revId": "8e53a00e377704c00bc02a2854786e6fe5ac1f2d",
+      "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
+    }
+  ]
+}
