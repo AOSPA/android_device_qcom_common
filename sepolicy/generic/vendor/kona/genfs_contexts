@@ -157,3 +157,6 @@ genfscon sysfs /devices/platform/soc/soc:qcom,ipa_fws/wakeup u:object_r:sysfs_wa
 genfscon sysfs /devices/platform/soc/soc:qcom,kgsl-hyp/wakeup u:object_r:sysfs_wakeup:s0
 genfscon sysfs /devices/platform/soc/soc:qcom,smp2p-adsp/wakeup u:object_r:sysfs_wakeup:s0
 genfscon sysfs /devices/platform/soc/soc:qcom,smp2p_sleepstate/wakeup u:object_r:sysfs_wakeup:s0
+
+# UFS
+genfscon sysfs /devices/platform/soc/1d84000.ufshc/host0/target0:0:0/0:0:0:4/block/sde/queue/discard_max_bytes u:object_r:vendor_sysfs_mmc_host:s0
