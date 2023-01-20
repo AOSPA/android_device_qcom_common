@@ -1,0 +1,7 @@
+allow vendor_wlc_app {
+app_api_service
+}:service_manager find;
+hal_client_domain(vendor_wlc_app, hal_perf)
+
+set_prop(vendor_wlc_app, vendor_wlc_prop);
+get_prop(vendor_wlc_app, build_bootimage_prop);
