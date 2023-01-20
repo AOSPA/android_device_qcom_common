@@ -28,5 +28,5 @@
 hal_client_domain(vendor_qcc_app, vendor_hal_qccvndhal);
 
 # IPerf
-hal_client_domain(vendor_qcc_app, hal_perf);
+hal_client_domain(vendor_qcc_app, vendor_hal_perf);
 

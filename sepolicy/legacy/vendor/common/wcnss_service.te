@@ -93,7 +93,7 @@ get_prop(wcnss_service, hwservicemanager_prop)
 set_prop(wcnss_service, vendor_wifi_version)
 
 #access to perflock
-hal_client_domain(wcnss_service, hal_perf)
+hal_client_domain(wcnss_service, vendor_hal_perf)
 
 # allow to read /sys/class/net file
 r_dir_file(wcnss_service, sysfs_net);

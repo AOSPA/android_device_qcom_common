@@ -37,6 +37,6 @@ allow untrusted_app gba_auth_service:service_manager find;
 #TODO: this are been commeted as there is a new
 #      neverallow resctiction which may need 
 #      some addtional change.
-# allow untrusted apps to access hal_perf
-# hal_client_domain(untrusted_app, hal_perf);
+# allow untrusted apps to access vendor_hal_perf
+# hal_client_domain(untrusted_app, vendor_hal_perf);
 get_prop(untrusted_app_29, vendor_persist_camera_prop)

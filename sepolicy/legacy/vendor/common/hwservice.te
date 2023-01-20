@@ -32,7 +32,7 @@ type hal_hbtp_hwservice, hwservice_manager_type;
 type hal_dpmqmi_hwservice, hwservice_manager_type;
 type hal_imsrtp_hwservice, hwservice_manager_type;
 type hal_imscallinfo_hwservice, hwservice_manager_type;
-type hal_perf_hwservice, hwservice_manager_type;
+type vendor_hal_perf_hwservice, hwservice_manager_type;
 type wifidisplayhalservice_hwservice, hwservice_manager_type;
 type hal_iop_hwservice, hwservice_manager_type;
 type hal_alarm_qti_hwservice, hwservice_manager_type;

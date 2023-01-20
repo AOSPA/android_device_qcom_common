@@ -65,7 +65,7 @@ allow vendor_qvrd { gpu_device video_device camera_device sensors_device }:chr_f
 # Perfd
 #
 
-hal_client_domain(vendor_qvrd, hal_perf)
+hal_client_domain(vendor_qvrd, vendor_hal_perf)
 
 allow vendor_qvrd fwk_sensor_hwservice:hwservice_manager find;
 hal_client_domain(vendor_qvrd, hal_sensors)

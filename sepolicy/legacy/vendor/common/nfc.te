@@ -31,4 +31,4 @@ get_prop(nfc, vendor_nfc_nq_prop)
 #allow nfc nfc_data_file:file x_file_perms;
 allow nfc self:socket create_socket_perms_no_ioctl;
 # allow nfc to access perf hal
-hal_client_domain(nfc, hal_perf)
+hal_client_domain(nfc, vendor_hal_perf)

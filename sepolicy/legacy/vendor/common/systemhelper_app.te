@@ -26,7 +26,7 @@
 # IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
 
-hal_client_domain(vendor_systemhelper_app, hal_perf)
+hal_client_domain(vendor_systemhelper_app, vendor_hal_perf)
 allow vendor_systemhelper_app content_capture_service:service_manager find;
 
 

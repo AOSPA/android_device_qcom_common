@@ -31,7 +31,7 @@
 
 type qsta_app, domain;
 app_domain(qsta_app)
-hal_client_domain(qsta_app, hal_perf)
+hal_client_domain(qsta_app, vendor_hal_perf)
 
 #allow only qsta_app with userdebug to access ioctl
 userdebug_or_eng(`
