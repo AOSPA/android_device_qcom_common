@@ -25,10 +25,10 @@
 # OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN
 # IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
-allow gmscore_app hal_perf_hwservice:hwservice_manager find;
+allow gmscore_app vendor_hal_perf_hwservice:hwservice_manager find;
 allow gmscore_app vendor_dpmtcm_socket:sock_file write;
 allow gmscore_app vendor_dpmd:unix_stream_socket connectto;
 
-binder_call(gmscore_app, hal_perf_default)
+binder_call(gmscore_app, vendor_hal_perf_default)
 
 get_prop(gmscore_app, vendor_persist_camera_prop)

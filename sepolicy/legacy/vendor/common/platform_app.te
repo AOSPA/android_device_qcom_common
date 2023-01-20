@@ -50,7 +50,7 @@ allow platform_app gba_auth_service:service_manager find;
 hal_client_domain(platform_app, hal_hbtp)
 
 #for perf-hal call
-hal_client_domain(platform_app, hal_perf)
+hal_client_domain(platform_app, vendor_hal_perf)
 
 #allow embms app to access vendor radio property
 get_prop(platform_app, vendor_radio_prop)

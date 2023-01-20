@@ -41,13 +41,13 @@ allow qtidataservices_app radio_data_file:dir r_dir_perms;
 allow qtidataservices_app hal_datafactory_hwservice:hwservice_manager find;
 allow qtidataservices_app hal_iwlan_hwservice:hwservice_manager find;
 allow qtidataservices_app radio_service:service_manager find;
-allow qtidataservices_app hal_perf_hwservice:hwservice_manager find;
+allow qtidataservices_app vendor_hal_perf_hwservice:hwservice_manager find;
 
 allow qtidataservices_app sysfs_data:file r_file_perms;
 
 binder_call(qtidataservices_app, cnd)
 binder_call(qtidataservices_app, rild)
-binder_call(qtidataservices_app, hal_perf_default)
+binder_call(qtidataservices_app, vendor_hal_perf_default)
 binder_call(qtidataservices_app, location);
 
 net_domain(qtidataservices_app)

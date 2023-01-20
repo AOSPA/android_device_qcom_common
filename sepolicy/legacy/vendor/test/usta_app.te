@@ -54,10 +54,10 @@ allow vendor_usta_app system_app_data_file:file create_file_perms;
 
 allow vendor_usta_app sensors_vendor_data_file:dir create_dir_perms;
 allow vendor_usta_app sensors_vendor_data_file:file create_file_perms;
-allow vendor_usta_app hal_perf_default:binder call;
+allow vendor_usta_app vendor_hal_perf_default:binder call;
 dontaudit vendor_usta_app system_data_file:file open;
 allow vendor_usta_app cgroup:file w_file_perms;
-allow vendor_usta_app hal_perf_hwservice:hwservice_manager find;
+allow vendor_usta_app vendor_hal_perf_hwservice:hwservice_manager find;
 #dontaudit vendor_usta_app vendor_hal_qspmhal_hwservice:hwservice_manager find;
 dontaudit vendor_usta_app gpuservice:binder call;
 userdebug_or_eng(`

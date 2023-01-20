@@ -25,40 +25,40 @@
 # OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN
 # IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
-type hal_perf_default, domain, mlstrustedsubject;
-hal_server_domain_bypass(hal_perf_default, hal_perf)
+type vendor_hal_perf_default, domain, mlstrustedsubject;
+hal_server_domain_bypass(vendor_hal_perf_default, vendor_hal_perf)
 
-type hal_perf_default_exec, exec_type, vendor_file_type, file_type;
-init_daemon_domain(hal_perf_default)
+type vendor_hal_perf_default_exec, exec_type, vendor_file_type, file_type;
+init_daemon_domain(vendor_hal_perf_default)
 
 # Allow hwbinder call from hal client to server
-binder_call(hal_perf_client, hal_perf_server)
+binder_call(vendor_hal_perf_client, vendor_hal_perf_server)
 
-binder_call(hal_perf_default, hal_pasrmanager_memory_qti)
+binder_call(vendor_hal_perf_default, hal_pasrmanager_memory_qti)
 
 # Add hwservice related rules
-add_hwservice(hal_perf_server, hal_perf_hwservice)
-allow hal_perf_client hal_perf_hwservice:hwservice_manager find;
+add_hwservice(vendor_hal_perf_server, vendor_hal_perf_hwservice)
+allow vendor_hal_perf_client vendor_hal_perf_hwservice:hwservice_manager find;
 
-allow hal_perf_default cgroup:file r_file_perms;
-allow hal_perf_default proc:file rw_file_perms;
-allow hal_perf device_latency:chr_file rw_file_perms;
-get_prop(hal_perf, vendor_freq_prop)
-get_prop(hal_perf, vendor_mpctl_prop)
-allow hal_perf_default mpctl_data_file:dir rw_dir_perms;
-allow hal_perf_default mpctl_data_file:file create_file_perms;
-allow hal_perf_default lm_data_file:dir rw_dir_perms;
-allow hal_perf_default lm_data_file:file create_file_perms;
-allow hal_perf_default sysfs_lib:file w_file_perms;
-allow hal_perf_default proc_meminfo:file r_file_perms;
-r_dir_file(hal_perf_default, appdomain);
-allow hal_perf_default {appdomain}:file rw_file_perms;
-allow hal_perf_default self:capability setuid;
+allow vendor_hal_perf_default cgroup:file r_file_perms;
+allow vendor_hal_perf_default proc:file rw_file_perms;
+allow vendor_hal_perf device_latency:chr_file rw_file_perms;
+get_prop(vendor_hal_perf, vendor_freq_prop)
+get_prop(vendor_hal_perf, vendor_mpctl_prop)
+allow vendor_hal_perf_default mpctl_data_file:dir rw_dir_perms;
+allow vendor_hal_perf_default mpctl_data_file:file create_file_perms;
+allow vendor_hal_perf_default lm_data_file:dir rw_dir_perms;
+allow vendor_hal_perf_default lm_data_file:file create_file_perms;
+allow vendor_hal_perf_default sysfs_lib:file w_file_perms;
+allow vendor_hal_perf_default proc_meminfo:file r_file_perms;
+r_dir_file(vendor_hal_perf_default, appdomain);
+allow vendor_hal_perf_default {appdomain}:file rw_file_perms;
+allow vendor_hal_perf_default self:capability setuid;
 
-allow hal_perf_default hal_display_config_hwservice:hwservice_manager find;
-allow hal_perf_default hal_pasrmanager_memory_hwservice:hwservice_manager find;
+allow vendor_hal_perf_default hal_display_config_hwservice:hwservice_manager find;
+allow vendor_hal_perf_default hal_pasrmanager_memory_hwservice:hwservice_manager find;
 
-allow hal_perf {
+allow vendor_hal_perf {
     sysfs_devices_system_cpu
     sysfs_mpdecision
     sysfs_devfreq
@@ -75,7 +75,7 @@ allow hal_perf {
     sysfs_process_reclaim
 }:dir r_dir_perms;
 
-allow hal_perf {
+allow vendor_hal_perf {
     sysfs_devices_system_cpu
     sysfs_mpdecision
     sysfs_kgsl
@@ -92,7 +92,7 @@ allow hal_perf {
     sysfs_dm
 }:file rw_file_perms;
 
-allow hal_perf {
+allow vendor_hal_perf {
     sysfs_devfreq
     sysfs_mmc_host
     sysfs_scsi_host
@@ -100,8 +100,8 @@ allow hal_perf {
 }:lnk_file r_file_perms;
 
 # Allow to self kill capability
-allow hal_perf_default self:capability { kill };
+allow vendor_hal_perf_default self:capability { kill };
 
-binder_call(hal_perf_default, hal_graphics_composer_default)
+binder_call(vendor_hal_perf_default, hal_graphics_composer_default)
 
-allow hal_perf_default sysfs_soc:dir r_dir_perms;
+allow vendor_hal_perf_default sysfs_soc:dir r_dir_perms;

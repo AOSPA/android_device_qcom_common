@@ -155,7 +155,7 @@ allow system_app cache_recovery_file:file create_file_perms;
 # update engine
 binder_call( system_app, update_engine )
 
-hal_client_domain(system_app, hal_perf)
+hal_client_domain(system_app, vendor_hal_perf)
 
 #allow system app to interact with the esepowermanager
 hal_client_domain(system_app, hal_esepowermanager)

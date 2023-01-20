@@ -101,7 +101,7 @@ unix_socket_connect(hal_graphics_composer_default, pps, mm-pp-daemon)
 add_hwservice(hal_graphics_composer_server, hal_display_config_hwservice);
 
 # Allow composer access to perf
-hal_client_domain(hal_graphics_composer_default, hal_perf)
+hal_client_domain(hal_graphics_composer_default, vendor_hal_perf)
 
 # Access /dev/graphics/fb0.
 allow hal_graphics_composer graphics_device:chr_file rw_file_perms;

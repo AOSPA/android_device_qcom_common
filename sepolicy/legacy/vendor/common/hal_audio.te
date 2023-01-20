@@ -56,7 +56,7 @@ binder_call(hal_audio,bluetooth)
 get_prop(hal_audio, vendor_audio_prop)
 
 #for perf hal call
-hal_client_domain(hal_audio_default, hal_perf)
+hal_client_domain(hal_audio_default, vendor_hal_perf)
 hal_client_domain(hal_audio_default, hal_power)
 
 # Allow audio HAL to get updates from health hal

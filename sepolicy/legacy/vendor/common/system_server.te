@@ -154,7 +154,7 @@ binder_call(system_server, mm-pp-daemon)
 # Ant ipc
 hal_client_domain(system_server,hal_bluetooth);
 
-hal_client_domain(system_server, hal_perf)
+hal_client_domain(system_server, vendor_hal_perf)
 hal_client_domain(system_server, hal_sensors)
 
 # allow WIGIG framework hosted in system_server to access wigig_hal
