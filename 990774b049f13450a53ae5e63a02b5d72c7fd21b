@@ -1,0 +1,89 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "b57c465a_1cf8d2d8",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 8
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000012
+      },
+      "writtenOn": "2023-01-20T22:10:12Z",
+      "side": 1,
+      "message": "the ones I didn\u0027t comment on look good.  the others, I am not sure about and will need to see what is denied to be able to validate.",
+      "revId": "990774b049f13450a53ae5e63a02b5d72c7fd21b",
+      "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "df725935_d73606e9",
+        "filename": "sepolicy/legacy/vendor/common/init.te",
+        "patchSetId": 8
+      },
+      "lineNbr": 97,
+      "author": {
+        "id": 1000012
+      },
+      "writtenOn": "2023-01-20T22:10:12Z",
+      "side": 1,
+      "message": "please send all the denials for this file other than logdump_partition.",
+      "revId": "990774b049f13450a53ae5e63a02b5d72c7fd21b",
+      "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "9e7d2804_49084637",
+        "filename": "sepolicy/legacy/vendor/common/init_shell.te",
+        "patchSetId": 8
+      },
+      "lineNbr": 65,
+      "author": {
+        "id": 1000012
+      },
+      "writtenOn": "2023-01-20T22:10:12Z",
+      "side": 1,
+      "message": "what\u0027s the denial?",
+      "revId": "990774b049f13450a53ae5e63a02b5d72c7fd21b",
+      "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "305ed63e_c5019454",
+        "filename": "sepolicy/legacy/vendor/common/surfaceflinger.te",
+        "patchSetId": 8
+      },
+      "lineNbr": 30,
+      "author": {
+        "id": 1000012
+      },
+      "writtenOn": "2023-01-20T22:10:12Z",
+      "side": 1,
+      "message": "what\u0027s the denial on this one?",
+      "revId": "990774b049f13450a53ae5e63a02b5d72c7fd21b",
+      "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "202718ab_38e4356d",
+        "filename": "sepolicy/legacy/vendor/common/ueventd.te",
+        "patchSetId": 8
+      },
+      "lineNbr": 47,
+      "author": {
+        "id": 1000012
+      },
+      "writtenOn": "2023-01-20T22:10:12Z",
+      "side": 1,
+      "message": "what\u0027s the denial on this one?",
+      "revId": "990774b049f13450a53ae5e63a02b5d72c7fd21b",
+      "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
+    }
+  ]
+}
