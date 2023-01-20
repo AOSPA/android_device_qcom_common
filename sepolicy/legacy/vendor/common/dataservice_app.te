@@ -42,5 +42,5 @@ binder_call(vendor_dataservice_app, hal_rcsservice)
 r_dir_file(vendor_dataservice_app, cnd_data_file)
 
 allow vendor_dataservice_app app_api_service:service_manager find;
-allow vendor_dataservice_app hal_perf_hwservice:hwservice_manager find;
-binder_call(vendor_dataservice_app, hal_perf_default)
+allow vendor_dataservice_app vendor_hal_perf_hwservice:hwservice_manager find;
+binder_call(vendor_dataservice_app, vendor_hal_perf_default)
