@@ -47,7 +47,7 @@ allow mediacodec vendor_media_data_file:file create_file_perms;
 vndbinder_use(mediacodec);
 hwbinder_use(mediacodec);
 hal_client_domain(mediacodec, hal_vpp)
-hal_client_domain(mediacodec, hal_perf)
+hal_client_domain(mediacodec, vendor_hal_perf)
 
 get_prop(mediacodec, vendor_video_prop)
 allow mediacodec hal_display_config_hwservice:hwservice_manager find;

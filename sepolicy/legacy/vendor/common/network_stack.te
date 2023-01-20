@@ -27,4 +27,4 @@
 
 allow network_stack vendor_dpmd:unix_stream_socket connectto;
 
-hal_client_domain(network_stack, hal_perf);
+hal_client_domain(network_stack, vendor_hal_perf);

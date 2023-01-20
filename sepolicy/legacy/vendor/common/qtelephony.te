@@ -33,10 +33,10 @@ get_prop(vendor_qtelephony, vendor_video_prop)
 
 allow vendor_qtelephony { cameraserver_service mediaextractor_service mediaserver_service mediametrics_service radio_service drmserver_service audioserver_service}:service_manager find;
 allow vendor_qtelephony hal_imsrtp_hwservice:hwservice_manager find;
-allow vendor_qtelephony hal_perf_hwservice:hwservice_manager find;
+allow vendor_qtelephony vendor_hal_perf_hwservice:hwservice_manager find;
 hal_client_domain(vendor_qtelephony, hal_telephony)
 binder_call(vendor_qtelephony, hal_imsrtp)
-binder_call(vendor_qtelephony, hal_perf_default)
+binder_call(vendor_qtelephony, vendor_hal_perf_default)
 
 userdebug_or_eng(`
   diag_use(vendor_qtelephony)

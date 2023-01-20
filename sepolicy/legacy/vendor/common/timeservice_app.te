@@ -31,6 +31,6 @@ app_domain(timeservice_app);
 allow timeservice_app app_api_service:service_manager find;
 allow timeservice_app time_daemon:unix_stream_socket connectto;
 #allow timeservice to access perf hal
-hal_client_domain(timeservice_app, hal_perf);
+hal_client_domain(timeservice_app, vendor_hal_perf);
 
 get_prop(timeservice_app, vendor_mpctl_prop)

@@ -37,7 +37,7 @@ binder_call(hal_iop_client, hal_iop_server)
 # Add hwservice related rules
 add_hwservice(hal_iop_server, hal_iop_hwservice)
 allow hal_iop_client hal_iop_hwservice:hwservice_manager find;
-allow hal_iop_client hal_perf_hwservice:hwservice_manager find;
+allow hal_iop_client vendor_hal_perf_hwservice:hwservice_manager find;
 
 #Allow access for vendor property
 get_prop(hal_iop, vendor_iop_prop)
@@ -49,4 +49,4 @@ allow hal_iop_default proc:file rw_file_perms;
 #Allow Access for /data/vendor/iop
 allow hal_iop iop_data_file:dir rw_dir_perms;
 allow hal_iop iop_data_file:file create_file_perms;
-hal_client_domain(hal_iop_default, hal_perf)
+hal_client_domain(hal_iop_default, vendor_hal_perf)

@@ -45,7 +45,7 @@ userdebug_or_eng(`
   allow radio vendor_mbn_data_file:dir r_dir_perms;
   allow radio vendor_mbn_data_file:file r_file_perms;
 ')
-hal_client_domain(radio, hal_perf)
+hal_client_domain(radio, vendor_hal_perf)
 
 allow radio vendor_hal_atfwd_hwservice:hwservice_manager find;
 allow radio hidl_base_hwservice:hwservice_manager add;

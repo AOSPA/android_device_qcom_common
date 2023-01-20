@@ -26,4 +26,4 @@
 #IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
 #allow secure_element to access perf hal
-hal_client_domain(secure_element, hal_perf)
+hal_client_domain(secure_element, vendor_hal_perf)

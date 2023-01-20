@@ -44,7 +44,7 @@ allow surfaceflinger cameraserver_service:service_manager find;
 hal_client_domain(surfaceflinger, hal_camera)
 
 #Allow access to binder callback's to perf hal
-hal_client_domain(surfaceflinger, hal_perf)
+hal_client_domain(surfaceflinger, vendor_hal_perf)
 
 r_dir_file(surfaceflinger, sysfs_kgsl)
 
