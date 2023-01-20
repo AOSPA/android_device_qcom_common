@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "ee549c12_57aa8054",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 3
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000012
+      },
+      "writtenOn": "2023-01-20T06:47:39Z",
+      "side": 1,
+      "message": "seems likely to break non legacy as-is and I am not sure this is the right fix.  I think we should try relabeling the perf hal to vendor in legacy and see if that helps.",
+      "revId": "661b555cc684268d6a673f7b488fca47d232a4b4",
+      "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
+    }
+  ]
+}
