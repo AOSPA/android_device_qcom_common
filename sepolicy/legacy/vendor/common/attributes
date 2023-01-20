@@ -38,10 +38,6 @@ attribute hal_hbtp;
 attribute hal_hbtp_client;
 attribute hal_hbtp_server;
 
-attribute hal_perf;
-attribute hal_perf_client;
-attribute hal_perf_server;
-
 attribute wifidisplayhalservice;
 attribute wifidisplayhalservice_client;
 attribute wifidisplayhalservice_server;
