@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "a6af1339_1d613ae9",
+        "filename": "sepolicy/legacy/vendor/common/init_shell.te",
+        "patchSetId": 9
+      },
+      "lineNbr": 220,
+      "author": {
+        "id": 1000706
+      },
+      "writtenOn": "2023-01-22T21:48:31Z",
+      "side": 1,
+      "message": "proc_boot_reason is not defined",
+      "range": {
+        "startLine": 220,
+        "startChar": 21,
+        "endLine": 220,
+        "endChar": 37
+      },
+      "revId": "2ece7ab613aa0040d440167284a7b1871098bc64",
+      "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
+    }
+  ]
+}
