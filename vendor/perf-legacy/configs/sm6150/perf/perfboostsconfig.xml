@@ -306,5 +306,35 @@
                 Id="0x00001040" Enable="true" Timeout="0" Target="sdmmagpie"
                 Resources="0x40000000, 0x0" />
 
+    <!--Performance mode-->
+        <!-- CPUBOOST_MAX_FREQ BIG Core resource opcode, value-->
+        <!-- CPUBOOST_MAX_FREQ LITTLE Core resource opcode, value-->
+        <!-- CPUBOOST_MIN_FREQ BIG Core resource opcode, value-->
+        <!-- CPUBOOST_MIN_FREQ LITTLE Core resource opcode, value-->
+        <!-- LPM_BIAS resource opcode, value-->
+        <!-- SLB_BIG, val, SLB_BIG, val-->
+        <!-- SLB_LITTLE, val, SLB_LITTLE, val, SLB_LITTLE, val, SLB_LITTLE, val, SLB_LITTLE, val, SLB_LITTLE, val -->
+        <!-- CPU_DOWN_FREQ_THRESHOLD_US, val us -->
+        <!-- GPU MIN_FREQUENCY resource opcode, value-->
+        <!-- SCHEDBOOST resource opcode, value-->
+        <!-- SCHED GROUP DOWNMIGRATE resource opcode, value-->
+        <!-- SCHED GROUP UPMIGRATE resource opcode, value-->
+
+        <!-- Type="", Performance mode -->
+    <Config
+            Id="0x00001091" Enable="true" Target="sdmmagpie"
+            Resources="0x40804000, 2169,
+                       0x40804100, 1804,
+                       0x40800000, 1843,
+                       0x40800100, 1708,
+                       0x40408000, 0x63,
+                       0x40C68000, 60, 0x40C68010, 60,
+                       0x40C68100, 33, 0x40C68110, 33, 0x40C68120, 33, 0x40C68130, 33, 0x40C68140, 33, 0x40C68150, 33,
+                       0x41448000, 20000,
+                       0x4280C000, 800,
+                       0x40C00000, 0x3,
+                       0x40C58000, 95,
+                       0x40C54000, 100" />
+
     </PerfBoost>
 </BoostConfigs>
