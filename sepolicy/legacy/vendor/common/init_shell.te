@@ -255,6 +255,9 @@ allow qti_init_shell sysfs_usbpd_device:file setattr;
 
 allow qti_init_shell sysfs_fm:file rw_file_perms;
 
+# To read /proc/sys/kernel/boot_reason
+allow qti_init_shell proc_boot_reason:file r_file_perms;
+
 # To read /proc/meminfo
 allow qti_init_shell proc_meminfo:file r_file_perms;
 
