@@ -69,6 +69,24 @@
       "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "9b64d179_1cc60e35",
+        "filename": "sepolicy/legacy/vendor/common/surfaceflinger.te",
+        "patchSetId": 8
+      },
+      "lineNbr": 30,
+      "author": {
+        "id": 1000429
+      },
+      "writtenOn": "2023-01-23T05:31:10Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "305ed63e_c5019454",
+      "revId": "990774b049f13450a53ae5e63a02b5d72c7fd21b",
+      "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "202718ab_38e4356d",
