@@ -22,6 +22,30 @@
       },
       "revId": "2ece7ab613aa0040d440167284a7b1871098bc64",
       "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "1621387a_748332da",
+        "filename": "sepolicy/legacy/vendor/common/init_shell.te",
+        "patchSetId": 9
+      },
+      "lineNbr": 220,
+      "author": {
+        "id": 1000429
+      },
+      "writtenOn": "2023-01-23T04:52:28Z",
+      "side": 1,
+      "message": "oh, right just checked its defined on my dt. i should remove it here.",
+      "parentUuid": "a6af1339_1d613ae9",
+      "range": {
+        "startLine": 220,
+        "startChar": 21,
+        "endLine": 220,
+        "endChar": 37
+      },
+      "revId": "2ece7ab613aa0040d440167284a7b1871098bc64",
+      "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
     }
   ]
 }
