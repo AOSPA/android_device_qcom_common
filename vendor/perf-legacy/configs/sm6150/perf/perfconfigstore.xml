@@ -30,6 +30,7 @@ property Name is called. -->
                 <Prop Name="ro.vendor.qti.sys.fw.bg_apps_limit" Value="60" />
                 <Prop Name="ro.vendor.at_library" Value="libqti-at.so" />
                 <Prop Name="ro.lmk.enable_userspace_lmk" Value="false" />
+                <Prop Name="vendor.perf.performancemode.support" Value="true" Target="sdmmagpie" />
 
     </PerfConfigs>
 </PerfConfigsStore>
