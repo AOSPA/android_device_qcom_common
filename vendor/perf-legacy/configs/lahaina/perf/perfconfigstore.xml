@@ -77,6 +77,7 @@ ________________________________________________________________________________
                 <Prop Name="ro.vendor.qti.sys.fw.bg_apps_limit" Value="60" Target="katmai" />
                 <Prop Name="ro.vendor.at_library" Value="libqti-at.so" />
                 <Prop Name="vendor.perf.performancemode.support" Value="true" Target="lahaina" />
+                <Prop Name="vendor.perf.performancemode.support" Value="true" Target="yupik" />
                 <Prop Name="ro.lmk.enable_preferred_apps" Value="true" />
                 <Prop Name="vendor.appcompact.enable_app_compact" Value="true" />
                 <Prop Name="vendor.appcompact.full_compact_type" Value="2" />

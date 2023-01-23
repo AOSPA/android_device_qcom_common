@@ -778,6 +778,11 @@
             Resources="0x40CAC000, 20, 0x40CA4000, 2, 0x40800000, 1555, 0x40800100, 800, 0x40800200, 1670,
                        0x40C74000, 0xFF, 0x40408000, 0x63, 0x42C1C000, 1, 0x40CA8000, 3" />
 
+        <Config
+            Id="0x00001091" Enable="true" Target="yupik"
+            Resources="0x40CAC000, 20, 0x40CA4000, 2, 0x40800000, 1651, 0x40800100, 806, 0x40800200, 1766,
+                       0x40C74000, 0xFF, 0x40408000, 0x63, 0x42C1C000, 1, 0x40CA8000, 3" />
+
     <!--Display on Resource -->
         <!-- Display on resource opcode, value -->
         <Config
