@@ -56,5 +56,8 @@ property Name is called. -->
                 <Prop Name="vendor.prefapps.pkg_retention_mins" Value="28800" />
                 <Prop Name="vendor.prefapps.last_launch_threshold" Value="21600" />
 
+                <!-- AOSPA Edit: Enable Performance mode for atoll targets -->
+                <Prop Name="vendor.perf.performancemode.support" Value="true" />
+
     </PerfConfigs>
 </PerfConfigsStore>
