@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "e7391449_12122a90",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 20
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000012
+      },
+      "writtenOn": "2023-01-25T10:49:14Z",
+      "side": 1,
+      "message": "builds and works on 845, 660, 8937/8953.  does not break build on 7325.",
+      "revId": "2b1d3d1de6ba8c16180f39be6d5756851068fefd",
+      "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
+    }
+  ]
+}
