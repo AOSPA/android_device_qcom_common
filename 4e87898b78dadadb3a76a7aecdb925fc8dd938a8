@@ -16,6 +16,24 @@
       "message": "can you just move the include below to system/bt?  commonsys-intf is used on system and vendor.  The display component also inherits commonsys-intf in system.\n\n# Include QTI Bluetooth makefiles.\nifeq ($(TARGET_FWK_SUPPORTS_FULL_VALUEADDS),true)\ninclude vendor/qcom/opensource/commonsys-intf/bluetooth/bt-commonsys-intf-board.mk\nendif",
       "revId": "4e87898b78dadadb3a76a7aecdb925fc8dd938a8",
       "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "b6465ccc_fe9471eb",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000838
+      },
+      "writtenOn": "2023-01-26T17:22:53Z",
+      "side": 1,
+      "message": "Done. CHeck once",
+      "parentUuid": "3aba2455_fa939c71",
+      "revId": "4e87898b78dadadb3a76a7aecdb925fc8dd938a8",
+      "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
     }
   ]
 }
