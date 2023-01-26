@@ -12,11 +12,6 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-# Include QTI Bluetooth makefiles.
-ifeq ($(TARGET_FWK_SUPPORTS_FULL_VALUEADDS),true)
-include vendor/qcom/opensource/commonsys-intf/bluetooth/bt-commonsys-intf-board.mk
-endif
-
 # Packages
 PRODUCT_PACKAGES += \
     android.hardware.bluetooth@1.1.vendor \
