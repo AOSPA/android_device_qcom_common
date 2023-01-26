@@ -57,8 +57,8 @@ ifneq (,$(filter av, $(TARGET_COMMON_QTI_COMPONENTS)))
 endif
 
 ifneq (,$(filter bt, $(TARGET_COMMON_QTI_COMPONENTS)))
-  include $(QCOM_COMMON_PATH)/system/bt/qti-bt.mk
   include $(QCOM_COMMON_PATH)/vendor/bt/qti-bt.mk
+  include $(QCOM_COMMON_PATH)/system/bt/qti-bt.mk
 endif
 
 ifneq (,$(filter display, $(TARGET_COMMON_QTI_COMPONENTS)))
