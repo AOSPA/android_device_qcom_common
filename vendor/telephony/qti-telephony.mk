@@ -47,9 +47,16 @@ PRODUCT_VENDOR_PROPERTIES += \
     persist.radio.multisim.config=dsds \
     persist.vendor.radio.apm_sim_not_pwdn=1 \
     persist.vendor.radio.custom_ecc=1 \
-    persist.vendor.radio.enableadvancedscan=true \
     persist.vendor.radio.procedure_bytes=SKIP \
     persist.vendor.radio.sib16_support=1
+
+ifeq (,$(filter msm8937 msm8953 msm8998 sdm660 sdm710 sdm845, $(TARGET_BOARD_PLATFORM)))
+PRODUCT_VENDOR_PROPERTIES += \
+    persist.vendor.radio.enableadvancedscan=true
+else # Legacy
+PRODUCT_VENDOR_PROPERTIES += \
+    persist.vendor.radio.enableadvancedscan=false
+endif
 
 ifeq ($(TARGET_BOARD_PLATFORM), holi)
 # Vendor property to enable fetching of QoS parameters via IQtiRadio HAL
