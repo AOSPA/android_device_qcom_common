@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "84c6ad08_1a513639",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 3
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000706
+      },
+      "writtenOn": "2023-01-27T21:47:12Z",
+      "side": 1,
+      "message": "I think we should add all legacy devices we support. I didn\u0027t check every device but it is disabled on sdm845, msm8998, msm8953 and msm8937.",
+      "revId": "2e2b2f05e9e192ea0f2ed567b20278f85392399b",
+      "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
+    }
+  ]
+}
