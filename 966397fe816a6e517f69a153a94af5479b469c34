@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "0c6611e6_944c8ace",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 4
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000737
+      },
+      "writtenOn": "2023-01-27T21:58:13Z",
+      "side": 1,
+      "message": "sdm845: https://git.codelinaro.org/clo/la/platform/vendor/qcom/skunk/-/blob/LA.UM.10.3.r1-01700-sdm845.0/sdm845.mk#L279",
+      "revId": "966397fe816a6e517f69a153a94af5479b469c34",
+      "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
+    }
+  ]
+}
