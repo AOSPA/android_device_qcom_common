@@ -16,6 +16,23 @@
       "message": "Works now fully",
       "revId": "08d1a682951d23390b6b699b8265f2d9cf3cbe7a",
       "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "ed90de39_ccb403de",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 6
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000012
+      },
+      "writtenOn": "2023-01-27T04:42:12Z",
+      "side": 1,
+      "message": "commit message no longer describes the commit",
+      "revId": "08d1a682951d23390b6b699b8265f2d9cf3cbe7a",
+      "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
     }
   ]
 }
