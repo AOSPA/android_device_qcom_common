@@ -41,6 +41,13 @@ PRODUCT_PACKAGES += \
     libqdutils \
     libqservice
 
+# Properties for <5.15 targets
+# These are already set on 5.15+.
+ifneq (,$(filter 3.18 4.4 4.9 4.14 4.19 5.4 5.10, $(TARGET_KERNEL_VERSION)))
+PRODUCT_VENDOR_PROPERTIES += \
+    debug.sf.auto_latch_unsignaled=0
+endif
+
 # Properties for <5.10 targets
 # These are already set on 5.10+.
 ifneq (,$(filter 3.18 4.4 4.9 4.14 4.19 5.4, $(TARGET_KERNEL_VERSION)))
