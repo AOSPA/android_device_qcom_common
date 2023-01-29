@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "2978cb68_f3669189",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000760
+      },
+      "writtenOn": "2023-01-29T03:20:44Z",
+      "side": 1,
+      "message": "haven\u0027t tested yet.. will do +1 verified once I\u0027m done with testing\n. but the change seems fine to me..",
+      "revId": "0a16a5f3d986d695b2fd36580d1f8b3fb0da6a7b",
+      "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
+    }
+  ]
+}
