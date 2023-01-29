@@ -61,9 +61,7 @@ service wpa_supplicant /vendor/bin/hw/wpa_supplicant \
 #   user wifi
 #   group wifi inet keystore
     interface aidl android.hardware.wifi.supplicant.ISupplicant/default
-    interface vendor.qti.hardware.wifi.supplicant@2.0::ISupplicantVendor default
-    interface vendor.qti.hardware.wifi.supplicant@2.1::ISupplicantVendor default
-    interface vendor.qti.hardware.wifi.supplicant@2.2::ISupplicantVendor default
+    interface aidl vendor.qti.hardware.wifi.supplicant.ISupplicantVendor/default
     class main
     socket vendor_wpa_wlan0 dgram 660 wifi wifi
     disabled
