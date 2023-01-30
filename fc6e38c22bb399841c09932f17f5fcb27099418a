@@ -33,6 +33,29 @@
       "message": "only on my end though, ig.",
       "revId": "fc6e38c22bb399841c09932f17f5fcb27099418a",
       "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "b3722d8c_e29d0ddc",
+        "filename": "vendor/wlan/qti-wlan.mk",
+        "patchSetId": 2
+      },
+      "lineNbr": 26,
+      "author": {
+        "id": 1000427
+      },
+      "writtenOn": "2023-01-30T03:25:23Z",
+      "side": 1,
+      "message": "aren\u0027t we using aidl now",
+      "range": {
+        "startLine": 26,
+        "startChar": 5,
+        "endLine": 26,
+        "endChar": 6
+      },
+      "revId": "fc6e38c22bb399841c09932f17f5fcb27099418a",
+      "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
     }
   ]
 }
