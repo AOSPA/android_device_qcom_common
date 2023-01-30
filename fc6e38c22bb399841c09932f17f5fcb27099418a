@@ -56,6 +56,30 @@
       },
       "revId": "fc6e38c22bb399841c09932f17f5fcb27099418a",
       "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "97738bdc_44eff561",
+        "filename": "vendor/wlan/qti-wlan.mk",
+        "patchSetId": 2
+      },
+      "lineNbr": 26,
+      "author": {
+        "id": 1000760
+      },
+      "writtenOn": "2023-01-30T16:32:06Z",
+      "side": 1,
+      "message": "https://github.com/AOSPA/android_external_wpa_supplicant_8/blob/topaz/wpa_supplicant/Android.mk/#L1834-L1836\n\nblame qcom, it inherits aidl rc",
+      "parentUuid": "b3722d8c_e29d0ddc",
+      "range": {
+        "startLine": 26,
+        "startChar": 5,
+        "endLine": 26,
+        "endChar": 6
+      },
+      "revId": "fc6e38c22bb399841c09932f17f5fcb27099418a",
+      "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
     }
   ]
 }
