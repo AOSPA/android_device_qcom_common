@@ -21,6 +21,14 @@ BOARD_VENDOR_QCOM_GPS_LOC_API_HARDWARE := default
 # Inherit the GPS HAL.
 $(call inherit-product-if-exists, hardware/qcom/gps/gps_vendor_product.mk)
 
+ifneq (,$(filter 5.10, $(TARGET_KERNEL_VERSION)))
+PRODUCT_SOONG_NAMESPACES += vendor/qcom/opensource/location
+$(call inherit-product, vendor/qcom/opensource/location/gps_vendor_product.mk)
+else
+PRODUCT_SOONG_NAMESPACES += vendor/qcom/opensource/location-legacy
+$(call inherit-product, vendor/qcom/opensource/location-legacy/gps_vendor_product.mk)
+endif
+
 # Overlays
 PRODUCT_PACKAGES += \
     QCOMGPSFrameworksOverlay
