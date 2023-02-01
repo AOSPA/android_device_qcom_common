@@ -80,6 +80,30 @@
       },
       "revId": "fc6e38c22bb399841c09932f17f5fcb27099418a",
       "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "521330ab_1ce683ba",
+        "filename": "vendor/wlan/qti-wlan.mk",
+        "patchSetId": 2
+      },
+      "lineNbr": 26,
+      "author": {
+        "id": 1000012
+      },
+      "writtenOn": "2023-02-01T03:49:16Z",
+      "side": 1,
+      "message": "Google renamed, QC did not.",
+      "parentUuid": "97738bdc_44eff561",
+      "range": {
+        "startLine": 26,
+        "startChar": 5,
+        "endLine": 26,
+        "endChar": 6
+      },
+      "revId": "fc6e38c22bb399841c09932f17f5fcb27099418a",
+      "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
     }
   ]
 }
