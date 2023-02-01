@@ -107,6 +107,8 @@ subsystem mem_buf_vm
 /dev/synx_device          0660   root       camera
 /dev/hab                  0666   system     system
 /dev/iio:device*          0664   system     system
+/dev/qmc_dma              0660   radio      radio
+/dev/qmc_cma              0660   radio      radio
 
 #permissions for UFS RPMB BSG device node
 /dev/0:0:0:49476          0600   system     system
