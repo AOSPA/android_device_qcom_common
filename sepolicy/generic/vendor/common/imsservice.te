@@ -5,3 +5,5 @@ allow vendor_ims_service self:{
     tipc_socket
 } create_socket_perms_no_ioctl;
 unix_socket_connect(vendor_ims_service, vendor_ims_service, vendor_ims_service)
+
+set_prop(vendor_ims_service, vendor_persist_rcs_qti_prop)

@@ -1,0 +1,1 @@
+/data/vendor/(qcc-trd|qdmastats|qcc|qdma)(/.*)?                     u:object_r:vendor_qcc_trd_data_file:s0
