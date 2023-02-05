@@ -24,7 +24,16 @@
 # WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE
 # OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN
 # IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+#
+# Changes from Qualcomm Innovation Center are provided under the following license:
+# Copyright (c) 2022 Qualcomm Innovation Center, Inc. All rights reserved.
+# SPDX-License-Identifier: BSD-3-Clause-Clear
 
 /(vendor|system/vendor)/bin/hw/android\.hardware\.biometrics\.face@1\.0-service    u:object_r:vendor_biometricsface_exec:s0
+
+# nordic node file
+/(vendor|system/vendor)/bin/hw/vendor\.shadowcreator\.hardware\.nordic@1\.0-service u:object_r:vendor_hal_nordic_default_exec:s0
+/sys/devices/platform/soc/894000\.spi/spi_master/spi0/spi0\.0/jsrequest u:object_r:vendor_nordic_sysfs_node:s0
+/sys/devices/platform/soc/894000\.spi/spi_master/spi0/spi0\.0/jsmem u:object_r:vendor_nordic_sysfs_node:s0
 
 /data/vendor/face3d_dir(/.*)?                                       u:object_r:vendor_biometricsface_data_file:s0

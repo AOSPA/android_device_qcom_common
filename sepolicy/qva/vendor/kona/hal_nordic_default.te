@@ -1,0 +1,13 @@
+#  Copyright (c) 2022 Qualcomm Innovation Center, Inc. All rights reserved.
+#  SPDX-License-Identifier: BSD-3-Clause-Clear
+
+type vendor_hal_nordic_default, domain;
+type vendor_hal_nordic_default_exec, exec_type, vendor_file_type, file_type;
+hal_server_domain(vendor_hal_nordic_default, vendor_hal_nordic)
+init_daemon_domain(vendor_hal_nordic_default);
+binder_call(vendor_hal_nordic_client, vendor_hal_nordic_server)
+binder_call(vendor_hal_nordic_server, vendor_hal_nordic_client)
+hal_attribute_hwservice(vendor_hal_nordic, vendor_hal_nordic_hwservice)
+allow vendor_hal_nordic_default vendor_nordic_sysfs_node:file { open read write };
+allow vendor_hal_nordic_default ion_device:chr_file rw_file_perms;
+hal_client_domain(vendor_hal_nordic_default, hal_allocator)

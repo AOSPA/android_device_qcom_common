@@ -4,17 +4,17 @@
 # modification, are permitted (subject to the limitations in the
 # disclaimer below) provided that the following conditions are met:
 #
-#    * Redistributions of source code must retain the above copyright
-#      notice, this list of conditions and the following disclaimer.
+#     * Redistributions of source code must retain the above copyright
+#       notice, this list of conditions and the following disclaimer.
 #
-#    * Redistributions in binary form must reproduce the above
-#      copyright notice, this list of conditions and the following
-#      disclaimer in the documentation and/or other materials provided
-#      with the distribution.
+#     * Redistributions in binary form must reproduce the above
+#       copyright notice, this list of conditions and the following
+#       disclaimer in the documentation and/or other materials provided
+#       with the distribution.
 #
-#    * Neither the name of Qualcomm Innovation Center, Inc. nor the names of its
-#      contributors may be used to endorse or promote products derived
-#      from this software without specific prior written permission.
+#     * Neither the name of Qualcomm Innovation Center, Inc. nor the names of its
+#       contributors may be used to endorse or promote products derived
+#       from this software without specific prior written permission.
 #
 # NO EXPRESS OR IMPLIED LICENSES TO ANY PARTY'S PATENT RIGHTS ARE
 # GRANTED BY THIS LICENSE. THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT
@@ -30,7 +30,17 @@
 # OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN
 # IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
-vndbinder_use(vendor_qvrd_vndr)
-# Use QTR SDK for DCM
-#
-qtr_sdk_use(vendor_qvrd_vndr)
+# qwesd - Wireless Edge Service Daemon
+type vendor_qwesd, domain;
+type vendor_qwesd_exec, exec_type, vendor_file_type, file_type;
+
+init_daemon_domain(vendor_qwesd)
+
+unix_socket_connect(vendor_qwesd, vendor_ssgtzd, vendor_ssgtzd)
+net_domain(vendor_qwesd);
+
+allow vendor_qwesd self:{ qipcrtr_socket } create_socket_perms_no_ioctl;
+
+# Allow qwesd to write state information to /data/vendor/qwes/qwesd.conf
+allow vendor_qwesd vendor_qwes_data_file:dir rw_dir_perms;
+allow vendor_qwesd vendor_qwes_data_file:file create_file_perms;
