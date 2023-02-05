@@ -27,3 +27,5 @@
 
 # Allow composer client to find demura service.
 hal_client_domain(hal_graphics_composer_default, vendor_hal_display_demura);
+
+allow hal_graphics_composer_default uio_device:chr_file rw_file_perms;
