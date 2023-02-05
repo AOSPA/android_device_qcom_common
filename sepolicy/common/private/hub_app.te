@@ -1,2 +1,3 @@
 # Allow hub_app to write to the DPM/TCM socket
 allow hub_app vendor_dpmtcm_socket:sock_file w_file_perms;
+allow hub_app vendor_dpmd:unix_stream_socket connectto;
