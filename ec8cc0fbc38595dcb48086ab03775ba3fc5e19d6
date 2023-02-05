@@ -50,6 +50,24 @@
       "message": "let\u0027s just allow this to be safe.",
       "revId": "ec8cc0fbc38595dcb48086ab03775ba3fc5e19d6",
       "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "71f77971_8b4f4207",
+        "filename": "sepolicy/legacy/vendor/common/dontaudit.te",
+        "patchSetId": 10
+      },
+      "lineNbr": 18,
+      "author": {
+        "id": 1000429
+      },
+      "writtenOn": "2023-02-05T03:20:08Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "3b7f7f3e_a8294bec",
+      "revId": "ec8cc0fbc38595dcb48086ab03775ba3fc5e19d6",
+      "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
     }
   ]
 }
