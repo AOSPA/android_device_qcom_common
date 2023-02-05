@@ -1,0 +1,2 @@
+# Allow qvrd_vndr to access to battery supply API for DCS
+r_dir_file(vendor_qvrd_vndr, vendor_sysfs_battery_supply);
