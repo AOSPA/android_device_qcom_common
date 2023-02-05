@@ -1,0 +1,8 @@
+#  Copyright (c) 2022 Qualcomm Innovation Center, Inc. All rights reserved.
+#  SPDX-License-Identifier: BSD-3-Clause-Clear
+
+# attribute for hal_nordic
+
+attribute vendor_hal_nordic_client;
+attribute vendor_hal_nordic_server;
+attribute vendor_hal_nordic;

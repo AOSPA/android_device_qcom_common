@@ -1,0 +1,2 @@
+# rild to read singlereg property
+get_prop(rild, vendor_persist_rcs_qti_prop)

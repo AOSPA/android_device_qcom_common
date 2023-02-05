@@ -1,0 +1,9 @@
+#  Copyright (c) 2022 Qualcomm Innovation Center, Inc. All rights reserved.
+#  SPDX-License-Identifier: BSD-3-Clause-Clear
+
+# hal nordic app te
+type vendor_nordic_app, domain;
+app_domain(vendor_nordic_app)
+hal_client_domain(vendor_nordic_app, vendor_hal_nordic);
+allow vendor_nordic_app activity_service:service_manager find;
+allow vendor_nordic_app vendor_qvrd_vndr:fd use;
