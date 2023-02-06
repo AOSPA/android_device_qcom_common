@@ -15,6 +15,7 @@
 on post-fs-data
     # Disable zram readahead
     write /proc/sys/vm/page-cluster 0
+
     # Override readahead to 2MiB during boot
     write /sys/block/dm-0/queue/read_ahead_kb 2048
     write /sys/block/dm-1/queue/read_ahead_kb 2048
@@ -37,8 +38,13 @@ on post-fs-data
 on property:vendor.post_boot.parsed=1
     # Set cpuset audio-app
     write /dev/cpuset/audio-app/cpus 1-2
+
     # Set restricted cpuset to the same CPUs as system-background
     copy /dev/cpuset/system-background/cpus /dev/cpuset/restricted/cpus
+
+    # Disable multiple kswapd threads
+    write /proc/sys/vm/kswapd_threads 1
+
     # Reset readahead to 128KiB
     write /sys/block/dm-0/queue/read_ahead_kb 128
     write /sys/block/dm-1/queue/read_ahead_kb 128
