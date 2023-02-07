@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "fea1201a_3538c07c",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 4
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000579
+      },
+      "writtenOn": "2023-02-07T04:14:15Z",
+      "side": 1,
+      "message": "seems to cause frequent disconnections on alioth (kona)",
+      "revId": "90d9de044a37596dc862be1229eea8f65a6c5ed5",
+      "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
+    }
+  ]
+}
