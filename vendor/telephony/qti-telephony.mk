@@ -55,7 +55,9 @@ ifeq ($(TARGET_BOARD_PLATFORM), holi)
 # Vendor property to enable fetching of QoS parameters via IQtiRadio HAL
 PRODUCT_PROPERTY_OVERRIDES += \
     persist.vendor.radio.fetchqos=true
+endif
 
+ifeq ($(call is-board-platform-in-list, bengal holi),true)
 #property to enable single ims registration
 PRODUCT_PROPERTY_OVERRIDES += \
      persist.vendor.rcs.singlereg.feature=1
