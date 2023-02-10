@@ -1,4 +1,5 @@
 system_ext/app/BluetoothDsDaService/BluetoothDsDaService.apk
+system_ext/etc/default-permissions/com.qualcomm.qtil.btdsda.xml
 system_ext/lib/com.qualcomm.qti.ant@1.0.so
 system_ext/lib64/com.qualcomm.qti.ant@1.0.so
 system_ext/lib64/libaptX_encoder.so|df1c89d7af1bb35808d5fe3496b04ba066c10cbc
