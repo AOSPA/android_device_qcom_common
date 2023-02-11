@@ -1,9 +1,3 @@
-#
-# Copyright (C) 2021-2022 Paranoid Android
-#
-# SPDX-License-Identifier: Apache-2.0
-#
-
 TARGET_USES_NQ_NFC ?= true
 
 ifeq ($(TARGET_USES_NQ_NFC), true)
