@@ -12,8 +12,6 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-# Current tag - LA.VENDOR.1.0.r1-16000-WAIPIO.QSSI13.0
-
 TARGET_ADRENO_COMPONENT_VARIANT := adreno
 
 # Permissions
