@@ -59,7 +59,6 @@ PRODUCT_VENDOR_PROPERTIES += \
     vendor.audio.c2.preferred=true \
     vendor.qc2audio.suspend.enabled=true \
     vendor.qc2audio.per_frame.flac.dec.enabled=true
-
 endif
 
 #---------------------------------------------------------------------------------------------------
@@ -71,6 +70,10 @@ ifeq ($(call is-board-platform-in-list, bengal), true)
     $(warning "Default Codec2.0 Enabled")
     PRODUCT_ODM_PROPERTIES += debug.stagefright.ccodec=4
 endif
+
+# Media Init
+PRODUCT_COPY_FILES += \
+    device/qcom/common/vendor/media/init.qti.media.sh:$(TARGET_COPY_OUT_VENDOR)/bin/init.qti.media.sh
 
 # Get non-open-source specific aspects.
 $(call inherit-product-if-exists, vendor/qcom/common/vendor/media/media-vendor.mk)
