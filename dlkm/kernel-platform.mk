@@ -1,9 +1,3 @@
-#
-# Copyright (C) 2022 Paranoid Android
-#
-# SPDX-License-Identifier: Apache-2.0
-#
-
 TARGET_USES_KERNEL_PLATFORM ?= true
 
 KERNEL_PREBUILT_DIR ?= device/qcom/$(TARGET_BOARD_PLATFORM)-kernel
