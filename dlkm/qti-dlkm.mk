@@ -1,9 +1,3 @@
-#
-# Copyright (C) 2022 Paranoid Android
-#
-# SPDX-License-Identifier: Apache-2.0
-#
-
 include $(QCOM_COMMON_PATH)/dlkm/kernel-platform.mk
 
 # Audio
