@@ -75,25 +75,18 @@ case "$target" in
                 elif [ $sku_ver -eq 1 ]; then
                     setprop vendor.media.target_variant "_diwali_v1"
                 fi
-
-                if [ $build_codename -le "12" ]; then
-                    setprop vendor.netflix.bsp_rev "Q7450-35705-1"
-                fi
+                setprop vendor.netflix.bsp_rev "Q7450-35705-1"
                 ;;
             591)
                 setprop vendor.media.target_variant "_ukee"
                 ;;
             530|531|540)
                 setprop vendor.media.target_variant "_cape"
-                if [ $build_codename -le "12" ]; then
-                    setprop vendor.netflix.bsp_rev "Q8450-34634-1"
-                fi
+                setprop vendor.netflix.bsp_rev "Q8450-34634-1"
                 ;;
             *)
                 setprop vendor.media.target_variant "_taro"
-                if [ $build_codename -le "12" ]; then
-                    setprop vendor.netflix.bsp_rev "Q8450-34634-1"
-                fi
+                setprop vendor.netflix.bsp_rev "Q8450-34634-1"
                 ;;
         esac
         ;;
