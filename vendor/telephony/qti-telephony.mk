@@ -51,7 +51,7 @@ PRODUCT_VENDOR_PROPERTIES += \
     persist.vendor.radio.procedure_bytes=SKIP \
     persist.vendor.radio.sib16_support=1
 
-ifeq ($(TARGET_BOARD_PLATFORM), holi)
+ifeq ($(call is-board-platform-in-list, bengal holi),true)
 # Vendor property to enable fetching of QoS parameters via IQtiRadio HAL
 PRODUCT_PROPERTY_OVERRIDES += \
     persist.vendor.radio.fetchqos=true
