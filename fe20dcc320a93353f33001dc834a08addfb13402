@@ -16,6 +16,24 @@
       "message": "would we be better off not auditing?",
       "revId": "fe20dcc320a93353f33001dc834a08addfb13402",
       "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "819c4a55_0325baec",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000840
+      },
+      "writtenOn": "2023-02-15T06:45:14Z",
+      "side": 1,
+      "message": "Done.",
+      "parentUuid": "d546d580_e373ebc5",
+      "revId": "fe20dcc320a93353f33001dc834a08addfb13402",
+      "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
     }
   ]
 }
