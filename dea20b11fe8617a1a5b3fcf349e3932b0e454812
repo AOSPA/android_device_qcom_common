@@ -16,6 +16,24 @@
       "message": "These libs are invalid build targets (unless NEED_AIDL_NDK_PLATFORM_BACKEND is enabled):\n- android.hardware.neuralnetworks-V1-ndk_platform.vendor\n- vendor.qti.hardware.display.config-V2-ndk_platform.vendor\n- vendor.qti.hardware.display.config-V5-ndk_platform.vendor\n\nBut we introduced hardware/lineage/compact, some modules of this repository conflict with NEED_AIDL_NDK_PLATFORM_BACKEND. I think it is possible to declare these targets in compat in the same way, so that we can get away from NEED_AIDL_NDK_PLATFORM_BACKEND.",
       "revId": "dea20b11fe8617a1a5b3fcf349e3932b0e454812",
       "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "f66b0808_a0719f91",
+        "filename": "common.mk",
+        "patchSetId": 10
+      },
+      "lineNbr": 180,
+      "author": {
+        "id": 1000840
+      },
+      "writtenOn": "2023-02-15T12:56:54Z",
+      "side": 1,
+      "message": "s/compact/compat/\n\nAdd a little information, if hardware/lineage/compat does not exist, these platform backend libs are only available if NEED_AIDL_NDK_PLATFORM_BACKEND is enabled.",
+      "parentUuid": "324d7a41_5f377242",
+      "revId": "dea20b11fe8617a1a5b3fcf349e3932b0e454812",
+      "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
     }
   ]
 }
