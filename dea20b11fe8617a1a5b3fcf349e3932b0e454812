@@ -34,6 +34,24 @@
       "parentUuid": "324d7a41_5f377242",
       "revId": "dea20b11fe8617a1a5b3fcf349e3932b0e454812",
       "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "f39edba4_c9417598",
+        "filename": "common.mk",
+        "patchSetId": 10
+      },
+      "lineNbr": 180,
+      "author": {
+        "id": 1000737
+      },
+      "writtenOn": "2023-02-15T13:28:57Z",
+      "side": 1,
+      "message": "I see, so we will remove them. at first I think I did it based on Davinci and xiaomi_SM8450 device tree",
+      "parentUuid": "f66b0808_a0719f91",
+      "revId": "dea20b11fe8617a1a5b3fcf349e3932b0e454812",
+      "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
     }
   ]
 }
