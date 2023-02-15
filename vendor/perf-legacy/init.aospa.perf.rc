@@ -101,3 +101,12 @@ on property:vendor.post_boot.parsed=1
 on property:ro.board.platform=lahaina
     # Setup foreground cpuset for display composer.
     write /dev/cpuset/foreground/cpus 0-6
+
+on property:ro.board.platform=msmnile && property:vendor.post_boot.parsed=1
+    # CPUFreq
+    write /sys/devices/system/cpu/cpufreq/policy0/schedutil/up_rate_limit_us 500
+    write /sys/devices/system/cpu/cpufreq/policy0/schedutil/down_rate_limit_us 20000
+    write /sys/devices/system/cpu/cpufreq/policy4/schedutil/up_rate_limit_us 500
+    write /sys/devices/system/cpu/cpufreq/policy4/schedutil/down_rate_limit_us 20000
+    write /sys/devices/system/cpu/cpufreq/policy7/schedutil/up_rate_limit_us 500
+    write /sys/devices/system/cpu/cpufreq/policy7/schedutil/down_rate_limit_us 20000
