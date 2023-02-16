@@ -31,6 +31,3 @@
 # IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
 vndbinder_use(vendor_qvrd_vndr)
-# Use QTR SDK for DCM
-#
-qtr_sdk_use(vendor_qvrd_vndr)
