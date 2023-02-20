@@ -34,7 +34,7 @@ ________________________________________________________________________________
                 <!--Vendor Properties -->
                 <Prop Name="vendor.iop.enable_uxe" Value="1" />
                 <Prop Name="vendor.debug.enable.lm" Value="true" />
-                <Prop Name="vendor.perf.iop_v3.enable" Value="true" Target="taro,cape" />
+                <Prop Name="vendor.perf.iop_v3.enable" Value="true" Target="taro,cape,ukee" />
                 <Prop Name="vendor.perf.iop_v3.enable.debug" Value="false" />
                 <Prop Name="vendor.enable.prefetch" Value="false" />
                 <Prop Name="vendor.iop.enable_prefetch_ofr" Value="false" />
@@ -48,17 +48,16 @@ ________________________________________________________________________________
                 <Prop Name="vendor.prekill_MIN_ADJ_to_Kill"       Value="800"  />
                 <Prop Name="vendor.prekill_MAX_ADJ_to_Kill"       Value="1000"  />
                 <Prop Name="ro.vendor.perf.enable.procomp" Value="true" Target="diwali" />
-                <Prop Name="vendor.perf.pfar.enable" Value="1" Target="diwali" />
-                <Prop Name="vendor.perf.fps_switch.enable" Value="1" Target="diwali" />
-                <Prop Name="ro.vendor.perf.gfl.tap_ignore_enable" Value="true" Target="diwali" />
+                <Prop Name="ro.vendor.perf.gfl.tap_ignore_enable" Value="true" />
                 <Prop Name="ro.vendor.perf.ss" Value="true" Target="diwali"/>
-                <Prop Name="ro.vendor.perf.splh" Value="hw" Target="cape,taro"/>
+                <Prop Name="ro.vendor.perf.splh" Value="hw" Target="cape,taro,ukee"/>
                 <!--splh is true/false for ss -->
                 <Prop Name="ro.vendor.perf.splh" Value="true" Target="diwali"/>
-                <Prop Name="ro.vendor.perf.lplh" Value="false" Target="cape,taro"/>
+                <Prop Name="ro.vendor.perf.lplh" Value="false" Target="cape,taro,ukee"/>
                 <Prop Name="ro.vendor.perf.lplh" Value="true" Target="diwali"/>
                 <Prop Name="ro.vendor.perf.lal" Value="true" Target="diwali"/>
                 <Prop Name="ro.vendor.perf.lgl" Value="true" Target="diwali" SkewType="10"/>
+                <Prop Name="vendor.perf.enable_gplaf_hw" Value="false" Target="taro,diwali" />
                 <Prop Name="vendor.perf.enable_gplaf_hw" Value="false" Target="diwali" />
                 <Prop Name="ro.vendor.perf.dplh" Value="false" Target="diwali" />
 
@@ -74,12 +73,13 @@ ________________________________________________________________________________
                 <Prop Name="ro.lmk.nstrat_wmark_boost_factor" Value="4" />
                 <Prop Name="vendor.perf.gestureflingboost.enable" Value="true" />
                 <Prop Name="ro.vendor.qti.sys.fw.bg_apps_limit" Value="96" />
+                <Prop Name="ro.vendor.qti.sys.fw.bg_apps_limit" Value="60" Target="diwali" />
                 <Prop Name="ro.vendor.at_library" Value="libqti-at.so" />
-                <Prop Name="vendor.perf.performancemode.support" Value="true" Target="taro,cape" />
+                <Prop Name="vendor.perf.performancemode.support" Value="true" Target="taro,cape,ukee" />
                 <Prop Name="ro.lmk.enable_preferred_apps" Value="true" />
                 <Prop Name="vendor.appcompact.enable_app_compact" Value="true" />
                 <Prop Name="vendor.appcompact.full_compact_type" Value="2" />
-                <Prop Name="vendor.appcompact.some_compact_type" Value="4" />
+                <Prop Name="vendor.appcompact.some_compact_type" Value="2" />
                 <Prop Name="vendor.appcompact.compact_throttle_somesome" Value="5000" />
                 <Prop Name="vendor.appcompact.compact_throttle_somefull" Value="10000" />
                 <Prop Name="vendor.appcompact.compact_throttle_fullsome" Value="500" />
@@ -88,37 +88,45 @@ ________________________________________________________________________________
                 <Prop Name="vendor.appcompact.compact_throttle_persistent" Value="600000" />
                 <Prop Name="vendor.appcompact.rss_throttle_kb" Value="12000" />
                 <Prop Name="vendor.appcompact.delta_rss_throttle_kb" Value="8000" />
-                <Prop Name="vendor.perf.topAppRenderThreadBoost.enable" Value="false" Target="taro,cape" />
-
+                <Prop Name="vendor.perf.topAppRenderThreadBoost.enable" Value="false" Target="taro,cape,ukee" />
+                <Prop Name="ro.vendor.qti.sys.fw.bservice_age" Value="300000" Target="diwali" />
+                <Prop Name="ro.vendor.qti.sys.fw.bservice_limit" Value="15" Target="diwali" />
+                <Prop Name="ro.vendor.qti.sys.fw.bservice_enable" Value="true" Target="diwali" />
+                <Prop Name="ro.vendor.qti.sys.fw.use_trim_settings" Value="true" Target="diwali" />
+                <Prop Name="ro.vendor.qti.sys.fw.empty_app_percent" Value="50" Target="diwali" />
+                <Prop Name="ro.vendor.qti.sys.fw.trim_empty_percent" Value="100" Target="diwali" />
+                <Prop Name="ro.vendor.qti.sys.fw.trim_cache_percent" Value="100" Target="diwali" />
+                <Prop Name="ro.vendor.qti.sys.fw.trim_enable_memory" Value="4294967296" Target="diwali" />
+                <Prop Name="ro.vendor.qti.am.reschedule_service" Value="true" Target="diwali" />
+                <Prop Name="ro.vendor.iocgrp.config" Value="1" Target="diwali" />
                 <Prop Name="ro.lmk.enable_userspace_lmk" Value="true" />
                 <Prop Name="vendor.perf.phr.enable" Value="1"/>
                 <Prop Name="vendor.perf.phr.hr_min_rate" Value="0.5"/>
                 <Prop Name="vendor.perf.pfar2.enable" Value="1"/>
-                <Prop Name="vendor.perf.pfar2.boost_level" Value="1" Target="taro,cape" />
+                <Prop Name="vendor.perf.pfar2.boost_level" Value="1" Target="taro,cape,ukee" />
                 <Prop Name="vendor.perf.pfar2.boost_level" Value="3" Target="diwali" />
-                <Prop Name="vendor.perf.pfar2.disable_pl" Value="1" Target="taro,cape" />
-                <Prop Name="vendor.perf.pfar2.disable_core_ctl" Value="1" Target="taro,cape" />
+                <Prop Name="vendor.perf.pfar2.disable_pl" Value="1" Target="taro,cape,ukee" />
+                <Prop Name="vendor.perf.pfar2.disable_core_ctl" Value="1" Target="taro,cape,ukee" />
                 <Prop Name="ro.vendor.perf.qhf" Value="true" />
                 <Prop Name="ro.vendor.perf.qgpe" Value="true" />
                 <Prop Name="ro.vendor.perf.qape" Value="true" />
 
-
                 <!--Mention all the diwali specific properties here -->
-                <Prop Name="ro.vendor.iocgrp.config"                 Value="1"          Target="diwali" />
-                <Prop Name="vendor.perf.iop_v3.enable"               Value="false"      Target="diwali" />
-                <Prop Name="vendor.iop.enable_speed"                 Value="false"      Target="diwali" />
-                <Prop Name="ro.vendor.qti.sys.fw.bservice_age"       Value="300000"     Target="diwali" />
-                <Prop Name="ro.vendor.qti.sys.fw.bservice_limit"     Value="15"         Target="diwali" />
-                <Prop Name="ro.vendor.qti.sys.fw.bservice_enable"    Value="true"       Target="diwali" />
-                <Prop Name="ro.vendor.qti.sys.fw.use_trim_settings"  Value="true"       Target="diwali" />
-                <Prop Name="ro.vendor.qti.sys.fw.empty_app_percent"  Value="50"         Target="diwali" />
-                <Prop Name="ro.vendor.qti.sys.fw.trim_empty_percent" Value="100"        Target="diwali" />
-                <Prop Name="ro.vendor.qti.sys.fw.trim_cache_percent" Value="100"        Target="diwali" />
+                <Prop Name="vendor.perf.iop_v3.enable" Value="false" Target="diwali" />
+                <Prop Name="vendor.iop.enable_speed" Value="false" Target="diwali" />
+                <Prop Name="vendor.appcompact.some_compact_type" Value="4" Target="diwali" />
+                <Prop Name="ro.vendor.qti.sys.fw.bservice_age" Value="300000" Target="diwali" />
+                <Prop Name="ro.vendor.qti.sys.fw.bservice_limit" Value="15" Target="diwali" />
+                <Prop Name="ro.vendor.qti.sys.fw.bservice_enable" Value="true" Target="diwali" />
+                <Prop Name="ro.vendor.qti.sys.fw.use_trim_settings" Value="true" Target="diwali" />
+                <Prop Name="ro.vendor.qti.sys.fw.empty_app_percent" Value="50" Target="diwali" />
+                <Prop Name="ro.vendor.qti.sys.fw.trim_empty_percent" Value="100" Target="diwali" />
+                <Prop Name="ro.vendor.qti.sys.fw.trim_cache_percent" Value="100" Target="diwali" />
                 <Prop Name="ro.vendor.qti.sys.fw.trim_enable_memory" Value="4294967296" Target="diwali" />
-                <Prop Name="ro.vendor.qti.am.reschedule_service"     Value="true"       Target="diwali" />
-                <Prop Name="ro.vendor.qti.sys.fw.bg_apps_limit"      Value="60"         Target="diwali" />
-                <Prop Name="ro.vendor.qti.sys.fw.bg_apps_limit"      Value="32"         Target="diwali" Ram="4" />
-                <Prop Name="ro.vendor.qti.sys.fw.bg_apps_limit"      Value="32"         Target="diwali" Ram="3" />
+                <Prop Name="ro.vendor.qti.am.reschedule_service" Value="true" Target="diwali" />
+                <Prop Name="ro.vendor.qti.sys.fw.bg_apps_limit" Value="60" Target="diwali" />
+                <Prop Name="ro.vendor.qti.sys.fw.bg_apps_limit" Value="32" Target="diwali" Ram="4" />
+                <Prop Name="ro.vendor.qti.sys.fw.bg_apps_limit" Value="32" Target="diwali" Ram="3" />
 
     </PerfConfigs>
 </PerfConfigsStore>

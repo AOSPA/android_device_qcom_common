@@ -64,7 +64,7 @@
              Target="blair"
              NumClusters="2"
              TotalNumCores="8"
-             SocIds="507"
+             SocIds="507,578"
              SynCore="1"
              CoreCtlCpu="0"
              MinCoreOnline="0"
