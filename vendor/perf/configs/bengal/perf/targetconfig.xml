@@ -78,7 +78,7 @@
              Target="khaje"
              NumClusters="2"
              TotalNumCores="8"
-             SocIds="518,561"
+             SocIds="518,561,585,586"
              SynCore="1"
              CoreCtlCpu="4"
              MinCoreOnline="0"
