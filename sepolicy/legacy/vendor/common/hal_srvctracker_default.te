@@ -35,6 +35,8 @@ binder_call(hal_srvctracker_client, hal_srvctracker_server)
 binder_call(hal_srvctracker_server, hal_srvctracker_client)
 
 add_hwservice(hal_srvctracker, vendor_hal_srvctracker_hwservice)
+hal_attribute_service(vendor_hal_srvctracker, vendor_hal_servicetrackeraidl_service)
+binder_call(vendor_hal_srvctracker_server, servicemanager)
 
 allow hal_srvctracker_client vendor_hal_srvctracker_hwservice:hwservice_manager find;
 hwbinder_use(hal_srvctracker)
