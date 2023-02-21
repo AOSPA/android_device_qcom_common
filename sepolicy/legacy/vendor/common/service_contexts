@@ -47,3 +47,4 @@ vendor.qti.gnss.ILocAidlGnss/default           u:object_r:hal_gnss_service:s0
 vendor.qti.hardware.perf2.IPerf/default        u:object_r:vendor_hal_perf2_service:s0
 vendor.qti.qspmhal.IQspmhal/default            u:object_r:vendor_hal_qspmhal_service:s0
 vendor.qti.hardware.display.config.IDisplayConfig/default             u:object_r:vendor_hal_vnddisplayconfig_service:s0
+vendor.qti.hardware.servicetrackeraidl.IServicetracker/default           u:object_r:vendor_hal_servicetrackeraidl_service:s0
