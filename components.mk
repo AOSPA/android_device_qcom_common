@@ -87,6 +87,10 @@ ifneq (,$(filter init, $(TARGET_COMMON_QTI_COMPONENTS)))
   include $(QCOM_COMMON_PATH)/vendor/init/qti-init.mk
 endif
 
+ifneq (,$(filter keymaster, $(TARGET_COMMON_QTI_COMPONENTS)))
+  include $(QCOM_COMMON_PATH)/vendor/keymaster/qti-keymaster.mk
+endif
+
 ifneq (,$(filter media, $(TARGET_COMMON_QTI_COMPONENTS)))
   ifeq ($(call is-board-platform-in-list,$(5_10_FAMILY) bengal),true)
     include $(QCOM_COMMON_PATH)/vendor/media/qti-media.mk
