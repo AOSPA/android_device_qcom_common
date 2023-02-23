@@ -26,6 +26,7 @@ TARGET_COMMON_QTI_COMPONENTS := \
     dsprpcd \
     gps \
     init \
+    keymaster \
     media \
     nfc \
     overlay \
@@ -87,6 +88,10 @@ endif
 
 ifneq (,$(filter init, $(TARGET_COMMON_QTI_COMPONENTS)))
   include $(QCOM_COMMON_PATH)/vendor/init/qti-init.mk
+endif
+
+ifneq (,$(filter keymaster, $(TARGET_COMMON_QTI_COMPONENTS)))
+  include $(QCOM_COMMON_PATH)/vendor/keymaster/qti-keymaster.mk
 endif
 
 ifneq (,$(filter media, $(TARGET_COMMON_QTI_COMPONENTS)))
