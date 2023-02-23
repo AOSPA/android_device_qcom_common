@@ -3683,6 +3683,7 @@ case "$target" in
       do
           for cpubw in $device/*cpu-cpu-llcc-bw/devfreq/*cpu-cpu-llcc-bw
           do
+              echo "bw_hwmon" > $cpubw/governor
 	      cat $cpubw/available_frequencies | cut -d " " -f 1 > $cpubw/min_freq
 	      echo "2288 4577 7110 9155 12298 14236" > $cpubw/bw_hwmon/mbps_zones
 	      echo 4 > $cpubw/bw_hwmon/sample_ms
@@ -3698,6 +3699,7 @@ case "$target" in
 
 	  for llccbw in $device/*cpu-llcc-ddr-bw/devfreq/*cpu-llcc-ddr-bw
 	  do
+              echo "bw_hwmon" > $llccbw/governor
 	      cat $llccbw/available_frequencies | cut -d " " -f 1 > $llccbw/min_freq
 	      echo "1144 1720 2086 2929 3879 5931 6881" > $llccbw/bw_hwmon/mbps_zones
 	      echo 4 > $llccbw/bw_hwmon/sample_ms
@@ -3714,25 +3716,33 @@ case "$target" in
 	  #Enable mem_latency governor for L3, LLCC, and DDR scaling
 	  for memlat in $device/*cpu*-lat/devfreq/*cpu*-lat
 	  do
+              echo "mem_latency" > $memlat/governor
 	      cat $memlat/available_frequencies | cut -d " " -f 1 > $memlat/min_freq
+              echo 10 > $memlat/polling_interval
+              echo 400 > $memlat/mem_latency/ratio_ceil
 	  done
 
 	  #Enable compute governor for gold latfloor
 	  for latfloor in $device/*cpu-ddr-latfloor*/devfreq/*cpu-ddr-latfloor*
 	  do
+              echo "compute" > $latfoor/governor
 	      cat $latfloor/available_frequencies | cut -d " " -f 1 > $latfloor/min_freq
+              echo 10 > $latfloor/polling_interval
 	  done
 
 	  #Gold L3 ratio ceil
 	  for l3silver in $device/*cpu0-cpu-l3-lat/devfreq/*cpu0-cpu-l3-lat
 	  do
+              echo "mem_latency" > $l3silver/governor
 	      cat $l3silver/available_frequencies | cut -d " " -f 1 > $l3silver/min_freq
 	  done
 
 	  #Gold L3 ratio ceil
 	  for l3gold in $device/*cpu6-cpu-l3-lat/devfreq/*cpu6-cpu-l3-lat
 	  do
+              echo "mem_latency" > $l3gold/governor
 	      cat $l3gold/available_frequencies | cut -d " " -f 1 > $l3gold/min_freq
+              echo 4000 > $l3gold/mem_latency/ratio_ceil
 	  done
       done
 
