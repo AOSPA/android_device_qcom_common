@@ -24,9 +24,9 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     init.qcom.legacy.rc
 else
-PRODUCT_PACKAGES += \
-    init.qcom.early_boot.sh \
-    init.qcom.post_boot.sh
+PRODUCT_COPY_FILES += \
+    $(QCOM_COMMON_PATH)/vendor/init/init.qcom.early_boot.sh:$(TARGET_COPY_OUT_VENDOR)/bin/init.qcom.early_boot.sh \
+    $(QCOM_COMMON_PATH)/vendor/init/init.qcom.post_boot.sh:$(TARGET_COPY_OUT_VENDOR)/bin/init.qcom.post_boot.sh
 endif
 
 # Init
