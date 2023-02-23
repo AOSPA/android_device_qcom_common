@@ -1,4 +1,4 @@
-# Copyright (C) 2020 Paranoid Android
+# Copyright (C) 2023 Paranoid Android
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -22,7 +22,7 @@ PRODUCT_BOOT_JARS += \
     WfdCommon
 
 PRODUCT_SYSTEM_EXT_PROPERTIES += \
-    debug.sf.enable_hwc_vds=1 \
+    debug.sf.enable_hwc_vds=0 \
     persist.debug.wfd.enable=1 \
     persist.sys.wfd.virtual=0
 
