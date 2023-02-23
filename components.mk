@@ -31,6 +31,7 @@ TARGET_COMMON_QTI_COMPONENTS := \
     nfc \
     overlay \
     perf \
+    qseecomd \
     telephony \
     usb \
     vibrator \
@@ -118,6 +119,14 @@ ifneq (,$(filter perf, $(TARGET_COMMON_QTI_COMPONENTS)))
     include $(QCOM_COMMON_PATH)/vendor/perf/qti-perf.mk
   else
     include $(QCOM_COMMON_PATH)/vendor/perf-legacy/qti-perf-legacy.mk
+  endif
+endif
+
+ifneq (,$(filter qseecomd, $(TARGET_COMMON_QTI_COMPONENTS)))
+  ifeq ($(call is-board-platform-in-list,$(5_4_FAMILY) $(5_10_FAMILY)),true)
+    include $(QCOM_COMMON_PATH)/vendor/qseecomd/qti-qseecomd.mk
+  else
+    include $(QCOM_COMMON_PATH)/vendor/qseecomd-legacy/qti-qseecomd-legacy.mk
   endif
 endif
 
