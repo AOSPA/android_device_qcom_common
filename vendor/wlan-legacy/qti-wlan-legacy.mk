@@ -13,9 +13,9 @@
 # limitations under the License.
 
 PRODUCT_SOONG_NAMESPACES += \
-    device/qcom/common/vendor/wlan
+    device/qcom/common/vendor/wlan-legacy
 
-TARGET_WLAN_COMPONENT_VARIAN) := wlan-legacy
+TARGET_WLAN_COMPONENT_VARIANT := wlan-legacy
 
 BOARD_WLAN_DEVICE := qcwcn
 BOARD_HOSTAPD_DRIVER := NL80211
@@ -78,4 +78,4 @@ else
 endif
 
 # Get non-open-source specific aspects.
-$(call inherit-product-if-exists, vendor/qcom/common/vendor/wlan/wlan-vendor.mk)
+$(call inherit-product-if-exists, vendor/qcom/common/vendor/wlan-legacy/wlan-legacy-vendor.mk)
