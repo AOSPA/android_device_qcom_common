@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "884fbe52_a2092c7a",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000737
+      },
+      "writtenOn": "2023-02-23T17:39:39Z",
+      "side": 1,
+      "message": "Some platforms like Bengal don\u0027t have vpp in bsp for some reason, won\u0027t that somehow interfere with that?",
+      "revId": "8f36fdd46bae6fc2aa6c7933c7e06a92692c1143",
+      "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
+    }
+  ]
+}
