@@ -129,5 +129,9 @@ ifneq (,$(filter wfd, $(TARGET_COMMON_QTI_COMPONENTS)))
 endif
 
 ifneq (,$(filter wlan, $(TARGET_COMMON_QTI_COMPONENTS)))
-  include $(QCOM_COMMON_PATH)/vendor/wlan/qti-wlan.mk
+  ifeq ($(call is-board-platform-in-list,$(5_10_FAMILY)),true)
+    include $(QCOM_COMMON_PATH)/vendor/wlan/qti-wlan.mk
+  else
+    include $(QCOM_COMMON_PATH)/vendor/wlan-legacy/qti-wlan-legacy.mk
+  endif
 endif

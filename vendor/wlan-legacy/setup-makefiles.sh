@@ -1,3 +1,6 @@
+#!/bin/bash
+#
+# Copyright (C) 2018-2019 The LineageOS Project
 # Copyright (C) 2020 Paranoid Android
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
@@ -11,19 +14,12 @@
 # WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 # See the License for the specific language governing permissions and
 # limitations under the License.
+#
 
-LOCAL_PATH := $(call my-dir)
+set -e
 
-ifeq ($(TARGET_WLAN_COMPONENT_VARIANT),wlan)
+# Required!
+export COMPONENT=wlan-legacy
+export VENDOR=qcom/common/vendor
 
-include $(CLEAR_VARS)
-
-ifeq ($(call is-board-platform-in-list,msm8998 sdm660),true)
--include device/qcom/wlan/sdm660_64/AndroidBoardWlan.mk
-else ifeq ($(call is-board-platform-in-list,sm6150),true)
--include device/qcom/wlan/talos/AndroidBoardWlan.mk
-else
--include device/qcom/wlan/$(TARGET_BOARD_PLATFORM)/AndroidBoardWlan.mk
-endif
-
-endif
+"../setup-makefiles.sh" "$@"

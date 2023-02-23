@@ -1,0 +1,21 @@
+# WLAN
+vendor/bin/athdiag
+vendor/bin/cnss-daemon
+vendor/bin/cnss_diag
+vendor/bin/hal_proxy_daemon
+vendor/bin/myftm
+vendor/bin/pktlogconf
+vendor/bin/spectraltool
+vendor/bin/vendor_cmd_tool
+vendor/bin/wificfrtool
+vendor/bin/wifilearner
+vendor/bin/wifimyftm
+vendor/etc/init/vendor.qti.hardware.wifi.wificfr@1.0-service.rc
+vendor/etc/init/vendor.qti.hardware.wifi.wifilearner@1.0-service.rc
+vendor/etc/init/vendor.qti.hardware.wifi.wifimyftm@1.0-service.rc
+vendor/etc/vintf/manifest/vendor.qti.hardware.wifi.wificfr@1.0-service.xml
+vendor/etc/vintf/manifest/vendor.qti.hardware.wifi.wifimyftm@1.0-service.xml
+vendor/lib64/libspectre.so
+vendor/lib64/vendor.qti.hardware.wifi.wificfr@1.0.so
+vendor/lib64/vendor.qti.hardware.wifi.wifilearner@1.0.so
+vendor/lib64/vendor.qti.hardware.wifi.wifimyftm@1.0.so
