@@ -28,6 +28,7 @@ TARGET_COMMON_QTI_COMPONENTS := \
     init \
     keymaster \
     media \
+    neuralnetworks \
     nfc \
     overlay \
     perf \
@@ -103,6 +104,10 @@ ifneq (,$(filter media, $(TARGET_COMMON_QTI_COMPONENTS)))
   else
     include $(QCOM_COMMON_PATH)/vendor/media-legacy/qti-media-legacy.mk
   endif
+endif
+
+ifneq (,$(filter neuralnetworks, $(TARGET_COMMON_QTI_COMPONENTS)))
+  include $(QCOM_COMMON_PATH)/vendor/neuralnetworks/qti-neuralnetworks.mk
 endif
 
 ifneq (,$(filter nfc, $(TARGET_COMMON_QTI_COMPONENTS)))
