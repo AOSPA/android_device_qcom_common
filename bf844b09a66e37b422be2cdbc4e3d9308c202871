@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "935d4a06_e35f2a7c",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000737
+      },
+      "writtenOn": "2023-02-23T02:55:10Z",
+      "side": 1,
+      "message": "wouldn\u0027t it be better to use taro blobs here ?",
+      "revId": "bf844b09a66e37b422be2cdbc4e3d9308c202871",
+      "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
+    }
+  ]
+}
