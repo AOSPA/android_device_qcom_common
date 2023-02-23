@@ -14,7 +14,7 @@
 
 LOCAL_PATH := $(call my-dir)
 
-ifeq ($(TARGET_WLAN_COMPONENT_VARIANT),wlan)
+ifeq ($(TARGET_WLAN_COMPONENT_VARIANT),wlan-legacy)
 
 include $(CLEAR_VARS)
 
