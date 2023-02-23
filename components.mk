@@ -23,6 +23,7 @@ TARGET_COMMON_QTI_COMPONENTS := \
     bt \
     charging \
     display \
+    dsprpcd \
     gps \
     init \
     media \
@@ -69,6 +70,10 @@ endif
 ifneq (,$(filter display, $(TARGET_COMMON_QTI_COMPONENTS)))
   include $(QCOM_COMMON_PATH)/system/display/qti-display.mk
   include $(QCOM_COMMON_PATH)/vendor/display/qti-display.mk
+endif
+
+ifneq (,$(filter dsprpcd, $(TARGET_COMMON_QTI_COMPONENTS)))
+  include $(QCOM_COMMON_PATH)/vendor/dsprpcd/qti-dsprpcd.mk
 endif
 
 ifeq ($(call is-board-platform-in-list,$(5_10_FAMILY)),true)
