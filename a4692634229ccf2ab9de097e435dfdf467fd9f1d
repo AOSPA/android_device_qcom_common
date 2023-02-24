@@ -16,6 +16,23 @@
       "message": "WiFi now works ootb on m-c okinawa",
       "revId": "a4692634229ccf2ab9de097e435dfdf467fd9f1d",
       "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "bed1f568_202f3917",
+        "filename": "vendor/wlan/qti-wlan.mk",
+        "patchSetId": 2
+      },
+      "lineNbr": 18,
+      "author": {
+        "id": 1000092
+      },
+      "writtenOn": "2023-02-24T02:17:38Z",
+      "side": 1,
+      "message": "`)`",
+      "revId": "a4692634229ccf2ab9de097e435dfdf467fd9f1d",
+      "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
     }
   ]
 }
