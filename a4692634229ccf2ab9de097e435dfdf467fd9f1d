@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "d922d3cf_10018009",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000548
+      },
+      "writtenOn": "2023-02-24T02:08:07Z",
+      "side": 1,
+      "message": "WiFi now works ootb on m-c okinawa",
+      "revId": "a4692634229ccf2ab9de097e435dfdf467fd9f1d",
+      "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
+    }
+  ]
+}
