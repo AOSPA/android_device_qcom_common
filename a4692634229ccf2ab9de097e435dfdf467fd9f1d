@@ -33,6 +33,24 @@
       "message": "`)`",
       "revId": "a4692634229ccf2ab9de097e435dfdf467fd9f1d",
       "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "61f2f225_ef338aaf",
+        "filename": "vendor/wlan/qti-wlan.mk",
+        "patchSetId": 2
+      },
+      "lineNbr": 18,
+      "author": {
+        "id": 1000012
+      },
+      "writtenOn": "2023-02-24T03:17:08Z",
+      "side": 1,
+      "message": "good call, that is wrong twice.",
+      "parentUuid": "bed1f568_202f3917",
+      "revId": "a4692634229ccf2ab9de097e435dfdf467fd9f1d",
+      "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
     }
   ]
 }
