@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "5739dc26_7ea3b1f2",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 3
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000845
+      },
+      "writtenOn": "2023-02-25T01:11:41Z",
+      "side": 1,
+      "message": "WiFi now works fine on realme GT master edition (yupik).",
+      "revId": "a6933bf099aa010f4a27bb1a755b36016947dd03",
+      "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
+    }
+  ]
+}
