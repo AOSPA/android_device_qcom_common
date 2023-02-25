@@ -74,6 +74,13 @@ service loc_launcher /system/vendor/bin/loc_launcher
     user gps
     group gps
 
+service charger /system/bin/charger
+    class charger
+    user system
+    group system graphics input
+    capabilities SYS_BOOT
+    seclabel u:r:charger:s0
+    
 service vendor.audio-hal /vendor/bin/hw/android.hardware.audio.service
     override
     class hal
