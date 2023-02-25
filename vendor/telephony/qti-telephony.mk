@@ -57,7 +57,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
     persist.vendor.radio.fetchqos=true
 endif
 
-ifeq ($(call is-board-platform-in-list, bengal holi),true)
+ifeq ($(call is-board-platform-in-list, $(4_14_FAMILY) $(4_19_FAMILY) ),true)
 #property to enable single ims registration
 PRODUCT_PROPERTY_OVERRIDES += \
      persist.vendor.rcs.singlereg.feature=1
