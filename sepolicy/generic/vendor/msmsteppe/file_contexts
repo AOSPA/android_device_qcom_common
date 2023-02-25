@@ -1,0 +1,257 @@
+# Copyright (c) 2020, The Linux Foundation. All rights reserved.
+#
+# Redistribution and use in source and binary forms, with or without
+# modification, are permitted provided that the following conditions are
+# met:
+#     * Redistributions of source code must retain the above copyright
+#       notice, this list of conditions and the following disclaimer.
+#     * Redistributions in binary form must reproduce the above
+#       copyright notice, this list of conditions and the following
+#       disclaimer in the documentation and/or other materials provided
+#       with the distribution.
+#     * Neither the name of The Linux Foundation nor the names of its
+#       contributors may be used to endorse or promote products derived
+#       from this software without specific prior written permission.
+#
+# THIS SOFTWARE IS PROVIDED "AS IS" AND ANY EXPRESS OR IMPLIED
+# WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF
+# MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NON-INFRINGEMENT
+# ARE DISCLAIMED.  IN NO EVENT SHALL THE COPYRIGHT OWNER OR CONTRIBUTORS
+# BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR
+# CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF
+# SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR
+# BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY,
+# WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE
+# OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN
+# IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+
+# Changes from Qualcomm Innovation Center are provided under the following license:
+#
+# Copyright (c) 2022 Qualcomm Innovation Center, Inc. All rights reserved.
+#
+# Redistribution and use in source and binary forms, with or without
+# modification, are permitted (subject to the limitations in the
+# disclaimer below) provided that the following conditions are met:
+#
+#     * Redistributions of source code must retain the above copyright
+#       notice, this list of conditions and the following disclaimer.
+#
+#     * Redistributions in binary form must reproduce the above
+#       copyright notice, this list of conditions and the following
+#       disclaimer in the documentation and/or other materials provided
+#       with the distribution.
+#
+#     * Neither the name of Qualcomm Innovation Center, Inc. nor the names of its
+#       contributors may be used to endorse or promote products derived
+#       from this software without specific prior written permission.
+#
+# NO EXPRESS OR IMPLIED LICENSES TO ANY PARTY'S PATENT RIGHTS ARE
+# GRANTED BY THIS LICENSE. THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT
+# HOLDERS AND CONTRIBUTORS "AS IS" AND ANY EXPRESS OR IMPLIED
+# WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF
+# MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED.
+# IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE FOR
+# ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL
+# DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE
+# GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS
+# INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER
+# IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR
+# OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN
+# IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+
+###################################
+# Dev block nodes
+
+#Primary storage device nodes
+/dev/block/mmcblk0rpmb                                                          u:object_r:vendor_rpmb_device:s0
+/dev/block/mmcblk0                                                              u:object_r:root_block_device:s0
+/dev/mmcblk0rpmb                                                                u:object_r:vendor_rpmb_device:s0
+
+# UFS Devices
+/dev/block/platform/soc/1d84000.ufshc/by-name/system                            u:object_r:system_block_device:s0
+/dev/block/platform/soc/1d84000.ufshc/by-name/metadata                            u:object_r:metadata_block_device:s0
+/dev/block/platform/soc/1d84000.ufshc/by-name/userdata                          u:object_r:userdata_block_device:s0
+/dev/block/platform/soc/1d84000.ufshc/by-name/boot                              u:object_r:boot_block_device:s0
+/dev/block/platform/soc/1d84000.ufshc/by-name/logdump                           u:object_r:vendor_logdump_partition:s0
+/dev/block/platform/soc/1d84000.ufshc/by-name/fsc                                u:object_r:vendor_modem_efs_partition_device:s0
+/dev/block/platform/soc/1d84000.ufshc/by-name/fsg                                u:object_r:vendor_modem_efs_partition_device:s0
+/dev/block/platform/soc/1d84000.ufshc/by-name/modemst1                           u:object_r:vendor_modem_efs_partition_device:s0
+/dev/block/platform/soc/1d84000.ufshc/by-name/modemst2                           u:object_r:vendor_modem_efs_partition_device:s0
+/dev/block/platform/soc/1d84000.ufshc/by-name/ssd                                u:object_r:vendor_ssd_block_device:s0
+/dev/block/platform/soc/1d84000.ufshc/by-name/misc                               u:object_r:misc_block_device:s0
+/dev/block/platform/soc/1d84000.ufshc/by-name/rpm                                u:object_r:vendor_rpmb_device:s0
+/dev/block/platform/soc/1d84000.ufshc/by-name/msadp                              u:object_r:vendor_mba_debug_dev:s0
+/dev/block/platform/soc/1d84000.ufshc/by-name/recovery                           u:object_r:recovery_block_device:s0
+/dev/block/platform/soc/1d84000.ufshc/by-name/cache                              u:object_r:cache_block_device:s0
+/dev/block/platform/soc/1d84000.ufshc/by-name/frp                                u:object_r:frp_block_device:s0
+/dev/block/platform/soc/1d84000.ufshc/by-name/mdtp                               u:object_r:vendor_mdtp_device:s0
+/dev/block/platform/soc/1d84000.ufshc/by-name/dip                                u:object_r:vendor_dip_device:s0
+/dev/block/platform/soc/1d84000.ufshc/by-name/super                              u:object_r:super_block_device:s0
+
+#rawdump partition
+/dev/block/platform/soc/1d84000.ufshc/by-name/rawdump                            u:object_r:vendor_rawdump_block_device:s0
+
+# A/B partitions.
+/dev/block/platform/soc/1d84000.ufshc/by-name/abl_[ab]          u:object_r:vendor_custom_ab_block_device:s0
+/dev/block/platform/soc/1d84000.ufshc/by-name/aop_[ab]          u:object_r:vendor_custom_ab_block_device:s0
+/dev/block/platform/soc/1d84000.ufshc/by-name/apdp_[ab]         u:object_r:vendor_custom_ab_block_device:s0
+/dev/block/platform/soc/1d84000.ufshc/by-name/bluetooth_[ab]    u:object_r:vendor_modem_block_device:s0
+/dev/block/platform/soc/1d84000.ufshc/by-name/boot_[ab]         u:object_r:boot_block_device:s0
+/dev/block/platform/soc/1d84000.ufshc/by-name/cmnlib_[ab]       u:object_r:vendor_custom_ab_block_device:s0
+/dev/block/platform/soc/1d84000.ufshc/by-name/cmnlib64_[ab]     u:object_r:vendor_custom_ab_block_device:s0
+/dev/block/platform/soc/1d84000.ufshc/by-name/devcfg_[ab]       u:object_r:vendor_custom_ab_block_device:s0
+/dev/block/platform/soc/1d84000.ufshc/by-name/dsp_[ab]          u:object_r:vendor_custom_ab_block_device:s0
+/dev/block/platform/soc/1d84000.ufshc/by-name/dtbo_[ab]         u:object_r:vendor_custom_ab_block_device:s0
+/dev/block/platform/soc/1d84000.ufshc/by-name/hyp_[ab]          u:object_r:vendor_custom_ab_block_device:s0
+/dev/block/platform/soc/1d84000.ufshc/by-name/keymaster_[ab]    u:object_r:vendor_custom_ab_block_device:s0
+/dev/block/platform/soc/1d84000.ufshc/by-name/mdtp_[ab]         u:object_r:vendor_mdtp_device:s0
+/dev/block/platform/soc/1d84000.ufshc/by-name/mdtpsecapp_[ab]   u:object_r:vendor_mdtp_device:s0
+/dev/block/platform/soc/1d84000.ufshc/by-name/modem_[ab]        u:object_r:vendor_modem_block_device:s0
+/dev/block/platform/soc/1d84000.ufshc/by-name/msadp_[ab]        u:object_r:vendor_custom_ab_block_device:s0
+/dev/block/platform/soc/1d84000.ufshc/by-name/persist           u:object_r:vendor_persist_block_device:s0
+/dev/block/platform/soc/1d84000.ufshc/by-name/pmic_[ab]         u:object_r:vendor_custom_ab_block_device:s0
+/dev/block/platform/soc/1d84000.ufshc/by-name/qupfw_[ab]        u:object_r:vendor_custom_ab_block_device:s0
+/dev/block/platform/soc/1d84000.ufshc/by-name/rpm_[ab]          u:object_r:vendor_custom_ab_block_device:s0
+/dev/block/platform/soc/1d84000.ufshc/by-name/system_[ab]       u:object_r:system_block_device:s0
+/dev/block/platform/soc/1d84000.ufshc/by-name/tz_[ab]           u:object_r:vendor_custom_ab_block_device:s0
+/dev/block/platform/soc/1d84000.ufshc/by-name/vbmeta_[ab]       u:object_r:vendor_custom_ab_block_device:s0
+/dev/block/platform/soc/1d84000.ufshc/by-name/vendor_[ab]       u:object_r:system_block_device:s0
+/dev/block/platform/soc/1d84000.ufshc/by-name/xbl_[ab]          u:object_r:vendor_xbl_block_device:s0
+/dev/block/platform/soc/1d84000.ufshc/by-name/xbl_config_[ab]   u:object_r:vendor_custom_ab_block_device:s0
+/dev/block/platform/soc/1d84000.ufshc/by-name/imagefv_[ab]      u:object_r:vendor_custom_ab_block_device:s0
+/dev/block/platform/soc/1d84000.ufshc/by-name/uefisecapp_[ab]   u:object_r:vendor_uefi_block_device:s0
+/dev/block/platform/soc/1d84000.ufshc/by-name/vbmeta_system_[ab]    u:object_r:vendor_custom_ab_block_device:s0
+/dev/block/platform/soc/1d84000.ufshc/by-name/recovery_[ab]         u:object_r:recovery_block_device:s0
+
+# Block device holding the GPT, where the A/B attributes are stored.
+/dev/block/platform/soc/1d84000.ufshc/sd[ade]                   u:object_r:vendor_gpt_block_device:s0
+
+# Block devices for the drive that holds the xbl_a and xbl_b partitions.
+/dev/block/platform/soc/1d84000.ufshc/sd[bc]                 u:object_r:vendor_xbl_block_device:s0
+
+##################################
+# non-hlos mount points
+/firmware                  u:object_r:firmware_file:s0
+/bt_firmware               u:object_r:bt_firmware_file:s0
+
+#for eMMC
+/dev/block/platform/soc/7c4000.sdhci/by-name/abl_[ab]          u:object_r:vendor_custom_ab_block_device:s0
+/dev/block/platform/soc/7c4000.sdhci/by-name/apdp_[ab]         u:object_r:vendor_custom_ab_block_device:s0
+/dev/block/platform/soc/7c4000.sdhci/by-name/boot_[ab]         u:object_r:boot_block_device:s0
+/dev/block/platform/soc/7c4000.sdhci/by-name/cmnlib_[ab]       u:object_r:vendor_custom_ab_block_device:s0
+/dev/block/platform/soc/7c4000.sdhci/by-name/cmnlib64_[ab]     u:object_r:vendor_custom_ab_block_device:s0
+/dev/block/platform/soc/7c4000.sdhci/by-name/devcfg_[ab]       u:object_r:vendor_custom_ab_block_device:s0
+/dev/block/platform/soc/7c4000.sdhci/by-name/hyp_[ab]          u:object_r:vendor_custom_ab_block_device:s0
+/dev/block/platform/soc/7c4000.sdhci/by-name/keymaster_[ab]    u:object_r:vendor_custom_ab_block_device:s0
+/dev/block/platform/soc/7c4000.sdhci/by-name/modem_[ab]        u:object_r:vendor_modem_block_device:s0
+/dev/block/platform/soc/7c4000.sdhci/by-name/bluetooth_[ab]    u:object_r:vendor_modem_block_device:s0
+/dev/block/platform/soc/7c4000.sdhci/by-name/msadp_[ab]        u:object_r:vendor_custom_ab_block_device:s0
+/dev/block/platform/soc/7c4000.sdhci/by-name/pmic_[ab]         u:object_r:vendor_custom_ab_block_device:s0
+/dev/block/platform/soc/7c4000.sdhci/by-name/rpm_[ab]          u:object_r:vendor_custom_ab_block_device:s0
+/dev/block/platform/soc/7c4000.sdhci/by-name/system_[ab]       u:object_r:system_block_device:s0
+/dev/block/platform/soc/7c4000.sdhci/by-name/tz_[ab]           u:object_r:vendor_custom_ab_block_device:s0
+/dev/block/platform/soc/7c4000.sdhci/by-name/vendor_[ab]       u:object_r:system_block_device:s0
+/dev/block/platform/soc/7c4000.sdhci/by-name/xbl_[ab]          u:object_r:vendor_xbl_block_device:s0
+/dev/block/platform/soc/7c4000.sdhci/by-name/aop_[ab]          u:object_r:vendor_custom_ab_block_device:s0
+/dev/block/platform/soc/7c4000.sdhci/by-name/vbmeta_[ab]       u:object_r:vendor_custom_ab_block_device:s0
+/dev/block/platform/soc/7c4000.sdhci/by-name/dtbo_[ab]         u:object_r:vendor_custom_ab_block_device:s0
+/dev/block/platform/soc/7c4000.sdhci/by-name/dsp_[ab]          u:object_r:vendor_custom_ab_block_device:s0
+/dev/block/platform/soc/7c4000.sdhci/by-name/mdtp_[ab]         u:object_r:vendor_mdtp_device:s0
+/dev/block/platform/soc/7c4000.sdhci/by-name/mdtpsecapp_[ab]   u:object_r:vendor_mdtp_device:s0
+/dev/block/platform/soc/7c4000.sdhci/by-name/qupfw_[ab]        u:object_r:vendor_custom_ab_block_device:s0
+/dev/block/platform/soc/7c4000.sdhci/by-name/xbl_config_[ab]   u:object_r:vendor_custom_ab_block_device:s0
+/dev/block/platform/soc/7c4000.sdhci/by-name/storsec_[ab]      u:object_r:vendor_custom_ab_block_device:s0
+/dev/block/platform/soc/7c4000.sdhci/by-name/imagefv_[ab]      u:object_r:vendor_custom_ab_block_device:s0
+/dev/block/platform/soc/7c4000.sdhci/by-name/uefisecapp_[ab]   u:object_r:vendor_uefi_block_device:s0
+/dev/block/platform/soc/7c4000.sdhci/by-name/recovery_[ab]     u:object_r:recovery_block_device:s0
+/dev/block/platform/soc/7c4000.sdhci/by-name/vbmeta_system_[ab]     u:object_r:vendor_custom_ab_block_device:s0
+
+#non A/B
+/dev/block/platform/soc/7c4000.sdhci/by-name/system                            u:object_r:system_block_device:s0
+/dev/block/platform/soc/7c4000.sdhci/by-name/metadata                            u:object_r:metadata_block_device:s0
+/dev/block/platform/soc/7c4000.sdhci/by-name/userdata                          u:object_r:userdata_block_device:s0
+/dev/block/platform/soc/7c4000.sdhci/by-name/boot                              u:object_r:boot_block_device:s0
+/dev/block/platform/soc/7c4000.sdhci/by-name/logdump                           u:object_r:vendor_logdump_partition:s0
+/dev/block/platform/soc/7c4000.sdhci/by-name/fsc                                u:object_r:vendor_modem_efs_partition_device:s0
+/dev/block/platform/soc/7c4000.sdhci/by-name/fsg                                u:object_r:vendor_modem_efs_partition_device:s0
+/dev/block/platform/soc/7c4000.sdhci/by-name/modemst1                           u:object_r:vendor_modem_efs_partition_device:s0
+/dev/block/platform/soc/7c4000.sdhci/by-name/modemst2                           u:object_r:vendor_modem_efs_partition_device:s0
+/dev/block/platform/soc/7c4000.sdhci/by-name/ssd                                u:object_r:vendor_ssd_block_device:s0
+/dev/block/platform/soc/7c4000.sdhci/by-name/misc                               u:object_r:misc_block_device:s0
+/dev/block/platform/soc/7c4000.sdhci/by-name/rpm                                u:object_r:vendor_rpmb_device:s0
+/dev/block/platform/soc/7c4000.sdhci/by-name/msadp                              u:object_r:vendor_mba_debug_dev:s0
+/dev/block/platform/soc/7c4000.sdhci/by-name/recovery                           u:object_r:recovery_block_device:s0
+/dev/block/platform/soc/7c4000.sdhci/by-name/cache                              u:object_r:cache_block_device:s0
+/dev/block/platform/soc/7c4000.sdhci/by-name/frp                                u:object_r:frp_block_device:s0
+/dev/block/platform/soc/7c4000.sdhci/by-name/mdtp                               u:object_r:vendor_mdtp_device:s0
+/dev/block/platform/soc/7c4000.sdhci/by-name/dip                                u:object_r:vendor_dip_device:s0
+/dev/block/platform/soc/7c4000.sdhci/by-name/storsec                            u:object_r:boot_block_device:s0
+/dev/block/platform/soc/7c4000.sdhci/by-name/persist                            u:object_r:vendor_persist_block_device:s0
+/dev/block/platform/soc/7c4000.sdhci/by-name/super                              u:object_r:super_block_device:s0
+
+#rawdump partition
+/dev/block/platform/soc/7c4000.sdhci/by-name/rawdump                            u:object_r:vendor_rawdump_block_device:s0
+
+# FBE
+/(vendor|system/vendor)/bin/init.qti.qseecomd.sh                                u:object_r:vendor_init-qti-fbe-sh_exec:s0
+/(vendor|system/vendor)/bin/init\.qti\.can\.sh                                  u:object_r:vendor_qti_init_shell_exec:s0
+
+##################################
+# same process HAL libs
+/vendor/lib(64)?/hw/gralloc\.sm6150\.so   u:object_r:same_process_hal_file:s0
+/vendor/lib(64)?/hw/vulkan\.sm6150\.so    u:object_r:same_process_hal_file:s0
+
+#FPC
+/sys/devices/platform/soc/soc:fpc1020(/.*?) u:object_r:vendor_sysfs_fps_attr:s0
+/sys/devices/platform/soc/200f000.qcom,spmi/spmi-0/spmi0-03/200f000.qcom,spmi:qcom,pmi632@3:qcom,leds@d000/modalias u:object_r:vendor_sysfs_fps_attr:s0
+
+###################################
+# sysfs read_ahead_kb files
+#
+/sys/devices/virtual/bdi/179:0/read_ahead_kb  u:object_r:vendor_sysfs_mmc_host:s0
+/sys/devices/virtual/bdi/179:32/read_ahead_kb  u:object_r:vendor_sysfs_mmc_host:s0
+/sys/devices/platform/soc/7c4000.sdhci/mmc_host/mmc0/mmc0:0001/block/mmcblk0/queue/read_ahead_kb u:object_r:vendor_sysfs_mmc_host:s0
+/sys/devices/platform/soc/7c4000.sdhci/mmc_host/mmc0/mmc0:0001/block/mmcblk0/mmcblk0rpmb/queue/read_ahead_kb u:object_r:vendor_sysfs_mmc_host:s0
+
+
+/sys/devices/platform/soc/soc:qcom,ipa_fws@[a-f0-9]+/subsys[0-9]+/name  u:object_r:vendor_sysfs_data:s0
+/sys/devices/platform/soc/soc:qcom,kgsl-hyp/subsys[0-9]+/name      u:object_r:vendor_sysfs_ssr:s0
+
+###### sysfs_wakeup ##########
+/sys/devices/platform/dummy_hcd.0/usb1/wakeup/wakeup[0-9]+(/.*)?      u:object_r:sysfs_wakeup:s0
+/sys/devices/platform/soc/soc:gpio_keys/wakeup/wakeup[0-9]+(/.*)?     u:object_r:sysfs_wakeup:s0
+/sys/devices/platform/soc/soc:fpc[0-9]+/wakeup/wakeup[0-9]+(/.*)?     u:object_r:sysfs_wakeup:s0
+/sys/devices/platform/soc/62dc0000.slim/tavil-slim-pgd/wakeup/wakeup[0-9]+(/.*)?    u:object_r:sysfs_wakeup:s0
+/sys/devices/platform/soc/[a-f0-9]+.qcom,spmi/spmi-0/spmi0-0[0-9]/[a-f0-9]+.qcom,spmi:qcom,[a-z0-9]+@[0-9]:qcom,power-on@[a-z0-9]+/wakeup(/.*)?                u:object_r:sysfs_wakeup:s0
+/sys/devices/platform/soc/[a-f0-9]+.qcom,spmi/spmi-0/spmi0-0[0-9]/[a-f0-9]+.qcom,spmi:qcom,[a-z0-9]+@[0-9]:qcom,pm[0-9]+_rtc/wakeup/wakeup[0-9]+(/.*)?         u:object_r:sysfs_wakeup:s0
+/sys/devices/platform/soc/[a-f0-9]+.qcom,spmi/spmi-0/spmi0-0[0-9]/[a-f0-9]+.qcom,spmi:qcom,[a-z0-9]+@[0-9]:qcom,pm[0-9]+_rtc/rtc/rtc[0-9]/wakeup[0-9]+(/.*)?   u:object_r:sysfs_wakeup:s0
+/sys/devices/platform/soc/[a-f0-9]+.qcom,spmi/spmi-0/spmi0-0[0-9]/[a-f0-9]+.qcom,spmi:qcom,[a-z0-9]+@[0-9]:qcom,qpnp-[a-z0-9]+/wakeup/wakeup[0-9]+(/.*)?       u:object_r:sysfs_wakeup:s0
+/sys/devices/platform/soc/[a-f0-9]+.qcom,spmi/spmi-0/spmi0-0[0-9]/[a-f0-9]+.qcom,spmi:qcom,[a-z0-9]+@[0-9]:qcom,qpnp-[a-z0-9]+/power_supply/(usb|main|pc_port|battery|dc)/wakeup[0-9]+(/.*)?    u:object_r:sysfs_wakeup:s0
+/sys/devices/platform/soc/[a-f0-9]+.qcom,spmi/spmi-0/spmi0-0[0-9]/[a-f0-9]+.qcom,spmi:qcom,[a-z0-9]+@[0-9]:qpnp,[a-z0-9]+/power_supply/[a-z0-9]+/wakeup[0-9]+(/.*)?                          u:object_r:sysfs_wakeup:s0
+/sys/devices/platform/soc/[a-f0-9]+.qcom,[a-z0-9\-_]+/wakeup/wakeup[0-9]+(/.*)?     u:object_r:sysfs_wakeup:s0
+/sys/devices/platform/soc/[a-f0-9]+.qcom,[a-z0-9\-_]+/subsys[0-9]/wakeup/wakeup[0-9]+(/.*)?     u:object_r:sysfs_wakeup:s0
+/sys/class/wakeup/wakeup[0-9]+(/.*)?                                                u:object_r:sysfs_wakeup:s0
+/sys/devices/platform/soc/soc:qcom,[a-z0-9\-_]+/wakeup/wakeup[0-9]+(/.*)?           u:object_r:sysfs_wakeup:s0
+/sys/devices/platform/soc/soc:qcom,[a-z0-9\-_]+/subsys[0-9]/wakeup/wakeup[0-9]+(/.*)?           u:object_r:sysfs_wakeup:s0
+/sys/devices/platform/soc/soc:qcom,msm-audio-apr/soc:qcom,msm-audio-apr:qcom,q6core-audio/soc:qcom,msm-audio-apr:qcom,q6core-audio:bolero-cdc/[a-z]+-macro/[a-z]+_swr_ctrl/wakeup/wakeup[0-9]+(/.*)?     u:object_r:sysfs_wakeup:s0
+/sys/devices/platform/soc/[a-f0-9]+.i2c/i2c-[0-9]/[0-9]-[0-9]+/wakeup/wakeup[0-9]+(/.*)?     u:object_r:sysfs_wakeup:s0
+/sys/devices/platform/soc/[a-f0-9]+.[a-z]+/wakeup/wakeup[0-9]+(/.*)?                         u:object_r:sysfs_wakeup:s0
+/sys/devices/virtual/wakeup/wakeup[0-9]+(/.*)?                         u:object_r:sysfs_wakeup:s0
+/sys/devices/virtual/misc/msm_[a-z0-9_]+/wakeup[0-9]+(/.*)?            u:object_r:sysfs_wakeup:s0
+/sys/devices/virtual/fastrpc/adsprpc-smd-secure/wakeup[0-9]+(/.*)?     u:object_r:sysfs_wakeup:s0
+/sys/devices/virtual/fastrpc/adsprpc-smd/wakeup[0-9]+(/.*)?            u:object_r:sysfs_wakeup:s0
+/sys/devices/virtual/misc/msm_qcelp/wakeup[0-9]+(/.*)?                 u:object_r:sysfs_wakeup:s0
+#vendor_hvdcp
+/sys/devices/platform/soc/c440000.qcom,spmi/spmi-0/spmi0-00/c440000.qcom,spmi:qcom,pm6150@0:qcom,qpnp-smb5/iio:device[0-9](/.*?) u:object_r:vendor_sysfs_battery_supply:s0
+/sys/devices/platform/soc/c440000.qcom,spmi/spmi-0/spmi0-00/c440000.qcom,spmi:qcom,pm6150@0:qpnp,qg/iio:device[0-9](/.*?)  u:object_r:vendor_sysfs_battery_supply:s0
+/sys/devices/platform/soc/c440000.qcom,spmi/spmi-0/spmi0-04/c440000.qcom,spmi:qcom,pm6150l@4:vadc@3100/iio:device[0-9](/.*?)  u:object_r:vendor_sysfs_battery_supply:s0
+/sys/devices/platform/soc/c440000.qcom,spmi/spmi-0/spmi0-00/c440000.qcom,spmi:qcom,pm6150@0:vadc@3100/iio:device[0-9](/.*?) u:object_r:vendor_sysfs_battery_supply:s0
+/sys/devices/platform/soc/88c000.i2c/i2c-1/1-0010/88c000.i2c:qcom,smb1390@10:qcom,charge_pump/iio:device[0-9](/.*?) u:object_r:vendor_sysfs_battery_supply:s0
+/sys/devices/platform/soc/88c000.i2c/i2c-1/1-000c/88c000.i2c:qcom,smb1355@c:qcom,smb1355-charger@1000/iio:device[0-9](/.*?) u:object_r:vendor_sysfs_battery_supply:s0
+
+/sys/devices/platform/soc/18321110.qcom,cpu0-cpu-l3-lat/devfreq/18321110.qcom,cpu0-cpu-l3-lat/min_freq          u:object_r:vendor_sysfs_devfreqw:s0
+/sys/devices/platform/soc/18321110.qcom,cpu0-cpu-l3-lat/devfreq/18321110.qcom,cpu0-cpu-l3-lat/polling_interval  u:object_r:vendor_sysfs_devfreqw:s0
+/sys/devices/platform/soc/18321110.qcom,cpu0-cpu-l3-lat/devfreq/18321110.qcom,cpu0-cpu-l3-lat/mem_latency/ratio_ceil u:object_r:vendor_sysfs_devfreqw:s0
+/sys/devices/platform/soc/18321110.qcom,cpu6-cpu-l3-lat/devfreq/18321110.qcom,cpu6-cpu-l3-lat/min_freq   u:object_r:vendor_sysfs_devfreqw:s0
+/sys/devices/platform/soc/18321110.qcom,cpu0-cpu-l3-lat/devfreq/18321110.qcom,cpu0-cpu-l3-lat/available_frequencies u:object_r:vendor_sysfs_devfreqw:s0
+/sys/devices/platform/soc/18321110.qcom,cpu6-cpu-l3-lat/devfreq/18321110.qcom,cpu6-cpu-l3-lat/available_frequencies u:object_r:vendor_sysfs_devfreqw:s0

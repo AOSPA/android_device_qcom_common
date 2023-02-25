@@ -1,0 +1,4 @@
+#Copyright (c) 2022 Qualcomm Innovation Center, Inc. All rights reserved.
+#SPDX-License-Identifier: BSD-3-Clause-Clear
+
+allow vendor_hal_neuralnetworks_default vendor_qdsp_device:chr_file r_file_perms;
