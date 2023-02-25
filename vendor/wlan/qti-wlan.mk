@@ -53,12 +53,12 @@ PRODUCT_PACKAGES += \
 endif
 
 # Enable IEEE 802.11ax support
-ifeq ($(call is-board-platform-in-list, kona lahaina holi taro),true)
+ifeq ($(call is-board-platform-in-list, kalama kona lahaina holi taro),true)
 CONFIG_IEEE80211AX := true
 endif
 
 # IPACM
-ifneq (,$(filter 5.10, $(TARGET_KERNEL_VERSION)))
+ifneq (,$(filter 5.10 5.15, $(TARGET_KERNEL_VERSION)))
 PRODUCT_SOONG_NAMESPACES += vendor/qcom/opensource/data-ipa-cfg-mgr
 $(call inherit-product, vendor/qcom/opensource/data-ipa-cfg-mgr/ipacm_vendor_product.mk)
 else
