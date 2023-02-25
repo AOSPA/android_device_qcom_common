@@ -16,6 +16,24 @@
       "message": "newline",
       "revId": "497ac8a3178e28ce8a1b11af77cb4b806f31d49d",
       "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "db984803_0f16475b",
+        "filename": "vendor/init/ueventd.qcom.rc",
+        "patchSetId": 1
+      },
+      "lineNbr": 565,
+      "author": {
+        "id": 1000579
+      },
+      "writtenOn": "2023-02-25T17:53:25Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "1f494006_e3e33355",
+      "revId": "497ac8a3178e28ce8a1b11af77cb4b806f31d49d",
+      "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
     }
   ]
 }
