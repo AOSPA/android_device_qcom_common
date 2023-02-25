@@ -69,11 +69,6 @@ service wpa_supplicant /vendor/bin/hw/wpa_supplicant \
     disabled
     oneshot
 
-service loc_launcher /system/vendor/bin/loc_launcher
-    class late_start
-    user gps
-    group gps
-
 service charger /system/bin/charger
     class charger
     user system
