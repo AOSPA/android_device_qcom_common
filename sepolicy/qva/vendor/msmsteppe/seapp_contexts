@@ -1,0 +1,5 @@
+# Copyright (c) 2022 Qualcomm Innovation Center, Inc. All rights reserved.
+# SPDX-License-Identifier: BSD-3-Clause-Clear
+
+#Add new domain for powerstatemanager services
+user=_app seinfo=platform name=com.qualcomm.qti.powerstatemanagerservice domain=powerstatemanager_service type=app_data_file levelFrom=all
