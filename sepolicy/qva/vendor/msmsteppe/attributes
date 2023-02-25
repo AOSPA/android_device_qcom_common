@@ -1,0 +1,12 @@
+#Copyright (c) 2022 Qualcomm Innovation Center, Inc. All rights reserved.
+#SPDX-License-Identifier: BSD-3-Clause-Clear
+
+# PowerState Service
+attribute vendor_hal_powerstateservice;
+attribute vendor_hal_powerstateservice_client;
+attribute vendor_hal_powerstateservice_server;
+
+# PowerState Utility
+attribute vendor_hal_powerstateutility;
+attribute vendor_hal_powerstateutility_client;
+attribute vendor_hal_powerstateutility_server;
