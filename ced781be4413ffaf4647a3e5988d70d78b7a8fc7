@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "ad27bae1_deb57ae4",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000579
+      },
+      "writtenOn": "2023-02-25T17:41:05Z",
+      "side": 1,
+      "message": "location stuff is most likely bengal specific and wont exist on kalama",
+      "revId": "ced781be4413ffaf4647a3e5988d70d78b7a8fc7",
+      "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
+    }
+  ]
+}
