@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "3e7765a0_75a19936",
+        "filename": "generate_extra_images.mk",
+        "patchSetId": 3
+      },
+      "lineNbr": 301,
+      "author": {
+        "id": 1000012
+      },
+      "writtenOn": "2023-02-25T18:18:50Z",
+      "side": 1,
+      "message": "do we want this",
+      "revId": "e17562542b753325314842f6ff692a5ce9744ce2",
+      "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
+    }
+  ]
+}
