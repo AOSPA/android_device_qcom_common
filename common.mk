@@ -29,6 +29,7 @@ QCOM_BOARD_PLATFORMS += \
     bengal \
     holi \
     kona \
+    kalama \
     lahaina \
     lito \
     msm8937 \
@@ -79,6 +80,9 @@ include vendor/qcom/opensource/core-utils/build/utils.mk
 endif
 
 # Kernel Families
+5_15_FAMILY := \
+    kalama
+
 5_10_FAMILY := \
     parrot \
     taro
@@ -112,7 +116,9 @@ endif
     msm8937 \
     msm8996
 
-ifeq ($(call is-board-platform-in-list,$(5_10_FAMILY)),true)
+ifeq ($(call is-board-platform-in-list,$(5_15_FAMILY)),true)
+TARGET_KERNEL_VERSION ?= 5.15
+else ifeq ($(call is-board-platform-in-list,$(5_10_FAMILY)),true)
 TARGET_KERNEL_VERSION ?= 5.10
 else ifeq ($(call is-board-platform-in-list,$(5_4_FAMILY)),true)
 TARGET_KERNEL_VERSION ?= 5.4
