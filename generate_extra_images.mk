@@ -20,8 +20,6 @@ INSTALLED_BOOTIMAGE_TARGET := $(BUILT_BOOTIMAGE_TARGET)
 ifeq ($(PRODUCT_BUILD_RAMDISK_IMAGE),true)
 INSTALLED_RAMDISK_TARGET := $(PRODUCT_OUT)/ramdisk.img
 endif
-endif
-
 ifeq ($(PRODUCT_BUILD_SYSTEM_IMAGE),true)
 INSTALLED_SYSTEMIMAGE := $(PRODUCT_OUT)/system.img
 endif
@@ -35,11 +33,13 @@ INSTALLED_RECOVERYIMAGE_TARGET :=
 endif
 recovery_ramdisk := $(PRODUCT_OUT)/ramdisk-recovery.img
 INSTALLED_USBIMAGE_TARGET := $(PRODUCT_OUT)/usbdisk.img
+endif
 
 #----------------------------------------------------------------------
 # Generate persist image (persist.img)
 #----------------------------------------------------------------------
 ifneq ($(strip $(BOARD_PERSISTIMAGE_PARTITION_SIZE)),)
+ifneq ($(strip $(TARGET_NO_KERNEL)),true)
 
 TARGET_OUT_PERSIST := $(PRODUCT_OUT)/persist
 
@@ -68,27 +68,45 @@ droidcore-unbundled: $(INSTALLED_PERSISTIMAGE_TARGET)
 persistimage: $(INSTALLED_PERSISTIMAGE_TARGET)
 
 endif
+endif
 
 #----------------------------------------------------------------------
 # Generate metadata image (metadata.img)
 # As of now this in empty at build and data is runtime generated only,
 # so create an empty fs
 #----------------------------------------------------------------------
+ifneq ($(BOARD_USES_METADATA_PARTITION),)
 ifneq ($(strip $(BOARD_METADATAIMAGE_PARTITION_SIZE)),)
 
 TARGET_OUT_METADATA := $(PRODUCT_OUT)/metadata
 
 INSTALLED_METADATAIMAGE_TARGET := $(PRODUCT_OUT)/metadata.img
 
+ifeq ($(BOARD_METADATAIMAGE_FILE_SYSTEM_TYPE),ext4)
 define build-metadataimage-target
     $(call pretty,"Target metadata fs image: $(INSTALLED_METADATAIMAGE_TARGET)")
     @mkdir -p $(TARGET_OUT_METADATA)
-    $(hide)PATH=$(HOST_OUT_EXECUTABLES):$${PATH} $(MKEXTUSERIMG) -s $(TARGET_OUT_METADATA) $@ ext4 metadata $(BOARD_METADATAIMAGE_PARTITION_SIZE)
+    $(hide)PATH=$(HOST_OUT_EXECUTABLES):$${PATH} $(MKEXTUSERIMG) -s $(TARGET_OUT_METADATA) $@ $(BOARD_METADATAIMAGE_FILE_SYSTEM_TYPE) metadata $(BOARD_METADATAIMAGE_PARTITION_SIZE)
     $(hide) chmod a+r $@
 endef
 
 $(INSTALLED_METADATAIMAGE_TARGET): $(MKEXTUSERIMG) $(MAKE_EXT4FS)
 	$(build-metadataimage-target)
+
+else
+ifeq ($(BOARD_METADATAIMAGE_FILE_SYSTEM_TYPE),f2fs)
+define build-metadataimage-target
+    $(call pretty,"Target metadata fs image: $(INSTALLED_METADATAIMAGE_TARGET)")
+    @mkdir -p $(TARGET_OUT_METADATA)
+    $(hide)PATH=$(HOST_OUT_EXECUTABLES):$${PATH} $(MKF2FSUSERIMG) $(INSTALLED_METADATAIMAGE_TARGET) $(BOARD_METADATAIMAGE_PARTITION_SIZE) -S -f $(TARGET_OUT_METADATA) -t metadata -L metadata $@
+    $(hide) chmod a+r $@
+endef
+
+$(INSTALLED_METADATAIMAGE_TARGET): $(MKF2FSUSERIMG)
+	$(build-metadataimage-target)
+
+endif
+endif
 
 ALL_DEFAULT_INSTALLED_MODULES += $(INSTALLED_METADATAIMAGE_TARGET)
 ALL_MODULES.$(LOCAL_MODULE).INSTALLED += $(INSTALLED_METADATAIMAGE_TARGET)
@@ -98,6 +116,7 @@ droidcore-unbundled: $(INSTALLED_METADATAIMAGE_TARGET)
 .PHONY: metadataimage
 metadataimage: $(INSTALLED_METADATAIMAGE_TARGET)
 
+endif
 endif
 
 #----------------------------------------------------------------------
@@ -110,7 +129,7 @@ ifeq ($(strip $(BOARD_KERNEL_SEPARATED_DTBO)),true)
 MKDTIMG := $(HOST_OUT_EXECUTABLES)/mkdtimg$(HOST_EXECUTABLE_SUFFIX)
 
 # Most specific paths must come first in possible_dtbo_dirs
-possible_dtbo_dirs = $(TARGET_OUT_INTERMEDIATES)/KERNEL_OBJ/arch/arm64/boot/dts $(TARGET_OUT_INTERMEDIATES)/KERNEL_OBJ/arch/arm/boot/dts
+possible_dtbo_dirs = $(KERNEL_OUT)/arch/$(TARGET_KERNEL_ARCH)/boot/dts $(KERNEL_OUT)/arch/arm/boot/dts
 $(shell mkdir -p $(possible_dtbo_dirs))
 dtbo_dir = $(firstword $(wildcard $(possible_dtbo_dirs)))
 dtbo_objs = $(shell find $(dtbo_dir) -name \*.dtbo)
@@ -245,6 +264,9 @@ kernelclean:
 ifeq ($(TARGET_COMPILE_WITH_MSM_KERNEL),true)
 # Set correct dependency for kernel modules
 ifneq ($(KERNEL_MODULES_INSTALL),)
+ifneq ($(BOARD_GKI_KERNEL_MODULES),)
+$(BOARD_GKI_KERNEL_MODULES): $(INSTALLED_BOOTIMAGE_TARGET)
+endif
 ifneq ($(BOARD_VENDOR_KERNEL_MODULES),)
 $(BOARD_VENDOR_KERNEL_MODULES): $(INSTALLED_BOOTIMAGE_TARGET)
 endif
@@ -276,4 +298,4 @@ $(BUILT_SYSTEMIMAGE): otavendormod
 endif
 
 #Print PRODUCT_PACKAGES & PRODUCT_PACKAGES_DEBUG to output log
-#$(call dump-products)
+$(call dump-products)
