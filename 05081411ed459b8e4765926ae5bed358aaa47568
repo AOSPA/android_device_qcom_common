@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "106fad89_62992bb5",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000012
+      },
+      "writtenOn": "2023-02-25T16:41:44Z",
+      "side": 1,
+      "message": "isn\u0027t this in aosp init.rc?",
+      "revId": "05081411ed459b8e4765926ae5bed358aaa47568",
+      "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "54be453a_40c4e26b",
+        "filename": "vendor/init/init.qcom.legacy.rc",
+        "patchSetId": 2
+      },
+      "lineNbr": 83,
+      "author": {
+        "id": 1000012
+      },
+      "writtenOn": "2023-02-25T16:41:44Z",
+      "side": 1,
+      "message": "whitespace",
+      "revId": "05081411ed459b8e4765926ae5bed358aaa47568",
+      "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
+    }
+  ]
+}
