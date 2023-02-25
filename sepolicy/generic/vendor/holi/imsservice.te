@@ -29,12 +29,3 @@
 add_hwservice(vendor_ims_service, vendor_hal_imsrcsd_hwservice)
 add_hwservice(vendor_ims_service, vendor_hal_imscallinfo_hwservice)
 add_hwservice(vendor_ims_service, vendor_hal_imsfactory_hwservice)
-
-#add IUceService, IImsCmServiceService, IService and IImsFactory to HIDL interface
-#hal server domain for ims_service
-hal_server_domain_bypass(vendor_ims_service, vendor_hal_imsfactory)
-binder_call(vendor_hal_imsfactory_client, vendor_hal_imsfactory_server)
-binder_call(vendor_hal_imsfactory_server, vendor_hal_imsfactory_client)
-hal_attribute_hwservice(vendor_hal_imsfactory, vendor_hal_imsfactory_hwservice)
-hal_attribute_hwservice(vendor_hal_imsfactory, vendor_hal_imsrcsd_hwservice)
-hal_attribute_hwservice(vendor_hal_imsfactory, vendor_hal_imscallinfo_hwservice)
