@@ -77,5 +77,13 @@ else
 -include device/qcom/wlan/$(TARGET_BOARD_PLATFORM)/wlan.mk
 endif
 
+ifeq ($(TARGET_PREBUILT_KERNEL),)
+ifneq (,$(filter 5.10, $(TARGET_KERNEL_VERSION)))
+PRODUCT_SOONG_NAMESPACES += hardware/qcom/wlan
+else
+PRODUCT_SOONG_NAMESPACES += hardware/qcom/wlan-legacy
+endif
+endif
+
 # Get non-open-source specific aspects.
 $(call inherit-product-if-exists, vendor/qcom/common/vendor/wlan/wlan-vendor.mk)
