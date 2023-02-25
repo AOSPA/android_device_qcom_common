@@ -16,6 +16,24 @@
       "message": "should we keep?",
       "revId": "6e2b66614e8428e9ccf0538eb3ce132bdc8156b6",
       "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "fe0976ce_f5d13ae1",
+        "filename": "vendor/init/ueventd.qcom.rc",
+        "patchSetId": 1
+      },
+      "lineNbr": 374,
+      "author": {
+        "id": 1000737
+      },
+      "writtenOn": "2023-02-25T16:46:05Z",
+      "side": 0,
+      "message": "I think so, it\u0027s in line with kalama",
+      "parentUuid": "63354504_f2b6816f",
+      "revId": "6e2b66614e8428e9ccf0538eb3ce132bdc8156b6",
+      "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
     }
   ]
 }
