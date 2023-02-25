@@ -27,16 +27,21 @@ QCOM_BOARD_PLATFORMS += \
     $(TRINKET) \
     atoll \
     bengal \
+    bengal_515 \
     holi \
     kona \
+    kona_515 \
+    kalama \
     lahaina \
     lito \
+    monaco \
     msm8937 \
     msm8953 \
     msm8996 \
     msm8998 \
     msmnile \
     parrot \
+    pineapple \
     sdm660 \
     sdm710 \
     sdm845 \
@@ -79,6 +84,13 @@ include vendor/qcom/opensource/core-utils/build/utils.mk
 endif
 
 # Kernel Families
+5_15_FAMILY := \
+    bengal_515 \
+    kona_515 \
+    kalama \
+    monaco \
+    pineapple
+
 5_10_FAMILY := \
     parrot \
     taro
@@ -112,7 +124,9 @@ endif
     msm8937 \
     msm8996
 
-ifeq ($(call is-board-platform-in-list,$(5_10_FAMILY)),true)
+ifeq ($(call is-board-platform-in-list,$(5_15_FAMILY)),true)
+TARGET_KERNEL_VERSION ?= 5.15
+else ifeq ($(call is-board-platform-in-list,$(5_10_FAMILY)),true)
 TARGET_KERNEL_VERSION ?= 5.10
 else ifeq ($(call is-board-platform-in-list,$(5_4_FAMILY)),true)
 TARGET_KERNEL_VERSION ?= 5.4
