@@ -80,7 +80,7 @@ ifneq (,$(filter init, $(TARGET_COMMON_QTI_COMPONENTS)))
 endif
 
 ifneq (,$(filter media, $(TARGET_COMMON_QTI_COMPONENTS)))
-  ifeq ($(call is-board-platform-in-list,$(5_10_FAMILY) bengal),true)
+  ifeq ($(call is-board-platform-in-list,$(5_10_FAMILY) $(5_15_FAMILY) bengal),true)
     include $(QCOM_COMMON_PATH)/vendor/media/qti-media.mk
   else ifeq ($(call is-board-platform-in-list,$(5_4_FAMILY)),true)
     include $(QCOM_COMMON_PATH)/vendor/media-5.4/qti-media-5.4.mk
@@ -99,7 +99,7 @@ endif
 
 ifneq (,$(filter perf, $(TARGET_COMMON_QTI_COMPONENTS)))
   include $(QCOM_COMMON_PATH)/system/perf/qti-perf.mk
-  ifeq ($(call is-board-platform-in-list,$(5_10_FAMILY)),true)
+  ifeq ($(call is-board-platform-in-list,$(5_10_FAMILY) $(5_15_FAMILY)),true)
     include $(QCOM_COMMON_PATH)/vendor/perf/qti-perf.mk
   else
     include $(QCOM_COMMON_PATH)/vendor/perf-legacy/qti-perf-legacy.mk
@@ -129,7 +129,7 @@ ifneq (,$(filter wfd, $(TARGET_COMMON_QTI_COMPONENTS)))
 endif
 
 ifneq (,$(filter wlan, $(TARGET_COMMON_QTI_COMPONENTS)))
-  ifeq ($(call is-board-platform-in-list,$(5_10_FAMILY)),true)
+  ifeq ($(call is-board-platform-in-list,$(5_10_FAMILY) $(5_15_FAMILY)),true)
     include $(QCOM_COMMON_PATH)/vendor/wlan/qti-wlan.mk
   else
     include $(QCOM_COMMON_PATH)/vendor/wlan-legacy/qti-wlan-legacy.mk
