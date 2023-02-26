@@ -33,6 +33,24 @@
       "message": "whitespace",
       "revId": "05081411ed459b8e4765926ae5bed358aaa47568",
       "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "ee8193b4_ac28140e",
+        "filename": "vendor/init/init.qcom.legacy.rc",
+        "patchSetId": 2
+      },
+      "lineNbr": 83,
+      "author": {
+        "id": 1000737
+      },
+      "writtenOn": "2023-02-26T02:16:59Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "54be453a_40c4e26b",
+      "revId": "05081411ed459b8e4765926ae5bed358aaa47568",
+      "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
     }
   ]
 }
