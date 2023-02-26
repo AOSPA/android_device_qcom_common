@@ -1,0 +1,4 @@
+allow vendor_hal_neuralnetworks_default {
+    vendor_qdsp_device
+    vendor_xdsp_device
+}:chr_file r_file_perms;
