@@ -12,6 +12,9 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
+PRODUCT_SOONG_NAMESPACES += \
+    device/qcom/common/vendor/media-5.4
+
 TARGET_MEDIA_COMPONENT_VARIANT := media-5.4
 
 # Inherit configuration from the HAL.
