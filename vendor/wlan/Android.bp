@@ -23,13 +23,6 @@ prebuilt_etc {
 }
 
 prebuilt_hidl_interfaces {
-    name: "hidl_SuppTunnelProvider_interface",
-    interfaces: [
-        "vendor.qti.hardware.wigig.supptunnel@1.0::ISuppTunnelProvider",
-    ],
-}
-
-prebuilt_hidl_interfaces {
     name: "hidl_Wificfr_interface",
     interfaces: [
         "vendor.qti.hardware.wifi.wificfr@1.0::IWificfr",
