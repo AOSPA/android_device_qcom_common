@@ -58,6 +58,7 @@ PRODUCT_PACKAGES += \
 # If modules are present, load them.  If not, skip.
 ifneq ($(KERNEL_MODULES_OUT),)
 PRODUCT_PACKAGES += \
+    system_dlkm_modprobe.sh \
     vendor_modprobe.sh
 else
 PRODUCT_VENDOR_PROPERTIES += \
