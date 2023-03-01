@@ -47,8 +47,14 @@ PRODUCT_PACKAGES += \
 
 # Kernel
 ifneq (,$(filter 5.4 5.10 5.15, $(TARGET_KERNEL_VERSION)))
+ifeq ($(call is-board-platform-in-list,bengal),true)
+PRODUCT_COPY_FILES += \
+    $(call find-copy-subdir-files,*,$(QCOM_COMMON_PATH)/vendor/init/bengal_515,$(TARGET_COPY_OUT_VENDOR))
+else ifeq ($(call is-board-platform-in-list,kona),true)
+    $(call find-copy-subdir-files,*,$(QCOM_COMMON_PATH)/vendor/init/kona_515,$(TARGET_COPY_OUT_VENDOR))
 PRODUCT_COPY_FILES += \
     $(call find-copy-subdir-files,*,$(QCOM_COMMON_PATH)/vendor/init/$(TARGET_BOARD_PLATFORM),$(TARGET_COPY_OUT_VENDOR))
+endif
 
 PRODUCT_PACKAGES += \
     init.qti.kernel.rc \
@@ -58,6 +64,7 @@ PRODUCT_PACKAGES += \
 # If modules are present, load them.  If not, skip.
 ifneq ($(KERNEL_MODULES_OUT),)
 PRODUCT_PACKAGES += \
+    system_dlkm_modprobe.sh \
     vendor_modprobe.sh
 else
 PRODUCT_VENDOR_PROPERTIES += \
