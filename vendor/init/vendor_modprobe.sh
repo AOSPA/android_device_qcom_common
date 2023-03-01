@@ -1,6 +1,6 @@
 #! /vendor/bin/sh
 #=============================================================================
-# Copyright (c) 2019-2021 Qualcomm Technologies, Inc.
+# Copyright (c) 2019-2022 Qualcomm Technologies, Inc.
 # All Rights Reserved.
 # Confidential and Proprietary - Qualcomm Technologies, Inc.
 #=============================================================================
@@ -12,12 +12,28 @@ MODPROBE="/vendor/bin/modprobe"
 
 # vendor modules partition could be /vendor/lib/modules or /vendor_dlkm/lib/modules
 POSSIBLE_DIRS="${VENDOR_DLKM_DIR} ${VENDOR_DIR}"
+audio_arch=`getprop ro.boot.audio`
 
 for dir in ${POSSIBLE_DIRS} ;
 do
 	if [ ! -e ${dir}/modules.load ]; then
 		continue
 	fi
+
+	if [ "$audio_arch" == "audioreach" ]; then
+		if [ -e ${dir}/modules.audio.ar.blocklist ]; then
+			audio_blocklist_expr="$(sed -n -e 's/blocklist \(.*\)/\1/p' ${dir}/modules.audio.ar.blocklist | sed -e 's/-/_/g' -e 's/^/-e /')"
+		else
+			audio_blocklist_expr="-e %"
+		fi
+	else
+		if [ -e ${dir}/modules.audio.legacy.blocklist ]; then
+			audio_blocklist_expr="$(sed -n -e 's/blocklist \(.*\)/\1/p' ${dir}/modules.audio.legacy.blocklist | sed -e 's/-/_/g' -e 's/^/-e /')"
+		else
+			audio_blocklist_expr="-e %"
+		fi
+	fi
+
 	if [ -e ${dir}/modules.blocklist ]; then
 		blocklist_expr="$(sed -n -e 's/blocklist \(.*\)/\1/p' ${dir}/modules.blocklist | sed -e 's/-/_/g' -e 's/^/-e /')"
 	else
@@ -25,7 +41,7 @@ do
 		blocklist_expr="-e %"
 	fi
 	# Filter out modules in blocklist - we would see unnecessary errors otherwise
-	load_modules=$(cat ${dir}/modules.load | grep -w -v ${blocklist_expr})
+	load_modules=$(cat ${dir}/modules.load | grep -w -v ${blocklist_expr} | grep -w -v ${audio_blocklist_expr})
 	first_module=$(echo ${load_modules} | cut -d " " -f1)
 	other_modules=$(echo ${load_modules} | cut -d " " -f2-)
 	if ! ${MODPROBE} -b -s -d ${dir} -a ${first_module} > /dev/null ; then
@@ -33,7 +49,7 @@ do
 	fi
 	# load modules individually in case one of them fails to init
 	for module in ${other_modules}; do
-		( ${MODPROBE} -b -s -d ${dir} -a ${module} > /dev/null ) &
+		( ${MODPROBE} -b -d ${dir} -a ${module} > /dev/null ) &
 	done
 
 	wait
