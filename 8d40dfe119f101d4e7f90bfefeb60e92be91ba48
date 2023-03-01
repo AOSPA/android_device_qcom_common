@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "07be527f_3e6daa55",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000579
+      },
+      "writtenOn": "2023-03-01T12:50:34Z",
+      "side": 1,
+      "message": "why not add to vendor/qcom/opensource/usb/vendor_product.mk ?",
+      "revId": "8d40dfe119f101d4e7f90bfefeb60e92be91ba48",
+      "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
+    }
+  ]
+}
