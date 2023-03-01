@@ -4,7 +4,7 @@
 # SPDX-License-Identifier: Apache-2.0
 #
 
-TARGET_USES_KERNEL_PLATFORM ?= true
+	 ?= true
 
 KERNEL_PREBUILT_DIR ?= device/qcom/$(TARGET_BOARD_PLATFORM)-kernel
 KERNEL_PRODUCT_DIR := kernel_obj
