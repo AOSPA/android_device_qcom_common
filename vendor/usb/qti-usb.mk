@@ -13,7 +13,8 @@
 # limitations under the License.
 
 PRODUCT_SOONG_NAMESPACES += \
-    device/qcom/common/vendor/usb
+    device/qcom/common/vendor/usb \
+    vendor/qcom/opensource/usb
 
 # Inherit from the USB product definition.
 $(call inherit-product, vendor/qcom/opensource/usb/vendor_product.mk)
