@@ -23,18 +23,20 @@ fi
 source "${HELPER}"
 
 # Initialize the helper
-setup_vendor "${COMPONENT}" "${VENDOR}" "${ANDROID_ROOT}" false true "" true
-if [ -f "${MY_DIR}/${COMPONENT}/${KERNEL_VERSION}/proprietary-files.txt" ]; then
+if [ -f "${MY_DIR}/${COMPONENT}/${KERNEL_VERSION}/proprietary-files.txt" ] && [ ! -z ${KERNEL_VERSION} ]; then
     setup_vendor "${COMPONENT}/${KERNEL_VERSION}" "${VENDOR}" "${ANDROID_ROOT}" false true "${COMPONENT}" true
+else
+    setup_vendor "${COMPONENT}" "${VENDOR}" "${ANDROID_ROOT}" false true "" true
 fi
 
 # Warning headers and guards
 write_headers
 
 # The standard common blobs
-write_makefiles "${MY_DIR}/${COMPONENT}/proprietary-files.txt" true
-if [ -f "${MY_DIR}/${COMPONENT}/${KERNEL_VERSION}/proprietary-files.txt" ]; then
+if [ -f "${MY_DIR}/${COMPONENT}/${KERNEL_VERSION}/proprietary-files.txt" ] && [ ! -z ${KERNEL_VERSION} ]; then
     write_makefiles "${MY_DIR}/${COMPONENT}/${KERNEL_VERSION}/proprietary-files.txt" true
+else
+    write_makefiles "${MY_DIR}/${COMPONENT}/proprietary-files.txt" true
 fi
 
 # Finish
