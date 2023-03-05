@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "8a3c57bb_5e353ba5",
+        "filename": "vendor/media/qti-media.mk",
+        "patchSetId": 1
+      },
+      "lineNbr": 76,
+      "author": {
+        "id": 1000737
+      },
+      "writtenOn": "2023-03-05T17:40:19Z",
+      "side": 1,
+      "message": "Create condition for 5.10 only",
+      "revId": "05d5282c1fa0604e0c97db5b488c96c43269f327",
+      "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
+    }
+  ]
+}
