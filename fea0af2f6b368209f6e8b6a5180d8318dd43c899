@@ -1,4 +1,22 @@
 {
-  "comments": [],
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "1bd59a7b_159f0f26",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 12
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000469
+      },
+      "writtenOn": "2023-03-05T11:02:58Z",
+      "side": 1,
+      "message": "Did you miss vendor.qti.hardware.vpp@2.0.so or left it out for some reasons?",
+      "revId": "fea0af2f6b368209f6e8b6a5180d8318dd43c899",
+      "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
+    }
+  ],
   "submitRequirementResults": []
 }
