@@ -19,6 +19,7 @@ vendor/lib/libops.so
 vendor/lib/libqisl.so
 vendor/lib/librpmb.so
 vendor/lib/libssd.so
+vendor/lib/libtime_genoff.so
 vendor/lib/libtzdrmgenprov.so
 vendor/lib/vendor.qti.hardware.qteeconnector@1.0.so
 vendor/lib64/libGPQTEEC_vendor.so
@@ -38,6 +39,7 @@ vendor/lib64/libops.so
 vendor/lib64/libqisl.so
 vendor/lib64/librpmb.so
 vendor/lib64/libssd.so
+vendor/lib64/libtime_genoff.so
 vendor/lib64/libtrustedapploader.so
 vendor/lib64/libtzdrmgenprov.so
 vendor/lib64/vendor.qti.hardware.qteeconnector@1.0.so
