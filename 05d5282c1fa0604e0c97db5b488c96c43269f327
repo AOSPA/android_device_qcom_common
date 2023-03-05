@@ -16,6 +16,24 @@
       "message": "Create condition for 5.10 only",
       "revId": "05d5282c1fa0604e0c97db5b488c96c43269f327",
       "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "c9694f04_c0a0b2a1",
+        "filename": "vendor/media/qti-media.mk",
+        "patchSetId": 1
+      },
+      "lineNbr": 76,
+      "author": {
+        "id": 1000469
+      },
+      "writtenOn": "2023-03-05T17:44:40Z",
+      "side": 1,
+      "message": "Hmm, but why? The bengal copy rule comes before this, and so it will automatically override the copy rule below it (as was the case when it was in vendor/qcom/common)",
+      "parentUuid": "8a3c57bb_5e353ba5",
+      "revId": "05d5282c1fa0604e0c97db5b488c96c43269f327",
+      "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
     }
   ]
 }
