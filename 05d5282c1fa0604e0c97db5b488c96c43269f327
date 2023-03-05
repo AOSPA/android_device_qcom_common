@@ -52,6 +52,24 @@
       "parentUuid": "c9694f04_c0a0b2a1",
       "revId": "05d5282c1fa0604e0c97db5b488c96c43269f327",
       "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "37479d5b_23afb91a",
+        "filename": "vendor/media/qti-media.mk",
+        "patchSetId": 1
+      },
+      "lineNbr": 76,
+      "author": {
+        "id": 1000737
+      },
+      "writtenOn": "2023-03-05T17:50:03Z",
+      "side": 1,
+      "message": "Sure, I thought about creating it, because soon we will have to add 5.15 script here too",
+      "parentUuid": "b07c2f98_66ab8289",
+      "revId": "05d5282c1fa0604e0c97db5b488c96c43269f327",
+      "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
     }
   ]
 }
