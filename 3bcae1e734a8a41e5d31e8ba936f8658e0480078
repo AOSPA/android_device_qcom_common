@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "968dab14_a1d3a0b2",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 3
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000012
+      },
+      "writtenOn": "2023-03-06T17:12:12Z",
+      "side": 1,
+      "message": "shouldn\u0027t we kill parrot configs as well?",
+      "revId": "3bcae1e734a8a41e5d31e8ba936f8658e0480078",
+      "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
+    }
+  ]
+}
