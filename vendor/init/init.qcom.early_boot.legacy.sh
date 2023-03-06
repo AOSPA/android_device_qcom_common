@@ -47,8 +47,6 @@ else
 fi
 
 # Update permissions
-chown root.system /dev/block/platform/soc/*/by-name/rawdump
-chmod 0660 /dev/block/platform/soc/*/by-name/rawdump
 chown system.system /sys/devices/platform/soc/18800000.qcom,icnss/net/wlan*/queues/rx-*/rps_cpus
 chmod 0660 /sys/devices/platform/soc/17a10040.qcom,wcn6750/net/wlan*/queues/rx-*/rps_cpus
 chown system.graphics /sys/class/drm/sde-crtc-*/lineptr_value
