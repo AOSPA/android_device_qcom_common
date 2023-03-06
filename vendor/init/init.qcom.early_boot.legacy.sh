@@ -51,8 +51,22 @@ chown root.system /dev/block/platform/soc/*/by-name/rawdump
 chmod 0660 /dev/block/platform/soc/*/by-name/rawdump
 chown system.system /sys/devices/platform/soc/18800000.qcom,icnss/net/wlan*/queues/rx-*/rps_cpus
 chmod 0660 /sys/devices/platform/soc/17a10040.qcom,wcn6750/net/wlan*/queues/rx-*/rps_cpus
+chown root.system /dev/block/platform/soc/7c4000.sdhci/by-name/rawdump
+chmod 0660 /dev/block/platform/soc/7c4000.sdhci/by-name/rawdump
+chown root.system /dev/block/platform/soc/1d84000.ufshc/by-name/rawdump
+chmod 0660 /dev/block/platform/soc/1d84000.ufshc/by-name/rawdump
 chown system.graphics /sys/class/drm/sde-crtc-*/lineptr_value
 chmod 0664 /sys/class/drm/sde-crtc-*/lineptr_value
+chmod system.system /dev/hgsl
+chmod 0666 /dev/hgsl
+chmod system.audio /dev/spidev22.0
+chmod 0660 /dev/spidev22.0
+chmod system.audio /dev/spidev10.0
+chmod 0660 /dev/spidev10.0
+chown root.usb /dev/bus/usb/*
+chmod 0660 /dev/bus/usb/*
+chown root.usb /dev/hidraw*
+chmod 0660 /dev/hidraw*
 
 target=`getprop ro.board.platform`
 case "$target" in
