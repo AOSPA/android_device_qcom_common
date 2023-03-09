@@ -1,3 +1,0 @@
-# TUI Part
-hal_client_domain(vendor_hal_eid_qti, vendor_hal_trustedui)
-hal_client_domain(vendor_hal_eid_qti, hal_graphics_composer)
