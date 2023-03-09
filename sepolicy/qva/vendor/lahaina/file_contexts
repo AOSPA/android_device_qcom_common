@@ -59,6 +59,3 @@
 
 #camera
 /sys/firmware/devicetree/base/memory/ddr_device_type                               u:object_r:vendor_sysfs_ddr:s0
-
-#qwes daemon
-/(vendor|system/vendor)/bin/qwesd                                                  u:object_r:vendor_qwesd_exec:s0
