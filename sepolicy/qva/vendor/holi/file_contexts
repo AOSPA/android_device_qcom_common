@@ -27,6 +27,3 @@
 
 #camera
 /sys/firmware/devicetree/base/memory/ddr_device_type                               u:object_r:vendor_sysfs_ddr:s0
-
-#eID
-/(vendor|system/vendor)/bin/hw/vendor\.qti\.hardware\.eid@1\.0-service             u:object_r:vendor_hal_eid_qti_exec:s0
