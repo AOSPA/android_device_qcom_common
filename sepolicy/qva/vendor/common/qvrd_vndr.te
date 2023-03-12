@@ -1,2 +1,4 @@
 # Allow qvrd_vndr to access to battery supply API for DCS
 r_dir_file(vendor_qvrd_vndr, vendor_sysfs_battery_supply);
+
+allow vendor_qvrd_vndr vendor_xdsp_device:chr_file r_file_perms;
