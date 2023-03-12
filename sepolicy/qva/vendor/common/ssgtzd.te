@@ -1,0 +1,2 @@
+#Allow ssgtzd to create sockets for HTTP
+allow vendor_ssgtzd self:udp_socket create_socket_perms;
