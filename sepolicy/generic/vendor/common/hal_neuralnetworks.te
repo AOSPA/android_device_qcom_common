@@ -1,4 +1,7 @@
-allow vendor_hal_neuralnetworks_default {
-    vendor_qdsp_device
-    vendor_xdsp_device
-}:chr_file r_file_perms;
+allow vendor_hal_neuralnetworks_default vendor_qdsp_device:chr_file {ioctl read};
+dontaudit vendor_hal_neuralnetworks_default vendor_xdsp_device:chr_file { getattr open read map };
+hal_client_domain(vendor_hal_neuralnetworks_default, vendor_hal_dspmanager)
+dontaudit vendor_hal_neuralnetworks_default vendor_qdsp_device:chr_file {open};
+
+get_prop(vendor_hal_neuralnetworks_default, vendor_adsprpc_prop)
+

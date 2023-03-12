@@ -14,3 +14,12 @@
 
 # Persist files
 /mnt/vendor/persist/wlan(/.*)?                                      u:object_r:vendor_persist_wcnss_service_file:s0
+
+# Missing Labels from taro
+/dev/wcd-dsp-glink                              u:object_r:audio_device:s0
+/dev/wcd_dsp0_control                           u:object_r:audio_device:s0
+/dev/wcd-spi-ac-client                          u:object_r:audio_device:s0
+/dev/msm_.*                                     u:object_r:audio_device:s0
+/dev/dri/card[0-9]                              u:object_r:graphics_device:s0
+/sys/devices/platform/soc/[a-f0-9]+.qcom,spmi/spmi-0/spmi0-0[0-9]/[a-f0-9]+.qcom,spmi:qcom,[a-z0-9]+@[0-9]:qcom,haptics@c000/leds/vibrator(/.*)?   u:object_r:sysfs_leds:s0
+/sys/devices(/platform)?/soc/[0-9a-f]+.qcom,spmi/spmi-[0-9]+/spmi[0-9]+-[0-9]+/[0-9a-f]+.qcom,spmi:qcom,pmi[0-9]+@[0-9]+:qcom,leds@[a-f0-9]+(/.*)? u:object_r:vendor_sysfs_graphics:s0
