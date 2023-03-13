@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "82323b73_b044941a",
+        "filename": "common.mk",
+        "patchSetId": 7
+      },
+      "lineNbr": 92,
+      "author": {
+        "id": 1000012
+      },
+      "writtenOn": "2023-03-13T02:04:55Z",
+      "side": 1,
+      "message": "I think pineapple is 6.1.",
+      "revId": "6927619752f7ca1a1d486c109473a0d2bf124604",
+      "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
+    }
+  ]
+}
