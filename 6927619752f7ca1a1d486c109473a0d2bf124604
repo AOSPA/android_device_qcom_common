@@ -16,6 +16,24 @@
       "message": "I think pineapple is 6.1.",
       "revId": "6927619752f7ca1a1d486c109473a0d2bf124604",
       "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "53753107_bdda0150",
+        "filename": "common.mk",
+        "patchSetId": 7
+      },
+      "lineNbr": 92,
+      "author": {
+        "id": 1000737
+      },
+      "writtenOn": "2023-03-13T02:12:04Z",
+      "side": 1,
+      "message": "Really? I didn\u0027t think Qualcomm was already working on this. I will remove it for now then",
+      "parentUuid": "82323b73_b044941a",
+      "revId": "6927619752f7ca1a1d486c109473a0d2bf124604",
+      "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
     }
   ]
 }
