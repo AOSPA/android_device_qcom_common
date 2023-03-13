@@ -51,6 +51,24 @@
       "parentUuid": "54be453a_40c4e26b",
       "revId": "05081411ed459b8e4765926ae5bed358aaa47568",
       "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "1365d6c5_c24b6bb8",
+        "filename": "vendor/init/init.qcom.legacy.rc",
+        "patchSetId": 2
+      },
+      "lineNbr": 83,
+      "author": {
+        "id": 1000012
+      },
+      "writtenOn": "2023-03-13T02:05:27Z",
+      "side": 1,
+      "message": "no it isn\u0027t lol",
+      "parentUuid": "ee8193b4_ac28140e",
+      "revId": "05081411ed459b8e4765926ae5bed358aaa47568",
+      "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
     }
   ]
 }
