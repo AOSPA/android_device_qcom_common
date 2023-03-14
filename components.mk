@@ -15,7 +15,7 @@
 # Current system tag :- LA.QSSI.13.0.r1-08200-qssi.0
 # Current vendor tag :- LA.UM.9.14.r1-20200-LAHAINA.QSSI13.0
 
-ifeq ($(TARGET_COMMON_QTI_COMPONENTS), all)
+ifneq (,$(filter all, $(TARGET_COMMON_QTI_COMPONENTS)))
 TARGET_COMMON_QTI_COMPONENTS := \
     adreno \
     audio \
@@ -32,7 +32,8 @@ TARGET_COMMON_QTI_COMPONENTS := \
     usb \
     vibrator \
     wfd \
-    wlan
+    wlan \
+    $(filter-out all,$(TARGET_COMMON_QTI_COMPONENTS))
 endif
 
 # QTI Common Components
