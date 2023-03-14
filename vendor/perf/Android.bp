@@ -14,10 +14,3 @@
 
 soong_namespace {
 }
-
-prebuilt_etc {
-    name: "init.aospa.perf.rc",
-    src: "init.aospa.perf.rc",
-    sub_dir: "init",
-    vendor: true,
-}

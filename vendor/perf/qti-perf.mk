@@ -40,7 +40,6 @@ endif
 # Packages
 PRODUCT_PACKAGES += \
     android.hardware.thermal@2.0.vendor \
-    init.aospa.perf.rc \
     libavservices_minijail.vendor \
     libpsi.vendor \
     libtflite \
