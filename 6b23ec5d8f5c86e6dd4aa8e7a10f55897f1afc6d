@@ -16,6 +16,24 @@
       "message": "Is this fix working well?",
       "revId": "6b23ec5d8f5c86e6dd4aa8e7a10f55897f1afc6d",
       "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "f80f8136_61120b99",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000760
+      },
+      "writtenOn": "2023-03-17T11:49:27Z",
+      "side": 1,
+      "message": "yes it does, atleast for me.. just finished a clean build",
+      "parentUuid": "5afde839_f266fb47",
+      "revId": "6b23ec5d8f5c86e6dd4aa8e7a10f55897f1afc6d",
+      "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
     }
   ]
 }
