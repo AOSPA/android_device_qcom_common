@@ -18,6 +18,24 @@
       "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "ef1d30a9_fed68403",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000579
+      },
+      "writtenOn": "2023-03-19T14:51:46Z",
+      "side": 1,
+      "message": "diff --git a/sepolicy/qva/vendor/common/hvdcp.te b/sepolicy/qva/vendor/common/hvdcp.te\nindex 0568ce7..97f8c0b 100644\n--- a/sepolicy/qva/vendor/common/hvdcp.te\n+++ b/sepolicy/qva/vendor/common/hvdcp.te\n@@ -1,5 +1,5 @@\n allow vendor_hvdcp self:capability { setgid setuid };\n allow vendor_hvdcp cgroup:dir { create add_name };\n-allow vendor_hvdcp sysfs_battery_supply:file setattr;\n-allow vendor_hvdcp sysfs_usb_supply:file setattr;\n-allow vendor_hvdcp sysfs_usbpd_device:file setattr;\n+allow vendor_hvdcp vendor_sysfs_battery_supply:file setattr;\n+allow vendor_hvdcp vendor_sysfs_usb_supply:file setattr;\n+allow vendor_hvdcp vendor_sysfs_usbpd_device:file setattr;\ndiff --git a/sepolicy/qva/vendor/common/init_shell.te b/sepolicy/qva/vendor/common/init_shell.te\nindex 2bc1567..3bb7d93 100644\n--- a/sepolicy/qva/vendor/common/init_shell.te\n+++ b/sepolicy/qva/vendor/common/init_shell.te\n@@ -1,2 +1,2 @@\n # allow read permisison for vendor_hvdcp_opti properties\n-get_prop(qti_init_shell,  vendor_hvdcp_opti_prop)\n+get_prop(vendor_qti_init_shell, vendor_hvdcp_opti_prop)",
+      "parentUuid": "a5daf18f_a3b2dd2c",
+      "revId": "c6088ae7017104f2819b3325c862994a64666d48",
+      "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "a5b5aea9_7a2c798e",
