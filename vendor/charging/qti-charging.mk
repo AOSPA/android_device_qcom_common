@@ -12,6 +12,8 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
+$(call inherit-product, vendor/qcom/opensource/healthd-ext/health-vendor-product.mk)
+
 PRODUCT_PACKAGES += \
     libsuspend
 
