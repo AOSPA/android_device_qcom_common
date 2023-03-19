@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "a5b5aea9_7a2c798e",
+        "filename": "sepolicy/qva/vendor/common/hvdcp.te",
+        "patchSetId": 1
+      },
+      "lineNbr": 6,
+      "author": {
+        "id": 1000012
+      },
+      "writtenOn": "2023-03-19T14:39:44Z",
+      "side": 1,
+      "message": "should these have macros?",
+      "revId": "c6088ae7017104f2819b3325c862994a64666d48",
+      "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "23d16c22_c80c1171",
+        "filename": "sepolicy/qva/vendor/common/init_shell.te",
+        "patchSetId": 1
+      },
+      "lineNbr": 2,
+      "author": {
+        "id": 1000012
+      },
+      "writtenOn": "2023-03-19T14:39:44Z",
+      "side": 1,
+      "message": "spacing",
+      "revId": "c6088ae7017104f2819b3325c862994a64666d48",
+      "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
+    }
+  ]
+}
