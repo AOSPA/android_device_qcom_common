@@ -1,0 +1,2 @@
+allow vendor_qcc_trd_2 system_data_root_file:dir r_dir_perms;
+allow vendor_qcc_trd_2 vendor_qccvendor_data_file:dir { read  search };
