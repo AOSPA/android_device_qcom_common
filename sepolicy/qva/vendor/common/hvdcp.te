@@ -1,0 +1,5 @@
+allow vendor_hvdcp self:capability { setgid setuid };
+allow vendor_hvdcp cgroup:dir { create add_name };
+allow vendor_hvdcp sysfs_battery_supply:file setattr;
+allow vendor_hvdcp sysfs_usb_supply:file setattr;
+allow vendor_hvdcp sysfs_usbpd_device:file setattr;

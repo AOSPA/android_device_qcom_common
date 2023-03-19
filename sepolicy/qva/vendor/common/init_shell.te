@@ -1,0 +1,2 @@
+# allow read permisison for vendor_hvdcp_opti properties
+get_prop(qti_init_shell,  vendor_hvdcp_opti_prop)
