@@ -1,0 +1,1 @@
+genfscon sysfs /devices/platform/soc/4e00000.ssusb/mode                 u:object_r:vendor_sysfs_usb_device:s0
