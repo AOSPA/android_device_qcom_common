@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "dee59aad_22915e14",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000579
+      },
+      "writtenOn": "2023-03-19T03:25:45Z",
+      "side": 1,
+      "message": "https://github.com/AOSPA/android_hardware_qcom_media/blob/topaz-865/conf_files/kona/kona.mk#L13\n\nit\u0027s there",
+      "revId": "da22a44560d88a20dda4a8dfe4247e14ac5d524c",
+      "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
+    }
+  ]
+}
