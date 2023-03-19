@@ -53,6 +53,24 @@
       "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "ea638292_f4f7f689",
+        "filename": "sepolicy/qva/vendor/common/hvdcp.te",
+        "patchSetId": 1
+      },
+      "lineNbr": 6,
+      "author": {
+        "id": 1000737
+      },
+      "writtenOn": "2023-03-19T18:06:35Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "a5b5aea9_7a2c798e",
+      "revId": "c6088ae7017104f2819b3325c862994a64666d48",
+      "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "23d16c22_c80c1171",
@@ -66,6 +84,24 @@
       "writtenOn": "2023-03-19T14:39:44Z",
       "side": 1,
       "message": "spacing",
+      "revId": "c6088ae7017104f2819b3325c862994a64666d48",
+      "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "fc475974_29b842ce",
+        "filename": "sepolicy/qva/vendor/common/init_shell.te",
+        "patchSetId": 1
+      },
+      "lineNbr": 2,
+      "author": {
+        "id": 1000737
+      },
+      "writtenOn": "2023-03-19T18:06:35Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "23d16c22_c80c1171",
       "revId": "c6088ae7017104f2819b3325c862994a64666d48",
       "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
     }
