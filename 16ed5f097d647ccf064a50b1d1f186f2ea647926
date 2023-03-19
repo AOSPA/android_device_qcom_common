@@ -16,6 +16,23 @@
       "message": "whitespace",
       "revId": "16ed5f097d647ccf064a50b1d1f186f2ea647926",
       "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "0ce28c2e_404cbd61",
+        "filename": "vendor/charging/qti-charging.mk",
+        "patchSetId": 2
+      },
+      "lineNbr": 17,
+      "author": {
+        "id": 1000760
+      },
+      "writtenOn": "2023-03-19T03:59:12Z",
+      "side": 1,
+      "message": "remove the tab",
+      "revId": "16ed5f097d647ccf064a50b1d1f186f2ea647926",
+      "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
     }
   ]
 }
