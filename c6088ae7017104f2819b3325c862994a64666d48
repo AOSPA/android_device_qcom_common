@@ -1,6 +1,23 @@
 {
   "comments": [
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "a5daf18f_a3b2dd2c",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000579
+      },
+      "writtenOn": "2023-03-19T14:40:45Z",
+      "side": 1,
+      "message": "device/qcom/common/sepolicy/qva/vendor/common/hvdcp.te:4:ERROR \u0027unknown type sysfs_battery_supply\u0027 at token \u0027;\u0027 on line 130747:\nallow vendor_hvdcp cgroup:dir { create add_name };\nallow vendor_hvdcp sysfs_battery_supply:file setattr;\n\nshouldnt it have vendor prefix",
+      "revId": "c6088ae7017104f2819b3325c862994a64666d48",
+      "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "a5b5aea9_7a2c798e",
