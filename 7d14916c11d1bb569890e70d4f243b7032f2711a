@@ -16,6 +16,24 @@
       "message": "spacing, can we use a macro like r_dir_perms?",
       "revId": "7d14916c11d1bb569890e70d4f243b7032f2711a",
       "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "faa82366_ae05b4a6",
+        "filename": "sepolicy/qva/vendor/common/qcc_trd.te",
+        "patchSetId": 1
+      },
+      "lineNbr": 2,
+      "author": {
+        "id": 1000737
+      },
+      "writtenOn": "2023-03-20T13:12:39Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "b05ed192_b164fb52",
+      "revId": "7d14916c11d1bb569890e70d4f243b7032f2711a",
+      "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
     }
   ]
 }
