@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "6a84ab36_d21a334d",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000012
+      },
+      "writtenOn": "2023-03-20T13:21:37Z",
+      "side": 1,
+      "message": "can we do this without breaking existing targets?\nperhaps stop charger service if aidl service is running?",
+      "revId": "77bd68741b2d1c983f2529b9f815e81604ff0f34",
+      "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
+    }
+  ]
+}
