@@ -16,6 +16,41 @@
       "message": "can we do this without breaking existing targets?\nperhaps stop charger service if aidl service is running?",
       "revId": "77bd68741b2d1c983f2529b9f815e81604ff0f34",
       "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "4b2460e4_ab1be709",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000737
+      },
+      "writtenOn": "2023-03-20T20:22:59Z",
+      "side": 1,
+      "message": "we can make a condition for AIDL and AIDL HEALTH.  And include service charger for that",
+      "parentUuid": "6a84ab36_d21a334d",
+      "revId": "77bd68741b2d1c983f2529b9f815e81604ff0f34",
+      "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "beaf7bc6_c94b6db8",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000737
+      },
+      "writtenOn": "2023-03-20T20:22:59Z",
+      "side": 1,
+      "message": "I will do it later",
+      "revId": "77bd68741b2d1c983f2529b9f815e81604ff0f34",
+      "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
     }
   ]
 }
