@@ -67,3 +67,6 @@ user=_app seinfo=platform name=com.qti.phone domain=vendor_qtelephony type=app_d
 
 #allow embms msdc app to access embmssl hal
 user=_app seinfo=platform name=com.qti.ltebc domain=vendor_embmssl_app type=app_data_file levelFrom=all
+
+#Add new domain for trustzone access app
+user=_app seinfo=platform name=com.qualcomm.qti.qms.service.trustzoneaccess domain=vendor_tzas_app type=app_data_file levelfrom=all

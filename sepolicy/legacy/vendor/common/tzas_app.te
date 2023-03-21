@@ -1,0 +1,14 @@
+# Copyright (c) 2022 Qualcomm Innovation Center, Inc. All rights reserved.
+# SPDX-License-Identifier: BSD-3-Clause-Clear
+
+type vendor_tzas_app, domain;
+
+app_domain(vendor_tzas_app)
+net_domain(vendor_tzas_app)
+
+unix_socket_connect(vendor_tzas_app, ssgtzd, ssgtzd)
+
+binder_call(vendor_tzas_app,hal_perf_default)
+allow vendor_tzas_app app_api_service:service_manager find;
+allow vendor_tzas_app hal_perf_hwservice:hwservice_manager find;
+
