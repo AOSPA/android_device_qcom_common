@@ -202,6 +202,8 @@ PRODUCT_VENDOR_PROPERTIES += \
 
 # A/B 
 ifeq ($(TARGET_IS_VAB),true)
+$(call inherit-product, $(SRC_TARGET_DIR)/product/virtual_ab_ota/vabc_features.mk)
+
 AB_OTA_UPDATER := true
 
 AB_OTA_POSTINSTALL_CONFIG ?= \
