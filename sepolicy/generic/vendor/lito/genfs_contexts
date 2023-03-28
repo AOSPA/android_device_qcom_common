@@ -66,6 +66,8 @@ genfscon sysfs /devices/platform/soc/c440000.qcom,spmi/spmi-0/spmi0-04/c440000.q
 genfscon sysfs /devices/platform/soc/c440000.qcom,spmi/spmi-0/spmi0-06/c440000.qcom,spmi:qcom,pmk8350@6:rtc@6100/wakeup/wakeup u:object_r:sysfs_wakeup:s0
 genfscon sysfs /devices/platform/soc/c440000.qcom,spmi/spmi-0/spmi0-06/c440000.qcom,spmi:qcom,pmk8350@6:rtc@6100/rtc/rtc0/wakeup u:object_r:sysfs_wakeup:s0
 
+genfscon sysfs /devices/platform/soc/1c00000.qcom,pcie/wakeup u:object_r:sysfs_wakeup:s0
+
 # USB device wakeup nodes
 genfscon sysfs /devices/platform/soc/a600000.ssusb/wakeup/wakeup u:object_r:sysfs_wakeup:s0
 
