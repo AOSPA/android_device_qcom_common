@@ -53,7 +53,7 @@ PRODUCT_PACKAGES += \
 endif
 
 # Enable IEEE 802.11ax support
-ifeq ($(call is-board-platform-in-list, kalama kona lahaina holi taro),true)
+ifeq ($(call is-board-platform-in-list, $(5_4_FAMILY) $(5_10_FAMILY) $(5_15_FAMILY) kona),true)
 CONFIG_IEEE80211AX := true
 endif
 
