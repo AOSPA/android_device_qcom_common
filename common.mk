@@ -25,12 +25,11 @@ TRINKET := trinket
 QCOM_BOARD_PLATFORMS += \
     $(MSMSTEPPE) \
     $(TRINKET) \
+    ($(TARGET_BOARD_SUFFIX), _515) \
     atoll \
     bengal \
-    bengal_515 \
     holi \
     kona \
-    kona_515 \
     kalama \
     lahaina \
     lito \
@@ -84,11 +83,10 @@ endif
 
 # Kernel Families
 5_15_FAMILY := \
-    bengal_515 \
     crow \
-    kona_515 \
     kalama \
-    monaco
+    monaco \
+    ($(TARGET_BOARD_SUFFIX), _515)
 
 5_10_FAMILY := \
     parrot \
