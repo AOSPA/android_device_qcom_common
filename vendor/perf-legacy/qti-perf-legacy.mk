@@ -29,7 +29,7 @@ PRODUCT_COPY_FILES += \
 endif
 
 # Disable the poweropt service for <5.4 platforms.
-ifeq (,$(filter 5.4 5.10, $(TARGET_KERNEL_VERSION)))
+ifeq (,$(filter 5.4, $(TARGET_KERNEL_VERSION)))
 PRODUCT_COPY_FILES += \
     $(QCOM_COMMON_PATH)/vendor/perf-legacy/poweropt-service-disable.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/poweropt-service-disable.rc
 endif
@@ -64,7 +64,7 @@ PRODUCT_VENDOR_PROPERTIES += \
     ro.vendor.beluga.t=0x240
 endif
 
-ifneq (,$(filter 4.14 4.19 5.4 5.10, $(TARGET_KERNEL_VERSION)))
+ifneq (,$(filter 4.14 4.19 5.4, $(TARGET_KERNEL_VERSION)))
 ifeq ($(TARGET_BOARD_PLATFORM), holi)
 PRODUCT_VENDOR_PROPERTIES += vendor.pasr.activemode.enabled=false
 else
