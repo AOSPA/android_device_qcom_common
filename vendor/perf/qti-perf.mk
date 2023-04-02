@@ -60,12 +60,12 @@ PRODUCT_VENDOR_PROPERTIES += \
     ro.vendor.qspm.enable=true \
     vendor.power.pasr.enabled=true
 
-ifeq ($(call is-board-platform-in-list, kalama),true)
+ifeq ($(call is-board-platform-in-list, $(5_15_FAMILY)),true)
 PRODUCT_VENDOR_PROPERTIES += \
     vendor.perf.framepacing.enable=1
 endif
 
-ifeq ($(call is-board-platform-in-list, kalama kona lahaina parrot taro),true)
+ifeq ($(call is-board-platform-in-list, $(5_15_FAMILY) kona lahaina parrot taro),true)
 PRODUCT_VENDOR_PROPERTIES += \
     ro.vendor.beluga.p=0x3 \
     ro.vendor.beluga.c=0x4800 \
