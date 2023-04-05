@@ -386,4 +386,7 @@
         re-established on the target transport when condition is allowed for bringing up a
         new network. -->
     <bool name="config_enhanced_iwlan_handover_check">false</bool>
+
+    <!-- Support decoding of GSM 8 bit encoded SMS-->
+    <bool translatable="false" name="config_sms_decode_gsm_8bit_data">true</bool>
 </resources>
