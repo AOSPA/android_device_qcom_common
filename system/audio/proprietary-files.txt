@@ -5,8 +5,8 @@ system_ext/etc/seccomp_policy/sxraux-arm.policy
 system_ext/framework/audiosphere.jar
 system_ext/framework/vendor.qti.voiceprint-V1.0-java.jar
 system_ext/lib/libbinauralrenderer_wrapper.qti.so
-system_ext/lib/libhoaeffects_csim.so
 system_ext/lib/libhoaeffects.qti.so
+system_ext/lib/libhoaeffects_csim.so
 system_ext/lib/liblistenjni.qti.so
 system_ext/lib/liblistensoundmodel2.qti.so
 system_ext/lib/liblsmclient.so
@@ -15,11 +15,12 @@ system_ext/lib/libvr_object_engine.so
 system_ext/lib/vendor.qti.hardware.audiohalext@1.0.so
 system_ext/lib/vendor.qti.voiceprint@1.0.so
 system_ext/lib64/libbinauralrenderer_wrapper.qti.so
-system_ext/lib64/libhoaeffects_csim.so
 system_ext/lib64/libhoaeffects.qti.so
+system_ext/lib64/libhoaeffects_csim.so
 system_ext/lib64/liblistenjni.qti.so
 system_ext/lib64/liblistensoundmodel2.qti.so
 system_ext/lib64/liblsmclient.so
+system_ext/lib64/libqxrsplitauxservice.qti.so
 system_ext/lib64/libvr_amb_engine.so
 system_ext/lib64/libvr_object_engine.so
 system_ext/lib64/vendor.qti.hardware.audiohalext@1.0.so
