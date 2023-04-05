@@ -3,6 +3,8 @@
     coreApp="true"
     package="com.android.wifi.resources.overlay.common">
 
+    <application android:hasCode="false"/>
+
     <overlay
         android:isStatic="true"
         android:priority="700"
