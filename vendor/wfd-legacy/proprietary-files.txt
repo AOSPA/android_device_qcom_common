@@ -1,9 +1,0 @@
-vendor/lib/libmiracast.so
-vendor/lib/libwfdcommonutils_proprietary.so
-vendor/lib/libwfddisplayconfig_proprietary.so
-vendor/lib/libwfdhaldsmanager.so
-vendor/lib/libwfdhdcpcp.so
-vendor/lib/libwfdmmservice.so
-vendor/lib/libwfdmodulehdcpsession.so
-vendor/lib64/libmiracast.so
-vendor/lib64/libwfdhdcpcp.so
