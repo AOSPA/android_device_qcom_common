@@ -138,12 +138,7 @@ ifneq (,$(filter vibrator, $(TARGET_COMMON_QTI_COMPONENTS)))
 endif
 
 ifneq (,$(filter wfd, $(TARGET_COMMON_QTI_COMPONENTS)))
-  ifeq ($(call is-board-platform-in-list,$(3_18_FAMILY) $(4_4_FAMILY) msm8953),true)
-    include $(QCOM_COMMON_PATH)/system/wfd-legacy/qti-wfd-legacy.mk
-    include $(QCOM_COMMON_PATH)/vendor/wfd-legacy/qti-wfd-legacy.mk
-  else
-    include $(QCOM_COMMON_PATH)/system/wfd/qti-wfd.mk
-  endif
+  include $(QCOM_COMMON_PATH)/system/wfd/qti-wfd.mk
 endif
 
 ifneq (,$(filter wlan, $(TARGET_COMMON_QTI_COMPONENTS)))
