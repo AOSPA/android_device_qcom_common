@@ -30,7 +30,7 @@
 #
 
 service vendor.sensors /vendor/bin/sscrpcd sensorspd
-    class early_hal
+    class core
     user system
     group system wakelock
     capabilities BLOCK_SUSPEND
