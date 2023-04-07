@@ -16,6 +16,24 @@
       "message": "The title needs to be corrected, \"vendor: charging:\" instead of \"vendor: chargin:\"",
       "revId": "09f5fdcb0b6d2e8e6e208546e50d7f80be896847",
       "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "6a0aa1eb_1deb2ce8",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 3
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000737
+      },
+      "writtenOn": "2023-04-07T20:13:13Z",
+      "side": 1,
+      "message": "done",
+      "parentUuid": "4474e82d_b649b197",
+      "revId": "09f5fdcb0b6d2e8e6e208546e50d7f80be896847",
+      "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
     }
   ]
 }
