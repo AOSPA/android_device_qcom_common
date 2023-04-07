@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "5879c193_e820c0be",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 5
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000579
+      },
+      "writtenOn": "2023-04-07T04:56:02Z",
+      "side": 1,
+      "message": "fixes fast charging on alioth",
+      "revId": "8a599a2164d0b825b2f3c615b3d3ad6113e8750e",
+      "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
+    }
+  ]
+}
