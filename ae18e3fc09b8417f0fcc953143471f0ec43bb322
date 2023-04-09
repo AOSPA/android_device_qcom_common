@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "75db9548_77a09da5",
+        "filename": "components.mk",
+        "patchSetId": 2
+      },
+      "lineNbr": 16,
+      "author": {
+        "id": 1000012
+      },
+      "writtenOn": "2023-04-09T02:47:36Z",
+      "side": 1,
+      "message": "weren\u0027t we dropping these",
+      "revId": "ae18e3fc09b8417f0fcc953143471f0ec43bb322",
+      "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
+    }
+  ]
+}
