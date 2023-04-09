@@ -192,7 +192,7 @@ echo 0 > /sys/devices/system/cpu/cpufreq/policy0/schedutil/down_rate_limit_us
 echo 0 > /sys/devices/system/cpu/cpufreq/policy0/schedutil/up_rate_limit_us
 echo 1152000 > /sys/devices/system/cpu/cpufreq/policy0/schedutil/hispeed_freq
 echo 691200 > /sys/devices/system/cpu/cpufreq/policy0/scaling_min_freq
-echo 0 > /sys/devices/system/cpu/cpufreq/policy0/schedutil/pl
+echo 1 > /sys/devices/system/cpu/cpufreq/policy0/schedutil/pl
 
 # configure input boost settings
 echo "0:1152000" > /sys/devices/system/cpu/cpu_boost/input_boost_freq
@@ -209,7 +209,7 @@ echo -6 > /sys/devices/system/cpu/cpu4/sched_load_boost
 echo -6 > /sys/devices/system/cpu/cpu5/sched_load_boost
 echo -6 > /sys/devices/system/cpu/cpu6/sched_load_boost
 echo 0 > /sys/devices/system/cpu/cpufreq/policy4/schedutil/rtg_boost_freq
-echo 0 > /sys/devices/system/cpu/cpufreq/policy4/schedutil/pl
+echo 1 > /sys/devices/system/cpu/cpufreq/policy4/schedutil/pl
 
 # configure governor settings for gold+ cluster
 echo "schedutil" > /sys/devices/system/cpu/cpufreq/policy7/scaling_governor
@@ -220,7 +220,7 @@ echo 806400 > /sys/devices/system/cpu/cpufreq/policy7/scaling_min_freq
 echo 85 > /sys/devices/system/cpu/cpufreq/policy7/schedutil/hispeed_load
 echo -6 > /sys/devices/system/cpu/cpu7/sched_load_boost
 echo 0 > /sys/devices/system/cpu/cpufreq/policy7/schedutil/rtg_boost_freq
-echo 0 > /sys/devices/system/cpu/cpufreq/policy7/schedutil/pl
+echo 1 > /sys/devices/system/cpu/cpufreq/policy7/schedutil/pl
 
 # colocation V3 settings
 echo 691200 > /sys/devices/system/cpu/cpufreq/policy0/schedutil/rtg_boost_freq
