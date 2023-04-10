@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "6a419936_a9780bc5",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000548
+      },
+      "writtenOn": "2023-04-10T11:30:09Z",
+      "side": 1,
+      "message": "\"($(TARGET_BOARD_SUFFIX), _5.15)\" is invalid and should be corrected to \"$(TARGET_BOARD_SUFFIX)_5.15\"",
+      "revId": "b84c5431656c594f0c0e6f1e51b2fd2046319bd1",
+      "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
+    }
+  ]
+}
