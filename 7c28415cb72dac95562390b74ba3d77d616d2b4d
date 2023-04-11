@@ -16,6 +16,24 @@
       "message": "is this used?  does this spam logs?",
       "revId": "7c28415cb72dac95562390b74ba3d77d616d2b4d",
       "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "a0e0d9b7_cda73f9e",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000737
+      },
+      "writtenOn": "2023-04-11T15:11:41Z",
+      "side": 1,
+      "message": "yes, have log about this",
+      "parentUuid": "f574dde5_d9f6a7f2",
+      "revId": "7c28415cb72dac95562390b74ba3d77d616d2b4d",
+      "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
     }
   ]
 }
