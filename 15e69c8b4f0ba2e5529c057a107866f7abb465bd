@@ -16,6 +16,24 @@
       "message": "doesn\u0027t look like something used by our targets",
       "revId": "15e69c8b4f0ba2e5529c057a107866f7abb465bd",
       "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "ea38a2de_098b090a",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000737
+      },
+      "writtenOn": "2023-04-12T18:53:10Z",
+      "side": 1,
+      "message": "This has been merged by qualcom into LA.UM.9.15.2.r1-07000-KAMORTA.QSSI-12.0",
+      "parentUuid": "8fdcdcaf_245ab18c",
+      "revId": "15e69c8b4f0ba2e5529c057a107866f7abb465bd",
+      "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
     }
   ]
 }
