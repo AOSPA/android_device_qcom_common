@@ -14,5 +14,6 @@ prebuilt_hidl_interfaces {
         "vendor.qti.hardware.vpp@1.1::IHidlVppService",
         "vendor.qti.hardware.vpp@1.2::IHidlVppService",
         "vendor.qti.hardware.vpp@1.3::IHidlVppService",
+        "vendor.qti.hardware.vpp@2.0::IHidlVppService",
     ],
 }
