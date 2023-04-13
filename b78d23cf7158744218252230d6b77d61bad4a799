@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "d474d5f9_1ea5b97e",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000760
+      },
+      "writtenOn": "2023-04-13T13:39:38Z",
+      "side": 1,
+      "message": "https://github.com/aospa-dubai/proprietary_vendor_qcom_common",
+      "revId": "b78d23cf7158744218252230d6b77d61bad4a799",
+      "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
+    }
+  ]
+}
