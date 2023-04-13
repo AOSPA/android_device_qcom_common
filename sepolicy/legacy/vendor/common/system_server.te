@@ -86,7 +86,7 @@ allow system_server {
     serial_device
     smd_device
     #allow access to power control ANT chip
-    bt_device
+    vendor_bt_device
 }:chr_file rw_file_perms;
 
 hal_client_domain(system_server, hal_dataconnection_qti)

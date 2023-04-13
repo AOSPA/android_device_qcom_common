@@ -54,8 +54,8 @@
 /dev/spdaemon_ssr                               u:object_r:spdaemon_ssr_device:s0
 /dev/qsee_ipc_irq_spss                          u:object_r:qsee_ipc_irq_spss_device:s0
 /dev/radio0                                     u:object_r:fm_radio_device:s0
-/dev/btpower                                    u:object_r:bt_device:s0
-/dev/btfmslim                                   u:object_r:bt_device:s0
+/dev/btfmslim                                   u:object_r:vendor_bt_device:s0
+/dev/btpower                                    u:object_r:vendor_bt_device:s0
 /dev/rtc0                                       u:object_r:rtc_device:s0
 /dev/sdsprpc-smd                                u:object_r:dsp_device:s0
 /dev/sensors                                    u:object_r:sensors_device:s0
