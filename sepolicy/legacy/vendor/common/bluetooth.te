@@ -49,7 +49,7 @@ allow bluetooth {
     serial_device
     #BT needes read and write on smd device node
     smd_device
-    bt_device
+    vendor_bt_device
 }:chr_file rw_file_perms;
 
 

@@ -56,7 +56,7 @@ allow hal_bluetooth_qti vendor_bt_data_file:file create_file_perms;
 #bt power node access
 allow hal_bluetooth {
     smd_device
-    bt_device
+    vendor_bt_device
 }:chr_file rw_file_perms;
 
 #diag access
