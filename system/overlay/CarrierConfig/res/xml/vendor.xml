@@ -150,7 +150,6 @@ IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.-->
         <boolean name="carrier_volte_available_bool" value="true" />
         <boolean name="carrier_vt_available_bool" value="true" />
         <boolean name="carrier_wfc_ims_available_bool" value="true" />
-        <boolean name="check_mobile_data_for_cf" value="true" />
     </carrier_config>
 
     <carrier_config mcc="204" mnc="04" iccid="898603,898611,8985231,8985302,8985307">
@@ -2223,6 +2222,22 @@ IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.-->
         <boolean name="carrier_b2c_enriched_calling_supported_bool" value="true"/>
     </carrier_config>
 
+    <carrier_config mcc="310" mnc="02">
+        <boolean name="rtt_auto_upgrade_bool" value="true" />
+        <boolean name="rtt_supported_bool" value="true" />
+        <boolean name="rtt_upgrade_supported_bool" value="true"/>
+        <boolean name="rtt_downgrade_supported_bool" value="true"/>
+        <boolean name="carrier_volte_available_bool" value="true" />
+        <boolean name="carrier_vt_available_bool" value="true" />
+        <boolean name="carrier_wfc_ims_available_bool" value="true" />
+        <boolean name="allow_emergency_video_calls_bool" value="true" />
+        <boolean name="carrier_volte_tty_supported_bool" value="true" />
+        <boolean name="gsm_cdma_calls_can_be_hd_audio" value="true" />
+        <boolean name="carrier_call_composer_supported_bool" value="true"/>
+        <boolean name="carrier_allow_turnoff_ims_bool" value="false"/>
+        <boolean name="carrier_b2c_enriched_calling_supported_bool" value="true"/>
+    </carrier_config>
+
     <carrier_config mcc="310" mnc="030">
         <boolean name="carrier_volte_available_bool" value="true" />
         <boolean name="carrier_vt_available_bool" value="true" />
@@ -2260,6 +2275,22 @@ IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.-->
         <boolean name="carrier_wfc_ims_available_bool" value="true" />
         <boolean name="config_enable_display_14digit_imei" value="true" />
         <boolean name="config_enable_mms_with_mobile_data_off" value="true" />
+    </carrier_config>
+
+    <carrier_config mcc="310" mnc="88">
+        <boolean name="rtt_auto_upgrade_bool" value="true" />
+        <boolean name="rtt_supported_bool" value="true" />
+        <boolean name="rtt_upgrade_supported_bool" value="true"/>
+        <boolean name="rtt_downgrade_supported_bool" value="true"/>
+        <boolean name="carrier_volte_available_bool" value="true" />
+        <boolean name="carrier_vt_available_bool" value="true" />
+        <boolean name="carrier_wfc_ims_available_bool" value="true" />
+        <boolean name="allow_emergency_video_calls_bool" value="true" />
+        <boolean name="carrier_volte_tty_supported_bool" value="true" />
+        <boolean name="gsm_cdma_calls_can_be_hd_audio" value="true" />
+        <boolean name="carrier_call_composer_supported_bool" value="true"/>
+        <boolean name="carrier_allow_turnoff_ims_bool" value="false"/>
+        <boolean name="carrier_b2c_enriched_calling_supported_bool" value="true"/>
     </carrier_config>
 
     <carrier_config mcc="310" mnc="090">
