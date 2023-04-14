@@ -90,4 +90,10 @@
          be deleted to make room for new configs.-->
     <integer translatable="false" name="config_wifiMaxNumWifiConfigurations">1000</integer>
 
+    <!-- Boolean indicating whether the framework updates country from scan results when there is
+         no telephony country code. This is applied to all generic cases and might require the
+         regulatory approval (for example, FCC pre-approval is required according to "594280 D01
+         Software Configuration Control v02r01").-->
+    <bool translatable="false" name ="config_wifiUpdateCountryCodeFromScanResultGeneric">true</bool>
+
 </resources>
