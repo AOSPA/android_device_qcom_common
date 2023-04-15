@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "d9cc755b_8f395273",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 3
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000548
+      },
+      "writtenOn": "2023-04-15T11:53:46Z",
+      "side": 1,
+      "message": "This will fail, https://gerrit.aospa.co/plugins/gitiles/AOSPA/android_device_qcom_common/+/de9197b0ae92a290b6c7b60a27292a201a40d053/vendor/init/qti-init.mk#52\n\nthat copies based on TARGET_BOARD_PLATFORM however according to\n\nhttps://git.codelinaro.org/clo/la/device/qcom/bengal_515/-/blob/LA.VENDOR.13.2.1.r1-06400-DIVAR.0/BoardConfig.mk\n\nits still set to bengal, maybe keep the folder naming the same.",
+      "revId": "54b3a3e9286e346dc187ec96a02324622b0c74e3",
+      "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
+    }
+  ]
+}
