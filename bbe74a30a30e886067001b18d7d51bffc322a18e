@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "cf7ff7fe_acfb85cb",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 3
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000548
+      },
+      "writtenOn": "2023-04-15T11:49:34Z",
+      "side": 1,
+      "message": "Platforms aren\u0027t required to use tavil sound cards, there just exists QRDs with them. In fact, https://github.com/AOSPA/android_hardware_qcom_audio/blob/sapphire-855/configs/trinket/audio_tuning_mixer_tavil.txt shows paths being \"enabled\" which don\u0027t even exist on devices using external codecs which the majority of devices do.\n\nThe \"log spam\" is very minor and bearable.",
+      "revId": "bbe74a30a30e886067001b18d7d51bffc322a18e",
+      "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
+    }
+  ]
+}
