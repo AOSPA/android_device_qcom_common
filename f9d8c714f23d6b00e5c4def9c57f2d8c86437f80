@@ -34,6 +34,23 @@
       "parentUuid": "30619e6e_1eb2cf10",
       "revId": "f9d8c714f23d6b00e5c4def9c57f2d8c86437f80",
       "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "0324d228_2d3ed6d2",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000760
+      },
+      "writtenOn": "2023-04-16T19:44:17Z",
+      "side": 1,
+      "message": "also waipio is supposed to use perf component, hence it won\u0027t get affected by perf-legacy changes anyways",
+      "revId": "f9d8c714f23d6b00e5c4def9c57f2d8c86437f80",
+      "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
     }
   ]
 }
