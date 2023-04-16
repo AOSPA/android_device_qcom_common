@@ -79,4 +79,4 @@ PRODUCT_COPY_FILES += \
     device/qcom/common/vendor/media/init.qti.media.sh:$(TARGET_COPY_OUT_VENDOR)/bin/init.qti.media.sh
 
 # Get non-open-source specific aspects.
-$(call inherit-product-if-exists, vendor/qcom/common/vendor/media/media-vendor.mk)
+$(call inherit-product, vendor/qcom/common/vendor/media/media-vendor.mk)

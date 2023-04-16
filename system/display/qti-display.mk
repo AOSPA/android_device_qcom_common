@@ -24,4 +24,4 @@ PRODUCT_PACKAGES += \
     android.hardware.graphics.common-V1-ndk_platform
 
 # Get non-open-source specific aspects.
-$(call inherit-product-if-exists, vendor/qcom/common/system/display/display-vendor.mk)
+$(call inherit-product, vendor/qcom/common/system/display/display-vendor.mk)

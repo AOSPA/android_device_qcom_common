@@ -30,7 +30,7 @@ PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.se.omapi.uicc.xml:$(NFC_PERMISSIONS_DIR)/android.hardware.se.omapi.uicc.xml
 
 # Get non-open-source specific aspects.
-$(call inherit-product-if-exists, vendor/qcom/common/vendor/nfc/nq-nfc-vendor.mk)
+$(call inherit-product, vendor/qcom/common/vendor/nfc/nq-nfc-vendor.mk)
 
 else
 

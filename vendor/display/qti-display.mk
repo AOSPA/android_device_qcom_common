@@ -50,4 +50,4 @@ PRODUCT_VENDOR_PROPERTIES += \
 endif
 
 # Get non-open-source specific aspects.
-$(call inherit-product-if-exists, vendor/qcom/common/vendor/display/$(TARGET_KERNEL_VERSION)/display-vendor.mk)
+$(call inherit-product, vendor/qcom/common/vendor/display/$(TARGET_KERNEL_VERSION)/display-vendor.mk)

@@ -30,4 +30,4 @@ PRODUCT_SYSTEM_EXT_PROPERTIES += \
 $(call inherit-product-if-exists, vendor/qcom/opensource/commonsys-intf/display/config/display-product-system.mk)
 
 # Get non-open-source specific aspects
-$(call inherit-product-if-exists, vendor/qcom/common/system/wfd/wfd-vendor.mk)
+$(call inherit-product, vendor/qcom/common/system/wfd/wfd-vendor.mk)

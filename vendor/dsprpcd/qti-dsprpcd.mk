@@ -24,4 +24,4 @@ endif
 endif
 
 # Get non-open-source specific aspects.
-$(call inherit-product-if-exists, vendor/qcom/common/vendor/dsprpcd/dsprpcd-vendor.mk)
+$(call inherit-product, vendor/qcom/common/vendor/dsprpcd/dsprpcd-vendor.mk)

@@ -78,4 +78,4 @@ else
 endif
 
 # Get non-open-source specific aspects.
-$(call inherit-product-if-exists, vendor/qcom/common/vendor/wlan-legacy/wlan-legacy-vendor.mk)
+$(call inherit-product, vendor/qcom/common/vendor/wlan-legacy/wlan-legacy-vendor.mk)

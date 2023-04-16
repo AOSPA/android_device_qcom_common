@@ -23,4 +23,4 @@ DEVICE_MANIFEST_FILE += \
     $(QCOM_COMMON_PATH)/vendor/keymaster/keymaster-manifest.xml
 
 # Get non-open-source specific aspects.
-$(call inherit-product-if-exists, vendor/qcom/common/vendor/keymaster/keymaster-vendor.mk)
+$(call inherit-product, vendor/qcom/common/vendor/keymaster/keymaster-vendor.mk)

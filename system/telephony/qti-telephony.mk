@@ -49,4 +49,4 @@ PRODUCT_SYSTEM_EXT_PROPERTIES += \
 endif
 
 # Get non-open-source specific aspects.
-$(call inherit-product-if-exists, vendor/qcom/common/system/telephony/telephony-vendor.mk)
+$(call inherit-product, vendor/qcom/common/system/telephony/telephony-vendor.mk)

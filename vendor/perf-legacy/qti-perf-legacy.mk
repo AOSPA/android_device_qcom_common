@@ -73,4 +73,4 @@ endif
 endif
 
 # Get non-open-source specific aspects
-$(call inherit-product-if-exists, vendor/qcom/common/vendor/perf-legacy/perf-legacy-vendor.mk)
+$(call inherit-product, vendor/qcom/common/vendor/perf-legacy/perf-legacy-vendor.mk)

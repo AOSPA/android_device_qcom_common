@@ -23,4 +23,4 @@ PRODUCT_PACKAGES += \
     libavservices_minijail
 
 # Get non-open-source specific aspects
-$(call inherit-product-if-exists, vendor/qcom/common/system/perf/perf-vendor.mk)
+$(call inherit-product, vendor/qcom/common/system/perf/perf-vendor.mk)
