@@ -68,6 +68,24 @@
       "message": "don\u0027t like this.  I would like to see if the app compact change is necessary but the rest are just rolling back changes from future branches that weren\u0027t backported.",
       "revId": "f9d8c714f23d6b00e5c4def9c57f2d8c86437f80",
       "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "cbafb2d6_69ee004e",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000760
+      },
+      "writtenOn": "2023-04-16T19:51:23Z",
+      "side": 1,
+      "message": "so shall i just do that app compact change??",
+      "parentUuid": "000461a4_a2e624d8",
+      "revId": "f9d8c714f23d6b00e5c4def9c57f2d8c86437f80",
+      "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
     }
   ]
 }
