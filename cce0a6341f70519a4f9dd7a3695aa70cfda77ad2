@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "401d104e_e300ecbd",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000012
+      },
+      "writtenOn": "2023-04-17T02:38:27Z",
+      "side": 1,
+      "message": "this doesn\u0027t really buy us anything and in case we transition to perf for all, we may as well not do this.",
+      "revId": "cce0a6341f70519a4f9dd7a3695aa70cfda77ad2",
+      "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
+    }
+  ]
+}
