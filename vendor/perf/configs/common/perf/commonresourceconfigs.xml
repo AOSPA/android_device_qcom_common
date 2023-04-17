@@ -45,8 +45,8 @@ need to be added just before the end of it's major group. -->
     <Major OpcodeValue="0x2" />
         <Minor OpcodeValue="0x0" Node="/sys/module/msm_performance/parameters/cpu_min_freq" />
         <Minor OpcodeValue="0x1" Node="/sys/module/msm_performance/parameters/cpu_max_freq" />
-        <Minor OpcodeValue="0x2" Node="/sys/devices/system/cpu/cpufreq/policy4/walt/adaptive_low_freq" />
-        <Minor OpcodeValue="0x3" Node="/sys/devices/system/cpu/cpufreq/policy4/walt/adaptive_high_freq" />
+        <Minor OpcodeValue="0x2" Node="/sys/devices/system/cpu/cpufreq/policy0/walt/adaptive_low_freq" />
+        <Minor OpcodeValue="0x3" Node="/sys/devices/system/cpu/cpufreq/policy0/walt/adaptive_high_freq" />
     <!-- cpufreq major end -->
 
     <!-- sched major start -->
@@ -88,7 +88,7 @@ need to be added just before the end of it's major group. -->
         <Minor OpcodeValue="0x1D" Node="/proc/sys/kernel/sched_busy_hysteresis_enable_cpus" />
         <Minor OpcodeValue="0x1E" Node="/proc/sys/kernel/sched_min_task_util_for_colocation" />
         <Minor OpcodeValue="0x1F" Node="/proc/sys/kernel/sched_min_task_util_for_boost" />
-        <Minor OpcodeValue="0x20" Node="/proc/%d/sched_boost" Supported="yes"/> <!-- sched_task_boost -->
+        <Minor OpcodeValue="0x20" Node="SPECIAL_NODE - apply_value" />
         <Minor OpcodeValue="0x21" Node="/proc/sys/kernel/sched_user_hint" /> <!--sched_user_hint -->
         <Minor OpcodeValue="0x22" Node="/proc/sys/kernel/sched_task_unfilter_nr_windows" /> <!--sched_task_unfilter_nr_windows -->
         <Minor OpcodeValue="0x23" Node="/proc/sys/kernel/sched_coloc_downmigrate_ns" /> <!--sched_coloc_downmigrate_ns  -->
@@ -108,7 +108,7 @@ need to be added just before the end of it's major group. -->
         <Minor OpcodeValue="0x31" Node="/proc/sys/walt/sched_coloc_busy_hyst_cpu_ns" />
         <Minor OpcodeValue="0x32" Node="/proc/sys/kernel/walt_rtg_cfs_boost_prio" />
         <Minor OpcodeValue="0x33" Node="/proc/sys/kernel/sched_force_lb_enable" Supported="yes" />
-        <Minor OpcodeValue="0x34" Node="/proc/%d/sched_low_latency" Supported="yes" />
+        <Minor OpcodeValue="0x34" Node="SPECIAL_NODE - apply_value" />
         <Minor OpcodeValue="0x35" Node="/proc/sys/kernel/sched_min_granularity_ns" />
         <Minor OpcodeValue="0x36" Node="/proc/sys/kernel/walt_low_latency_task_threshold" />
         <Minor OpcodeValue="0x37" Node="/dev/stune/foreground/schedtune.prefer_idle" />
@@ -127,6 +127,7 @@ need to be added just before the end of it's major group. -->
         <Minor OpcodeValue="0x0" Node="SPECIAL_NODE - lock_min_cores" />
         <Minor OpcodeValue="0x1" Node="SPECIAL_NODE - lock_max_cores" />
         <Minor OpcodeValue="0x2" Node="/sys/devices/system/cpu/cpu0/core_ctl/enable" />
+        <Minor OpcodeValue="0x3" Node="/sys/devices/system/cpu/cpu3/core_ctl/not_preferred" />
     <!-- core hotplug major end-->
 
     <!-- interactive major start -->
@@ -223,7 +224,7 @@ need to be added just before the end of it's major group. -->
         <Minor OpcodeValue="0x7" Node="SPECIAL_NODE - gpu_disable_gpu_nap" />
         <Minor OpcodeValue="0x8" Node="/sys/class/kgsl/kgsl/proc/%d/state" />
         <Minor OpcodeValue="0x9" Node="/sys/class/kgsl/kgsl/proc/%d/state" />
-        <Minor OpcodeValue="0xA" Node="/sys/class/kgsl/kgsl-3d0/devfreq/mod_percent" />
+        <Minor OpcodeValue="0xA" Node="SPECIAL_NODE - apply_value" />
         <Minor OpcodeValue="0xB" Node="/sys/class/kgsl/kgsl-3d0/idle_timer" />
     <!-- gpu major end -->
 
@@ -237,7 +238,8 @@ need to be added just before the end of it's major group. -->
         <Minor OpcodeValue="0x5" Node="SPECIAL_NODE - dummy_or_keep_alive" />
         <Minor OpcodeValue="0x6" Node="/sys/module/process_reclaim/parameters/enable_process_reclaim" />
         <Minor OpcodeValue="0x7" Node="SPECIAL_NODE - disable_pasr" />
-        <Minor OpcodeValue="0xC" Node="/proc/sys/walt/sched_pipeline" />
+        <Minor OpcodeValue="0xB" Node="SPECIAL_NODE - apply_value" />
+        <Minor OpcodeValue="0xC" Node="SPECIAL_NODE - apply_value" />
     <!-- misc major end -->
 
     <!-- llcbw hwmon major start -->
@@ -310,6 +312,10 @@ need to be added just before the end of it's major group. -->
         <Minor OpcodeValue="0x23" Node="/sys/devices/system/cpu/bus_dcvs/LLCC/soc:qcom,memlat:llcc:gold/min_freq" />
         <Minor OpcodeValue="0x24" Node="/sys/devices/system/cpu/bus_dcvs/DDR/soc:qcom,memlat:ddr:gold/spm_thres" />
         <Minor OpcodeValue="0x25" Node="/sys/devices/system/cpu/bus_dcvs/DDR/soc:qcom,memlat:ddr:prime/spm_thres" />
+        <Minor OpcodeValue="0x26" Node="/sys/devices/system/cpu/bus_dcvs/DDR/boost_freq" />
+        <Minor OpcodeValue="0x27" Node="/sys/devices/system/cpu/bus_dcvs/L3/boost_freq" />
+        <Minor OpcodeValue="0x28" Node="/sys/devices/system/cpu/bus_dcvs/LLCC/boost_freq" />
+        <Minor OpcodeValue="0x29" Node="/sys/devices/system/cpu/bus_dcvs/DDRQOS/boost_freq" />
     <!-- memlat major end -->
 
     <!-- npu major start -->
@@ -327,7 +333,15 @@ need to be added just before the end of it's major group. -->
     <!-- sched2 major start -->
     <Major OpcodeValue="0xF" />
         <Minor OpcodeValue="0x0" Node="/proc/sys/walt/sched_asymcap_boost" />
+        <Minor OpcodeValue="0x1" Node="/proc/sys/walt/task_load_boost" />
+        <Minor OpcodeValue="0x2" Node="/proc/sys/walt/sched_cluster_util_thres_pct" />
+        <Minor OpcodeValue="0x3" Node="/proc/sys/walt/sched_idle_enough" />
+        <Minor OpcodeValue="0x4" Node="/proc/sys/walt/sched_em_inflate_pct" />
+        <Minor OpcodeValue="0x5" Node="/proc/sys/walt/sched_em_inflate_thres" />
     <!-- sched2 major end -->
+    <!--Add new resource expected value and write value in configs/test/common/perfcommonresourceconfigs.xml
+    for support in regression framework-->
+
 
     </PerfResources>
 </ResourceConfigs>
