@@ -45,23 +45,34 @@ fi
 target=`getprop ro.board.platform`
 case "$target" in
     "neo")
-        setprop vendor.mm.target.enable.qcom_parser 0
+        setprop vendor.mm.target.enable.qcom_parser 1040463
+        setprop vendor.netflix.bsp_rev ""
         case "$soc_hwid" in
+            579)
+                setprop vendor.media.target_variant "_neo_v2"
+                ;;
             *)
-                setprop vendor.media.target_variant "_neo"
+                setprop vendor.media.target_variant "_neo_v1"
                 ;;
         esac
         ;;
     "parrot")
         setprop vendor.mm.target.enable.qcom_parser 1040463
-        setprop vendor.media.target_variant "_parrot_v2"
-        setprop vendor.netflix.bsp_rev ""
-        sku_ver=`cat /sys/devices/platform/soc/aa00000.qcom,vidc/sku_version` 2> /dev/null
-        if [ $sku_ver -eq 0 ]; then
-            setprop vendor.media.target_variant "_parrot_v0"
-        elif [ $sku_ver -eq 1 ]; then
-            setprop vendor.media.target_variant "_parrot_v1"
-        fi
+        case "$soc_hwid" in
+            568|602|581|582)
+                setprop vendor.media.target_variant "_ravelin"
+                ;;
+            *)
+                setprop vendor.media.target_variant "_parrot_v2"
+                sku_ver=`cat /sys/devices/platform/soc/aa00000.qcom,vidc/sku_version` 2> /dev/null
+                if [ $sku_ver -eq 0 ]; then
+                    setprop vendor.media.target_variant "_parrot_v0"
+                elif [ $sku_ver -eq 1 ]; then
+                    setprop vendor.media.target_variant "_parrot_v1"
+                fi
+                    setprop vendor.netflix.bsp_rev "Q6450-36256-1"
+                ;;
+        esac
         ;;
     "taro")
         setprop vendor.mm.target.enable.qcom_parser 1040463
@@ -75,18 +86,19 @@ case "$target" in
                 elif [ $sku_ver -eq 1 ]; then
                     setprop vendor.media.target_variant "_diwali_v1"
                 fi
-                setprop vendor.netflix.bsp_rev "Q7450-35705-1"
+                    setprop vendor.netflix.bsp_rev "Q7450-35705-1"
                 ;;
             591)
                 setprop vendor.media.target_variant "_ukee"
+                    setprop vendor.netflix.bsp_rev "Q8450-34634-1"
                 ;;
             530|531|540)
                 setprop vendor.media.target_variant "_cape"
-                setprop vendor.netflix.bsp_rev "Q8450-34634-1"
+                    setprop vendor.netflix.bsp_rev "Q8450-34634-1"
                 ;;
             *)
                 setprop vendor.media.target_variant "_taro"
-                setprop vendor.netflix.bsp_rev "Q8450-34634-1"
+                    setprop vendor.netflix.bsp_rev "Q8450-34634-1"
                 ;;
         esac
         ;;
@@ -108,10 +120,22 @@ case "$target" in
                 ;;
         esac
         ;;
+    "bengal")
+        setprop vendor.mm.target.enable.qcom_parser 0
+        case "$soc_hwid" in
+            518|561|585|586)
+                setprop vendor.media.target_variant "_khaje_v0"
+                setprop vendor.netflix.bsp_rev "Q6115-31409-1"
+                ;;
+        esac
+        ;;
     "holi")
         setprop vendor.media.target_variant "_holi"
         ;;
     "msmnile")
         setprop vendor.media.target_variant "_msmnile"
+        ;;
+    "monaco")
+        setprop vendor.media.target_variant "_monaco"
         ;;
 esac
