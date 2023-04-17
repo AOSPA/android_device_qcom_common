@@ -7,7 +7,7 @@
       Each feature has an xml file to define the feature components
 
   ===========================================================================
-  Copyright (c) 2022 Qualcomm Technologies, Inc.
+  Copyright (c) 2021 Qualcomm Technologies, Inc.
   All Rights Reserved.
   Confidential and Proprietary - Qualcomm Technologies, Inc.
   ===========================================================================
@@ -22,35 +22,68 @@
     <Libname>libapengine.so</Libname>
     <Configs>
         <STUTTER_SCALE>10</STUTTER_SCALE>
+        <THERMAL_MONITOR>1</THERMAL_MONITOR>
+        <THERMAL_MONITOR_RULES>GAME_OPT_TSENS_RULE1,GAME_OPT_TSENS_RULE2,GAME_OPT_TSENS_RULE3</THERMAL_MONITOR_RULES>
+        <!-- FPS threshold values in the order: Increase, Aggressive Increase, Decrease -->
+        <FPS_30_THRESHOLD>0.6, 1.0, 0.4</FPS_30_THRESHOLD>
+        <FPS_35_THRESHOLD>0.6, 1.0, 0.4</FPS_35_THRESHOLD>
+        <FPS_40_THRESHOLD>0.6, 1.0, 0.4</FPS_40_THRESHOLD>
+        <FPS_60_THRESHOLD>0.6, 1.0, 0.4</FPS_60_THRESHOLD>
+        <FPS_90_THRESHOLD>2.0, 5.0, 1.0</FPS_90_THRESHOLD>
+        <FPS_120_THRESHOLD>2.0, 5.0, 1.0</FPS_120_THRESHOLD>
+        <FPS_144_THRESHOLD>2.0, 5.0, 1.0</FPS_144_THRESHOLD>
         <GROUP_UPMIGRATE_PATH>/proc/sys/walt/sched_group_upmigrate</GROUP_UPMIGRATE_PATH>
         <GROUP_DOWNMIGRATE_PATH>/proc/sys/walt/sched_group_downmigrate</GROUP_DOWNMIGRATE_PATH>
         <BIG_CLUSTER_ID>4,5,6,7</BIG_CLUSTER_ID>
+        <QSPM_EXCLUSIIVE>0</QSPM_EXCLUSIIVE>
+        <THERMAL_ATA_LEVEL_THRESHOLDS>-1, -1, -1</THERMAL_ATA_LEVEL_THRESHOLDS>
+        <THERMAL_ATA_SKIN_THRESHOLD>51</THERMAL_ATA_SKIN_THRESHOLD>
     </Configs>
     <Profiles>
         <Profile>
-            <!-- CORE_CTL_ENABLE_BIG, 0-->
-            <!-- SCHED_MIN_TASK_UTIL_FOR_COLOCATION, 0, SCHED_MIN_TASK_UTIL_FOR_BOOST, 0-->
-            <!-- SCHED_MANY_WAKE_UP, 4-->
-            <PROACTIVE_DEFAULT>
-                0x41008000, 0,
+           <!-- CORE_CTL_ENABLE_BIG, 0, CORE_CTL_ENABLE_PRIME, 0-->
+           <!-- SCHED_MIN_TASK_UTIL_FOR_COLOCATION, 5, SCHED_MIN_TASK_UTIL_FOR_BOOST, 5-->
+           <!-- SCHED_MANY_WAKE_UP, 4-->
+           <PROACTIVE_DEFAULT>
+               0x41008000, 0, 0x41008200, 0,
+               0x40C78000, 5, 0x40C7C000, 5,
+               0x40C9C000,4
+           </PROACTIVE_DEFAULT>
+           <!-- CORE_CTL_ENABLE_BIG, 0, CORE_CTL_ENABLE_PRIME, 0-->
+           <!-- SCHED_MIN_TASK_UTIL_FOR_COLOCATION, 5, SCHED_MIN_TASK_UTIL_FOR_BOOST, 5-->
+           <!-- SCHED_MANY_WAKE_UP, 4-->
+           <PROACTIVE_SKEW2>
+               0x41008000, 0, 0x41008200, 0,
+               0x40C78000, 5, 0x40C7C000, 5,
+               0x40C9C000,4
+           </PROACTIVE_SKEW2>
+            <!-- Heavy Game Default -->
+            <!-- SCHED_MIN_TASK_UTIL_FOR_COLOCATION, 0, SCHED_MIN_TASK_UTIL_FOR_BOOST, 0 -->
+            <!-- MPCTLV3_SCHEDUTIL_DOWN_RATE_LIMIT_CLUSTER_BIG, 19000, MPCTLV3_SCHEDUTIL_DOWN_RATE_LIMIT_CLUSTER_LITTLE, 19000 -->
+            <ADAPTIVE_PROFILE0>
                 0x40C78000, 0, 0x40C7C000, 0,
-                0x40C9C000, 4
-            </PROACTIVE_DEFAULT>
-            <!-- CORE_CTL_ENABLE_BIG, 0-->
-            <!-- SCHED_MIN_TASK_UTIL_FOR_COLOCATION, 0, SCHED_MIN_TASK_UTIL_FOR_BOOST, 0-->
-            <!-- SCHED_MANY_WAKE_UP, 4-->
-            <PROACTIVE_SKEW2>
-                0x41008000, 0,
+                0x41448000, 19000, 0x41448100, 19000
+            </ADAPTIVE_PROFILE0>
+            <!-- Agressive Profile - Junk detected -->
+            <!-- SCHED_MIN_TASK_UTIL_FOR_COLOCATION, 0, SCHED_MIN_TASK_UTIL_FOR_BOOST, 0 -->
+            <!-- MPCTLV3_SCHEDUTIL_DOWN_RATE_LIMIT_CLUSTER_BIG, 79000, MPCTLV3_SCHEDUTIL_DOWN_RATE_LIMIT_CLUSTER_LITTLE, 79000-->
+            <!-- CPU_LLCC_BW_MIN_FREQ_V2, 30, LLCC_DDR_BW_MIN_FREQ_V2, 90, L3_MEMLAT_MIN_FREQ, 9000 -->
+            <!-- MIN_FREQ_CLUSTER_PRIME_CORE_0, 1000, MIN_FREQ_CLUSTER_BIG_CORE_0, 1000, MIN_FREQ_CLUSTER_LITTLE_CORE_0, 1000 -->
+            <!-- TO BE REPLACED: SCHED_BUSY_HYSTERSIS_CPU_MASK, 0xf0, LPM_BIAS_HYST, 99-->
+            <ADAPTIVE_PROFILE1>
                 0x40C78000, 0, 0x40C7C000, 0,
-                0x40C9C000, 4
-            </PROACTIVE_SKEW2>
-            <!-- MIN_FREQ_CLUSTER_BIG_CORE_0 1766 -->
+                0x41448000, 79000, 0x41448100, 79000,
+                0x41844000, 30, 0x4303C000, 90, 0x43400000, 9000,
+                0x40800200, 1000, 0x40800000, 1000, 0x40800100, 1000,
+                0x40C74000, 0xf0, 0x40408000, 99
+            </ADAPTIVE_PROFILE1>
+            <!-- MIN_FREQ_CLUSTER_PRIME_CORE_0 1651, MIN_FREQ_CLUSTER_BIG_CORE_0 1651 -->
             <PREDICTIVE_PROFILE1>
-                0x40800000,1766
+                0x40800200,1651,0x40800000,1651
             </PREDICTIVE_PROFILE1>
-            <!-- MIN_FREQ_CLUSTER_LITTLE_CORE_0 1516 -->
+            <!-- MIN_FREQ_CLUSTER_LITTLE_CORE_0 1324 -->
             <PREDICTIVE_PROFILE2>
-                0x40800100,1516
+                0x40800100,1324
             </PREDICTIVE_PROFILE2>
             <!-- GPU MIN_FREQUENCY resource opcode,value-->
             <PREDICTIVE_PROFILE3>
@@ -60,10 +93,16 @@
             <PREDICTIVE_PROFILE4>
                 0x43488000,2092000
             </PREDICTIVE_PROFILE4>
-            <!-- SCHED_LOAD_BOOST GOLD resource opcode,value-->
-            <PREDICTIVE_PROFILE5>
-                0x40C68000, -3
-            </PREDICTIVE_PROFILE5>
+            <!-- MAX_FREQ_CLUSTER_BIG_CORE_0, value-->
+            <THERMAL_PROFILE0>
+                0x40804000, 2227
+            </THERMAL_PROFILE0>
+            <!-- MAX_FREQ_CLUSTER_BIG_CORE_0, value-->
+            <!-- LLCC_DDR_BW_MAX_FREQ_V2, value-->
+            <THERMAL_PROFILE1>
+                0x40804000, 2227,
+                0x43040000, 2000000
+            </THERMAL_PROFILE1>
         </Profile>
     </Profiles>
 
@@ -169,12 +208,16 @@
                    <AsyncId>VENDOR_HINT_ACTIVITY_STOP</AsyncId>
                    <AsyncType>-1</AsyncType>
                 </Trigger>
+
+
             </Triggers>
+
             <Configs>
                 <GPU_AVAILABLE_FREQUENCIES>/sys/class/kgsl/kgsl-3d0/gpu_available_frequencies</GPU_AVAILABLE_FREQUENCIES>
                 <GPU_CLOCK_STATS>/sys/class/kgsl/kgsl-3d0/gpu_clock_stats</GPU_CLOCK_STATS>
                 <GPU_CLK>/sys/class/kgsl/kgsl-3d0/gpuclk</GPU_CLK>
                 <GPU_BUSY_PERCENTAGE>/sys/class/kgsl/kgsl-3d0/gpu_busy_percentage</GPU_BUSY_PERCENTAGE>
+                <GPU_MAX_CLK>/sys/class/kgsl/kgsl-3d0/max_gpuclk</GPU_MAX_CLK>
             </Configs>
             <Samples>100</Samples>
         </Meter>
@@ -239,10 +282,24 @@
            <AsyncId>VENDOR_HINT_PICARD_LOAD_CHANGED</AsyncId>
            <AsyncType>1</AsyncType>
         </Trigger>
+        <Trigger>
+           <Primary>true</Primary>
+           <AsyncId>VENDOR_HINT_PICARD_HINT_SCENARIO</AsyncId>
+           <AsyncType>1</AsyncType>
+        </Trigger>
+        <Trigger>
+            <Primary>true</Primary>
+            <AsyncId>VENDOR_HINT_GAME_ACTION_DISABLE</AsyncId>
+            <AsyncType>1</AsyncType>
+        </Trigger>
     </Triggers>
     <IgnoredApps>
         <App>com.google.android.gms</App>
         <App>com.android.vending</App>
         <App>com.google.android.projection.gearhead</App>
+        <App>com.vectorunit.silver.googleplay</App>
+        <App>com.kiloo.subwaysurf</App>
+        <App>com.imangi.templerun2</App>
+        <App>com.ogien.trainsim</App>
     </IgnoredApps>
 </Feature>

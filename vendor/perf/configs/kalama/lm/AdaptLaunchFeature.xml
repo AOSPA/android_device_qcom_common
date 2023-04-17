@@ -7,7 +7,7 @@
       Each feature has an xml file to define the components
 
   ===========================================================================
-  Copyright (c) 2019 Qualcomm Technologies, Inc.
+  Copyright (c) 2019-2021 Qualcomm Technologies, Inc.
   All Rights Reserved.
   Confidential and Proprietary - Qualcomm Technologies, Inc.
   ===========================================================================
@@ -57,7 +57,7 @@
                     <AsyncId>VENDOR_HINT_ACTIVITY_PAUSE</AsyncId>
                 </Trigger>
             </Triggers>
-            <Samples>160</Samples>
+            <Samples>300</Samples>
             <Fields>
                 <Field>VmRss:</Field>
             </Fields>

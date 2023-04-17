@@ -20,7 +20,7 @@
 <Feature>
     <Name>APEngine</Name>
     <Libname>libapengine.so</Libname>
-    <Configs target="taro">
+    <Configs>
         <STUTTER_SCALE>10</STUTTER_SCALE>
         <THERMAL_MONITOR>1</THERMAL_MONITOR>
         <THERMAL_MONITOR_RULES>GAME_OPT_TSENS_RULE1,GAME_OPT_TSENS_RULE2,GAME_OPT_TSENS_RULE3</THERMAL_MONITOR_RULES>
@@ -36,31 +36,6 @@
         <GROUP_DOWNMIGRATE_PATH>/proc/sys/walt/sched_group_downmigrate</GROUP_DOWNMIGRATE_PATH>
         <BIG_CLUSTER_ID>4,5,6,7</BIG_CLUSTER_ID>
     </Configs>
-
-    <Configs target="cape">
-        <STUTTER_SCALE>10</STUTTER_SCALE>
-        <THERMAL_MONITOR>1</THERMAL_MONITOR>
-        <THERMAL_MONITOR_RULES>GAME_OPT_TSENS_RULE1,GAME_OPT_TSENS_RULE2,GAME_OPT_TSENS_RULE3</THERMAL_MONITOR_RULES>
-        <!-- FPS threshold values in the order: Increase, Aggressive Increase, Decrease -->
-        <FPS_30_THRESHOLD>0.6, 1.0, 0.4</FPS_30_THRESHOLD>
-        <FPS_35_THRESHOLD>0.6, 1.0, 0.4</FPS_35_THRESHOLD>
-        <FPS_40_THRESHOLD>0.6, 1.0, 0.4</FPS_40_THRESHOLD>
-        <FPS_60_THRESHOLD>0.6, 1.0, 0.4</FPS_60_THRESHOLD>
-        <FPS_90_THRESHOLD>2.0, 5.0, 1.0</FPS_90_THRESHOLD>
-        <FPS_120_THRESHOLD>2.0, 5.0, 1.0</FPS_120_THRESHOLD>
-        <FPS_144_THRESHOLD>2.0, 5.0, 1.0</FPS_144_THRESHOLD>
-        <GROUP_UPMIGRATE_PATH>/proc/sys/walt/sched_group_upmigrate</GROUP_UPMIGRATE_PATH>
-        <GROUP_DOWNMIGRATE_PATH>/proc/sys/walt/sched_group_downmigrate</GROUP_DOWNMIGRATE_PATH>
-        <BIG_CLUSTER_ID>4,5,6,7</BIG_CLUSTER_ID>
-    </Configs>
-
-    <Configs target="diwali">
-        <STUTTER_SCALE>10</STUTTER_SCALE>
-        <GROUP_UPMIGRATE_PATH>/proc/sys/walt/sched_group_upmigrate</GROUP_UPMIGRATE_PATH>
-        <GROUP_DOWNMIGRATE_PATH>/proc/sys/walt/sched_group_downmigrate</GROUP_DOWNMIGRATE_PATH>
-        <BIG_CLUSTER_ID>4,5,6,7</BIG_CLUSTER_ID>
-    </Configs>
-
     <Profiles>
         <Profile target="taro">
             <!-- Colocation v3 1 GHz-->
@@ -85,7 +60,8 @@
             <!-- TO BE REPLACED: SCHED_BUSY_HYSTERSIS_CPU_MASK, 0xf0, LPM_BIAS_HYST, 99-->
             <ADAPTIVE_PROFILE1>
                 0x40C78000, 0, 0x40C7C000, 0,
-                0x41448000, 79000, 0x41448100, 79000, 0x43480000, 900000,
+                0x41448000, 79000, 0x41448100, 79000,
+                0x41844000, 30, 0x4303C000, 90, 0x43480000, 900000,
                 0x40800200, 1000, 0x40800000, 1000, 0x40800100, 1000,
                 0x40C74000, 0xf0, 0x40408000, 99
             </ADAPTIVE_PROFILE1>
@@ -122,7 +98,8 @@
             <!-- TO BE REPLACED: SCHED_BUSY_HYSTERSIS_CPU_MASK, 0xf0, LPM_BIAS_HYST, 99-->
             <ADAPTIVE_PROFILE1>
                 0x40C78000, 0, 0x40C7C000, 0,
-                0x41448000, 79000, 0x41448100, 79000, 0x43480000, 900000,
+                0x41448000, 79000, 0x41448100, 79000,
+                0x41844000, 30, 0x4303C000, 90, 0x43480000, 900000,
                 0x40800200, 1000, 0x40800000, 1000, 0x40800100, 1000,
                 0x40C74000, 0xf0, 0x40408000, 99
             </ADAPTIVE_PROFILE1>
@@ -138,7 +115,7 @@
 
         <Profile target="diwali">
             <!-- CORE_CTL_ENABLE_BIG, 0, CORE_CTL_ENABLE_PRIME, 0-->
-            <!-- SCHED_MIN_TASK_UTIL_FOR_COLOCATION, 0, SCHED_MIN_TASK_UTIL_FOR_BOOST, 0-->
+            <!-- SCHED_MIN_TASK_UTIL_FOR_COLOCATION, 5, SCHED_MIN_TASK_UTIL_FOR_BOOST, 5-->
             <!-- BUS_DCVS_LLCC_DDR_GOLD_LAT_EN_SPM_VOTE, 30, BUS_DCVS_LLCC_DDR_GOLD_LAT_EN_SPM_VOTE, 30-->
             <!-- CPU_LLCC_BW_MAX_FREQ_V2 resource opcode, value-->
             <!-- SCHED_MANY_WAKE_UP, 4-->
@@ -150,7 +127,7 @@
                 0x40C9C000,4
             </PROACTIVE_DEFAULT>
             <!-- CORE_CTL_ENABLE_BIG, 0, CORE_CTL_ENABLE_PRIME, 0-->
-            <!-- SCHED_MIN_TASK_UTIL_FOR_COLOCATION, 0, SCHED_MIN_TASK_UTIL_FOR_BOOST, 0-->
+            <!-- SCHED_MIN_TASK_UTIL_FOR_COLOCATION, 5, SCHED_MIN_TASK_UTIL_FOR_BOOST, 5-->
             <!-- BUS_DCVS_LLCC_DDR_GOLD_LAT_EN_SPM_VOTE, 30, BUS_DCVS_LLCC_DDR_GOLD_LAT_EN_SPM_VOTE, 30-->
             <!-- CPU_LLCC_BW_MAX_FREQ_V2 resource opcode, value-->
             <!-- SCHED_MANY_WAKE_UP, 4-->
