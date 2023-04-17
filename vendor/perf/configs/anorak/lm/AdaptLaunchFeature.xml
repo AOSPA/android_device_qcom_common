@@ -7,7 +7,7 @@
       Each feature has an xml file to define the components
 
   ===========================================================================
-  Copyright (c) 2019 Qualcomm Technologies, Inc.
+  Copyright (c) 2019-2022 Qualcomm Technologies, Inc.
   All Rights Reserved.
   Confidential and Proprietary - Qualcomm Technologies, Inc.
   ===========================================================================
@@ -21,6 +21,9 @@
     <Libname>libadaptlaunch.so</Libname>
     <Configs>
         <Enable>1</Enable>
+        <Cluster>0,1</Cluster>
+        <Cluster0>0,690,80,1600,120,2000</Cluster0>
+        <Cluster1>0,690,80,1600,120,2000</Cluster1>
     </Configs>
     <Meters>
         <SamplesRequired>4</SamplesRequired>
@@ -57,7 +60,7 @@
                     <AsyncId>VENDOR_HINT_ACTIVITY_PAUSE</AsyncId>
                 </Trigger>
             </Triggers>
-            <Samples>160</Samples>
+            <Samples>300</Samples>
             <Fields>
                 <Field>VmRss:</Field>
             </Fields>

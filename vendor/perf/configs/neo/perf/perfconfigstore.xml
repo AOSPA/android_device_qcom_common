@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+ * Copyright (c) 2019-2021 Qualcomm Technologies, Inc.
+ * All Rights Reserved.
+ * Confidential and Proprietary - Qualcomm Technologies, Inc.
+-->
+
+<!-- This is PerfConfigsStore file which returns the value when a
+particular property name is invoked -->
+
+<!-- This file supports only Prop tag, which has the following fields
+* Name, to identify the name of the property. The names of the
+properties have been classified into Vendor and System property.
+* Value, the new value to be returned as string when respective
+property Name is called. -->
+
+<PerfConfigsStore>
+    <PerfConfigs>
+                <!--Vendor Properties -->
+                <!--Prop Name="property.name" Value="val" /-->
+
+                <!--System Properties -->
+                <!--Prop Name="property.name" Value="val" /-->
+                <Prop Name="ro.vendor.qti.sys.fw.bservice_age" Value="5000" target="neo_la" />
+                <Prop Name="ro.vendor.qti.sys.fw.bservice_limit" Value="5" target="neo_la" />
+                <Prop Name="ro.vendor.qti.sys.fw.bservice_enable" Value="true" target="neo_la" />
+                <Prop Name="ro.vendor.qti.sys.fw.use_trim_settings" Value="true" target="neo_la" />
+                <Prop Name="ro.vendor.qti.sys.fw.empty_app_percent" Value="50" target="neo_la" />
+                <Prop Name="ro.vendor.qti.sys.fw.trim_empty_percent" Value="100" target="neo_la" />
+                <Prop Name="ro.vendor.qti.sys.fw.trim_cache_percent" Value="100" target="neo_la" />
+                <Prop Name="ro.vendor.qti.sys.fw.trim_enable_memory" Value="4294967296" target="neo_la" />
+                <Prop Name="ro.vendor.qti.am.reschedule_service" Value="true" target="neo_la" />
+                <Prop Name="ro.vendor.iocgrp.config" Value="0" target="neo_la" />
+                <Prop Name="ro.lmk.kill_heaviest_task_dup" Value="false" target="neo_la" />
+                <Prop Name="ro.lmk.enhance_batch_kill" Value="false" target="neo_la" />
+                <Prop Name="ro.lmk.enable_watermark_check" Value="true" target="neo_la" />
+                <Prop Name="ro.lmk.enable_userspace_lmk" Value="true" target="neo_la" />
+                <Prop Name="ro.lmk.use_new_strategy_dup" Value="true" target="neo_la" />
+                <Prop Name="vendor.perf.gestureflingboost.enable" Value="true" target="neo_la" />
+                <Prop Name="ro.vendor.qti.sys.fw.bg_apps_limit" Value="16" target="neo_la" />
+                <Prop Name="ro.vendor.at_library" Value="libqti-at.so" target="neo_la" />
+                <Prop Name="vendor.appcompact.enable_app_compact" Value="true" target="neo_la" />
+                <Prop Name="vendor.appcompact.full_compact_type"  Value="2" target="neo_la" />
+                <Prop Name="vendor.appcompact.some_compact_type"  Value="2" target="neo_la" />
+                <Prop Name="ro.lmk.super_critical" Value="606" target="neo_la"/>
+    </PerfConfigs>
+</PerfConfigsStore>

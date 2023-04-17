@@ -22,33 +22,54 @@
     <Libname>libapengine.so</Libname>
     <Configs>
         <STUTTER_SCALE>10</STUTTER_SCALE>
+        <THERMAL_MONITOR>1</THERMAL_MONITOR>
+        <THERMAL_MONITOR_RULES>GAME_OPT_TSENS_RULE1,GAME_OPT_TSENS_RULE2,GAME_OPT_TSENS_RULE3</THERMAL_MONITOR_RULES>
+        <!-- FPS threshold values in the order: Increase, Aggressive Increase, Decrease -->
+        <FPS_30_THRESHOLD>0.6, 1.0, 0.4</FPS_30_THRESHOLD>
+        <FPS_35_THRESHOLD>0.6, 1.0, 0.4</FPS_35_THRESHOLD>
+        <FPS_40_THRESHOLD>0.6, 1.0, 0.4</FPS_40_THRESHOLD>
+        <FPS_60_THRESHOLD>0.6, 1.0, 0.4</FPS_60_THRESHOLD>
+        <FPS_90_THRESHOLD>2.0, 5.0, 1.0</FPS_90_THRESHOLD>
+        <FPS_120_THRESHOLD>2.0, 5.0, 1.0</FPS_120_THRESHOLD>
+        <FPS_144_THRESHOLD>2.0, 5.0, 1.0</FPS_144_THRESHOLD>
         <GROUP_UPMIGRATE_PATH>/proc/sys/walt/sched_group_upmigrate</GROUP_UPMIGRATE_PATH>
         <GROUP_DOWNMIGRATE_PATH>/proc/sys/walt/sched_group_downmigrate</GROUP_DOWNMIGRATE_PATH>
         <BIG_CLUSTER_ID>4,5,6,7</BIG_CLUSTER_ID>
     </Configs>
+    <Configs target="ravelin">
+        <STUTTER_SCALE>10</STUTTER_SCALE>
+        <THERMAL_MONITOR>1</THERMAL_MONITOR>
+        <THERMAL_MONITOR_RULES>GAME_OPT_TSENS_RULE1,GAME_OPT_TSENS_RULE2,GAME_OPT_TSENS_RULE3</THERMAL_MONITOR_RULES>
+        <!-- FPS threshold values in the order: Increase, Aggressive Increase, Decrease -->
+        <FPS_30_THRESHOLD>0.6, 1.0, 0.4</FPS_30_THRESHOLD>
+        <FPS_35_THRESHOLD>0.6, 1.0, 0.4</FPS_35_THRESHOLD>
+        <FPS_40_THRESHOLD>0.6, 1.0, 0.4</FPS_40_THRESHOLD>
+        <FPS_60_THRESHOLD>0.6, 1.0, 0.4</FPS_60_THRESHOLD>
+        <FPS_90_THRESHOLD>2.0, 5.0, 1.0</FPS_90_THRESHOLD>
+        <FPS_120_THRESHOLD>2.0, 5.0, 1.0</FPS_120_THRESHOLD>
+        <FPS_144_THRESHOLD>2.0, 5.0, 1.0</FPS_144_THRESHOLD>
+        <GROUP_UPMIGRATE_PATH>/proc/sys/walt/sched_group_upmigrate</GROUP_UPMIGRATE_PATH>
+        <GROUP_DOWNMIGRATE_PATH>/proc/sys/walt/sched_group_downmigrate</GROUP_DOWNMIGRATE_PATH>
+        <BIG_CLUSTER_ID>0,1</BIG_CLUSTER_ID>
+    </Configs>
+
     <Profiles>
         <Profile>
-            <!-- L3_MEMLAT_MIN_FREQ_GOLD, 614400 -->
             <!-- CORE_CTL_ENABLE_BIG, 0-->
-            <!-- SCHED_MIN_TASK_UTIL_FOR_COLOCATION, 0, SCHED_MIN_TASK_UTIL_FOR_BOOST, 0-->
+            <!-- SCHED_MIN_TASK_UTIL_FOR_COLOCATION, 5, SCHED_MIN_TASK_UTIL_FOR_BOOST, 5-->
             <!-- BUS_DCVS_LLCC_DDR_GOLD_LAT_EN_SPM_VOTE, 30-->
-            <!-- SCHED_MANY_WAKE_UP, 4-->
             <PROACTIVE_DEFAULT>
-                0x43480000, 0x96000,
                 0x41008000, 0,
-                0x40C78000, 0, 0x40C7C000, 0,
+                0x40C78000, 5, 0x40C7C000, 5,
                 0x43490000, 30,
                 0x40C9C000, 4
             </PROACTIVE_DEFAULT>
-            <!-- L3_MEMLAT_MIN_FREQ_GOLD, 806400-->
             <!-- CORE_CTL_ENABLE_BIG, 0-->
-            <!-- SCHED_MIN_TASK_UTIL_FOR_COLOCATION, 0, SCHED_MIN_TASK_UTIL_FOR_BOOST, 0-->
+            <!-- SCHED_MIN_TASK_UTIL_FOR_COLOCATION, 5, SCHED_MIN_TASK_UTIL_FOR_BOOST, 5-->
             <!-- BUS_DCVS_LLCC_DDR_GOLD_LAT_EN_SPM_VOTE, 30-->
-            <!-- SCHED_MANY_WAKE_UP, 4-->
             <PROACTIVE_SKEW2>
-                0x43480000, 0xC4E00,
                 0x41008000, 0,
-                0x40C78000, 0, 0x40C7C000, 0,
+                0x40C78000, 5, 0x40C7C000, 5,
                 0x43490000, 30,
                 0x40C9C000, 4
             </PROACTIVE_SKEW2>

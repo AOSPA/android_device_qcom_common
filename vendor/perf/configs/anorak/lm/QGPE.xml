@@ -20,37 +20,43 @@
 <Feature>
     <Name>APEngine</Name>
     <Libname>libapengine.so</Libname>
-    <Configs>
+
+    <Configs target="anorak">
         <STUTTER_SCALE>10</STUTTER_SCALE>
         <GROUP_UPMIGRATE_PATH>/proc/sys/walt/sched_group_upmigrate</GROUP_UPMIGRATE_PATH>
         <GROUP_DOWNMIGRATE_PATH>/proc/sys/walt/sched_group_downmigrate</GROUP_DOWNMIGRATE_PATH>
         <BIG_CLUSTER_ID>4,5,6,7</BIG_CLUSTER_ID>
     </Configs>
+
     <Profiles>
-        <Profile>
+        <Profile target="anorak">
             <!-- CORE_CTL_ENABLE_BIG, 0-->
-            <!-- SCHED_MIN_TASK_UTIL_FOR_COLOCATION, 0, SCHED_MIN_TASK_UTIL_FOR_BOOST, 0-->
+            <!-- SCHED_MIN_TASK_UTIL_FOR_COLOCATION, 5, SCHED_MIN_TASK_UTIL_FOR_BOOST, 5-->
+            <!-- BUS_DCVS_LLCC_DDR_GOLD_LAT_EN_SPM_VOTE, 30, BUS_DCVS_LLCC_DDR_PRIME_LAT_EN_SPM_VOTE, 30-->
             <!-- SCHED_MANY_WAKE_UP, 4-->
             <PROACTIVE_DEFAULT>
                 0x41008000, 0,
-                0x40C78000, 0, 0x40C7C000, 0,
-                0x40C9C000, 4
+                0x40C78000, 5, 0x40C7C000, 5,
+                0x43490000, 30, 0x43494000, 30,
+                0x40C9C000,4
             </PROACTIVE_DEFAULT>
             <!-- CORE_CTL_ENABLE_BIG, 0-->
-            <!-- SCHED_MIN_TASK_UTIL_FOR_COLOCATION, 0, SCHED_MIN_TASK_UTIL_FOR_BOOST, 0-->
+            <!-- SCHED_MIN_TASK_UTIL_FOR_COLOCATION, 5, SCHED_MIN_TASK_UTIL_FOR_BOOST, 5-->
+            <!-- BUS_DCVS_LLCC_DDR_GOLD_LAT_EN_SPM_VOTE, 30, BUS_DCVS_LLCC_DDR_PRIME_LAT_EN_SPM_VOTE, 30-->
             <!-- SCHED_MANY_WAKE_UP, 4-->
             <PROACTIVE_SKEW2>
                 0x41008000, 0,
-                0x40C78000, 0, 0x40C7C000, 0,
-                0x40C9C000, 4
+                0x40C78000, 5, 0x40C7C000, 5,
+                0x43490000, 30, 0x43494000, 30,
+                0x40C9C000,4
             </PROACTIVE_SKEW2>
-            <!-- MIN_FREQ_CLUSTER_BIG_CORE_0 1766 -->
+            <!-- MIN_FREQ_CLUSTER_BIG_CORE_0 1651, MIN_FREQ_CLUSTER_LITTLE_CORE_0 1651 -->
             <PREDICTIVE_PROFILE1>
-                0x40800000,1766
+                0x40800000,1651,0x40800100,1651
             </PREDICTIVE_PROFILE1>
-            <!-- MIN_FREQ_CLUSTER_LITTLE_CORE_0 1516 -->
+            <!-- MIN_FREQ_CLUSTER_BIG_CORE_0 1324 -->
             <PREDICTIVE_PROFILE2>
-                0x40800100,1516
+                0x40800000,1324
             </PREDICTIVE_PROFILE2>
             <!-- GPU MIN_FREQUENCY resource opcode,value-->
             <PREDICTIVE_PROFILE3>
@@ -169,7 +175,10 @@
                    <AsyncId>VENDOR_HINT_ACTIVITY_STOP</AsyncId>
                    <AsyncType>-1</AsyncType>
                 </Trigger>
+
+
             </Triggers>
+
             <Configs>
                 <GPU_AVAILABLE_FREQUENCIES>/sys/class/kgsl/kgsl-3d0/gpu_available_frequencies</GPU_AVAILABLE_FREQUENCIES>
                 <GPU_CLOCK_STATS>/sys/class/kgsl/kgsl-3d0/gpu_clock_stats</GPU_CLOCK_STATS>
@@ -240,7 +249,7 @@
            <AsyncType>1</AsyncType>
         </Trigger>
     </Triggers>
-    <IgnoredApps>
+    <IgnoredApps target="anorak">
         <App>com.google.android.gms</App>
         <App>com.android.vending</App>
         <App>com.google.android.projection.gearhead</App>

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 
 <!--
- * Copyright (c) 2019 Qualcomm Technologies, Inc.
+ * Copyright (c) 2017-2022 Qualcomm Technologies, Inc.
  * All Rights Reserved.
  * Confidential and Proprietary - Qualcomm Technologies, Inc.
 -->
@@ -43,50 +43,17 @@
     <Config1>
 
          <TargetInfo
-             Target="bengal"
+             Target="anorak"
              NumClusters="2"
-             TotalNumCores="8"
-             SocIds="417,420,444,445"
-             SynCore="1"
-             CoreCtlCpu="4"
-             MinCoreOnline="0"
-             CpufreqGov="1" />
-
-         <ClustersInfo Id="0" NumCores="4" Type="little" />
-         <ClustersInfo Id="1" NumCores="4" Type="big" />
-
-    </Config1>
-
-    <Config2>
-
-         <TargetInfo
-             Target="scuba"
-             NumClusters="1"
-             TotalNumCores="4"
-             SocIds="441"
+             TotalNumCores="6"
+             SocIds="549"
              SynCore="1"
              MinCoreOnline="1"
              CpufreqGov="1" />
 
-         <ClustersInfo Id="0" NumCores="4" Type="big" />
-
-    </Config2>
-
-    <Config3>
-
-         <TargetInfo
-             Target="khaje"
-             NumClusters="2"
-             TotalNumCores="8"
-             SocIds="518,561,585,586"
-             SynCore="1"
-             CoreCtlCpu="4"
-             MinCoreOnline="0"
-             CpufreqGov="1" />
-
-         <ClustersInfo Id="0" NumCores="4" Type="little" />
+         <ClustersInfo Id="0" NumCores="2" Type="little" />
          <ClustersInfo Id="1" NumCores="4" Type="big" />
 
-    </Config3>
+    </Config1>
 
 </TargetConfig>

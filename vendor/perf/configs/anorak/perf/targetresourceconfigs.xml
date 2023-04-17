@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 
 <!--
- * Copyright (c) 2019 Qualcomm Technologies, Inc.
+ * Copyright (c) 2017-2022 Qualcomm Technologies, Inc.
  * All Rights Reserved.
  * Confidential and Proprietary - Qualcomm Technologies, Inc.
 -->
@@ -24,37 +24,36 @@ as anyway perflock calls of these resources would fail. -->
 <ResourceConfigs>
     <PerfResources>
 
-    <!-- power collapse major start -->
+        <Config MajorValue="0x1" MinorValue="0x0" Supported="no" /> <!--  cpu_dma_latency  -->
         <Config MajorValue="0x1" MinorValue="0x1" Supported="no" /> <!--  toggle_l2_pc_perf -->
         <Config MajorValue="0x1" MinorValue="0x2" Node="/proc/sys/walt/sched_busy_hyst_ns" />
         <Config MajorValue="0x1" MinorValue="0x3" Supported="no" /> <!-- lpm_ref_stddev -->
         <Config MajorValue="0x1" MinorValue="0x4" Supported="no" /> <!-- lpm_tmr_add -->
-    <!-- power collapse major end -->
 
-    <!-- cpufreq major start -->
         <Config MajorValue="0x2" MinorValue="0x0" Node="/sys/kernel/msm_performance/parameters/cpu_min_freq" /> <!-- cpu_min_freq -->
         <Config MajorValue="0x2" MinorValue="0x1" Node="/sys/kernel/msm_performance/parameters/cpu_max_freq" /> <!-- cpu_max_freq -->
-    <!-- cpufreq major end -->
-
-    <!-- sched major start -->
+        <Config MajorValue="0x2" MinorValue="0x2" Node="/sys/devices/system/cpu/cpufreq/policy0/walt/adaptive_low_freq" />
+        <Config MajorValue="0x2" MinorValue="0x3" Node="/sys/devices/system/cpu/cpufreq/policy0/walt/adaptive_high_freq" />
         <Config MajorValue="0x3" MinorValue="0x0" Node="/proc/sys/walt/sched_boost" />
-        <Config MajorValue="0x3" MinorValue="0x2" Supported="no" /> <!-- sched_migration_cost_ns -->
         <Config MajorValue="0x3" MinorValue="0x3" Supported="no" /> <!-- sched_small_task -->
         <Config MajorValue="0x3" MinorValue="0x6" Supported="no" /> <!-- sched_init_task_load -->
-        <Config MajorValue="0x3" MinorValue="0x7" Node="/proc/sys/walt/sched_upmigrate" /> <!-- sched_upmigrate -->
-        <Config MajorValue="0x3" MinorValue="0x8" Node="/proc/sys/walt/sched_downmigrate" /> <!-- sched_downmigrate -->
-        <Config MajorValue="0x3" MinorValue="0xA" Supported="no" /> <!-- sched_add_group -->
+        <Config MajorValue="0x3" MinorValue="0x7" Supported="no" /> <!-- sched_upmigrate -->
+        <Config MajorValue="0x3" MinorValue="0x8" Supported="no" /> <!-- sched_downmigrate -->
         <Config MajorValue="0x3" MinorValue="0xB" Supported="no" /> <!-- sched_spill_nr_run -->
         <Config MajorValue="0x3" MinorValue="0xC" Supported="no" /> <!-- sched_static_cpu_pwr_cost -->
         <Config MajorValue="0x3" MinorValue="0xD" Supported="no" /> <!-- sched_restrict_cluster_spill -->
+        <Config MajorValue="0x3" MinorValue="0xF" Supported="no" />
+        <Config MajorValue="0x3" MinorValue="0x10" Supported="no" />
+        <Config MajorValue="0x3" MinorValue="0x11" Supported="no" />
+        <Config MajorValue="0x3" MinorValue="0x12" Supported="no" />
         <Config MajorValue="0x3" MinorValue="0x13" Supported="no" /> <!-- sched_set_freq_aggr -->
         <Config MajorValue="0x3" MinorValue="0x14" Supported="no" /> <!-- sched_enable_thread_grouping -->
-        <Config MajorValue="0x3" MinorValue="0x15" Node="/proc/sys/walt/sched_group_upmigrate" /> <!-- sched_group_upmigrate -->
-        <Config MajorValue="0x3" MinorValue="0x16" Node="/proc/sys/walt/sched_group_downmigrate" /> <!-- sched_group_downmigrate -->
+        <Config MajorValue="0x3" MinorValue="0x15" Supported="no" /> <!-- sched_group_upmigrate -->
+        <Config MajorValue="0x3" MinorValue="0x16" Supported="no" /> <!-- sched_group_downmigrate -->
         <Config MajorValue="0x3" MinorValue="0x17" Supported="no" /> <!-- sched_freq_aggr_threshold -->
         <Config MajorValue="0x3" MinorValue="0x18" Supported="no" />
         <Config MajorValue="0x3" MinorValue="0x19" Supported="no" />
-        <Config MajorValue="0x3" MinorValue="0x1A" Node="/sys/devices/system/cpu/cpu0/cpufreq/walt/boost" />
+        <Config MajorValue="0x3" MinorValue="0x1A" Node="/sys/devices/system/cpu/cpufreq/policy0/walt/boost" />
         <Config MajorValue="0x3" MinorValue="0x1B" Supported="no" />
         <Config MajorValue="0x3" MinorValue="0x1C" Supported="no" />
         <Config MajorValue="0x3" MinorValue="0x1D" Node="/proc/sys/walt/sched_busy_hysteresis_enable_cpus" />
@@ -71,63 +70,60 @@ as anyway perflock calls of these resources would fail. -->
         <Config MajorValue="0x3" MinorValue="0x28" Node="/proc/sys/walt/sched_sync_hint_enable" />
         <Config MajorValue="0x3" MinorValue="0x29" Node="/proc/sys/walt/sched_ravg_window_nr_ticks" />
         <Config MajorValue="0x3" MinorValue="0x2A" Supported="no" /> <!-- sched_prefer_spread -->
+        <Config MajorValue="0x3" MinorValue="0x2B" Supported="no" />
         <Config MajorValue="0x3" MinorValue="0x2C" Supported="no" />
         <Config MajorValue="0x3" MinorValue="0x2D" Supported="no" />
         <Config MajorValue="0x3" MinorValue="0x32" Node="/proc/sys/walt/walt_rtg_cfs_boost_prio" />
         <Config MajorValue="0x3" MinorValue="0x33" Node="/proc/sys/walt/sched_force_lb_enable" />
         <Config MajorValue="0x3" MinorValue="0x34" Node="/proc/sys/walt/sched_low_latency" />
-        <Config MajorValue="0x3" MinorValue="0x35" Supported="no" />
         <Config MajorValue="0x3" MinorValue="0x36" Node="/proc/sys/walt/walt_low_latency_task_threshold" />
         <Config MajorValue="0x3" MinorValue="0x37" Supported="no" /> <!-- Enabled till Kernel 4.19 -->
-        <Config MajorValue="0x3" MinorValue="0x38" Node="/proc/sys/walt/%s" />
+        <Config MajorValue="0x3" MinorValue="0x38" Node="/proc/sys/walt/%s" Supported="no"/>
         <Config MajorValue="0x3" MinorValue="0x39" Supported="no" /> <!-- Enabled till Kernel 4.19 -->
-        <Config MajorValue="0x3" MinorValue="0x3C" Node="/proc/sys/walt/sched_wake_up_idle" />
-        <Config MajorValue="0x3" MinorValue="0x3D" Node="/proc/sys/walt/%s" />
-    <!-- sched major end -->
+        <Config MajorValue="0x3" MinorValue="0x3A" Supported="no" />
+        <Config MajorValue="0x3" MinorValue="0x3B" Supported="no" />
+        <Config MajorValue="0x3" MinorValue="0x3C" Supported="no" />
+        <Config MajorValue="0x3" MinorValue="0x3D" Node="/proc/sys/walt/%s" Supported="no"/>
 
-    <!-- cpufreq major start -->
         <Config MajorValue="0x5" MinorValue="0xF" Node="/sys/devices/system/cpu/cpu0/cpufreq/walt/hispeed_freq" />
         <Config MajorValue="0x5" MinorValue="0x10" Node="/sys/devices/system/cpu/cpu0/cpufreq/walt/hispeed_load" />
         <Config MajorValue="0x5" MinorValue="0x11" Node="/sys/devices/system/cpu/cpu0/cpufreq/walt/pl" />
         <Config MajorValue="0x5" MinorValue="0x12" Node="/sys/devices/system/cpu/cpu0/cpufreq/walt/down_rate_limit_us" />
         <Config MajorValue="0x5" MinorValue="0x13" Node="/sys/devices/system/cpu/cpu0/cpufreq/walt/rtg_boost_freq" />
-    <!-- cpufreq major end -->
 
-    <!-- cpubw hwmon major start -->
+         <!-- CPU_LLCC_BW major old opcodes unsupported-->
         <Config MajorValue="0x6" MinorValue="0x0" Supported="no" />
         <Config MajorValue="0x6" MinorValue="0x1" Supported="no" />
         <Config MajorValue="0x6" MinorValue="0x2" Supported="no" />
+        <Config MajorValue="0x6" MinorValue="0x3" Supported="no" />
         <Config MajorValue="0x6" MinorValue="0x4" Supported="no" />
         <Config MajorValue="0x6" MinorValue="0x5" Supported="no" />
         <Config MajorValue="0x6" MinorValue="0x6" Supported="no" />
         <Config MajorValue="0x6" MinorValue="0x7" Supported="no" />
         <Config MajorValue="0x6" MinorValue="0x8" Supported="no" />
         <Config MajorValue="0x6" MinorValue="0x9" Supported="no" />
-        <Config MajorValue="0x6" MinorValue="0xA" Supported="no" />
-        <Config MajorValue="0x6" MinorValue="0xB" Supported="no" />
-        <Config MajorValue="0x6" MinorValue="0xC" Supported="no" />
-        <Config MajorValue="0x6" MinorValue="0xD" Supported="no" />
-        <Config MajorValue="0x6" MinorValue="0xE" Supported="no" />
-        <Config MajorValue="0x6" MinorValue="0xF" Supported="no" />
-        <Config MajorValue="0x6" MinorValue="0x10" Supported="no"/>
-        <Config MajorValue="0x6" MinorValue="0x11" Supported="no"/>
-        <Config MajorValue="0x6" MinorValue="0x12" Supported="no"/>
-    <!-- cpubw hwmon major end -->
 
-    <!-- gpu major start -->
+        <!-- CPU_LLCC_BW major new opcodes-->
+        <Config MajorValue="0x6" MinorValue="0xA" Supported="no" />
+        <Config MajorValue="0x6" MinorValue="0xB" Node="/sys/devices/system/cpu/bus_dcvs/LLCC/190b6400.qcom,bwmon-llcc/up_scale" />
+        <Config MajorValue="0x6" MinorValue="0xC" Supported="no" />
+        <Config MajorValue="0x6" MinorValue="0xD" Node="/sys/devices/system/cpu/bus_dcvs/LLCC/190b6400.qcom,bwmon-llcc/io_percent" />
+        <Config MajorValue="0x6" MinorValue="0xE" Node="/sys/devices/system/cpu/bus_dcvs/LLCC/190b6400.qcom,bwmon-llcc" />
+        <Config MajorValue="0x6" MinorValue="0xF" Node="/sys/devices/system/cpu/bus_dcvs/LLCC/190b6400.qcom,bwmon-llcc/sample_ms" />
+        <Config MajorValue="0x6" MinorValue="0x10" Node="/sys/devices/system/cpu/bus_dcvs/LLCC/190b6400.qcom,bwmon-llcc/window_ms" />
+        <Config MajorValue="0x6" MinorValue="0x11" Node="/sys/devices/system/cpu/bus_dcvs/LLCC/190b6400.qcom,bwmon-llcc/min_freq" />
+        <Config MajorValue="0x6" MinorValue="0x12" Node="/sys/devices/system/cpu/bus_dcvs/LLCC/190b6400.qcom,bwmon-llcc/max_freq" />
+
         <Config MajorValue="0xA" MinorValue="0x5" Supported="no" />
         <Config MajorValue="0xA" MinorValue="0x6" Supported="no" />
+        <Config MajorValue="0xA" MinorValue="0x7" Supported="no" />
         <Config MajorValue="0xA" MinorValue="0x8" Supported="no" />
         <Config MajorValue="0xA" MinorValue="0x9" Supported="no" />
-    <!-- gpu major end -->
 
-    <!-- misc major start -->
-       <Config MajorValue="0xB" MinorValue="0x2" Node="/proc/sys/walt/input_boost/input_boost_freq" />
-       <Config MajorValue="0xB" MinorValue="0x3" Supported="no" />
-       <Config MajorValue="0xB" MinorValue="0x6" Supported="no" />
-    <!-- misc major end -->
+        <Config MajorValue="0xB" MinorValue="0x2" Node="/proc/sys/walt/input_boost/input_boost_freq" />
+        <Config MajorValue="0xB" MinorValue="0x3" Supported="no" />
+        <Config MajorValue="0xB" MinorValue="0x6" Supported="no" /><!-- disable_ppr -->
 
-    <!-- llcbw hwmon major start -->
         <!-- LLCC_DDR_BW old opcodes unsupported-->
         <Config MajorValue="0xC" MinorValue="0x0" Supported="no" />
         <Config MajorValue="0xC" MinorValue="0x1" Supported="no" />
@@ -135,66 +131,54 @@ as anyway perflock calls of these resources would fail. -->
         <Config MajorValue="0xC" MinorValue="0x3" Supported="no" />
         <Config MajorValue="0xC" MinorValue="0x4" Supported="no" />
          <!-- LLCC_DDR_BW new opcodes-->
-        <Config MajorValue="0xC" MinorValue="0x5" Node="/sys/devices/system/cpu/bus_dcvs/DDR/1b8e300.qcom,bwmon-ddr/up_scale" />
+        <Config MajorValue="0xC" MinorValue="0x5" Node="/sys/devices/system/cpu/bus_dcvs/DDR/19091000.qcom,bwmon-ddr/up_scale" />
         <Config MajorValue="0xC" MinorValue="0x6" Supported="no" /> <!-- llcc ddr max freq -->
-        <Config MajorValue="0xC" MinorValue="0x7" Node="/sys/devices/system/cpu/bus_dcvs/DDR/1b8e300.qcom,bwmon-ddr/decay_rate" />
-        <Config MajorValue="0xC" MinorValue="0x8" Node="/sys/devices/system/cpu/bus_dcvs/DDR/1b8e300.qcom,bwmon-ddr/io_percent" />
-        <Config MajorValue="0xC" MinorValue="0x9" Node="/sys/devices/system/cpu/bus_dcvs/DDR/1b8e300.qcom,bwmon-ddr" />
+        <Config MajorValue="0xC" MinorValue="0x7" Node="/sys/devices/system/cpu/bus_dcvs/DDR/19091000.qcom,bwmon-ddr/decay_rate" />
+        <Config MajorValue="0xC" MinorValue="0x8" Node="/sys/devices/system/cpu/bus_dcvs/DDR/19091000.qcom,bwmon-ddr/io_percent" />
+        <Config MajorValue="0xC" MinorValue="0x9" Node="/sys/devices/system/cpu/bus_dcvs/DDR/19091000.qcom,bwmon-ddr" />
         <Config MajorValue="0xC" MinorValue="0xA" Supported="no" />
         <Config MajorValue="0xC" MinorValue="0xB" Supported="no" />
-        <Config MajorValue="0xC" MinorValue="0xC" Node="/sys/devices/system/cpu/bus_dcvs/DDR/1b8e300.qcom,bwmon-ddr/window_ms" />
-        <Config MajorValue="0xC" MinorValue="0xD" Node="/sys/devices/system/cpu/bus_dcvs/DDR/1b8e300.qcom,bwmon-ddr/sample_ms" />
-        <Config MajorValue="0xC" MinorValue="0xE" Node="/sys/devices/system/cpu/bus_dcvs/DDR/1b8e300.qcom,bwmon-ddr/idle_mbps" />
-        <Config MajorValue="0xC" MinorValue="0xF" Node="/sys/devices/system/cpu/bus_dcvs/DDR/1b8e300.qcom,bwmon-ddr/min_freq" />
-        <Config MajorValue="0xC" MinorValue="0x10" Node="/sys/devices/system/cpu/bus_dcvs/DDR/1b8e300.qcom,bwmon-ddr/max_freq" />
+        <Config MajorValue="0xC" MinorValue="0xC" Node="/sys/devices/system/cpu/bus_dcvs/DDR/19091000.qcom,bwmon-ddr/window_ms" />
+        <Config MajorValue="0xC" MinorValue="0xD" Node="/sys/devices/system/cpu/bus_dcvs/DDR/19091000.qcom,bwmon-ddr/sample_ms" />
+        <Config MajorValue="0xC" MinorValue="0xE" Node="/sys/devices/system/cpu/bus_dcvs/DDR/19091000.qcom,bwmon-ddr/idle_mbps" />
+        <Config MajorValue="0xC" MinorValue="0xF" Node="/sys/devices/system/cpu/bus_dcvs/DDR/19091000.qcom,bwmon-ddr/min_freq" />
+        <Config MajorValue="0xC" MinorValue="0x10" Node="/sys/devices/system/cpu/bus_dcvs/DDR/19091000.qcom,bwmon-ddr/max_freq" />
         <Config MajorValue="0xC" MinorValue="0x11" Supported="no" />
-        <Config MajorValue="0xC" MinorValue="0x12" Supported="no" />
-    <!-- llcbw hwmon major end -->
 
-    <!-- memlat major start -->
         <Config MajorValue="0xD" MinorValue="0x0" Supported="no" />
         <Config MajorValue="0xD" MinorValue="0x1" Supported="no" />
-        <Config MajorValue="0xD" MinorValue="0x2" Supported="no" />
+        <Config MajorValue="0xD" MinorValue="0x2" Node="/sys/devices/system/cpu/bus_dcvs/L3/soc:qcom,memlat:l3:gold/ipm_ceil" />
         <Config MajorValue="0xD" MinorValue="0x3" Supported="no" />
-        <Config MajorValue="0xD" MinorValue="0x4" Supported="no" />
+        <Config MajorValue="0xD" MinorValue="0x4" Node="/sys/devices/system/cpu/bus_dcvs/L3/soc:qcom,memlat:l3:gold/be_stall_floor" />
         <Config MajorValue="0xD" MinorValue="0x5" Supported="no" />
         <Config MajorValue="0xD" MinorValue="0x6" Supported="no" />
         <Config MajorValue="0xD" MinorValue="0x7" Supported="no" />
         <Config MajorValue="0xD" MinorValue="0x8" Supported="no" />
-        <Config MajorValue="0xD" MinorValue="0x9" Supported="no" />
+        <Config MajorValue="0xD" MinorValue="0x9" Node="/sys/devices/system/cpu/bus_dcvs/LLCC/soc:qcom,memlat:llcc:gold/ipm_ceil" />
         <Config MajorValue="0xD" MinorValue="0xA" Supported="no" />
-        <Config MajorValue="0xD" MinorValue="0xB" Supported="no" />
+        <Config MajorValue="0xD" MinorValue="0xB" Node="/sys/devices/system/cpu/bus_dcvs/LLCC/soc:qcom,memlat:llcc:gold/be_stall_floor" />
         <Config MajorValue="0xD" MinorValue="0xC" Supported="no" />
         <Config MajorValue="0xD" MinorValue="0xD" Supported="no" />
-        <Config MajorValue="0xD" MinorValue="0xE" Supported="no" />
+        <Config MajorValue="0xD" MinorValue="0xE" Node="/sys/devices/system/cpu/bus_dcvs/DDR/soc:qcom,memlat:ddr:gold/ipm_ceil" />
         <Config MajorValue="0xD" MinorValue="0xF" Supported="no" />
-        <Config MajorValue="0xD" MinorValue="0x10" Supported="no" />
+        <Config MajorValue="0xD" MinorValue="0x10" Node="/sys/devices/system/cpu/bus_dcvs/DDR/soc:qcom,memlat:ddr:gold/be_stall_floor" />
         <Config MajorValue="0xD" MinorValue="0x11" Supported="no" />
         <Config MajorValue="0xD" MinorValue="0x12" Supported="no" />
         <Config MajorValue="0xD" MinorValue="0x13" Supported="no" />
         <Config MajorValue="0xD" MinorValue="0x14" Supported="no" />
         <Config MajorValue="0xD" MinorValue="0x15" Supported="no" />
-        <Config MajorValue="0xD" MinorValue="0x16" Supported="no" />
         <Config MajorValue="0xD" MinorValue="0x17" Supported="no" />
         <Config MajorValue="0xD" MinorValue="0x18" Supported="no" />
-        <Config MajorValue="0xD" MinorValue="0x1C" Supported="no" />
         <Config MajorValue="0xD" MinorValue="0x1D" Supported="no" />
-        <Config MajorValue="0xD" MinorValue="0x20" Supported="no" />
-        <Config MajorValue="0xD" MinorValue="0x21" Supported="no" />
-        <Config MajorValue="0xD" MinorValue="0x23" Supported="no" />
-        <Config MajorValue="0xD" MinorValue="0x24" Supported="no" />
-        <Config MajorValue="0xD" MinorValue="0x25" Supported="no" />
-        <Config MajorValue="0xD" MinorValue="0x27" Supported="no" />
-        <Config MajorValue="0xD" MinorValue="0x28" Supported="no" />
-        <Config MajorValue="0xD" MinorValue="0x29" Supported="no" />
-    <!-- memlat major end -->
 
-    <!-- npu major start -->
         <Config MajorValue="0xE" MinorValue="0x0" Supported="no" />
         <Config MajorValue="0xE" MinorValue="0x1" Supported="no" />
+        <Config MajorValue="0xE" MinorValue="0x2" Supported="no" />
         <Config MajorValue="0xE" MinorValue="0x3" Supported="no" />
         <Config MajorValue="0xE" MinorValue="0x4" Supported="no" />
-    <!-- npu major end -->
+        <Config MajorValue="0xE" MinorValue="0x5" Supported="no" />
+        <!--Add new resource expected value and write value in configs/test/common/testcommonresourceconfigs.xml
+        for support in regression framework otherwise these nodes will fail in test-->
 
     </PerfResources>
 </ResourceConfigs>

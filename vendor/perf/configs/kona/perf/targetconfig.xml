@@ -58,4 +58,76 @@
 
     </Config1>
 
+    <Config2>
+
+         <TargetInfo
+             Target="QCS8250"
+             NumClusters="3"
+             TotalNumCores="8"
+             SocIds="481"
+             SynCore="1"
+             CoreCtlCpu="4"
+             MinCoreOnline="0"
+             CpufreqGov="1" />
+
+         <ClustersInfo Id="0" NumCores="4" Type="little" />
+         <ClustersInfo Id="1" NumCores="3" Type="big" />
+         <ClustersInfo Id="2" NumCores="1" Type="prime" />
+
+    </Config2>
+
+    <Config3>
+
+         <TargetInfo
+             Target="QRB5165"
+             NumClusters="3"
+             TotalNumCores="8"
+             SocIds="455,496"
+             SynCore="1"
+             CoreCtlCpu="4"
+             MinCoreOnline="0"
+             CpufreqGov="1" />
+
+         <ClustersInfo Id="0" NumCores="4" Type="little" />
+         <ClustersInfo Id="1" NumCores="3" Type="big" />
+         <ClustersInfo Id="2" NumCores="1" Type="prime" />
+
+    </Config3>
+
+    <Config4>
+
+         <TargetInfo
+             Target="QCS7230"
+             NumClusters="3"
+             TotalNumCores="6"
+             SocIds="548"
+             SynCore="1"
+             CoreCtlCpu="4"
+             MinCoreOnline="0"
+             CpufreqGov="1" />
+
+         <ClustersInfo Id="0" NumCores="2" Type="little" />
+         <ClustersInfo Id="1" NumCores="3" Type="big" />
+         <ClustersInfo Id="2" NumCores="1" Type="prime" />
+
+    </Config4>
+
+    <Config5>
+
+         <TargetInfo
+             Target="QRB3165"
+             NumClusters="3"
+             TotalNumCores="6"
+             SocIds="598,599"
+             SynCore="1"
+             CoreCtlCpu="4"
+             MinCoreOnline="0"
+             CpufreqGov="1" />
+
+         <ClustersInfo Id="0" NumCores="3" Type="little" />
+         <ClustersInfo Id="1" NumCores="3" Type="big" />
+
+    </Config5>
+
 </TargetConfig>
+
