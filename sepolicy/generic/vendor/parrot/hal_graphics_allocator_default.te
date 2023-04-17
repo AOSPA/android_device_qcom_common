@@ -1,5 +1,5 @@
-# Copyright (c) 2018, The Linux Foundation. All rights reserved.
-
+# Copyright (c) 2021 The Linux Foundation. All rights reserved.
+#
 # Redistribution and use in source and binary forms, with or without
 # modification, are permitted provided that the following conditions are
 # met:
@@ -33,17 +33,17 @@
 # modification, are permitted (subject to the limitations in the
 # disclaimer below) provided that the following conditions are met:
 #
-#     * Redistributions of source code must retain the above copyright
-#       notice, this list of conditions and the following disclaimer.
+#    * Redistributions of source code must retain the above copyright
+#      notice, this list of conditions and the following disclaimer.
 #
-#     * Redistributions in binary form must reproduce the above
-#       copyright notice, this list of conditions and the following
-#       disclaimer in the documentation and/or other materials provided
-#       with the distribution.
+#    * Redistributions in binary form must reproduce the above
+#      copyright notice, this list of conditions and the following
+#      disclaimer in the documentation and/or other materials provided
+#      with the distribution.
 #
-#     * Neither the name of Qualcomm Innovation Center, Inc. nor the names of its
-#       contributors may be used to endorse or promote products derived
-#       from this software without specific prior written permission.
+#    * Neither the name of Qualcomm Innovation Center, Inc. nor the names of its
+#      contributors may be used to endorse or promote products derived
+#      from this software without specific prior written permission.
 #
 # NO EXPRESS OR IMPLIED LICENSES TO ANY PARTY'S PATENT RIGHTS ARE
 # GRANTED BY THIS LICENSE. THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT
@@ -57,10 +57,15 @@
 # INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER
 # IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR
 # OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN
-# IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+# IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE
 
-recovery_only(`
-    domain_auto_trans(recovery, vendor_qrtr_exec, vendor_qrtr)
-    domain_auto_trans(recovery, vendor_rfs_access_exec, vendor_rfs_access)
-    domain_auto_trans(recovery, vendor_rmt_storage_exec, vendor_rmt_storage)
-')
+allow hal_graphics_allocator_default vendor_dmabuf_system_heap_device:chr_file r_file_perms;
+allow hal_graphics_allocator_default vendor_dmabuf_secure_pixel:chr_file r_file_perms;
+allow hal_graphics_allocator_default vendor_dmabuf_display_heap_device:chr_file r_file_perms;
+allow hal_graphics_allocator_default vendor_dmabuf_secure_cdsp_heap_device:chr_file r_file_perms;
+allow hal_graphics_allocator_default vendor_membuf_dev:chr_file r_file_perms;
+allow hal_graphics_allocator_default vendor_vm_cp_camera_device:chr_file r_file_perms;
+allow hal_graphics_allocator_default vendor_vm_cp_camera_preview_device:chr_file r_file_perms;
+allow hal_graphics_allocator_default vendor_vm_cp_sec_display_device:chr_file r_file_perms;
+allow hal_graphics_allocator_default vendor_vm_cp_cdsp_device:chr_file r_file_perms;
+allow hal_graphics_allocator_default vendor_dmabuf_demura_heap_device:chr_file r_file_perms;
