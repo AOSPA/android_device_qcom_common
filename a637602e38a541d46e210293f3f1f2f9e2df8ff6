@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "13fe7d1a_432bae8b",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000012
+      },
+      "writtenOn": "2023-04-17T21:30:59Z",
+      "side": 1,
+      "message": "+ Jhon for parrot.\n\nAre anorak and neo used on phones/tablets?  I don\u0027t think their device trees are open, so I don\u0027t know if we need to maintain them in qcom common for now.",
+      "revId": "a637602e38a541d46e210293f3f1f2f9e2df8ff6",
+      "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
+    }
+  ]
+}
