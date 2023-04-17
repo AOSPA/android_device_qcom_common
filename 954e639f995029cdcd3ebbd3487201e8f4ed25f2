@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "1b0b11c7_3dcdb410",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000012
+      },
+      "writtenOn": "2023-04-17T21:31:49Z",
+      "side": 1,
+      "message": "not sure what we want to do here for the time being.\n\nkona and bengal won\u0027t be compatible with 4.19 kernels.  Right now, this isn\u0027t used for them anyway, but it could be at some point.",
+      "revId": "954e639f995029cdcd3ebbd3487201e8f4ed25f2",
+      "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
+    }
+  ]
+}
