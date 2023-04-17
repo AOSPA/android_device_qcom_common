@@ -29,6 +29,7 @@ QCOM_BOARD_PLATFORMS += \
     $(TARGET_BOARD_PLATFORM)$(TARGET_BOARD_SUFFIX),kona_515 \
     atoll \
     bengal \
+    crow \
     holi \
     kona \
     kalama \
