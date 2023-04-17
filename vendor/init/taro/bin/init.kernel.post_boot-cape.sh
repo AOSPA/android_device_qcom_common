@@ -1,5 +1,5 @@
 #=============================================================================
-# Copyright (c) 2021-2022 Qualcomm Technologies, Inc.
+# Copyright (c) 2021 Qualcomm Technologies, Inc.
 # All Rights Reserved.
 # Confidential and Proprietary - Qualcomm Technologies, Inc.
 #=============================================================================
@@ -70,7 +70,6 @@ echo 0 > /sys/devices/system/cpu/cpufreq/policy0/walt/down_rate_limit_us
 echo 0 > /sys/devices/system/cpu/cpufreq/policy0/walt/up_rate_limit_us
 echo 1228800 > /sys/devices/system/cpu/cpufreq/policy0/walt/hispeed_freq
 echo 556800 > /sys/devices/system/cpu/cpufreq/policy0/scaling_min_freq
-echo 1804800 > /sys/devices/system/cpu/cpufreq/policy0/scaling_max_freq
 echo 1 > /sys/devices/system/cpu/cpufreq/policy0/walt/pl
 
 # configure input boost settings
@@ -137,26 +136,14 @@ do
 	echo 25000 > $latfloor/ipm_ceil
 done
 
-for l3silver in $bus_dcvs/L3/*silver
-do
-	echo 1708800 > $l3silver/max_freq
-done
-
 for l3gold in $bus_dcvs/L3/*gold
 do
 	echo 4000 > $l3gold/ipm_ceil
-	echo 1708800 > $l3gold/max_freq
 done
 
 for l3prime in $bus_dcvs/L3/*prime
 do
 	echo 20000 > $l3prime/ipm_ceil
-	echo 1708800 > $l3prime/max_freq
-done
-
-for l3pcompute in $bus_dcvs/L3/*prime-compute
-do
-	echo 1708800 > $l3pcompute/max_freq
 done
 
 for ddrprime in $bus_dcvs/DDR/*prime
@@ -170,11 +157,16 @@ do
 	echo 50 > $qosgold/ipm_ceil
 done
 
-#set s2idle as default
+# Enable LPM
+echo N > /sys/devices/system/cpu/qcom_lpm/parameters/sleep_disabled
+
 echo s2idle > /sys/power/mem_sleep
 
-#Enable LPM
-echo N > /sys/devices/system/cpu/qcom_lpm/parameters/sleep_disabled
+# TODO: Disable LMP and core_ctl. Enable again after SOD
+echo Y > /sys/devices/system/cpu/qcom_lpm/parameters/sleep_disabled
+echo 0 > /sys/devices/system/cpu/cpu0/core_ctl/enable
+echo 0 > /sys/devices/system/cpu/cpu4/core_ctl/enable
+echo 0 > /sys/devices/system/cpu/cpu7/core_ctl/enable
 
 # Let kernel know our image version/variant/crm_version
 if [ -f /sys/devices/soc0/select_image ]; then

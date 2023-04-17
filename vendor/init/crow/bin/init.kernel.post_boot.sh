@@ -1,5 +1,5 @@
 #=============================================================================
-# Copyright (c) 2020-2022 Qualcomm Technologies, Inc.
+# Copyright (c) 2019-2023 Qualcomm Technologies, Inc.
 # All Rights Reserved.
 # Confidential and Proprietary - Qualcomm Technologies, Inc.
 #
@@ -35,11 +35,8 @@ if [ -f /sys/devices/soc0/soc_id ]; then
 fi
 
 case "$platformid" in
-	"518" | "561" | "585")
-		/vendor/bin/sh /vendor/bin/init.kernel.post_boot-bengal.sh
-		;;
-	"586")
-		/vendor/bin/sh /vendor/bin/init.kernel.post_boot-bengal-iot.sh
+	"608")
+		/vendor/bin/sh /vendor/bin/init.kernel.post_boot-crow.sh
 		;;
 	*)
 		echo "***WARNING***: Invalid SoC ID\n\t No postboot settings applied!!\n"
