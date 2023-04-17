@@ -47,25 +47,12 @@ fi
 echo $sched_rt_period_us > /proc/sys/kernel/sched_rt_period_us
 echo $sched_rt_runtime_us > /proc/sys/kernel/sched_rt_runtime_us
 
-
-# Schedutil parameters
-echo "schedutil" > /sys/devices/system/cpu/cpu0/cpufreq/scaling_governor
-echo 1000 > /sys/devices/system/cpu/cpu0/cpufreq/schedutil/down_rate_limit_us
-echo 0 > /sys/devices/system/cpu/cpu0/cpufreq/schedutil/up_rate_limit_us
-echo 1363200 > /sys/devices/system/cpu/cpu0/cpufreq/schedutil/hispeed_freq
-echo 614000 > /sys/devices/system/cpu/cpu0/cpufreq/scaling_min_freq
-echo 90 > /sys/devices/system/cpu/cpu0/cpufreq/schedutil/hispeed_load
-echo -17 > /sys/devices/system/cpu/cpu0/sched_load_boost
-echo -17 > /sys/devices/system/cpu/cpu1/sched_load_boost
-echo -17 > /sys/devices/system/cpu/cpu2/sched_load_boost
-echo -17 > /sys/devices/system/cpu/cpu3/sched_load_boost
-
 # enable core control
 echo 0 > /sys/devices/system/cpu/cpu0/core_ctl/enable
 echo 0 1 1 1 > /sys/devices/system/cpu/cpu0/core_ctl/not_preferred
 echo 1 > /sys/devices/system/cpu/cpu0/core_ctl/min_cpus
 echo 4 > /sys/devices/system/cpu/cpu0/core_ctl/max_cpus
-echo 73 73 60 50 > /sys/devices/system/cpu/cpu0/core_ctl/busy_up_thres
+echo 71 71 60 50 > /sys/devices/system/cpu/cpu0/core_ctl/busy_up_thres
 echo 30 > /sys/devices/system/cpu/cpu0/core_ctl/busy_down_thres
 echo 1000 > /sys/devices/system/cpu/cpu0/core_ctl/offline_delay_ms
 echo 1 > /sys/devices/system/cpu/cpu0/core_ctl/enable
@@ -86,10 +73,17 @@ echo 0 > /proc/sys/kernel/sched_util_clamp_min_rt_default
 
 # configure governor settings for silver cluster
 echo "walt" > /sys/devices/system/cpu/cpufreq/policy0/scaling_governor
-echo 0 > /sys/devices/system/cpu/cpufreq/policy0/walt/down_rate_limit_us
 echo 0 > /sys/devices/system/cpu/cpufreq/policy0/walt/up_rate_limit_us
+echo 1000 > /sys/devices/system/cpu/cpufreq/policy0/walt/down_rate_limit_us
+echo 614000 > /sys/devices/system/cpu/cpufreq/policy0/scaling_min_freq
 echo 1363200 > /sys/devices/system/cpu/cpufreq/policy0/walt/hispeed_freq
+echo 88 > /sys/devices/system/cpu/cpu0/cpufreq/walt/hispeed_load
 echo 1 > /sys/devices/system/cpu/cpufreq/policy0/walt/pl
+echo 1 > /proc/sys/walt/sched_prefer_spread
+echo -10 > /sys/devices/system/cpu/cpu0/sched_load_boost
+echo -10 > /sys/devices/system/cpu/cpu1/sched_load_boost
+echo -10 > /sys/devices/system/cpu/cpu2/sched_load_boost
+echo -10 > /sys/devices/system/cpu/cpu3/sched_load_boost
 
 # configure bus-dcvs
 bus_dcvs="/sys/devices/system/cpu/bus_dcvs"
@@ -101,7 +95,7 @@ done
 
 for ddrbw in $bus_dcvs/DDR/*bwmon-ddr
 do
-	echo "762 2086 2759 5161" > $ddrbw/mbps_zones
+	echo "762 1144 1720 2086 2597 2929 3879 5161 5931 6881 7980" > $ddrbw/mbps_zones
 	echo 4 > $ddrbw/sample_ms
 	echo 68 > $ddrbw/io_percent
 	echo 20 > $ddrbw/hist_memory
