@@ -28,6 +28,7 @@ QCOM_BOARD_PLATFORMS += \
     atoll \
     bengal \
     bengal_515 \
+    crow \
     holi \
     kona \
     kona_515 \
