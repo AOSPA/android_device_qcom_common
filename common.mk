@@ -26,8 +26,10 @@ QCOM_BOARD_PLATFORMS += \
     $(MSMSTEPPE) \
     $(TRINKET) \
     $(TARGET_BOARD_SUFFIX)_515 \
+    anorak \
     atoll \
     bengal \
+    crow \
     holi \
     kona \
     kalama \
@@ -39,6 +41,7 @@ QCOM_BOARD_PLATFORMS += \
     msm8996 \
     msm8998 \
     msmnile \
+    neo \
     parrot \
     sdm660 \
     sdm710 \
@@ -89,6 +92,8 @@ endif
     $(TARGET_BOARD_SUFFIX)_515
 
 5_10_FAMILY := \
+    anarok \
+    neo \
     parrot \
     taro
 
