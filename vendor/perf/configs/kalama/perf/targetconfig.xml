@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 
 <!--
- * Copyright (c) 2019 Qualcomm Technologies, Inc.
+ * Copyright (c) 2017-2021 Qualcomm Technologies, Inc.
  * All Rights Reserved.
  * Confidential and Proprietary - Qualcomm Technologies, Inc.
 -->
@@ -23,6 +23,7 @@
           can be changed to "1" for "SINGLE_GOV_INSTANCE".
         * CpufreqGov, default value is "0" which implies "INTERACTIVE", can be changed it
           to "1" for "SCHEDUTIL".
+        * TargetMaxArgsPerReq, can be used to update max arg per req value, default is 64.
     -->
 
     <!-- For each cluster,write a seperate ClustersInfo tag.
@@ -43,50 +44,21 @@
     <Config1>
 
          <TargetInfo
-             Target="bengal"
-             NumClusters="2"
+             Target="kalama"
+             NumClusters="3"
              TotalNumCores="8"
-             SocIds="417,420,444,445"
+             SocIds="519,536,600,601,603,604"
              SynCore="1"
              CoreCtlCpu="4"
              MinCoreOnline="0"
-             CpufreqGov="1" />
+             CpufreqGov="1"
+             TargetMaxArgsPerReq="64"
+        />
 
-         <ClustersInfo Id="0" NumCores="4" Type="little" />
+         <ClustersInfo Id="0" NumCores="3" Type="little" />
          <ClustersInfo Id="1" NumCores="4" Type="big" />
+         <ClustersInfo Id="2" NumCores="1" Type="prime" />
 
     </Config1>
-
-    <Config2>
-
-         <TargetInfo
-             Target="scuba"
-             NumClusters="1"
-             TotalNumCores="4"
-             SocIds="441"
-             SynCore="1"
-             MinCoreOnline="1"
-             CpufreqGov="1" />
-
-         <ClustersInfo Id="0" NumCores="4" Type="big" />
-
-    </Config2>
-
-    <Config3>
-
-         <TargetInfo
-             Target="khaje"
-             NumClusters="2"
-             TotalNumCores="8"
-             SocIds="518,561,585,586"
-             SynCore="1"
-             CoreCtlCpu="4"
-             MinCoreOnline="0"
-             CpufreqGov="1" />
-
-         <ClustersInfo Id="0" NumCores="4" Type="little" />
-         <ClustersInfo Id="1" NumCores="4" Type="big" />
-
-    </Config3>
 
 </TargetConfig>
