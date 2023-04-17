@@ -1,0 +1,164 @@
+# Copyright (c) 2022 Qualcomm Innovation Center, Inc. All rights reserved.
+#
+# Redistribution and use in source and binary forms, with or without
+# modification, are permitted (subject to the limitations in the
+# disclaimer below) provided that the following conditions are met:
+#
+#    * Redistributions of source code must retain the above copyright
+#      notice, this list of conditions and the following disclaimer.
+#
+#    * Redistributions in binary form must reproduce the above
+#      copyright notice, this list of conditions and the following
+#      disclaimer in the documentation and/or other materials provided
+#      with the distribution.
+#
+#    * Neither the name of Qualcomm Innovation Center, Inc. nor the names of its
+#      contributors may be used to endorse or promote products derived
+#      from this software without specific prior written permission.
+#
+# NO EXPRESS OR IMPLIED LICENSES TO ANY PARTY'S PATENT RIGHTS ARE
+# GRANTED BY THIS LICENSE. THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT
+# HOLDERS AND CONTRIBUTORS "AS IS" AND ANY EXPRESS OR IMPLIED
+# WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF
+# MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED.
+# IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE FOR
+# ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL
+# DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE
+# GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS
+# INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER
+# IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR
+# OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN
+# IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE
+
+###################################
+# Dev block nodes
+
+# Block device for hal_bootctl
+/dev/block/sdf                                                      u:object_r:boot_block_device:s0
+/dev/block/mmcblk0                                                  u:object_r:root_block_device:s0
+
+#emmc node
+/dev/block/platform/soc/7c4000.sdhci/by-name/abl_[ab]          u:object_r:vendor_custom_ab_block_device:s0
+/dev/block/platform/soc/7c4000.sdhci/by-name/apdp_[ab]         u:object_r:vendor_custom_ab_block_device:s0
+/dev/block/platform/soc/7c4000.sdhci/by-name/boot_[ab]         u:object_r:boot_block_device:s0
+/dev/block/platform/soc/7c4000.sdhci/by-name/vendor_boot_[ab]  u:object_r:boot_block_device:s0
+/dev/block/platform/soc/7c4000.sdhci/by-name/cmnlib_[ab]       u:object_r:vendor_custom_ab_block_device:s0
+/dev/block/platform/soc/7c4000.sdhci/by-name/cmnlib64_[ab]     u:object_r:vendor_custom_ab_block_device:s0
+/dev/block/platform/soc/7c4000.sdhci/by-name/devcfg_[ab]       u:object_r:vendor_custom_ab_block_device:s0
+/dev/block/platform/soc/7c4000.sdhci/by-name/hyp_[ab]          u:object_r:vendor_custom_ab_block_device:s0
+/dev/block/platform/soc/7c4000.sdhci/by-name/multiimgoem_[ab]  u:object_r:vendor_custom_ab_block_device:s0
+/dev/block/platform/soc/7c4000.sdhci/by-name/keymaster_[ab]    u:object_r:vendor_custom_ab_block_device:s0
+/dev/block/platform/soc/7c4000.sdhci/by-name/modem_[ab]        u:object_r:vendor_modem_block_device:s0
+/dev/block/platform/soc/7c4000.sdhci/by-name/bluetooth_[ab]    u:object_r:vendor_modem_block_device:s0
+/dev/block/platform/soc/7c4000.sdhci/by-name/msadp_[ab]        u:object_r:vendor_custom_ab_block_device:s0
+/dev/block/platform/soc/7c4000.sdhci/by-name/pmic_[ab]         u:object_r:vendor_custom_ab_block_device:s0
+/dev/block/platform/soc/7c4000.sdhci/by-name/rpm_[ab]          u:object_r:vendor_custom_ab_block_device:s0
+/dev/block/platform/soc/7c4000.sdhci/by-name/system_[ab]       u:object_r:system_block_device:s0
+/dev/block/platform/soc/7c4000.sdhci/by-name/tz_[ab]           u:object_r:vendor_custom_ab_block_device:s0
+/dev/block/platform/soc/7c4000.sdhci/by-name/vendor_[ab]       u:object_r:system_block_device:s0
+/dev/block/platform/soc/7c4000.sdhci/by-name/odm_[ab]          u:object_r:system_block_device:s0
+/dev/block/platform/soc/7c4000.sdhci/by-name/xbl_[ab]          u:object_r:vendor_xbl_block_device:s0
+/dev/block/platform/soc/7c4000.sdhci/by-name/aop_[ab]          u:object_r:vendor_custom_ab_block_device:s0
+/dev/block/platform/soc/7c4000.sdhci/by-name/aop_config_[ab]          u:object_r:vendor_custom_ab_block_device:s0
+/dev/block/platform/soc/7c4000.sdhci/by-name/vbmeta_[ab]       u:object_r:vendor_custom_ab_block_device:s0
+/dev/block/platform/soc/7c4000.sdhci/by-name/dtbo_[ab]         u:object_r:vendor_custom_ab_block_device:s0
+/dev/block/platform/soc/7c4000.sdhci/by-name/dsp_[ab]          u:object_r:vendor_custom_ab_block_device:s0
+/dev/block/platform/soc/7c4000.sdhci/by-name/mdtp_[ab]         u:object_r:vendor_mdtp_device:s0
+/dev/block/platform/soc/7c4000.sdhci/by-name/mdtpsecapp_[ab]   u:object_r:vendor_mdtp_device:s0
+/dev/block/platform/soc/7c4000.sdhci/by-name/qupfw_[ab]        u:object_r:vendor_custom_ab_block_device:s0
+/dev/block/platform/soc/7c4000.sdhci/by-name/xbl_config_[ab]   u:object_r:vendor_custom_ab_block_device:s0
+/dev/block/platform/soc/7c4000.sdhci/by-name/xbl_ramdump_[ab]   u:object_r:vendor_custom_ab_block_device:s0
+/dev/block/platform/soc/7c4000.sdhci/by-name/storsec_[ab]      u:object_r:vendor_custom_ab_block_device:s0
+/dev/block/platform/soc/7c4000.sdhci/by-name/imagefv_[ab]      u:object_r:vendor_custom_ab_block_device:s0
+/dev/block/platform/soc/7c4000.sdhci/by-name/uefisecapp_[ab]   u:object_r:vendor_uefi_block_device:s0
+/dev/block/platform/soc/7c4000.sdhci/by-name/recovery_[ab]     u:object_r:recovery_block_device:s0
+/dev/block/platform/soc/7c4000.sdhci/by-name/featenabler_[ab]  u:object_r:vendor_custom_ab_block_device:s0
+/dev/block/platform/soc/7c4000.sdhci/by-name/core_nhlos_[ab]   u:object_r:vendor_custom_ab_block_device:s0
+/dev/block/platform/soc/7c4000.sdhci/by-name/vbmeta_system_[ab]     u:object_r:vendor_custom_ab_block_device:s0
+/dev/block/platform/soc/7c4000.sdhci/by-name/shrm_[ab]     u:object_r:vendor_custom_ab_block_device:s0
+/dev/block/platform/soc/7c4000.sdhci/by-name/cpucp_[ab]     u:object_r:vendor_custom_ab_block_device:s0
+/dev/block/platform/soc/7c4000.sdhci/by-name/uefi_[ab]             u:object_r:vendor_uefi_block_device:s0
+/dev/block/platform/soc/7c4000.sdhci/by-name/multiimgqti_[ab]      u:object_r:vendor_custom_ab_block_device:s0
+
+#non A/B
+/dev/block/platform/soc/7c4000.sdhci/by-name/system                            u:object_r:system_block_device:s0
+/dev/block/platform/soc/7c4000.sdhci/by-name/metadata                            u:object_r:metadata_block_device:s0
+/dev/block/platform/soc/7c4000.sdhci/by-name/userdata                          u:object_r:userdata_block_device:s0
+/dev/block/platform/soc/7c4000.sdhci/by-name/boot                              u:object_r:boot_block_device:s0
+/dev/block/platform/soc/7c4000.sdhci/by-name/logdump                           u:object_r:vendor_logdump_partition:s0
+/dev/block/platform/soc/7c4000.sdhci/by-name/fsc                                u:object_r:vendor_modem_efs_partition_device:s0
+/dev/block/platform/soc/7c4000.sdhci/by-name/fsg                                u:object_r:vendor_modem_efs_partition_device:s0
+/dev/block/platform/soc/7c4000.sdhci/by-name/modemst1                           u:object_r:vendor_modem_efs_partition_device:s0
+/dev/block/platform/soc/7c4000.sdhci/by-name/modemst2                           u:object_r:vendor_modem_efs_partition_device:s0
+/dev/block/platform/soc/7c4000.sdhci/by-name/ssd                                u:object_r:vendor_ssd_block_device:s0
+/dev/block/platform/soc/7c4000.sdhci/by-name/misc                               u:object_r:misc_block_device:s0
+/dev/block/platform/soc/7c4000.sdhci/by-name/rpm                                u:object_r:vendor_rpmb_device:s0
+/dev/block/platform/soc/7c4000.sdhci/by-name/msadp                              u:object_r:vendor_mba_debug_dev:s0
+/dev/block/platform/soc/7c4000.sdhci/by-name/recovery                           u:object_r:recovery_block_device:s0
+/dev/block/platform/soc/7c4000.sdhci/by-name/cache                              u:object_r:cache_block_device:s0
+/dev/block/platform/soc/7c4000.sdhci/by-name/frp                                u:object_r:frp_block_device:s0
+/dev/block/platform/soc/7c4000.sdhci/by-name/mdtp                               u:object_r:vendor_mdtp_device:s0
+/dev/block/platform/soc/7c4000.sdhci/by-name/dip                                u:object_r:vendor_dip_device:s0
+/dev/block/platform/soc/7c4000.sdhci/by-name/storsec                            u:object_r:boot_block_device:s0
+/dev/block/platform/soc/7c4000.sdhci/by-name/persist                            u:object_r:vendor_persist_block_device:s0
+/dev/block/platform/soc/7c4000.sdhci/by-name/super                              u:object_r:super_block_device:s0
+
+#rawdump partition
+/dev/block/platform/soc/7c4000.sdhci/by-name/rawdump                            u:object_r:vendor_rawdump_block_device:s0
+
+# limits Partitions
+/dev/block/platform/soc/7c4000.sdhci/by-name/limits                             u:object_r:vendor_limits_block_device:s0
+/dev/block/platform/soc/7c4000.sdhci/by-name/limits-cdsp                        u:object_r:vendor_limits_block_device:s0
+
+
+# hypervisor node
+/dev/hh_virtio.*                                                     u:object_r:vendor_virtio_chr_device:s0
+/dev/gh_virtio.*                                                     u:object_r:vendor_virtio_chr_device:s0
+
+#subsys nodes
+
+/sys/devices/platform/soc/4080000.remoteproc-mss/remoteproc/remoteproc[0-9]+/name u:object_r:vendor_sysfs_ssr:s0
+/sys/devices/platform/soc/4080000.remoteproc-mss/remoteproc/remoteproc[0-9]+/recovery u:object_r:vendor_sysfs_ssr_toggle:s0
+
+/sys/devices/platform/soc/3000000.remoteproc-adsp/remoteproc/remoteproc[0-9]+/name  u:object_r:vendor_sysfs_ssr:s0
+/sys/devices/platform/soc/3000000.remoteproc-adsp/remoteproc/remoteproc[0-9]+/recovery u:object_r:vendor_sysfs_ssr_toggle:s0
+
+/sys/devices/platform/soc/32300000.remoteproc-cdsp/remoteproc/remoteproc[0-9]+/name u:object_r:vendor_sysfs_ssr:s0
+/sys/devices/platform/soc/32300000.remoteproc-cdsp/remoteproc/remoteproc[0-9]+/recovery u:object_r:vendor_sysfs_ssr_toggle:s0
+
+/sys/devices/platform/soc/2400000.remoteproc-slpi/remoteproc/remoteproc[0-9]+/name u:object_r:vendor_sysfs_ssr:s0
+/sys/devices/platform/soc/2400000.remoteproc-slpi/remoteproc/remoteproc[0-9]+/recovery u:object_r:vendor_sysfs_ssr_toggle:s0
+
+/sys/devices/platform/soc/188101c.remoteproc-spss/remoteproc/remoteproc[0-9]+/name u:object_r:vendor_sysfs_ssr:s0
+/sys/devices/platform/soc/188101c.remoteproc-spss/remoteproc/remoteproc[0-9]+/recovery u:object_r:vendor_sysfs_ssr_toggle:s0
+
+/sys/devices/platform/soc/8a00000.remoteproc-wpss/remoteproc/remoteproc[0-9]+/name u:object_r:vendor_sysfs_ssr:s0
+/sys/devices/platform/soc/8a00000.remoteproc-wpss/remoteproc/remoteproc[0-9]+/recovery u:object_r:vendor_sysfs_ssr_toggle:s0
+
+/sys/devices/platform/soc/soc:qcom,remoteproc-esoc0/esoc0/remoteproc/remoteproc[0-9]+/name u:object_r:vendor_sysfs_ssr:s0
+/sys/devices/platform/soc/soc:qcom,remoteproc-esoc0/esoc0/remoteproc/remoteproc[0-9]+/recovery u:object_r:vendor_sysfs_ssr_toggle:s0
+
+#Display nodes
+/sys/devices/platform/soc/ae00000.qcom,mdss_mdp/drm/card0/card0-DP-1/enabled u:object_r:vendor_sysfs_graphics:s0
+/sys/devices/platform/soc/ae00000.qcom,mdss_mdp/drm/card0/card0-DSI-2/enabled u:object_r:vendor_sysfs_graphics:s0
+/sys/devices/platform/soc/ae00000.qcom,mdss_mdp/drm/card0/card0-Virtual-1/enabled u:object_r:vendor_sysfs_graphics:s0
+
+#poweropt-service
+/(vendor|system/vendor)/bin/poweropt-service u:object_r:vendor_hal_poweroptservice_qti_exec:s0
+
+# Feature configs
+/sys/devices/platform/soc/780000.qfprom/qfprom0/feat_conf* u:object_r:vendor_sysfs_qfprom:s0
+
+# mmc device type
+/sys/devices/platform/soc/8804000.sdhci/mmc_host/mmc0/mmc0:[a-f0-9]+/type u:object_r:vendor_sysfs_mmc_device_type:s0
+
+#powermodule database
+/data/vendor/pwr(/.*)? u:object_r:vendor_pm_data_file:s0
+
+/vendor/bin/hw/vendor\.qti\.hardware\.display\.demura-service u:object_r:hal_display_demura_default_exec:s0
+
+# VM Specific
+/vendor/vm-system(/.*)?              u:object_r:same_process_hal_file:s0
+
+# emmc device rpmb node
+/dev/mmcblk0rpmb                     u:object_r:vendor_rpmb_device:s0

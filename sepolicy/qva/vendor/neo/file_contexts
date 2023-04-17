@@ -1,0 +1,4 @@
+# Copyright (c) 2022 Qualcomm Innovation Center, Inc. All rights reserved.
+# SPDX-License-Identifier: BSD-3-Clause-Clear
+
+/vendor/bin/hw/android\.hardware\.bluetooth@1\.0-service-qti-lazy                  u:object_r:hal_bluetooth_default_exec:s0
