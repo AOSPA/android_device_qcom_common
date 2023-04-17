@@ -30,11 +30,6 @@
 # ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 #=============================================================================
 
-if [[ "$(getprop vendor.post_boot.custom)" == "true" ]]; then
-  echo "Device overrides post_boot, skipping $0"
-  exit 0
-fi
-
 function configure_zram_parameters() {
 	MemTotalStr=`cat /proc/meminfo | grep MemTotal`
 	MemTotal=${MemTotalStr:16:8}
