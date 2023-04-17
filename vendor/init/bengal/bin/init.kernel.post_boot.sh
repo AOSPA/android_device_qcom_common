@@ -38,6 +38,9 @@ case "$platformid" in
 	"518" | "561" | "585")
 		/vendor/bin/sh /vendor/bin/init.kernel.post_boot-bengal.sh
 		;;
+	"586")
+		/vendor/bin/sh /vendor/bin/init.kernel.post_boot-bengal-iot.sh
+		;;
 	*)
 		echo "***WARNING***: Invalid SoC ID\n\t No postboot settings applied!!\n"
 		;;
