@@ -16,6 +16,24 @@
       "message": "+ Jhon for parrot.\n\nAre anorak and neo used on phones/tablets?  I don\u0027t think their device trees are open, so I don\u0027t know if we need to maintain them in qcom common for now.",
       "revId": "a637602e38a541d46e210293f3f1f2f9e2df8ff6",
       "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "40bd846c_25043e0d",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000737
+      },
+      "writtenOn": "2023-04-19T19:14:49Z",
+      "side": 1,
+      "message": "the specific device tree is not open but it is used together with taro. wlan, sepolicy,all these configs are open. but we can take that out for now then",
+      "parentUuid": "13fe7d1a_432bae8b",
+      "revId": "a637602e38a541d46e210293f3f1f2f9e2df8ff6",
+      "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
     }
   ]
 }
