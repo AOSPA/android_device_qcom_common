@@ -1,6 +1,5 @@
 # Graphics (SDM)
 vendor/bin/hw/vendor.display.color@1.0-service
-vendor/bin/feature_enabler_client
 vendor/bin/ppd
 vendor/bin/qdcmss
 vendor/etc/display/advanced_sf_offsets.xml
@@ -8,7 +7,6 @@ vendor/etc/display/DPU660.xml
 vendor/etc/display/DPU670.xml
 vendor/etc/display/DPU7__.xml
 vendor/etc/display/DPU720.xml
-vendor/etc/init/feature_enabler_client.rc
 vendor/etc/init/qdcmss.rc
 vendor/etc/init/vendor.display.color@1.0-service.rc
 vendor/etc/snapdragon_color_libs_config.xml
