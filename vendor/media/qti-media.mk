@@ -46,34 +46,6 @@ PRODUCT_SYSTEM_EXT_PROPERTIES += \
     media.stagefright.thumbnail.prefer_hw_codecs=true \
     ro.media.recorder-max-base-layer-fps=60
 
-ifeq ($(TARGET_BOARD_PLATFORM), bengal)
-PRODUCT_COPY_FILES += \
-    device/qcom/common/vendor/media/init.qti.media.bengal.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/init.qti.media.rc \
-    device/qcom/common/vendor/media/init.qti.media.bengal.sh:$(TARGET_COPY_OUT_VENDOR)/bin/init.qti.media.sh
-
-# Packages
-PRODUCT_PACKAGES += \
-    libcodec2_hidl@1.0.vendor \
-    libcodec2_vndk.vendor \
-    libplatformconfig
-
-PRODUCT_VENDOR_PROPERTIES += \
-    debug.c2.use_dmabufheaps=1 \
-    vendor.audio.c2.preferred=true \
-    vendor.qc2audio.suspend.enabled=true \
-    vendor.qc2audio.per_frame.flac.dec.enabled=true
-endif
-
-#---------------------------------------------------------------------------------------------------
-# Runtime Codec2.0 enablement
-#---------------------------------------------------------------------------------------------------
-# TODO(PC): Override ccodec selection option back to defult (4).
-#           QSSI is forcing this to '1'. Must be reverted
-ifeq ($(call is-board-platform-in-list, bengal), true)
-    $(warning "Default Codec2.0 Enabled")
-    PRODUCT_ODM_PROPERTIES += debug.stagefright.ccodec=4
-endif
-
 # Media Init
 PRODUCT_COPY_FILES += \
     device/qcom/common/vendor/media/init.qti.media.sh:$(TARGET_COPY_OUT_VENDOR)/bin/init.qti.media.sh
