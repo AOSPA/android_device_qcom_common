@@ -1,0 +1,1 @@
+allow vendor_location_xtra_daemon vendor_location:unix_stream_socket { read };
