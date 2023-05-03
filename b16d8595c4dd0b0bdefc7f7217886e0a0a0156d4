@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "03dad621_cb5ad473",
+        "filename": "common.mk",
+        "patchSetId": 7
+      },
+      "lineNbr": 29,
+      "author": {
+        "id": 1000012
+      },
+      "writtenOn": "2023-05-03T13:44:07Z",
+      "side": 0,
+      "message": "what is the purpose of this part of the change?",
+      "revId": "b16d8595c4dd0b0bdefc7f7217886e0a0a0156d4",
+      "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
+    }
+  ]
+}
