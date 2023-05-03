@@ -20,6 +20,24 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "3c6391b7_6f8d955f",
+        "filename": "vendor/perf-legacy/qti-perf-legacy.mk",
+        "patchSetId": 8
+      },
+      "lineNbr": 32,
+      "author": {
+        "id": 1000737
+      },
+      "writtenOn": "2023-05-03T14:03:57Z",
+      "side": 1,
+      "message": "I\u0027m just removing 5.10 from legacy folder, 5.10 will always use 2.3 perf Hal, so no need to keep 5.10 conditions in legacy",
+      "parentUuid": "4f43ab81_84b482e1",
+      "revId": "2574c364fb191ddb0efa24f8e55f6bfd61b5540b",
+      "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "2c91e3fb_1cf9cc9c",
         "filename": "vendor/perf-legacy/qti-perf-legacy.mk",
         "patchSetId": 8
@@ -31,6 +49,24 @@
       "writtenOn": "2023-05-03T13:46:07Z",
       "side": 1,
       "message": "should we disable pasr on all targets? it supposedly only saves 1ma and may cause regressions",
+      "revId": "2574c364fb191ddb0efa24f8e55f6bfd61b5540b",
+      "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "eea4420e_a7a0fce5",
+        "filename": "vendor/perf-legacy/qti-perf-legacy.mk",
+        "patchSetId": 8
+      },
+      "lineNbr": 67,
+      "author": {
+        "id": 1000737
+      },
+      "writtenOn": "2023-05-03T14:03:57Z",
+      "side": 1,
+      "message": "we can do this in a separate commit",
+      "parentUuid": "2c91e3fb_1cf9cc9c",
       "revId": "2574c364fb191ddb0efa24f8e55f6bfd61b5540b",
       "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
     }
