@@ -16,6 +16,24 @@
       "message": "what is the purpose of this part of the change?",
       "revId": "b16d8595c4dd0b0bdefc7f7217886e0a0a0156d4",
       "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "f771992f_b6cdf107",
+        "filename": "common.mk",
+        "patchSetId": 7
+      },
+      "lineNbr": 29,
+      "author": {
+        "id": 1000737
+      },
+      "writtenOn": "2023-05-03T14:00:48Z",
+      "side": 0,
+      "message": "Differentiate the same platform for 4.19 and 5.15 kernel, for our component conditions .\n\nQualcomm uses similar: https://git.codelinaro.org/clo/la/platform/hardware/qcom/display/-/commit/fd69f72e99e7c1c7b38c750e45beb98c3096338f#8168e55bdae06f08f9854bce9813962b3b555629_95_94",
+      "parentUuid": "03dad621_cb5ad473",
+      "revId": "b16d8595c4dd0b0bdefc7f7217886e0a0a0156d4",
+      "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
     }
   ]
 }
