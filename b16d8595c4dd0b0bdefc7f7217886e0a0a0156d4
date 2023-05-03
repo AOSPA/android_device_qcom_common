@@ -34,6 +34,24 @@
       "parentUuid": "03dad621_cb5ad473",
       "revId": "b16d8595c4dd0b0bdefc7f7217886e0a0a0156d4",
       "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "fc6d7e58_5d8211a3",
+        "filename": "common.mk",
+        "patchSetId": 7
+      },
+      "lineNbr": 29,
+      "author": {
+        "id": 1000012
+      },
+      "writtenOn": "2023-05-03T14:57:12Z",
+      "side": 0,
+      "message": "if you\u0027re sure this works, I approve, but it doesn\u0027t look like it will work to me.\n\n$(TARGET_BOARD_PLATFORM)$(TARGET_BOARD_SUFFIX),bengal_515 \\\n    $(TARGET_BOARD_PLATFORM)$(TARGET_BOARD_SUFFIX),kona_515 \\",
+      "parentUuid": "f771992f_b6cdf107",
+      "revId": "b16d8595c4dd0b0bdefc7f7217886e0a0a0156d4",
+      "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
     }
   ]
 }
