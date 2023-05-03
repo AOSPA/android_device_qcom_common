@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "4f43ab81_84b482e1",
+        "filename": "vendor/perf-legacy/qti-perf-legacy.mk",
+        "patchSetId": 8
+      },
+      "lineNbr": 32,
+      "author": {
+        "id": 1000012
+      },
+      "writtenOn": "2023-05-03T13:46:07Z",
+      "side": 1,
+      "message": "why are we disabling poweropt on 5.10?",
+      "revId": "2574c364fb191ddb0efa24f8e55f6bfd61b5540b",
+      "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "2c91e3fb_1cf9cc9c",
+        "filename": "vendor/perf-legacy/qti-perf-legacy.mk",
+        "patchSetId": 8
+      },
+      "lineNbr": 67,
+      "author": {
+        "id": 1000012
+      },
+      "writtenOn": "2023-05-03T13:46:07Z",
+      "side": 1,
+      "message": "should we disable pasr on all targets? it supposedly only saves 1ma and may cause regressions",
+      "revId": "2574c364fb191ddb0efa24f8e55f6bfd61b5540b",
+      "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
+    }
+  ]
+}
