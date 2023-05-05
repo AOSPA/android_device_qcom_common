@@ -39,6 +39,10 @@ on early-boot
     write /sys/devices/virtual/npu/msm_npu/boot 1
     write /sys/devices/virtual/cvp/cvp/boot 1
 
+on boot
+    chown system system /sys/class/backlight/soc:backlight/brightness
+    chown system system /sys/class/backlight/soc:backlight/max_brightness
+
 on property:vendor.netflix.bsp_rev=*
     setprop ro.netflix.bsp_rev ${vendor.netflix.bsp_rev}
 
