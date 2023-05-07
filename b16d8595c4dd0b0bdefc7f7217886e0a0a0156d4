@@ -52,6 +52,24 @@
       "parentUuid": "f771992f_b6cdf107",
       "revId": "b16d8595c4dd0b0bdefc7f7217886e0a0a0156d4",
       "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "841c0c66_4ab282b5",
+        "filename": "common.mk",
+        "patchSetId": 7
+      },
+      "lineNbr": 29,
+      "author": {
+        "id": 1000737
+      },
+      "writtenOn": "2023-05-07T18:27:57Z",
+      "side": 0,
+      "message": "didn\u0027t really work, so I went back to BOARD_SUFFIX :\u003d _515. that should be enough",
+      "parentUuid": "fc6d7e58_5d8211a3",
+      "revId": "b16d8595c4dd0b0bdefc7f7217886e0a0a0156d4",
+      "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
     }
   ]
 }
