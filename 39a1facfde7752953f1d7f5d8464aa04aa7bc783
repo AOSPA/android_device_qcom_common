@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "80bbf866_64e08291",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000541
+      },
+      "writtenOn": "2023-05-07T01:06:45Z",
+      "side": 1,
+      "message": "isnt that a downgrade? current is v@0530.47, while this is V@0502.0",
+      "revId": "39a1facfde7752953f1d7f5d8464aa04aa7bc783",
+      "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
+    }
+  ]
+}
