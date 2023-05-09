@@ -60,6 +60,7 @@ ifneq (,$(filter bt, $(TARGET_COMMON_QTI_COMPONENTS)))
 endif
 
 ifneq (,$(filter charging, $(TARGET_COMMON_QTI_COMPONENTS)))
+  include $(QCOM_COMMON_PATH)/system/charging/qti-charging.mk
   include $(QCOM_COMMON_PATH)/vendor/charging/qti-charging.mk
 endif
 
