@@ -70,6 +70,24 @@
       "parentUuid": "fc6d7e58_5d8211a3",
       "revId": "b16d8595c4dd0b0bdefc7f7217886e0a0a0156d4",
       "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "07ecc97b_32dfb476",
+        "filename": "common.mk",
+        "patchSetId": 7
+      },
+      "lineNbr": 29,
+      "author": {
+        "id": 1000012
+      },
+      "writtenOn": "2023-05-10T13:18:29Z",
+      "side": 0,
+      "message": "still not sure about this.  we\u0027re checking for qcom board platform which should be the same as target board platform.  if target board platform \u003d suffix_515 seems wrong to me.",
+      "parentUuid": "841c0c66_4ab282b5",
+      "revId": "b16d8595c4dd0b0bdefc7f7217886e0a0a0156d4",
+      "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
     }
   ]
 }
