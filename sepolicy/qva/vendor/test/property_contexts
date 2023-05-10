@@ -1,0 +1,16 @@
+#kineticsxr
+persist.debug_sctrlloglevel          u:object_r:vendor_kineticsxr_prop:s0
+persist.debug_genhandshankdataset    u:object_r:vendor_kineticsxr_prop:s0
+persist.debug_savelongimg            u:object_r:vendor_kineticsxr_prop:s0
+persist.debug_sctrltraj              u:object_r:vendor_kineticsxr_prop:s0
+persist.debug_slamstatic             u:object_r:vendor_kineticsxr_prop:s0
+persist.debug_sctrl3dof              u:object_r:vendor_kineticsxr_prop:s0
+persist.debug_uselongimg             u:object_r:vendor_kineticsxr_prop:s0
+persist.debug_predtraj               u:object_r:vendor_kineticsxr_prop:s0
+persist.debug_handshankstartqvr      u:object_r:vendor_kineticsxr_prop:s0
+debug_handshankstartqvr              u:object_r:vendor_kineticsxr_prop:s0
+persist.debug_handshankuse2cam       u:object_r:vendor_kineticsxr_prop:s0
+persist.debug_imudegree              u:object_r:vendor_kineticsxr_prop:s0
+persist.debug_dynamiccheck           u:object_r:vendor_kineticsxr_prop:s0
+persist.debug_predicttime            u:object_r:vendor_kineticsxr_prop:s0
+persist.debug_sctrlcalib             u:object_r:vendor_kineticsxr_prop:s0
