@@ -1,0 +1,5 @@
+# Copyright (c) 2023 Qualcomm Innovation Center, Inc. All rights reserved.
+# SPDX-License-Identifier: BSD-3-Clause-Clear
+
+# Allow esepowermanager HAL to interact with NFC service
+hal_client_domain(vendor_hal_esepowermanager_qti, hal_nfc)

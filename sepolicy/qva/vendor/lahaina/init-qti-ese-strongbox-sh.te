@@ -1,0 +1,15 @@
+# Copyright (c) 2023 Qualcomm Innovation Center, Inc. All rights reserved.
+# SPDX-License-Identifier: BSD-3-Clause-Clear
+
+# Domain defintion
+type vendor_init-qti-ese-strongbox-sh, domain;
+type vendor_init-qti-ese-strongbox-sh_exec, exec_type, vendor_file_type, file_type;
+
+init_daemon_domain(vendor_init-qti-ese-strongbox-sh)
+
+# Allow init shell file to set property for enabling StrongBox HAL service
+set_prop(vendor_init-qti-ese-strongbox-sh, vendor_ese_strongbox_prop)
+
+# Allow init shell file execution on device
+allow vendor_init-qti-ese-strongbox-sh vendor_shell_exec:file rx_file_perms;
+allow vendor_init-qti-ese-strongbox-sh vendor_toolbox_exec:file rx_file_perms;

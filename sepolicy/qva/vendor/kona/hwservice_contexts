@@ -2,4 +2,5 @@
 #  SPDX-License-Identifier: BSD-3-Clause-Clear
 
 # hal nordic hwservice
+vendor.kineticsxr.hardware.nordic::INordic    u:object_r:vendor_hal_nordic_hwservice:s0
 vendor.shadowcreator.hardware.nordic::INordic    u:object_r:vendor_hal_nordic_hwservice:s0

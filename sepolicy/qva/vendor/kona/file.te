@@ -34,3 +34,6 @@ type vendor_biometricsface_data_file, file_type, data_file_type;
 
 # nordic node file
 type vendor_nordic_sysfs_node, sysfs_type, fs_type;
+
+# kineticsxr file
+type vendor_kx_file, file_type, vendor_file_type;

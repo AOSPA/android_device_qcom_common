@@ -7,3 +7,4 @@ app_domain(vendor_nordic_app)
 hal_client_domain(vendor_nordic_app, vendor_hal_nordic);
 allow vendor_nordic_app activity_service:service_manager find;
 allow vendor_nordic_app vendor_qvrd_vndr:fd use;
+allow vendor_nordic_app content_capture_service:service_manager find;
