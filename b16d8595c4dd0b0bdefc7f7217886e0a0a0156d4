@@ -106,6 +106,24 @@
       "parentUuid": "07ecc97b_32dfb476",
       "revId": "b16d8595c4dd0b0bdefc7f7217886e0a0a0156d4",
       "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "34f6ba98_9a73e9fe",
+        "filename": "common.mk",
+        "patchSetId": 7
+      },
+      "lineNbr": 29,
+      "author": {
+        "id": 1000012
+      },
+      "writtenOn": "2023-05-10T16:12:33Z",
+      "side": 0,
+      "message": "soooo my understanding is QCOM_BOARD_PLATFORMS +\u003d kona would still work for kona_515 since TARGET_BOARD_PLATFORM would be equal to kona for 5.15.\n\nThen, we would just need to override TARGET_KERNEL_VERSION when TARGET_BOARD_SUFFIX \u003d 515.",
+      "parentUuid": "3e854dc3_697d254f",
+      "revId": "b16d8595c4dd0b0bdefc7f7217886e0a0a0156d4",
+      "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
     }
   ]
 }
