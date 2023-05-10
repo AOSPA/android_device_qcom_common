@@ -1,0 +1,5 @@
+# Copyright (c) 2023 Qualcomm Innovation Center, Inc. All rights reserved.
+# SPDX-License-Identifier: BSD-3-Clause-Clear
+
+#Allow access to secure_element HAL
+hal_client_domain(hal_keymaster_default, hal_secure_element)

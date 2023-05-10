@@ -125,3 +125,5 @@ genfscon sysfs /devices/platform/soc/c440000.qcom,spmi/spmi-0/spmi0-02/c440000.q
 #net sysfs
 genfscon sysfs /devices/platform/soc/1c10000.qcom,pcie/pci0002:00/0002:00:00.0/0002:01:00.0/0306_02.01.00_IP_HW0/net u:object_r:sysfs_net:s0
 
+# graphics/display DRM-KMS node
+genfscon sysfs /devices/platform/soc/ae00000.qcom,mdss_mdp/drm/card0/sde-crtc-0/lineptr_value u:object_r:vendor_sysfs_graphics:s0
