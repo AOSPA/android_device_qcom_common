@@ -88,6 +88,24 @@
       "parentUuid": "841c0c66_4ab282b5",
       "revId": "b16d8595c4dd0b0bdefc7f7217886e0a0a0156d4",
       "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "3e854dc3_697d254f",
+        "filename": "common.mk",
+        "patchSetId": 7
+      },
+      "lineNbr": 29,
+      "author": {
+        "id": 1000737
+      },
+      "writtenOn": "2023-05-10T13:42:39Z",
+      "side": 0,
+      "message": "indeed, so we should think of a new way to recognize kernel version 5.15, but it should still identify the platform only as bengal and Kona, because we have a lot of conditions involving that, including sepolicy",
+      "parentUuid": "07ecc97b_32dfb476",
+      "revId": "b16d8595c4dd0b0bdefc7f7217886e0a0a0156d4",
+      "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
     }
   ]
 }
