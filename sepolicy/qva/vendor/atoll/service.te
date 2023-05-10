@@ -1,4 +1,4 @@
-# Copyright (c) 2019,  The Linux Foundation. All rights reserved.
+# Copyright (c) 2021, The Linux Foundation. All rights reserved.
 #
 # Redistribution and use in source and binary forms, with or without
 # modification, are permitted provided that the following conditions are
@@ -13,7 +13,7 @@
 #       contributors may be used to endorse or promote products derived
 #       from this software without specific prior written permission.
 #
-# THIS SOFTWARE IS PROVIDED"AS IS" AND ANY EXPRESS OR IMPLIED
+# THIS SOFTWARE IS PROVIDED "AS IS" AND ANY EXPRESS OR IMPLIED
 # WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF
 # MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NON-INFRINGEMENT
 # ARE DISCLAIMED.  IN NO EVENT SHALL THE COPYRIGHT OWNER OR CONTRIBUTORS
@@ -25,15 +25,7 @@
 # OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN
 # IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 #
-# Changes from Qualcomm Innovation Center are provided under the following license:
-# Copyright (c) 2022 Qualcomm Innovation Center, Inc. All rights reserved.
+# Copyright (c) 2023 Qualcomm Innovation Center, Inc. All rights reserved.
 # SPDX-License-Identifier: BSD-3-Clause-Clear
 
-# vendor biometricsface data file
-type vendor_biometricsface_data_file, file_type, data_file_type;
-
-# nordic node file
-type vendor_nordic_sysfs_node, sysfs_type, fs_type;
-
-# kineticsxr file
-type vendor_kx_file, file_type, vendor_file_type;
+type vendor_hal_dataconnection_service,  vendor_service, service_manager_type;

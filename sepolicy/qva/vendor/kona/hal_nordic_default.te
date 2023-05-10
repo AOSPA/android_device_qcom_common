@@ -8,6 +8,18 @@ init_daemon_domain(vendor_hal_nordic_default);
 binder_call(vendor_hal_nordic_client, vendor_hal_nordic_server)
 binder_call(vendor_hal_nordic_server, vendor_hal_nordic_client)
 hal_attribute_hwservice(vendor_hal_nordic, vendor_hal_nordic_hwservice)
+hal_client_domain(vendor_hal_nordic_default, hal_allocator)
+hal_client_domain(vendor_hal_nordic_default, vendor_hal_dspmanager)
 allow vendor_hal_nordic_default vendor_nordic_sysfs_node:file { open read write };
 allow vendor_hal_nordic_default ion_device:chr_file rw_file_perms;
-hal_client_domain(vendor_hal_nordic_default, hal_allocator)
+allow vendor_hal_nordic_default vendor_qvrd_vndr_socket:sock_file write;
+allow vendor_hal_nordic_default vendor_qvrd_vndr:fd use;
+allow vendor_hal_nordic_default hal_graphics_mapper_hwservice:hwservice_manager find;
+allow vendor_hal_nordic_default vendor_qdsp_device:chr_file ioctl;
+allow vendor_hal_nordic_default vendor_qvrd_vndr:unix_stream_socket connectto;
+allow vendor_hal_nordic_default hal_graphics_allocator_default:fd use;
+allow vendor_hal_nordic_default vendor_qdsp_device:file open;
+allow vendor_hal_nordic_default vendor_qdsp_device:chr_file { open read };
+allow vendor_hal_nordic_default vendor_kx_file:file { open read getattr };
+hal_client_domain(vendor_hal_nordic_default, hal_allocator);
+userdebug_or_eng('set_prop(vendor_hal_nordic_default, vendor_kineticsxr_prop)')

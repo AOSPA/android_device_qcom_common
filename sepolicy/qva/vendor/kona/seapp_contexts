@@ -2,4 +2,5 @@
 #  SPDX-License-Identifier: BSD-3-Clause-Clear
 
 #Add new domain for nordic service app
+user=_app seinfo=platform name=com.kineticsxr.service.nordic.bridge domain=vendor_nordic_app type=app_data_file levelFrom=all
 user=_app seinfo=platform name=com.shadowcreator.service.handshank domain=vendor_nordic_app type=app_data_file levelFrom=all
