@@ -1,4 +1,22 @@
 {
-  "comments": [],
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "cf1bab45_c1043d87",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000737
+      },
+      "writtenOn": "2023-05-14T23:31:26Z",
+      "side": 1,
+      "message": "why ? we should not change upstream repository",
+      "revId": "994059496a33c42adb1f26cbdd6cbf67e25d0c23",
+      "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
+    }
+  ],
   "submitRequirementResults": []
 }
