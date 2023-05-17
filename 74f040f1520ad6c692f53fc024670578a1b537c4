@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "b7202e59_9f069e4a",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000468
+      },
+      "writtenOn": "2023-05-17T06:27:59Z",
+      "side": 1,
+      "message": "Convert to blueprint and use cc_library_headers",
+      "revId": "74f040f1520ad6c692f53fc024670578a1b537c4",
+      "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
+    }
+  ]
+}
