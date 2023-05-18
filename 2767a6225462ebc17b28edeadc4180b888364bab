@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "8db68e24_e3bb2e37",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000012
+      },
+      "writtenOn": "2023-05-18T04:18:17Z",
+      "side": 1,
+      "message": "this doesn\u0027t seem necessary. are pixels doing it? I have a lot of apps that run into denials, particularly Instagram, but that is not necessarily something we should fix",
+      "revId": "2767a6225462ebc17b28edeadc4180b888364bab",
+      "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
+    }
+  ]
+}
