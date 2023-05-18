@@ -27,6 +27,7 @@
 
 allow surfaceflinger sysfs_graphics:file rw_file_perms;
 allow surfaceflinger vendor_firmware_file:dir search;
+allow surfaceflinger hal_graphics_composer_default:dir search;
 
 # Use open file provided by poweroffhandler
 binder_call(surfaceflinger, poweroffhandler);
