@@ -35,6 +35,7 @@ allow vendor_init unlabeled:dir { r_dir_perms setattr relabelfrom };
 allow vendor_init unlabeled:file { r_file_perms setattr relabelfrom };
 allow vendor_init ipa_dev:chr_file w_file_perms;
 allow vendor_init proc:file write;
+allow vendor_init proc_watermark_scale_factor:file w_file_perms;
 
 # write from init.target.rc
 allow vendor_init sysfs_poweron_alarm:file w_file_perms;
