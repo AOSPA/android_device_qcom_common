@@ -1,0 +1,1 @@
+allow vendor_location_lowi_server vendor_location:unix_stream_socket connectto;
