@@ -12,13 +12,14 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-TARGET_GPS_COMPONENT_VARIANT := gps
+TARGET_GPS_COMPONENT_VARIANT := gps-legacy
 
 PRODUCT_SOONG_NAMESPACES += \
     device/qcom/common/vendor/gps
 
 # Flags
 BOARD_VENDOR_QCOM_GPS_LOC_API_HARDWARE := default
+LOC_HIDL_VERSION := 4.0
 
 # Inherit the GPS HAL.
 $(call inherit-product-if-exists, hardware/qcom/gps/gps_vendor_product.mk)
@@ -32,4 +33,4 @@ PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.location.gps.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.location.gps.xml
 
 # Get non-open-source specific aspects.
-$(call inherit-product-if-exists, vendor/qcom/common/vendor/gps/gps-vendor.mk)
+$(call inherit-product-if-exists, vendor/qcom/common/vendor/gps-legacy/gps-legacy-vendor.mk)
