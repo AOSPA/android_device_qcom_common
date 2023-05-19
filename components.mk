@@ -84,7 +84,11 @@ endif
 
 ifneq (,$(filter gps, $(TARGET_COMMON_QTI_COMPONENTS)))
   include $(QCOM_COMMON_PATH)/system/gps/qti-gps.mk
-  include $(QCOM_COMMON_PATH)/vendor/gps/qti-gps.mk
+  ifeq ($(call is-board-platform-in-list,$(5_10_FAMILY) $(5_15_FAMILY)),true)
+    include $(QCOM_COMMON_PATH)/vendor/gps/qti-gps.mk
+  else
+    include $(QCOM_COMMON_PATH)/vendor/gps-legacy/qti-gps-legacy.mk
+  endif
 endif
 
 ifneq (,$(filter init, $(TARGET_COMMON_QTI_COMPONENTS)))
