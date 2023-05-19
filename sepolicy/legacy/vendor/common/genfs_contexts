@@ -30,7 +30,6 @@ genfscon proc /debugdriver/driverdump                 u:object_r:proc_wifi_dbg:s
 genfscon proc /ath_pktlog/cld                         u:object_r:proc_wifi_dbg:s0
 genfscon proc /asound/card0/state u:object_r:proc_audiod:s0
 genfscon proc /asound/cards u:object_r:proc_audiod:s0
-genfscon proc /sys/vm/dirty_ratio  u:object_r:proc_dirty_ratio:s0
 genfscon sysfs /module/msm_performance/workload_modes u:object_r:sysfs_msm_perf:s0
 genfscon sysfs /class/devfreq                               u:object_r:sysfs_devfreq:s0
 genfscon sysfs /devices/soc0                                u:object_r:sysfs_socinfo:s0
