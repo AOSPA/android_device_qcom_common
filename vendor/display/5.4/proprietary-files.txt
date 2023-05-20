@@ -8,7 +8,6 @@ vendor/etc/display/DPU660.xml
 vendor/etc/display/DPU670.xml
 vendor/etc/display/DPU7__.xml
 vendor/etc/display/DPU720.xml
-vendor/etc/init/feature_enabler_client.rc
 vendor/etc/init/qdcmss.rc
 vendor/etc/init/vendor.display.color@1.0-service.rc
 vendor/etc/snapdragon_color_libs_config.xml
