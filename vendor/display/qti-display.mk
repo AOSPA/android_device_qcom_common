@@ -49,5 +49,11 @@ PRODUCT_VENDOR_PROPERTIES += \
     debug.sf.treat_170m_as_sRGB=1
 endif
 
+# Copy feature_enabler rc only for lahaina on 5.4
+ifeq ($(call is-board-platform-in-list, lahaina),true)
+PRODUCT_COPY_FILES += \
+    device/qcom/common/vendor/display/5.4/feature_enabler_client.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/feature_enabler_client.rc
+endif
+
 # Get non-open-source specific aspects.
 $(call inherit-product-if-exists, vendor/qcom/common/vendor/display/$(TARGET_KERNEL_VERSION)/display-vendor.mk)
