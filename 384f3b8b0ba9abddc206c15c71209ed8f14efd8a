@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "f5dd8c04_76dd08c3",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000012
+      },
+      "writtenOn": "2023-05-20T04:29:17Z",
+      "side": 1,
+      "message": "https://github.com/AOSPA/android_device_qcom_common/blob/topaz/vendor/display/5.4/proprietary-files.txt#L11",
+      "revId": "384f3b8b0ba9abddc206c15c71209ed8f14efd8a",
+      "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
+    }
+  ]
+}
