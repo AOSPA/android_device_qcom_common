@@ -1,6 +1,23 @@
 {
   "comments": [
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "ec139436_39c4ba21",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000548
+      },
+      "writtenOn": "2023-05-20T03:48:50Z",
+      "side": 1,
+      "message": "What about gps configuration? Also does this include blobs that normally built from source? In addition how are you sure that the same HAL is used on all of those platforms?, also please fix the description, [2] has Blobsn instead of Blobs.",
+      "revId": "4eb8be9e8cf6b600ce88d6b31ebfda7a8ea8708e",
+      "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "f76b7c44_6829b7a6",
