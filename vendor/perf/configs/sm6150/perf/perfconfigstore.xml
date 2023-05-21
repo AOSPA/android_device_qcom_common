@@ -38,6 +38,15 @@ property Name is called. -->
                 <!-- AOSPA Edit: Enable CLO Userspace LMK -->
                 <Prop Name="ro.lmk.enable_userspace_lmk" Value="true" />
                 <Prop Name="ro.vendor.perf.qgpe" Value="true"/>
+                <!-- AOSPA Edit: Configure QTI BService -->
+                <Prop Name="ro.vendor.qti.sys.fw.bservice_age" Value="300000" />
+                <Prop Name="ro.vendor.qti.sys.fw.bservice_limit" Value="15" />
+                <Prop Name="ro.vendor.qti.sys.fw.bservice_enable" Value="true" />
+                <Prop Name="ro.vendor.qti.sys.fw.use_trim_settings" Value="true" />
+                <Prop Name="ro.vendor.qti.sys.fw.empty_app_percent" Value="50" />
+                <Prop Name="ro.vendor.qti.sys.fw.trim_empty_percent" Value="100" />
+                <Prop Name="ro.vendor.qti.sys.fw.trim_cache_percent" Value="100" />
+                <Prop Name="ro.vendor.qti.sys.fw.trim_enable_memory" Value="1000000000" />
 
                 <!-- AOSPA Edit: Enable Preferred Apps -->
                 <Prop Name="ro.lmk.enable_preferred_apps" Value="true" />
