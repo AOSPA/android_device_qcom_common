@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "096a324c_85ea3a9f",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000012
+      },
+      "writtenOn": "2023-05-22T20:46:10Z",
+      "side": 1,
+      "message": "should we do this in vendor/aospa instead?  This doesn\u0027t seem very QC-specific and was originally for pixels.",
+      "revId": "127ce0fef7afc109eaa56115919033f12650f0f3",
+      "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
+    }
+  ]
+}
