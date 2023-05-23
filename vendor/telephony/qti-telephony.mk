@@ -16,6 +16,13 @@ PRODUCT_SOONG_NAMESPACES += \
     device/qcom/common/vendor/telephony
 
 # Data Services
+SOONG_CONFIG_NAMESPACES += rmnetctl
+SOONG_CONFIG_rmnetctl += \
+    old_rmnet_data
+SOONG_CONFIG_rmnetctl_old_rmnet_data ?= false
+ifeq (,$(filter 5.15, $(TARGET_KERNEL_VERSION)))
+SOONG_CONFIG_rmnetctl_old_rmnet_data := true
+endif
 $(call inherit-product, vendor/qcom/opensource/dataservices/dataservices_vendor_product.mk)
 
 # IPACM
