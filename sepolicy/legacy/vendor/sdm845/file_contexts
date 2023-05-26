@@ -95,8 +95,6 @@
 # FBE
 /(vendor|system/vendor)/bin/init.qti.qseecomd.sh		u:object_r:init-qti-fbe-sh_exec:s0
 
-/vendor/bin/init.qti.chg_policy.sh                  u:object_r:qti_init_shell_exec:s0
-
 # Same process file
 /vendor/lib(64)?/hw/gralloc\.sdm845\.so   u:object_r:same_process_hal_file:s0
 /vendor/lib(64)?/hw/vulkan\.sdm845\.so    u:object_r:same_process_hal_file:s0
