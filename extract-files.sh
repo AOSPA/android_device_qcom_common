@@ -13,7 +13,8 @@ set -e
 MY_DIR="${BASH_SOURCE%/*}"
 if [[ ! -d "${MY_DIR}" ]]; then MY_DIR="${PWD}"; fi
 
-ANDROID_ROOT="${MY_DIR}/../../../.."
+SCRIPT_LOCATION=$(readlink -f "${BASH_SOURCE[0]}")
+ANDROID_ROOT=$(dirname $SCRIPT_LOCATION)"/../../.."
 
 HELPER="${ANDROID_ROOT}/tools/extract-utils/extract_utils.sh"
 if [ ! -f "${HELPER}" ]; then
@@ -51,19 +52,44 @@ if [ -z "${SRC}" ]; then
     SRC="adb"
 fi
 
+function blob_fixup() {
+    case "${1}" in
+        system/framework/QXPerformance.jar)
+            mv "${2}" "${2}.tmp"
+            zipalign -p -f 4 "${2}.tmp" "${2}"
+            rm "${2}.tmp"
+            ;;
+
+        system/lib64/libwfdnative.so | system/lib/libwfdnative.so | system/lib/libwfdservice.so | system/lib/libwfdcommonutils.so | system/lib/libwfdmmsrc.so | system/lib/libwfdmmsink.so)
+            "${PATCHELF}" --add-needed "libshim_wfd.so" "${2}"
+            ;;
+    esac
+}
+
+# Get the COMPONENT, KERNEL_VERSION, and VENDOR from the current directory
+CURRENT_DIR="$(pwd)"
+VENDOR="$(dirname "$(dirname "$(dirname "$CURRENT_DIR")")")"
+
+# Extract the kernel version if it follows the format x.y
+if [[ "${CURRENT_DIR}" =~ /([0-9]+\.[0-9]+)$ ]]; then
+    KERNEL_VERSION="${BASH_REMATCH[1]}"
+fi
+
+if [ ! -z "${KERNEL_VERSION}" ]; then
+    COMPONENT=$(basename $(realpath "$CURRENT_DIR/.."))
+else
+    COMPONENT=$(basename "$CURRENT_DIR")
+fi
+
+echo $COMPONENT
 # Initialize the helper
-if [ -f "${MY_DIR}/${COMPONENT}/${KERNEL_VERSION}/proprietary-files.txt" ] && [ ! -z ${KERNEL_VERSION} ]; then
+if [ ! -z "${KERNEL_VERSION}" ]; then
     setup_vendor "${COMPONENT}/${KERNEL_VERSION}" "${VENDOR}" "${ANDROID_ROOT}" false "${CLEAN_VENDOR}" "${COMPONENT}" true
 else
     setup_vendor "${COMPONENT}" "${VENDOR}" "${ANDROID_ROOT}" false "${CLEAN_VENDOR}" "" true
 fi
 
-if [ -f "${MY_DIR}/${COMPONENT}/${KERNEL_VERSION}/proprietary-files.txt" ] && [ ! -z ${KERNEL_VERSION} ]; then
-    extract "${MY_DIR}/${COMPONENT}/${KERNEL_VERSION}/proprietary-files.txt" "${SRC}" \
-        "${KANG}" --section "${SECTION}"
-else
-    extract "${MY_DIR}/${COMPONENT}/proprietary-files.txt" "${SRC}" \
-        "${KANG}" --section "${SECTION}"
-fi
+extract "${MY_DIR}/proprietary-files.txt" "${SRC}" \
+    "${KANG}" --section "${SECTION}"
 
 "${MY_DIR}/setup-makefiles.sh"
