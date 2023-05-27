@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "2b6eb450_7fc07f66",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 8
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000548
+      },
+      "writtenOn": "2023-05-27T07:44:42Z",
+      "side": 1,
+      "message": "Perhaps we sit on this until kona 5.15 or bengal 5.15 device comes along and needs it for more thorough testing 😄",
+      "revId": "ae0be231f369ef1f16e5cd85fcc4da223a12b804",
+      "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
+    }
+  ]
+}
