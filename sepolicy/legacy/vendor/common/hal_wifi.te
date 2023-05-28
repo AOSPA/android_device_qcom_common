@@ -27,6 +27,10 @@
 #
 #
 
+allow hal_wifi_default mnt_vendor_file:dir r_dir_perms;
+allow hal_wifi_default proc_net:file rw_file_perms;
+allow hal_wifi_default wcnss_persist_file:file r_file_perms;
+
 # write to files owned by location daemon
 allow hal_wifi_default location_socket:dir search;
 allow hal_wifi_default location:unix_dgram_socket sendto;
@@ -48,6 +52,8 @@ allow hal_wifi proc_modules:file r_file_perms;
 # allow hal_wifi to write into /proc/debugdriver/driverdump
 r_dir_file(hal_wifi_default, proc_wifi_dbg)
 get_prop(hal_wifi_default, vendor_softap_prop)
+
+get_prop(hal_wifi_default, persist_vendor_debug_wifi_prop)
 
 # allow hal_wifi to write into /data/vendor/tombstones/wifi
 userdebug_or_eng(`
