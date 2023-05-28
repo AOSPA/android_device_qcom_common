@@ -25,6 +25,10 @@
 # OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN
 # IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
+binder_call(system_app, hal_power_default)
+binder_call(system_app, hal_vibrator_default)
+binder_call(system_app, hal_wifi_supplicant_default)
+
 r_dir_file(system_app, bluetooth_data_file);
 
 allow system_app {
