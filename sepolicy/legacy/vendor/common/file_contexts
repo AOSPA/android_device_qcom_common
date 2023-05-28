@@ -620,6 +620,7 @@
 /mnt/vendor/persist/secnvm(/.*)?                                    u:object_r:persist_secnvm_file:s0
 /mnt/vendor/persist/FTM_AP(/.*)?                                    u:object_r:vendor_persist_mmi_file:s0
 /mnt/vendor/persist/hvdcp_opti(/.*)?                                u:object_r:persist_hvdcp_file:s0
+/mnt/vendor/persist/WCNSS_qcom_wlan_nv.bin                          u:object_r:wcnss_persist_file:s0
 
 ###################################
 # etc files
