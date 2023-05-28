@@ -101,3 +101,10 @@ allow init firmware_file:filesystem getattr;
 allow init proc:file w_file_perms;
 allow init bt_firmware_file:filesystem getattr;
 allow init sysfs_mmc_host:file w_file_perms;
+
+# Perf
+allow init device_latency:chr_file rw_file_perms;
+allow init sysfs_battery_supply:file r_file_perms;
+allow init sysfs_devices_system_cpu:file rw_file_perms;
+allow init sysfs_kgsl:file rw_file_perms;
+allow init sysfs_msm_perf:file rw_file_perms;
