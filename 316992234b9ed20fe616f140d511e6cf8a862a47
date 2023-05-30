@@ -16,6 +16,24 @@
       "message": "This doesn\u0027t seem to be a common file for every legacy target. My sdm660 device does not have it",
       "revId": "316992234b9ed20fe616f140d511e6cf8a862a47",
       "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "db201627_dd16aaab",
+        "filename": "sepolicy/legacy/vendor/common/file_contexts",
+        "patchSetId": 1
+      },
+      "lineNbr": 623,
+      "author": {
+        "id": 1000429
+      },
+      "writtenOn": "2023-05-30T14:01:25Z",
+      "side": 1,
+      "message": "oh is that so. but it is used by sdm439, msm8937 and msm8953, should it be decommonized?",
+      "parentUuid": "01a871ed_7f03be7d",
+      "revId": "316992234b9ed20fe616f140d511e6cf8a862a47",
+      "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
     }
   ]
 }
