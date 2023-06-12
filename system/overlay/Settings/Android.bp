@@ -1,5 +1,5 @@
 runtime_resource_overlay {
-    name: "SystemUIResCommon_Sys",
+    name: "SettingsResCommon_Sys",
     product_specific: true,
     sdk_version: "current",
 }
