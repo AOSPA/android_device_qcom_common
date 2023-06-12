@@ -17,10 +17,11 @@ PRODUCT_SOONG_NAMESPACES += \
 
 # Overlays
 PRODUCT_PACKAGES += \
-    CarrierConfigResCommon \
-    CellBroadcastReceiverResCommon \
-    FrameworksResCommon \
-    SystemUIResCommon \
-    TelecommResCommon \
-    TelephonyResCommon \
-    WifiResCommon
+    CarrierConfigResCommon_Sys \
+    CellBroadcastReceiverResCommon_Sys \
+    FrameworksResCommon_Sys \
+    SettingsResCommon_Sys \
+    SystemUIResCommon_Sys \
+    TelecommResCommon_Sys \
+    TelephonyResCommon_Sys \
+    WifiResCommon_Sys

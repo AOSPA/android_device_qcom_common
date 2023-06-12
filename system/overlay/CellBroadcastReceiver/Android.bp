@@ -1,4 +1,4 @@
 runtime_resource_overlay {
-    name: "CellBroadcastReceiverResCommon",
+    name: "CellBroadcastReceiverResCommon_Sys",
     product_specific: true,
 }
