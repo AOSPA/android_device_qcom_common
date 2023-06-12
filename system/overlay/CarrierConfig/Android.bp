@@ -2,5 +2,4 @@ runtime_resource_overlay {
     aaptflags: ["--keep-raw-values"],
     name: "CarrierConfigResCommon_Sys",
     product_specific: true,
-    sdk_version: "current",
 }
