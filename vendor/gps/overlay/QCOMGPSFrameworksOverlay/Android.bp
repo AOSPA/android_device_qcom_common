@@ -15,5 +15,4 @@
 runtime_resource_overlay {
     name: "QCOMGPSFrameworksOverlay",
     product_specific: true,
-    sdk_version: "current",
 }

@@ -1,5 +1,4 @@
 runtime_resource_overlay {
     name: "TelecommResCommon_Sys",
     product_specific: true,
-    sdk_version: "current",
 }
