@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+
+Copyright (c) 2014, The Linux Foundation. All rights reserved.
+
+Redistribution and use in source and binary forms, with or without
+modification, are permitted provided that the following conditions are
+met:
+    * Redistributions of source code must retain the above copyright
+      notice, this list of conditions and the following disclaimer.
+    * Redistributions in binary form must reproduce the above
+      copyright notice, this list of conditions and the following
+      disclaimer in the documentation and/or other materials provided
+      with the distribution.
+    * Neither the name of The Linux Foundation nor the names of its
+      contributors may be used to endorse or promote products derived
+      from this software without specific prior written permission.
+
+THIS SOFTWARE IS PROVIDED "AS IS" AND ANY EXPRESS OR IMPLIED
+WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF
+MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NON-INFRINGEMENT
+ARE DISCLAIMED.  IN NO EVENT SHALL THE COPYRIGHT OWNER OR CONTRIBUTORS
+BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR
+CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF
+SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR
+BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY,
+WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE
+OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN
+IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+
+-->
+<resources>
+    <!-- Display settings screen, Color mode options. Must be the same length and order as
+         config_color_mode_options_values below. Only the values that also appear in
+         frameworks/base/core/res/res/values/config.xml's config_availableColorModes are shown. -->
+    <string-array name="config_color_mode_options_strings" translatable="false">
+        <item>Natural</item>
+        <item>Boosted</item>
+        <item>Saturated</item>
+        <item>Adaptive</item>
+        <item>Reserved and unset: 256</item>
+        <item>Reserved and unset: 257</item>
+        <item>Reserved and unset: 258</item>
+        <item>Reserved and unset: 259</item>
+        <item>Reserved and unset: 260</item>
+        <item>Reserved and unset: 261</item>
+        <item>Reserved and unset: 262</item>
+        <item>Reserved and unset: 263</item>
+        <item>Reserved and unset: 264</item>
+        <item>Reserved and unset: 265</item>
+    </string-array>
+
+    <!-- Display settings screen, Color mode options. Must be the same length and order as
+         config_color_mode_options_strings above. Only the values that also appear in
+         frameworks/base/core/res/res/values/config.xml's config_availableColorModes are shown. -->
+    <integer-array name="config_color_mode_options_values" translatable="false">
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <!-- 256 to 265 are extended render intents -->
+        <item>256</item>
+        <item>257</item>
+        <item>258</item>
+        <item>259</item>
+        <item>260</item>
+        <item>261</item>
+        <item>262</item>
+        <item>263</item>
+        <item>264</item>
+        <item>265</item>
+    </integer-array>
+
+    <!-- Mobile network settings screen, title of Backup calling setting.  [CHAR LIMIT=NONE] -->
+    <string name="backup_calling_settings_title">Voice Over Cellular Internet</string>
+
+    <!-- Backup calling summary.  [CHAR LIMIT=NONE] -->
+    <string name="backup_calling_setting_summary">Extended voice coverage over cellular internet.\nDisclaimer: Charges associated with data plan usage may ensue</string>
+
+    <!-- List of synonyms for the cross SIM calling titles,
+         used to match in settings search [CHAR LIMIT=NONE] -->
+    <string name="keywords_backup_calling">Voice Over Cellular Internet</string>
+</resources>
