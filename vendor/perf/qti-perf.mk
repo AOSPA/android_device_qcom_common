@@ -53,7 +53,6 @@ endif
 PRODUCT_VENDOR_PROPERTIES += \
     ro.vendor.perf-hal.ver=2.3 \
     ro.vendor.extension_library=libqti-perfd-client.so \
-    ro.vendor.perf.scroll_opt=true \
     ro.vendor.qspm.enable=true \
     vendor.power.pasr.enabled=true
 
