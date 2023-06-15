@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "a03cdc65_0bf013a2",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000579
+      },
+      "writtenOn": "2023-06-15T11:19:02Z",
+      "side": 1,
+      "message": "why is it duplicated and with wrong change ID\n31116: common: overlay: Drop explicit \u0027sdk_version\u0027 declaration | https://gerrit.aospa.co/c/AOSPA/android_device_qcom_common/+/31116",
+      "revId": "b0a9a89b3731189e8423efec5c178e728dbbe6d9",
+      "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
+    }
+  ]
+}
