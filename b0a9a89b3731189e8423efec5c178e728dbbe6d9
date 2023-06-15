@@ -16,6 +16,24 @@
       "message": "why is it duplicated and with wrong change ID\n31116: common: overlay: Drop explicit \u0027sdk_version\u0027 declaration | https://gerrit.aospa.co/c/AOSPA/android_device_qcom_common/+/31116",
       "revId": "b0a9a89b3731189e8423efec5c178e728dbbe6d9",
       "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "9cbe2e7a_c9255545",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000730
+      },
+      "writtenOn": "2023-06-15T13:53:26Z",
+      "side": 1,
+      "message": "ah shit, didn\u0027t see that",
+      "parentUuid": "a03cdc65_0bf013a2",
+      "revId": "b0a9a89b3731189e8423efec5c178e728dbbe6d9",
+      "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
     }
   ]
 }
