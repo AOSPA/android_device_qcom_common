@@ -60,6 +60,13 @@ BOARD_VENDOR_RAMDISK_KERNEL_MODULES += $(first_stage_modules)
 BOARD_VENDOR_RAMDISK_KERNEL_MODULES += $(gki_modules)
 BOARD_VENDOR_RAMDISK_KERNEL_MODULES += $(second_stage_modules)
 
+# remove CFG80211 & MAC80211 modules from recovey
+# dependency on rfkill module
+# rfkill module is GKI / System module
+# GKI / System modules can't be loaded in recovery boot
+BOARD_VENDOR_RAMDISK_RECOVERY_KERNEL_MODULES_LOAD := $(filter-out $(KERNEL_PREBUILT_DIR)/vendor_dlkm/cfg80211.ko,$(BOARD_VENDOR_RAMDISK_RECOVERY_KERNEL_MODULES_LOAD))
+BOARD_VENDOR_RAMDISK_RECOVERY_KERNEL_MODULES_LOAD := $(filter-out $(KERNEL_PREBUILT_DIR)/vendor_dlkm/mac80211.ko,$(BOARD_VENDOR_RAMDISK_RECOVERY_KERNEL_MODULES_LOAD))
+
 # Add recovery modules for non ab case
 ifeq ($(BOARD_EXCLUDE_KERNEL_FROM_RECOVERY_IMAGE),false)
 BOARD_RECOVERY_KERNEL_MODULES := $(BOARD_VENDOR_RAMDISK_RECOVERY_KERNEL_MODULES_LOAD)
