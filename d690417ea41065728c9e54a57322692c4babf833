@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "08e23e6d_bcf6941a",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 4
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000760
+      },
+      "writtenOn": "2023-06-16T03:22:07Z",
+      "side": 1,
+      "message": "need to sync commits from history",
+      "revId": "d690417ea41065728c9e54a57322692c4babf833",
+      "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "567b6bd0_c416376d",
+        "filename": "system/overlay/Frameworks/res/values/config.xml",
+        "patchSetId": 4
+      },
+      "lineNbr": 125,
+      "author": {
+        "id": 1000760
+      },
+      "writtenOn": "2023-06-16T03:22:07Z",
+      "side": 1,
+      "message": "remove these as per commit history",
+      "revId": "d690417ea41065728c9e54a57322692c4babf833",
+      "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
+    }
+  ]
+}
