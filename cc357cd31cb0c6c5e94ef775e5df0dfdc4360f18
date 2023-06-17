@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "41067d19_c8c2be28",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000012
+      },
+      "writtenOn": "2023-06-17T08:39:22Z",
+      "side": 1,
+      "message": "not sure this condition is correct.  with kernel platform, I think prebuilt kernel is defined because it builds from source before Android.",
+      "revId": "cc357cd31cb0c6c5e94ef775e5df0dfdc4360f18",
+      "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
+    }
+  ]
+}
