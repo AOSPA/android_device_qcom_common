@@ -83,7 +83,7 @@ ifneq (,$(filter dsprpcd, $(TARGET_COMMON_QTI_COMPONENTS)))
   include $(QCOM_COMMON_PATH)/vendor/dsprpcd/qti-dsprpcd.mk
 endif
 
-ifeq ($(call is-board-platform-in-list,$(5_10_FAMILY)),true)
+ifeq ($(call is-board-platform-in-list,$(5_10_FAMILY) $(5_15_FAMILY)),true)
   include $(QCOM_COMMON_PATH)/dlkm/qti-dlkm.mk
 endif
 
@@ -135,7 +135,7 @@ ifneq (,$(filter perf, $(TARGET_COMMON_QTI_COMPONENTS)))
 endif
 
 ifneq (,$(filter qseecomd, $(TARGET_COMMON_QTI_COMPONENTS)))
-  ifeq ($(call is-board-platform-in-list,$(5_4_FAMILY) $(5_10_FAMILY)),true)
+  ifeq ($(call is-board-platform-in-list,$(5_4_FAMILY) $(5_10_FAMILY) $(5_15_FAMILY)),true)
     TARGET_QSEECOMD_COMPONENT_VARIANT ?= qseecomd
   else
     TARGET_QSEECOMD_COMPONENT_VARIANT ?= qseecomd-legacy
