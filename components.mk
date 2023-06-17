@@ -78,8 +78,10 @@ ifneq (,$(filter dsprpcd, $(TARGET_COMMON_QTI_COMPONENTS)))
   include $(QCOM_COMMON_PATH)/vendor/dsprpcd/qti-dsprpcd.mk
 endif
 
+ifeq ($(TARGET_PREBUILT_KERNEL),)
 ifeq ($(call is-board-platform-in-list,$(5_10_FAMILY) $(TARGET_KERNEL_VERSION),5.15)),true)
   include $(QCOM_COMMON_PATH)/dlkm/qti-dlkm.mk
+endif
 endif
 
 ifneq (,$(filter gps, $(TARGET_COMMON_QTI_COMPONENTS)))
