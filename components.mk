@@ -37,7 +37,7 @@ endif
 # QTI Common Components
 
 ifneq (,$(filter adreno, $(TARGET_COMMON_QTI_COMPONENTS)))
-  ifeq ($(call is-board-platform-in-list,$(5_10_FAMILY) $(5_15_FAMILY)),true)
+  ifeq ($(call is-board-platform-in-list,$(5_10_FAMILY) $(TARGET_KERNEL_VERSION),5.15)),true)
     include $(QCOM_COMMON_PATH)/vendor/adreno/qti-adreno.mk
   else ifeq ($(call is-board-platform-in-list,$(3_18_FAMILY) $(4_4_FAMILY) msm8953),true)
     include $(QCOM_COMMON_PATH)/vendor/adreno-5xx/qti-adreno-5xx.mk
@@ -78,13 +78,13 @@ ifneq (,$(filter dsprpcd, $(TARGET_COMMON_QTI_COMPONENTS)))
   include $(QCOM_COMMON_PATH)/vendor/dsprpcd/qti-dsprpcd.mk
 endif
 
-ifeq ($(call is-board-platform-in-list,$(5_10_FAMILY) $(5_15_FAMILY)),true)
+ifeq ($(call is-board-platform-in-list,$(5_10_FAMILY) $(TARGET_KERNEL_VERSION),5.15)),true)
   include $(QCOM_COMMON_PATH)/dlkm/qti-dlkm.mk
 endif
 
 ifneq (,$(filter gps, $(TARGET_COMMON_QTI_COMPONENTS)))
   include $(QCOM_COMMON_PATH)/system/gps/qti-gps.mk
-  ifeq ($(call is-board-platform-in-list,$(5_10_FAMILY) $(5_15_FAMILY)),true)
+  ifeq ($(call is-board-platform-in-list,$(5_10_FAMILY) $(TARGET_KERNEL_VERSION),5.15)),true)
     include $(QCOM_COMMON_PATH)/vendor/gps/qti-gps.mk
   else
     include $(QCOM_COMMON_PATH)/vendor/gps-legacy/qti-gps-legacy.mk
@@ -100,7 +100,7 @@ ifneq (,$(filter keymaster, $(TARGET_COMMON_QTI_COMPONENTS)))
 endif
 
 ifneq (,$(filter media, $(TARGET_COMMON_QTI_COMPONENTS)))
-  ifeq ($(call is-board-platform-in-list,$(5_10_FAMILY) $(5_15_FAMILY)),true)
+  ifeq ($(call is-board-platform-in-list,$(5_10_FAMILY) $(TARGET_KERNEL_VERSION),5.15)),true)
     include $(QCOM_COMMON_PATH)/vendor/media/qti-media.mk
   else ifeq ($(call is-board-platform-in-list,$(5_4_FAMILY)),true)
     include $(QCOM_COMMON_PATH)/vendor/media-5.4/qti-media-5.4.mk
@@ -119,7 +119,7 @@ endif
 
 ifneq (,$(filter perf, $(TARGET_COMMON_QTI_COMPONENTS)))
   include $(QCOM_COMMON_PATH)/system/perf/qti-perf.mk
-  ifeq ($(call is-board-platform-in-list,$(5_10_FAMILY) $(5_15_FAMILY)),true)
+  ifeq ($(call is-board-platform-in-list,$(5_10_FAMILY) $(TARGET_KERNEL_VERSION),5.15)),true)
     include $(QCOM_COMMON_PATH)/vendor/perf/qti-perf.mk
   else
     include $(QCOM_COMMON_PATH)/vendor/perf-legacy/qti-perf-legacy.mk
@@ -127,7 +127,7 @@ ifneq (,$(filter perf, $(TARGET_COMMON_QTI_COMPONENTS)))
 endif
 
 ifneq (,$(filter qseecomd, $(TARGET_COMMON_QTI_COMPONENTS)))
-  ifeq ($(call is-board-platform-in-list,$(5_4_FAMILY) $(5_10_FAMILY) $(5_15_FAMILY)),true)
+  ifeq ($(call is-board-platform-in-list,$(5_4_FAMILY) $(5_10_FAMILY) $(TARGET_KERNEL_VERSION),5.15)),true)
     include $(QCOM_COMMON_PATH)/vendor/qseecomd/qti-qseecomd.mk
   else
     include $(QCOM_COMMON_PATH)/vendor/qseecomd-legacy/qti-qseecomd-legacy.mk
@@ -152,7 +152,7 @@ ifneq (,$(filter wfd, $(TARGET_COMMON_QTI_COMPONENTS)))
 endif
 
 ifneq (,$(filter wlan, $(TARGET_COMMON_QTI_COMPONENTS)))
-  ifeq ($(call is-board-platform-in-list,$(5_10_FAMILY) $(5_15_FAMILY)),true)
+  ifeq ($(call is-board-platform-in-list,$(5_10_FAMILY) $(TARGET_KERNEL_VERSION),5.15)),true)
     include $(QCOM_COMMON_PATH)/vendor/wlan/qti-wlan.mk
   else
     include $(QCOM_COMMON_PATH)/vendor/wlan-legacy/qti-wlan-legacy.mk
