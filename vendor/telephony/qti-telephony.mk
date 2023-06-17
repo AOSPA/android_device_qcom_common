@@ -19,7 +19,7 @@ PRODUCT_SOONG_NAMESPACES += \
 $(call inherit-product, vendor/qcom/opensource/dataservices/dataservices_vendor_product.mk)
 
 # IPACM
-ifneq (,$(filter 5.10, $(TARGET_KERNEL_VERSION)))
+ifneq (,$(filter 5.10 5.15, $(TARGET_KERNEL_VERSION)))
 PRODUCT_SOONG_NAMESPACES += vendor/qcom/opensource/data-ipa-cfg-mgr
 $(call inherit-product, vendor/qcom/opensource/data-ipa-cfg-mgr/ipacm_vendor_product.mk)
 else
