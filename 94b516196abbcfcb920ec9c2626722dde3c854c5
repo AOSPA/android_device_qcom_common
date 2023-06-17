@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "709aab3f_2a7ec3a8",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000012
+      },
+      "writtenOn": "2023-06-17T08:40:21Z",
+      "side": 1,
+      "message": "I am thinking it makes more sense to put the soc in 5.15 Family if TARGET_KERNEL_VERSION \u003d 5.15.",
+      "revId": "94b516196abbcfcb920ec9c2626722dde3c854c5",
+      "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
+    }
+  ]
+}
