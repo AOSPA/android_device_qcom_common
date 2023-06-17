@@ -37,7 +37,7 @@ endif
 # QTI Common Components
 
 ifneq (,$(filter adreno, $(TARGET_COMMON_QTI_COMPONENTS)))
-  ifeq ($(call is-board-platform-in-list,$(5_10_FAMILY)),true)
+  ifeq ($(call is-board-platform-in-list,$(5_10_FAMILY) $(5_15_FAMILY)),true)
     include $(QCOM_COMMON_PATH)/vendor/adreno/qti-adreno.mk
   else ifeq ($(call is-board-platform-in-list,$(3_18_FAMILY) $(4_4_FAMILY) msm8953),true)
     include $(QCOM_COMMON_PATH)/vendor/adreno-5xx/qti-adreno-5xx.mk
@@ -78,7 +78,7 @@ ifneq (,$(filter dsprpcd, $(TARGET_COMMON_QTI_COMPONENTS)))
   include $(QCOM_COMMON_PATH)/vendor/dsprpcd/qti-dsprpcd.mk
 endif
 
-ifeq ($(call is-board-platform-in-list,$(5_10_FAMILY)),true)
+ifeq ($(call is-board-platform-in-list,$(5_10_FAMILY) $(5_15_FAMILY)),true)
   include $(QCOM_COMMON_PATH)/dlkm/qti-dlkm.mk
 endif
 
@@ -123,7 +123,7 @@ ifneq (,$(filter perf, $(TARGET_COMMON_QTI_COMPONENTS)))
 endif
 
 ifneq (,$(filter qseecomd, $(TARGET_COMMON_QTI_COMPONENTS)))
-  ifeq ($(call is-board-platform-in-list,$(5_4_FAMILY) $(5_10_FAMILY)),true)
+  ifeq ($(call is-board-platform-in-list,$(5_4_FAMILY) $(5_10_FAMILY) $(5_15_FAMILY)),true)
     include $(QCOM_COMMON_PATH)/vendor/qseecomd/qti-qseecomd.mk
   else
     include $(QCOM_COMMON_PATH)/vendor/qseecomd-legacy/qti-qseecomd-legacy.mk
