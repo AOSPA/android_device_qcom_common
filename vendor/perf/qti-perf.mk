@@ -57,7 +57,7 @@ PRODUCT_VENDOR_PROPERTIES += \
     ro.vendor.qspm.enable=true \
     vendor.power.pasr.enabled=true
 
-ifeq ($(call is-board-platform-in-list, kalama),true)
+ifeq ($(TARGET_KERNEL_VERSION),5.15)
 PRODUCT_VENDOR_PROPERTIES += \
     vendor.perf.framepacing.enable=1
 endif
