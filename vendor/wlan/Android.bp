@@ -15,13 +15,6 @@
 soong_namespace {
 }
 
-prebuilt_etc {
-    name: "init.vendor.wlan.rc",
-    src: "init.vendor.wlan.rc",
-    sub_dir: "init",
-    vendor: true,
-}
-
 prebuilt_hidl_interfaces {
     name: "hidl_Wificfr_interface",
     interfaces: [

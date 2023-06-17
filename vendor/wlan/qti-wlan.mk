@@ -47,13 +47,9 @@ PRODUCT_PACKAGES += \
     wpa_supplicant \
     wpa_supplicant.conf
 
-ifeq ($(call is-board-platform-in-list, lahaina),true)
-PRODUCT_PACKAGES += \
-    init.vendor.wlan.rc
-endif
 
 # Enable IEEE 802.11ax support
-ifeq ($(call is-board-platform-in-list, kalama kona lahaina holi taro),true)
+ifneq (,$(filter 5.10 5.15, $(TARGET_KERNEL_VERSION)))
 CONFIG_IEEE80211AX := true
 endif
 
