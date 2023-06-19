@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "8a95a8ef_c8e78a37",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 5
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000012
+      },
+      "writtenOn": "2023-06-19T17:58:11Z",
+      "side": 1,
+      "message": "never mind, I didn\u0027t realize this is covering both components.",
+      "revId": "af4ac0f34791353706d227fad866825b1cc7133d",
+      "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
+    }
+  ]
+}
