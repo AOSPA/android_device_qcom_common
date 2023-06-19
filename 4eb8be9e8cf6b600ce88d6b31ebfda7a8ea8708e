@@ -33,6 +33,24 @@
       "message": "don\u0027t change the permissions on this, it needs to be executable.",
       "revId": "4eb8be9e8cf6b600ce88d6b31ebfda7a8ea8708e",
       "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "5e773bd1_2fd32dcb",
+        "filename": "vendor/setup-makefiles.sh",
+        "patchSetId": 2
+      },
+      "lineNbr": 2,
+      "author": {
+        "id": 1000737
+      },
+      "writtenOn": "2023-06-19T16:42:04Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "f76b7c44_6829b7a6",
+      "revId": "4eb8be9e8cf6b600ce88d6b31ebfda7a8ea8708e",
+      "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
     }
   ]
 }
