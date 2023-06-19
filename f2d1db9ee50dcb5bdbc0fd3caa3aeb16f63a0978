@@ -16,6 +16,24 @@
       "message": "fix commit title",
       "revId": "f2d1db9ee50dcb5bdbc0fd3caa3aeb16f63a0978",
       "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "28c6696e_e6e27d96",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000737
+      },
+      "writtenOn": "2023-06-19T18:11:28Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "9e7c7ac7_55be22b8",
+      "revId": "f2d1db9ee50dcb5bdbc0fd3caa3aeb16f63a0978",
+      "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
     }
   ]
 }

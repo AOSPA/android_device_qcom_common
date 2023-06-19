@@ -16,6 +16,24 @@
       "message": "You have a typo here",
       "revId": "654a7366a15ec84f8d4d01860e8a3dc85514bf9f",
       "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "1ae02489_f4e18ffb",
+        "filename": "vendor/usb/qti-usb.mk",
+        "patchSetId": 3
+      },
+      "lineNbr": 25,
+      "author": {
+        "id": 1000737
+      },
+      "writtenOn": "2023-06-19T18:11:28Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "ec074dfb_91ddad56",
+      "revId": "654a7366a15ec84f8d4d01860e8a3dc85514bf9f",
+      "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
     }
   ]
 }
