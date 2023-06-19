@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "94a15d15_241761b1",
+        "filename": "vendor/wlan/init.vendor.wlan.rc",
+        "patchSetId": 5
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 1000012
+      },
+      "writtenOn": "2023-06-19T17:57:52Z",
+      "side": 0,
+      "message": "This shouldn\u0027t be deleted.  It\u0027s still called for lahaina and was from LA.UM.9.14.",
+      "revId": "6995c13678b4b7f3c1ccd9febb615767cfb860cc",
+      "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
+    }
+  ]
+}
