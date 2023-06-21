@@ -33,6 +33,24 @@
       "message": "remove these as per commit history",
       "revId": "d690417ea41065728c9e54a57322692c4babf833",
       "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "d7760f7e_d8856567",
+        "filename": "system/overlay/Frameworks/res/values/config.xml",
+        "patchSetId": 4
+      },
+      "lineNbr": 125,
+      "author": {
+        "id": 1000579
+      },
+      "writtenOn": "2023-06-21T08:02:59Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "567b6bd0_c416376d",
+      "revId": "d690417ea41065728c9e54a57322692c4babf833",
+      "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
     }
   ]
 }
