@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "4952a2e7_eec7dc82",
+        "filename": "vendor/charging/qti-charging.mk",
+        "patchSetId": 1
+      },
+      "lineNbr": 39,
+      "author": {
+        "id": 1000012
+      },
+      "writtenOn": "2023-06-22T23:46:39Z",
+      "side": 1,
+      "message": "add line break",
+      "revId": "6c107d9e57198c039fc851eec7cf0695f8dc89c1",
+      "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
+    }
+  ]
+}
