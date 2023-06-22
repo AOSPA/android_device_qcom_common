@@ -1,0 +1,2 @@
+# allow vendor_wcnss_service vendor_hal_perf_hwservice:hwservice_manager find
+hal_client_domain(vendor_wcnss_service, vendor_hal_perf)
