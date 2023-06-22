@@ -63,6 +63,13 @@ service wpa_supplicant /vendor/bin/hw/wpa_supplicant \
     disabled
     oneshot
 
+service charger /system/bin/charger
+    class charger
+    user system
+    group system graphics input
+    capabilities SYS_BOOT
+    seclabel u:r:charger:s0
+
 service vendor.audio-hal /vendor/bin/hw/android.hardware.audio.service
     override
     class hal
