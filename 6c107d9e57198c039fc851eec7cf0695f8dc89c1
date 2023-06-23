@@ -1,6 +1,23 @@
 {
   "comments": [
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "03d06805_0b7efb86",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000579
+      },
+      "writtenOn": "2023-06-23T00:24:36Z",
+      "side": 1,
+      "message": "on lahaina platform hvdcp seems to have user set to system maybe thats a better solution?",
+      "revId": "6c107d9e57198c039fc851eec7cf0695f8dc89c1",
+      "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "4952a2e7_eec7dc82",
