@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "740fc9b4_41b55bea",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 5
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000012
+      },
+      "writtenOn": "2023-06-24T15:07:31Z",
+      "side": 1,
+      "message": "might be nice to be able to specify multiple components and do a dry run so you can see what will change without actually modifying the file.",
+      "revId": "f56fcb7f4b57e11395cf51ba0d77017b27ce9507",
+      "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
+    }
+  ]
+}
