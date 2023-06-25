@@ -16,6 +16,23 @@
       "message": "move the sign off above change id",
       "revId": "d26ce7f3240ad1088edbfe3265ece1b9328e43ae",
       "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "c10a0454_90ffc6d2",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 3
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000579
+      },
+      "writtenOn": "2023-06-25T12:19:04Z",
+      "side": 1,
+      "message": "not sure since its this commit or something else in upstream in the last 10 days, but my fast charging speed has been halved, let me verify it once more",
+      "revId": "d26ce7f3240ad1088edbfe3265ece1b9328e43ae",
+      "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
     }
   ]
 }
