@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "72fcc374_004f92e6",
+        "filename": "sepolicy/qva/vendor/lahaina/init-qti-ese-strongbox-sh.te",
+        "patchSetId": 3
+      },
+      "lineNbr": 5,
+      "author": {
+        "id": 1000579
+      },
+      "writtenOn": "2023-06-25T05:59:54Z",
+      "side": 1,
+      "message": "conflicts with sepolicy_vndr\n\nsepolicy_vndr/qva/vendor/common/init-qti-ese-strongbox-sh.te\n29:type vendor_init-qti-ese-strongbox-sh, domain;\n30:type vendor_init-qti-ese-strongbox-sh_exec, exec_type, vendor_file_type, file_type;",
+      "revId": "39b0a814002846bbadbb1d96d939e75cadf06d04",
+      "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
+    }
+  ]
+}
