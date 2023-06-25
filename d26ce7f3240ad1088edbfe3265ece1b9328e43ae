@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "cbae85bd_bbce4ed7",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 3
+      },
+      "lineNbr": 22,
+      "author": {
+        "id": 1000579
+      },
+      "writtenOn": "2023-06-25T02:42:52Z",
+      "side": 1,
+      "message": "move the sign off above change id",
+      "revId": "d26ce7f3240ad1088edbfe3265ece1b9328e43ae",
+      "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
+    }
+  ]
+}
