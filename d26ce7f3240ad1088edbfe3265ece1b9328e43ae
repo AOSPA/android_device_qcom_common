@@ -51,6 +51,24 @@
       "message": "not sure since its this commit or something else in upstream in the last 10 days, but my fast charging speed has been halved, let me verify it once more",
       "revId": "d26ce7f3240ad1088edbfe3265ece1b9328e43ae",
       "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "8138f1bb_0e65863d",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 3
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000737
+      },
+      "writtenOn": "2023-06-26T13:40:00Z",
+      "side": 1,
+      "message": "sure",
+      "parentUuid": "c10a0454_90ffc6d2",
+      "revId": "d26ce7f3240ad1088edbfe3265ece1b9328e43ae",
+      "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
     }
   ]
 }
