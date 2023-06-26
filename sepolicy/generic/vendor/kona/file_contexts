@@ -64,3 +64,6 @@
 
 # graphics/display DRM-KMS node
 /sys/devices/platform/soc/[a-f0-9]+.qcom,mdss_mdp/drm/card([0-3])+/sde-crtc-([0-9])+/lineptr_value u:object_r:vendor_sysfs_graphics:s0
+
+#Graphics dependencies
+/vendor/lib(64)?/libOpenCL_adreno\.so       u:object_r:same_process_hal_file:s0
