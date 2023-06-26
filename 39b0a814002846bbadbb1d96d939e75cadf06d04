@@ -16,6 +16,24 @@
       "message": "conflicts with sepolicy_vndr\n\nsepolicy_vndr/qva/vendor/common/init-qti-ese-strongbox-sh.te\n29:type vendor_init-qti-ese-strongbox-sh, domain;\n30:type vendor_init-qti-ese-strongbox-sh_exec, exec_type, vendor_file_type, file_type;",
       "revId": "39b0a814002846bbadbb1d96d939e75cadf06d04",
       "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "48d1cdb8_f50f4d2b",
+        "filename": "sepolicy/qva/vendor/lahaina/init-qti-ese-strongbox-sh.te",
+        "patchSetId": 3
+      },
+      "lineNbr": 5,
+      "author": {
+        "id": 1000737
+      },
+      "writtenOn": "2023-06-26T13:09:10Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "72fcc374_004f92e6",
+      "revId": "39b0a814002846bbadbb1d96d939e75cadf06d04",
+      "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
     }
   ]
 }
