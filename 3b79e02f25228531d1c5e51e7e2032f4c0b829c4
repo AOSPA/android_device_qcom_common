@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "afd279d0_8d2dd45a",
+        "filename": "vendor/gps-legacy/qti-gps-legacy.mk",
+        "patchSetId": 2
+      },
+      "lineNbr": 24,
+      "author": {
+        "id": 1000891
+      },
+      "writtenOn": "2023-06-27T17:45:04Z",
+      "side": 1,
+      "message": "can we set this to true instead?",
+      "revId": "3b79e02f25228531d1c5e51e7e2032f4c0b829c4",
+      "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
+    }
+  ]
+}
