@@ -134,6 +134,3 @@
 /(vendor|system/vendor)/bin/fan_control u:object_r:vendor_fancontrol_exec:s0
 
 /vendor/bin/hw/vendor\.qti\.hardware\.display\.demura-service u:object_r:hal_display_demura_default_exec:s0
-
-#brightness node for eDP
-/sys/devices/platform/soc/soc:backlight/backlight/soc:backlight/brightness(/.*)?     u:object_r:vendor_sysfs_graphics:s0
