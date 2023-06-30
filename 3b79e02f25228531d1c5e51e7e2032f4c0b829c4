@@ -52,6 +52,41 @@
       "parentUuid": "05e218dd_488b8d0c",
       "revId": "3b79e02f25228531d1c5e51e7e2032f4c0b829c4",
       "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "3a546472_7bc66f6c",
+        "filename": "vendor/gps-legacy/qti-gps-legacy.mk",
+        "patchSetId": 2
+      },
+      "lineNbr": 24,
+      "author": {
+        "id": 1000012
+      },
+      "writtenOn": "2023-06-30T00:44:05Z",
+      "side": 1,
+      "message": "false is default, you don\u0027t need to declare variables here.",
+      "parentUuid": "e3f48f85_2f0a3215",
+      "revId": "3b79e02f25228531d1c5e51e7e2032f4c0b829c4",
+      "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "d7a08fac_2e882951",
+        "filename": "vendor/gps-legacy/qti-gps-legacy.mk",
+        "patchSetId": 2
+      },
+      "lineNbr": 37,
+      "author": {
+        "id": 1000012
+      },
+      "writtenOn": "2023-06-30T00:44:05Z",
+      "side": 1,
+      "message": "TARGET_PROVIDES_GPS_HAL seems more consistent with other flags.",
+      "revId": "3b79e02f25228531d1c5e51e7e2032f4c0b829c4",
+      "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
     }
   ]
 }
