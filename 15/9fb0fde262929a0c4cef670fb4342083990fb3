@@ -1,0 +1,8 @@
+Verified+1: 007 <john.smith@unused.email>
+Code-Review+2: Jake Weinstein <jake@aospa.co>
+Code-Review+1: 007 <john.smith@unused.email>
+Submitted-by: 007 <john.smith@unused.email>
+Submitted-at: Fri, 30 Jun 2023 17:49:50 +0000
+Reviewed-on: https://gerrit.aospa.co/c/AOSPA/android_device_qcom_common/+/31875
+Project: AOSPA/android_device_qcom_common
+Branch: refs/heads/topaz
