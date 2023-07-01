@@ -1,4 +1,4 @@
-# GPS - from LA.UM.9.15.2.r1-06600-KAMORTA.QSSI-13.0
+# GPS - from LA.UM.9.14.1.r1-09400-QCM6490.QSSI13.0
 vendor/bin/garden_app
 vendor/bin/loc_launcher
 vendor/bin/lowi-server
@@ -7,7 +7,6 @@ vendor/bin/slim_daemon
 vendor/bin/xtra-daemon
 vendor/bin/xtwifi-client
 vendor/bin/xtwifi-inet-agent
--vendor/etc/vintf/manifest/vendor.qti.gnss@4.0-service.xml
 vendor/etc/apdr.conf
 vendor/etc/cacert_location.pem
 vendor/etc/izat.conf
@@ -16,7 +15,6 @@ vendor/etc/sap.conf
 vendor/etc/sec_config
 vendor/etc/xtra_root_cert.pem
 vendor/etc/xtwifi.conf
-vendor/lib64/hw/vendor.qti.gnss@4.0-impl.so
 vendor/lib64/libaoa.so
 vendor/lib64/libasn1cper.so
 vendor/lib64/libasn1crt.so
@@ -51,6 +49,7 @@ vendor/lib64/vendor.qti.gnss@1.2.so
 vendor/lib64/vendor.qti.gnss@2.0.so
 vendor/lib64/vendor.qti.gnss@2.1.so
 vendor/lib64/vendor.qti.gnss@3.0.so
-vendor/lib64/vendor.qti.gnss@4.0-service.so
 vendor/lib64/vendor.qti.gnss@4.0.so
+vendor/lib64/vendor.qti.gnss@4.1.so
+vendor/lib64/vendor.qti.gnss@4.2.so
 vendor/lib64/vendor.qti.hardware.qccsyshal@1.0.so
