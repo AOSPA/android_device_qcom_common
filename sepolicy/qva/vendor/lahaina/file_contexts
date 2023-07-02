@@ -59,8 +59,3 @@
 
 #camera
 /sys/firmware/devicetree/base/memory/ddr_device_type                               u:object_r:vendor_sysfs_ddr:s0
-
-###################################
-# Strongbox-Keymaster HAL 4.1 service
-/vendor/bin/hw/android\.hardware\.keymaster@4\.1-javacard.service                  u:object_r:hal_keymaster_default_exec:s0
-/vendor/bin/init\.qti\.ese\.strongbox\.sh                                          u:object_r:vendor_init-qti-ese-strongbox-sh_exec:s0
