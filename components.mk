@@ -1,4 +1,4 @@
-# Copyright 2022 Paranoid Android
+# Copyright 2023 Paranoid Android
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -38,12 +38,13 @@ endif
 
 ifneq (,$(filter adreno, $(TARGET_COMMON_QTI_COMPONENTS)))
   ifeq ($(call is-board-platform-in-list,$(5_10_FAMILY)),true)
-    include $(QCOM_COMMON_PATH)/vendor/adreno/qti-adreno.mk
+    TARGET_ADRENO_COMPONENT_VARIANT ?= adreno
   else ifeq ($(call is-board-platform-in-list,$(3_18_FAMILY) $(4_4_FAMILY) msm8953),true)
-    include $(QCOM_COMMON_PATH)/vendor/adreno-5xx/qti-adreno-5xx.mk
+    TARGET_ADRENO_COMPONENT_VARIANT ?= adreno-5xx
   else
-    include $(QCOM_COMMON_PATH)/vendor/adreno-6xx-legacy/qti-adreno-6xx-legacy.mk
+    TARGET_ADRENO_COMPONENT_VARIANT ?= adreno-6xx-legacy
   endif
+  include $(QCOM_COMMON_PATH)/vendor/$(TARGET_ADRENO_COMPONENT_VARIANT)/qti-$(TARGET_ADRENO_COMPONENT_VARIANT).mk
 endif
 
 ifneq (,$(filter alarm, $(TARGET_COMMON_QTI_COMPONENTS)))
@@ -85,10 +86,11 @@ endif
 ifneq (,$(filter gps, $(TARGET_COMMON_QTI_COMPONENTS)))
   include $(QCOM_COMMON_PATH)/system/gps/qti-gps.mk
   ifeq ($(call is-board-platform-in-list,$(5_10_FAMILY) $(5_15_FAMILY)),true)
-    include $(QCOM_COMMON_PATH)/vendor/gps/qti-gps.mk
+    TARGET_GPS_COMPONENT_VARIANT ?= gps
   else
-    include $(QCOM_COMMON_PATH)/vendor/gps-legacy/qti-gps-legacy.mk
+    TARGET_GPS_COMPONENT_VARIANT ?= gps-legacy
   endif
+  include $(QCOM_COMMON_PATH)/vendor/$(TARGET_GPS_COMPONENT_VARIANT)/qti-$(TARGET_GPS_COMPONENT_VARIANT).mk
 endif
 
 ifneq (,$(filter init, $(TARGET_COMMON_QTI_COMPONENTS)))
@@ -101,12 +103,13 @@ endif
 
 ifneq (,$(filter media, $(TARGET_COMMON_QTI_COMPONENTS)))
   ifeq ($(call is-board-platform-in-list,$(5_10_FAMILY) $(5_15_FAMILY)),true)
-    include $(QCOM_COMMON_PATH)/vendor/media/qti-media.mk
+    TARGET_MEDIA_COMPONENT_VARIANT ?= media
   else ifeq ($(call is-board-platform-in-list,$(5_4_FAMILY)),true)
-    include $(QCOM_COMMON_PATH)/vendor/media-5.4/qti-media-5.4.mk
+    TARGET_MEDIA_COMPONENT_VARIANT ?= media-5.4
   else
-    include $(QCOM_COMMON_PATH)/vendor/media-legacy/qti-media-legacy.mk
+    TARGET_MEDIA_COMPONENT_VARIANT ?= media-legacy
   endif
+  include $(QCOM_COMMON_PATH)/vendor/$(TARGET_MEDIA_COMPONENT_VARIANT)/qti-$(TARGET_MEDIA_COMPONENT_VARIANT).mk
 endif
 
 ifneq (,$(filter nfc, $(TARGET_COMMON_QTI_COMPONENTS)))
@@ -120,18 +123,20 @@ endif
 ifneq (,$(filter perf, $(TARGET_COMMON_QTI_COMPONENTS)))
   include $(QCOM_COMMON_PATH)/system/perf/qti-perf.mk
   ifeq ($(call is-board-platform-in-list,$(5_10_FAMILY) $(5_15_FAMILY)),true)
-    include $(QCOM_COMMON_PATH)/vendor/perf/qti-perf.mk
+    TARGET_PERF_COMPONENT_VARIANT ?= perf
   else
-    include $(QCOM_COMMON_PATH)/vendor/perf-legacy/qti-perf-legacy.mk
+    TARGET_PERF_COMPONENT_VARIANT ?= perf-legacy
   endif
+  include $(QCOM_COMMON_PATH)/vendor/$(TARGET_PERF_COMPONENT_VARIANT)/qti-$(TARGET_PERF_COMPONENT_VARIANT).mk
 endif
 
 ifneq (,$(filter qseecomd, $(TARGET_COMMON_QTI_COMPONENTS)))
   ifeq ($(call is-board-platform-in-list,$(5_4_FAMILY) $(5_10_FAMILY)),true)
-    include $(QCOM_COMMON_PATH)/vendor/qseecomd/qti-qseecomd.mk
+    TARGET_QSEECOMD_COMPONENT_VARIANT ?= qseecomd
   else
-    include $(QCOM_COMMON_PATH)/vendor/qseecomd-legacy/qti-qseecomd-legacy.mk
+    TARGET_QSEECOMD_COMPONENT_VARIANT ?= qseecomd-legacy
   endif
+  include $(QCOM_COMMON_PATH)/vendor/$(TARGET_QSEECOMD_COMPONENT_VARIANT)/qti-$(TARGET_QSEECOMD_COMPONENT_VARIANT).mk
 endif
 
 ifneq (,$(filter telephony, $(TARGET_COMMON_QTI_COMPONENTS)))
@@ -153,8 +158,9 @@ endif
 
 ifneq (,$(filter wlan, $(TARGET_COMMON_QTI_COMPONENTS)))
   ifeq ($(call is-board-platform-in-list,$(5_10_FAMILY) $(5_15_FAMILY)),true)
-    include $(QCOM_COMMON_PATH)/vendor/wlan/qti-wlan.mk
+    TARGET_WLAN_COMPONENT_VARIANT ?= wlan
   else
-    include $(QCOM_COMMON_PATH)/vendor/wlan-legacy/qti-wlan-legacy.mk
+    TARGET_WLAN_COMPONENT_VARIANT ?= wlan-legacy
   endif
+  include $(QCOM_COMMON_PATH)/vendor/$(TARGET_WLAN_COMPONENT_VARIANT)/qti-$(TARGET_WLAN_COMPONENT_VARIANT).mk
 endif
