@@ -1,4 +1,4 @@
-# GPS - from LA.UM.9.15.2.r1-06600-KAMORTA.QSSI-13.0
+# GPS - from LA.UM.9.15.2.r1-07000-KAMORTA.QSSI-13.0
 vendor/bin/garden_app
 vendor/bin/loc_launcher
 vendor/bin/lowi-server
