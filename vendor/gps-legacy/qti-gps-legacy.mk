@@ -15,7 +15,7 @@
 TARGET_GPS_COMPONENT_VARIANT := gps-legacy
 
 PRODUCT_SOONG_NAMESPACES += \
-    device/qcom/common/vendor/gps
+    device/qcom/common/vendor/gps-legacy
 
 # Flags
 BOARD_VENDOR_QCOM_GPS_LOC_API_HARDWARE := default
