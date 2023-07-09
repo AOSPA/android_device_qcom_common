@@ -12,7 +12,7 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-TARGET_ADRENO_COMPONENT_VARIANT := adreno-6xx-legacy
+TARGET_ADRENO_COMPONENT_VARIANT := adreno-r
 
 # Permissions
 PRODUCT_COPY_FILES += \
