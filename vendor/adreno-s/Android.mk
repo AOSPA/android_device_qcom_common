@@ -14,7 +14,7 @@
 
 LOCAL_PATH := $(call my-dir)
 
-ifeq ($(TARGET_ADRENO_COMPONENT_VARIANT),adreno-6xx-legacy)
+ifeq ($(TARGET_ADRENO_COMPONENT_VARIANT),adreno-s)
 
 include $(CLEAR_VARS)
 

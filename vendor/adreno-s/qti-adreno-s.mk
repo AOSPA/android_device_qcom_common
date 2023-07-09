@@ -12,7 +12,7 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-TARGET_ADRENO_COMPONENT_VARIANT := adreno
+TARGET_ADRENO_COMPONENT_VARIANT := adreno-s
 
 # Permissions
 PRODUCT_COPY_FILES += \
