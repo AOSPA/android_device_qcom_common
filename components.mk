@@ -38,11 +38,11 @@ endif
 
 ifneq (,$(filter adreno, $(TARGET_COMMON_QTI_COMPONENTS)))
   ifeq ($(call is-board-platform-in-list,$(5_10_FAMILY)),true)
-    TARGET_ADRENO_COMPONENT_VARIANT ?= adreno
+    TARGET_ADRENO_COMPONENT_VARIANT ?= adreno-s
   else ifeq ($(call is-board-platform-in-list,$(3_18_FAMILY) $(4_4_FAMILY) msm8953),true)
     TARGET_ADRENO_COMPONENT_VARIANT ?= adreno-5xx
   else
-    TARGET_ADRENO_COMPONENT_VARIANT ?= adreno-6xx-legacy
+    TARGET_ADRENO_COMPONENT_VARIANT ?= adreno-r
   endif
   include $(QCOM_COMMON_PATH)/vendor/$(TARGET_ADRENO_COMPONENT_VARIANT)/qti-$(TARGET_ADRENO_COMPONENT_VARIANT).mk
 endif

@@ -12,7 +12,7 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-TARGET_ADRENO_COMPONENT_VARIANT := adreno
+TARGET_ADRENO_COMPONENT_VARIANT := adreno-s
 
 # Permissions
 PRODUCT_COPY_FILES += \
@@ -31,4 +31,4 @@ PRODUCT_VENDOR_PROPERTIES += \
     graphics.gpu.profiler.support=true
 
 # Get non-open-source specific aspects.
-$(call inherit-product, vendor/qcom/common/vendor/adreno/adreno-vendor.mk)
+$(call inherit-product, vendor/qcom/common/vendor/adreno-s/adreno-s-vendor.mk)

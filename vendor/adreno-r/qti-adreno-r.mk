@@ -12,7 +12,7 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-TARGET_ADRENO_COMPONENT_VARIANT := adreno-6xx-legacy
+TARGET_ADRENO_COMPONENT_VARIANT := adreno-r
 
 # Permissions
 PRODUCT_COPY_FILES += \
@@ -30,4 +30,4 @@ PRODUCT_VENDOR_PROPERTIES += \
     ro.opengles.version=196610
 
 # Get non-open-source specific aspects.
-$(call inherit-product, vendor/qcom/common/vendor/adreno-6xx-legacy/adreno-6xx-legacy-vendor.mk)
+$(call inherit-product, vendor/qcom/common/vendor/adreno-r/adreno-r-vendor.mk)
