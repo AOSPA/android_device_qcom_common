@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "88f1f4a7_8c8d922b",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000012
+      },
+      "writtenOn": "2023-07-10T00:28:58Z",
+      "side": 1,
+      "message": "can you do adreno-t based on https://dumps.tadiphone.dev/dumps/asus/asus_ai2302/-/tree/qssi-user-13-TKQ1.220928.001-33.0220.0220.10-release-keys/vendor ?",
+      "revId": "43cb1a5275317fcb3d5f805fdd72794fb7e84e82",
+      "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
+    }
+  ]
+}
