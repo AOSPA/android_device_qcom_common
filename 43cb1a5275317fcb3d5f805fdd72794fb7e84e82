@@ -52,6 +52,24 @@
       "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "8cce4074_5baa1b42",
+        "filename": "vendor/adreno-r/qti-adreno-r.mk",
+        "patchSetId": 1
+      },
+      "lineNbr": 33,
+      "author": {
+        "id": 1000737
+      },
+      "writtenOn": "2023-07-10T16:52:23Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "914fdf18_3abc3dfb",
+      "revId": "43cb1a5275317fcb3d5f805fdd72794fb7e84e82",
+      "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "f0139dcb_00310e0f",
@@ -65,6 +83,24 @@
       "writtenOn": "2023-07-10T00:31:44Z",
       "side": 1,
       "message": "needs to change",
+      "revId": "43cb1a5275317fcb3d5f805fdd72794fb7e84e82",
+      "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "0152d5af_d5ab2805",
+        "filename": "vendor/adreno-s/qti-adreno-s.mk",
+        "patchSetId": 1
+      },
+      "lineNbr": 34,
+      "author": {
+        "id": 1000737
+      },
+      "writtenOn": "2023-07-10T16:52:23Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "f0139dcb_00310e0f",
       "revId": "43cb1a5275317fcb3d5f805fdd72794fb7e84e82",
       "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
     }
