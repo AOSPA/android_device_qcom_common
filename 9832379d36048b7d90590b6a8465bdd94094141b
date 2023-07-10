@@ -16,6 +16,24 @@
       "message": "how do they not play well? do we need kgsl updates?",
       "revId": "9832379d36048b7d90590b6a8465bdd94094141b",
       "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "0896a316_baaa298e",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000737
+      },
+      "writtenOn": "2023-07-10T00:32:04Z",
+      "side": 1,
+      "message": "yes, but this is not possible with prebuilt kernel, and even with oss kernel, our juice maintainer reverted to v502 because of some bugs with v530",
+      "parentUuid": "346fdc2a_6ae7b2af",
+      "revId": "9832379d36048b7d90590b6a8465bdd94094141b",
+      "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
     }
   ]
 }
