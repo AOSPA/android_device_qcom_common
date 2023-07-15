@@ -32,6 +32,14 @@ PRODUCT_COPY_FILES += \
 # Get non-open-source specific aspects.
 $(call inherit-product-if-exists, vendor/qcom/common/vendor/nfc/nq-nfc-vendor.mk)
 
+else ifeq ($(TARGET_USES_STM_NFC), true)
+
+# Inherit from ST NFC.
+$(call inherit-product, vendor/st/opensource/commonsys/packages/apps/Nfc/nfc_system_product.mk)
+$(call inherit-product, vendor/st/opensource/halimpl/nfc_vendor_product.mk)
+
+-include vendor/st/nfc/st21nfc/NfcDeviceConfig.mk
+
 else
 
 PRODUCT_PACKAGES += \
