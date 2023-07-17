@@ -203,6 +203,7 @@ PRODUCT_VENDOR_PROPERTIES += \
 # A/B 
 ifeq ($(TARGET_IS_VAB),true)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/virtual_ab_ota/vabc_features.mk)
+PRODUCT_VIRTUAL_AB_COMPRESSION_METHOD ?= lz4
 
 AB_OTA_UPDATER := true
 
