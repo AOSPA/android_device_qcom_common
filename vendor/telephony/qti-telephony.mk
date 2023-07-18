@@ -16,7 +16,13 @@ PRODUCT_SOONG_NAMESPACES += \
     device/qcom/common/vendor/telephony
 
 # Data Services
+ifneq (,$(filter 5.15, $(TARGET_KERNEL_VERSION)))
+PRODUCT_SOONG_NAMESPACES += vendor/qcom/opensource/dataservices
 $(call inherit-product, vendor/qcom/opensource/dataservices/dataservices_vendor_product.mk)
+else
+PRODUCT_SOONG_NAMESPACES += vendor/qcom/opensource/dataservices-legacy
+$(call inherit-product, vendor/qcom/opensource/dataservices-legacy/dataservices_vendor_product.mk)
+endif
 
 # IPACM
 ifneq (,$(filter 5.10 5.15, $(TARGET_KERNEL_VERSION)))
