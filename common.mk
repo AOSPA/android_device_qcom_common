@@ -63,6 +63,7 @@ MSM_VIDC_TARGET_LIST := \
     sdm710 \
     sdm845
 
+ifneq (,$(filter 3.18 4.4 4.9 4.14 4.19, $(TARGET_KERNEL_VERSION)))
 # List of targets that use master side content protection.
 MASTER_SIDE_CP_TARGET_LIST := \
     $(MSMSTEPPE) \
@@ -77,6 +78,7 @@ MASTER_SIDE_CP_TARGET_LIST := \
     sdm660 \
     sdm710 \
     sdm845
+endif
 
 # Include QCOM board utilities.
 ifeq ($(TARGET_FWK_SUPPORTS_FULL_VALUEADDS),true)
