@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "507f7381_ca065bab",
+        "filename": "system/overlay/Settings/res/values/config.xml",
+        "patchSetId": 5
+      },
+      "lineNbr": 43,
+      "author": {
+        "id": 1000012
+      },
+      "writtenOn": "2023-07-19T14:10:27Z",
+      "side": 1,
+      "message": "these aren\u0027t great defaults.  should we override somewhere?",
+      "revId": "cb896d7cfa87339e4107a5c91efa2f5bc7d97c71",
+      "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
+    }
+  ]
+}
