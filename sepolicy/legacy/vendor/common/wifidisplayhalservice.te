@@ -51,9 +51,68 @@ add_service(wifidisplayhalservice, wfdnativemm_service)
 #Allow access to firmware files for HDCP session
 r_dir_file(wifidisplayhalservice, vendor_firmware_file)
 r_dir_file(wifidisplayhalservice, firmware_file)
+r_dir_file(wifidisplayhalservice_qti, firmware_file)
 
 #Allow access to tee/ion device and tcp socket for HDCP sessions
 allow wifidisplayhalservice tee_device:chr_file rw_file_perms;
 allow wifidisplayhalservice ion_device:chr_file r_file_perms;
+allow wifidisplayhalservice_qti tee_device:chr_file rw_file_perms;
+
+#Allow access to PCM sound card
+allow wifidisplayhalservice_qti audio_device:chr_file rw_file_perms;
+allow wifidisplayhalservice_qti audio_device:dir r_dir_perms;
+
+#Allow access to /dev/video/* devices for encoding/decoding
+allow wifidisplayhalservice_qti video_device:chr_file rw_file_perms;
+
+#Allow binder call to mediacodec from wifidisplayhalservice
+binder_call(wifidisplayhalservice_qti, mediacodec);
+
+#Allow udp socket ioctl
+allow wifidisplayhalservice_qti self:udp_socket create_socket_perms;
+# ioctlcmd=8bff,8912
+allowxperm wifidisplayhalservice_qti self:udp_socket ioctl priv_sock_ioctls;
+
+#Allow access to proc/net/arp
+allow wifidisplayhalservice_qti proc_net:file r_file_perms;
+
+# Add the rule for wfd to access /proc/asound/pcm file
+r_dir_file(wifidisplayhalservice_qti, proc_asound)
+
+# Add the rule for wfd to access /proc/asound/card0/state file
+r_dir_file(wifidisplayhalservice_qti, proc_audiod)
+
+allow wifidisplayhalservice_qti self:capability net_raw;
+
+#Allow hal graphics allocator permissions
+hal_client_domain(wifidisplayhalservice_qti, hal_graphics_allocator);
+
+#Allow hal graphics mapper permissions
+hal_client_domain(wifidisplayhalservice_qti, hal_graphics_composer);
+
+#Allow wifidisplayhalservice_qti to query interface name of network (p2p etc.)
+allow wifidisplayhalservice_qti self:netlink_generic_socket create_socket_perms_no_ioctl;
+
+#Allow communication with init over property server
+unix_socket_connect(wifidisplayhalservice_qti, property, init);
+
+#Allow ion device access
+allow wifidisplayhalservice_qti ion_device:chr_file r_file_perms;
+
+userdebug_or_eng(`
+  #Allow for property access
+  get_prop(wifidisplayhalservice_qti,wfd_vendor_debug_prop)
+  #Allow to dump in /data/vendor/media/
+  allow wifidisplayhalservice_qti vendor_media_data_file:dir w_dir_perms;
+  allow wifidisplayhalservice_qti vendor_media_data_file:file create_file_perms;
+  #Allow to access logmask file in /data/vendor
+  allow wifidisplayhalservice_qti vendor_data_file:file r_file_perms;
+')
+
+#Allow source to access video SKU and UBWC property(for encoder config)
+get_prop(wifidisplayhalservice_qti, vendor_video_prop)
 
 allow wifidisplayhalservice qdisplay_service:service_manager { find };
+
+#Allow access to uhid driver for HID event injection
+allow wifidisplayhalservice_qti uhid_device:chr_file rw_file_perms;
