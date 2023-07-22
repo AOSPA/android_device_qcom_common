@@ -34,6 +34,24 @@
       "parentUuid": "507f7381_ca065bab",
       "revId": "cb896d7cfa87339e4107a5c91efa2f5bc7d97c71",
       "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "5f7b0a23_174178c2",
+        "filename": "system/overlay/Settings/res/values/config.xml",
+        "patchSetId": 5
+      },
+      "lineNbr": 43,
+      "author": {
+        "id": 1000012
+      },
+      "writtenOn": "2023-07-22T22:16:15Z",
+      "side": 1,
+      "message": "I understand but should we override that somewhere too? I\u0027m thinking we should have Natural, Boosted, Saturated, Adaptive by default.  if people want to override that they can.  we can do it in vendor/aospa or here somewhere.",
+      "parentUuid": "fb2b4a0b_f2e47e48",
+      "revId": "cb896d7cfa87339e4107a5c91efa2f5bc7d97c71",
+      "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
     }
   ]
 }
