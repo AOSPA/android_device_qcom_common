@@ -116,6 +116,9 @@ IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.-->
         <boolean name="carrier_cross_sim_ims_available_bool" value="true" />
         <!-- Config for B2C Enriched Calls Feature support -->
         <boolean name="carrier_b2c_enriched_calling_supported_bool" value="false"/>
+        <!-- PA: Allow VoLTE and WFC by default -->
+        <boolean name="carrier_volte_available_bool" value="true" />
+        <boolean name="carrier_wfc_ims_available_bool" value="true" />
     </carrier_config>
 
     <carrier_config mcc="001" mnc="01">
