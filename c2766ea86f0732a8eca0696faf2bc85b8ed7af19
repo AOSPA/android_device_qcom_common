@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "39553101_dd936935",
+        "filename": "system/overlay/CarrierConfig/res/xml/vendor.xml",
+        "patchSetId": 3
+      },
+      "lineNbr": 117,
+      "author": {
+        "id": 1000012
+      },
+      "writtenOn": "2023-07-28T21:40:37Z",
+      "side": 0,
+      "message": "why",
+      "revId": "c2766ea86f0732a8eca0696faf2bc85b8ed7af19",
+      "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
+    }
+  ]
+}
