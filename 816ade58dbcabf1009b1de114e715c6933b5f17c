@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "c0f736f4_0d1a412b",
+        "filename": "system/overlay/CarrierConfig/res/xml/vendor.xml",
+        "patchSetId": 4
+      },
+      "lineNbr": 120,
+      "author": {
+        "id": 1000012
+      },
+      "writtenOn": "2023-07-29T07:53:47Z",
+      "side": 1,
+      "message": "this line still doesn\u0027t really need to change.",
+      "revId": "816ade58dbcabf1009b1de114e715c6933b5f17c",
+      "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "7877edbd_06558b1a",
+        "filename": "system/overlay/CarrierConfig/res/xml/vendor.xml",
+        "patchSetId": 4
+      },
+      "lineNbr": 2895,
+      "author": {
+        "id": 1000012
+      },
+      "writtenOn": "2023-07-29T07:53:47Z",
+      "side": 1,
+      "message": "skip this section, Jio fixed their network.",
+      "revId": "816ade58dbcabf1009b1de114e715c6933b5f17c",
+      "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
+    }
+  ]
+}
