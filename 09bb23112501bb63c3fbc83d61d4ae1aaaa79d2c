@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "2088c544_de39a8dc",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000696
+      },
+      "writtenOn": "2023-08-04T14:21:35Z",
+      "side": 1,
+      "message": "just disable codec2 with props when it\u0027s not needed?",
+      "revId": "09bb23112501bb63c3fbc83d61d4ae1aaaa79d2c",
+      "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
+    }
+  ]
+}
