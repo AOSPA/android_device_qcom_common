@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "f3f70dc7_1205f70f",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 4
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000730
+      },
+      "writtenOn": "2023-08-05T18:53:33Z",
+      "side": 1,
+      "message": "Just disable from tree, instead of flagging in both components and tree",
+      "revId": "3003ba250fa2f7b6383472771087c60bf6f6cb17",
+      "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
+    }
+  ]
+}
