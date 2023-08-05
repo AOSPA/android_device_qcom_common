@@ -52,6 +52,24 @@
       "parentUuid": "d2d9b050_75c920a4",
       "revId": "09bb23112501bb63c3fbc83d61d4ae1aaaa79d2c",
       "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "0af67077_c3081812",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000737
+      },
+      "writtenOn": "2023-08-05T19:16:00Z",
+      "side": 1,
+      "message": "we already discussed about this in slack",
+      "parentUuid": "9450bbcd_96e9d1b5",
+      "revId": "09bb23112501bb63c3fbc83d61d4ae1aaaa79d2c",
+      "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
     }
   ]
 }
