@@ -16,6 +16,24 @@
       "message": "Just disable from tree, instead of flagging in both components and tree",
       "revId": "3003ba250fa2f7b6383472771087c60bf6f6cb17",
       "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "af5d4c13_d8efddef",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 4
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000737
+      },
+      "writtenOn": "2023-08-05T19:15:32Z",
+      "side": 1,
+      "message": "It doesn\u0027t make sense to leave this enabled for SoC which qcom didn\u0027t really support, so I left it override, the maintainer will use it if he just wants that",
+      "parentUuid": "f3f70dc7_1205f70f",
+      "revId": "3003ba250fa2f7b6383472771087c60bf6f6cb17",
+      "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
     }
   ]
 }
