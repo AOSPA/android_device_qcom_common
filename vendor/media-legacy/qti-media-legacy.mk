@@ -48,5 +48,10 @@ PRODUCT_SYSTEM_EXT_PROPERTIES += \
     media.stagefright.thumbnail.prefer_hw_codecs=true \
     ro.media.recorder-max-base-layer-fps=60
 
+ifneq ($(call is-board-platform-in-list, sm6150 msmnile kona),true)
+PRODUCT_COPY_FILES += \
+    $(QCOM_COMMON_PATH)/vendor/media-legacy/vendor.qti.media.c2@1.0-service-disable.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/vendor.qti.media.c2@1.0-service-disable.rc
+endif
+
 # Get non-open-source specific aspects.
 $(call inherit-product-if-exists, vendor/qcom/common/vendor/media-legacy/media-legacy-vendor.mk)
