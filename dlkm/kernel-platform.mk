@@ -19,18 +19,19 @@ endif
 
 # DLKM
 define get-kernel-modules
-$(if $(wildcard $(KERNEL_PREBUILT_DIR)/$(1)/modules.load), \
-	$(addprefix $(KERNEL_PREBUILT_DIR)/$(1)/,$(notdir $(file < $(KERNEL_PREBUILT_DIR)/$(1)/modules.load))), \
+$(if $(wildcard $(KERNEL_PREBUILT_DIR)/$(1)/$(2)), \
+	$(addprefix $(KERNEL_PREBUILT_DIR)/$(1)/,$(notdir $(file < $(KERNEL_PREBUILT_DIR)/$(1)/$(2)))), \
 	$(wildcard $(KERNEL_PREBUILT_DIR)/$(1)/*.ko))
 endef
 
 prepend-kernel-modules = $(eval $1 := $2 $(filter-out $2,$($1)))
 
-first_stage_modules := $(call get-kernel-modules,.)
-second_stage_modules := $(call get-kernel-modules,vendor_dlkm)
+first_stage_modules := $(call get-kernel-modules,.,modules.load)
+second_stage_modules := $(call get-kernel-modules,vendor_dlkm,modules.load)
+recovery_modules := $(call get-kernel-modules,.,modules.load.recovery)
 
 $(call prepend-kernel-modules,BOARD_VENDOR_RAMDISK_KERNEL_MODULES_LOAD,$(first_stage_modules))
-$(call prepend-kernel-modules,BOARD_VENDOR_RAMDISK_RECOVERY_KERNEL_MODULES_LOAD,$(first_stage_modules) $(second_stage_modules))
+$(call prepend-kernel-modules,BOARD_VENDOR_RAMDISK_RECOVERY_KERNEL_MODULES_LOAD,$(recovery_modules))
 $(call prepend-kernel-modules,BOARD_VENDOR_KERNEL_MODULES,$(second_stage_modules))
 
 BOARD_VENDOR_RAMDISK_KERNEL_MODULES_BLOCKLIST_FILE := $(wildcard $(KERNEL_PREBUILT_DIR)/vendor_dlkm/modules.blocklist)
