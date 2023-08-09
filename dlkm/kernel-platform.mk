@@ -26,9 +26,9 @@ endef
 
 prepend-kernel-modules = $(eval $1 := $2 $(filter-out $2,$($1)))
 
-first_stage_modules := $(call get-kernel-modules,.,modules.load)
+first_stage_modules := $(call get-kernel-modules,vendor_ramdisk,modules.load)
 second_stage_modules := $(call get-kernel-modules,vendor_dlkm,modules.load)
-recovery_modules := $(call get-kernel-modules,.,modules.load.recovery)
+recovery_modules := $(call get-kernel-modules,vendor_ramdisk,modules.load.recovery)
 
 $(call prepend-kernel-modules,BOARD_VENDOR_RAMDISK_KERNEL_MODULES_LOAD,$(first_stage_modules))
 $(call prepend-kernel-modules,BOARD_VENDOR_RAMDISK_RECOVERY_KERNEL_MODULES_LOAD,$(recovery_modules))
