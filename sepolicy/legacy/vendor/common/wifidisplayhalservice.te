@@ -101,7 +101,7 @@ allow wifidisplayhalservice_qti ion_device:chr_file r_file_perms;
 
 userdebug_or_eng(`
   #Allow for property access
-  get_prop(wifidisplayhalservice_qti,wfd_vendor_debug_prop)
+  get_prop(wifidisplayhalservice_qti, vendor_wfd_vendor_debug_prop)
   #Allow to dump in /data/vendor/media/
   allow wifidisplayhalservice_qti vendor_media_data_file:dir w_dir_perms;
   allow wifidisplayhalservice_qti vendor_media_data_file:file create_file_perms;
