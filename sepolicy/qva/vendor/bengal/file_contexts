@@ -24,3 +24,6 @@
 
 #Graphics
 /sys/devices/platform/soc/5900000.qcom,kgsl-3d0/kgsl/kgsl-3d0/gpubusy u:object_r:vendor_sysfs_kgsl_gpubusy:s0
+
+#Primary storage device nodes
+/dev/block/sd[bc]1?                                             u:object_r:vendor_xbl_block_device:s0
