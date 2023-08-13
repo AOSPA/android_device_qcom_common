@@ -27,3 +27,18 @@
 
 #Primary storage device nodes
 /dev/block/sd[bc]1?                                             u:object_r:vendor_xbl_block_device:s0
+
+# UFS Devices
+/dev/block/platform/soc/4804000.ufshc/by-name/vendor                u:object_r:system_block_device:s0
+/dev/block/platform/soc/4804000.ufshc/by-name/product               u:object_r:system_block_device:s0
+/dev/block/platform/soc/4804000.ufshc/by-name/odm                   u:object_r:system_block_device:s0
+/dev/block/platform/soc/4804000.ufshc/by-name/product_[ab]          u:object_r:system_block_device:s0
+/dev/block/platform/soc/4804000.ufshc/by-name/odm_[ab]              u:object_r:system_block_device:s0
+/dev/block/platform/soc/4804000.ufshc/by-name/vendor_dlkm_[ab]      u:object_r:vendor_custom_ab_block_device:s0
+
+#for eMMC
+/dev/block/platform/soc/4744000.sdhci/by-name/vendor                u:object_r:system_block_device:s0
+/dev/block/platform/soc/4744000.sdhci/by-name/product               u:object_r:system_block_device:s0
+/dev/block/platform/soc/4744000.sdhci/by-name/odm                   u:object_r:system_block_device:s0
+/dev/block/platform/soc/4744000.sdhci/by-name/product_[ab]          u:object_r:system_block_device:s0
+/dev/block/platform/soc/4744000.sdhci/by-name/odm_[ab]              u:object_r:system_block_device:s0
