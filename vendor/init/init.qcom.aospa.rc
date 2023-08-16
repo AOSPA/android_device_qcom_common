@@ -14,3 +14,7 @@
 
 on fs
     mkdir /mnt/vendor/persist/secnvm 0770 system system
+
+on property:sys.boot_completed=1
+    # Only owner can acces this node
+    chmod 440 /proc/net/unix
