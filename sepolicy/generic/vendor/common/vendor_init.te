@@ -13,6 +13,7 @@ allow vendor_qti_init_shell configfs:{
 
 # Allow build.prop to set vendor.all.modules.ready
 set_prop(vendor_init, vendor_modprobe_prop)
+set_prop(vendor_init, system_dlkm_modprobe_prop)
 
 #Access rcs service
 set_prop(vendor_init, vendor_persist_rcs_qti_prop)
