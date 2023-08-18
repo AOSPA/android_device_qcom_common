@@ -2,3 +2,9 @@
 allow init vendor_sysfs_scsi_target:file w_file_perms;
 
 allow init vendor_sysfs_mmc_host:file w_file_perms;
+
+allow init vendor_vm_system_file:dir mounton;
+
+allow init {
+    vendor_vm_data_block_device
+}:{ blk_file lnk_file } relabelto;
