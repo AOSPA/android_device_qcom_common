@@ -1,0 +1,2 @@
+# Allow hostapd to connect to mutualex using control socket
+allow hal_wifi_hostapd_default vendor_mutualex:unix_dgram_socket sendto;
