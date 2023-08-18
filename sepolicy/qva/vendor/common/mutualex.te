@@ -1,0 +1,54 @@
+# Copyright (c) 2019-2020, The Linux Foundation. All rights reserved.
+#
+# Redistribution and use in source and binary forms, with or without
+# modification, are permitted provided that the following conditions are
+# met:
+#    * Redistributions of source code must retain the above copyright
+# notice, this list of conditions and the following disclaimer.
+#     * Redistributions in binary form must reproduce the above
+# copyright notice, this list of conditions and the following
+# disclaimer in the documentation and/or other materials provided
+# with the distribution.
+#     * Neither the name of The Linux Foundation nor the names of its
+# contributors may be used to endorse or promote products derived
+# from this software without specific prior written permission.
+#
+# THIS SOFTWARE IS PROVIDED "AS IS" AND ANY EXPRESS OR IMPLIED
+# WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF
+# MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NON-INFRINGEMENT
+# ARE DISCLAIMED.  IN NO EVENT SHALL THE COPYRIGHT OWNER OR CONTRIBUTORS
+# BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR
+# CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF
+# SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR
+# BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY,
+# WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE
+# OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN
+# IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+
+type vendor_mutualex, domain;
+type vendor_mutualex_exec, exec_type, vendor_file_type, file_type;
+init_daemon_domain(vendor_mutualex)
+
+allow vendor_mutualex vendor_mutualex:{
+    qipcrtr_socket
+    netlink_generic_socket
+}create_socket_perms_no_ioctl;
+
+hal_client_domain(vendor_mutualex,hal_wifi_hostapd)
+hal_client_domain(vendor_mutualex,hal_wifi_supplicant)
+
+# allow mutualex to access wpa_socket
+allow vendor_mutualex vendor_wifi_vendor_data_file:dir r_dir_perms;
+allow vendor_mutualex vendor_wifi_vendor_wpa_socket:sock_file write;
+
+#communicating with wpa supplicant for sending commands/listening to events
+unix_socket_send(vendor_mutualex, wpa, hal_wifi_supplicant)
+allow vendor_mutualex wpa_data_file:dir w_dir_perms;
+allow vendor_mutualex wpa_data_file:sock_file create_file_perms;
+
+#communicating with hostapd for sending commands/listening to events
+allow vendor_mutualex hostapd_data_file:dir rw_dir_perms;
+allow vendor_mutualex hostapd_data_file:sock_file create_file_perms;
+allow vendor_mutualex { hal_wifi_hostapd_default }:unix_dgram_socket sendto;
+
+wakelock_use(vendor_mutualex)
