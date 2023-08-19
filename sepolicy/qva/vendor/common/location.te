@@ -1,0 +1,4 @@
+userdebug_or_eng(`
+  # stop or kill loc_launcher, it will send signal Sigkill or Sigstop to child processes.
+  allow vendor_location vendor_location_xtwifi_inetagent:process { signal sigkill sigstop };
+')
