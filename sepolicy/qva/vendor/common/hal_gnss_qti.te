@@ -1,0 +1,1 @@
+allow vendor_hal_gnss_qti vendor_location_xtwifi_inetagent:unix_dgram_socket sendto;

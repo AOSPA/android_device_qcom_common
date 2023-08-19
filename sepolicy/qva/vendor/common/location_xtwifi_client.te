@@ -1,0 +1,2 @@
+# send to /dev/socket/location/ - mq/inet-agent-tdp-dl, mq/inet-agent-cs etc
+allow vendor_location_xtwifi_client vendor_location_xtwifi_inetagent:unix_dgram_socket sendto;
