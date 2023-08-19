@@ -16,6 +16,24 @@
       "message": "do we ship this",
       "revId": "9760bd0f9fe448110a531af05ca44ebcd59028b4",
       "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "4fa8872e_fb4eb53b",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000737
+      },
+      "writtenOn": "2023-08-19T13:37:46Z",
+      "side": 1,
+      "message": "probably not, but qcom added in A11 sepolicy_vndr, so newer Kona BSP should have this",
+      "parentUuid": "5c7ccf33_bc369bd3",
+      "revId": "9760bd0f9fe448110a531af05ca44ebcd59028b4",
+      "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
     }
   ]
 }
