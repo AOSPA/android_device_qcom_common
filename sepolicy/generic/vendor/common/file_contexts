@@ -18,6 +18,9 @@
 # Persist files
 /mnt/vendor/persist/wlan(/.*)?                                      u:object_r:vendor_persist_wcnss_service_file:s0
 
+# Sensors
+/vendor/bin/sensors-qesdk                       u:object_r:vendor_sensors_qesdk_exec:s0
+
 # Missing Labels from taro
 /dev/wcd-dsp-glink                              u:object_r:audio_device:s0
 /dev/wcd_dsp0_control                           u:object_r:audio_device:s0
