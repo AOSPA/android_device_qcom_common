@@ -1,2 +1,5 @@
 # QRTR
 /(vendor|system/vendor)/bin/qrtr-lookup u:object_r:vendor_qrtr_exec:s0
+
+# GNSS
+/(vendor|system/vendor)/bin/xtwifi-inet-agent	u:object_r:vendor_location_xtwifi_inetagent_exec:s0
