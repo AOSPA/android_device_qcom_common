@@ -102,13 +102,6 @@ genfscon sysfs /devices/platform/soc/c440000.qcom,spmi/spmi-0/spmi0-00/c440000.q
 genfscon sysfs /devices/platform/soc/c440000.qcom,spmi/spmi-0/spmi0-00/c440000.qcom,spmi:qcom,pm8150@0:qcom,pm8150_rtc/rtc/rtc0/wakeup u:object_r:sysfs_wakeup:s0
 genfscon sysfs /devices/platform/soc/c440000.qcom,spmi/spmi-0/spmi0-02/c440000.qcom,spmi:qcom,pm8150b@2:qcom,qpnp-smb5/wakeup u:object_r:sysfs_wakeup:s0
 
-#qdss sysfs-node
-genfscon sysfs /devices/platform/soc/6b05000.tmc/coresight-tmc-etf u:object_r:vendor_sysfs_qdss_dev:s0
-genfscon sysfs /devices/platform/soc/6048000.tmc/coresight-tmc-etr u:object_r:vendor_sysfs_qdss_dev:s0
-genfscon sysfs /devices/platform/soc/6002000.stm/coresight-stm u:object_r:vendor_sysfs_qdss_dev:s0
-genfscon sysfs /devices/platform/soc/soc:hwevent/coresight-hwevent u:object_r:vendor_sysfs_qdss_dev:s0
-genfscon sysfs /devices/platform/soc/6b0c000.csr/coresight-swao-csr u:object_r:vendor_sysfs_qdss_dev:s0
-
 #fps sysfs-node
 genfscon sysfs /devices/platform/soc/ae00000.qcom,mdss_mdp/drm/card0/sde-crtc-0/measured_fps u:object_r:vendor_sysfs_graphics:s0
 genfscon sysfs /devices/platform/soc/ae00000.qcom,mdss_mdp/drm/card0/sde-crtc-1/measured_fps u:object_r:vendor_sysfs_graphics:s0
