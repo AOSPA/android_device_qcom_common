@@ -78,5 +78,7 @@ PRODUCT_VENDOR_PROPERTIES += vendor.pasr.activemode.enabled=true
 endif
 endif
 
+ifneq ($(call is-board-platform-in-list, bengal),true)
 # Get non-open-source specific aspects
 $(call inherit-product-if-exists, vendor/qcom/common/vendor/perf/perf-vendor.mk)
+endif
