@@ -79,7 +79,7 @@ ifneq (,$(filter dsprpcd, $(TARGET_COMMON_QTI_COMPONENTS)))
   include $(QCOM_COMMON_PATH)/vendor/dsprpcd/qti-dsprpcd.mk
 endif
 
-ifeq ($(call is-board-platform-in-list,$(5_10_FAMILY) $(5_15_FAMILY)),true)
+ifneq (,$(filter 5.10 5.15, $(TARGET_KERNEL_VERSION)))
   include $(QCOM_COMMON_PATH)/dlkm/qti-dlkm.mk
 endif
 
