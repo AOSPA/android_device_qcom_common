@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "ec3074cc_17c859d9",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 3
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000143
+      },
+      "writtenOn": "2023-08-24T10:12:36Z",
+      "side": 1,
+      "message": "Wouldn\u0027t this break default kernel builds?",
+      "revId": "f1eaca7aec931b00764ae11342b9feb19321d27a",
+      "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
+    }
+  ]
+}
