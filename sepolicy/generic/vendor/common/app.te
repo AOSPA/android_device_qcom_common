@@ -1,0 +1,2 @@
+#Allow all apps to have read access to vendor_display_prop
+get_prop(appdomain, vendor_display_prop)
