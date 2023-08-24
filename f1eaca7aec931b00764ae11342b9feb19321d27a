@@ -16,6 +16,24 @@
       "message": "Wouldn\u0027t this break default kernel builds?",
       "revId": "f1eaca7aec931b00764ae11342b9feb19321d27a",
       "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "582be173_73480013",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 3
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000469
+      },
+      "writtenOn": "2023-08-24T17:02:27Z",
+      "side": 1,
+      "message": "how? this is only used with KERNEL_PREBUILT_DIR",
+      "parentUuid": "ec3074cc_17c859d9",
+      "revId": "f1eaca7aec931b00764ae11342b9feb19321d27a",
+      "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
     }
   ]
 }
