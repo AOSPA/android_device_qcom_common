@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "a0044cad_6512f5bb",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 3
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000737
+      },
+      "writtenOn": "2023-08-25T02:39:42Z",
+      "side": 1,
+      "message": "Make a condition that it is only used for kernel 5.10 and earlier, 5.15 use ADIL definition",
+      "revId": "ac651858af9eb08f42d3b92e45fbbb6cff303e52",
+      "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
+    }
+  ]
+}
