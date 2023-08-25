@@ -46,6 +46,12 @@ PRODUCT_PACKAGES += \
     qca6234-service.sh \
     ueventd.qcom.rc
 
+# Charger
+ifneq ($(TARGET_USE_AIDL_QTI_HEALTH),true)
+PRODUCT_COPY_FILES += \
+    $(QCOM_COMMON_PATH)/vendor/init/init.charger_service.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/init.charger_service.rc
+endif
+
 # Kernel
 ifneq (,$(filter 5.4 5.10 5.15, $(TARGET_KERNEL_VERSION)))
 PRODUCT_COPY_FILES += \
