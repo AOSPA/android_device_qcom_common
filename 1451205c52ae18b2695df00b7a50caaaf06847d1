@@ -16,6 +16,24 @@
       "message": "unrelated",
       "revId": "1451205c52ae18b2695df00b7a50caaaf06847d1",
       "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "83b0a3aa_43813ecb",
+        "filename": "sepolicy/generic/vendor/common/file.te",
+        "patchSetId": 2
+      },
+      "lineNbr": 2,
+      "author": {
+        "id": 1000737
+      },
+      "writtenOn": "2023-08-25T10:18:59Z",
+      "side": 0,
+      "message": "Done",
+      "parentUuid": "2d51eca2_44d4fbe8",
+      "revId": "1451205c52ae18b2695df00b7a50caaaf06847d1",
+      "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
     }
   ]
 }
