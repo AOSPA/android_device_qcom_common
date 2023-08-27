@@ -16,6 +16,24 @@
       "message": "more info?",
       "revId": "31dd5abd3bf48390368dae66daaa37d924a31528",
       "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "6b704657_e4b70e80",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000737
+      },
+      "writtenOn": "2023-08-27T16:52:34Z",
+      "side": 1,
+      "message": "Interface for 5.15, is in vendor/qcom/opensource",
+      "parentUuid": "6fcb808d_aba50286",
+      "revId": "31dd5abd3bf48390368dae66daaa37d924a31528",
+      "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
     }
   ]
 }
