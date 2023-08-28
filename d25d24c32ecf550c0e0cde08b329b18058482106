@@ -140,6 +140,24 @@
       "parentUuid": "ff683ebd_dd3ba910",
       "revId": "d25d24c32ecf550c0e0cde08b329b18058482106",
       "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "38c13dd8_6e0a7eb5",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 4
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000730
+      },
+      "writtenOn": "2023-08-28T17:22:56Z",
+      "side": 1,
+      "message": "you are supposed to adapt the devicetree to the source not adapt the source to the device",
+      "parentUuid": "89701416_acee3a6d",
+      "revId": "d25d24c32ecf550c0e0cde08b329b18058482106",
+      "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
     }
   ]
 }
