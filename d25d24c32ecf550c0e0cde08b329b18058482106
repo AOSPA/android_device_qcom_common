@@ -158,6 +158,23 @@
       "parentUuid": "89701416_acee3a6d",
       "revId": "d25d24c32ecf550c0e0cde08b329b18058482106",
       "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "2265bc14_e3208b52",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 4
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000760
+      },
+      "writtenOn": "2023-08-28T17:47:30Z",
+      "side": 1,
+      "message": "uhm, pulling the makefile changes to the device tree feels like a better choice. i was in a similar situation with telephony component in my moto. because motorola added hooks to their fw which checks for their own ims blobs. so i had pushed a commit to not inherit ims blobs for any moto device. but then moto launched their edge 30 ultra with which they dropped the stock ims dependency. so i had to abandon the change. it\u0027s always better to not inherit the component if your device isn\u0027t functioning properly with it because you never know when a new thing pops up which magically works\nalso pulling the makefile changes to the device tree doesn\u0027t seem like a bad idea at all. there\u0027s no point of using the component if the major part of it doesn\u0027t work out well for you, which is the vendor blobs.",
+      "revId": "d25d24c32ecf550c0e0cde08b329b18058482106",
+      "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
     }
   ]
 }
