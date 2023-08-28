@@ -104,6 +104,24 @@
       "parentUuid": "eeb55d29_b1b76231",
       "revId": "d25d24c32ecf550c0e0cde08b329b18058482106",
       "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "ff683ebd_dd3ba910",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 4
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000890
+      },
+      "writtenOn": "2023-08-28T11:33:30Z",
+      "side": 1,
+      "message": "topaz is the only device with bengal 5.15 for now. Newer devices may come in the future. Who\u0027s to say it won\u0027t work on other bengal 5.15 devices? Also newer 6.x qcom devices may arrive soonish aswell as newer midrange 6.x which may have a possibility of utilizing powermodule which would make this change a \u0027your device issue\u0027. I\u0027d rather wait and see if a newer bengal 5.15 / midrange 6.x device has working powermodule. Plus we\u0027re nearing the end of this cycle, why not just wait up for U?",
+      "parentUuid": "7fab87aa_e8e6d43f",
+      "revId": "d25d24c32ecf550c0e0cde08b329b18058482106",
+      "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
     }
   ]
 }
