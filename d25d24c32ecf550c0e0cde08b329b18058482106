@@ -122,6 +122,24 @@
       "parentUuid": "7fab87aa_e8e6d43f",
       "revId": "d25d24c32ecf550c0e0cde08b329b18058482106",
       "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "0daa3ba7_61b65236",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 4
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000737
+      },
+      "writtenOn": "2023-08-28T12:57:19Z",
+      "side": 1,
+      "message": "qcom/common it\u0027s for our current devices, if a future one comes along, we\u0027ll adapt as needed. Also, 5.15 kalama blobs are already very different from 5.10 taro, no chance of 6.x working correctly. Also, qcom will only release 6.1 in February 2024. Why mess up the present by thinking about the distant future?",
+      "parentUuid": "ff683ebd_dd3ba910",
+      "revId": "d25d24c32ecf550c0e0cde08b329b18058482106",
+      "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
     }
   ]
 }
