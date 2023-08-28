@@ -69,6 +69,23 @@
       "parentUuid": "a663a736_a6ced9da",
       "revId": "d25d24c32ecf550c0e0cde08b329b18058482106",
       "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "eeb55d29_b1b76231",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 4
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000890
+      },
+      "writtenOn": "2023-08-28T07:50:45Z",
+      "side": 1,
+      "message": "Rather just not inherit perf and import other perf stuff in your tree than to make such a change that may impact other bengal devices.",
+      "revId": "d25d24c32ecf550c0e0cde08b329b18058482106",
+      "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
     }
   ]
 }
