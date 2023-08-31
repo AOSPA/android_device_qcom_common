@@ -5352,9 +5352,9 @@ case "$target" in
 		echo 10 > /proc/sys/kernel/sched_group_downmigrate
 		echo 1 > /proc/sys/kernel/sched_walt_rotate_big_tasks
 
-		echo 0-3 > /dev/cpuset/background/cpus
+		# cpuset parameters
+		echo 0-1 > /dev/cpuset/background/cpus
 		echo 0-3 > /dev/cpuset/system-background/cpus
-
 
 		# Turn off scheduler boost at the end
 		echo 0 > /proc/sys/kernel/sched_boost
