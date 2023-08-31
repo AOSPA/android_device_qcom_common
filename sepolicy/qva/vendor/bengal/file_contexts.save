@@ -25,10 +25,6 @@
 #Graphics
 /sys/devices/platform/soc/5900000.qcom,kgsl-3d0/kgsl/kgsl-3d0/gpubusy u:object_r:vendor_sysfs_kgsl_gpubusy:s0
 
-## 5.15 LAbel
-# Power
-/sys/devices(/platform)?/soc/[a-f0-9]+.ufshc/spm_lvl                u:object_r:vendor_sysfs_scsi_host:s0
-
 # UFS Devices
 /dev/block/platform/soc/4804000.ufshc/by-name/vendor                u:object_r:system_block_device:s0
 /dev/block/platform/soc/4804000.ufshc/by-name/product               u:object_r:system_block_device:s0
@@ -43,3 +39,4 @@
 /dev/block/platform/soc/4744000.sdhci/by-name/odm                   u:object_r:system_block_device:s0
 /dev/block/platform/soc/4744000.sdhci/by-name/product_[ab]          u:object_r:system_block_device:s0
 /dev/block/platform/soc/4744000.sdhci/by-name/odm_[ab]              u:object_r:system_block_device:s0
+
