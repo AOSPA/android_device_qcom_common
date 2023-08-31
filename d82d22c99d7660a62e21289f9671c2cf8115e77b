@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "9cf43985_3579e7b6",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000012
+      },
+      "writtenOn": "2023-08-31T13:48:08Z",
+      "side": 1,
+      "message": "Thank you for contributing!\n\nCan you do this in init.aospa.perf.rc and specify the soc in the commit message?",
+      "revId": "d82d22c99d7660a62e21289f9671c2cf8115e77b",
+      "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
+    }
+  ]
+}
