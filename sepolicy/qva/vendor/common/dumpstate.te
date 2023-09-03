@@ -1,2 +1,0 @@
-allow dumpstate vendor_vm_system_file:dir getattr;
-allow dumpstate vendor_vm_system_file:filesystem getattr;
