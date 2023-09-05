@@ -1,4 +1,4 @@
-# Copyright (C) 2022 Paranoid Android
+# Copyright (C) 2023 Paranoid Android
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -17,7 +17,7 @@
 -include hardware/qcom/display/config/display-product.mk
 
 # Enable Legacy Lights HAL for <5.10 targets
-ifneq (,$(filter 3.18 4.4 4.9 4.14 4.19 5.4, $(TARGET_KERNEL_VERSION)))
+ifeq ($(call math_lt,$(TARGET_KERNEL_VERSION_INT),504),true)
 
 # Lights HAL
 PRODUCT_PACKAGES += \
@@ -43,7 +43,7 @@ PRODUCT_PACKAGES += \
 
 # Properties for <5.10 targets
 # These are already set on 5.10+.
-ifneq (,$(filter 3.18 4.4 4.9 4.14 4.19 5.4, $(TARGET_KERNEL_VERSION)))
+ifeq ($(call math_lt,$(TARGET_KERNEL_VERSION_INT),510),true)
 PRODUCT_VENDOR_PROPERTIES += \
     debug.sf.predict_hwc_composition_strategy=0 \
     debug.sf.treat_170m_as_sRGB=1
@@ -51,7 +51,7 @@ endif
 
 # Properties for <5.4 targets
 # These are already set on 5.4+
-ifneq (,$(filter 3.18 4.4 4.9 4.14 4.19, $(TARGET_KERNEL_VERSION)))
+ifeq ($(call math_lt,$(TARGET_KERNEL_VERSION_INT),504),true)
 PRODUCT_VENDOR_PROPERTIES += \
     debug.sf.disable_client_composition_cache=1
 endif

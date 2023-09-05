@@ -1,4 +1,4 @@
-# Copyright 2022 Paranoid Android
+# Copyright 2023 Paranoid Android
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -124,6 +124,7 @@ endif
     msm8937 \
     msm8996
 
+# Set default kernel versions.
 ifeq ($(call is-board-platform-in-list,$(5_15_FAMILY)),true)
 TARGET_KERNEL_VERSION ?= 5.15
 else ifeq ($(call is-board-platform-in-list,$(5_10_FAMILY)),true)
@@ -140,6 +141,28 @@ else ifeq ($(call is-board-platform-in-list,$(4_4_FAMILY)),true)
 TARGET_KERNEL_VERSION ?= 4.4
 else ifeq ($(call is-board-platform-in-list,$(3_18_FAMILY)),true)
 TARGET_KERNEL_VERSION ?= 3.18
+endif
+
+# Set kernel version integer so we can use
+# greater than or less than.
+# Linux does not follow normal place value,
+# so 5.10 is greater than 5.4.
+ifeq ($(TARGET_KERNEL_VERSION),5.15)
+TARGET_KERNEL_VERSION_INT := 515
+else ifeq ($(TARGET_KERNEL_VERSION),5.10)
+TARGET_KERNEL_VERSION_INT := 510
+else ifeq ($(TARGET_KERNEL_VERSION),5.4)
+TARGET_KERNEL_VERSION_INT := 504
+else ifeq ($(TARGET_KERNEL_VERSION),4.19)
+TARGET_KERNEL_VERSION_INT := 419
+else ifeq ($(TARGET_KERNEL_VERSION),4.14)
+TARGET_KERNEL_VERSION_INT := 414
+else ifeq ($(TARGET_KERNEL_VERSION),4.9)
+TARGET_KERNEL_VERSION_INT := 409
+else ifeq ($(TARGET_KERNEL_VERSION),4.4)
+TARGET_KERNEL_VERSION_INT := 404
+else ifeq ($(TARGET_KERNEL_VERSION),3.18)
+TARGET_KERNEL_VERSION_INT := 318
 endif
 
 ifeq ($(call is-board-platform-in-list,$(QCOM_BOARD_PLATFORMS)),true)

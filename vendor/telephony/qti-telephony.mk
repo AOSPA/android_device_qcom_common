@@ -19,7 +19,8 @@ PRODUCT_SOONG_NAMESPACES += \
 $(call inherit-product, vendor/qcom/opensource/dataservices/dataservices_vendor_product.mk)
 
 # IPACM
-ifneq (,$(filter 5.10, $(TARGET_KERNEL_VERSION)))
+# Enable new IPA HAL on kernels greater than 5.4
+ifeq ($(call math_gt,$(TARGET_KERNEL_VERSION_INT),504),true)
 PRODUCT_SOONG_NAMESPACES += vendor/qcom/opensource/data-ipa-cfg-mgr
 $(call inherit-product, vendor/qcom/opensource/data-ipa-cfg-mgr/ipacm_vendor_product.mk)
 else
@@ -38,7 +39,7 @@ PRODUCT_PACKAGES += \
     android.hardware.wifi.hostapd@1.0.vendor \
     android.system.net.netd@1.1.vendor
 
-ifneq (,$(filter 3.18 4.4 4.9 4.14 4.19 5.4, $(TARGET_KERNEL_VERSION)))
+ifeq ($(call math_lt,$(TARGET_KERNEL_VERSION_INT),510),true)
 PRODUCT_VENDOR_PROPERTIES += \
     persist.vendor.radio.rat_on=combine
 endif
@@ -50,7 +51,8 @@ PRODUCT_VENDOR_PROPERTIES += \
     persist.vendor.radio.procedure_bytes=SKIP \
     persist.vendor.radio.sib16_support=1
 
-ifeq ($(call is-board-platform-in-list, $(3_18_FAMILY) $(4_4_FAMILY) $(4_9_FAMILY)),true)
+# Disable advanced scan on kernels < 4.14
+ifeq ($(call math_lt,$(TARGET_KERNEL_VERSION_INT),414),true)
 PRODUCT_VENDOR_PROPERTIES += \
     persist.vendor.radio.enableadvancedscan=false
 else
@@ -64,7 +66,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
     persist.vendor.radio.fetchqos=true
 endif
 
-ifeq ($(call is-board-platform-in-list, $(4_14_FAMILY) $(4_19_FAMILY) $(5_4_FAMILY)),true)
+ifeq ($(call math_lt,$(TARGET_KERNEL_VERSION_INT),510),true)
 # Property to enable single ims registration
 PRODUCT_PROPERTY_OVERRIDES += \
      persist.vendor.rcs.singlereg.feature=1
