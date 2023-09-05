@@ -111,6 +111,7 @@ endif
     msmnile
 
 4_9_FAMILY := \
+    msm8937 \
     msm8953 \
     qcs605 \
     sdm710 \
@@ -121,7 +122,6 @@ endif
     sdm660
 
 3_18_FAMILY := \
-    msm8937 \
     msm8996
 
 ifeq ($(call is-board-platform-in-list,$(5_15_FAMILY)),true)
