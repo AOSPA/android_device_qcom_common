@@ -16,6 +16,24 @@
       "message": "Shouldn\u0027t this also include 5.15?",
       "revId": "c143e39fcd207422393125449a75e828ae6d3149",
       "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "25091a00_e8e46557",
+        "filename": "components.mk",
+        "patchSetId": 13
+      },
+      "lineNbr": 40,
+      "author": {
+        "id": 1000737
+      },
+      "writtenOn": "2023-09-07T10:16:37Z",
+      "side": 1,
+      "message": "adreno drivers version is different between 5.10 and 5.15, there is no guarantee it will work, and that would be a downgrade.",
+      "parentUuid": "00408617_b6c37f13",
+      "revId": "c143e39fcd207422393125449a75e828ae6d3149",
+      "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
     }
   ]
 }
