@@ -3,3 +3,6 @@
 
 # GNSS
 /(vendor|system/vendor)/bin/xtwifi-inet-agent	u:object_r:vendor_location_xtwifi_inetagent_exec:s0
+
+# QMS
+/(vendor|system/vendor)/bin/mutualex		u:object_r:vendor_qms_exec:s0
