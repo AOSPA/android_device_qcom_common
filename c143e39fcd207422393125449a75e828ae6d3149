@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "00408617_b6c37f13",
+        "filename": "components.mk",
+        "patchSetId": 13
+      },
+      "lineNbr": 40,
+      "author": {
+        "id": 1000143
+      },
+      "writtenOn": "2023-09-07T08:31:24Z",
+      "side": 1,
+      "message": "Shouldn\u0027t this also include 5.15?",
+      "revId": "c143e39fcd207422393125449a75e828ae6d3149",
+      "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
+    }
+  ]
+}
