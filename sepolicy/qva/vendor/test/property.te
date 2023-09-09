@@ -1,2 +1,2 @@
 #kineticsxr
-type vendor_kineticsxr_prop, property_type;
+vendor_public_prop(vendor_kineticsxr_prop)
