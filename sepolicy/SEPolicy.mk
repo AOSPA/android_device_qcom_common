@@ -10,6 +10,11 @@ ifeq (,$(filter sdm845 sdm710 sdm660 msm8937 msm8953 msm8998, $(TARGET_BOARD_PLA
         $(COMMON_SEPOLICY_PATH)/qva/vendor/common \
         $(COMMON_SEPOLICY_PATH)/generic/vendor/$(TARGET_SEPOLICY_DIR) \
         $(COMMON_SEPOLICY_PATH)/qva/vendor/$(TARGET_SEPOLICY_DIR)
+
+    ifneq (,$(filter userdebug eng, $(TARGET_BUILD_VARIANT)))
+        SYSTEM_EXT_PUBLIC_SEPOLICY_DIRS += \
+            $(COMMON_SEPOLICY_PATH)/qva/vendor/test
+    endif
 else # Legacy
     BOARD_VENDOR_SEPOLICY_DIRS += \
         $(COMMON_SEPOLICY_PATH)/legacy/vendor/ssg \
