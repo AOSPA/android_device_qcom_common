@@ -35,6 +35,7 @@ vendor/lib64/liblightninglaunches.so
 vendor/lib64/liblmthermallistner.so
 vendor/lib64/liblmutils-ns.so
 vendor/lib64/libmemperfd.so
+vendor/lib64/libmemunreachable.so
 vendor/lib64/libmeters-ns.so
 vendor/lib64/libmeters.so
 vendor/lib64/libpasrutils.so
@@ -43,8 +44,10 @@ vendor/lib64/libperfgluelayer.so
 vendor/lib64/libperfioctl.so
 vendor/lib64/libpowercallback.so
 vendor/lib64/libpowercore.so
+vendor/lib64/libprefapps.so
 vendor/lib64/libprekill.so
 vendor/lib64/libprocomp.so
+vendor/lib64/libpsi.so
 vendor/lib64/libpsmoptfeature.so
 vendor/lib64/libqapesdk.so
 vendor/lib64/libqti-iopd-client.so
@@ -54,6 +57,7 @@ vendor/lib64/libqti-perfd.so
 vendor/lib64/libqti-util.so
 vendor/lib64/libqti-utils.so
 vendor/lib64/libreffeature.so
+vendor/lib64/libsi.so
 vendor/lib64/libsilkyscrolls.so
 vendor/lib64/libskewknob.so
 vendor/lib64/libsplh.so
