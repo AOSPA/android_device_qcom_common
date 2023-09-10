@@ -62,7 +62,7 @@ PRODUCT_VENDOR_PROPERTIES += \
     vendor.perf.framepacing.enable=1
 endif
 
-ifeq ($(TARGET_KERNEL_VERSION),5.15)
+ifeq ($(TARGET_KERNEL_VERSION), 5.10 5.15)
 PRODUCT_VENDOR_PROPERTIES += \
     ro.vendor.beluga.p=0x3 \
     ro.vendor.beluga.c=0x4800 \
