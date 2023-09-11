@@ -57,7 +57,8 @@ PRODUCT_PACKAGES += \
     libtinycompress \
     libvolumelistener \
     sound_trigger.primary.$(TARGET_BOARD_PLATFORM) \
-    vendor.qti.hardware.pal@1.0.vendor
+    vendor.qti.hardware.pal@1.0.vendor \
+    vendor.qti.hardware.AGMIPC@1.0.vendor
 
 # Permissions
 PRODUCT_COPY_FILES += \
