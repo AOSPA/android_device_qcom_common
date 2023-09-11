@@ -6,3 +6,6 @@
 
 # QMS
 /(vendor|system/vendor)/bin/mutualex		u:object_r:vendor_qms_exec:s0
+
+# SSG QMI Gateway Daemon
+/(vendor|system/vendor)/bin/ssgqmigd64		u:object_r:vendor_ssgqmigd_exec:s0
