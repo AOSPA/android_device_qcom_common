@@ -55,12 +55,8 @@ PRODUCT_VENDOR_PROPERTIES += \
     ro.vendor.extension_library=libqti-perfd-client.so \
     ro.vendor.perf.scroll_opt=true \
     ro.vendor.qspm.enable=true \
+    vendor.perf.framepacing.enable=1 \
     vendor.power.pasr.enabled=true
-
-ifeq ($(TARGET_KERNEL_VERSION),5.15)
-PRODUCT_VENDOR_PROPERTIES += \
-    vendor.perf.framepacing.enable=1
-endif
 
 ifneq (,$(filter 5.10 5.15, $(TARGET_KERNEL_VERSION)))
 PRODUCT_VENDOR_PROPERTIES += \
