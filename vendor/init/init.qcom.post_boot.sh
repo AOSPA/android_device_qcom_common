@@ -851,6 +851,7 @@ function start_hbtp()
         fi
 }
 
+
 case "$target" in
         "kalama")
                 if [ -f /sys/devices/soc0/chip_family ]; then
@@ -863,6 +864,34 @@ case "$target" in
 
                 case "$chip_family_id" in
                     "0x7f")
+                    if [ -f /sys/devices/platform/soc/soc:qcom,msm_fastrpc/fastrpc_cdsp_status ]; then
+                        fastrpc_cdsp_status=`cat /sys/devices/platform/soc/soc:qcom,msm_fastrpc/fastrpc_cdsp_status`
+                    else
+                        fastrpc_cdsp_status=-1
+                    fi
+
+                    echo "adsprpc : fastrpc_cdsp_status : $fastrpc_cdsp_status" > /dev/kmsg
+
+                    if [ $fastrpc_cdsp_status -eq 0 ]; then
+                            setprop vendor.fastrpc.disable.cdsprpcd.daemon 1
+                            echo "adsprpc : Disabled cdsp daemon" > /dev/kmsg
+                    fi
+                esac
+                 ;;
+esac
+
+case "$target" in
+        "crow")
+                if [ -f /sys/devices/soc0/chip_family ]; then
+                        chip_family_id=`cat /sys/devices/soc0/chip_family`
+                else
+                        chip_family_id=-1
+                fi
+
+                echo "adsprpc : chip_family_id : $chip_faily_id" > /dev/kmsg
+
+                case "$chip_family_id" in
+                    "0x92")
                     if [ -f /sys/devices/platform/soc/soc:qcom,msm_fastrpc/fastrpc_cdsp_status ]; then
                         fastrpc_cdsp_status=`cat /sys/devices/platform/soc/soc:qcom,msm_fastrpc/fastrpc_cdsp_status`
                     else
