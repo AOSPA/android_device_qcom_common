@@ -16,6 +16,24 @@
       "message": "Omkar pointed out that this is open source and he is correct: https://cs.android.com/android/platform/superproject/main/+/main:system/memory/lmkd/libpsi/Android.bp?q\u003dlibpsi\u0026ss\u003dandroid%2Fplatform%2Fsuperproject%2Fmain",
       "revId": "82a127b8040e16b44aab2ac03f589624c294b286",
       "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "4217dbaf_c8482531",
+        "filename": "vendor/perf/proprietary-files.txt",
+        "patchSetId": 3
+      },
+      "lineNbr": 75,
+      "author": {
+        "id": 1000737
+      },
+      "writtenOn": "2023-09-14T00:34:36Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "f45fe5ba_69cf1045",
+      "revId": "82a127b8040e16b44aab2ac03f589624c294b286",
+      "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
     }
   ]
 }
