@@ -1,4 +1,4 @@
-# Copyright (C) 2022 Paranoid Android
+# Copyright (C) 2023 Paranoid Android
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -21,7 +21,8 @@ TARGET_PERF_COMPONENT_VARIANT := perf
 PRODUCT_COPY_FILES += \
     $(call find-copy-subdir-files,*,$(QCOM_COMMON_PATH)/vendor/perf/configs/common,$(TARGET_COPY_OUT_VENDOR)/etc) \
     $(call find-copy-subdir-files,*,$(QCOM_COMMON_PATH)/vendor/perf/configs/$(TARGET_BOARD_PLATFORM),$(TARGET_COPY_OUT_VENDOR)/etc) \
-    $(call find-copy-subdir-files,*,$(QCOM_COMMON_PATH)/vendor/perf/configs/test,$(TARGET_COPY_OUT_VENDOR)/etc)
+    $(call find-copy-subdir-files,*,$(QCOM_COMMON_PATH)/vendor/perf/configs/test/common,$(TARGET_COPY_OUT_VENDOR)/etc/perf) \
+    $(call find-copy-subdir-files,*,$(QCOM_COMMON_PATH)/vendor/perf/configs/test/$(TARGET_BOARD_PLATFORM),$(TARGET_COPY_OUT_VENDOR)/etc/perf)
 
 # Disable IOP HAL for select platforms.
 ifeq ($(call is-board-platform-in-list, msm8937 msm8953 msm8998 qcs605 sdm660 sdm710),true)
