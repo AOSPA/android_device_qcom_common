@@ -70,6 +70,24 @@
       "parentUuid": "fd3cd2c3_a7b45f46",
       "revId": "273a9d10bc7cd0e72cf8ca125f59790cf104c3bd",
       "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "877e5bb7_2f822784",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000012
+      },
+      "writtenOn": "2023-09-16T02:01:50Z",
+      "side": 1,
+      "message": "so? we keep a bunch of legacy chips. I don\u0027t see the need to clean it up?",
+      "parentUuid": "eef87fb8_233711ab",
+      "revId": "273a9d10bc7cd0e72cf8ca125f59790cf104c3bd",
+      "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
     }
   ]
 }
