@@ -16,6 +16,24 @@
       "message": "remove anorak",
       "revId": "273a9d10bc7cd0e72cf8ca125f59790cf104c3bd",
       "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "216e5e9b_e5f88ab9",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000737
+      },
+      "writtenOn": "2023-09-16T00:16:46Z",
+      "side": 1,
+      "message": "\u003e remove anorak and neo",
+      "parentUuid": "e4a7fcac_28bd76de",
+      "revId": "273a9d10bc7cd0e72cf8ca125f59790cf104c3bd",
+      "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
     }
   ]
 }
