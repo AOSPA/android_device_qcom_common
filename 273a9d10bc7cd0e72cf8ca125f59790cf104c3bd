@@ -52,6 +52,24 @@
       "parentUuid": "216e5e9b_e5f88ab9",
       "revId": "273a9d10bc7cd0e72cf8ca125f59790cf104c3bd",
       "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "eef87fb8_233711ab",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000737
+      },
+      "writtenOn": "2023-09-16T01:45:53Z",
+      "side": 1,
+      "message": "We discussed this a while ago, they are LE.UM devices and the device tree is private too\n\n°Ex: https://github.com/AOSPA/android_device_qcom_common/commit/329ee1e6aaf52b0aa4d26d98eb84966855e230bd",
+      "parentUuid": "fd3cd2c3_a7b45f46",
+      "revId": "273a9d10bc7cd0e72cf8ca125f59790cf104c3bd",
+      "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
     }
   ]
 }
