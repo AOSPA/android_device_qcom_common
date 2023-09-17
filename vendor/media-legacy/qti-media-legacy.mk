@@ -29,6 +29,12 @@ endif
 # Inherit configuration from the HAL.
 $(call inherit-product-if-exists, hardware/qcom/media/product.mk)
 
+# Manifest
+ifneq ($(TARGET_USES_CUSTOM_C2_MANIFEST), true)
+DEVICE_MANIFEST_FILE += \
+    $(QCOM_COMMON_PATH)/vendor/media-legacy/c2_manifest_vendor.xml
+endif
+
 # Media Codecs
 PRODUCT_COPY_FILES += \
     frameworks/av/media/libstagefright/data/media_codecs_google_audio.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs_google_audio.xml \
