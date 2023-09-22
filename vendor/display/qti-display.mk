@@ -41,6 +41,11 @@ PRODUCT_PACKAGES += \
     libqdutils \
     libqservice
 
+# Disable custom_content_md_reserved_size on legacy targets
+ifneq ($(call is-board-platform-in-list,$(5_15_FAMILY)),true)
+TARGET_GRALLOC_HANDLE_HAS_NO_CUSTOM_CONTENT_MD_RESERVED_SIZE ?= true
+endif
+
 # Properties for <5.10 targets
 # These are already set on 5.10+.
 ifneq (,$(filter 3.18 4.4 4.9 4.14 4.19 5.4, $(TARGET_KERNEL_VERSION)))
