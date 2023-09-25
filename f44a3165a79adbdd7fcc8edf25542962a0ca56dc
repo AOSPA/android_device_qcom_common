@@ -33,6 +33,23 @@
       "message": "is it worth it though? i don\u0027t think adding it back just for bengal is a wise thing. because higher end socs with 5.15 which will be the majority won\u0027t be needing this.",
       "revId": "f44a3165a79adbdd7fcc8edf25542962a0ca56dc",
       "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "9c09cc20_3646af40",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000890
+      },
+      "writtenOn": "2023-09-25T18:25:08Z",
+      "side": 1,
+      "message": "Just because it breaks boot on bengal doesn\u0027t mean we\u0027d have to revert the change.",
+      "revId": "f44a3165a79adbdd7fcc8edf25542962a0ca56dc",
+      "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
     }
   ]
 }
