@@ -33,6 +33,24 @@
       "message": "Why -2?",
       "revId": "5f88a5e55272859de42fd432adcbc3ef0055c1ca",
       "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "b956f743_55e5296a",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000463
+      },
+      "writtenOn": "2023-09-25T12:11:15Z",
+      "side": 1,
+      "message": "Because our release builds are user builds. That\u0027s a haxx for userdebug (similar to release-keys haxx)",
+      "parentUuid": "9be1600b_5247aa57",
+      "revId": "5f88a5e55272859de42fd432adcbc3ef0055c1ca",
+      "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
     }
   ]
 }
