@@ -16,6 +16,23 @@
       "message": "how about opting out the component instead",
       "revId": "f44a3165a79adbdd7fcc8edf25542962a0ca56dc",
       "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "8d9c63cf_f4e74a89",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000760
+      },
+      "writtenOn": "2023-09-25T17:04:30Z",
+      "side": 1,
+      "message": "is it worth it though? i don\u0027t think adding it back just for bengal is a wise thing. because higher end socs with 5.15 which will be the majority won\u0027t be needing this.",
+      "revId": "f44a3165a79adbdd7fcc8edf25542962a0ca56dc",
+      "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
     }
   ]
 }
