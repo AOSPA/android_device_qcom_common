@@ -67,6 +67,24 @@
       "message": "are you sure 32-bit perf is needed? I am positive it isnt used on 4.14+",
       "revId": "f44a3165a79adbdd7fcc8edf25542962a0ca56dc",
       "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "924317f9_41cb38a9",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000737
+      },
+      "writtenOn": "2023-09-29T12:20:18Z",
+      "side": 1,
+      "message": "\"just break the boot in bengal\" It doesn\u0027t matter, bengal remains 5.15, if it was another commit that broke the boot in taro or KAILUA this would be reverted, right? bengal is an inferior SoC but remains part of 5.15, It doesn\u0027t make sense to have a \"qcom/common tree\" if that leaves it broken for a platform even though it has an easy solution.besides, you don\u0027t have 5.15, so it\u0027s better to let whoever actually uses that component decide that. Anyway I will check which exact component is causing this problem.",
+      "parentUuid": "9c09cc20_3646af40",
+      "revId": "f44a3165a79adbdd7fcc8edf25542962a0ca56dc",
+      "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
     }
   ]
 }
