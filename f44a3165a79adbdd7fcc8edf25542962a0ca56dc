@@ -85,6 +85,24 @@
       "parentUuid": "9c09cc20_3646af40",
       "revId": "f44a3165a79adbdd7fcc8edf25542962a0ca56dc",
       "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "ca2ab3db_41d68961",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000890
+      },
+      "writtenOn": "2023-09-29T12:40:45Z",
+      "side": 1,
+      "message": "This isn\u0027t about bengal being inferior, rather about making a change that impacts all other socs that have 5.10 and 5.15. Just because I don\u0027t have a 5.15 device doesn\u0027t mean I don\u0027t have a say in changes made on qcom/common. You could always add back 32-bit blobs for the specific component where the breakages come from and guard it from bengal which would make a whole lot of sense than to ship it completely for everything else. That said if taro or kailua had it broken, we\u0027d probably guard it out anyways ¯\\_(ツ)_/¯.",
+      "parentUuid": "924317f9_41cb38a9",
+      "revId": "f44a3165a79adbdd7fcc8edf25542962a0ca56dc",
+      "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
     }
   ]
 }
