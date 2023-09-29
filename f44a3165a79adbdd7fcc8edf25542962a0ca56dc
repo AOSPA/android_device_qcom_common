@@ -103,6 +103,23 @@
       "parentUuid": "924317f9_41cb38a9",
       "revId": "f44a3165a79adbdd7fcc8edf25542962a0ca56dc",
       "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "a64058ac_ac6429bb",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000760
+      },
+      "writtenOn": "2023-09-29T13:34:32Z",
+      "side": 1,
+      "message": "nah, bengal being inferior was never the point. bengal being the only minority is the point here. if it breaks boot in taro or waipio, then revert it because it\u0027s breaking boot across platforms. just xiaomi bengal not booting isn\u0027t the right thing to get this reverted. moreover, if for your device if you can just add it to your device tree, it wouldn\u0027t hurt. instead of re-bloating every other device which uses this component. and it\u0027s never about anyone using the device or not, it\u0027s always about opinions and reviews and that\u0027s how gerrit is here.",
+      "revId": "f44a3165a79adbdd7fcc8edf25542962a0ca56dc",
+      "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
     }
   ]
 }
