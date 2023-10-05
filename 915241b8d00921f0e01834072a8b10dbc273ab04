@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "877f49b2_e0a9fb93",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000012
+      },
+      "writtenOn": "2023-10-05T14:07:17Z",
+      "side": 1,
+      "message": "honestly I hate this.  can we just not use it?",
+      "revId": "915241b8d00921f0e01834072a8b10dbc273ab04",
+      "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
+    }
+  ]
+}
