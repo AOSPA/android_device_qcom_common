@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "f4fe1bce_ca9ff2e6",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000012
+      },
+      "writtenOn": "2023-10-05T14:07:58Z",
+      "side": 1,
+      "message": "do we have any information on this? Qualcomm enabled on parrot but reverted.",
+      "revId": "c2046137e0605ac529358b95c29dd9748ea4496f",
+      "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
+    }
+  ]
+}
