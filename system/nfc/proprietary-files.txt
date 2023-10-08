@@ -1,0 +1,1 @@
+system/system/lib64/vendor.nxp.nxpnfc_aidl-V1-ndk.so
