@@ -18,10 +18,11 @@ $(warning $(KERNEL_PREBUILT_DIR) does not exist, have you compiled kernel?)
 endif
 
 # Path to system_dlkm artifacts directory
+ifneq ($(wildcard $(KERNEL_PREBUILT_DIR)/system_dlkm/),)
 BOARD_SYSTEM_DLKM_SRC := $(KERNEL_PREBUILT_DIR)/system_dlkm
-
 PRODUCT_COPY_FILES += \
     $(call find-copy-subdir-files,*,$(KERNEL_PREBUILT_DIR)/system_dlkm/,$(TARGET_COPY_OUT_SYSTEM_DLKM)/lib/modules)
+endif
 
 # DLKM
 define get-kernel-modules
