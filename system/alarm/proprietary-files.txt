@@ -1,1 +1,1 @@
--product/app/PowerOffAlarm/PowerOffAlarm.apk
+-system_ext/app/PowerOffAlarm/PowerOffAlarm.apk
