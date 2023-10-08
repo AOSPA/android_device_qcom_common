@@ -151,7 +151,7 @@ DEVICE_FRAMEWORK_COMPATIBILITY_MATRIX_FILE += \
 endif
 
 # Opt out of 16K alignment changes
-PRODUCT_MAX_PAGE_SIZE_SUPPORTED := 4096
+PRODUCT_MAX_PAGE_SIZE_SUPPORTED ?= 4096
 
 # Components
 include $(QCOM_COMMON_PATH)/components.mk
