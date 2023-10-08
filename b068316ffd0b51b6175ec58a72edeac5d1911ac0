@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "1fb6892a_bab3b97f",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 3
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000012
+      },
+      "writtenOn": "2023-10-08T04:53:55Z",
+      "side": 1,
+      "message": "we probably want the following:\n\ngps:\nlibloc2jnibridge.so\n\nperf:\nlibqspm-mem-utils.so",
+      "revId": "b068316ffd0b51b6175ec58a72edeac5d1911ac0",
+      "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
+    }
+  ]
+}
