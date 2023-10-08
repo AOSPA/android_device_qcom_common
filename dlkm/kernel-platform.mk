@@ -17,12 +17,6 @@ ifeq ($(wildcard $(KERNEL_PREBUILT_DIR)/),)
 $(warning $(KERNEL_PREBUILT_DIR) does not exist, have you compiled kernel?)
 endif
 
-# Path to system_dlkm artifacts directory
-BOARD_SYSTEM_DLKM_SRC := $(KERNEL_PREBUILT_DIR)/system_dlkm
-
-PRODUCT_COPY_FILES += \
-    $(call find-copy-subdir-files,*,$(KERNEL_PREBUILT_DIR)/system_dlkm/,$(TARGET_COPY_OUT_SYSTEM_DLKM)/lib/modules)
-
 # DLKM
 define get-kernel-modules
 $(if $(wildcard $(KERNEL_PREBUILT_DIR)/$(1)/$(2)), \
@@ -50,6 +44,12 @@ $(call prepend-kernel-modules,BOARD_VENDOR_KERNEL_MODULES,$(second_stage_modules
 
 BOARD_VENDOR_RAMDISK_KERNEL_MODULES_BLOCKLIST_FILE := $(wildcard $(KERNEL_PREBUILT_DIR)/vendor_dlkm/modules.blocklist)
 BOARD_VENDOR_KERNEL_MODULES_BLOCKLIST_FILE := $(wildcard $(KERNEL_PREBUILT_DIR)/vendor_dlkm/modules.blocklist)
+
+ifneq ($(wildcard $(KERNEL_PREBUILT_DIR)/system_dlkm/),)
+BOARD_SYSTEM_DLKM_SRC := $(KERNEL_PREBUILT_DIR)/system_dlkm
+PRODUCT_COPY_FILES += \
+    $(call find-copy-subdir-files,*,$(KERNEL_PREBUILT_DIR)/system_dlkm/,$(TARGET_COPY_OUT_SYSTEM_DLKM)/lib/modules)
+endif
 
 ifneq ("$(wildcard $(KERNEL_PREBUILT_DIR)/vendor_dlkm/system_dlkm.modules.blocklist)", "")
 PRODUCT_COPY_FILES += $(KERNEL_PREBUILT_DIR)/vendor_dlkm/system_dlkm.modules.blocklist:$(TARGET_COPY_OUT_VENDOR_DLKM)/lib/modules/system_dlkm.modules.blocklist
