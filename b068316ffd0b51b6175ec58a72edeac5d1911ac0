@@ -16,6 +16,23 @@
       "message": "we probably want the following:\n\ngps:\nlibloc2jnibridge.so\n\nperf:\nlibqspm-mem-utils.so",
       "revId": "b068316ffd0b51b6175ec58a72edeac5d1911ac0",
       "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "1bbaafcd_4639c0af",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 3
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000012
+      },
+      "writtenOn": "2023-10-08T04:54:41Z",
+      "side": 1,
+      "message": "do we need to remove the vendor.display.configs libs that are no longer in 14?",
+      "revId": "b068316ffd0b51b6175ec58a72edeac5d1911ac0",
+      "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
     }
   ]
 }
