@@ -162,9 +162,6 @@ type avtimer_device, dev_type;
 #define AT device
 type at_device, dev_type;
 
-#define Bluetooth device
-type bt_device, dev_type;
-
 #define Wlan device
 type wlan_device, dev_type;
 
