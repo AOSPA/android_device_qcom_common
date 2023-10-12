@@ -1,5 +1,13 @@
 ifneq ($(KERNEL_MODULES_INSTALL),)
-ifneq ($(call is-board-platform-in-list, bengal kalama taro crow), true)
+
+SKIP_DLKM := $(call is-board-platform-in-list, kalama taro crow)
+ifeq ($(call is-board-platform-in-list, bengal), true)
+ifneq ($(TARGET_KERNEL_VERSION),4.19)
+SKIP_DLKM := true
+endif
+endif
+
+ifneq (SKIP_DLKM, true)
 
 # Get the number of CPU cores. This is the number of parallel jobs to be passed to make command.
 NCORES := $(shell grep -c ^processor /proc/cpuinfo)
