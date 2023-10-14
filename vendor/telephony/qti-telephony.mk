@@ -43,7 +43,8 @@ PRODUCT_PACKAGES += \
     android.hardware.radio.deprecated@1.0.vendor \
     android.hardware.secure_element@1.2.vendor \
     android.hardware.wifi.hostapd@1.0.vendor \
-    android.system.net.netd@1.1.vendor
+    android.system.net.netd@1.1.vendor \
+    vendor.qti.hardware.systemhelperaidl-V1-ndk.vendor
 
 ifneq (,$(filter 3.18 4.4 4.9 4.14 4.19 5.4, $(TARGET_KERNEL_VERSION)))
 PRODUCT_VENDOR_PROPERTIES += \
