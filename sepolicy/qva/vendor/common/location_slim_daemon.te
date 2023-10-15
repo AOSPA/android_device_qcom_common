@@ -1,2 +1,3 @@
 ## send to /dev/socket/location/mq/ - inet-agent-tdp-dl, inet-agent-cs
 allow vendor_location_slim_daemon vendor_location_xtwifi_inetagent:unix_dgram_socket sendto;
+allow vendor_location_slim_daemon fwk_sensor_service:service_manager find;
