@@ -60,7 +60,6 @@
 # OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN
 # IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
-
 # Firmware directory Path
 # Below macro will be read by uevent and path will
 # be added to search path for firmware loading
@@ -87,7 +86,7 @@ subsystem mem_buf_vm
 /dev/ion                  0664   system     system
 /dev/membuf               0664   system     system
 /dev/mem_buf_vm/*         0444   system     system
-/dev/dma_heap/qcom,*      0444   system     system
+/dev/dma_heap/qcom,*      0664   system     system
 /dev/rtc0                 0660   system     system
 /dev/smd0                 0660   system     system
 /dev/smd4                 0660   system     system
@@ -299,6 +298,7 @@ subsystem mem_buf_vm
 /dev/aud_pasthru_adsp     0660   system     audio
 /dev/msm_audio_ion_cma    0660   system     audio
 /dev/msm_audio_ion        0660   system     audio
+/dev/aud_pasthru_modem    0660   system     audio
 /dev/ttyHSL1              0660   system     system
 /dev/ttyHS1               0660   system     system
 /dev/mdm                  0660   system     radio
