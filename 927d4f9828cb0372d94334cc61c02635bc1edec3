@@ -16,6 +16,24 @@
       "message": "can you remove the conflicts from the commit message? also is this a new compile error in 14?",
       "revId": "927d4f9828cb0372d94334cc61c02635bc1edec3",
       "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "239993bf_06cdc45a",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000429
+      },
+      "writtenOn": "2023-10-16T00:42:43Z",
+      "side": 1,
+      "message": "yup only got error about it on a14, bt_device type is duplicated.",
+      "parentUuid": "23b6105e_4722ecab",
+      "revId": "927d4f9828cb0372d94334cc61c02635bc1edec3",
+      "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
     }
   ]
 }
