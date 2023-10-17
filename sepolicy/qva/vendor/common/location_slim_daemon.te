@@ -1,2 +1,8 @@
 ## send to /dev/socket/location/mq/ - inet-agent-tdp-dl, inet-agent-cs
 allow vendor_location_slim_daemon vendor_location_xtwifi_inetagent:unix_dgram_socket sendto;
+<<<<<<< HEAD   (490b4f common:bt: Inherit board configs before product configs)
+=======
+allow vendor_location_slim_daemon fwk_sensor_service:service_manager find;
+allow vendor_location_slim_daemon vendor_location:unix_stream_socket { read write connectto};
+binder_call(vendor_location_slim_daemon, servicemanager)
+>>>>>>> CHANGE (509cca sepolicy: Fix location denials)
