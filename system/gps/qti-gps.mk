@@ -13,6 +13,7 @@
 # limitations under the License.
 
 PRODUCT_PACKAGES += \
+    liblocdiagiface \
     libloc_net_iface
 
 # Properties

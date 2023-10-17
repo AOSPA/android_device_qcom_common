@@ -30,6 +30,7 @@ PRODUCT_PACKAGES += \
 # Packages
 PRODUCT_PACKAGES += \
     android.hardware.gnss-V2-ndk.vendor \
+    liblocdiagiface \
     libloc_net_iface.vendor
 
 # Permissions

@@ -25,6 +25,7 @@ LOC_HIDL_VERSION := 4.0
 $(call inherit-product-if-exists, hardware/qcom/gps/gps_vendor_product.mk)
 
 PRODUCT_PACKAGES += \
+    liblocdiagiface \
     libloc_net_iface.vendor
 
 # Overlays
