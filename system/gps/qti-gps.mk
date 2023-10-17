@@ -12,6 +12,9 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
+PRODUCT_PACKAGES += \
+    libloc_net_iface
+
 # Properties
 PRODUCT_SYSTEM_EXT_PROPERTIES += \
     persist.backup.ntpServer="0.pool.ntp.org"

@@ -24,6 +24,9 @@ LOC_HIDL_VERSION := 4.0
 # Inherit the GPS HAL.
 $(call inherit-product-if-exists, hardware/qcom/gps/gps_vendor_product.mk)
 
+PRODUCT_PACKAGES += \
+    libloc_net_iface.vendor
+
 # Overlays
 PRODUCT_PACKAGES += \
     QCOMGPSFrameworksOverlay
