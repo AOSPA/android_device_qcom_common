@@ -56,6 +56,13 @@ PRODUCT_VENDOR_PROPERTIES += \
     debug.sf.disable_client_composition_cache=1
 endif
 
+# Properties for <4.19 targets
+# These are already set on 4.19+.
+ifneq (,$(filter 3.18 4.4 4.9 4.14, $(TARGET_KERNEL_VERSION)))
+PRODUCT_VENDOR_PROPERTIES += \
+    debug.sf.latch_unsignaled=1
+endif
+
 # Copy feature_enabler rc only for lahaina on 5.4
 ifeq ($(call is-board-platform-in-list, lahaina),true)
 PRODUCT_COPY_FILES += \
