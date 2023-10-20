@@ -32,6 +32,7 @@ PRODUCT_PACKAGES += \
 ifeq ($(TARGET_USE_AIDL_QTI_BT_AUDIO),true)
 PRODUCT_PACKAGES += \
     android.hardware.bluetooth.audio-impl \
+    android.hardware.bluetooth.audio-V3-ndk.vendor
     vendor.qti.hardware.bluetooth.audio-V1-ndk.vendor
 else
 PRODUCT_PACKAGES += \
