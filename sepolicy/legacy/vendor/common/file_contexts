@@ -347,7 +347,6 @@
 /(vendor|system/vendor)/bin/hw/vendor\.qti\.hardware\.display\.allocator-service   u:object_r:hal_graphics_allocator_default_exec:s0
 /(vendor|system/vendor)/bin/hw/vendor\.qti\.hardware\.display\.composer@1\.0-service   u:object_r:hal_graphics_composer_default_exec:s0
 /(vendor|system/vendor)/bin/hw/vendor\.qti\.hardware\.display\.composer-service   u:object_r:hal_graphics_composer_default_exec:s0
-/(vendor|system/vendor)/bin/hw/vendor\.qti\.hardware\.tui_comm@1\.0-service-qti u:object_r:hal_tui_comm_qti_exec:s0
 /(vendor|system/vendor)/bin/hw/vendor\.qti\.hardware\.soter@1\.0-service u:object_r:hal_soter_qti_exec:s0
 /(vendor|system/vendor)/bin/hw/vendor\.qti\.hardware\.qdutils_disp@1\.0-service-qti u:object_r:hal_qdutils_disp_qti_exec:s0
 /(vendor|system/vendor)/bin/hw/vendor\.qti\.hardware\.sensorscalibrate@1\.0-service u:object_r:hal_sensorscalibrate_qti_default_exec:s0

@@ -167,7 +167,6 @@ hal_client_domain(system_app, vendor_hal_factory_qti);
 
 #secureUI
 hal_client_domain(system_app, hal_qdutils_disp);
-hal_client_domain(system_app, hal_tui_comm);
 hal_client_domain(system_app, hal_sensorscalibrate_qti);
 
 #soter
