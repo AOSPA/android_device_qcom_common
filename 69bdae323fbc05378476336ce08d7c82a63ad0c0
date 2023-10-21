@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "990ce0bc_9785fae8",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000551
+      },
+      "writtenOn": "2023-10-21T08:44:38Z",
+      "side": 1,
+      "message": "Compiles successfully. Duplicate in system/sepolicy.",
+      "revId": "69bdae323fbc05378476336ce08d7c82a63ad0c0",
+      "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
+    }
+  ]
+}
