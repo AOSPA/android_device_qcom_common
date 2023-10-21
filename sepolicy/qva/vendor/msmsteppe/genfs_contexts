@@ -61,4 +61,3 @@
 
 genfscon sysfs /power/disk  u:object_r:sysfs_power_disk:s0
 genfscon sysfs /power/image_size    u:object_r:sysfs_power_imagesize:s0
-genfscon proc /sys/vm/swappiness    u:object_r:proc_swappiness:s0
