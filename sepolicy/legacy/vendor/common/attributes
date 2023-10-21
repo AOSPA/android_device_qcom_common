@@ -90,10 +90,6 @@ attribute hal_qdutils_disp;
 attribute hal_qdutils_disp_client;
 attribute hal_qdutils_disp_server;
 
-attribute hal_tui_comm;
-attribute hal_tui_comm_client;
-attribute hal_tui_comm_server;
-
 attribute hal_soter;
 attribute hal_soter_client;
 attribute hal_soter_server;

@@ -110,7 +110,6 @@ set_prop(tee, vendor_tee_listener_prop)
 hal_client_domain(tee, hal_soter);
 
 #secureUI
-hal_client_domain(tee, hal_tui_comm);
 hal_client_domain(tee, hal_qdutils_disp);
 hal_client_domain(tee, hal_graphics_allocator);
 vndbinder_use(tee);

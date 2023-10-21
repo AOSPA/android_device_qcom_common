@@ -53,7 +53,6 @@ type vendor_hal_factory_qti_hwservice, hwservice_manager_type;
 type hal_wigig_npt_hwservice, hwservice_manager_type;
 type hal_fstman_hwservice, hwservice_manager_type, protected_hwservice;
 type hal_soter_hwservice, hwservice_manager_type;
-type hal_tui_comm_hwservice, hwservice_manager_type;
 type hal_qdutils_disp_hwservice, hwservice_manager_type;
 type hal_sensorscalibrate_qti_hwservice, hwservice_manager_type;
 type hal_scve_hwservice, hwservice_manager_type;
