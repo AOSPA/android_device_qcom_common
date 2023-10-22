@@ -28,6 +28,3 @@
 # spdaemon sysfs
 genfscon sysfs /firmware/devicetree/base/soc/qcom,spmi@c440000/qcom,pm8150b@2/vadc@3100/vph_pwr@83/name u:object_r:vendor_sysfs_spdaemon:s0
 genfscon sysfs /devices/platform/soc/soc:qcom,spss_utils/firmware_name u:object_r:vendor_sysfs_spdaemon:s0
-
-#net sysfs
-genfscon sysfs /devices/platform/soc/1c00000.qcom,pcie/pci0000:00/0000:00:00.0/0000:01:00.0/net u:object_r:sysfs_net:s0
