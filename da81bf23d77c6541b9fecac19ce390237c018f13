@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "e4d8fa63_b7bd8ba5",
+        "filename": "vendor/bt/qti-bt.mk",
+        "patchSetId": 2
+      },
+      "lineNbr": 35,
+      "author": {
+        "id": 1000143
+      },
+      "writtenOn": "2023-10-22T16:58:01Z",
+      "side": 1,
+      "message": "missing \" \\\"",
+      "revId": "da81bf23d77c6541b9fecac19ce390237c018f13",
+      "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
+    }
+  ]
+}
