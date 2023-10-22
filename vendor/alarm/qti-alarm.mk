@@ -9,11 +9,8 @@ PRODUCT_SOONG_NAMESPACES += \
 
 # Init script
 PRODUCT_PACKAGES += \
-    init.qcom.alarm.rc
-
-# Manifest
-DEVICE_MANIFEST_FILE += \
-    $(QCOM_COMMON_PATH)/vendor/alarm/alarm-manifest.xml
+    init.qcom.alarm.rc \
+    vendor.qti.hardware.alarm.xml
 
 # Get non-open-source specific aspects.
 $(call inherit-product-if-exists, vendor/qcom/common/vendor/alarm/alarm-vendor.mk)

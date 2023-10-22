@@ -7,3 +7,10 @@ prebuilt_etc {
     sub_dir: "init",
     vendor: true,
 }
+
+prebuilt_etc_xml {
+    name: "vendor.qti.hardware.alarm.xml",
+    src: "vendor.qti.hardware.alarm.xml",
+    sub_dir: "vintf/manifest",
+    vendor: true,
+}
