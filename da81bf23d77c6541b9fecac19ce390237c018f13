@@ -16,6 +16,24 @@
       "message": "missing \" \\\"",
       "revId": "da81bf23d77c6541b9fecac19ce390237c018f13",
       "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "96b69280_aec39d6a",
+        "filename": "vendor/bt/qti-bt.mk",
+        "patchSetId": 2
+      },
+      "lineNbr": 35,
+      "author": {
+        "id": 1000143
+      },
+      "writtenOn": "2023-10-23T08:53:54Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "e4d8fa63_b7bd8ba5",
+      "revId": "da81bf23d77c6541b9fecac19ce390237c018f13",
+      "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
     }
   ]
 }
