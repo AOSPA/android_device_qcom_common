@@ -51,5 +51,8 @@ PRODUCT_SYSTEM_EXT_PROPERTIES += \
 PRODUCT_COPY_FILES += \
     device/qcom/common/vendor/media/init.qti.media.sh:$(TARGET_COPY_OUT_VENDOR)/bin/init.qti.media.sh
 
+# OMX
+TARGET_SUPPORTS_OMX_SERVICE := true
+
 # Get non-open-source specific aspects.
 $(call inherit-product-if-exists, vendor/qcom/common/vendor/media/media-vendor.mk)
