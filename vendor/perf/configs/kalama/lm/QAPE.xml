@@ -52,7 +52,7 @@
             </LOW_CPU_UTIL>
             <!-- SCHED_THREAD_PIPELINE -->
             <THREAD_PIPELINE>
-                0x42C30000,0,0x40CF8200,0x81B320
+                0x42C30000,0
             </THREAD_PIPELINE>
         </Profile>
     </Profiles>
