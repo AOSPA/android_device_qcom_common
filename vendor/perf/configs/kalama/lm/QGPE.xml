@@ -17,7 +17,7 @@
     Follows "Data goes into elements, metadata goes into attributes"
  -->
 
-<Feature>
+ <Feature>
     <Name>APEngine</Name>
     <Libname>libapengine.so</Libname>
     <Configs>
@@ -28,7 +28,7 @@
         <FPS_30_THRESHOLD>0.6, 1.0, 0.4</FPS_30_THRESHOLD>
         <FPS_35_THRESHOLD>0.6, 1.0, 0.4</FPS_35_THRESHOLD>
         <FPS_40_THRESHOLD>0.6, 1.0, 0.4</FPS_40_THRESHOLD>
-        <FPS_60_THRESHOLD>0.6, 1.0, 0.4</FPS_60_THRESHOLD>
+        <FPS_60_THRESHOLD>0.6, 2.0, 0.4</FPS_60_THRESHOLD>
         <FPS_90_THRESHOLD>2.0, 5.0, 1.0</FPS_90_THRESHOLD>
         <FPS_120_THRESHOLD>2.0, 5.0, 1.0</FPS_120_THRESHOLD>
         <FPS_144_THRESHOLD>2.0, 5.0, 1.0</FPS_144_THRESHOLD>
@@ -62,7 +62,7 @@
             <!-- MPCTLV3_SCHEDUTIL_DOWN_RATE_LIMIT_CLUSTER_BIG, 19000, MPCTLV3_SCHEDUTIL_DOWN_RATE_LIMIT_CLUSTER_LITTLE, 19000 -->
             <ADAPTIVE_PROFILE0>
                 0x40C78000, 0, 0x40C7C000, 0,
-                0x41448000, 19000, 0x41448100, 19000
+               
             </ADAPTIVE_PROFILE0>
             <!-- Agressive Profile - Junk detected -->
             <!-- SCHED_MIN_TASK_UTIL_FOR_COLOCATION, 0, SCHED_MIN_TASK_UTIL_FOR_BOOST, 0 -->
@@ -71,19 +71,15 @@
             <!-- MIN_FREQ_CLUSTER_PRIME_CORE_0, 1000, MIN_FREQ_CLUSTER_BIG_CORE_0, 1000, MIN_FREQ_CLUSTER_LITTLE_CORE_0, 1000 -->
             <!-- TO BE REPLACED: SCHED_BUSY_HYSTERSIS_CPU_MASK, 0xf0, LPM_BIAS_HYST, 99-->
             <ADAPTIVE_PROFILE1>
-                0x40C78000, 0, 0x40C7C000, 0,
-                0x41448000, 79000, 0x41448100, 79000,
-                0x41844000, 30, 0x4303C000, 90, 0x43400000, 9000,
-                0x40800200, 1000, 0x40800000, 1000, 0x40800100, 1000,
-                0x40C74000, 0xf0, 0x40408000, 99
+                0x40C78000, 0, 0x40C7C000, 0
             </ADAPTIVE_PROFILE1>
             <!-- MIN_FREQ_CLUSTER_PRIME_CORE_0 1651, MIN_FREQ_CLUSTER_BIG_CORE_0 1651 -->
             <PREDICTIVE_PROFILE1>
-                0x40800200,1651,0x40800000,1651
+                0x40800200,1700,0x40800000,1700
             </PREDICTIVE_PROFILE1>
             <!-- MIN_FREQ_CLUSTER_LITTLE_CORE_0 1324 -->
             <PREDICTIVE_PROFILE2>
-                0x40800100,1324
+                0x40800100,1500
             </PREDICTIVE_PROFILE2>
             <!-- GPU MIN_FREQUENCY resource opcode,value-->
             <PREDICTIVE_PROFILE3>
@@ -301,5 +297,6 @@
         <App>com.kiloo.subwaysurf</App>
         <App>com.imangi.templerun2</App>
         <App>com.ogien.trainsim</App>
+        <App>com.phonetest.stresstest</App>
     </IgnoredApps>
 </Feature>
