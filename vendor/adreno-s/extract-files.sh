@@ -24,7 +24,7 @@ fi
 set -e
 
 # Required!
-export COMPONENT=adreno
+export COMPONENT=adreno-s
 export VENDOR=qcom/common/vendor
 
 "../extract-files.sh" "$@"

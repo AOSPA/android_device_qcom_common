@@ -18,7 +18,7 @@
 set -e
 
 # Required!
-export COMPONENT=adreno
+export COMPONENT=adreno-r
 export VENDOR=qcom/common/vendor
 
 "../setup-makefiles.sh" "$@"
