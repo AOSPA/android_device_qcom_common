@@ -93,7 +93,9 @@
             <Level Val="900000" Pos="0"/>
         </Opcode>
         <Opcode Resource="0x43488000" Name="DDR_LAT_MIN_FREQ_GOLD" Supported="Yes">
-            <Level Val="2092000" Pos="0"/>
+            <Level Val="1017000" Pos="0"/>
+            <Level Val="1555000" Pos="1"/>
+            <Level Val="2092000" Pos="2"/>
         </Opcode>
     </Group>
     <Group ActionCat="Gpu">
