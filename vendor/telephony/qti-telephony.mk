@@ -46,6 +46,16 @@ PRODUCT_PACKAGES += \
     android.system.net.netd@1.1.vendor \
     vendor.qti.hardware.systemhelperaidl-V1-ndk.vendor
 
+PRODUCT_PACKAGES += \
+    android.hardware.radio.config-V1-ndk.vendor \
+    android.hardware.radio.data-V1-ndk.vendor \
+    android.hardware.radio.messaging-V1-ndk.vendor \
+    android.hardware.radio.modem-V1-ndk.vendor \
+    android.hardware.radio.network-V1-ndk.vendor \
+    android.hardware.radio.sim-V1-ndk.vendor \
+    android.hardware.radio.voice-V1-ndk.vendor \
+    android.hardware.radio-V1-ndk.vendor
+
 ifneq (,$(filter 3.18 4.4 4.9 4.14 4.19 5.4, $(TARGET_KERNEL_VERSION)))
 PRODUCT_VENDOR_PROPERTIES += \
     persist.vendor.radio.rat_on=combine
