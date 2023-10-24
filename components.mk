@@ -126,12 +126,7 @@ endif
 
 ifneq (,$(filter perf, $(TARGET_COMMON_QTI_COMPONENTS)))
   include $(QCOM_COMMON_PATH)/system/perf/qti-perf.mk
-  ifeq ($(call is-board-platform-in-list,$(5_10_FAMILY) $(5_15_FAMILY)),true)
-    TARGET_PERF_COMPONENT_VARIANT ?= perf
-  else
-    TARGET_PERF_COMPONENT_VARIANT ?= perf-legacy
-  endif
-  include $(QCOM_COMMON_PATH)/vendor/$(TARGET_PERF_COMPONENT_VARIANT)/qti-$(TARGET_PERF_COMPONENT_VARIANT).mk
+  include $(QCOM_COMMON_PATH)/vendor/perf/qti-perf.mk
 endif
 
 ifneq (,$(filter qseecomd, $(TARGET_COMMON_QTI_COMPONENTS)))
