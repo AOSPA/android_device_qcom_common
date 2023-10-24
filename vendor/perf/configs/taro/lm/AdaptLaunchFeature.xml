@@ -33,6 +33,13 @@
         <Cluster1>0,690,80,1600,120,2000</Cluster1>
         <Cluster2>0,690,80,1600,120,2000</Cluster2>
     </Configs>
+    <Configs target="ukee">
+        <Enable>1</Enable>
+        <Cluster>0,1,2</Cluster>
+        <Cluster0>0,800,20,990,40,1500</Cluster0>
+        <Cluster1>0,690,80,1600,120,2000</Cluster1>
+        <Cluster2>0,690,80,1600,120,2000</Cluster2>
+    </Configs>
     <Configs target="diwali">
         <Enable>0</Enable>
         <Cluster>0,1,2</Cluster>
