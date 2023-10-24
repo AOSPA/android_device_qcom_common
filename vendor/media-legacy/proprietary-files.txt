@@ -35,8 +35,6 @@ vendor/bin/mm-vidc-omx-test
 vendor/lib/libfastcrc.so
 vendor/lib/libstreamparser.so
 vendor/lib/libswvdec.so
-vendor/lib/libvideooptfeature.so
 vendor/lib/libvideoutils.so
 -vendor/lib64/libMpeg4SwEncoder.so
 vendor/lib64/libswvdec.so
-vendor/lib64/libvideooptfeature.so
