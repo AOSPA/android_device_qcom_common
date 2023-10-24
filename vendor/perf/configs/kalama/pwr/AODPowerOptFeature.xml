@@ -1,0 +1,27 @@
+<!--
+/******************************************************************************
+  @file    AODPowerOptFeature.xml
+  @brief   AOD Power Optimization feature xml
+
+  DESCRIPTION
+      Each feature has an xml file to define the feature components
+
+  ===========================================================================
+  Copyright (c) 2022 Qualcomm Technologies, Inc.
+  All Rights Reserved.
+  Confidential and Proprietary - Qualcomm Technologies, Inc.
+  ===========================================================================
+******************************************************************************/
+-->
+<Feature>
+    <Name>AODPowerOptFeature</Name>
+    <Libname>libaodoptfeature.so</Libname>
+    <Configs>
+        <SAMPLE_CALL_INTERVAL_MSEC>1000</SAMPLE_CALL_INTERVAL_MSEC>
+    </Configs>
+    <Profiles>
+        <Profile>
+            <AODprofile>0x42C28000, 0x1, 0x40800000, 0XA</AODprofile>
+        </Profile>
+    </Profiles>
+</Feature>
