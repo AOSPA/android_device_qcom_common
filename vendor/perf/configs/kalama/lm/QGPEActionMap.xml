@@ -36,12 +36,12 @@
         <Opcode Resource="0x40800200" Name="MIN_FREQ_CLUSTER_PRIME_CORE_0"  Target="kalama" Supported="Yes">
             <Level Val="1000"  Pos="0"/>
             <Level Val="1651" Pos="1"/>
-            <Level Val="2246" Pos="2"/>
+            <Level Val="864" Pos="2"/>
         </Opcode>
         <Opcode Resource="0x40800000" Name="MIN_FREQ_CLUSTER_BIG_CORE_0"  Target="kalama" Supported="Yes">
             <Level Val="1000"  Pos="0"/>
             <Level Val="1651" Pos="1"/>
-            <Level Val="2246" Pos="2"/>
+            <Level Val="614" Pos="2"/>
         </Opcode>
         <Opcode Resource="0x40800100" Name="MIN_FREQ_CLUSTER_LITTLE_CORE_0"  Target="kalama" Supported="Yes">
             <Level Val="1000"  Pos="0"/>
