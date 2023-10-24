@@ -37,7 +37,9 @@ endif
 # QTI Common Components
 
 ifneq (,$(filter adreno, $(TARGET_COMMON_QTI_COMPONENTS)))
-  ifeq ($(call is-board-platform-in-list,$(5_10_FAMILY)),true)
+  ifeq ($(call is-board-platform-in-list,$(5_15_FAMILY)),true)
+    TARGET_ADRENO_COMPONENT_VARIANT ?= adreno-t
+  else ifeq ($(call is-board-platform-in-list,$(5_10_FAMILY)),true)
     TARGET_ADRENO_COMPONENT_VARIANT ?= adreno-s
   else ifeq ($(call is-board-platform-in-list,$(4_14_FAMILY) $(4_19_FAMILY) $(5_4_FAMILY)),true)
     TARGET_ADRENO_COMPONENT_VARIANT ?= adreno-r
