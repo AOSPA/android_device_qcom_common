@@ -1,2 +1,5 @@
 # allow hal_wifi_default sys_module capability
 allow hal_wifi_default self:capability sys_module;
+
+# allow hal_wifi_default to search tombstone
+allow hal_wifi_default vendor_tombstone_data_file:dir search;
