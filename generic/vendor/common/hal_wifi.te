@@ -1,0 +1,1 @@
+allow hal_wifi_default vendor_tombstone_data_file search;
