@@ -16,6 +16,24 @@
       "message": "doesn\u0027t match the selinux denials and label the proc path properly",
       "revId": "547110260c9aa5012d731f9f329700fda2da1d57",
       "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "8248ab36_59317278",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 3
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000498
+      },
+      "writtenOn": "2023-10-27T17:08:19Z",
+      "side": 1,
+      "message": "and I\u0027m pretty sure we don\u0027t have any reason to let perf Hal read su dir",
+      "parentUuid": "ea0dbcd1_6d5461d5",
+      "revId": "547110260c9aa5012d731f9f329700fda2da1d57",
+      "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
     }
   ]
 }
