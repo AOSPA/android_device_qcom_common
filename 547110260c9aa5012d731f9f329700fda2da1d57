@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "ea0dbcd1_6d5461d5",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 3
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000498
+      },
+      "writtenOn": "2023-10-27T17:06:54Z",
+      "side": 1,
+      "message": "doesn\u0027t match the selinux denials and label the proc path properly",
+      "revId": "547110260c9aa5012d731f9f329700fda2da1d57",
+      "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
+    }
+  ]
+}
