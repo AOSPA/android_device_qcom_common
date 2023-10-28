@@ -120,6 +120,23 @@
       "message": "nah, bengal being inferior was never the point. bengal being the only minority is the point here. if it breaks boot in taro or waipio, then revert it because it\u0027s breaking boot across platforms. just xiaomi bengal not booting isn\u0027t the right thing to get this reverted. moreover, if for your device if you can just add it to your device tree, it wouldn\u0027t hurt. instead of re-bloating every other device which uses this component. and it\u0027s never about anyone using the device or not, it\u0027s always about opinions and reviews and that\u0027s how gerrit is here.",
       "revId": "f44a3165a79adbdd7fcc8edf25542962a0ca56dc",
       "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "730fdba2_5b9e3107",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000905
+      },
+      "writtenOn": "2023-10-28T03:18:25Z",
+      "side": 1,
+      "message": "this also break boot on Lenovo Legion Y70(halo) which it’s taro with 5.10",
+      "revId": "f44a3165a79adbdd7fcc8edf25542962a0ca56dc",
+      "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
     }
   ]
 }
