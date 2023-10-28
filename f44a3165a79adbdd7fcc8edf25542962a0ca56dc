@@ -137,6 +137,23 @@
       "message": "this also break boot on Lenovo Legion Y70(halo) which it’s taro with 5.10",
       "revId": "f44a3165a79adbdd7fcc8edf25542962a0ca56dc",
       "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "ee272539_2ef03488",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000840
+      },
+      "writtenOn": "2023-10-28T03:31:57Z",
+      "side": 1,
+      "message": "After dropping 32-bit adreno libs, ASUS Zenfone 9 and Lenovo Legion Y70 (both cape) will crash when inheriting core_64_bit.mk:\n```\nAbort message: \u0027couldn\u0027t find an OpenGL ES implementation, make sure you set ro.hardware.egl or ro.board.platform\u0027\n```\nI didn\u0027t test the core_64_bit_only.mk, but since the SoC supports 32-bit, there\u0027s no reason to give 64-bit only support, at least in China there are still some apps still released with only 32-bit apps.",
+      "revId": "f44a3165a79adbdd7fcc8edf25542962a0ca56dc",
+      "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
     }
   ]
 }
