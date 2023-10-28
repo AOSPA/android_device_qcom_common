@@ -22,6 +22,13 @@ TARGET_DISABLE_C2_CODEC ?= true
 endif
 
 ifeq ($(TARGET_DISABLE_C2_CODEC),true)
+# OMX
+PRODUCT_PACKAGES += \
+    android.hardware.media.omx@1.0-impl \
+    android.hardware.media.omx@1.0-service \
+    libstagefright_omx.vendor
+
+# Disable C2 propertier
 PRODUCT_ODM_PROPERTIES += \
     debug.stagefright.ccodec=0
 endif
