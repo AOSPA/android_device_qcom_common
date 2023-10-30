@@ -25,6 +25,11 @@ TARGET_USES_RRO := true
 AUDIO_FEATURE_ENABLED_DYNAMIC_LOG := false
 BOARD_SUPPORTS_OPENSOURCE_STHAL := false
 
+# Flags for <5.10 targets
+ifneq (,$(filter 3.18 4.4 4.9 4.14 4.19 5.4, $(TARGET_KERNEL_VERSION)))
+TARGET_LOOP_COMPRESS_READ := true
+endif
+
 # OMX Packages
 PRODUCT_PACKAGES += \
     libOmxAacEnc \
