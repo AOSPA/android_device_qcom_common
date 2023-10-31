@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 
 <!--
-/* Copyright (c) 2017, 2021 Qualcomm Technologies, Inc.
+/* Copyright (c) 2017, 2021-2023 Qualcomm Technologies, Inc.
  * All Rights Reserved.
  * Confidential and Proprietary - Qualcomm Technologies, Inc.
 -->
@@ -29,11 +29,13 @@
     <!--Vertical Scroll boost-->
         <!-- CPUBOOST_MIN_FREQ BIG Core resource opcode, value-->
         <!-- SCHED_PREFER_SPREAD resource opcode, value -->
+        <!-- CPUBOOST_MIN_FREQ BIG Core resource opcode, value-->
+        <!-- SCHED_WINDOW_TICKS_UPDATE -->
 
         <!-- Type="1", Vertical Scroll boost -->
         <Config
             Id="0x00001080" Type="1" Enable="true" Target="monaco"
-            Resources="0x40800000, 0x514, 0x40CA8000, 0x1" />
+            Resources="0x40800000, 0x514, 0x40CA8000, 0x1, 0x41000000, 0x2, 0x40CA4000, 0x2" />
 
     <!--PackageInstall boost-->
         <!-- SCHED_PREFER_SPREAD resource opcode, value -->
@@ -41,6 +43,14 @@
         <Config
             Id="0x00001088" Enable="true" Target="monaco"
             Resources="0x40CA8000, 0x1, 0x40800000, 0x5DC" />
+
+    <!--Animation boost -->
+        <!-- CPUBOOST_MIN_FREQ BIG Core resource opcode, value -->
+        <!-- CLUSTR_0_CPUS_ON resource opcode, value-->
+        <!-- SCHED_WINDOW_TICKS_UPDATE -->
+        <Config
+            Id="0x00001083" Enable="true" Timeout="50" Target="monaco"
+            Resources="0x40800000, 0x514, 0x41000000, 0x2,  0x40CA4000, 0x2" />
 
     <!--Display on Resource -->
         <!-- Display on resource opcode, value -->

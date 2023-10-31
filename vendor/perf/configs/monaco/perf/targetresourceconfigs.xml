@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 
 <!--
- * Copyright (c) 2017-2018, 2021 Qualcomm Technologies, Inc.
+ * Copyright (c) 2017-2018, 2021-2023 Qualcomm Technologies, Inc.
  * All Rights Reserved.
  * Confidential and Proprietary - Qualcomm Technologies, Inc.
 -->
@@ -37,6 +37,7 @@ as anyway perflock calls of these resources would fail. -->
         <Config MajorValue="0x3" MinorValue="0x13" Supported="no" /> <!-- sched_set_freq_aggr -->
         <Config MajorValue="0x3" MinorValue="0x14" Supported="no" /> <!-- sched_enable_thread_grouping -->
         <Config MajorValue="0x3" MinorValue="0x17" Supported="no" /> <!-- sched_freq_aggr_threshold -->
+        <Config MajorValue="0x3" MinorValue="0x29" Node="/proc/sys/walt/sched_ravg_window_nr_ticks" />
 
         <Config MajorValue="0x6" MinorValue="0x0" Supported="no" />
         <Config MajorValue="0x6" MinorValue="0x1" Supported="no" />
