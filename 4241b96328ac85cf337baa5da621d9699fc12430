@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "19ab79ea_2c1d9002",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 4
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000143
+      },
+      "writtenOn": "2023-10-31T16:28:49Z",
+      "side": 1,
+      "message": "Wouldnt we want this permission as well?\nframeworks/native/data/etc/android.hardware.vulkan.version-1_3.xml",
+      "revId": "4241b96328ac85cf337baa5da621d9699fc12430",
+      "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
+    }
+  ]
+}
