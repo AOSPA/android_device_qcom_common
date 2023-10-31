@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!--
+/* Copyright (c) 2022 Qualcomm Technologies, Inc.
+ * All Rights Reserved.
+ * Confidential and Proprietary - Qualcomm Technologies, Inc.
+ */
+-->
+
+<ResourceConfigs>
+    <PerfResources>
+        <SysNode Idx="0x0" Supported="no" />
+        <SysNode Idx="0x1" Supported="no" />
+        <SysNode Idx="0x4" Supported="no" />
+        <SysNode Idx="0x5" Supported="no" />
+        <SysNode Idx="0x6" Supported="no" />
+        <SysNode Idx="0x7" Supported="no" />
+        <SysNode Idx="0x8" Supported="no" />
+        <SysNode Idx="0xA" Supported="no" />
+        <SysNode Idx="0x16" Supported="no" />
+        <SysNode Idx="0x17" Supported="no" />
+        <SysNode Idx="0x18" Supported="no" />
+        <SysNode Idx="0x19" Supported="no" />
+        <SysNode Idx="0x1A" Supported="no" />
+        <SysNode Idx="0x1B" Supported="no" />
+    </PerfResources>
+</ResourceConfigs>

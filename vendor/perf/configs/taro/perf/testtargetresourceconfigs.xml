@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!--
+ * Copyright (c) 2022 Qualcomm Technologies, Inc.
+ * All Rights Reserved.
+ * Confidential and Proprietary - Qualcomm Technologies, Inc.
+-->
+
+<!-- This is a target specific resource config file which can be
+used to overwrite the node paths mentioned in common resources file
+and also to modify the Supported field information. -->
+
+<!-- This file supports only Config tag, which has the following fields
+* MajorValue and MinorValue, both are required to uniquely
+identify the resource.
+* Node, the new node path to overwrite the already existing path
+of commonresourceconfigs.xml file.
+* Supported, to indicate whether the resource is supported or not.
+* For each config tag, either of Node or Supported fields need
+to be mentioned.
+NOTE - It is not Mandatory to write all the resources which are not supported,
+as anyway perflock calls of these resources would fail.
+
+Exception tag is used to pass the exception why ths node cannot be tested.
+Cluster tag is used when node in resource xml is cluster specific(put logical cluster here).
+Cluster 0=> Big
+Cluster 1=> Little
+Cluster 2=> Prime
+
+| RVal | Wval | Reason
+| Yes  | Yes  | Different Value read and write
+| No   | Yes  | Read Val Same as write Value
+| Blank| Blank| Unsupported Node
+
+(Yes) => Tag is Added
+(No) => Tag is not Added
+(Blank) => Tag is added but written value is blank (eg: WVal="").
+-->
+
+
+<ResourceConfigs>
+    <PerfResources>
+
+        <Config MajorValue="0x1" MinorValue="0x1" WVal="" RVal="" /> <!--  toggle_l2_pc_perf -->
+        <Config MajorValue="0x1" MinorValue="0x2" WVal="0x5" RVal="5000000" />
+        <Config MajorValue="0x1" MinorValue="0x3" WVal="" RVal="" /> <!-- lpm_ref_stddev -->
+        <Config MajorValue="0x1" MinorValue="0x4" WVal="" RVal="" /> <!-- lpm_tmr_add -->
+
+        <Config MajorValue="0x2" MinorValue="0x0" Cluster="1" WVal="960" RVal="960000" /> <!-- cpu_min_freq -->
+        <Config MajorValue="0x2" MinorValue="0x1" Cluster="1" WVal="1478" RVal="1478400" /> <!-- cpu_max_freq -->
+        <Config MajorValue="0x3" MinorValue="0x0" WVal="2" RVal="2" />
+        <Config MajorValue="0x3" MinorValue="0x3" WVal="" RVal="" /> <!-- sched_small_task -->
+        <Config MajorValue="0x3" MinorValue="0x6" WVal="" RVal="" /> <!-- sched_init_task_load -->
+        <Config MajorValue="0x3" MinorValue="0x7" WVal="" RVal="" /> <!-- sched_upmigrate -->
+        <Config MajorValue="0x3" MinorValue="0x8" WVal="" RVal="" /> <!-- sched_downmigrate -->
+        <Config MajorValue="0x3" MinorValue="0xB" WVal="" RVal="" /> <!-- sched_spill_nr_run -->
+        <Config MajorValue="0x3" MinorValue="0xC" WVal="" RVal="" /> <!-- sched_static_cpu_pwr_cost -->
+        <Config MajorValue="0x3" MinorValue="0xD" WVal="" RVal="" /> <!-- sched_restrict_cluster_spill -->
+        <Config MajorValue="0x3" MinorValue="0x13" WVal="" RVal="" /> <!-- sched_set_freq_aggr -->
+        <Config MajorValue="0x3" MinorValue="0x14" WVal="" RVal="" /> <!-- sched_enable_thread_grouping -->
+        <Config MajorValue="0x3" MinorValue="0x15" WVal="" RVal="" /> <!-- sched_group_upmigrate -->
+        <Config MajorValue="0x3" MinorValue="0x16" WVal="" RVal="" /> <!-- sched_group_downmigrate -->
+        <Config MajorValue="0x3" MinorValue="0x17" WVal="" RVal="" /> <!-- sched_freq_aggr_threshold -->
+        <Config MajorValue="0x3" MinorValue="0x1A" WVal="255" RVal="255" />
+
+        <Config MajorValue="0x3" MinorValue="0x1D" WVal="0xF4" RVal="244" />
+        <Config MajorValue="0x3" MinorValue="0x1E" WVal="0xAF" RVal="175" />
+        <Config MajorValue="0x3" MinorValue="0x1F" WVal="0x311" RVal="785" />
+        <Config MajorValue="0x3" MinorValue="0x20" WVal="0x1" RVal="3" />
+        <Config MajorValue="0x3" MinorValue="0x21" WVal="1" RVal="1" />
+        <Config MajorValue="0x3" MinorValue="0x22" WVal="" RVal="" /> <!-- sched_task_unfilter_nr_windows -->
+        <Config MajorValue="0x3" MinorValue="0x23" WVal="60" RVal="60" />
+        <Config MajorValue="0x3" MinorValue="0x24" WVal="0x42" RVal="66" />
+        <Config MajorValue="0x3" MinorValue="0x26" WVal="0x3" RVal="3" />   <!-- Same .........................................-->
+        <Config MajorValue="0x3" MinorValue="0x27" WVal="0x3E1" RVal="993" />
+        <Config MajorValue="0x3" MinorValue="0x28" WVal="0" RVal="0" />
+        <Config MajorValue="0x3" MinorValue="0x29" WVal="8" />   <!-- Same .........................................-->
+        <Config MajorValue="0x3" MinorValue="0x2A" WVal="" RVal="" /> <!-- sched_prefer_spread -->
+        <Config MajorValue="0x3" MinorValue="0x32" WVal="119" RVal="119" />
+        <Config MajorValue="0x3" MinorValue="0x33" WVal="0x0" RVal="0" />
+        <Config MajorValue="0x3" MinorValue="0x34" Exception="Need to pass pid to test it" />
+        <Config MajorValue="0x3" MinorValue="0x36" WVal="0x2D" RVal="45" />
+        <Config MajorValue="0x3" MinorValue="0x37" WVal="" RVal="" /> <!-- Enabled till Kernel 4.19 -->
+        <Config MajorValue="0x3" MinorValue="0x38" />
+        <Config MajorValue="0x3" MinorValue="0x39" WVal="" RVal="" /> <!-- Enabled till Kernel 4.19 -->
+        <Config MajorValue="0x3" MinorValue="0x3D" />
+
+        <Config MajorValue="0x5" MinorValue="0xF" Cluster="1" WVal="1478" RVal="1478400" Target="taro" />
+        <Config MajorValue="0x5" MinorValue="0xF" Cluster="1" WVal="1478" RVal="1555200" Target="diwali" />
+        <Config MajorValue="0x5" MinorValue="0x10" Cluster="1" WVal="0x27" RVal="39" />
+        <Config MajorValue="0x5" MinorValue="0x11" Cluster="1" WVal="0x0" RVal="0" />
+        <Config MajorValue="0x5" MinorValue="0x12" Cluster="1" WVal="0xFA" />
+        <Config MajorValue="0x5" MinorValue="0x13" Cluster="1" WVal="0xBB801" />
+
+         <!-- CPU_LLCC_BW major old opcodes unsupported-->
+        <Config MajorValue="0x6" MinorValue="0x0" WVal="" RVal="" />
+        <Config MajorValue="0x6" MinorValue="0x1" WVal="" RVal="" />
+        <Config MajorValue="0x6" MinorValue="0x2" WVal="" RVal="" />
+        <Config MajorValue="0x6" MinorValue="0x3" WVal="" RVal="" />
+        <Config MajorValue="0x6" MinorValue="0x4" WVal="" RVal="" />
+        <Config MajorValue="0x6" MinorValue="0x5" WVal="" RVal="" />
+        <Config MajorValue="0x6" MinorValue="0x6" WVal="" RVal="" />
+        <Config MajorValue="0x6" MinorValue="0x7" WVal="" RVal="" />
+        <Config MajorValue="0x6" MinorValue="0x8" WVal="" RVal="" />
+        <Config MajorValue="0x6" MinorValue="0x9" WVal="" RVal="" />
+
+        <!-- CPU_LLCC_BW major new opcodes-->
+        <Config MajorValue="0x6" MinorValue="0xA" WVal="" RVal="" />
+        <Config MajorValue="0x6" MinorValue="0xB" WVal="0x1A2" RVal="418" />
+        <Config MajorValue="0x6" MinorValue="0xD" WVal="0x151" RVal="337" />
+        <Config MajorValue="0x6" MinorValue="0xE" Exception="Resource is direcory to LLCC HYST_OPT nodes" />
+        <Config MajorValue="0x6" MinorValue="0xF" WVal="0x26" RVal="38" />
+        <Config MajorValue="0x6" MinorValue="0x10" WVal="0xAF" RVal="175" />
+        <Config MajorValue="0x6" MinorValue="0x11" WVal="300031" RVal="300031" />
+        <Config MajorValue="0x6" MinorValue="0x12" WVal="806088" RVAL = "806088" Target="taro" />
+        <Config MajorValue="0x6" MinorValue="0x12" WVal="1066000" RVAL = "1066000" Target="diwali" />
+
+        <Config MajorValue="0xA" MinorValue="0x2" WVal="0" RVal="0" Target="diwali" />
+        <Config MajorValue="0xA" MinorValue="0x4" WVal="0x30C1B083" RVal="230000000" Target="diwali" />
+
+        <Config MajorValue="0xB" MinorValue="0x2" Exception="Node is INPUT_BOOST_RESET for all clusters" />
+        <Config MajorValue="0xB" MinorValue="0x6" WVal="" RVal="" /><!-- disable_ppr -->
+        <Config MajorValue="0xB" MinorValue="0xC" WVal="0x1" RVal="4" />
+
+        <!-- LLCC_DDR_BW old opcodes unsupported-->
+        <Config MajorValue="0xC" MinorValue="0x0" WVal="" RVal="" />
+        <Config MajorValue="0xC" MinorValue="0x1" WVal="" RVal="" />
+        <Config MajorValue="0xC" MinorValue="0x2" WVal="" RVal="" />
+        <Config MajorValue="0xC" MinorValue="0x3" WVal="" RVal="" />
+        <Config MajorValue="0xC" MinorValue="0x4" WVal="" RVal="" />
+         <!-- LLCC_DDR_BW new opcodes-->
+        <Config MajorValue="0xC" MinorValue="0x5" WVal="0x1EA" RVal="490" />
+        <Config MajorValue="0xC" MinorValue="0x6" WVal="" RVal="" /> <!-- llcc ddr max freq -->
+        <Config MajorValue="0xC" MinorValue="0x7" WVal="0x54" RVal="84" />
+        <Config MajorValue="0xC" MinorValue="0x8" WVal="0x18F" RVal="399" />
+        <Config MajorValue="0xC" MinorValue="0x9" Exception="Resource is direcory to DDR HYST_OPT nodes" />
+        <Config MajorValue="0xC" MinorValue="0xA" WVal="" RVal="" />
+        <Config MajorValue="0xC" MinorValue="0xB" WVal="" RVal="" />
+        <Config MajorValue="0xC" MinorValue="0xC" WVal="0x1AE" RVal="430" />
+        <Config MajorValue="0xC" MinorValue="0xD" WVal="0x25" RVal="37" />
+        <Config MajorValue="0xC" MinorValue="0xE" WVal="0x4EA" RVal="1258" />
+        <Config MajorValue="0xC" MinorValue="0xF" WVal="0x858FF" RVal="547071" />
+        <Config MajorValue="0xC" MinorValue="0x10" WVal="0x1FEABF3" RVal="3196000" Target="taro" />
+        <Config MajorValue="0xC" MinorValue="0x10" WVal="2092000" RVal="2092000" Target="diwali" />
+
+        <Config MajorValue="0xD" MinorValue="0x0" />
+        <Config MajorValue="0xD" MinorValue="0x1" WVal="0xA350" RVal="41808" />
+        <Config MajorValue="0xD" MinorValue="0x2" WVal="0xC35" RVal="3125" />
+        <Config MajorValue="0xD" MinorValue="0x3" WVal="0x48" RVal="72" />
+        <Config MajorValue="0xD" MinorValue="0x4" WVal="0x39" RVal="57" />
+        <Config MajorValue="0xD" MinorValue="0x5" WVal="" RVal="" />
+        <Config MajorValue="0xD" MinorValue="0x6" WVal="" RVal="" />
+        <Config MajorValue="0xD" MinorValue="0x7" WVal="" RVal="" />
+        <Config MajorValue="0xD" MinorValue="0x8" WVal="0x1FEA" RVal="8170" />
+        <Config MajorValue="0xD" MinorValue="0x9" WVal="0x1EAB" RVal="7851" />
+        <Config MajorValue="0xD" MinorValue="0xA" WVal="0x33" RVal="51" />
+        <Config MajorValue="0xD" MinorValue="0xB" WVal="0x2B" RVal="43" />
+        <Config MajorValue="0xD" MinorValue="0xC" WVal="" RVal="" />
+        <Config MajorValue="0xD" MinorValue="0xD" WVal="0xFAE" RVal="4014" />
+        <Config MajorValue="0xD" MinorValue="0xE" WVal="0xABC" RVal="2748" />
+        <Config MajorValue="0xD" MinorValue="0xF" WVal="0x18" RVal="24" />
+        <Config MajorValue="0xD" MinorValue="0x10" WVal="0x53" RVal="83" />
+        <Config MajorValue="0xD" MinorValue="0x16" WVal="0x1149FF" RVal="1133055" />
+        <Config MajorValue="0xD" MinorValue="0x17" WVal="0x49ABC" RVal="301756" />
+        <Config MajorValue="0xD" MinorValue="0x18" WVal="768000" RVal="768000" />
+        <Config MajorValue="0xD" MinorValue="0x20" WVal="825600" RVal="825600" />
+
+    </PerfResources>
+</ResourceConfigs>
