@@ -33,6 +33,23 @@
       "message": "And this prop?\nro.gfx.driver.1\u003dcom.qualcomm.qti.gpudrivers.kalama.api33",
       "revId": "4241b96328ac85cf337baa5da621d9699fc12430",
       "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "129580d3_82a1d6ba",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 4
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000143
+      },
+      "writtenOn": "2023-10-31T16:33:46Z",
+      "side": 1,
+      "message": "And this driver?\nvendor/app/com.qualcomm.qti.gpudrivers.kalama.api33/com.qualcomm.qti.gpudrivers.kalama.api33.apk",
+      "revId": "4241b96328ac85cf337baa5da621d9699fc12430",
+      "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
     }
   ]
 }
