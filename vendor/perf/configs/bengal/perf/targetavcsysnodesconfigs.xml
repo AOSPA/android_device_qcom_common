@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!--
+/* Copyright (c) 2022 Qualcomm Technologies, Inc.
+ * All Rights Reserved.
+ * Confidential and Proprietary - Qualcomm Technologies, Inc.
+ */
+-->
+
+<!--__________________________________Example format_______________________________________________
+<SysNode Idx="0x8" Perm="6" WVal="10"/>
+    Perm: The permission to check on the above Node.
+          r  w  x
+          1  0  0   = 4
+          1  1  0   = 6
+          0  1  0   = 2
+          ...
+    WVal: The value to be written for Avc denial testing. It can be string, int etc.
+-->
+
+<ResourceConfigs>
+    <PerfResources>
+        <SysNode Idx="0xD" Perm="6" WVal="1" RVal="Y" />
+    </PerfResources>
+</ResourceConfigs>

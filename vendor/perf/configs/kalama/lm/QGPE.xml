@@ -35,27 +35,26 @@
         <GROUP_UPMIGRATE_PATH>/proc/sys/walt/sched_group_upmigrate</GROUP_UPMIGRATE_PATH>
         <GROUP_DOWNMIGRATE_PATH>/proc/sys/walt/sched_group_downmigrate</GROUP_DOWNMIGRATE_PATH>
         <BIG_CLUSTER_ID>4,5,6,7</BIG_CLUSTER_ID>
+        <QSPM_EXCLUSIIVE>0</QSPM_EXCLUSIIVE>
+        <THERMAL_ATA_LEVEL_THRESHOLDS>-1, -1, -1</THERMAL_ATA_LEVEL_THRESHOLDS>
+        <THERMAL_ATA_SKIN_THRESHOLD>51</THERMAL_ATA_SKIN_THRESHOLD>
     </Configs>
     <Profiles>
         <Profile>
            <!-- CORE_CTL_ENABLE_BIG, 0, CORE_CTL_ENABLE_PRIME, 0-->
            <!-- SCHED_MIN_TASK_UTIL_FOR_COLOCATION, 5, SCHED_MIN_TASK_UTIL_FOR_BOOST, 5-->
-           <!-- BUS_DCVS_LLCC_DDR_GOLD_LAT_EN_SPM_VOTE, 30, BUS_DCVS_LLCC_DDR_GOLD_LAT_EN_SPM_VOTE, 30-->
            <!-- SCHED_MANY_WAKE_UP, 4-->
            <PROACTIVE_DEFAULT>
                0x41008000, 0, 0x41008200, 0,
                0x40C78000, 5, 0x40C7C000, 5,
-               0x43490000, 30, 0x43494000, 30,
                0x40C9C000,4
            </PROACTIVE_DEFAULT>
            <!-- CORE_CTL_ENABLE_BIG, 0, CORE_CTL_ENABLE_PRIME, 0-->
            <!-- SCHED_MIN_TASK_UTIL_FOR_COLOCATION, 5, SCHED_MIN_TASK_UTIL_FOR_BOOST, 5-->
-           <!-- BUS_DCVS_LLCC_DDR_GOLD_LAT_EN_SPM_VOTE, 30, BUS_DCVS_LLCC_DDR_GOLD_LAT_EN_SPM_VOTE, 30-->
            <!-- SCHED_MANY_WAKE_UP, 4-->
            <PROACTIVE_SKEW2>
                0x41008000, 0, 0x41008200, 0,
                0x40C78000, 5, 0x40C7C000, 5,
-               0x43490000, 30, 0x43494000, 30,
                0x40C9C000,4
            </PROACTIVE_SKEW2>
             <!-- Heavy Game Default -->
@@ -94,6 +93,16 @@
             <PREDICTIVE_PROFILE4>
                 0x43488000,2092000
             </PREDICTIVE_PROFILE4>
+            <!-- MAX_FREQ_CLUSTER_BIG_CORE_0, value-->
+            <THERMAL_PROFILE0>
+                0x40804000, 2227
+            </THERMAL_PROFILE0>
+            <!-- MAX_FREQ_CLUSTER_BIG_CORE_0, value-->
+            <!-- LLCC_DDR_BW_MAX_FREQ_V2, value-->
+            <THERMAL_PROFILE1>
+                0x40804000, 2227,
+                0x43040000, 2000000
+            </THERMAL_PROFILE1>
         </Profile>
     </Profiles>
 
@@ -277,6 +286,11 @@
            <Primary>true</Primary>
            <AsyncId>VENDOR_HINT_PICARD_HINT_SCENARIO</AsyncId>
            <AsyncType>1</AsyncType>
+        </Trigger>
+        <Trigger>
+            <Primary>true</Primary>
+            <AsyncId>VENDOR_HINT_GAME_ACTION_DISABLE</AsyncId>
+            <AsyncType>1</AsyncType>
         </Trigger>
     </Triggers>
     <IgnoredApps>

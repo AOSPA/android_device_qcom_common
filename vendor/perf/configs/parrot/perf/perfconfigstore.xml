@@ -48,17 +48,18 @@ ________________________________________________________________________________
                 <Prop Name="vendor.prekill_MIN_ADJ_to_Kill"       Value="800"  />
                 <Prop Name="vendor.prekill_MAX_ADJ_to_Kill"       Value="1000"  />
                 <Prop Name="ro.vendor.perf.enable.procomp" Value="true" />
-                <Prop Name="vendor.perf.pfar.enable" Value="1" />
                 <Prop Name="vendor.perf.fps_switch.enable" Value="1" />
                 <Prop Name="ro.vendor.perf.gfl.tap_ignore_enable" Value="true" />
                 <Prop Name="ro.vendor.perf.ss" Value="true" />
-                <Prop Name="ro.vendor.perf.splh" Value="false" />
+                <Prop Name="ro.vendor.perf.splh" Value="true" />
                 <Prop Name="vendor.perf.bgt.enable" Value="true" />
 
                 <!--splh is true/false for ss -->
-                <Prop Name="ro.vendor.perf.lplh" Value="false" />
-                <Prop Name="ro.vendor.perf.lal" Value="true" />
-                <Prop Name="ro.vendor.perf.lgl" Value="true" SkewType="10" />
+                <Prop Name="ro.vendor.perf.lplh" Value="true" />
+                <Prop Name="ro.vendor.perf.lal" Value="true" Target="parrot"/>
+                <Prop Name="ro.vendor.perf.lal" Value="false" Target="ravelin"/>
+                <Prop Name="ro.vendor.perf.lgl" Value="true" SkewType="10" Target="parrot"/>
+                <Prop Name="ro.vendor.perf.lgl" Value="false" SkewType="10" Target="ravelin"/>
                 <Prop Name="vendor.perf.enable_gplaf_hw" Value="false" />
                 <Prop Name="ro.vendor.perf.dplh" Value="false" />
 
@@ -74,7 +75,6 @@ ________________________________________________________________________________
                 <Prop Name="ro.lmk.nstrat_psi_complete_ms"      Value="70" />
                 <Prop Name="ro.lmk.psi_scrit_complete_stall_ms" Value="400" />
                 <Prop Name="ro.lmk.nstrat_wmark_boost_factor"   Value="4" />
-                <Prop Name="ro.lmk.cache_percent"               Value="10" />
 
                 <!--Appcompaction Properties -->
                 <Prop Name="vendor.appcompact.enable_app_compact"          Value="true" />
@@ -93,15 +93,19 @@ ________________________________________________________________________________
                 <Prop Name="vendor.perf.gestureflingboost.enable" Value="true" />
                 <Prop Name="ro.vendor.at_library" Value="libqti-at.so" />
 
-                <Prop Name="vendor.perf.phr.enable" Value="1"/>
+                <Prop Name="vendor.perf.phr.enable" Value="1" Target="parrot"/>
+                <Prop Name="vendor.perf.phr.enable" Value="0" Target="ravelin"/>
                 <Prop Name="vendor.perf.phr.hr_min_rate" Value="0.5"/>
-                <Prop Name="vendor.perf.pfar2.enable" Value="1"/>
+                <Prop Name="vendor.perf.pfar2.enable" Value="1" Target="parrot"/>
+                <Prop Name="vendor.perf.pfar2.enable" Value="0" Target="ravelin"/>
                 <Prop Name="vendor.perf.pfar2.boost_level" Value="3" />
                 <Prop Name="ro.vendor.perf.qhf"  Value="true" />
-                <Prop Name="ro.vendor.perf.qgpe" Value="true" />
+                <Prop Name="ro.vendor.perf.qgpe" Value="true" Target="parrot"/>
+                <Prop Name="ro.vendor.perf.qgpe" Value="false" Target="ravelin"/>
                 <Prop Name="ro.vendor.perf.qape" Value="true" />
 
                 <Prop Name="ro.vendor.iocgrp.config"                 Value="1"      />
+                <Prop Name="vendor.iop.enable_speed"                 Value="false"   />
                 <Prop Name="ro.vendor.qti.sys.fw.bservice_enable"    Value="true"   />
                 <Prop Name="ro.vendor.qti.sys.fw.bservice_age"       Value="300000" />
                 <Prop Name="ro.vendor.qti.sys.fw.bservice_age"       Value="5000"   Ram="3" />
