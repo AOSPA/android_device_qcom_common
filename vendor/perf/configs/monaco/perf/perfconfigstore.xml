@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!--
- * Copyright (c) 2019, 2021 Qualcomm Technologies, Inc.
+ * Copyright (c) 2019, 2021-2023 Qualcomm Technologies, Inc.
  * All Rights Reserved.
  * Confidential and Proprietary - Qualcomm Technologies, Inc.
 -->
@@ -43,7 +43,7 @@ property Name is called. -->
                 <Prop Name="ro.lmk.kill_heaviest_task_dup" Value="false" />
                 <Prop Name="ro.lmk.psi_window_size_ms" Value="500" />
                 <Prop Name="ro.lmk.psi_poll_period_scrit_ms" Value="100" />
-                <Prop Name="ro.lmk.psi_scrit_complete_stall_ms" Value="700" />
+                <Prop Name="ro.lmk.psi_scrit_complete_stall_ms" Value="300" />
                 <Prop Name="vendor.iop.enabled" Value="false" />
                 <Prop Name="vendor.iop.enable_uxe" Value="0" />
                 <Prop Name="vendor.perf.iop_v3.enable" Value="0" />
