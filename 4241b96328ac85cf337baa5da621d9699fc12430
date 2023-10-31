@@ -16,6 +16,23 @@
       "message": "Wouldnt we want this permission as well?\nframeworks/native/data/etc/android.hardware.vulkan.version-1_3.xml",
       "revId": "4241b96328ac85cf337baa5da621d9699fc12430",
       "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "c531d40d_4f4f1d43",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 4
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000143
+      },
+      "writtenOn": "2023-10-31T16:30:00Z",
+      "side": 1,
+      "message": "And this prop?\nro.gfx.driver.1\u003dcom.qualcomm.qti.gpudrivers.kalama.api33",
+      "revId": "4241b96328ac85cf337baa5da621d9699fc12430",
+      "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
     }
   ]
 }
