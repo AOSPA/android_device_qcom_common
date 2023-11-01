@@ -1,0 +1,373 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!--
+ * Copyright (c) 2022 Qualcomm Technologies, Inc.
+ * All Rights Reserved.
+ * Confidential and Proprietary - Qualcomm Technologies, Inc.
+-->
+
+<!-- Supported XML tags with their fields.
+ * Major tag supports OpcodeValue.
+ * Minor tag supports OpcodeValue, Nodepath and Supported(Optional) fields.
+ * By default, all the resources are assumed as supported.
+ Supported field can be used to mark a resource as not supported.
+ * All the interactive nodes, ondemand nodes and some nodes of sched major
+ group which aren't being used are marked as Not supported by default and
+ can be enabled by using the target specific config files. -->
+
+<!-- For resources which update multiple nodes or which require speical
+acquire/release funcitons, need to mention the keyword SPECIAL_NODE
+in their node path field and accordingly their ApplyOts and ResetOpts
+functions need to be defined in the code.-->
+
+<!-- For adding a new resource, a new minor tag with all mandatory fields
+need to be added just before the end of it's major group.
+
+Exception tag is used to pass the exception why ths node cannot be tested.
+Cluster tag is used when node in resource xml is cluster specific(put logical cluster here).
+Cluster 0=> Big
+Cluster 1=> Little
+Cluster 2=> Prime
+
+| RVal | Wval | Reason
+| Yes  | Yes  | Different Value read and write
+| No   | Yes  | Read Val Same as write Value
+| Blank| Blank| Unsupported Node
+
+(Yes) => Tag is Added
+(No) => Tag is not Added
+(Blank) => Tag is added but written value is blank (eg: WVal="").
+-->
+
+
+<ResourceConfigs>
+    <PerfResources>
+
+    <!-- display off major start -->
+    <Major OpcodeValue="0x0" />
+        <Minor OpcodeValue="0x0" Exception="This is Display Off resource"/>
+    <!-- display off major end -->
+
+    <!-- power collapse major start -->
+    <Major OpcodeValue="0x1" />
+        <Minor OpcodeValue="0x0" Exception="Cannot Check value part of this node" />
+        <Minor OpcodeValue="0x1" WVal="" RVal="" />  <!-- not supported -->
+        <Minor OpcodeValue="0x2" WVal="0x5" RVal="5000000" />
+        <Minor OpcodeValue="0x3" WVal="" RVal="" />  <!-- not supported -->
+        <Minor OpcodeValue="0x4" WVal="" RVal="" />  <!-- not supported -->
+        <Minor OpcodeValue="0x5" WVal="" RVal="" />  <!-- not supported -->
+    <!-- power collapse major end -->
+
+    <!-- cpufreq major start -->
+    <Major OpcodeValue="0x2" />
+        <Minor OpcodeValue="0x0" Cluster="1" WVal="960" RVal="960000" />
+        <Minor OpcodeValue="0x1" Cluster="1" WVal="1478" RVal="1478400" />
+        <Minor OpcodeValue="0x2" WVal="0xDF4" RVal="3572" />
+        <Minor OpcodeValue="0x3" WVal="0xFFA" RVal="4090" />
+    <!-- cpufreq major end -->
+
+    <!-- sched major start -->
+    <Major OpcodeValue="0x3" />
+        <!--Sysfsnode paths may change basing on the target for minors 0x1, 0x4, 0x5, 0x9.
+            So, for targets with different node paths than default, need to be specified
+            in the target specific resource config xml file. -->
+        <Minor OpcodeValue="0x0" WVal="2" RVal="2" />
+        <Minor OpcodeValue="0x1" WVal="" RVal="" />   <!-- not supported -->
+        <Minor OpcodeValue="0x2" WVal="0xC351" RVal="0" />
+        <Minor OpcodeValue="0x3" WVal="" RVal="" />   <!-- not supported -->
+        <Minor OpcodeValue="0x4" WVal="" RVal="" />   <!-- not supported -->
+        <Minor OpcodeValue="0x5" WVal="" RVal="" />   <!-- not supported -->
+        <Minor OpcodeValue="0x6" WVal="" RVal="" />   <!-- not supported -->
+        <Minor OpcodeValue="0x7" WVal="" RVal="" />   <!-- not supported -->
+        <Minor OpcodeValue="0x8" WVal="" RVal="" />   <!-- not supported -->
+        <Minor OpcodeValue="0x9" WVal="" RVal="" />   <!-- not supported -->
+        <Minor OpcodeValue="0xA" WVal="" RVal="" />   <!-- not supported -->
+        <Minor OpcodeValue="0xB" WVal="" RVal="" />   <!-- not supported -->
+        <Minor OpcodeValue="0xC" WVal="" RVal="" />   <!-- not supported -->
+        <Minor OpcodeValue="0xD" WVal="" RVal="" />   <!-- not supported -->
+        <Minor OpcodeValue="0xE" WVal="" RVal="" />   <!-- not supported -->
+        <Minor OpcodeValue="0xF" WVal="0x8" RVal="3" />
+        <Minor OpcodeValue="0x10" WVal="0x4" RVal="2" />
+        <Minor OpcodeValue="0x11" WVal="0x8" RVal="3" />
+        <Minor OpcodeValue="0x12" WVal="0x10" RVal="4" />
+        <Minor OpcodeValue="0x13" WVal="" RVal="" />   <!-- not supported -->
+        <Minor OpcodeValue="0x14" WVal="" RVal="" />   <!-- not supported -->
+        <Minor OpcodeValue="0x15" WVal="" RVal="" />   <!-- not supported -->
+        <Minor OpcodeValue="0x16" WVal="" RVal="" />   <!-- not supported -->
+        <!-- sched_freq_aggr_threshold perflock will have contention with sched_boost level 3,
+        so disable this resource for the target which is going to use sched boost 3 level.-->
+        <Minor OpcodeValue="0x17" WVal="" RVal="" />   <!-- not supported -->
+        <Minor OpcodeValue="0x18" WVal="" RVal="" />   <!-- not supported -->
+        <Minor OpcodeValue="0x19" WVal="" RVal="" />   <!-- not supported -->
+        <Minor OpcodeValue="0x1A" WVal="255" RVal="255" />
+        <Minor OpcodeValue="0x1B" WVal="" RVal="" />   <!-- not supported -->
+        <Minor OpcodeValue="0x1C" WVal="" RVal="" />   <!-- not supported -->
+        <Minor OpcodeValue="0x1D" WVal="0xF4" RVal="244" />
+        <Minor OpcodeValue="0x1E" WVal="0xAF" RVal="175" />
+        <Minor OpcodeValue="0x1F" WVal="0x311" RVal="785"/>
+        <Minor OpcodeValue="0x20" WVal="0x1" RVal="3" /> <!-- sched_task_boost -->               <!-- target -->
+        <Minor OpcodeValue="0x21" WVal="1" RVal="1" /> <!--sched_user_hint -->
+        <Minor OpcodeValue="0x22" WVal="" RVal="" /> <!--sched_task_unfilter_nr_windows -->  <!-- not supported -->
+        <Minor OpcodeValue="0x23" WVal="" RVal="" /> <!--sched_coloc_downmigrate_ns  -->
+        <Minor OpcodeValue="0x24" WVal="23" />
+        <Minor OpcodeValue="0x25" WVal="" RVal="" />   <!-- not supported -->
+        <Minor OpcodeValue="0x26" WVal="0x3" RVal="3" />
+        <Minor OpcodeValue="0x27" WVal="0x3E1" RVal="993" />
+        <Minor OpcodeValue="0x28" WVal="0" RVal="0" />
+        <Minor OpcodeValue="0x29" WVal="8" />
+        <Minor OpcodeValue="0x2A" WVal="" RVal="" />   <!-- not supported -->
+        <Minor OpcodeValue="0x2B" WVal="2" RVal="2.00" />
+        <Minor OpcodeValue="0x2C" /> <!-- enable sched_task_boost for top-app render thread-->
+        <Minor OpcodeValue="0x2D" /> <!-- disable sched_task_boost for top-app render thread-->
+        <Minor OpcodeValue="0x2E" WVal="0x5F5E1FF" RVal="100000255" />
+        <Minor OpcodeValue="0x2F" WVal="1" RVal="1" />
+        <Minor OpcodeValue="0x30" WVal="0x51" />
+        <Minor OpcodeValue="0x31" WVal="0x2531FFF"/>
+        <Minor OpcodeValue="0x32" WVal="119" RVal="119" />
+        <Minor OpcodeValue="0x33" WVal="0x0" RVal="0" />
+        <Minor OpcodeValue="0x34" Exception="Need to pass pid to test it" />
+        <Minor OpcodeValue="0x35" WVal="0x2DCFFF" RVal="3002367" />
+        <Minor OpcodeValue="0x36" WVal="0x2D" RVal="45" />
+        <Minor OpcodeValue="0x37" WVal="" RVal="" />   <!-- not supported -->
+        <Minor OpcodeValue="0x38" />
+        <Minor OpcodeValue="0x39" WVal="" RVal="" />   <!-- not supported -->
+        <Minor OpcodeValue="0x3A" WVal="0xFA" RVal="1" />
+        <Minor OpcodeValue="0x3B" WVal="0xFA" RVal="1" />
+        <Minor OpcodeValue="0x3C" />
+        <Minor OpcodeValue="0x3D" />
+        <Minor OpcodeValue="0x3E" WVal="0xFFAE " />
+        <Minor OpcodeValue="0x3F" WVal="0x1FF" />
+    <!-- sched major end -->
+
+    <!-- core hotplug major start -->
+    <Major OpcodeValue="0x4" />
+        <Minor OpcodeValue="0x0" />
+        <Minor OpcodeValue="0x1" />
+        <Minor OpcodeValue="0x2" Cluster="1" WVal="1" RVal="1" />
+        <Minor OpcodeValue="0x3" Cluster="1" Exception="Cant compare. Node written as decimal read as binary with spaces." />
+        <Minor OpcodeValue="0x4" Cluster="0" WVal="1" RVal="1" />
+        <Minor OpcodeValue="0x5" Cluster="0" WVal="50" RVal="50" />
+    <!-- core hotplug major end-->
+
+    <!-- interactive major start -->
+    <Major OpcodeValue="0x5" />
+        <!-- For following minors node paths might change basing on GovInstanceType and
+        Supported field might change basing on the type of CpufreqGov.-->
+        <Minor OpcodeValue="0x0" WVal="" RVal="" />    <!-- not supported -->
+        <Minor OpcodeValue="0x1" WVal="" RVal="" />    <!-- not supported -->
+        <Minor OpcodeValue="0x2" WVal="" RVal="" />    <!-- not supported -->
+        <Minor OpcodeValue="0x3" WVal="" RVal="" />    <!-- not supported -->
+        <Minor OpcodeValue="0x4" WVal="" RVal="" />    <!-- not supported -->
+        <Minor OpcodeValue="0x5" WVal="" RVal="" />    <!-- not supported -->
+        <Minor OpcodeValue="0x6" WVal="" RVal="" />    <!-- not supported -->
+        <Minor OpcodeValue="0x7" WVal="" RVal="" />    <!-- not supported -->
+        <Minor OpcodeValue="0x8" WVal="" RVal="" />    <!-- not supported -->
+        <Minor OpcodeValue="0x9" WVal="" RVal="" />    <!-- not supported -->
+        <Minor OpcodeValue="0xA" WVal="" RVal="" />    <!-- not supported -->
+        <Minor OpcodeValue="0xB" WVal="" RVal="" />    <!-- not supported -->
+        <Minor OpcodeValue="0xC" WVal="" RVal="" />    <!-- not supported -->
+        <Minor OpcodeValue="0xD" WVal="" RVal="" />    <!-- not supported -->
+        <Minor OpcodeValue="0xE" WVal="" RVal="" />    <!-- not supported -->
+        <Minor OpcodeValue="0xF" Cluster="1" WVal="1478" RVal="1478400" />
+        <Minor OpcodeValue="0x10" Cluster="1" WVal="0x27" RVal="39" />
+        <Minor OpcodeValue="0x11" Cluster="1" WVal="0x0" RVal="0" />
+        <Minor OpcodeValue="0x12" Cluster="1" WVal="0xFA" />
+        <Minor OpcodeValue="0x13" Cluster="1" WVal="0xBB801" />
+        <Minor OpcodeValue="0x14" Cluster = "1" WVal="0x4566FF" />
+        <Minor OpcodeValue="0x15" Cluster = "1" WVal="0x5AA" />
+        <Minor OpcodeValue="0x16" Cluster = "1" WVal="0xFFA1" RVal="65441" />
+    <!-- interactive major end -->
+
+    <!-- cpubw hwmon major start -->
+    <Major OpcodeValue="0x6" />
+        <!-- ALl the following minors might change based on target. -->
+        <Minor OpcodeValue="0x0" WVal="" RVal="" />   <!-- not supported -->
+        <Minor OpcodeValue="0x1" WVal="" RVal="" />   <!-- not supported -->
+        <Minor OpcodeValue="0x2" WVal="" RVal="" />   <!-- not supported -->
+        <Minor OpcodeValue="0x3" />
+        <Minor OpcodeValue="0x4" WVal="" RVal="" />   <!-- not supported -->
+        <Minor OpcodeValue="0x5" WVal="" RVal="" />   <!-- not supported -->
+        <Minor OpcodeValue="0x6" WVal="" RVal="" />   <!-- not supported -->
+        <Minor OpcodeValue="0x7" WVal="" RVal="" />   <!-- not supported -->
+        <Minor OpcodeValue="0x8" WVal="" RVal="" />   <!-- not supported -->
+        <Minor OpcodeValue="0x9" WVal="" RVal="" />   <!-- not supported -->
+        <!--Here onwards are the path for new opcodes to mark CPU_LLCC_BW nodes.Upper ones
+            of this major are marked as unsupported for the tergets using the new opcodes-->
+        <Minor OpcodeValue="0xA" WVal="" RVal="" />   <!-- not supported -->
+        <Minor OpcodeValue="0xB" WVal="0x1A2" RVal="418"/>
+        <Minor OpcodeValue="0xC" WVal="" RVal="" />   <!-- not supported -->
+        <Minor OpcodeValue="0xD" WVal="0x151" RVal="337" />
+        <Minor OpcodeValue="0xE" Exception="Resource is direcory to LLCC HYST_OPT nodes" />
+        <Minor OpcodeValue="0xF" WVal="0x26" RVal="38" />
+        <Minor OpcodeValue="0x10" WVal="0xAF" RVal="175" />  <!-- target -->
+        <!--Here onwards are the path for new frequency opcodes for  CPU_LLCC_BW V2 nodes to support
+             new values from kernel 5.10 onwards-->
+        <Minor OpcodeValue="0x11" WVal="300031" RVal="300031"  />
+        <Minor OpcodeValue="0x12" WVal="806088" RVAL = "806088" />
+    <!-- cpubw hwmon major end -->
+
+    <!-- video major start -->
+    <Major OpcodeValue="0x7" />
+        <Minor OpcodeValue="0x0" />
+        <Minor OpcodeValue="0x1" />
+        <Minor OpcodeValue="0x2" />
+		<Minor OpcodeValue="0x3" Exception="DISPLAY_EARLY_WAKEUP_HINT Resource"/>
+    <!-- video major end -->
+
+    <!-- ksm major start -->
+    <Major OpcodeValue="0x8" />
+        <Minor OpcodeValue="0x0" />
+        <Minor OpcodeValue="0x1" />
+    <!-- ksm major end -->
+
+    <!-- ondemand major start -->
+    <Major OpcodeValue="0x9" />
+        <Minor OpcodeValue="0x0" WVal="" RVal="" />   <!-- not supported -->
+        <Minor OpcodeValue="0x1" WVal="" RVal="" />   <!-- not supported -->
+        <Minor OpcodeValue="0x2" WVal="" RVal="" />   <!-- not supported -->
+        <Minor OpcodeValue="0x3" WVal="" RVal="" />   <!-- not supported -->
+        <Minor OpcodeValue="0x4" WVal="" RVal="" />   <!-- not supported -->
+        <Minor OpcodeValue="0x5" WVal="" RVal="" />   <!-- not supported -->
+        <Minor OpcodeValue="0x6" WVal="" RVal="" />   <!-- not supported -->
+        <Minor OpcodeValue="0x7" WVal="" RVal="" />   <!-- not supported -->
+    <!-- ondemand major end -->
+
+    <!-- gpu major start -->
+    <Major OpcodeValue="0xA" />
+        <Minor OpcodeValue="0x0" WVal="0x8" RVal="8" />
+        <Minor OpcodeValue="0x1" WVal="0x4" RVal="4" />
+        <Minor OpcodeValue="0x2" WVal="1" RVal="1" />
+        <Minor OpcodeValue="0x3" WVal="0xFF" RVal="285000000" />
+        <Minor OpcodeValue="0x4" WVal="0x1BB" RVal="443000000" />
+        <Minor OpcodeValue="0x5" WVal="" RVal="" />   <!-- not supported -->
+        <Minor OpcodeValue="0x6" WVal="" RVal="" />   <!-- not supported -->
+        <Minor OpcodeValue="0x7" />
+        <Minor OpcodeValue="0x8" />
+        <Minor OpcodeValue="0x9" />
+        <Minor OpcodeValue="0xA" Exception="Node is QESDK-SEC Protected, Should be tested by that." />
+        <Minor OpcodeValue="0xB" WVal="32" RVal="32" />
+        <Minor OpcodeValue="0xC" WVal="440" Rval="450" />
+    <!-- gpu major end -->
+
+    <!-- misc major start -->
+    <Major OpcodeValue="0xB" />
+        <Minor OpcodeValue="0x0" />
+        <Minor OpcodeValue="0x1" />
+        <Minor OpcodeValue="0x2" Exception="Node is INPUT_BOOST_RESET for all clusters" />
+        <Minor OpcodeValue="0x3" WVal="" RVal="" />    <!-- not supported -->
+        <Minor OpcodeValue="0x4" Exception="StorageNode_path_is_figured_out_based_on_the_target_device" />
+        <Minor OpcodeValue="0x5" />
+        <Minor OpcodeValue="0x6" WVal="" RVal="" />    <!-- not supported -->
+        <Minor OpcodeValue="0x7" WVal="" RVal="" />    <!-- not supported -->
+        <Minor OpcodeValue="0x8" Exception="MISC PID_AFFINE Resource" />
+        <Minor OpcodeValue="0x9" Exception="MISC FPS_HYST_OPCODE Resource" />
+        <Minor OpcodeValue="0xA" Exception="MISC ALWAYS_ALLOW_OPCODE Resource" />
+        <Minor OpcodeValue="0xB" Exception="MISC SET_SCHEDULER Resource" />
+        <Minor OpcodeValue="0xC" WVal="0x1" RVal="4" />
+        <Minor OpcodeValue="0xD" Exception="DISPLAY_DOZE resource" />
+        <Minor OpcodeValue="0xE" Exception="MISC DISPLAY_HEAVY_RT_AFFINE Resource" />
+        <Minor OpcodeValue="0xF" Exception="MISC content_fps Resource" />
+        <Minor OpcodeValue="0x10" WVal="0x1" RVal="1" />
+    <!-- misc major end -->
+
+    <!-- llcbw hwmon major start -->
+    <Major OpcodeValue="0xC" />
+        <!-- ALl the following minors node path might change based on target. -->
+        <Minor OpcodeValue="0x0" WVal="" RVal="" />   <!-- not supported -->
+        <Minor OpcodeValue="0x1" WVal="" RVal="" />   <!-- not supported -->
+        <Minor OpcodeValue="0x2" />
+        <Minor OpcodeValue="0x3" WVal="" RVal="" />   <!-- not supported -->
+        <!--Here onwards are the path for new opcodes to mark LLCC_DDR_BW nodes.Upper ones
+            of this major are marked as unsupported for the tergets using the new opcodes-->
+        <Minor OpcodeValue="0x4" WVal="" RVal="" />   <!-- not supported -->
+        <Minor OpcodeValue="0x5" WVal="0x1EA" RVal="490" />
+        <Minor OpcodeValue="0x6" WVal="" RVal="" />   <!-- not supported -->
+        <Minor OpcodeValue="0x7" WVal="0x54" RVal="84" />
+        <Minor OpcodeValue="0x8" WVal="0x18F" RVal="399" />
+        <Minor OpcodeValue="0x9" Exception="Resource is direcory to DDR HYST_OPT nodes" />
+        <Minor OpcodeValue="0xA" WVal="" RVal="" />   <!-- not supported -->
+        <Minor OpcodeValue="0xB" WVal="" RVal="" />   <!-- not supported -->
+        <Minor OpcodeValue="0xC" WVal="0x1AE" RVal="430" />
+        <Minor OpcodeValue="0xD" WVal="0x25" RVal="37" />
+        <Minor OpcodeValue="0xE" WVal="0x4EA" RVal="1258" />
+        <!--Here onwards are the path for new frequency opcodes for LLCC_DDR_BW V2 nodes to support
+            new values from kernel 5.10 onwards-->
+        <Minor OpcodeValue="0xF" WVal="0x858FF" RVal="547071" />
+        <Minor OpcodeValue="0x10" WVal="0x1FEABF3" RVal="3196000" />  <!-- target -->
+        <Minor OpcodeValue="0x11" WVal="" RVal="" />  <!-- not supported -->
+        <Minor OpcodeValue="0x12" WVal="0x43" />
+
+    <!-- llcbw hwmon major end -->
+
+    <!-- memlat major start -->
+    <Major OpcodeValue="0xD" />
+        <!-- ALl the following minors node path might change based on target. -->
+        <Minor OpcodeValue="0x0" WVal="-1" RVal="-1" />
+        <Minor OpcodeValue="0x1" WVal="0xA350" RVal="41808" />
+        <Minor OpcodeValue="0x2" WVal="0xC35" RVal="3125" />
+        <Minor OpcodeValue="0x3" WVal="0x48" RVal="72" />
+        <Minor OpcodeValue="0x4" WVal="0x39" RVal="57" />
+        <Minor OpcodeValue="0x5" WVal="" RVal="" />   <!-- not supported -->
+        <Minor OpcodeValue="0x6" WVal="" RVal="" />   <!-- not supported -->
+        <Minor OpcodeValue="0x7" WVal="" RVal="" />   <!-- not supported -->
+        <Minor OpcodeValue="0x8" WVal="0x1FEA" RVal="8170" />
+        <Minor OpcodeValue="0x9" WVal="0x1EAB" RVal="7851" />
+        <Minor OpcodeValue="0xA" WVal="0x33" RVal="51" />
+        <Minor OpcodeValue="0xB" WVal="0x2B" RVal="43" />
+        <Minor OpcodeValue="0xC" WVal="" RVal="" />   <!-- not supported -->
+        <Minor OpcodeValue="0xD" WVal="0xFAE" RVal="4014" />
+        <Minor OpcodeValue="0xE" WVal="0xABC" RVal="2748" />
+        <Minor OpcodeValue="0xF" WVal="0x18" RVal="24" />
+        <Minor OpcodeValue="0x10" WVal="0x53" RVal="83" />  <!-- target -->
+        <Minor OpcodeValue="0x11" WVal="" RVal="" />   <!-- not supported -->
+        <Minor OpcodeValue="0x12" WVal="" RVal="" />   <!-- not supported -->
+        <Minor OpcodeValue="0x13" WVal="" RVal="" />   <!-- not supported -->
+        <Minor OpcodeValue="0x14" WVal="" RVal="" />   <!-- not supported -->
+        <Minor OpcodeValue="0x15" WVal="" RVal="" />   <!-- not supported -->
+        <Minor OpcodeValue="0x16" WVal="0x1149FF" RVal="1133055" />
+        <Minor OpcodeValue="0x17" WVal="0x49ABC" RVal="301756" />
+        <Minor OpcodeValue="0x18" WVal="768000" RVal="768000" />
+        <Minor OpcodeValue="0x19" WVal="0x18C" RVal="396" />
+        <Minor OpcodeValue="0x1A" WVal="0x4" RVal="4" />
+        <Minor OpcodeValue="0x1B" WVal="0x25F" RVal="547000" />
+        <Minor OpcodeValue="0x1C" WVal="0xAF" RVal="300000" />
+        <Minor OpcodeValue="0x1D" WVal="0x61A9" RVal="25001" />
+        <Minor OpcodeValue="0x1E" WVal="0x1A0FE0" RVal="0x1A0FE0" />
+        <Minor OpcodeValue="0x1F" WVal="0x1A0FE0" RVal="0x1A0FE0" />
+        <Minor OpcodeValue="0x20" WVal="825600" RVal="825600" />
+        <Minor OpcodeValue="0x21" WVal="768000" />
+        <Minor OpcodeValue="0x22" WVal="768000" />
+        <Minor OpcodeValue="0x23" WVal="466000" />
+        <Minor OpcodeValue="0x24" WVal="30" />
+        <Minor OpcodeValue="0x25" WVal="30" />
+        <Minor OpcodeValue="0x26" WVal="60000" RVal="451200" />
+        <Minor OpcodeValue="0x27" WVal="60000" RVal="556800" />
+        <Minor OpcodeValue="0x28" WVal="60000" RVal="150000" />
+        <Minor OpcodeValue="0x29" WVal="1" RVal="1" />
+    <!-- memlat major end -->
+
+    <!-- npu major start -->
+    <Major OpcodeValue="0xE" />
+        <!-- ALl the following minors node path might change based on target. -->
+        <Minor OpcodeValue="0x0" WVal="" RVal="" />   <!-- not supported -->
+        <Minor OpcodeValue="0x1" WVal="" RVal="" />   <!-- not supported -->
+        <Minor OpcodeValue="0x2" />
+        <!--Here onwards are the path for new opcodes to mark NPU_LLCC_DDR_BW nodes.-->
+        <Minor OpcodeValue="0x3" WVal="" RVal="" />   <!-- not supported -->
+        <Minor OpcodeValue="0x4" WVal="" RVal="" />   <!-- not supported -->
+        <Minor OpcodeValue="0x5" />
+    <!-- npu major end -->
+
+    <!-- sched2 major start -->
+    <Major OpcodeValue="0xF" />
+        <Minor OpcodeValue="0x0" WVal="0x1" RVal="1" />
+        <Minor OpcodeValue="0x1" Exception="TASK LOAD BOOST NEED PID" />
+        <Minor OpcodeValue="0x2" WVal="0x20" RVal="32" />
+        <Minor OpcodeValue="0x3" WVal="0x23" RVal="35" />
+        <Minor OpcodeValue="0x4" WVal="0x12C" RVal="300" />
+        <Minor OpcodeValue="0x5" WVal="0xDC" RVal="220" />
+        <Minor OpcodeValue="0x6" WVal="2" RVal="2" />
+    <!-- sched2 major end -->
+
+    </PerfResources>
+</ResourceConfigs>
