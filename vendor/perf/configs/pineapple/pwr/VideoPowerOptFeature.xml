@@ -1,0 +1,74 @@
+<!--
+/******************************************************************************
+  @file    VideoOptimizationFeature.xml
+  @brief   Video Optimization feature xml
+
+  DESCRIPTION
+      Each feature has an xml file to define the feature components
+
+  ===========================================================================
+  Copyright (c) 2023 Qualcomm Technologies, Inc.
+  All Rights Reserved.
+  Confidential and Proprietary - Qualcomm Technologies, Inc.
+  ===========================================================================
+******************************************************************************/
+-->
+<Feature>
+   <Name>VideoPowerOptFeature</Name>
+   <Libname>libvideooptfeature.so</Libname>
+   <Configs>
+        <VIDEO_OPT>1</VIDEO_OPT>
+        <VIDEO_DYN>1</VIDEO_DYN>
+        <BROWSER_OPT>1</BROWSER_OPT>
+        <MAX_CONTENT_FPS>30</MAX_CONTENT_FPS>
+        <MAX_HW_CONTENT_FPS>144</MAX_HW_CONTENT_FPS>
+        <MAX_PANEL_FPS>144</MAX_PANEL_FPS>
+        <MAX_SAMPLE_NUM>6</MAX_SAMPLE_NUM>
+        <MAX_WAIT_TIME>1</MAX_WAIT_TIME>
+        <SCALING_DOWN_TASK_LOAD_BOOST_LEVEL_1>-10</SCALING_DOWN_TASK_LOAD_BOOST_LEVEL_1>
+        <SCALING_DOWN_TASK_LOAD_BOOST_LEVEL_2>-20</SCALING_DOWN_TASK_LOAD_BOOST_LEVEL_2>
+    </Configs>
+    <Profiles>
+        <Profile>
+            <!-- Disable Colocation  -->
+            <DEFAULT>0x40CF4000, 0x270F2706</DEFAULT>
+            <!-- SCHED_WINDOW_TICKS_UPDATE resource opcode, value -->
+            <!-- MPCTLV3_SCHEDUTIL_HISPEED_FREQ_CLUSTER_LITTLE -->
+            <!-- MPCTLV3_SCHEDUTIL_HISPEED_FREQ_CLUSTER_BIG -->
+            <!-- MPCTLV3_TARGET_LOAD_THRESH_CLUSTER_LITTLE -->
+            <!-- MPCTLV3_SCHED_LOAD_BOOST_BIG -->
+            <!-- MPCTLV3_SCHEDUTIL_RTG_BOOST_FREQ_CLUSTER_LITTLE -->
+            <!-- MPCTLV3_SCHEDUTIL_RTG_BOOST_FREQ_CLUSTER_BIG -->
+            <!-- MPCTLV3_SCHEDUTIL_PREDICTIVE_LOAD_CLUSTER_LITTLE -->
+            <!-- MPCTLV3_SCHEDUTIL_PREDICTIVE_LOAD_CLUSTER_BIG -->
+            <!-- MPCTLV3_SCHEDUTIL_PREDICTIVE_LOAD_CLUSTER_TITANIUM -->
+            <!-- MPCTLV3_LLCC_BWMON_IO_PERCENT -->
+            <!-- MPCTLV3_CPU_LLCC_BW_SAMPLE_MS -->
+            <!-- MPCTLV3_CPU_LLCC_BW_HYST_OPT -->
+            <!-- MPCTLV3_DDR_BWMON_IO_PERCENT -->
+            <!-- MPCTLV3_CORE_CTL_MIN_PARTIAL_CPUS_TITANIUM -->
+            <!-- MPCTLV3_CORE_CTL_ENABLE_TITANIUM -->
+            <!-- MPCTLV3_TITANIUM_CORE_STATE2_OFFLINE_TIMEOUT -->
+            <!-- MPCTLV3_SCHED_GROUP_UP_DOWN_MIGRATE -->
+            <!-- CPUBOOST_MIN_FREQ LITTLE Core resource opcode -->
+            <DYN_PROFILE0>0x40CA4000, 0x4, 0x4144C100, 700000, 0x4144C000, 600000, 0x41444100, 0, 0x41444000, 0, 0x41444300, 0</DYN_PROFILE0>
+            <DYN_PROFILE1>0x40CA4000, 0x4, 0x4143C100, 844, 0x41450100, 0, 0x4144C100, 556800, 0x4144C000, 600000,
+            0x41444100, 0, 0x41444000, 0,0x41444300, 0, 0x41834000, 90, 0x4183C000, 0x10, 0x41838000, 0, 0x43020000, 90, 0x41010300, 1, 0x41014300, 0x14</DYN_PROFILE1>
+            <DYN_PROFILE2>0x40CA4000, 0x8, 0x4143C100, 844, 0x4143C000, 1113, 0x41450100, 0, 0x40C68000, -10, 0x4144C100, 556800, 0x4144C000, 600000,
+            0x41444100, 0, 0x41444000, 0,0x41444300, 0, 0x41834000, 95, 0x4183C000, 0x10, 0x41838000, 0, 0x43020000, 95, 0x41010300, 0, 0x41014300, 0xA, 0x40CE0000, 0x0032000A, 0x40CE0300, 0x00550050</DYN_PROFILE2>
+            <DYN_PROFILE3>0x40CA4000, 0x8, 0x4143C100, 844, 0x4143C000, 1000, 0x41450100, 0,  0x40C68000, -15, 0x4144C100, 556800, 0x4144C000, 600000,
+            0x41444100, 0, 0x41444000, 0,0x41444300, 0, 0x41834000, 100, 0x4183C000, 0x10, 0x41838000, 0, 0x43020000, 100, 0x41010300, 0, 0x41014300, 0xA, 0x40CE0000, 0x0032000A, 0x40CE0300, 0x00550050, 0x41000000, 1</DYN_PROFILE3>
+            <DYN_PROFILE4>0x40CA4000, 0x8, 0x4143C100, 700, 0x4143C000, 900, 0x41450100, 0,  0x40C68000, -15, 0x4144C100, 441000, 0x4144C000, 600000,
+            0x41444100, 0, 0x41444000, 0,0x41444300, 0, 0x41834000, 100, 0x4183C000, 0x10, 0x41838000, 0, 0x43020000, 100, 0x41010300, 0, 0x41014300, 0x0, 0x40800100, 0x1B9, 0x41000000, 1</DYN_PROFILE4>
+            <BROWSER_OPT_RESOURCE>0x43C04000</BROWSER_OPT_RESOURCE>
+        </Profile>
+    </Profiles>
+    <IgnoredApps>
+        <App>com.google.android.gms</App>
+        <App>com.android.vending</App>
+        <App>com.google.android.projection.gearhead</App>
+    </IgnoredApps>
+    <AppliedApps>
+        <App>com.android.gallery3d</App>
+    </AppliedApps>
+</Feature>

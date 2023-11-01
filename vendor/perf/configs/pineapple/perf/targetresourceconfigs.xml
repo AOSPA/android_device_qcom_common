@@ -55,7 +55,7 @@ as anyway perflock calls of these resources would fail. -->
         <Config MajorValue="0x3" MinorValue="0x1D" Node="/proc/sys/walt/sched_busy_hysteresis_enable_cpus" />
         <Config MajorValue="0x3" MinorValue="0x1E" Node="/proc/sys/walt/sched_min_task_util_for_colocation" />
         <Config MajorValue="0x3" MinorValue="0x1F" Node="/proc/sys/walt/sched_min_task_util_for_boost" />
-        <Config MajorValue="0x3" MinorValue="0x20" Node="SPECIAL_NODE - apply_value" Target="pineapple" />
+        <Config MajorValue="0x3" MinorValue="0x20" Node="/proc/sys/walt/sched_per_task_boost" />
         <Config MajorValue="0x3" MinorValue="0x21" Node="/proc/sys/walt/sched_user_hint" />
         <Config MajorValue="0x3" MinorValue="0x22" Supported="no" /> <!-- sched_task_unfilter_nr_windows -->
         <Config MajorValue="0x3" MinorValue="0x23" Node="/proc/sys/walt/sched_coloc_downmigrate_ns" />
@@ -98,14 +98,14 @@ as anyway perflock calls of these resources would fail. -->
         <Config MajorValue="0x6" MinorValue="0x9" Supported="no" Target="pineapple" />
         <!-- CPU_LLCC_BW major new opcodes-->
         <Config MajorValue="0x6" MinorValue="0xA" Supported="no" Target="pineapple" />
-        <Config MajorValue="0x6" MinorValue="0xB" Node="/sys/devices/system/cpu/bus_dcvs/LLCC/240b6400.qcom,bwmon-llcc/up_scale" Target="pineapple" />
+        <Config MajorValue="0x6" MinorValue="0xB" Node="/sys/devices/system/cpu/bus_dcvs/LLCC/240b7400.qcom,bwmon-llcc/up_scale" Target="pineapple" />
         <Config MajorValue="0x6" MinorValue="0xC" Supported="no" />
-        <Config MajorValue="0x6" MinorValue="0xD" Node="/sys/devices/system/cpu/bus_dcvs/LLCC/240b6400.qcom,bwmon-llcc/io_percent" Target="pineapple" />
-        <Config MajorValue="0x6" MinorValue="0xE" Node="/sys/devices/system/cpu/bus_dcvs/LLCC/240b6400.qcom,bwmon-llcc" Target="pineapple" />
-        <Config MajorValue="0x6" MinorValue="0xF" Node="/sys/devices/system/cpu/bus_dcvs/LLCC/240b6400.qcom,bwmon-llcc/sample_ms" Target="pineapple" />
-        <Config MajorValue="0x6" MinorValue="0x10" Node="/sys/devices/system/cpu/bus_dcvs/LLCC/240b6400.qcom,bwmon-llcc/window_ms" Target="pineapple" />
-        <Config MajorValue="0x6" MinorValue="0x11" Node="/sys/devices/system/cpu/bus_dcvs/LLCC/240b6400.qcom,bwmon-llcc/min_freq" Target="pineapple" />
-        <Config MajorValue="0x6" MinorValue="0x12" Node="/sys/devices/system/cpu/bus_dcvs/LLCC/240b6400.qcom,bwmon-llcc/max_freq" Target="pineapple" />
+        <Config MajorValue="0x6" MinorValue="0xD" Node="/sys/devices/system/cpu/bus_dcvs/LLCC/240b7400.qcom,bwmon-llcc/io_percent" Target="pineapple" />
+        <Config MajorValue="0x6" MinorValue="0xE" Node="/sys/devices/system/cpu/bus_dcvs/LLCC/240b7400.qcom,bwmon-llcc" Target="pineapple" />
+        <Config MajorValue="0x6" MinorValue="0xF" Node="/sys/devices/system/cpu/bus_dcvs/LLCC/240b7400.qcom,bwmon-llcc/sample_ms" Target="pineapple" />
+        <Config MajorValue="0x6" MinorValue="0x10" Node="/sys/devices/system/cpu/bus_dcvs/LLCC/240b7400.qcom,bwmon-llcc/window_ms" Target="pineapple" />
+        <Config MajorValue="0x6" MinorValue="0x11" Node="/sys/devices/system/cpu/bus_dcvs/LLCC/240b7400.qcom,bwmon-llcc/min_freq" Target="pineapple" />
+        <Config MajorValue="0x6" MinorValue="0x12" Node="/sys/devices/system/cpu/bus_dcvs/LLCC/240b7400.qcom,bwmon-llcc/max_freq" Target="pineapple" />
 
         <Config MajorValue="0xA" MinorValue="0x5" Supported="no" />
         <Config MajorValue="0xA" MinorValue="0x6" Supported="no" />
@@ -116,7 +116,6 @@ as anyway perflock calls of these resources would fail. -->
         <Config MajorValue="0xB" MinorValue="0x3" Supported="no" />
         <Config MajorValue="0xB" MinorValue="0x6" Supported="no" Target="pineapple" /><!-- disable_ppr -->
         <Config MajorValue="0xB" MinorValue="0xB" Node="SPECIAL_NODE - apply_value" Target="pineapple" />
-        <Config MajorValue="0xB" MinorValue="0xC" Node="SPECIAL_NODE - apply_value" Target="pineapple" />
 
         <!-- GPU -->
         <Config MajorValue="0xA" MinorValue="0xA" Node="SPECIAL_NODE - apply_value" Target="pineapple" />
@@ -165,9 +164,6 @@ as anyway perflock calls of these resources would fail. -->
         <Config MajorValue="0xD" MinorValue="0x13" Supported="no" />
         <Config MajorValue="0xD" MinorValue="0x14" Supported="no" />
         <Config MajorValue="0xD" MinorValue="0x15" Supported="no" />
-        <Config MajorValue="0xD" MinorValue="0x16" Node="/sys/devices/system/cpu/bus_dcvs/L3/soc:qcom,memlat:l3:prime/min_freq" />
-        <Config MajorValue="0xD" MinorValue="0x17" Node="/sys/devices/system/cpu/bus_dcvs/LLCC/soc:qcom,memlat:llcc:gold/min_freq" />
-        <Config MajorValue="0xD" MinorValue="0x18" Node="/sys/devices/system/cpu/bus_dcvs/DDR/soc:qcom,memlat:ddr:gold/min_freq" />
         <Config MajorValue="0xD" MinorValue="0x24" Supported="no" />
         <Config MajorValue="0xD" MinorValue="0x25" Supported="no" />
 
