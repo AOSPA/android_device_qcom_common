@@ -17,8 +17,17 @@
    <Name>VideoPowerOptFeature</Name>
    <Libname>libvideooptfeature.so</Libname>
    <Configs>
+        <VIDEO_OPT>1</VIDEO_OPT>
+        <VIDEO_DYN>1</VIDEO_DYN>
+        <BROWSER_OPT>1</BROWSER_OPT>
         <MAX_CONTENT_FPS>30</MAX_CONTENT_FPS>
-        <MAX_PANEL_FPS>120</MAX_PANEL_FPS>
+        <MAX_HW_CONTENT_FPS>144</MAX_HW_CONTENT_FPS>
+        <MAX_PANEL_FPS>144</MAX_PANEL_FPS>
+        <MAX_SAMPLE_NUM>6</MAX_SAMPLE_NUM>
+        <MAX_WAIT_TIME>1</MAX_WAIT_TIME>
+        <SCALING_DOWN_TASK_LOAD_BOOST_LEVEL_1>-10</SCALING_DOWN_TASK_LOAD_BOOST_LEVEL_1>
+        <SCALING_DOWN_TASK_LOAD_BOOST_LEVEL_2>-20</SCALING_DOWN_TASK_LOAD_BOOST_LEVEL_2>
+
     </Configs>
     <Profiles>
         <Profile>
