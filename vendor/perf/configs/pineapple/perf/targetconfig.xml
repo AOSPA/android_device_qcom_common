@@ -45,7 +45,7 @@
 
          <TargetInfo
              Target="pineapple"
-             NumClusters="3"
+             NumClusters="4"
              TotalNumCores="8"
              SocIds="557,577"
              SynCore="1"
@@ -56,8 +56,9 @@
         />
 
          <ClustersInfo Id="0" NumCores="2" Type="little" />
-         <ClustersInfo Id="1" NumCores="5" Type="big" />
-         <ClustersInfo Id="2" NumCores="1" Type="prime" />
+         <ClustersInfo Id="1" NumCores="3" Type="big" />
+         <ClustersInfo Id="2" NumCores="2" Type="titanium" />
+         <ClustersInfo Id="3" NumCores="1" Type="prime" />
 
     </Config1>
 
