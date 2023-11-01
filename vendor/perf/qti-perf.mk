@@ -38,6 +38,7 @@ endif
 # Packages
 PRODUCT_PACKAGES += \
     android.hardware.thermal@2.0.vendor \
+    android.hardware.thermal-V1-ndk.vendor \
     libavservices_minijail.vendor \
     libpsi.vendor \
     libtflite \
@@ -51,7 +52,7 @@ endif
 
 # Properties
 PRODUCT_VENDOR_PROPERTIES += \
-    ro.vendor.perf-hal.ver=2.3 \
+    ro.vendor.perf-hal.ver=3.0 \
     ro.vendor.extension_library=libqti-perfd-client.so \
     ro.vendor.perf.scroll_opt=true \
     ro.vendor.qspm.enable=true \

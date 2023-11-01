@@ -145,6 +145,8 @@ Cluster 2=> Prime
         <Minor OpcodeValue="0x1" />
         <Minor OpcodeValue="0x2" Cluster="1" WVal="1" RVal="1" />
         <Minor OpcodeValue="0x3" Cluster="1" Exception="Cant compare. Node written as decimal read as binary with spaces." />
+        <Minor OpcodeValue="0x4" Cluster="0" WVal="1" RVal="1" />
+        <Minor OpcodeValue="0x5" Cluster="0" WVal="50" RVal="50" />
     <!-- core hotplug major end-->
 
     <!-- interactive major start -->
@@ -244,6 +246,7 @@ Cluster 2=> Prime
         <Minor OpcodeValue="0x9" />
         <Minor OpcodeValue="0xA" Exception="Node is QESDK-SEC Protected, Should be tested by that." />
         <Minor OpcodeValue="0xB" WVal="32" RVal="32" />
+        <Minor OpcodeValue="0xC" WVal="440" Rval="450" />
     <!-- gpu major end -->
 
     <!-- misc major start -->
@@ -262,6 +265,9 @@ Cluster 2=> Prime
         <Minor OpcodeValue="0xB" Exception="MISC SET_SCHEDULER Resource" />
         <Minor OpcodeValue="0xC" WVal="0x1" RVal="4" />
         <Minor OpcodeValue="0xD" Exception="DISPLAY_DOZE resource" />
+        <Minor OpcodeValue="0xE" Exception="MISC DISPLAY_HEAVY_RT_AFFINE Resource" />
+        <Minor OpcodeValue="0xF" Exception="MISC content_fps Resource" />
+        <Minor OpcodeValue="0x10" WVal="0x1" RVal="1" />
     <!-- misc major end -->
 
     <!-- llcbw hwmon major start -->
@@ -322,7 +328,7 @@ Cluster 2=> Prime
         <Minor OpcodeValue="0x17" WVal="0x49ABC" RVal="301756" />
         <Minor OpcodeValue="0x18" WVal="768000" RVal="768000" />
         <Minor OpcodeValue="0x19" WVal="0x18C" RVal="396" />
-        <Minor OpcodeValue="0x1A" WVal="0x88" RVal="136" />
+        <Minor OpcodeValue="0x1A" WVal="0x4" RVal="4" />
         <Minor OpcodeValue="0x1B" WVal="0x25F" RVal="547000" />
         <Minor OpcodeValue="0x1C" WVal="0xAF" RVal="300000" />
         <Minor OpcodeValue="0x1D" WVal="0x61A9" RVal="25001" />
@@ -360,6 +366,7 @@ Cluster 2=> Prime
         <Minor OpcodeValue="0x3" WVal="0x23" RVal="35" />
         <Minor OpcodeValue="0x4" WVal="0x12C" RVal="300" />
         <Minor OpcodeValue="0x5" WVal="0xDC" RVal="220" />
+        <Minor OpcodeValue="0x6" WVal="2" RVal="2" />
     <!-- sched2 major end -->
 
     </PerfResources>
