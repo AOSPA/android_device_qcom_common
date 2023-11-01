@@ -128,6 +128,8 @@ need to be added just before the end of it's major group. -->
         <Minor OpcodeValue="0x1" Node="SPECIAL_NODE - lock_max_cores" />
         <Minor OpcodeValue="0x2" Node="/sys/devices/system/cpu/cpu0/core_ctl/enable" />
         <Minor OpcodeValue="0x3" Node="/sys/devices/system/cpu/cpu3/core_ctl/not_preferred" />
+        <Minor OpcodeValue="0x5" Node="/sys/devices/system/cpu/cpu5/core_ctl/offline_delay_ms" />
+        <Minor OpcodeValue="0x4" Node="/sys/devices/system/cpu/cpu5/core_ctl/min_partial_cpus" />
     <!-- core hotplug major end-->
 
     <!-- interactive major start -->
@@ -226,6 +228,7 @@ need to be added just before the end of it's major group. -->
         <Minor OpcodeValue="0x9" Node="/sys/class/kgsl/kgsl/proc/%d/state" />
         <Minor OpcodeValue="0xA" Node="SPECIAL_NODE - apply_value" />
         <Minor OpcodeValue="0xB" Node="/sys/class/kgsl/kgsl-3d0/idle_timer" />
+        <Minor OpcodeValue="0xC" Node="/sys/class/kgsl/kgsl-3d0/min_clock_mhz" />
     <!-- gpu major end -->
 
     <!-- misc major start -->
@@ -239,7 +242,9 @@ need to be added just before the end of it's major group. -->
         <Minor OpcodeValue="0x6" Node="/sys/module/process_reclaim/parameters/enable_process_reclaim" />
         <Minor OpcodeValue="0x7" Node="SPECIAL_NODE - disable_pasr" />
         <Minor OpcodeValue="0xB" Node="SPECIAL_NODE - apply_value" />
-        <Minor OpcodeValue="0xC" Node="SPECIAL_NODE - apply_value" />
+        <Minor OpcodeValue="0xC" Node="/proc/sys/walt/sched_pipeline" />
+        <Minor OpcodeValue="0xF" Node="SPECIAL_NODE - content_fps" />
+        <Minor OpcodeValue="0x10" Node="/sys/devices/system/cpu/dynpf/enable_dynpf" />
     <!-- misc major end -->
 
     <!-- llcbw hwmon major start -->
@@ -338,10 +343,22 @@ need to be added just before the end of it's major group. -->
         <Minor OpcodeValue="0x3" Node="/proc/sys/walt/sched_idle_enough" />
         <Minor OpcodeValue="0x4" Node="/proc/sys/walt/sched_em_inflate_pct" />
         <Minor OpcodeValue="0x5" Node="/proc/sys/walt/sched_em_inflate_thres" />
+        <Minor OpcodeValue="0x6" Node="/proc/sys/walt/sched_heavy_nr" />
+<!-- MIUI ADD: Performance_BoostFramework -->
+        <Minor OpcodeValue="0x7" Node="/proc/sys/walt/sched_fmax_cap"/>
+        <Minor OpcodeValue="0x8" Node="/proc/sys/walt/sched_max_freq_partial_halt"/>
+<!-- END Performance_BoostFramework -->
+        <Minor OpcodeValue="0x9" Node="/dev/cpuctl/camera-daemon/cpu.shares" />
+        <Minor OpcodeValue="0xA" Node="/dev/cpuctl/top-app/cpu.shares" />
+        <Minor OpcodeValue="0xB" Node="/dev/cpuctl/background/cpu.shares" />
     <!-- sched2 major end -->
     <!--Add new resource expected value and write value in configs/test/common/perfcommonresourceconfigs.xml
     for support in regression framework-->
 
+    <!-- game solution major start -->
+    <Major OpcodeValue="0x10" />
+        <Minor OpcodeValue="0x0" Node="/proc/sys/walt/sched_auto_penalty" />
+    <!-- game solution major end -->
 
     </PerfResources>
 </ResourceConfigs>

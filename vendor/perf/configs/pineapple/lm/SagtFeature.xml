@@ -1,0 +1,77 @@
+<!--
+/******************************************************************************
+  @file   SAGT Feature.xml
+  @brief  SAGT Feature xml
+
+  DESCRIPTION
+      Each feature has an xml file to define the feature components
+
+  ===========================================================================
+  Copyright (c) 2023 Qualcomm Technologies, Inc.
+  All Rights Reserved.
+  Confidential and Proprietary - Qualcomm Technologies, Inc.
+  ===========================================================================
+******************************************************************************/
+-->
+<!--
+    Follows "Data goes into elements, metadata goes into attributes"
+ -->
+
+<Feature>
+    <Name>SAGT</Name>
+    <Libname>libsagt.so</Libname>
+    <Configs>
+        <Enable>1</Enable>
+    </Configs>
+    <Meters>
+        <SamplesRequired>4</SamplesRequired>
+        <Meter>
+            <Name>Fps</Name>
+            <Triggers>
+                <Trigger>
+                   <Primary>true</Primary>
+                   <AsyncId>VENDOR_HINT_ACTIVITY_START</AsyncId>
+                   <AsyncType>-1</AsyncType>
+                </Trigger>
+
+                <Trigger>
+                    <Primary>true</Primary>
+                    <AsyncId>VENDOR_HINT_ACTIVITY_PAUSE</AsyncId>
+                    <AsyncType>-1</AsyncType>
+                </Trigger>
+
+                <Trigger>
+                    <Primary>true</Primary>
+                    <AsyncId>VENDOR_HINT_ACTIVITY_RESUME</AsyncId>
+                    <AsyncType>-1</AsyncType>
+                </Trigger>
+
+                <Trigger>
+                   <Primary>true</Primary>
+                   <AsyncId>VENDOR_HINT_ACTIVITY_STOP</AsyncId>
+                   <AsyncType>-1</AsyncType>
+                </Trigger>
+                <Trigger>
+                   <Primary>true</Primary>
+                   <AsyncId>VENDOR_HINT_SAGT_DISABLE</AsyncId>
+                   <AsyncType>-1</AsyncType>
+                </Trigger>
+
+            </Triggers>
+            <Configs>
+                <FPS_NODE>/sys/class/drm/sde-crtc-0/measured_fps</FPS_NODE>
+                <FPS_PERIODICITY_NODE>/sys/class/drm/sde-crtc-0/fps_periodicity_ms</FPS_PERIODICITY_NODE>
+            </Configs>
+            <Samples>100</Samples>
+        </Meter>
+    </Meters>
+    <IgnoredApps>
+        <App>com.google.android.gms</App>
+        <App>com.android.vending</App>
+        <App>com.google.android.projection.gearhead</App>
+        <App>com.vectorunit.silver.googleplay</App>
+        <App>com.kiloo.subwaysurf</App>
+        <App>com.imangi.templerun2</App>
+        <App>com.ogien.trainsim</App>
+    </IgnoredApps>
+</Feature>
