@@ -1,1 +1,0 @@
-allow surfaceflinger vendor_firmware_file:dir { getattr open read search };
