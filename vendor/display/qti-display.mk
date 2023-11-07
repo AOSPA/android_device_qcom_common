@@ -16,6 +16,10 @@
 -include hardware/qcom/display/config/display-board.mk
 -include hardware/qcom/display/config/display-product.mk
 
+# Advanced SF Offsets Config
+PRODUCT_COPY_FILES += \
+    device/qcom/common/vendor/display/advanced_sf_offsets.xml:$(TARGET_COPY_OUT_VENDOR)/etc/display/advanced_sf_offsets.xml
+
 # Enable Legacy Lights HAL for <5.10 targets
 ifneq (,$(filter 3.18 4.4 4.9 4.14 4.19 5.4, $(TARGET_KERNEL_VERSION)))
 
