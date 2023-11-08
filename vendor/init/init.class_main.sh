@@ -47,46 +47,62 @@ esac
 case "$baseband" in
     "msm" | "csfb" | "svlte2a" | "mdm" | "mdm2" | "sglte" | "sglte2" | "dsda2" | "unknown" | "dsda3" | "sdm" | "sdx" | "sm6")
 
-    start vendor.qcrild
-
-    case "$baseband" in
-        "svlte2a" | "csfb")
-          start qmiproxy
-        ;;
-        "sglte" | "sglte2" )
-          if [ "x$sgltecsfb" != "xtrue" ]; then
-              start qmiproxy
-          else
-              setprop persist.vendor.radio.voice.modem.index 0
-          fi
-        ;;
-    esac
-
-    multisim=`getprop persist.radio.multisim.config`
-
-    if [ "$multisim" = "dsds" ] || [ "$multisim" = "dsda" ]; then
-        start vendor.qcrild2
-    elif [ "$multisim" = "tsts" ]; then
-        start vendor.qcrild2
-        start vendor.qcrild3
+    # start qcrild only for targets on which modem is present
+    # modemvalue 0x0 indicates Modem online
+    # modemvalue 0x1 indicates Modem IP is not functional or disabled
+    # modemvalue 0x2 indicates Modem offline
+    modemvalue="0x0"
+    if [ -f /sys/devices/soc0/modem ]; then
+        modemvalue=`cat /sys/devices/soc0/modem`
     fi
 
-    case "$datamode" in
-        "tethered")
-            start vendor.dataqti
-            if [ "$low_ram" != "true" ]; then
-              start vendor.dataadpl
-            fi
+    if [ $modemvalue != "0x1" ] && [ $modemvalue != "0x2" ]; then
+        start vendor.qcrild
+
+        case "$baseband" in
+            "svlte2a" | "csfb")
+              start qmiproxy
             ;;
-        "concurrent")
-            start vendor.dataqti
-            if [ "$low_ram" != "true" ]; then
-              start vendor.dataadpl
-            fi
+            "sglte" | "sglte2" )
+              if [ "x$sgltecsfb" != "xtrue" ]; then
+                  start qmiproxy
+              else
+                  setprop persist.vendor.radio.voice.modem.index 0
+              fi
             ;;
-        *)
-            ;;
-    esac
+        esac
+
+        multisim=`getprop persist.radio.multisim.config`
+
+        if [ "$multisim" = "dsds" ] || [ "$multisim" = "dsda" ]; then
+            start vendor.qcrild2
+        elif [ "$multisim" = "tsts" ]; then
+            start vendor.qcrild2
+            start vendor.qcrild3
+        fi
+
+        case "$datamode" in
+            "tethered")
+                start vendor.dataqti
+                if [ "$low_ram" != "true" ]; then
+                  start vendor.dataadpl
+                fi
+                ;;
+            "concurrent")
+                start vendor.dataqti
+                if [ "$low_ram" != "true" ]; then
+                  start vendor.dataadpl
+                fi
+                ;;
+            *)
+                ;;
+        esac
+    else
+        setprop ro.vendor.radio.noril yes
+        stop vendor.qcrild
+        stop vendor.qcrild2
+        stop vendor.qcrild3
+    fi
 esac
 
 #
