@@ -1,4 +1,4 @@
-# Copyright (C) 2022 Paranoid Android
+# Copyright (C) 2023 Paranoid Android
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -62,7 +62,7 @@ PRODUCT_VENDOR_PROPERTIES += \
     vendor.perf.framepacing.enable=1
 endif
 
-ifneq (,$(filter 5.10 5.15, $(TARGET_KERNEL_VERSION)))
+ifneq (,$(filter 4.19 5.4 5.10 5.15, $(TARGET_KERNEL_VERSION)))
 PRODUCT_VENDOR_PROPERTIES += \
     ro.vendor.beluga.p=0x3 \
     ro.vendor.beluga.c=0x4800 \
