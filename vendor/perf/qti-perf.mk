@@ -18,9 +18,16 @@ PRODUCT_SOONG_NAMESPACES += \
 TARGET_PERF_COMPONENT_VARIANT := perf
 
 # Configs
+# Use the configs for TARGET_BOARD_PLATFORM unless otherwise specified
+ifeq ($(TARGET_BOARD_PLATFORM)$(TARGET_BOARD_SUFFIX),bengal_515)
+    TARGET_PERF_DIR := bengal_515
+else
+    TARGET_PERF_DIR := $(TARGET_BOARD_PLATFORM)
+endif
+
 PRODUCT_COPY_FILES += \
     $(call find-copy-subdir-files,*,$(QCOM_COMMON_PATH)/vendor/perf/configs/common,$(TARGET_COPY_OUT_VENDOR)/etc) \
-    $(call find-copy-subdir-files,*,$(QCOM_COMMON_PATH)/vendor/perf/configs/$(TARGET_BOARD_PLATFORM),$(TARGET_COPY_OUT_VENDOR)/etc) \
+    $(call find-copy-subdir-files,*,$(QCOM_COMMON_PATH)/vendor/perf/configs/$(TARGET_PERF_DIR),$(TARGET_COPY_OUT_VENDOR)/etc) \
     $(call find-copy-subdir-files,*,$(QCOM_COMMON_PATH)/vendor/perf/configs/test,$(TARGET_COPY_OUT_VENDOR)/etc)
 
 # Disable IOP HAL for select platforms.
