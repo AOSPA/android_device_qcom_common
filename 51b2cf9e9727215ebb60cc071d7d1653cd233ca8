@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "5d15e284_867d9855",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 5
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000890
+      },
+      "writtenOn": "2023-11-08T15:30:44Z",
+      "side": 1,
+      "message": "This should be guarded. Not everyone needs to build OMX when Codec2 works fine. Also fix the typo on the commit message.",
+      "revId": "51b2cf9e9727215ebb60cc071d7d1653cd233ca8",
+      "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
+    }
+  ]
+}
