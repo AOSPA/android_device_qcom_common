@@ -1,2 +1,0 @@
-#poweropt-service
-/(vendor|system/vendor)/bin/poweropt-service u:object_r:vendor_hal_poweroptservice_qti_exec:s0
