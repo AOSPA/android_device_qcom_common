@@ -34,6 +34,24 @@
       "parentUuid": "5d15e284_867d9855",
       "revId": "51b2cf9e9727215ebb60cc071d7d1653cd233ca8",
       "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "721d7444_38ed0877",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 5
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000012
+      },
+      "writtenOn": "2023-11-08T22:39:30Z",
+      "side": 1,
+      "message": "that being said, should we just set TARGET_SUPPORTS_OMX_SERVICE for SoCs that don\u0027t work?  What determines whether an SoC works or doesn\u0027t?  Can we make them all work?",
+      "parentUuid": "5b761e51_eadb11a2",
+      "revId": "51b2cf9e9727215ebb60cc071d7d1653cd233ca8",
+      "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
     }
   ]
 }
