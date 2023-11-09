@@ -69,6 +69,24 @@
       "parentUuid": "80571e31_db6ddaf7",
       "revId": "ffa84a83d3be252d5bd6c54900450522ee2fd2ca",
       "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "415e15a4_63260a16",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 8
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000498
+      },
+      "writtenOn": "2023-11-09T08:34:33Z",
+      "side": 1,
+      "message": "Just in case if you were wondering who added support for each legacy platforms:\n\n- sdm710, sdm845 and lito got QTI C2 media support by Google\n- sm6150, atoll, msmnile and kona got QTI C2 media support by Qualcomm",
+      "parentUuid": "7e9e843f_4d989226",
+      "revId": "ffa84a83d3be252d5bd6c54900450522ee2fd2ca",
+      "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
     }
   ]
 }
