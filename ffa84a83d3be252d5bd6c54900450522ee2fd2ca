@@ -33,6 +33,24 @@
       "message": "I don\u0027t see any reason to keep supporting OMX on legacy SoCs who can fully rely on C2 codecs and it wouldn\u0027t bring anything to those SoC to keep supporting OMX, especially when Google finally decided to drop OMX for C2 instead.\n\nA guarding flag should be applied to those legacy SoCs who are unable to use QTI C2 media service imo",
       "revId": "ffa84a83d3be252d5bd6c54900450522ee2fd2ca",
       "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "80571e31_db6ddaf7",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 8
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000012
+      },
+      "writtenOn": "2023-11-09T07:42:46Z",
+      "side": 1,
+      "message": "does OMX allow more hardware decoding on legacy platforms? what needs to be done for legacy to support C2?",
+      "parentUuid": "96361f13_e90adcd2",
+      "revId": "ffa84a83d3be252d5bd6c54900450522ee2fd2ca",
+      "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
     }
   ]
 }
