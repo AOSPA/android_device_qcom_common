@@ -1,0 +1,115 @@
+<!--
+/******************************************************************************
+  @file   QAPE.xml
+  @brief  Adaptive Performance Engine
+
+  DESCRIPTION
+      Each feature has an xml file to define the feature components
+
+  ===========================================================================
+  Copyright (c) 2022 Qualcomm Technologies, Inc.
+  All Rights Reserved.
+  Confidential and Proprietary - Qualcomm Technologies, Inc.
+  ===========================================================================
+******************************************************************************/
+-->
+<!--
+    Follows "Data goes into elements, metadata goes into attributes"
+ -->
+
+<Feature>
+    <Name>QAPE</Name>
+    <Libname>libqapesdk.so</Libname>
+    <Profiles>
+        <Profile>
+            <!-- SCHED_WINDOW_TICKS_UPDATE -->
+            <RENDER_RATE>
+                0x40CA4000,0
+            </RENDER_RATE>
+            <!-- SLB -->
+            <LOAD_RATE_CPU>
+                0x40C68000,0,0x40C68010,0,0x40C68020,0,0x40C68030,0
+            </LOAD_RATE_CPU>
+            <!-- GPU_LOAD_MOD_PERCENT -->
+            <LOAD_RATE_GPU>
+                0X42828000,0
+            </LOAD_RATE_GPU>
+            <!-- DDR boost -->
+            <LOAD_RATE_MEM>
+                0x43488000,0xBB800
+            </LOAD_RATE_MEM>
+            <!-- SCHED_TASK_BOOST -->
+            <HIGH_CPU_UTIL>
+                0x40C80000,0
+            </HIGH_CPU_UTIL>
+            <!-- SCHED_LOW_LATENCY -->
+            <LOW_LAT>
+                0x40CD0000,0
+            </LOW_LAT>
+            <!-- SET_SCHEDULER -->
+            <LOW_CPU_UTIL>
+                0x42C2C000,0
+            </LOW_CPU_UTIL>
+            <!-- SCHED_THREAD_PIPELINE -->
+            <THREAD_PIPELINE>
+                0x42C30000,0
+            </THREAD_PIPELINE>
+        </Profile>
+    </Profiles>
+    <Triggers>
+        <Trigger>
+           <Primary>true</Primary>
+           <AsyncId>VENDOR_HINT_ACTIVITY_START</AsyncId>
+           <AsyncType>-1</AsyncType>
+        </Trigger>
+
+        <Trigger>
+            <Primary>true</Primary>
+            <AsyncId>VENDOR_HINT_ACTIVITY_PAUSE</AsyncId>
+            <AsyncType>-1</AsyncType>
+        </Trigger>
+
+        <Trigger>
+            <Primary>true</Primary>
+            <AsyncId>VENDOR_HINT_ACTIVITY_RESUME</AsyncId>
+            <AsyncType>-1</AsyncType>
+        </Trigger>
+
+        <Trigger>
+           <Primary>true</Primary>
+           <AsyncId>VENDOR_HINT_ACTIVITY_STOP</AsyncId>
+           <AsyncType>-1</AsyncType>
+        </Trigger>
+
+        <Trigger>
+           <Primary>true</Primary>
+           <AsyncId>VENDOR_HINT_PICARD_TOP_APP</AsyncId>
+           <AsyncType>1</AsyncType>
+        </Trigger>
+        <Trigger>
+           <Primary>true</Primary>
+           <AsyncId>VENDOR_HINT_PICARD_RENDER_RATE</AsyncId>
+           <AsyncType>1</AsyncType>
+        </Trigger>
+        <Trigger>
+           <Primary>true</Primary>
+           <AsyncId>VENDOR_HINT_PICARD_LOW_LAT</AsyncId>
+           <AsyncType>1</AsyncType>
+        </Trigger>
+        <Trigger>
+           <Primary>true</Primary>
+           <AsyncId>VENDOR_HINT_PICARD_HIGH_CPUUTIL</AsyncId>
+           <AsyncType>1</AsyncType>
+        </Trigger>
+        <Trigger>
+           <Primary>true</Primary>
+           <AsyncId>VENDOR_HINT_PICARD_LOAD_CHANGED</AsyncId>
+           <AsyncType>1</AsyncType>
+        </Trigger>
+    </Triggers>
+    <IgnoredApps>
+        <App>com.google.android.gms</App>
+        <App>com.android.vending</App>
+        <App>com.google.android.projection.gearhead</App>
+    </IgnoredApps>
+</Feature>
