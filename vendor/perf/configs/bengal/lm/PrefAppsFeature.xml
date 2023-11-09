@@ -1,0 +1,78 @@
+<!--
+/******************************************************************************
+  @file    PrefAppsFeature.xml
+  @brief   Implementation of preferred apps feature
+
+  DESCRIPTION
+      Each feature has an xml file to define the components
+
+  =========================================================================
+  Copyright (c) 2022 Qualcomm Technologies, Inc.
+  All Rights Reserved.
+  Confidential and Proprietary - Qualcomm Technologies, Inc.
+  =========================================================================
+******************************************************************************/
+-->
+
+<Feature>
+    <Name>PreferredApps</Name>
+    <Libname>libprefapps.so</Libname>
+    <Meters>
+        <Meter>
+            <Name>PreferredApps</Name>
+            <Triggers>
+                <Trigger>
+                    <Primary>False</Primary>
+                    <AsyncId>VENDOR_HINT_BINDAPP</AsyncId>
+                    <AsyncType>0</AsyncType>
+                </Trigger>
+                <Trigger>
+                    <Primary>False</Primary>
+                    <AsyncId>VENDOR_HINT_FIRST_DRAW</AsyncId>
+                    <AsyncType>0</AsyncType>
+                </Trigger>
+                <Trigger>
+                    <Primary>False</Primary>
+                    <AsyncId>VENDOR_HINT_KILL</AsyncId>
+                    <AsyncType>0</AsyncType>
+                </Trigger>
+                <Trigger>
+                    <Primary>False</Primary>
+                    <AsyncId>VENDOR_HINT_WARM_LAUNCH</AsyncId>
+                    <AsyncType>0</AsyncType>
+                </Trigger>
+                <Trigger>
+                    <Primary>False</Primary>
+                    <AsyncId>VENDOR_HINT_PKG_INSTALL</AsyncId>
+                    <AsyncType>0</AsyncType>
+                </Trigger>
+                <Trigger>
+                    <Primary>False</Primary>
+                    <AsyncId>VENDOR_HINT_PKG_UNINSTALL</AsyncId>
+                    <AsyncType>0</AsyncType>
+                </Trigger>
+                <Trigger>
+                    <Primary>False</Primary>
+                    <AsyncId>VENDOR_HINT_APP_UPDATE</AsyncId>
+                    <AsyncType>0</AsyncType>
+                </Trigger>
+                <Trigger>
+                    <Primary>False</Primary>
+                    <AsyncId>VENDOR_HINT_PKG_SPEED</AsyncId>
+                    <AsyncType>1</AsyncType>
+                </Trigger>
+                <Trigger>
+                    <Primary>False</Primary>
+                    <AsyncId>VENDOR_HINT_PKG_SPEED</AsyncId>
+                    <AsyncType>2</AsyncType>
+                </Trigger>
+                <Trigger>
+                    <Primary>False</Primary>
+                    <AsyncId>VENDOR_HINT_FIRST_LAUNCH_BOOST</AsyncId>
+                    <AsyncType>0</AsyncType>
+                </Trigger>
+            </Triggers>
+            <Samples>1</Samples>
+        </Meter>
+    </Meters>
+</Feature>
