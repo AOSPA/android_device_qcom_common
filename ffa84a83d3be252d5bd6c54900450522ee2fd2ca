@@ -51,6 +51,24 @@
       "parentUuid": "96361f13_e90adcd2",
       "revId": "ffa84a83d3be252d5bd6c54900450522ee2fd2ca",
       "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "7e9e843f_4d989226",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 8
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000498
+      },
+      "writtenOn": "2023-11-09T08:30:10Z",
+      "side": 1,
+      "message": "OMX decoding doesn\u0027t really bring more for the legacy SoCs who supports QTI C2 media as they already have their counterpart as a C2 codec.\n\nFor the legacy SoCs who doesn\u0027t support QTI C2 media by either Qualcomm or Google (msm8937, msm8998, sdm660, trinket and bengal iirc), we would need to know how Qualcomm or Google did their media_codecs_c2.xml and media_codecs_c2_performance.xml for the available QTI OMX codecs and profile (avc, hevc, hveic, etc) and if any modifications needs to be done on the QTI C2 media service itself (by exemple if it check SoC id to enable some QTI C2 codecs)",
+      "parentUuid": "80571e31_db6ddaf7",
+      "revId": "ffa84a83d3be252d5bd6c54900450522ee2fd2ca",
+      "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
     }
   ]
 }
