@@ -19,7 +19,7 @@ TARGET_PERF_COMPONENT_VARIANT := perf
 
 # Configs
 # Use the configs for TARGET_BOARD_PLATFORM unless otherwise specified
-ifeq $((TARGET_BOARD_SUFFIX),bengal_515)
+ifeq ($(TARGET_BOARD_PLATFORM)$(TARGET_BOARD_SUFFIX),bengal_515)
     TARGET_PERF_DIR := bengal_515
 else
     TARGET_PERF_DIR := $(TARGET_BOARD_PLATFORM)
