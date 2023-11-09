@@ -25,6 +25,14 @@ else
     TARGET_PERF_DIR := $(TARGET_BOARD_PLATFORM)
 endif
 
+ifeq (,$(filter 5.10 5.15, $(TARGET_KERNEL_VERSION)))
+PRODUCT_COPY_FILES += \
+    $(QCOM_COMMON_PATH)/vendor/perf/configs/common/perf/walt/commonresourceconfigs.xml:$(TARGET_COPY_OUT_VENDOR)/etc/perf/commonresourceconfigs.xml
+else
+PRODUCT_COPY_FILES += \
+    $(QCOM_COMMON_PATH)/vendor/perf/configs/common/perf/schedutil/commonresourceconfigs.xml:$(TARGET_COPY_OUT_VENDOR)/etc/perf/commonresourceconfigs.xml
+endif 
+
 PRODUCT_COPY_FILES += \
     $(call find-copy-subdir-files,*,$(QCOM_COMMON_PATH)/vendor/perf/configs/common,$(TARGET_COPY_OUT_VENDOR)/etc) \
     $(call find-copy-subdir-files,*,$(QCOM_COMMON_PATH)/vendor/perf/configs/$(TARGET_PERF_DIR),$(TARGET_COPY_OUT_VENDOR)/etc) \
