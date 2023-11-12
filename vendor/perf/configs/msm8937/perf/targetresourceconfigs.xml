@@ -129,5 +129,35 @@ as anyway perflock calls of these resources would fail. -->
 
         <Config MajorValue="0xD" MinorValue="0x0" Supported="no" /> <!--  l3_min_freq -->
 
+        <!-- PA: Disable unsupported nodes on 5.4 and lower -->
+        <Config MajorValue="0x2" MinorValue="0x2" Supported="no" />
+        <Config MajorValue="0x2" MinorValue="0x3" Supported="no" />
+        <Config MajorValue="0x3" MinorValue="0x20" Node="/proc/%d/sched_boost" />
+        <Config MajorValue="0x3" MinorValue="0x34" Node="/proc/%d/sched_low_latency" />
+        <Config MajorValue="0x5" MinorValue="0x14" Supported="no" />
+        <Config MajorValue="0x5" MinorValue="0x15" Supported="no" />
+        <Config MajorValue="0x5" MinorValue="0x16" Supported="no" />
+        <Config MajorValue="0xA" MinorValue="0xA" Node="/sys/class/kgsl/kgsl-3d0/devfreq/mod_percent" />
+        <Config MajorValue="0xB" MinorValue="0x10" Supported="no" />
+        <Config MajorValue="0xD" MinorValue="0x26" Supported="no" />
+        <Config MajorValue="0xD" MinorValue="0x27" Supported="no" />
+        <Config MajorValue="0xD" MinorValue="0x28" Supported="no" />
+        <Config MajorValue="0xD" MinorValue="0x29" Supported="no" />
+        <Config MajorValue="0xD" MinorValue="0x29" Supported="no" />
+        <Config MajorValue="0xF" MinorValue="0x0" Supported="no" />
+        <Config MajorValue="0xF" MinorValue="0x0" Supported="no" />
+        <Config MajorValue="0xF" MinorValue="0x1" Supported="no" />
+        <Config MajorValue="0xF" MinorValue="0x2" Supported="no" />
+        <Config MajorValue="0xF" MinorValue="0x3" Supported="no" />
+        <Config MajorValue="0xF" MinorValue="0x4" Supported="no" />
+        <Config MajorValue="0xF" MinorValue="0x5" Supported="no" />
+        <Config MajorValue="0xF" MinorValue="0x6" Supported="no" />
+        <Config MajorValue="0xF" MinorValue="0x7" Supported="no" />
+        <Config MajorValue="0xF" MinorValue="0x8" Supported="no" />
+        <Config MajorValue="0xF" MinorValue="0x9" Supported="no" />
+        <Config MajorValue="0xF" MinorValue="0xA" Supported="no" />
+        <Config MajorValue="0xF" MinorValue="0x" Supported="no" />
+        <Config MajorValue="0x10" MinorValue="0x0" Supported="no" />
+
     </PerfResources>
 </ResourceConfigs>
