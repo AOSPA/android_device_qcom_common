@@ -36,6 +36,10 @@ binder_call(vendor_hal_perf_client, vendor_hal_perf_server)
 
 binder_call(vendor_hal_perf_default, hal_pasrmanager_memory_qti)
 
+#Allow AIDL base perf-hal communication
+hal_attribute_service(vendor_hal_perf, vendor_hal_perf2_service)
+binder_call(vendor_hal_perf_server, servicemanager)
+
 # Add hwservice related rules
 add_hwservice(vendor_hal_perf_server, vendor_hal_perf_hwservice)
 allow vendor_hal_perf_client vendor_hal_perf_hwservice:hwservice_manager find;

@@ -280,6 +280,7 @@
 /(vendor|system/vendor)/bin/hw/vendor\.display\.color@1\.0-service            u:object_r:hal_display_color_default_exec:s0
 /(vendor|system/vendor)/bin/hw/vendor\.qti\.hardware\.perf@1\.0-service       u:object_r:vendor_hal_perf_default_exec:s0
 /(vendor|system/vendor)/bin/hw/vendor\.qti\.hardware\.perf@2\.[0-2]-service   u:object_r:vendor_hal_perf_default_exec:s0
+/(vendor|system/vendor)/bin/hw/vendor\.qti\.hardware\.perf2-hal-service            u:object_r:vendor_hal_perf_default_exec:s0
 /(vendor|system/vendor)/bin/ssgqmigd            u:object_r:ssgqmigd_exec:s0
 /(vendor|system/vendor)/bin/hw/vendor\.qti\.hardware\.iop@1\.0-service        u:object_r:hal_iop_default_exec:s0
 /(vendor|system/vendor)/bin/hw/vendor\.qti\.hardware\.iop@2\.0-service        u:object_r:hal_iop_default_exec:s0
@@ -696,6 +697,7 @@
 /vendor/lib(64)?/vendor\.qti\.hardware\.perf@2\.0\.so    u:object_r:same_process_hal_file:s0
 /vendor/lib(64)?/vendor\.qti\.hardware\.perf@2\.1\.so    u:object_r:same_process_hal_file:s0
 /vendor/lib(64)?/vendor\.qti\.hardware\.perf@2\.2\.so    u:object_r:same_process_hal_file:s0
+/vendor/lib(64)?/vendor\.qti\.hardware\.perf2-V1-ndk\.so    u:object_r:same_process_hal_file:s0
 
 # libGLESv2_adreno depends on this
 /vendor/lib(64)?/libllvm-glnext\.so         u:object_r:same_process_hal_file:s0
