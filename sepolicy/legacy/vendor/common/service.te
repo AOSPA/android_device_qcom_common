@@ -37,3 +37,4 @@ type imsrcs_service,              service_manager_type;
 type improve_touch_service,       service_manager_type;
 type dtseagleservice_service,     service_manager_type;
 type gba_auth_service,            service_manager_type;
+type vendor_hal_perf2_service,           hal_service_type, protected_service, service_manager_type;
