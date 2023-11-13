@@ -57,12 +57,8 @@ PRODUCT_VENDOR_PROPERTIES += \
     ro.vendor.perf.scroll_opt=true \
     ro.vendor.qspm.enable=true \
     vendor.power.pasr.enabled=false \
-    vendor.pasr.activemode.enabled=false
-
-ifeq ($(TARGET_KERNEL_VERSION),5.15)
-PRODUCT_VENDOR_PROPERTIES += \
+    vendor.pasr.activemode.enabled=false \
     vendor.perf.framepacing.enable=1
-endif
 
 ifneq (,$(filter 4.19 5.4 5.10 5.15, $(TARGET_KERNEL_VERSION)))
 PRODUCT_VENDOR_PROPERTIES += \
