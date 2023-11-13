@@ -1,2 +1,25 @@
+# DCVS nodes
+genfscon sysfs /devices/platform/soc/[0-9]+.qcom,[a-z0-9]-cpu-l3-lat/devfreq u:object_r:vendor_sysfs_devfreq:s0
+genfscon sysfs /devices/platform/soc/[0-9]+.qcom,[a-z0-9]-cpu-l3-latfloor/devfreq u:object_r:vendor_sysfs_devfreq:s0
+genfscon sysfs /devices/platform/soc/[0-9]+.qcom,devfreq-l3/[0-9]+.qcom,devfreq-l3:qcom,[a-z0-9]-cpu-l3-lat/devfreq u:object_r:vendor_sysfs_devfreq:s0
+genfscon sysfs /devices/platform/soc/[0-9]+.qcom,snoop-l3-bw/devfreq u:object_r:vendor_sysfs_devfreq:s0
+genfscon sysfs /devices/platform/soc/soc:qcom,cpu-cpu-llcc-bw/devfreq u:object_r:vendor_sysfs_devfreq:s0
+genfscon sysfs /devices/platform/soc/soc:qcom,cpu-llcc-ddr-bw/devfreq u:object_r:vendor_sysfs_devfreq:s0
+genfscon sysfs /devices/platform/soc/soc:qcom,[a-z0-9]-cpu-llcc-lat/devfreq u:object_r:vendor_sysfs_devfreq:s0
+genfscon sysfs /devices/platform/soc/soc:qcom,[a-z0-9]-llcc-ddr-lat/devfreq u:object_r:vendor_sysfs_devfreq:s0
+genfscon sysfs /devices/platform/soc/soc:qcom,[a-z0-9]-cpu-ddr-latfloor/devfreq u:object_r:vendor_sysfs_devfreq:s0
+genfscon sysfs /devices/platform/soc/soc:qcom,[a-z0-9]-cpu-ddr-latfloor/devfreq u:object_r:vendor_sysfs_devfreq:s0
+genfscon sysfs /devices/platform/soc/soc:qcom,[a-z0-9]-cpu-llcc-latfloor/devfreq u:object_r:vendor_sysfs_devfreq:s0
+genfscon sysfs /devices/platform/soc/soc:qcom,[a-z0-9]-cpu-ddr-latfloor/devfreq u:object_r:vendor_sysfs_devfreq:s0
+genfscon sysfs /devices/platform/soc/soc:qcom,[a-z0-9]-cpu-llcc-lat/devfreq u:object_r:vendor_sysfs_devfreq:s0
+genfscon sysfs /devices/platform/soc/soc:qcom,[a-z0-9]-llcc-ddr-lat/devfreq u:object_r:vendor_sysfs_devfreq:s0
+genfscon sysfs /devices/platform/soc/soc:qcom,[a-z0-9]-cpu-ddr-qoslat/devfreq u:object_r:vendor_sysfs_devfreq:s0
+genfscon sysfs /devices/platform/soc/soc:qcom,[a-z0-9]-cpu-ddr-qoslatfloor/devfreq u:object_r:vendor_sysfs_devfreq:s0
+genfscon sysfs /devices/platform/soc/soc:qcom,cdsp-cdsp-l3-lat/devfreq u:object_r:vendor_sysfs_devfreq:s0
+genfscon sysfs /devices/platform/soc/soc:qcom,npu-npu-ddr-bw/devfreq u:object_r:vendor_sysfs_devfreq:s0
+genfscon sysfs /devices/platform/soc/soc:qcom,npudsp-npu-ddr-bw/devfreq u:object_r:vendor_sysfs_devfreq:s0
+genfscon sysfs /devices/system/cpu/memlat/[a-z0-9]_memlat/[a-z0-9]-cpu-l3-lat u:object_r:vendor_sysfs_devfreq:s0
+genfscon sysfs /sys/devices/system/cpu/memlat/[a-z0-9]_memlat/[a-z0-9]-cpu-l3-lat u:object_r:vendor_sysfs_devfreq:s0
+
 # healthd-ext
 genfscon sysfs /devices/platform/soc/soc:qcom,pmic_glink/soc:qcom,pmic_glink:qcom,ucsi/power_supply/ucsi-source-psy-soc:qcom,pmic_glink:qcom,ucsi1 u:object_r:vendor_sysfs_battery_supply:s0
