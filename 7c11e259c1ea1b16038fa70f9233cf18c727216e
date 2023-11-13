@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "9795102b_69c4c170",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000012
+      },
+      "writtenOn": "2023-11-13T18:32:12Z",
+      "side": 1,
+      "message": "nope, default is new, legacy has to override.  Otherwise, we\u0027d have to add this every time there\u0027s a new SoC.  We want this to be static.",
+      "revId": "7c11e259c1ea1b16038fa70f9233cf18c727216e",
+      "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
+    }
+  ]
+}
