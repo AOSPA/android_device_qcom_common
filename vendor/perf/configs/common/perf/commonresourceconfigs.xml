@@ -183,10 +183,6 @@ need to be added just before the end of it's major group. -->
         <Minor OpcodeValue="0xE" Node="SPECIAL_NODE - llcbw_hwmon_hyst_opt" />
         <Minor OpcodeValue="0xF" Node="/sys/class/devfreq/soc:qcom,cpu-cpu-llcc-bw/bw_hwmon/sample_ms" />
         <Minor OpcodeValue="0x10" Node="/sys/class/devfreq/soc:qcom,cpu-cpu-llcc-bw/polling_interval" />
-        <!--Here onwards are the path for new frequency opcodes for  CPU_LLCC_BW V2 nodes to support
-             new values from kernel 5.10 onwards-->
-        <Minor OpcodeValue="0x11" Node="/sys/devices/system/cpu/bus_dcvs/LLCC/190b6400.qcom,bwmon-llcc/min_freq" />
-        <Minor OpcodeValue="0x12" Node="/sys/devices/system/cpu/bus_dcvs/LLCC/190b6400.qcom,bwmon-llcc/max_freq" />
     <!-- cpubw hwmon major end -->
 
     <!-- video major start -->
@@ -267,12 +263,6 @@ need to be added just before the end of it's major group. -->
         <Minor OpcodeValue="0xC" Node="/sys/class/devfreq/soc:qcom,cpu-llcc-ddr-bw/polling_interval" />
         <Minor OpcodeValue="0xD" Node="/sys/class/devfreq/soc:qcom,cpu-llcc-ddr-bw/bw_hwmon/sample_ms" />
         <Minor OpcodeValue="0xE" Node="/sys/class/devfreq/soc:qcom,cpu-llcc-ddr-bw/bw_hwmon/idle_mbps" />
-        <!--Here onwards are the path for new frequency opcodes for LLCC_DDR_BW V2 nodes to support
-            new values from kernel 5.10 onwards-->
-        <Minor OpcodeValue="0xF" Node="/sys/devices/system/cpu/bus_dcvs/DDR/19091000.qcom,bwmon-ddr/min_freq" />
-        <Minor OpcodeValue="0x10" Node="/sys/devices/system/cpu/bus_dcvs/DDR/19091000.qcom,bwmon-ddr/max_freq" />
-        <Minor OpcodeValue="0x11" Node="/sys/class/devfreq/soc:qcom,cpu-llcc-ddr-bw/bw_hwmon/use_ab" />
-        <Minor OpcodeValue="0x12" Node="/sys/devices/system/cpu/bus_dcvs/DDR/19091000.qcom,bwmon-ddr/ab_scale" />
 
     <!-- llcbw hwmon major end -->
 
