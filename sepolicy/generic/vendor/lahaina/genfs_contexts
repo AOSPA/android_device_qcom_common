@@ -58,11 +58,6 @@ genfscon sysfs /devices/platform/soc/a600000.ssusb/wakeup/wakeup u:object_r:sysf
 genfscon sysfs /devices/platform/soc/a800000.ssusb/a800000.dwc3/udc/a800000.dwc3 u:object_r:vendor_sysfs_usb_controller:s0
 genfscon sysfs /devices/platform/soc/a800000.ssusb/wakeup/wakeup u:object_r:sysfs_wakeup:s0
 
-# CPUCP nodes
-genfscon sysfs /devices/system/cpu/memlat/c0_memlat/cpu0-cpu-l3-lat u:object_r:vendor_sysfs_devfreq:s0
-genfscon sysfs /devices/system/cpu/memlat/c4_memlat/cpu4-cpu-l3-lat u:object_r:vendor_sysfs_devfreq:s0
-genfscon sysfs /devices/system/cpu/memlat/c7_memlat/cpu7-cpu-l3-lat u:object_r:vendor_sysfs_devfreq:s0
-
 #Trusted UI
 genfscon sysfs /devices/platform/soc/990000.i2c/i2c-0/0-0049/trusted_touch_enable u:object_r:vendor_sysfs_trusted_touch_enable:s0
 genfscon sysfs /devices/platform/soc/990000.i2c/i2c-0/0-0038/trusted_touch_enable u:object_r:vendor_sysfs_trusted_touch_enable:s0
