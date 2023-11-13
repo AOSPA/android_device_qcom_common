@@ -109,19 +109,6 @@ genfscon sysfs /devices/platform/soc/6048000.tmc/coresight-tmc-etr u:object_r:ve
 genfscon sysfs /devices/platform/soc/6002000.stm/coresight-stm u:object_r:vendor_sysfs_qdss_dev:s0
 genfscon sysfs /devices/platform/soc/91866f0.hwevent/coresight-hwevent u:object_r:vendor_sysfs_qdss_dev:s0
 genfscon sysfs /devices/platform/soc/6b0e000.csr/coresight-swao-csr u:object_r:vendor_sysfs_qdss_dev:s0
-genfscon sysfs /devices/platform/soc/soc:qcom,cpu-cpu-llcc-bw/devfreq u:object_r:vendor_sysfs_devfreq:s0
-genfscon sysfs /devices/platform/soc/soc:qcom,cpu-llcc-ddr-bw/devfreq u:object_r:vendor_sysfs_devfreq:s0
-genfscon sysfs /devices/platform/soc/soc:qcom,cpu0-cpu-l3-lat/devfreq u:object_r:vendor_sysfs_devfreq:s0
-genfscon sysfs /devices/platform/soc/soc:qcom,cpu6-cpu-l3-lat/devfreq u:object_r:vendor_sysfs_devfreq:s0
-genfscon sysfs /devices/platform/soc/soc:qcom,cpu0-cpu-llcc-lat/devfreq u:object_r:vendor_sysfs_devfreq:s0
-genfscon sysfs /devices/platform/soc/soc:qcom,cpu6-cpu-llcc-lat/devfreq u:object_r:vendor_sysfs_devfreq:s0
-genfscon sysfs /devices/platform/soc/soc:qcom,cpu0-llcc-ddr-lat/devfreq u:object_r:vendor_sysfs_devfreq:s0
-genfscon sysfs /devices/platform/soc/soc:qcom,cpu6-llcc-ddr-lat/devfreq u:object_r:vendor_sysfs_devfreq:s0
-genfscon sysfs /devices/platform/soc/soc:qcom,cpu0-cpu-ddr-latfloor/devfreq u:object_r:vendor_sysfs_devfreq:s0
-genfscon sysfs /devices/platform/soc/soc:qcom,cpu6-cpu-ddr-latfloor/devfreq u:object_r:vendor_sysfs_devfreq:s0
-genfscon sysfs /devices/platform/soc/soc:qcom,cdsp-cdsp-l3-lat/devfreq u:object_r:vendor_sysfs_devfreq:s0
-genfscon sysfs /devices/platform/soc/soc:qcom,npu-npu-ddr-bw/devfreq u:object_r:vendor_sysfs_devfreq:s0
-genfscon sysfs /devices/platform/soc/soc:qcom,npudsp-npu-ddr-bw/devfreq u:object_r:vendor_sysfs_devfreq:s0
 #fps sysfs-node
 genfscon sysfs /devices/platform/soc/ae00000.qcom,mdss_mdp/drm/card0/sde-crtc-0/measured_fps u:object_r:vendor_sysfs_graphics:s0
 genfscon sysfs /devices/platform/soc/ae00000.qcom,mdss_mdp/drm/card0/sde-crtc-1/measured_fps u:object_r:vendor_sysfs_graphics:s0
