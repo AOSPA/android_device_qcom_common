@@ -175,5 +175,17 @@ as anyway perflock calls of these resources would fail. -->
         <Config MajorValue="0xE" MinorValue="0x4" Supported="no" />
         <Config MajorValue="0xE" MinorValue="0x5" Supported="no" />
 
+        <!--Here onwards are the path for new frequency opcodes for  CPU_LLCC_BW V2 nodes to support
+             new values from kernel 5.10 onwards-->
+        <Minor OpcodeValue="0x11" Node="/sys/devices/system/cpu/bus_dcvs/LLCC/190b6400.qcom,bwmon-llcc/min_freq" />
+        <Minor OpcodeValue="0x12" Node="/sys/devices/system/cpu/bus_dcvs/LLCC/190b6400.qcom,bwmon-llcc/max_freq" />
+    
+    <!--Here onwards are the path for new frequency opcodes for LLCC_DDR_BW V2 nodes to support
+            new values from kernel 5.10 onwards-->
+        <Minor OpcodeValue="0xF" Node="/sys/devices/system/cpu/bus_dcvs/DDR/19091000.qcom,bwmon-ddr/min_freq" />
+        <Minor OpcodeValue="0x10" Node="/sys/devices/system/cpu/bus_dcvs/DDR/19091000.qcom,bwmon-ddr/max_freq" />
+        <Minor OpcodeValue="0x11" Node="/sys/class/devfreq/soc:qcom,cpu-llcc-ddr-bw/bw_hwmon/use_ab" />
+        <Minor OpcodeValue="0x12" Node="/sys/devices/system/cpu/bus_dcvs/DDR/19091000.qcom,bwmon-ddr/ab_scale" />
+
     </PerfResources>
 </ResourceConfigs>
