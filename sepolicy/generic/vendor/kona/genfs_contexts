@@ -32,21 +32,6 @@ genfscon sysfs /devices/platform/vendor/vendor:bt_qca6390/extldo u:object_r:sysf
 genfscon sysfs /devices/platform/vendor/vendor:bt_qca6390/rfkill/rfkill0/state u:object_r:sysfs_bluetooth_writable:s0
 
 # DCVS nodes
-genfscon sysfs /devices/platform/soc/soc:qcom,cpu-cpu-llcc-bw/devfreq u:object_r:vendor_sysfs_devfreq:s0
-genfscon sysfs /devices/platform/soc/soc:qcom,cpu-llcc-ddr-bw/devfreq u:object_r:vendor_sysfs_devfreq:s0
-genfscon sysfs /devices/platform/soc/soc:qcom,npu-npu-llcc-bw/devfreq u:object_r:vendor_sysfs_devfreq:s0
-genfscon sysfs /devices/platform/soc/soc:qcom,npu-llcc-ddr-bw/devfreq u:object_r:vendor_sysfs_devfreq:s0
-genfscon sysfs /devices/platform/soc/soc:qcom,npudsp-npu-ddr-bw/devfreq u:object_r:vendor_sysfs_devfreq:s0
-genfscon sysfs /devices/platform/soc/18590000.qcom,devfreq-l3/18590000.qcom,devfreq-l3:qcom,cpu0-cpu-l3-lat/devfreq u:object_r:vendor_sysfs_devfreq:s0
-genfscon sysfs /devices/platform/soc/18590000.qcom,devfreq-l3/18590000.qcom,devfreq-l3:qcom,cpu4-cpu-l3-lat/devfreq u:object_r:vendor_sysfs_devfreq:s0
-genfscon sysfs /devices/platform/soc/18590000.qcom,devfreq-l3/18590000.qcom,devfreq-l3:qcom,cpu7-cpu-l3-lat/devfreq u:object_r:vendor_sysfs_devfreq:s0
-genfscon sysfs /devices/platform/soc/18590000.qcom,devfreq-l3/18590000.qcom,devfreq-l3:qcom,cdsp-cdsp-l3-lat/devfreq u:object_r:vendor_sysfs_devfreq:s0
-genfscon sysfs /devices/platform/soc/soc:qcom,cpu0-cpu-llcc-lat/devfreq u:object_r:vendor_sysfs_devfreq:s0
-genfscon sysfs /devices/platform/soc/soc:qcom,cpu4-cpu-llcc-lat/devfreq u:object_r:vendor_sysfs_devfreq:s0
-genfscon sysfs /devices/platform/soc/soc:qcom,cpu0-llcc-ddr-lat/devfreq u:object_r:vendor_sysfs_devfreq:s0
-genfscon sysfs /devices/platform/soc/soc:qcom,cpu4-llcc-ddr-lat/devfreq u:object_r:vendor_sysfs_devfreq:s0
-genfscon sysfs /devices/platform/soc/soc:qcom,cpu4-cpu-ddr-latfloor/devfreq u:object_r:vendor_sysfs_devfreq:s0
-genfscon sysfs /devices/platform/soc/soc:qcom,cpu4-cpu-ddr-qoslat/devfreq u:object_r:vendor_sysfs_devfreq:s0
 #mhi sysfs
 genfscon sysfs /devices/platform/soc/1c10000.qcom,pcie/pci0002:00/0002:00:00.0/0002:01:00.0/0306_02.01.00_QMI0 u:object_r:vendor_sysfs_mhi:s0
 genfscon sysfs /devices/platform/soc/1c10000.qcom,pcie/pci0002:00/0002:00:00.0/0002:01:00.0/0306_02.01.00_QMI1  u:object_r:vendor_sysfs_mhi:s0
