@@ -80,4 +80,7 @@ IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
     <!-- List of synonyms for the cross SIM calling titles,
          used to match in settings search [CHAR LIMIT=NONE] -->
     <string name="keywords_backup_calling">Voice Over Cellular Internet</string>
+
+    <!-- Max network scan search time in seconds -->
+    <integer name="config_network_scan_helper_max_search_time_sec">254</integer>
 </resources>
