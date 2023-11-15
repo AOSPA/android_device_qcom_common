@@ -38,6 +38,13 @@
            Resources="0x40C00000, 0x1, 0x40804000, 0xFFF, 0x40804100, 0xFFF, 0x40800000, 0xFFF,
                       0x40800100, 0xFFF, 0x4280C000, 1114" />
 
+        <!-- Type="2", resume boost of 0.6sec -->
+        <Config
+            Id="0x00001082" Type="2" Enable="true" Timeout="600" Target="khaje"
+            Resources="0x41000100, 0x4, 0x41000000, 0x4, 0x40C00000, 0x1, 0x40804000, 0xFFF, 0x40804100, 0xFFF, 0x40800000, 0xFFF,
+                        0x40800100, 0xFFF, 0x41818000, 0xFF, 0x41800000, 0xFF, 0x40400000, 0x1,
+                        0x42C10000, 0x1, 0x43400000, 0xFFFF, 0x4281C000, 2000" />
+
     <!--app lauch boost (disabling packing)-->
         <!-- POWER COLLAPSE resource opcode, value-->
         <!-- CPUBW_MIN_FREQ resource opcode, value -->
