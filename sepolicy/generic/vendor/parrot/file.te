@@ -60,5 +60,4 @@
 # IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE
 
 #Define the files used by powermodule
-type vendor_pm_data_file, file_type, data_file_type;
 type vendor_sysfs_guestvm, fs_type, sysfs_type;;
