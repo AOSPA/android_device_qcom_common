@@ -20,13 +20,13 @@ SOONG_CONFIG_NAMESPACES += rmnetctl
 SOONG_CONFIG_rmnetctl += \
     old_rmnet_data
 SOONG_CONFIG_rmnetctl_old_rmnet_data ?= false
-ifeq (,$(filter 5.15, $(TARGET_KERNEL_VERSION)))
+ifeq ($(call is-kernel-less-than-or-equal-to,5.10),true)
 SOONG_CONFIG_rmnetctl_old_rmnet_data := true
 endif
 $(call inherit-product, vendor/qcom/opensource/dataservices/dataservices_vendor_product.mk)
 
 # IPACM
-ifneq (,$(filter 5.10 5.15, $(TARGET_KERNEL_VERSION)))
+ifeq ($(call is-kernel-greater-than-or-equal-to,5.10),true)
 PRODUCT_SOONG_NAMESPACES += vendor/qcom/opensource/data-ipa-cfg-mgr
 $(call inherit-product, vendor/qcom/opensource/data-ipa-cfg-mgr/ipacm_vendor_product.mk)
 else
@@ -64,7 +64,7 @@ PRODUCT_VENDOR_PROPERTIES += \
     persist.vendor.radio.sib16_support=1 \
     persist.vendor.ssr.restart_level=ALL_ENABLE
 
-ifeq ($(call is-board-platform-in-list, $(3_18_FAMILY) $(4_4_FAMILY) $(4_9_FAMILY)),true)
+ifeq ($(call is-kernel-less-than-or-equal-to,4.9),true)
 PRODUCT_VENDOR_PROPERTIES += \
     persist.vendor.radio.enableadvancedscan=false
 else
@@ -78,7 +78,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
     persist.vendor.radio.fetchqos=true
 endif
 
-ifneq (,$(filter 4.14 4.19 5.4 5.10 5.15, $(TARGET_KERNEL_VERSION)))
+ifeq ($(call is-kernel-greater-than-or-equal-to,4.14),true)
 # Property to enable single ims registration
 PRODUCT_PROPERTY_OVERRIDES += \
      persist.vendor.rcs.singlereg.feature=1
