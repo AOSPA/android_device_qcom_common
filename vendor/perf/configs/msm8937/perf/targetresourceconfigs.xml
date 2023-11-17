@@ -137,6 +137,8 @@ as anyway perflock calls of these resources would fail. -->
         <Config MajorValue="0x5" MinorValue="0x14" Supported="no" />
         <Config MajorValue="0x5" MinorValue="0x15" Supported="no" />
         <Config MajorValue="0x5" MinorValue="0x16" Supported="no" />
+        <Config MajorValue="0x6" MinorValue="0x11" Supported="no" />
+        <Config MajorValue="0x6" MinorValue="0x12" Supported="no" />
         <Config MajorValue="0xA" MinorValue="0xA" Node="/sys/class/kgsl/kgsl-3d0/devfreq/mod_percent" />
         <Config MajorValue="0xB" MinorValue="0x10" Supported="no" />
         <Config MajorValue="0xD" MinorValue="0x26" Supported="no" />
