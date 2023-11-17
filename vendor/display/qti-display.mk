@@ -17,7 +17,7 @@
 -include hardware/qcom/display/config/display-product.mk
 
 # Enable Legacy Lights HAL for <5.10 targets
-ifneq (,$(filter 3.18 4.4 4.9 4.14 4.19 5.4, $(TARGET_KERNEL_VERSION)))
+ifeq ($(call is-kernel-less-than-or-equal-to,5.4),true)
 
 # Lights HAL
 PRODUCT_PACKAGES += \
@@ -43,14 +43,14 @@ PRODUCT_PACKAGES += \
 
 # Properties for <5.15 targets
 # These are already set on 5.15+.
-ifneq (,$(filter 3.18 4.4 4.9 4.14 4.19 5.4 5.10, $(TARGET_KERNEL_VERSION)))
+ifeq ($(call is-kernel-less-than-or-equal-to,5.10),true)
 PRODUCT_VENDOR_PROPERTIES += \
     debug.sf.auto_latch_unsignaled=0
 endif
 
 # Properties for <5.10 targets
 # These are already set on 5.10+.
-ifneq (,$(filter 3.18 4.4 4.9 4.14 4.19 5.4, $(TARGET_KERNEL_VERSION)))
+ifeq ($(call is-kernel-less-than-or-equal-to,5.4),true)
 PRODUCT_VENDOR_PROPERTIES += \
     debug.sf.predict_hwc_composition_strategy=0 \
     debug.sf.treat_170m_as_sRGB=1
@@ -58,14 +58,14 @@ endif
 
 # Properties for <5.4 targets
 # These are already set on 5.4+
-ifneq (,$(filter 3.18 4.4 4.9 4.14 4.19, $(TARGET_KERNEL_VERSION)))
+ifeq ($(call is-kernel-less-than-or-equal-to,4.19),true)
 PRODUCT_VENDOR_PROPERTIES += \
     debug.sf.disable_client_composition_cache=1
 endif
 
 # Properties for <4.19 targets
 # These are already set on 4.19+.
-ifneq (,$(filter 3.18 4.4 4.9 4.14, $(TARGET_KERNEL_VERSION)))
+ifeq ($(call is-kernel-less-than-or-equal-to,4.14),true)
 PRODUCT_VENDOR_PROPERTIES += \
     debug.sf.latch_unsignaled=1
 endif
@@ -77,12 +77,12 @@ PRODUCT_COPY_FILES += \
 endif
 
 # Disable custom content metadata region on <5.15 targets
-ifneq (,$(filter 3.18 4.4 4.9 4.14 4.19 5.4 5.10, $(TARGET_KERNEL_VERSION)))
+ifeq ($(call is-kernel-less-than-or-equal-to,5.19),true)
 TARGET_GRALLOC_HANDLE_HAS_NO_CUSTOM_CONTENT_MD_RESERVED_SIZE := true
 endif
 
 # Disable UBWC-P on <6.1 targets
-ifneq (,$(filter 3.18 4.4 4.9 4.14 4.19 5.4 5.10 5.15, $(TARGET_KERNEL_VERSION)))
+ifeq ($(call is-kernel-less-than-or-equal-to,5.15),true)
 TARGET_GRALLOC_HANDLE_HAS_NO_UBWCP := true
 endif
 
