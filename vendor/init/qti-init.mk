@@ -16,7 +16,7 @@ PRODUCT_SOONG_NAMESPACES += \
     device/qcom/common/vendor/init
 
 # Add legacy services and permissions for pre-5.10 targets
-ifeq (,$(filter 5.10 5.15, $(TARGET_KERNEL_VERSION)))
+ifeq ($(call is-kernel-less-than-or-equal-to,5.10),true)
 PRODUCT_COPY_FILES += \
     $(QCOM_COMMON_PATH)/vendor/init/init.qcom.early_boot.legacy.sh:$(TARGET_COPY_OUT_VENDOR)/bin/init.qcom.early_boot.sh \
     $(QCOM_COMMON_PATH)/vendor/init/init.qcom.post_boot.legacy.sh:$(TARGET_COPY_OUT_VENDOR)/bin/init.qcom.post_boot.sh
@@ -54,7 +54,7 @@ PRODUCT_COPY_FILES += \
 endif
 
 # Kernel
-ifneq (,$(filter 5.4 5.10 5.15, $(TARGET_KERNEL_VERSION)))
+ifeq ($(call is-kernel-greater-than-or-equal-to,5.4),true)
 PRODUCT_COPY_FILES += \
     $(call find-copy-subdir-files,*,$(QCOM_COMMON_PATH)/vendor/init/$(TARGET_BOARD_PLATFORM),$(TARGET_COPY_OUT_VENDOR))
 
