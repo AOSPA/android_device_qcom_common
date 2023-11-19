@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    coreApp="true"
+    package="com.google.android.wifi.resources.overlay.common">
+
+    <overlay
+        android:targetPackage="com.google.android.wifi.resources"
+        android:targetName = "WifiCustomization"
+        android:isStatic="true" />
+</manifest>
