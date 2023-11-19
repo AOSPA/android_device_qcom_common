@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "13bc137f_fcf22b09",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 3
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000012
+      },
+      "writtenOn": "2023-11-19T23:59:05Z",
+      "side": 1,
+      "message": "should we do binder_use(vendor_hal_iop_default) instead?",
+      "revId": "04291a6e33b1c7f640ba9c4afb04453c745878ad",
+      "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
+    }
+  ]
+}
