@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "60e9b222_ff5cfa94",
+        "filename": "vendor/display/qti-display.mk",
+        "patchSetId": 1
+      },
+      "lineNbr": 84,
+      "author": {
+        "id": 1000429
+      },
+      "writtenOn": "2023-11-19T23:44:39Z",
+      "side": 1,
+      "message": "why 5.19?",
+      "revId": "a8cec167bb68b0d47bc1c76223c929e821d06b6f",
+      "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
+    }
+  ]
+}
