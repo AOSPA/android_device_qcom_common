@@ -16,6 +16,24 @@
       "message": "NEVER!\n\nalways label more broadly.",
       "revId": "4161e1b89c7d491e9274a0ae1d20f35e796441fa",
       "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "6f36cbca_6dc9c094",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000012
+      },
+      "writtenOn": "2023-11-19T23:59:42Z",
+      "side": 1,
+      "message": "more specifically rather",
+      "parentUuid": "faca30e1_6445671e",
+      "revId": "4161e1b89c7d491e9274a0ae1d20f35e796441fa",
+      "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
     }
   ]
 }
