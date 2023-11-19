@@ -119,9 +119,12 @@ IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.-->
         <!-- Config for B2C Enriched Calls Feature support -->
         <boolean name="carrier_b2c_enriched_calling_supported_bool" value="false"/>
         <boolean name="carrier_call_progress_notification" value="true" />
-        <!-- PA: Allow VoLTE and WFC by default -->
+        <!-- PA: Allow VoLTE ,WFC and ViLTE by default -->
         <boolean name="carrier_volte_available_bool" value="true" />
         <boolean name="carrier_wfc_ims_available_bool" value="true" />
+        <boolean name="carrier_vt_available_bool" value="true" />
+        <!-- PA: Hide IMS APN by default -->
+        <boolean name="hide_ims_apn_bool" value="true" />
     </carrier_config>
 
     <carrier_config mcc="001" mnc="01">
