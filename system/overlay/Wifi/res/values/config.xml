@@ -1,5 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
+<!-- Copyright (c) 2020 Qualcomm Technologies, Inc.
+     All Rights Reserved.
+     Confidential and Proprietary - Qualcomm Technologies, Inc.
+-->
+
 <resources>
+
 
     <!-- Boolean indicating whether the wifi chipset has 5GHz frequency band support -->
     <bool translatable="false" name="config_wifi5ghzSupport">true</bool>
@@ -21,7 +27,6 @@
 
    <!-- Indicates that connected MAC randomization is supported on this device -->
    <bool translatable="false" name="config_wifi_connected_mac_randomization_supported">true</bool>
-   <bool name="config_wifiAllowNonPersistentMacRandomizationOnOpenSsids">true</bool>
 
     <!-- Indicates that p2p MAC randomization is supported on this device -->
     <bool translatable="false" name="config_wifi_p2p_mac_randomization_supported">true</bool>
@@ -44,6 +49,14 @@
     <!-- Wifi driver supports WPA3 Opportunistic Wireless Encryption (WPA3-OWE) for softap -->
     <bool name="config_vendor_wifi_softap_owe_supported">true</bool>
 
+    <!-- Wifi driver supports Opportunistic Wireless Encryption (OWE) Transition
+         aka Enhanced Open for Soft-AP -->
+    <bool translatable="false" name="config_wifiSoftapOweTransitionSupported">true</bool>
+
+    <!-- Wifi driver supports Opportunistic Wireless Encryption (OWE)
+         aka Enhanced Open for Soft-AP -->
+    <bool translatable="false" name="config_wifiSoftapOweSupported">true</bool>
+
     <!-- Wifi driver Automatic channel selection (ACS) for softap to include DFS channels -->
     <bool translatable="false" name="config_wifiSoftapAcsIncludeDfs">true</bool>
 
@@ -64,6 +77,11 @@
     <!-- boolean indicating whether or not to auto-upgrade band setting configuration to dual bands during cloud configuration restore when device supported -->
     <bool translatable="false" name ="config_wifiSoftapAutoUpgradeToBridgedConfigWhenSupported">false</bool>
 
+    <!-- Integer threshold for max number of WifiConfigurations that can be saved on the device.
+        A value of -1 indicates no limit. If a max number is specified, then under-used configs
+        will be deleted to make room for new configs.-->
+    <integer translatable="false" name="config_wifiMaxNumWifiConfigurations">1000</integer>
+
     <!-- Lists each alternate character set per locale language for SSID translation to UTF-8. This
          will translate all SSIDs encoded with the specified character set from the native layer
          into UTF-8 SSIDs. The translated SSIDs are then converted back to the original character
@@ -76,24 +94,4 @@
     <string-array translatable="false" name="config_wifiCharsetsForSsidTranslation">
         <item>zh,GBK</item>
     </string-array>
-
-    <!-- Wifi driver supports Opportunistic Wireless Encryption (OWE) Transition
-         aka Enhanced Open for Soft-AP -->
-    <bool translatable="false" name="config_wifiSoftapOweTransitionSupported">true</bool>
-
-    <!-- Wifi driver supports Opportunistic Wireless Encryption (OWE)
-         aka Enhanced Open for Soft-AP -->
-    <bool translatable="false" name="config_wifiSoftapOweSupported">true</bool>
-
-    <!-- Integer threshold for max number of WifiConfigurations that can be saved on the device.
-         A value of -1 indicates no limit. If a max number is specified, then under-used configs will
-         be deleted to make room for new configs.-->
-    <integer translatable="false" name="config_wifiMaxNumWifiConfigurations">1000</integer>
-
-    <!-- Boolean indicating whether the framework updates country from scan results when there is
-         no telephony country code. This is applied to all generic cases and might require the
-         regulatory approval (for example, FCC pre-approval is required according to "594280 D01
-         Software Configuration Control v02r01").-->
-    <bool translatable="false" name ="config_wifiUpdateCountryCodeFromScanResultGeneric">true</bool>
-
 </resources>
