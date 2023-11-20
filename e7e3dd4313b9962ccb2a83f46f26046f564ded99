@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "f30f5408_eabc0ee3",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000579
+      },
+      "writtenOn": "2023-11-20T16:08:53Z",
+      "side": 1,
+      "message": "11-17 09:04:14.510  1336  1336 E AHAL: AudioExtn: hfp_feature_init: 499: dlopen failed with: dlopen failed: library \"/vendor/lib64/libhfp_pal.so\" not found\n11-17 09:04:14.511  1336  1336 I AHAL: AudioExtn: hfp_feature_init: 542: ---- Feature HFP is disabled ----",
+      "revId": "e7e3dd4313b9962ccb2a83f46f26046f564ded99",
+      "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
+    }
+  ]
+}
