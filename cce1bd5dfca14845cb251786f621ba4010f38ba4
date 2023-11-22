@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "cc909a31_587ed674",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000737
+      },
+      "writtenOn": "2023-11-22T09:33:48Z",
+      "side": 1,
+      "message": "Kona changes is for 4.19, but the init folder is for 5.15",
+      "revId": "cce1bd5dfca14845cb251786f621ba4010f38ba4",
+      "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
+    }
+  ]
+}
