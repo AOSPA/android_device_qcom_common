@@ -36,7 +36,8 @@ property Name is called. -->
                 <Prop Name="ro.lmk.direct_reclaim_pressure" Value="45" />
                 <Prop Name="ro.lmk.reclaim_scan_threshold" Value="0" />
                 <Prop Name="vendor.perf.gestureflingboost.enable" Value="true" />
-                <Prop Name="vendor.perf.performancemode.support" Value="true" />
+                <!-- PA Edit: Remove Performance Mode
+                <Prop Name="vendor.perf.performancemode.support" Value="true" /> -->
                 <Prop Name="ro.vendor.qti.sys.fw.bg_apps_limit" Value="60" />
                 <Prop Name="ro.vendor.at_library" Value="libqti-at.so" />
                 <Prop Name="vendor.perf.topAppRenderThreadBoost.enable" Value="false" />
