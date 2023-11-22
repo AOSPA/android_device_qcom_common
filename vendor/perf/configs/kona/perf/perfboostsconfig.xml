@@ -275,10 +275,11 @@
         <!-- SCHED_BUSY_HYSTERSIS_CPU_MASK resource opcode, value-->
         <!-- LPM_BIAS_HYST resource opcode, value-->
         <!-- Type="", Performance mode -->
+        <!-- PA Edit: Disable Performance Mode
         <Config
             Id="0x00001091" Enable="true" Target="kona"
             Resources="0x40C70000, 20, 0x40CA4000, 2, 0x40C88000, 25, 0x40800000, 1574, 0x40800100, 691, 0x40800200, 1632,
-                       0x40C74000, 0xFF, 0x40408000, 0x63" />
+                       0x40C74000, 0xFF, 0x40408000, 0x63" /> -->
 
     <!--Display on Resource -->
         <!-- Display on resource opcode, value -->
@@ -589,10 +590,11 @@
         <!-- SCHED_BUSY_HYSTERSIS_CPU_MASK resource opcode, value-->
         <!-- LPM_BIAS_HYST resource opcode, value-->
         <!-- Type="", Performance mode -->
+        <!-- PA Edit: Disable Performance Mode
         <Config
             Id="0x00001091" Enable="true" Target="QCS8250"
             Resources="0x40C70000, 20, 0x40CA4000, 2, 0x40C88000, 25, 0x40800000, 1574, 0x40800100, 691, 0x40800200, 1632,
-                       0x40C74000, 0xFF, 0x40408000, 0x63" />
+                       0x40C74000, 0xFF, 0x40408000, 0x63" /> -->
 
     <!--Display on Resource -->
         <!-- Display on resource opcode, value -->
@@ -903,10 +905,11 @@
         <!-- SCHED_BUSY_HYSTERSIS_CPU_MASK resource opcode, value-->
         <!-- LPM_BIAS_HYST resource opcode, value-->
         <!-- Type="", Performance mode -->
+        <!-- PA Edit: Disable Performance Mode
         <Config
             Id="0x00001091" Enable="true" Target="QRB5165"
             Resources="0x40C70000, 20, 0x40CA4000, 2, 0x40C88000, 25, 0x40800000, 1574, 0x40800100, 691, 0x40800200, 1632,
-                       0x40C74000, 0xFF, 0x40408000, 0x63" />
+                       0x40C74000, 0xFF, 0x40408000, 0x63" /> -->
 
     <!--Display on Resource -->
         <!-- Display on resource opcode, value -->
@@ -1217,10 +1220,11 @@
         <!-- SCHED_BUSY_HYSTERSIS_CPU_MASK resource opcode, value-->
         <!-- LPM_BIAS_HYST resource opcode, value-->
         <!-- Type="", Performance mode -->
+        <!-- PA Edit: Disable Performance Mode
         <Config
             Id="0x00001091" Enable="true" Target="QCS7230"
             Resources="0x40C70000, 20, 0x40CA4000, 2, 0x40C88000, 25, 0x40800000, 1574, 0x40800100, 691, 0x40800200, 1632,
-                       0x40C74000, 0xFF, 0x40408000, 0x63" />
+                       0x40C74000, 0xFF, 0x40408000, 0x63" /> -->
 
     <!--Display on Resource -->
         <!-- Display on resource opcode, value -->
@@ -1519,10 +1523,11 @@
         <!-- SCHED_BUSY_HYSTERSIS_CPU_MASK resource opcode, value-->
         <!-- LPM_BIAS_HYST resource opcode, value-->
         <!-- Type="", Performance mode -->
+        <!-- PA Edit: Disable Performance Mode
         <Config
             Id="0x00001091" Enable="true" Target="QRB3165"
             Resources="0x40C70000, 20, 0x40CA4000, 2, 0x40C88000, 25, 0x40800000, 1574, 0x40800100, 691,
-                       0x40C74000, 0xFF, 0x40408000, 0x63" />
+                       0x40C74000, 0xFF, 0x40408000, 0x63" /> -->
 
     <!--Display on Resource -->
         <!-- Display on resource opcode, value -->
