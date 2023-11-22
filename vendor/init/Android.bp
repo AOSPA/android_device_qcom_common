@@ -16,8 +16,8 @@ soong_namespace {
 }
 
 prebuilt_etc {
-    name: "init.aospa.perf.rc",
-    src: "init.aospa.perf.rc",
+    name: "init.aospa.perf.common.rc",
+    src: "init.aospa.perf.common.rc",
     sub_dir: "init",
     vendor: true,
 }
