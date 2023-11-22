@@ -836,6 +836,7 @@
         <!-- MPCTLV3_SCHED_FMAX_CAP_TITANIUM resource opcode, value-->
         <!-- MPCTLV3_SCHED_MAX_FREQ_PARTIAL_HALT resource opcode, value-->
         <!-- Type="", Performance mode -->
+        <!-- AOSPA Edit: Disable Performance Mode
         <Config
             Id="0x00001091" Enable="true" Target="pineapple"
             Resources="0x40CAC000, 20, 0x40CA4000, 2, 0x40800000, 1785, 0x40800100, 800, 0x40800200, 1670,
@@ -848,7 +849,7 @@
             Resources="0x40CAC000, 20, 0x40CA4000, 2, 0x40800000, 1785, 0x40800100, 800, 0x40800200, 1670,
                        0x40C74000, 0xF8, 0x40408000, 0x63, 0x42C1C000, 1, 0x40CFC000, 0, 0x4348C000,0x71C50,
                        0X43C1C000, 0x7FFFFFFF, 0X43C1C100, 0x7FFFFFFF, 0X43C1C200, 0x7FFFFFFF,
-                       0X43C20000, 0x7FFFFFFF" />
+                       0X43C20000, 0x7FFFFFFF" /> -->
 
     <!--Display on Resource -->
         <!-- Display on resource opcode, value -->

@@ -74,7 +74,8 @@ ________________________________________________________________________________
                 <Prop Name="ro.vendor.qti.sys.fw.bg_apps_limit" Value="96"/>
                 <Prop Name="ro.vendor.qti.sys.fw.bg_apps_limit" Value="60"       Ram="8"           Target="cliffs"/>
                 <Prop Name="ro.vendor.at_library" Value="libqti-at.so" />
-                <Prop Name="vendor.perf.performancemode.support" Value="true" Target="pineapple,cliffs" />
+                <!-- AOSPA Edit: Disable Performance Mode
+                <Prop Name="vendor.perf.performancemode.support" Value="true" Target="pineapple,cliffs" /> -->
                 <Prop Name="vendor.appcompact.enable_app_compact" Value="true" />
                 <Prop Name="vendor.appcompact.full_compact_type" Value="2" />
                 <Prop Name="vendor.appcompact.some_compact_type" Value="4" />
