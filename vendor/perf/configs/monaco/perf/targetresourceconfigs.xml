@@ -29,6 +29,9 @@ as anyway perflock calls of these resources would fail. -->
         <Config MajorValue="0x1" MinorValue="0x3" Supported="no" /> <!-- lpm_ref_stddev -->
         <Config MajorValue="0x1" MinorValue="0x4" Supported="no" /> <!-- lpm_tmr_add -->
 
+        <Config MajorValue="0x2" MinorValue="0x0" Node="/sys/kernel/msm_performance/parameters/cpu_min_freq" /> <!-- cpu_min_freq -->
+        <Config MajorValue="0x2" MinorValue="0x1" Node="/sys/kernel/msm_performance/parameters/cpu_max_freq" /> <!-- cpu_max_freq -->
+
         <Config MajorValue="0x3" MinorValue="0x3" Supported="no" /> <!-- sched_small_task -->
         <Config MajorValue="0x3" MinorValue="0x6" Supported="no" /> <!-- sched_init_task_load -->
         <Config MajorValue="0x3" MinorValue="0xB" Supported="no" /> <!-- sched_spill_nr_run -->

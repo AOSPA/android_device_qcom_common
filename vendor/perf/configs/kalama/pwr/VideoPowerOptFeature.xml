@@ -17,10 +17,14 @@
    <Name>VideoPowerOptFeature</Name>
    <Libname>libvideooptfeature.so</Libname>
    <Configs>
+        <VIDEO_OPT>1</VIDEO_OPT>
+        <BROWSER_OPT>1</BROWSER_OPT>
         <MAX_CONTENT_FPS>30</MAX_CONTENT_FPS>
         <MAX_HW_CONTENT_FPS>120</MAX_HW_CONTENT_FPS>
         <MAX_PANEL_FPS>120</MAX_PANEL_FPS>
         <MAX_SAMPLE_NUM>6</MAX_SAMPLE_NUM>
+        <SCALING_DOWN_TASK_LOAD_BOOST_LEVEL_1>-10</SCALING_DOWN_TASK_LOAD_BOOST_LEVEL_1>
+        <SCALING_DOWN_TASK_LOAD_BOOST_LEVEL_2>-20</SCALING_DOWN_TASK_LOAD_BOOST_LEVEL_2>
     </Configs>
     <Profiles>
         <Profile>
@@ -39,6 +43,7 @@
             <!-- CPUBOOST_MIN_FREQ LITTLE Core resource opcode, value -->
             <!-- CPUBOOST_MIN_FREQ BIG CORE resource opcode, value -->
             <PROFILE1>0x40CA4000, 0x8, 0x4143C100, 844, 0x4143C000, 1113, 0x41450100, 0, 0x41454100, 0x4, 0x40C68000, -10, 0x4144C100, 600000, 0x4144C000, 600000, 0x41444100, 0, 0x41444000, 0, 0x40800100, 0x1B9, 0x40800000, 0x1C1</PROFILE1>
+            <BROWSER_OPT_RESOURCE>0x43C04000</BROWSER_OPT_RESOURCE>
         </Profile>
     </Profiles>
     <IgnoredApps>

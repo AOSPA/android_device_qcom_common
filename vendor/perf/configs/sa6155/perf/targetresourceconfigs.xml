@@ -130,7 +130,11 @@ as anyway perflock calls of these resources would fail. -->
         <Config MajorValue="0xD" MinorValue="0x5" Supported="no" />
         <Config MajorValue="0xD" MinorValue="0x6" Supported="no" />
         <Config MajorValue="0xD" MinorValue="0x7" Supported="no" />
+        <Config MajorValue="0xD" MinorValue="0x9" Supported="no" />
+        <Config MajorValue="0xD" MinorValue="0xB" Supported="no" />
         <Config MajorValue="0xD" MinorValue="0xC" Supported="no" />
+        <Config MajorValue="0xD" MinorValue="0xE" Supported="no" />
+        <Config MajorValue="0xD" MinorValue="0x10" Supported="no" />
         <Config MajorValue="0xD" MinorValue="0x11" Supported="no" />
         <Config MajorValue="0xD" MinorValue="0x12" Supported="no" />
         <Config MajorValue="0xD" MinorValue="0x13" Supported="no" />
