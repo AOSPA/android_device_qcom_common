@@ -12,11 +12,10 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-on property:vendor.post_boot.parsed=1
-    write /dev/cpuset/foreground/cpus 0-5,7
-
 on property:persist.vendor.power.profile=performance && property:vendor.post_boot.parsed=1
-    write /dev/stune/top-app/schedtune.boost 20
-    write /proc/sys/kernel/sched_ravg_window_nr_ticks 2
-    write /sys/module/msm_performance/parameters/cpu_min_freq "0:1363 6:1017"
+    write /dev/cpuctl/top-app/cpu.uclamp.min 20
+    write /proc/sys/walt/sched_ravg_window_nr_ticks 2
+    write /sys/module/msm_performance/parameters/cpu_min_freq "0:800 4:1555 7:1670"
     write /proc/sys/kernel/sched_busy_hysteresis_enable_cpus 255
+    write /sys/module/lpm_levels/parameters/bias_hyst 99
+    write /proc/sys/walt/sched_min_task_util_for_uclamp 0
