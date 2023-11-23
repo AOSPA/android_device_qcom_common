@@ -23,6 +23,14 @@ on property:vendor.post_boot.parsed=1
     write /dev/cpuset/system-background/cpus 0-2
     write /dev/cpuset/foreground/cpus 0-6
 
+# CPUFreq
+    write /sys/devices/system/cpu/cpu0/cpufreq/schedutil/up_rate_limit_us 500
+    write /sys/devices/system/cpu/cpu0/cpufreq/schedutil/down_rate_limit_us 10000
+    write /sys/devices/system/cpu/cpu4/cpufreq/schedutil/up_rate_limit_us 1000
+    write /sys/devices/system/cpu/cpu4/cpufreq/schedutil/down_rate_limit_us 15000
+    write /sys/devices/system/cpu/cpu7/cpufreq/schedutil/up_rate_limit_us 1500
+    write /sys/devices/system/cpu/cpu7/cpufreq/schedutil/down_rate_limit_us 20000
+
 
 on property:persist.vendor.power.profile=performance && property:vendor.post_boot.parsed=1
     write /dev/stune/top-app/schedtune.boost 20
