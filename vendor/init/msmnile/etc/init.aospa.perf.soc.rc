@@ -22,6 +22,15 @@ on property:vendor.post_boot.parsed=1
     write /dev/cpuset/system-background/cpus 0-2
     write /dev/cpuset/foreground/cpus 0-6
 
+# CPUFreq
+    write /sys/devices/system/cpu/cpufreq/policy0/schedutil/up_rate_limit_us 500
+    write /sys/devices/system/cpu/cpufreq/policy0/schedutil/down_rate_limit_us 20000
+    write /sys/devices/system/cpu/cpufreq/policy4/schedutil/up_rate_limit_us 1000
+    write /sys/devices/system/cpu/cpufreq/policy4/schedutil/down_rate_limit_us 15000
+    write /sys/devices/system/cpu/cpufreq/policy7/schedutil/up_rate_limit_us 2000
+    write /sys/devices/system/cpu/cpufreq/policy7/schedutil/down_rate_limit_us 10000
+
+
 on property:persist.vendor.power.profile=performance && property:vendor.post_boot.parsed=1
     write /dev/stune/top-app/schedtune.boost 20
     write /proc/sys/kernel/sched_ravg_window_nr_ticks 2
