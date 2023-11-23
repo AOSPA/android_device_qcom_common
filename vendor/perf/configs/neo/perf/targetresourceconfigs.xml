@@ -32,6 +32,8 @@ as anyway perflock calls of these resources would fail. -->
 
         <Config MajorValue="0x2" MinorValue="0x0" Node="/sys/kernel/msm_performance/parameters/cpu_min_freq" /> <!-- cpu_min_freq -->
         <Config MajorValue="0x2" MinorValue="0x1" Node="/sys/kernel/msm_performance/parameters/cpu_max_freq" /> <!-- cpu_max_freq -->
+        <Config MajorValue="0x2" MinorValue="0x2" Supported="no" />
+        <Config MajorValue="0x2" MinorValue="0x3" Supported="no" />
         <Config MajorValue="0x3" MinorValue="0x0" Node="/proc/sys/walt/sched_boost" />
         <Config MajorValue="0x3" MinorValue="0x3" Supported="no" /> <!-- sched_small_task -->
         <Config MajorValue="0x3" MinorValue="0x6" Supported="no" /> <!-- sched_init_task_load -->
@@ -51,7 +53,7 @@ as anyway perflock calls of these resources would fail. -->
         <Config MajorValue="0x3" MinorValue="0x17" Supported="no" /> <!-- sched_freq_aggr_threshold -->
         <Config MajorValue="0x3" MinorValue="0x18" Supported="no" />
         <Config MajorValue="0x3" MinorValue="0x19" Supported="no" />
-        <Config MajorValue="0x3" MinorValue="0x1A" Node="/sys/devices/system/cpu/cpufreq/policy0/walt/boost" />
+        <Config MajorValue="0x3" MinorValue="0x1A" Supported="no" />
         <Config MajorValue="0x3" MinorValue="0x1B" Supported="no" />
         <Config MajorValue="0x3" MinorValue="0x1C" Supported="no" />
         <Config MajorValue="0x3" MinorValue="0x1D" Node="/proc/sys/walt/sched_busy_hysteresis_enable_cpus" />
@@ -83,11 +85,14 @@ as anyway perflock calls of these resources would fail. -->
         <Config MajorValue="0x3" MinorValue="0x3C" Supported="no" />
         <Config MajorValue="0x3" MinorValue="0x3D" Node="/proc/sys/walt/%s" Supported="no"/>
 
-        <Config MajorValue="0x5" MinorValue="0xF" Node="/sys/devices/system/cpu/cpu0/cpufreq/walt/hispeed_freq" />
-        <Config MajorValue="0x5" MinorValue="0x10" Node="/sys/devices/system/cpu/cpu0/cpufreq/walt/hispeed_load" />
-        <Config MajorValue="0x5" MinorValue="0x11" Node="/sys/devices/system/cpu/cpu0/cpufreq/walt/pl" />
-        <Config MajorValue="0x5" MinorValue="0x12" Node="/sys/devices/system/cpu/cpu0/cpufreq/walt/down_rate_limit_us" />
-        <Config MajorValue="0x5" MinorValue="0x13" Node="/sys/devices/system/cpu/cpu0/cpufreq/walt/rtg_boost_freq" />
+        <Config MajorValue="0x5" MinorValue="0xF" Supported="no" />
+        <Config MajorValue="0x5" MinorValue="0x10" Supported="no" />
+        <Config MajorValue="0x5" MinorValue="0x11" Supported="no" />
+        <Config MajorValue="0x5" MinorValue="0x12" Supported="no" />
+        <Config MajorValue="0x5" MinorValue="0x13" Supported="no" />
+        <Config MajorValue="0x5" MinorValue="0x14" Supported="no" />
+        <Config MajorValue="0x5" MinorValue="0x15" Supported="no" />
+        <Config MajorValue="0x5" MinorValue="0x16" Supported="no" />
 
          <!-- CPU_LLCC_BW major old opcodes unsupported-->
         <Config MajorValue="0x6" MinorValue="0x0" Supported="no" />
@@ -195,6 +200,9 @@ as anyway perflock calls of these resources would fail. -->
 
         <Config MajorValue="0xF" MinorValue="0x2" Supported="no" />
         <Config MajorValue="0xF" MinorValue="0x3" Supported="no" />
+        <Config MajorValue="0xF" MinorValue="0x4" Supported="no" />
+        <Config MajorValue="0xF" MinorValue="0x5" Supported="no" />
+        <Config MajorValue="0xF" MinorValue="0x6" Supported="no" />
 
         <!--Add new resource expected value and write value in configs/test/common/testcommonresourceconfigs.xml
         for support in regression framework otherwise these nodes will fail in test-->

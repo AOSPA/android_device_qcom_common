@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!--
+/* Copyright (c) 2023 Qualcomm Technologies, Inc.
+ * All Rights Reserved.
+ * Confidential and Proprietary - Qualcomm Technologies, Inc.
+*/
+-->
+
+
+<!--Ids are used in identifying the boosts, increment ids linearly,
+    do not modify Ids, or add in between-->
+<!--follow the number format rules while specifying number, can be given
+    in any format-->
+
+<BoostConfigs>
+    <PerfBoost>
+
+    <!--app lauch boost-->
+        <!-- CPUBOOST_MAX_FREQ BIG Core resource opcode, value-->
+        <!-- CPUBOOST_MIN_FREQ BIG Core resource opcode, value-->
+        <!-- POWER COLLAPSE resource opcode, value-->
+        <!-- CPUBW_MIN_FREQ resource opcode, value-->
+
+        <!-- Type="1", main launch boost of 2sec -->
+        <Config
+            Id="0x00001081" Type="1" Enable="false" Timeout="2000" Target="sdxpinn"
+            Resources="0x40804000, 0xFFF, 0x40800000, 1500, 0x40400000, 0x1, 0x41800000, 59" />
+
+    <!-- config_enableLaunchBoostv3-->
+        <!-- LPM Bias resource opcode, value-->
+        <!-- SCHED_BUSY_HYSTERSIS_CPU_MASK resource opcode, value-->
+
+        <!-- Type="3", FA launch boost of 15sec -->
+        <Config
+            Id="0x00001081" Type="3" Enable="false" Timeout="15000" Target="sdxpinn"
+            Resources="0x40408000, 0x5, 0x40C74000, 0x0F" />
+
+    <!-- config_enableLaunchBoostv4-->
+        <!-- LPM Bias resource opcode, value-->
+        <!-- SCHED_BUSY_HYSTERSIS_CPU_MASK resource opcode, value-->
+
+        <!-- Type="4", AA games only launch boost -->
+        <Config
+            Id="0x00001081" Type="4" Enable="false" Timeout="15000" Target="sdxpinn"
+            Resources="0x40408000, 0x5, 0x40C74000, 0x0F" />
+
+    <!--PackageInstall boost-->
+        <!-- CPUBOOST_MAX_FREQ BIG Core resource opcode, value-->
+        <!-- CPUBOOST_MIN_FREQ BIG Core resource opcode, value-->
+        <!-- Type="", Package Install boost -->
+
+        <Config
+            Id="0x00001088" Enable="false" Target="sdxpinn"
+            Resources="0x40804000, 0xFFF, 0x40800000,0xFFF" />
+
+    <!--Rotation latency boost-->
+        <!-- CPUBOOST_MAX_FREQ BIG Core resource opcode, value-->
+        <!-- CPUBOOST_MIN_FREQ BIG Core resource opcode, value-->
+        <!-- Type="", Rotation latency boost -->
+
+        <Config
+            Id="0x00001089" Enable="false" Timeout="1500" Target="sdxpinn"
+            Resources="0x40804000, 0xFFF, 0x40800000,0xFFF" />
+
+    <!--Display on Resource -->
+        <!-- Display on resource opcode, value -->
+        <Config
+                Id="0x00001041" Enable="true" Timeout="0" Target="sdxpinn"
+                Resources="0x40000000, 1" />
+
+    <!--Display off Resource -->
+        <!-- Display on resource opcode, value -->
+        <Config
+                Id="0x00001040" Enable="true" Timeout="0" Target="sdxpinn"
+                Resources="0x40000000, 0x0" />
+    </PerfBoost>
+</BoostConfigs>

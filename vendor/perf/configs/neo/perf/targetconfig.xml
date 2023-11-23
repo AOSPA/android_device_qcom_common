@@ -62,7 +62,7 @@
              Target="neo_la"
              NumClusters="1"
              TotalNumCores="4"
-             SocIds="554"
+             SocIds="554,579"
              SynCore="1"
              MinCoreOnline="1"
              CpufreqGov="1"

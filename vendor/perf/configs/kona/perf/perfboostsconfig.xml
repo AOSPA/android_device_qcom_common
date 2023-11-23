@@ -152,7 +152,7 @@
         <!-- LPM Bias resource opcode, value-->
         <!-- MIN_ONLINE_CPU_CLUSTER_BIG opcode, value-->
         <!-- Below additional resources for 120+fps-->
-        <!-- SCHED_PREFER_SPREAD resource opcode, value -->
+        <!-- SCHED_PREFER_SPREAD resource opcode, value-->
         <!-- TIMEOUT 80ms -->
         <!-- Type="4", Prefling boost -->
         <Config
@@ -200,7 +200,7 @@
         <!-- LPM Bias resource opcode, value-->
         <!-- MIN_ONLINE_CPU_CLUSTER_BIG opcode, value-->
         <!-- Below additional resources for 120+fps-->
-        <!-- SCHED_PREFER_SPREAD resource opcode, value -->
+        <!-- SCHED_PREFER_SPREAD resource opcode, value-->
         <!-- Type="1", Drag boost -->
         <Config
             Id="0x00001087" Type="1" Enable="true" Timeout="0" Target="kona" Fps="60"
@@ -217,6 +217,7 @@
             Resources="0x43000000, 0x11, 0x40800000, 1000, 0x40800100, 1000, 0x40800200, 1000,
                        0x40C00000, 0x2, 0x43400000, 0x1F40, 0x40C74000, 0xFF, 0x40408000, 0x63,
                        0x41000000, 3, 0x40CA8000, 2" />
+
         <Config
             Id="0x00001087" Type="1" Enable="true" Timeout="0" Target="kona" Fps="144"
             Resources="0x43000000, 0x11, 0x40800000, 1000, 0x40800100, 1000, 0x40800200, 1000,
@@ -295,7 +296,7 @@
     <!--FPS Update from Framework-->
         <!-- SCHED_WINDOW_TICKS_UPDATE resource opcode, value -->
         <!-- Below additional resources for 120fps, 144fps-->
-        <!-- SCHED_PREFER_SPREAD resource opcode, value -->
+        <!-- SCHED_PREFER_SPREAD resource opcode, value-->
         <!-- Type indicates FPS -->
         <!-- 30fps -->
         <Config
@@ -339,8 +340,8 @@
         <!-- CPUBOOST_MIN_FREQ BIG Core resource opcode, value-->
         <!-- CPUBOOST_MIN_FREQ LITTLE Core resource opcode, value-->
         <!-- CPUBOOST_MIN_FREQ PRIME Core resource opcode, value-->
-        <!-- CPUBW_MAX_FREQ resource opcode, value-->
-        <!-- CPUBW_MIN_FREQ resource opcode, value-->
+        <!-- CPU_LLCC_BW_MAX_FREQ_V2 resource opcode, value-->
+        <!-- CPU_LLCC_BW_MIN_FREQ_V2 resource opcode, value-->
         <!-- POWER COLLAPSE resource opcode, value-->
         <!-- STORAGE CLK SCALING resource opcode, value-->
         <!-- LLCC DDR LAT CPU0 MIN FREQ resource opcode, value-->
@@ -351,9 +352,9 @@
         <Config
             Id="0x00001081" Type="1" Enable="true" Timeout="2000" Target="QCS8250"
             Resources="0x40C00000, 0x1, 0x40804000, 0xFFF, 0x40804100, 0xFFF, 0x40804200, 0xFFF,
-                       0x40800000, 0xFFF, 0x40800100, 0xFFF, 0x40800200, 0xFFF, 0x41818000, 0xFF,
-                       0x41800000, 0xFF, 0x40400000, 0x1, 0x42C10000, 0x1, 0x43430100, 0x28C5,
-                       0x43400000, 0xFFFF, 0x4281C000, 2000" />
+                       0x40800000, 0xFFF, 0x40800100, 0xFFF, 0x40800200, 0xFFF, 0x41848000, 0x104410,
+                       0x41844000, 0x104410, 0x40400000, 0x1, 0x42C10000, 0x1, 0x43460000, 0x401640,
+                       0x43458000, 0x1B8A00, 0x4281C000, 2000" />
 
     <!--app lauch boost (disabling packing)-->
 
@@ -364,8 +365,7 @@
 
     <!-- config_enableLaunchBoostv2-->
         <!-- SCHEDBOOST resource opcode, value-->
-        <!-- SCHED GROUP DOWNMIGRATE resource opcode, value-->
-        <!-- SCHED GROUP UPMIGRATE resource opcode, value-->
+        <!-- SCHED_GROUP_UP_DOWN MIGRATE resource opcode, value-->
         <!-- SCHED_BUSY_HYSTERSIS_CPU_MASK resource opcode, value-->
         <!-- LPM Bias resource opcode, value-->
         <!-- SCHED_UP_DOWN MIGRATE resource opcode, value -->
@@ -374,14 +374,13 @@
         <!-- Type="3", FA launch boost of 15sec -->
         <Config
             Id="0x00001081" Type="3" Enable="true" Timeout="15000" Target="QCS8250"
-            Resources="0x40C00000, 0x3, 0x40C58000, 0x2D, 0x40C54000, 0x41,
+            Resources="0x40C00000, 0x3, 0x40CF4000, 0x0041002D,
                       0x40C74000, 0xF0, 0x40408000, 0x63, 0x40CE0000, 0x003C0028,
                       0x40CE0200, 0x003C0028" />
 
     <!-- config_gameBoost-->
         <!-- SCHEDBOOST resource opcode, value-->
-        <!-- SCHED GROUP DOWNMIGRATE resource opcode, value-->
-        <!-- SCHED GROUP UPMIGRATE resource opcode, value-->
+        <!-- SCHED_GROUP_UP_DOWN MIGRATE resource opcode, value-->
         <!-- SCHED_BUSY_HYSTERSIS_CPU_MASK resource opcode, value-->
         <!-- LPM Bias resource opcode, value-->
         <!-- SCHED_UP_DOWN MIGRATE resource opcode, value -->
@@ -397,11 +396,11 @@
         <!-- Type="4", FA launch boost of 15sec -->
         <Config
             Id="0x00001081" Type="6" Enable="true" Timeout="2000" Target="QCS8250"
-            Resources="0x40C00000, 0x1, 0x40C58000, 0x2D, 0x40C54000, 0x41,
+            Resources="0x40C00000, 0x1, 0x40CF4000, 0x0041002D,
                        0x40C74000, 0xF0, 0x40408000, 0x63, 0x40CE0000, 0x003C0028,
                        0x40CE0200, 0x003C0028, 0x42C10000, 0x1, 0x40800200, 0x76C,
-                       0x40800000, 0x76C, 0x40800100, 0x4B0, 0x41800000, 0x50,
-                       0x43000000, 0x3A, 0x43400000, 0x3480" />
+                       0x40800000, 0x76C, 0x40800100, 0x4B0, 0x41844000, 0x927C0,
+                       0x4303C000, 0x1A0FE0, 0x43458000, 0x1B8A00" />
 
     <!--app launch boost (attach application) -->
         <!-- SCHED_TASK_BOOST resource opcode, value-->
@@ -466,30 +465,28 @@
         <!-- SCHED_BUSY_HYSTERSIS_CPU_MASK resource opcode, value-->
         <!-- LPM Bias resource opcode, value-->
         <!-- MIN_ONLINE_CPU_CLUSTER_BIG opcode, value-->
-        <!-- Below additional resources for 120+fps-->
-        <!-- SCHED_PREFER_SPREAD resource opcode, value -->
         <!-- TIMEOUT 80ms -->
         <!-- Type="4", Prefling boost -->
         <Config
             Id="0x00001080" Type="4" Enable="true" Timeout="80" Target="QCS8250" Fps="60"
-            Resources="0x43000000, 0x19, 0x40800000, 1000, 0x40800100, 1000, 0x40800200, 1000,
-                       0x40C00000, 0x2, 0x43400000, 0x1F40, 0x40C74000, 0xFF, 0x40408000, 0x63,
+            Resources="0x4303C000, 0xA6428, 0x40800000, 1000, 0x40800100, 1000, 0x40800200, 1000,
+                       0x40C00000, 0x2, 0x43458000, 0xD2F00, 0x40C74000, 0xFF, 0x40408000, 0x63,
                        0x41000000, 3" />
         <Config
             Id="0x00001080" Type="4" Enable="true" Timeout="80" Target="QCS8250" Fps="90"
-            Resources="0x43000000, 0x19, 0x40800000, 1000, 0x40800100, 1000, 0x40800200, 1000,
-                       0x40C00000, 0x2, 0x43400000, 0x1F40, 0x40C74000, 0xFF, 0x40408000, 0x63,
+            Resources="0x4303C000, 0xA6428, 0x40800000, 1000, 0x40800100, 1000, 0x40800200, 1000,
+                       0x40C00000, 0x2, 0x43458000, 0xD2F00, 0x40C74000, 0xFF, 0x40408000, 0x63,
                        0x41000000, 3" />
         <Config
             Id="0x00001080" Type="4" Enable="true" Timeout="80" Target="QCS8250" Fps="120"
-            Resources="0x43000000, 0x19, 0x40800000, 1000, 0x40800100, 1000, 0x40800200, 1000,
-                       0x40C00000, 0x2, 0x43400000, 0x1F40, 0x40C74000, 0xFF, 0x40408000, 0x63,
-                       0x41000000, 3, 0x40CA8000, 2" />
+            Resources="0x4303C000, 0xA6428, 0x40800000, 1000, 0x40800100, 1000, 0x40800200, 1000,
+                       0x40C00000, 0x2, 0x43458000, 0xD2F00, 0x40C74000, 0xFF, 0x40408000, 0x63,
+                       0x41000000, 3" />
         <Config
             Id="0x00001080" Type="4" Enable="true" Timeout="80" Target="QCS8250" Fps="144"
-            Resources="0x43000000, 0x19, 0x40800000, 1000, 0x40800100, 1000, 0x40800200, 1000,
-                       0x40C00000, 0x2, 0x43400000, 0x1F40, 0x40C74000, 0xFF, 0x40408000, 0x63,
-                       0x41000000, 3, 0x40CA8000, 2" />
+            Resources="0x4303C000, 0xA6428, 0x40800000, 1000, 0x40800100, 1000, 0x40800200, 1000,
+                       0x40C00000, 0x2, 0x43458000, 0xD2F00, 0x40C74000, 0xFF, 0x40408000, 0x63,
+                       0x41000000, 3" />
 
     <!--MTP boost-->
         <!-- SCHEDBOOST resource opcode, value-->
@@ -505,7 +502,7 @@
                        0x40800100, 1400" />
 
     <!--Drag boost-->
-        <!-- LLCBW_MIN_FREQ resource opcode, value-->
+        <!-- LLCC_DDR_BW_MIN_FREQ_V2 resource opcode, value-->
         <!-- CPUBOOST_MIN_FREQ BIG CORE resource opcode, value -->
         <!-- CPUBOOST_MIN_FREQ LITTLE Core resource opcode, value -->
         <!-- CPUBOOST_MIN_FREQ PRIME CORE resource opcode, value -->
@@ -514,29 +511,27 @@
         <!-- SCHED_BUSY_HYSTERSIS_CPU_MASK resource opcode, value-->
         <!-- LPM Bias resource opcode, value-->
         <!-- MIN_ONLINE_CPU_CLUSTER_BIG opcode, value-->
-        <!-- Below additional resources for 120+fps-->
-        <!-- SCHED_PREFER_SPREAD resource opcode, value -->
         <!-- Type="1", Drag boost -->
         <Config
             Id="0x00001087" Type="1" Enable="true" Timeout="0" Target="QCS8250" Fps="60"
-            Resources="0x43000000, 0x11, 0x40800000, 1000, 0x40800100, 1000, 0x40800200, 1000,
-                       0x40C00000, 0x2, 0x43400000, 0x1F40, 0x40C74000, 0xFF, 0x40408000, 0x63,
+            Resources="0x4303C000, 0x858B8, 0x40800000, 1000, 0x40800100, 1000, 0x40800200, 1000,
+                       0x40C00000, 0x2, 0x43458000, 0xD2F00, 0x40C74000, 0xFF, 0x40408000, 0x63,
                        0x41000000, 3" />
         <Config
             Id="0x00001087" Type="1" Enable="true" Timeout="0" Target="QCS8250" Fps="90"
-            Resources="0x43000000, 0x11, 0x40800000, 1000, 0x40800100, 1000, 0x40800200, 1000,
-                       0x40C00000, 0x2, 0x43400000, 0x1F40, 0x40C74000, 0xFF, 0x40408000, 0x63,
+            Resources="0x4303C000, 0x858B8, 0x40800000, 1000, 0x40800100, 1000, 0x40800200, 1000,
+                       0x40C00000, 0x2, 0x43458000, 0xD2F00, 0x40C74000, 0xFF, 0x40408000, 0x63,
                        0x41000000, 3" />
         <Config
             Id="0x00001087" Type="1" Enable="true" Timeout="0" Target="QCS8250" Fps="120"
-            Resources="0x43000000, 0x11, 0x40800000, 1000, 0x40800100, 1000, 0x40800200, 1000,
-                       0x40C00000, 0x2, 0x43400000, 0x1F40, 0x40C74000, 0xFF, 0x40408000, 0x63,
-                       0x41000000, 3, 0x40CA8000, 2" />
+            Resources="0x4303C000, 0x858B8, 0x40800000, 1000, 0x40800100, 1000, 0x40800200, 1000,
+                       0x40C00000, 0x2, 0x43458000, 0xD2F00, 0x40C74000, 0xFF, 0x40408000, 0x63,
+                       0x41000000, 3" />
         <Config
             Id="0x00001087" Type="1" Enable="true" Timeout="0" Target="QCS8250" Fps="144"
-            Resources="0x43000000, 0x11, 0x40800000, 1000, 0x40800100, 1000, 0x40800200, 1000,
-                       0x40C00000, 0x2, 0x43400000, 0x1F40, 0x40C74000, 0xFF, 0x40408000, 0x63,
-                       0x41000000, 3, 0x40CA8000, 2" />
+            Resources="0x4303C000, 0x858B8, 0x40800000, 1000, 0x40800100, 1000, 0x40800200, 1000,
+                       0x40C00000, 0x2, 0x43458000, 0xD2F00, 0x40C74000, 0xFF, 0x40408000, 0x63,
+                       0x41000000, 3" />
 
     <!--PackageInstall boost-->
         <!-- SCHEDBOOST resource opcode, value-->
@@ -590,11 +585,10 @@
         <!-- SCHED_BUSY_HYSTERSIS_CPU_MASK resource opcode, value-->
         <!-- LPM_BIAS_HYST resource opcode, value-->
         <!-- Type="", Performance mode -->
-        <!-- PA Edit: Disable Performance Mode
         <Config
             Id="0x00001091" Enable="true" Target="QCS8250"
             Resources="0x40C70000, 20, 0x40CA4000, 2, 0x40C88000, 25, 0x40800000, 1574, 0x40800100, 691, 0x40800200, 1632,
-                       0x40C74000, 0xFF, 0x40408000, 0x63" /> -->
+                       0x40C74000, 0xFF, 0x40408000, 0x63" />
 
     <!--Display on Resource -->
         <!-- Display on resource opcode, value -->
@@ -609,8 +603,6 @@
 
     <!--FPS Update from Framework-->
         <!-- SCHED_WINDOW_TICKS_UPDATE resource opcode, value -->
-        <!-- Below additional resources for 120fps, 144fps-->
-        <!-- SCHED_PREFER_SPREAD resource opcode, value -->
         <!-- Type indicates FPS -->
         <!-- 30fps -->
         <Config
@@ -631,11 +623,11 @@
         <!-- 120fps -->
         <Config
             Id="0x00001094" Type="120" Enable="true" Target="QCS8250" Timeout="0"
-            Resources="0x40CA4000, 2, 0x40CA8000, 1" />
+            Resources="0x40CA4000, 2" />
         <!-- 144fps -->
         <Config
             Id="0x00001094" Type="144" Enable="true" Target="QCS8250" Timeout="0"
-            Resources="0x40CA4000, 2, 0x40CA8000, 1" />
+            Resources="0x40CA4000, 2" />
         <!-- 180fps -->
         <Config
             Id="0x00001094" Type="180" Enable="true" Target="QCS8250" Timeout="0"
@@ -654,8 +646,8 @@
         <!-- CPUBOOST_MIN_FREQ BIG Core resource opcode, value-->
         <!-- CPUBOOST_MIN_FREQ LITTLE Core resource opcode, value-->
         <!-- CPUBOOST_MIN_FREQ PRIME Core resource opcode, value-->
-        <!-- CPUBW_MAX_FREQ resource opcode, value-->
-        <!-- CPUBW_MIN_FREQ resource opcode, value-->
+        <!-- CPU_LLCC_BW_MAX_FREQ_V2 resource opcode, value-->
+        <!-- CPU_LLCC_BW_MIN_FREQ_V2 resource opcode, value-->
         <!-- POWER COLLAPSE resource opcode, value-->
         <!-- STORAGE CLK SCALING resource opcode, value-->
         <!-- LLCC DDR LAT CPU0 MIN FREQ resource opcode, value-->
@@ -666,9 +658,9 @@
         <Config
             Id="0x00001081" Type="1" Enable="true" Timeout="2000" Target="QRB5165"
             Resources="0x40C00000, 0x1, 0x40804000, 0xFFF, 0x40804100, 0xFFF, 0x40804200, 0xFFF,
-                       0x40800000, 0xFFF, 0x40800100, 0xFFF, 0x40800200, 0xFFF, 0x41818000, 0xFF,
-                       0x41800000, 0xFF, 0x40400000, 0x1, 0x42C10000, 0x1, 0x43430100, 0x28C5,
-                       0x43400000, 0xFFFF, 0x4281C000, 2000" />
+                       0x40800000, 0xFFF, 0x40800100, 0xFFF, 0x40800200, 0xFFF, 0x41848000, 0x104410,
+                       0x41844000, 0x104410, 0x40400000, 0x1, 0x42C10000, 0x1, 0x43460000, 0x401640,
+                       0x43458000, 0x1B8A00, 0x4281C000, 2000" />
 
     <!--app lauch boost (disabling packing)-->
 
@@ -679,8 +671,7 @@
 
     <!-- config_enableLaunchBoostv2-->
         <!-- SCHEDBOOST resource opcode, value-->
-        <!-- SCHED GROUP DOWNMIGRATE resource opcode, value-->
-        <!-- SCHED GROUP UPMIGRATE resource opcode, value-->
+        <!-- SCHED_GROUP_UP_DOWN MIGRATE resource opcode, value-->
         <!-- SCHED_BUSY_HYSTERSIS_CPU_MASK resource opcode, value-->
         <!-- LPM Bias resource opcode, value-->
         <!-- SCHED_UP_DOWN MIGRATE resource opcode, value -->
@@ -689,14 +680,13 @@
         <!-- Type="3", FA launch boost of 15sec -->
         <Config
             Id="0x00001081" Type="3" Enable="true" Timeout="15000" Target="QRB5165"
-            Resources="0x40C00000, 0x3, 0x40C58000, 0x2D, 0x40C54000, 0x41,
+            Resources="0x40C00000, 0x3, 0x40CF4000, 0x0041002D,
                       0x40C74000, 0xF0, 0x40408000, 0x63, 0x40CE0000, 0x003C0028,
                       0x40CE0200, 0x003C0028" />
 
     <!-- config_gameBoost-->
         <!-- SCHEDBOOST resource opcode, value-->
-        <!-- SCHED GROUP DOWNMIGRATE resource opcode, value-->
-        <!-- SCHED GROUP UPMIGRATE resource opcode, value-->
+        <!-- SCHED_GROUP_UP_DOWN MIGRATE resource opcode, value-->
         <!-- SCHED_BUSY_HYSTERSIS_CPU_MASK resource opcode, value-->
         <!-- LPM Bias resource opcode, value-->
         <!-- SCHED_UP_DOWN MIGRATE resource opcode, value -->
@@ -712,11 +702,11 @@
         <!-- Type="4", FA launch boost of 15sec -->
         <Config
             Id="0x00001081" Type="6" Enable="true" Timeout="2000" Target="QRB5165"
-            Resources="0x40C00000, 0x1, 0x40C58000, 0x2D, 0x40C54000, 0x41,
+            Resources="0x40C00000, 0x1, 0x40CF4000, 0x0041002D,
                        0x40C74000, 0xF0, 0x40408000, 0x63, 0x40CE0000, 0x003C0028,
                        0x40CE0200, 0x003C0028, 0x42C10000, 0x1, 0x40800200, 0x76C,
-                       0x40800000, 0x76C, 0x40800100, 0x4B0, 0x41800000, 0x50,
-                       0x43000000, 0x3A, 0x43400000, 0x3480" />
+                       0x40800000, 0x76C, 0x40800100, 0x4B0, 0x41844000, 0x927C0,
+                       0x4303C000, 0x1A0FE0, 0x43458000, 0x1B8A00" />
 
     <!--app launch boost (attach application) -->
         <!-- SCHED_TASK_BOOST resource opcode, value-->
@@ -781,30 +771,28 @@
         <!-- SCHED_BUSY_HYSTERSIS_CPU_MASK resource opcode, value-->
         <!-- LPM Bias resource opcode, value-->
         <!-- MIN_ONLINE_CPU_CLUSTER_BIG opcode, value-->
-        <!-- Below additional resources for 120+fps-->
-        <!-- SCHED_PREFER_SPREAD resource opcode, value -->
         <!-- TIMEOUT 80ms -->
         <!-- Type="4", Prefling boost -->
         <Config
             Id="0x00001080" Type="4" Enable="true" Timeout="80" Target="QRB5165" Fps="60"
-            Resources="0x43000000, 0x19, 0x40800000, 1000, 0x40800100, 1000, 0x40800200, 1000,
-                       0x40C00000, 0x2, 0x43400000, 0x1F40, 0x40C74000, 0xFF, 0x40408000, 0x63,
+            Resources="0x4303C000, 0xA6428, 0x40800000, 1000, 0x40800100, 1000, 0x40800200, 1000,
+                       0x40C00000, 0x2, 0x43458000, 0xD2F00, 0x40C74000, 0xFF, 0x40408000, 0x63,
                        0x41000000, 3" />
         <Config
             Id="0x00001080" Type="4" Enable="true" Timeout="80" Target="QRB5165" Fps="90"
-            Resources="0x43000000, 0x19, 0x40800000, 1000, 0x40800100, 1000, 0x40800200, 1000,
-                       0x40C00000, 0x2, 0x43400000, 0x1F40, 0x40C74000, 0xFF, 0x40408000, 0x63,
+            Resources="0x4303C000, 0xA6428, 0x40800000, 1000, 0x40800100, 1000, 0x40800200, 1000,
+                       0x40C00000, 0x2, 0x43458000, 0xD2F00, 0x40C74000, 0xFF, 0x40408000, 0x63,
                        0x41000000, 3" />
         <Config
             Id="0x00001080" Type="4" Enable="true" Timeout="80" Target="QRB5165" Fps="120"
-            Resources="0x43000000, 0x19, 0x40800000, 1000, 0x40800100, 1000, 0x40800200, 1000,
-                       0x40C00000, 0x2, 0x43400000, 0x1F40, 0x40C74000, 0xFF, 0x40408000, 0x63,
-                       0x41000000, 3, 0x40CA8000, 2" />
+            Resources="0x4303C000, 0xA6428, 0x40800000, 1000, 0x40800100, 1000, 0x40800200, 1000,
+                       0x40C00000, 0x2, 0x43458000, 0xD2F00, 0x40C74000, 0xFF, 0x40408000, 0x63,
+                       0x41000000, 3" />
         <Config
             Id="0x00001080" Type="4" Enable="true" Timeout="80" Target="QRB5165" Fps="144"
-            Resources="0x43000000, 0x19, 0x40800000, 1000, 0x40800100, 1000, 0x40800200, 1000,
-                       0x40C00000, 0x2, 0x43400000, 0x1F40, 0x40C74000, 0xFF, 0x40408000, 0x63,
-                       0x41000000, 3, 0x40CA8000, 2" />
+            Resources="0x4303C000, 0xA6428, 0x40800000, 1000, 0x40800100, 1000, 0x40800200, 1000,
+                       0x40C00000, 0x2, 0x43458000, 0xD2F00, 0x40C74000, 0xFF, 0x40408000, 0x63,
+                       0x41000000, 3" />
 
     <!--MTP boost-->
         <!-- SCHEDBOOST resource opcode, value-->
@@ -820,7 +808,7 @@
                        0x40800100, 1400" />
 
     <!--Drag boost-->
-        <!-- LLCBW_MIN_FREQ resource opcode, value-->
+        <!-- LLCC_DDR_BW_MIN_FREQ_V2 resource opcode, value-->
         <!-- CPUBOOST_MIN_FREQ BIG CORE resource opcode, value -->
         <!-- CPUBOOST_MIN_FREQ LITTLE Core resource opcode, value -->
         <!-- CPUBOOST_MIN_FREQ PRIME CORE resource opcode, value -->
@@ -829,29 +817,27 @@
         <!-- SCHED_BUSY_HYSTERSIS_CPU_MASK resource opcode, value-->
         <!-- LPM Bias resource opcode, value-->
         <!-- MIN_ONLINE_CPU_CLUSTER_BIG opcode, value-->
-        <!-- Below additional resources for 120+fps-->
-        <!-- SCHED_PREFER_SPREAD resource opcode, value -->
         <!-- Type="1", Drag boost -->
         <Config
             Id="0x00001087" Type="1" Enable="true" Timeout="0" Target="QRB5165" Fps="60"
-            Resources="0x43000000, 0x11, 0x40800000, 1000, 0x40800100, 1000, 0x40800200, 1000,
-                       0x40C00000, 0x2, 0x43400000, 0x1F40, 0x40C74000, 0xFF, 0x40408000, 0x63,
+            Resources="0x4303C000, 0x858B8, 0x40800000, 1000, 0x40800100, 1000, 0x40800200, 1000,
+                       0x40C00000, 0x2, 0x43458000, 0xD2F00, 0x40C74000, 0xFF, 0x40408000, 0x63,
                        0x41000000, 3" />
         <Config
             Id="0x00001087" Type="1" Enable="true" Timeout="0" Target="QRB5165" Fps="90"
-            Resources="0x43000000, 0x11, 0x40800000, 1000, 0x40800100, 1000, 0x40800200, 1000,
-                       0x40C00000, 0x2, 0x43400000, 0x1F40, 0x40C74000, 0xFF, 0x40408000, 0x63,
+            Resources="0x4303C000, 0x858B8, 0x40800000, 1000, 0x40800100, 1000, 0x40800200, 1000,
+                       0x40C00000, 0x2, 0x43458000, 0xD2F00, 0x40C74000, 0xFF, 0x40408000, 0x63,
                        0x41000000, 3" />
         <Config
             Id="0x00001087" Type="1" Enable="true" Timeout="0" Target="QRB5165" Fps="120"
-            Resources="0x43000000, 0x11, 0x40800000, 1000, 0x40800100, 1000, 0x40800200, 1000,
-                       0x40C00000, 0x2, 0x43400000, 0x1F40, 0x40C74000, 0xFF, 0x40408000, 0x63,
-                       0x41000000, 3, 0x40CA8000, 2" />
+            Resources="0x4303C000, 0x858B8, 0x40800000, 1000, 0x40800100, 1000, 0x40800200, 1000,
+                       0x40C00000, 0x2, 0x43458000, 0xD2F00, 0x40C74000, 0xFF, 0x40408000, 0x63,
+                       0x41000000, 3" />
         <Config
             Id="0x00001087" Type="1" Enable="true" Timeout="0" Target="QRB5165" Fps="144"
-            Resources="0x43000000, 0x11, 0x40800000, 1000, 0x40800100, 1000, 0x40800200, 1000,
-                       0x40C00000, 0x2, 0x43400000, 0x1F40, 0x40C74000, 0xFF, 0x40408000, 0x63,
-                       0x41000000, 3, 0x40CA8000, 2" />
+            Resources="0x4303C000, 0x858B8, 0x40800000, 1000, 0x40800100, 1000, 0x40800200, 1000,
+                       0x40C00000, 0x2, 0x43458000, 0xD2F00, 0x40C74000, 0xFF, 0x40408000, 0x63,
+                       0x41000000, 3" />
 
     <!--PackageInstall boost-->
         <!-- SCHEDBOOST resource opcode, value-->
@@ -905,11 +891,10 @@
         <!-- SCHED_BUSY_HYSTERSIS_CPU_MASK resource opcode, value-->
         <!-- LPM_BIAS_HYST resource opcode, value-->
         <!-- Type="", Performance mode -->
-        <!-- PA Edit: Disable Performance Mode
         <Config
             Id="0x00001091" Enable="true" Target="QRB5165"
             Resources="0x40C70000, 20, 0x40CA4000, 2, 0x40C88000, 25, 0x40800000, 1574, 0x40800100, 691, 0x40800200, 1632,
-                       0x40C74000, 0xFF, 0x40408000, 0x63" /> -->
+                       0x40C74000, 0xFF, 0x40408000, 0x63" />
 
     <!--Display on Resource -->
         <!-- Display on resource opcode, value -->
@@ -924,8 +909,6 @@
 
     <!--FPS Update from Framework-->
         <!-- SCHED_WINDOW_TICKS_UPDATE resource opcode, value -->
-        <!-- Below additional resources for 120fps, 144fps-->
-        <!-- SCHED_PREFER_SPREAD resource opcode, value -->
         <!-- Type indicates FPS -->
         <!-- 30fps -->
         <Config
@@ -946,11 +929,11 @@
         <!-- 120fps -->
         <Config
             Id="0x00001094" Type="120" Enable="true" Target="QRB5165" Timeout="0"
-            Resources="0x40CA4000, 2, 0x40CA8000, 1" />
+            Resources="0x40CA4000, 2" />
         <!-- 144fps -->
         <Config
             Id="0x00001094" Type="144" Enable="true" Target="QRB5165" Timeout="0"
-            Resources="0x40CA4000, 2, 0x40CA8000, 1" />
+            Resources="0x40CA4000, 2" />
         <!-- 180fps -->
         <Config
             Id="0x00001094" Type="180" Enable="true" Target="QRB5165" Timeout="0"
@@ -969,8 +952,8 @@
         <!-- CPUBOOST_MIN_FREQ BIG Core resource opcode, value-->
         <!-- CPUBOOST_MIN_FREQ LITTLE Core resource opcode, value-->
         <!-- CPUBOOST_MIN_FREQ PRIME Core resource opcode, value-->
-        <!-- CPUBW_MAX_FREQ resource opcode, value-->
-        <!-- CPUBW_MIN_FREQ resource opcode, value-->
+        <!-- CPU_LLCC_BW_MAX_FREQ_V2 resource opcode, value-->
+        <!-- CPU_LLCC_BW_MIN_FREQ_V2 resource opcode, value-->
         <!-- POWER COLLAPSE resource opcode, value-->
         <!-- STORAGE CLK SCALING resource opcode, value-->
         <!-- LLCC DDR LAT CPU0 MIN FREQ resource opcode, value-->
@@ -981,9 +964,9 @@
         <Config
             Id="0x00001081" Type="1" Enable="true" Timeout="2000" Target="QCS7230"
             Resources="0x40C00000, 0x1, 0x40804000, 0xFFF, 0x40804100, 0xFFF, 0x40804200, 0xFFF,
-                       0x40800000, 0xFFF, 0x40800100, 0xFFF, 0x40800200, 0xFFF, 0x41818000, 0xFF,
-                       0x41800000, 0xFF, 0x40400000, 0x1, 0x42C10000, 0x1, 0x43430100, 0x28C5,
-                       0x43400000, 0xFFFF, 0x4281C000, 2000" />
+                       0x40800000, 0xFFF, 0x40800100, 0xFFF, 0x40800200, 0xFFF, 0x41848000, 0x104410,
+                       0x41844000, 0x104410, 0x40400000, 0x1, 0x42C10000, 0x1, 0x43460000, 0x401640,
+                       0x43458000, 0x1B8A00, 0x4281C000, 2000" />
 
     <!--app lauch boost (disabling packing)-->
 
@@ -994,8 +977,7 @@
 
     <!-- config_enableLaunchBoostv2-->
         <!-- SCHEDBOOST resource opcode, value-->
-        <!-- SCHED GROUP DOWNMIGRATE resource opcode, value-->
-        <!-- SCHED GROUP UPMIGRATE resource opcode, value-->
+        <!-- SCHED_GROUP_UP_DOWN MIGRATE resource opcode, value-->
         <!-- SCHED_BUSY_HYSTERSIS_CPU_MASK resource opcode, value-->
         <!-- LPM Bias resource opcode, value-->
         <!-- SCHED_UP_DOWN MIGRATE resource opcode, value -->
@@ -1004,14 +986,13 @@
         <!-- Type="3", FA launch boost of 15sec -->
         <Config
             Id="0x00001081" Type="3" Enable="true" Timeout="15000" Target="QCS7230"
-            Resources="0x40C00000, 0x3, 0x40C58000, 0x2D, 0x40C54000, 0x41,
+            Resources="0x40C00000, 0x3, 0x40CF4000, 0x0041002D,
                       0x40C74000, 0xF0, 0x40408000, 0x63, 0x40CE0000, 0x003C0028,
                       0x40CE0200, 0x003C0028" />
 
     <!-- config_gameBoost-->
         <!-- SCHEDBOOST resource opcode, value-->
-        <!-- SCHED GROUP DOWNMIGRATE resource opcode, value-->
-        <!-- SCHED GROUP UPMIGRATE resource opcode, value-->
+        <!-- SCHED_GROUP_UP_DOWN MIGRATE resource opcode, value-->
         <!-- SCHED_BUSY_HYSTERSIS_CPU_MASK resource opcode, value-->
         <!-- LPM Bias resource opcode, value-->
         <!-- SCHED_UP_DOWN MIGRATE resource opcode, value -->
@@ -1027,11 +1008,11 @@
         <!-- Type="4", FA launch boost of 15sec -->
         <Config
             Id="0x00001081" Type="6" Enable="true" Timeout="2000" Target="QCS7230"
-            Resources="0x40C00000, 0x1, 0x40C58000, 0x2D, 0x40C54000, 0x41,
+            Resources="0x40C00000, 0x1, 0x40CF4000, 0x0041002D,
                        0x40C74000, 0xF0, 0x40408000, 0x63, 0x40CE0000, 0x003C0028,
                        0x40CE0200, 0x003C0028, 0x42C10000, 0x1, 0x40800200, 0x76C,
-                       0x40800000, 0x76C, 0x40800100, 0x4B0, 0x41800000, 0x50,
-                       0x43000000, 0x3A, 0x43400000, 0x3480" />
+                       0x40800000, 0x76C, 0x40800100, 0x4B0, 0x41844000, 0x927C0,
+                       0x4303C000, 0x1A0FE0, 0x43458000, 0x1B8A00" />
 
     <!--app launch boost (attach application) -->
         <!-- SCHED_TASK_BOOST resource opcode, value-->
@@ -1096,30 +1077,28 @@
         <!-- SCHED_BUSY_HYSTERSIS_CPU_MASK resource opcode, value-->
         <!-- LPM Bias resource opcode, value-->
         <!-- MIN_ONLINE_CPU_CLUSTER_BIG opcode, value-->
-        <!-- Below additional resources for 120+fps-->
-        <!-- SCHED_PREFER_SPREAD resource opcode, value -->
         <!-- TIMEOUT 80ms -->
         <!-- Type="4", Prefling boost -->
         <Config
             Id="0x00001080" Type="4" Enable="true" Timeout="80" Target="QCS7230" Fps="60"
-            Resources="0x43000000, 0x19, 0x40800000, 1000, 0x40800100, 1000, 0x40800200, 1000,
-                       0x40C00000, 0x2, 0x43400000, 0x1F40, 0x40C74000, 0xFF, 0x40408000, 0x63,
+            Resources="0x4303C000, 0xA6428, 0x40800000, 1000, 0x40800100, 1000, 0x40800200, 1000,
+                       0x40C00000, 0x2, 0x43458000, 0xD2F00, 0x40C74000, 0xFF, 0x40408000, 0x63,
                        0x41000000, 3" />
         <Config
             Id="0x00001080" Type="4" Enable="true" Timeout="80" Target="QCS7230" Fps="90"
-            Resources="0x43000000, 0x19, 0x40800000, 1000, 0x40800100, 1000, 0x40800200, 1000,
-                       0x40C00000, 0x2, 0x43400000, 0x1F40, 0x40C74000, 0xFF, 0x40408000, 0x63,
+            Resources="0x4303C000, 0xA6428, 0x40800000, 1000, 0x40800100, 1000, 0x40800200, 1000,
+                       0x40C00000, 0x2, 0x43458000, 0xD2F00, 0x40C74000, 0xFF, 0x40408000, 0x63,
                        0x41000000, 3" />
         <Config
             Id="0x00001080" Type="4" Enable="true" Timeout="80" Target="QCS7230" Fps="120"
-            Resources="0x43000000, 0x19, 0x40800000, 1000, 0x40800100, 1000, 0x40800200, 1000,
-                       0x40C00000, 0x2, 0x43400000, 0x1F40, 0x40C74000, 0xFF, 0x40408000, 0x63,
-                       0x41000000, 3, 0x40CA8000, 2" />
+            Resources="0x4303C000, 0xA6428, 0x40800000, 1000, 0x40800100, 1000, 0x40800200, 1000,
+                       0x40C00000, 0x2, 0x43458000, 0xD2F00, 0x40C74000, 0xFF, 0x40408000, 0x63,
+                       0x41000000, 3" />
         <Config
             Id="0x00001080" Type="4" Enable="true" Timeout="80" Target="QCS7230" Fps="144"
-            Resources="0x43000000, 0x19, 0x40800000, 1000, 0x40800100, 1000, 0x40800200, 1000,
-                       0x40C00000, 0x2, 0x43400000, 0x1F40, 0x40C74000, 0xFF, 0x40408000, 0x63,
-                       0x41000000, 3, 0x40CA8000, 2" />
+            Resources="0x4303C000, 0xA6428, 0x40800000, 1000, 0x40800100, 1000, 0x40800200, 1000,
+                       0x40C00000, 0x2, 0x43458000, 0xD2F00, 0x40C74000, 0xFF, 0x40408000, 0x63,
+                       0x41000000, 3" />
 
     <!--MTP boost-->
         <!-- SCHEDBOOST resource opcode, value-->
@@ -1135,7 +1114,7 @@
                        0x40800100, 1400" />
 
     <!--Drag boost-->
-        <!-- LLCBW_MIN_FREQ resource opcode, value-->
+        <!-- LLCC_DDR_BW_MIN_FREQ_V2 resource opcode, value-->
         <!-- CPUBOOST_MIN_FREQ BIG CORE resource opcode, value -->
         <!-- CPUBOOST_MIN_FREQ LITTLE Core resource opcode, value -->
         <!-- CPUBOOST_MIN_FREQ PRIME CORE resource opcode, value -->
@@ -1144,29 +1123,27 @@
         <!-- SCHED_BUSY_HYSTERSIS_CPU_MASK resource opcode, value-->
         <!-- LPM Bias resource opcode, value-->
         <!-- MIN_ONLINE_CPU_CLUSTER_BIG opcode, value-->
-        <!-- Below additional resources for 120+fps-->
-        <!-- SCHED_PREFER_SPREAD resource opcode, value -->
         <!-- Type="1", Drag boost -->
         <Config
             Id="0x00001087" Type="1" Enable="true" Timeout="0" Target="QCS7230" Fps="60"
-            Resources="0x43000000, 0x11, 0x40800000, 1000, 0x40800100, 1000, 0x40800200, 1000,
-                       0x40C00000, 0x2, 0x43400000, 0x1F40, 0x40C74000, 0xFF, 0x40408000, 0x63,
+            Resources="0x4303C000, 0x858B8, 0x40800000, 1000, 0x40800100, 1000, 0x40800200, 1000,
+                       0x40C00000, 0x2, 0x43458000, 0xD2F00, 0x40C74000, 0xFF, 0x40408000, 0x63,
                        0x41000000, 3" />
         <Config
             Id="0x00001087" Type="1" Enable="true" Timeout="0" Target="QCS7230" Fps="90"
-            Resources="0x43000000, 0x11, 0x40800000, 1000, 0x40800100, 1000, 0x40800200, 1000,
-                       0x40C00000, 0x2, 0x43400000, 0x1F40, 0x40C74000, 0xFF, 0x40408000, 0x63,
+            Resources="0x4303C000, 0x858B8, 0x40800000, 1000, 0x40800100, 1000, 0x40800200, 1000,
+                       0x40C00000, 0x2, 0x43458000, 0xD2F00, 0x40C74000, 0xFF, 0x40408000, 0x63,
                        0x41000000, 3" />
         <Config
             Id="0x00001087" Type="1" Enable="true" Timeout="0" Target="QCS7230" Fps="120"
-            Resources="0x43000000, 0x11, 0x40800000, 1000, 0x40800100, 1000, 0x40800200, 1000,
-                       0x40C00000, 0x2, 0x43400000, 0x1F40, 0x40C74000, 0xFF, 0x40408000, 0x63,
-                       0x41000000, 3, 0x40CA8000, 2" />
+            Resources="0x4303C000, 0x858B8, 0x40800000, 1000, 0x40800100, 1000, 0x40800200, 1000,
+                       0x40C00000, 0x2, 0x43458000, 0xD2F00, 0x40C74000, 0xFF, 0x40408000, 0x63,
+                       0x41000000, 3" />
         <Config
             Id="0x00001087" Type="1" Enable="true" Timeout="0" Target="QCS7230" Fps="144"
-            Resources="0x43000000, 0x11, 0x40800000, 1000, 0x40800100, 1000, 0x40800200, 1000,
-                       0x40C00000, 0x2, 0x43400000, 0x1F40, 0x40C74000, 0xFF, 0x40408000, 0x63,
-                       0x41000000, 3, 0x40CA8000, 2" />
+            Resources="0x4303C000, 0x858B8, 0x40800000, 1000, 0x40800100, 1000, 0x40800200, 1000,
+                       0x40C00000, 0x2, 0x43458000, 0xD2F00, 0x40C74000, 0xFF, 0x40408000, 0x63,
+                       0x41000000, 3" />
 
     <!--PackageInstall boost-->
         <!-- SCHEDBOOST resource opcode, value-->
@@ -1220,11 +1197,10 @@
         <!-- SCHED_BUSY_HYSTERSIS_CPU_MASK resource opcode, value-->
         <!-- LPM_BIAS_HYST resource opcode, value-->
         <!-- Type="", Performance mode -->
-        <!-- PA Edit: Disable Performance Mode
         <Config
             Id="0x00001091" Enable="true" Target="QCS7230"
             Resources="0x40C70000, 20, 0x40CA4000, 2, 0x40C88000, 25, 0x40800000, 1574, 0x40800100, 691, 0x40800200, 1632,
-                       0x40C74000, 0xFF, 0x40408000, 0x63" /> -->
+                       0x40C74000, 0xFF, 0x40408000, 0x63" />
 
     <!--Display on Resource -->
         <!-- Display on resource opcode, value -->
@@ -1239,8 +1215,6 @@
 
     <!--FPS Update from Framework-->
         <!-- SCHED_WINDOW_TICKS_UPDATE resource opcode, value -->
-        <!-- Below additional resources for 120fps, 144fps-->
-        <!-- SCHED_PREFER_SPREAD resource opcode, value -->
         <!-- Type indicates FPS -->
         <!-- 30fps -->
         <Config
@@ -1261,11 +1235,11 @@
         <!-- 120fps -->
         <Config
             Id="0x00001094" Type="120" Enable="true" Target="QCS7230" Timeout="0"
-            Resources="0x40CA4000, 2, 0x40CA8000, 1" />
+            Resources="0x40CA4000, 2" />
         <!-- 144fps -->
         <Config
             Id="0x00001094" Type="144" Enable="true" Target="QCS7230" Timeout="0"
-            Resources="0x40CA4000, 2, 0x40CA8000, 1" />
+            Resources="0x40CA4000, 2" />
         <!-- 180fps -->
         <Config
             Id="0x00001094" Type="180" Enable="true" Target="QCS7230" Timeout="0"
@@ -1294,9 +1268,9 @@
         <Config
             Id="0x00001081" Type="1" Enable="true" Timeout="2000" Target="QRB3165"
             Resources="0x40C00000, 0x1, 0x40804000, 0xFFF, 0x40804100, 0xFFF,
-                       0x40800000, 0xFFF, 0x40800100, 0xFFF, 0x41818000, 0xFF,
-                       0x41800000, 0xFF, 0x40400000, 0x1, 0x42C10000, 0x1, 0x43430100, 0x28C5,
-                       0x43400000, 0xFFFF, 0x4281C000, 2000" />
+                       0x40800000, 0xFFF, 0x40800100, 0xFFF, 0x41848000, 0x104410,
+                       0x41844000, 0x104410, 0x40400000, 0x1, 0x42C10000, 0x1, 0x43460000, 0x401640,
+                       0x43458000, 0x1B8A00, 0x4281C000, 2000" />
 
     <!--app lauch boost (disabling packing)-->
 
@@ -1307,8 +1281,7 @@
 
     <!-- config_enableLaunchBoostv2-->
         <!-- SCHEDBOOST resource opcode, value-->
-        <!-- SCHED GROUP DOWNMIGRATE resource opcode, value-->
-        <!-- SCHED GROUP UPMIGRATE resource opcode, value-->
+        <!-- SCHED_GROUP_UP_DOWN MIGRATE resource opcode, value-->
         <!-- SCHED_BUSY_HYSTERSIS_CPU_MASK resource opcode, value-->
         <!-- LPM Bias resource opcode, value-->
         <!-- SCHED_UP_DOWN MIGRATE resource opcode, value -->
@@ -1317,20 +1290,18 @@
         <!-- Type="3", FA launch boost of 15sec -->
         <Config
             Id="0x00001081" Type="3" Enable="true" Timeout="15000" Target="QRB3165"
-            Resources="0x40C00000, 0x3, 0x40C58000, 0x2D, 0x40C54000, 0x41,
+            Resources="0x40C00000, 0x3, 0x40CF4000, 0x0041002D,
                       0x40C74000, 0xF0, 0x40408000, 0x63, 0x40CE0000, 0x003C0028,
                       0x40CE0200, 0x003C0028" />
 
     <!-- config_gameBoost-->
         <!-- SCHEDBOOST resource opcode, value-->
-        <!-- SCHED GROUP DOWNMIGRATE resource opcode, value-->
-        <!-- SCHED GROUP UPMIGRATE resource opcode, value-->
+        <!-- SCHED_GROUP_UP_DOWN MIGRATE resource opcode, value-->
         <!-- SCHED_BUSY_HYSTERSIS_CPU_MASK resource opcode, value-->
         <!-- LPM Bias resource opcode, value-->
         <!-- SCHED_UP_DOWN MIGRATE resource opcode, value -->
         <!-- SCHED_UP_DOWN MIGRATE PRIME resource opcode, value -->
         <!-- STORAGE CLK SCALING resource opcode, value-->
-        <!-- CPUBOOST_MIN_FREQ PRIME Core resource opcode, value-->
         <!-- CPUBOOST_MIN_FREQ BIG Core resource opcode, value-->
         <!-- CPUBOOST_MIN_FREQ LITTLE Core resource opcode, value-->
         <!-- CPUBW_MIN_FREQ resource opcode, value-->
@@ -1340,11 +1311,11 @@
         <!-- Type="4", FA launch boost of 15sec -->
         <Config
             Id="0x00001081" Type="6" Enable="true" Timeout="2000" Target="QRB3165"
-            Resources="0x40C00000, 0x1, 0x40C58000, 0x2D, 0x40C54000, 0x41,
+            Resources="0x40C00000, 0x1, 0x40CF4000, 0x0041002D,
                        0x40C74000, 0xF0, 0x40408000, 0x63, 0x40CE0000, 0x003C0028,
-                       0x40CE0200, 0x003C0028, 0x42C10000, 0x1, 0x40800200, 0x76C,
-                       0x40800000, 0x76C, 0x40800100, 0x4B0, 0x41800000, 0x50,
-                       0x43000000, 0x3A, 0x43400000, 0x3480" />
+                       0x40CE0200, 0x003C0028, 0x42C10000, 0x1,
+                       0x40800000, 0x76C, 0x40800100, 0x4B0, 0x41844000, 0x927C0,
+                       0x4303C000, 0x1A0FE0, 0x43458000, 0x1B8A00" />
 
     <!--app launch boost (attach application) -->
         <!-- SCHED_TASK_BOOST resource opcode, value-->
@@ -1405,30 +1376,28 @@
         <!-- SCHED_BUSY_HYSTERSIS_CPU_MASK resource opcode, value-->
         <!-- LPM Bias resource opcode, value-->
         <!-- MIN_ONLINE_CPU_CLUSTER_BIG opcode, value-->
-        <!-- Below additional resources for 120+fps-->
-        <!-- SCHED_PREFER_SPREAD resource opcode, value -->
         <!-- TIMEOUT 80ms -->
         <!-- Type="4", Prefling boost -->
         <Config
             Id="0x00001080" Type="4" Enable="true" Timeout="80" Target="QRB3165" Fps="60"
-            Resources="0x43000000, 0x19, 0x40800000, 1000, 0x40800100, 1000,
-                       0x40C00000, 0x2, 0x43400000, 0x1F40, 0x40C74000, 0xFF, 0x40408000, 0x63,
+            Resources="0x4303C000, 0xA6428, 0x40800000, 1000, 0x40800100, 1000,
+                       0x40C00000, 0x2, 0x43458000, 0xD2F00, 0x40C74000, 0xFF, 0x40408000, 0x63,
                        0x41000000, 3" />
         <Config
             Id="0x00001080" Type="4" Enable="true" Timeout="80" Target="QRB3165" Fps="90"
-            Resources="0x43000000, 0x19, 0x40800000, 1000, 0x40800100, 1000,
-                       0x40C00000, 0x2, 0x43400000, 0x1F40, 0x40C74000, 0xFF, 0x40408000, 0x63,
+            Resources="0x4303C000, 0xA6428, 0x40800000, 1000, 0x40800100, 1000,
+                       0x40C00000, 0x2, 0x43458000, 0xD2F00, 0x40C74000, 0xFF, 0x40408000, 0x63,
                        0x41000000, 3" />
         <Config
             Id="0x00001080" Type="4" Enable="true" Timeout="80" Target="QRB3165" Fps="120"
-            Resources="0x43000000, 0x19, 0x40800000, 1000, 0x40800100, 1000,
-                       0x40C00000, 0x2, 0x43400000, 0x1F40, 0x40C74000, 0xFF, 0x40408000, 0x63,
-                       0x41000000, 3, 0x40CA8000, 2" />
+            Resources="0x4303C000, 0xA6428, 0x40800000, 1000, 0x40800100, 1000,
+                       0x40C00000, 0x2, 0x43458000, 0xD2F00, 0x40C74000, 0xFF, 0x40408000, 0x63,
+                       0x41000000, 3" />
         <Config
             Id="0x00001080" Type="4" Enable="true" Timeout="80" Target="QRB3165" Fps="144"
-            Resources="0x43000000, 0x19, 0x40800000, 1000, 0x40800100, 1000,
-                       0x40C00000, 0x2, 0x43400000, 0x1F40, 0x40C74000, 0xFF, 0x40408000, 0x63,
-                       0x41000000, 3, 0x40CA8000, 2" />
+            Resources="0x4303C000, 0xA6428, 0x40800000, 1000, 0x40800100, 1000,
+                       0x40C00000, 0x2, 0x43458000, 0xD2F00, 0x40C74000, 0xFF, 0x40408000, 0x63,
+                       0x41000000, 3" />
 
     <!--MTP boost-->
         <!-- SCHEDBOOST resource opcode, value-->
@@ -1444,7 +1413,7 @@
                        0x40800100, 1400" />
 
     <!--Drag boost-->
-        <!-- LLCBW_MIN_FREQ resource opcode, value-->
+        <!-- LLCC_DDR_BW_MIN_FREQ_V2 resource opcode, value-->
         <!-- CPUBOOST_MIN_FREQ BIG CORE resource opcode, value -->
         <!-- CPUBOOST_MIN_FREQ LITTLE Core resource opcode, value -->
         <!-- SCHEDBOOST resource opcode, value-->
@@ -1452,29 +1421,27 @@
         <!-- SCHED_BUSY_HYSTERSIS_CPU_MASK resource opcode, value-->
         <!-- LPM Bias resource opcode, value-->
         <!-- MIN_ONLINE_CPU_CLUSTER_BIG opcode, value-->
-        <!-- Below additional resources for 120+fps-->
-        <!-- SCHED_PREFER_SPREAD resource opcode, value -->
         <!-- Type="1", Drag boost -->
         <Config
             Id="0x00001087" Type="1" Enable="true" Timeout="0" Target="QRB3165" Fps="60"
-            Resources="0x43000000, 0x11, 0x40800000, 1000, 0x40800100, 1000,
-                       0x40C00000, 0x2, 0x43400000, 0x1F40, 0x40C74000, 0xFF, 0x40408000, 0x63,
+            Resources="0x4303C000, 0x858B8, 0x40800000, 1000, 0x40800100, 1000,
+                       0x40C00000, 0x2, 0x43458000, 0xD2F00, 0x40C74000, 0xFF, 0x40408000, 0x63,
                        0x41000000, 3" />
         <Config
             Id="0x00001087" Type="1" Enable="true" Timeout="0" Target="QRB3165" Fps="90"
-            Resources="0x43000000, 0x11, 0x40800000, 1000, 0x40800100, 1000,
-                       0x40C00000, 0x2, 0x43400000, 0x1F40, 0x40C74000, 0xFF, 0x40408000, 0x63,
+            Resources="0x4303C000, 0x858B8, 0x40800000, 1000, 0x40800100, 1000,
+                       0x40C00000, 0x2, 0x43458000, 0xD2F00, 0x40C74000, 0xFF, 0x40408000, 0x63,
                        0x41000000, 3" />
         <Config
             Id="0x00001087" Type="1" Enable="true" Timeout="0" Target="QRB3165" Fps="120"
-            Resources="0x43000000, 0x11, 0x40800000, 1000, 0x40800100, 1000,
-                       0x40C00000, 0x2, 0x43400000, 0x1F40, 0x40C74000, 0xFF, 0x40408000, 0x63,
-                       0x41000000, 3, 0x40CA8000, 2" />
+            Resources="0x4303C000, 0x858B8, 0x40800000, 1000, 0x40800100, 1000,
+                       0x40C00000, 0x2, 0x43458000, 0xD2F00, 0x40C74000, 0xFF, 0x40408000, 0x63,
+                       0x41000000, 3" />
         <Config
             Id="0x00001087" Type="1" Enable="true" Timeout="0" Target="QRB3165" Fps="144"
-            Resources="0x43000000, 0x11, 0x40800000, 1000, 0x40800100, 1000,
-                       0x40C00000, 0x2, 0x43400000, 0x1F40, 0x40C74000, 0xFF, 0x40408000, 0x63,
-                       0x41000000, 3, 0x40CA8000, 2" />
+            Resources="0x4303C000, 0x858B8, 0x40800000, 1000, 0x40800100, 1000,
+                       0x40C00000, 0x2, 0x43458000, 0xD2F00, 0x40C74000, 0xFF, 0x40408000, 0x63,
+                       0x41000000, 3" />
 
     <!--PackageInstall boost-->
         <!-- SCHEDBOOST resource opcode, value-->
@@ -1523,11 +1490,10 @@
         <!-- SCHED_BUSY_HYSTERSIS_CPU_MASK resource opcode, value-->
         <!-- LPM_BIAS_HYST resource opcode, value-->
         <!-- Type="", Performance mode -->
-        <!-- PA Edit: Disable Performance Mode
         <Config
             Id="0x00001091" Enable="true" Target="QRB3165"
             Resources="0x40C70000, 20, 0x40CA4000, 2, 0x40C88000, 25, 0x40800000, 1574, 0x40800100, 691,
-                       0x40C74000, 0xFF, 0x40408000, 0x63" /> -->
+                       0x40C74000, 0xFF, 0x40408000, 0x63" />
 
     <!--Display on Resource -->
         <!-- Display on resource opcode, value -->
@@ -1542,8 +1508,6 @@
 
     <!--FPS Update from Framework-->
         <!-- SCHED_WINDOW_TICKS_UPDATE resource opcode, value -->
-        <!-- Below additional resources for 120fps, 144fps-->
-        <!-- SCHED_PREFER_SPREAD resource opcode, value -->
         <!-- Type indicates FPS -->
         <!-- 30fps -->
         <Config
@@ -1564,11 +1528,11 @@
         <!-- 120fps -->
         <Config
             Id="0x00001094" Type="120" Enable="true" Target="QRB3165" Timeout="0"
-            Resources="0x40CA4000, 2, 0x40CA8000, 1" />
+            Resources="0x40CA4000, 2" />
         <!-- 144fps -->
         <Config
             Id="0x00001094" Type="144" Enable="true" Target="QRB3165" Timeout="0"
-            Resources="0x40CA4000, 2, 0x40CA8000, 1" />
+            Resources="0x40CA4000, 2" />
         <!-- 180fps -->
         <Config
             Id="0x00001094" Type="180" Enable="true" Target="QRB3165" Timeout="0"
@@ -1577,6 +1541,5 @@
         <Config
             Id="0x00001094" Type="240" Enable="true" Target="QRB3165" Timeout="0"
             Resources="0x40CA4000, 2" />
-
     </PerfBoost>
 </BoostConfigs>

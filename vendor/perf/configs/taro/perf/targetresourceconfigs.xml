@@ -157,9 +157,6 @@ as anyway perflock calls of these resources would fail. -->
         <Config MajorValue="0xD" MinorValue="0x13" Supported="no" />
         <Config MajorValue="0xD" MinorValue="0x14" Supported="no" />
         <Config MajorValue="0xD" MinorValue="0x15" Supported="no" />
-        <Config MajorValue="0xD" MinorValue="0x16" Node="/sys/devices/system/cpu/bus_dcvs/L3/soc:qcom,memlat:l3:prime/min_freq" />
-        <Config MajorValue="0xD" MinorValue="0x17" Node="/sys/devices/system/cpu/bus_dcvs/LLCC/soc:qcom,memlat:llcc:gold/min_freq" />
-        <Config MajorValue="0xD" MinorValue="0x18" Node="/sys/devices/system/cpu/bus_dcvs/DDR/soc:qcom,memlat:ddr:gold/min_freq" />
 
         <Config MajorValue="0xE" MinorValue="0x0" Supported="no" />
         <Config MajorValue="0xE" MinorValue="0x1" Supported="no" />

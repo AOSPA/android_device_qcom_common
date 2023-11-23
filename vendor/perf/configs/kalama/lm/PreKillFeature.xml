@@ -79,4 +79,5 @@
             </Fields>
         </Meter>
     </Meters>
+    <DependsOn>PreferredApps</DependsOn>
 </Feature>

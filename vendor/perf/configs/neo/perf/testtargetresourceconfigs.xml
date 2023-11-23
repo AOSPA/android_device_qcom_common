@@ -61,7 +61,6 @@ Cluster 2=> Prime
         <Config MajorValue="0x6" MinorValue="0x12" WVal="806000" RVal="806000" />
 
         <Config MajorValue="0xA" MinorValue="0x3" WVal="0xFF" RVal="320000000" />
-        <Config MajorValue="0xA" MinorValue="0x3" WVal="0x1BB" RVal="320000000" />
 
         <Config MajorValue="0xC" MinorValue="0xD" WVal="2" />
         <Config MajorValue="0xC" MinorValue="0x10" WVal="2133000" RVal="2133000" />

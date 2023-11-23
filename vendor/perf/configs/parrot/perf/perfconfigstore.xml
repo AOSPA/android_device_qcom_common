@@ -55,7 +55,8 @@ ________________________________________________________________________________
                 <Prop Name="vendor.perf.bgt.enable" Value="true" />
 
                 <!--splh is true/false for ss -->
-                <Prop Name="ro.vendor.perf.lplh" Value="true" />
+                <Prop Name="ro.vendor.perf.lplh" Value="true" Target="parrot"/>
+                <Prop Name="ro.vendor.perf.lplh" Value="false" Target="ravelin"/>
                 <Prop Name="ro.vendor.perf.lal" Value="true" Target="parrot"/>
                 <Prop Name="ro.vendor.perf.lal" Value="false" Target="ravelin"/>
                 <Prop Name="ro.vendor.perf.lgl" Value="true" SkewType="10" Target="parrot"/>

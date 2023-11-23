@@ -186,13 +186,13 @@
         <!-- CPUBOOST_MIN_FREQ LITTLE Core resource opcode, value-->
         <Config
             Id="0x00001083" Enable="true" Timeout="400" Target="bengal"
-            Resources="0x40804000, 2016, 0x40804100, 1804, 0x40800000, 2208, 0x40800100, 1708" />
+            Resources="0x40804000, 0xFFF, 0x40804100, 0xFFF, 0x40800000, 0xFFF, 0x40800100, 0xFFF" />
         <Config
             Id="0x00001083" Enable="true" Timeout="400" Target="scuba"
-            Resources="0x40804000, 2016, 0x40800000, 2208" />
+            Resources="0x40804000, 0xFFF, 0x40800000, 0xFFF" />
         <Config
             Id="0x00001083" Enable="true" Timeout="400" Target="khaje"
-            Resources="0x40804000, 2016, 0x40804100, 1804, 0x40800000, 0xFFF, 0x40800100, 0xFFF" />
+            Resources="0x40804000, 0xFFF, 0x40804100, 0xFFF, 0x40800000, 0xFFF, 0x40800100, 0xFFF" />
 
     <!--Vertical Scroll boost-->
         <!-- CPUBW_MIN_FREQ resource opcode, value for bengal/scuba -->
