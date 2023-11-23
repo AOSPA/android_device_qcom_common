@@ -15,7 +15,6 @@
     <PerfBoost>
 
     <!--app lauch boost-->
-        <!-- SCHED_PREFER_SPREAD resource opcode, value -->
         <!-- CPUBOOST_MIN_FREQ BIG Core resource opcode, value-->
         <!-- DISABLE_POWER_COLLAPSE resource opcode, value-->
         <!-- CLUSTR_0_CPUS_ON resource opcode, value-->
@@ -24,25 +23,25 @@
         <!-- Type="1", main launch boost of 2sec -->
         <Config
             Id="0x00001081" Type="1" Enable="true" Timeout="2000" Target="monaco"
-            Resources="0x40CA8000, 0x1, 0x40800000, 0x5DC, 0x40400000, 0x1, 0x41000000, 0x4, 0x42804000, 0x1" />
+            Resources="0x40800000, 0x5DC, 0x40400000, 0x1, 0x41000000, 0x4, 0x42804000, 0x0" />
 
     <!--Vertical Scroll boost-->
         <!-- CPUBOOST_MIN_FREQ BIG Core resource opcode, value-->
-        <!-- SCHED_PREFER_SPREAD resource opcode, value -->
-        <!-- CPUBOOST_MIN_FREQ BIG Core resource opcode, value-->
+        <!-- CLUSTR_0_CPUS_ON resource opcode, value-->
         <!-- SCHED_WINDOW_TICKS_UPDATE -->
+        <!-- GPU MIN_FREQUENCY resource opcode,value -->
 
         <!-- Type="1", Vertical Scroll boost -->
         <Config
             Id="0x00001080" Type="1" Enable="true" Target="monaco"
-            Resources="0x40800000, 0x514, 0x40CA8000, 0x1, 0x41000000, 0x2, 0x40CA4000, 0x2" />
+            Resources="0x40800000, 0x514, 0x41000000, 0x2, 0x40CA4000, 0x2, 0x42804000, 0x0" />
 
     <!--PackageInstall boost-->
         <!-- SCHED_PREFER_SPREAD resource opcode, value -->
         <!-- CPUBOOST_MIN_FREQ BIG Core resource opcode, value-->
         <Config
             Id="0x00001088" Enable="true" Target="monaco"
-            Resources="0x40CA8000, 0x1, 0x40800000, 0x5DC" />
+            Resources="0x40800000, 0x5DC" />
 
     <!--Animation boost -->
         <!-- CPUBOOST_MIN_FREQ BIG Core resource opcode, value -->

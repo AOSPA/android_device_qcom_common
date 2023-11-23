@@ -36,7 +36,7 @@
             </LOAD_RATE_GPU>
             <!-- L3, LLCC, DDR boost -->
             <LOAD_RATE_MEM>
-                0x43458000,0x193200,0x4345C000,0x104410,0x43460000,0x40BE38
+                0x43458000,0x193200,0x4348C000,0x104410,0x43488000,0x40BE38
             </LOAD_RATE_MEM>
             <!-- SCHED_TASK_BOOST -->
             <HIGH_CPU_UTIL>
@@ -112,6 +112,18 @@
            <AsyncType>1</AsyncType>
         </Trigger>
     </Triggers>
+    <PipelinedPackages>
+        <Package Name="DefaultGamePackage" NumThreads="2" /> <!-- Default Game Setting -->
+        <Package Name="com.tencent.ig" NumThreads="2" /> <!-- PubG -->
+        <Package Name="com.kiloo.subwaysurf" NumThreads="2" /> <!-- SubWaySurfer -->
+        <Package Name="com.epicgames.fortnite" NumThreads="3" /> <!-- Fortnite -->
+        <Package Name="com.tencent.tmgp.pubgmhd" NumThreads="2" /> <!-- GP -->
+        <Package Name="com.tencent.tmgp.sgame" NumThreads="4" /> <!-- HOK default -->
+        <Package Name="com.tencent.tmgp.sgame" FPS="60" NumThreads="2" /> <!-- HOK60 -->
+        <Package Name="com.miHoYo.Yuanshen" NumThreads="3" /> <!-- Genshin -->
+        <Package Name="com.miHoYo.hkrpg" NumThreads="3" /> <!-- StarRail -->
+        <Package Name="com.netease.pm02" NumThreads="3" /> <!-- Tianyu -->
+    </PipelinedPackages>
     <IgnoredApps>
         <App>com.google.android.gms</App>
         <App>com.android.vending</App>

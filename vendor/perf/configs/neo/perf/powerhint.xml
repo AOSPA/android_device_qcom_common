@@ -31,157 +31,50 @@ as anyway perflock calls of these resources would fail. -->
         <!-- same settings for all the VR power levels intentionally -->
 
         <!-- qvr level cpu1 gpu1 -->
-        <!-- B CPU - Cluster min freq ~.864 Ghz -->
-        <!-- B CPU - Cluster max freq ~.2.016 Ghz -->
-        <!-- L CPU - Cluster min freq ~.576 Ghz -->
-        <!-- L CPU - Cluster max freq ~1.267 Ghz -->
-        <!-- P CPU - PRIME CPU min freq ~.941 Ghz-->
-        <!-- P CPU - PRIME CPU max freq ~2.054Ghz -->
-        <!-- GPU - min pwrlevel 5 (freq 215 Mhz) -->
-        <!-- GPU - max pwrlevel 0 (freq 600 Mhz) -->
-        <!-- Min Big CPUs 3 -->
-        <!-- Min Prime CPUs 1 -->
-        <!-- Idefinite Duration -->
+        <!-- GPU - minfreq: 320 MHz -->
         <Config
             Id="0x0000130A" Enable="true" Target="neo" Timeout="0"
-            Resources="0x40800000, 0x360, 0x40804000, 0x7E0, 0x40800100, 0x240, 0x40804100, 0x4F3, 0x40800200, 0x3AD, 0x40804200, 0x806,
-            0x42804000, 0x5, 0x42808000, 0x0, 0x41000000, 0x3, 0x41000200, 0x1"/>
+            Resources="0x42830000, 0x140"/>
 
         <!-- qvr level cpu1 gpu2 -->
-        <!-- B CPU - Cluster min freq ~.864 Ghz -->
-        <!-- B CPU - Cluster max freq ~.2.016 Ghz -->
-        <!-- L CPU - Cluster min freq ~.576 Ghz -->
-        <!-- L CPU - Cluster max freq ~1.267 Ghz -->
-        <!-- P CPU - PRIME CPU min freq ~.941 Ghz-->
-        <!-- P CPU - PRIME CPU max freq ~2.054Ghz -->
-        <!-- GPU - min pwrlevel 5 (freq 215 Mhz) -->
-        <!-- GPU - max pwrlevel 0 (freq 600 Mhz) -->
-        <!-- Min Big CPUs 3 -->
-        <!-- Min Prime CPUs 1 -->
-        <!-- Idefinite Duration -->
         <Config
             Id="0x0000130B" Enable="true" Target="neo" Timeout="0"
-            Resources="0x40800000, 0x360, 0x40804000, 0x7E0, 0x40800100, 0x240, 0x40804100, 0x4F3, 0x40800200, 0x3AD, 0x40804200, 0x806,
-            0x42804000, 0x5, 0x42808000, 0x0, 0x41000000, 0x3, 0x41000200, 0x1"/>
+            Resources=""/>
 
         <!-- qvr level cpu1 gpu3 -->
-        <!-- B CPU - Cluster min freq ~.864 Ghz -->
-        <!-- B CPU - Cluster max freq ~.2.016 Ghz -->
-        <!-- L CPU - Cluster min freq ~.576 Ghz -->
-        <!-- L CPU - Cluster max freq ~1.267 Ghz -->
-        <!-- P CPU - PRIME CPU min freq ~.941 Ghz-->
-        <!-- P CPU - PRIME CPU max freq ~2.054Ghz -->
-        <!-- GPU - min pwrlevel 5 (freq 215 Mhz) -->
-        <!-- GPU - max pwrlevel 0 (freq 600 Mhz) -->
-        <!-- Min Big CPUs 3 -->
-        <!-- Min Prime CPUs 1 -->
-        <!-- Idefinite Duration -->
         <Config
             Id="0x0000130C" Enable="true" Target="neo" Timeout="0"
-            Resources="0x40800000, 0x360, 0x40804000, 0x7E0, 0x40800100, 0x240, 0x40804100, 0x4F3, 0x40800200, 0x3AD, 0x40804200, 0x806,
-            0x42804000, 0x5, 0x42808000, 0x0, 0x41000000, 0x3, 0x41000200, 0x1"/>
+            Resources=""/>
 
         <!-- qvr level cpu2 gpu1 -->
-        <!-- B CPU - Cluster min freq ~.864 Ghz -->
-        <!-- B CPU - Cluster max freq ~.2.016 Ghz -->
-        <!-- L CPU - Cluster min freq ~.576 Ghz -->
-        <!-- L CPU - Cluster max freq ~1.267 Ghz -->
-        <!-- P CPU - PRIME CPU min freq ~.941 Ghz-->
-        <!-- P CPU - PRIME CPU max freq ~2.054Ghz -->
-        <!-- GPU - min pwrlevel 5 (freq 215 Mhz) -->
-        <!-- GPU - max pwrlevel 0 (freq 600 Mhz) -->
-        <!-- Min Big CPUs 3 -->
-        <!-- Min Prime CPUs 1 -->
-        <!-- Idefinite Duration -->
         <Config
             Id="0x0000130D" Enable="true" Target="neo" Timeout="0"
-            Resources="0x40800000, 0x360, 0x40804000, 0x7E0, 0x40800100, 0x240, 0x40804100, 0x4F3, 0x40800200, 0x3AD, 0x40804200, 0x806,
-            0x42804000, 0x5, 0x42808000, 0x0, 0x41000000, 0x3, 0x41000200, 0x1"/>
+            Resources=""/>
 
         <!-- qvr level cpu2 gpu2 -->
-        <!-- B CPU - Cluster min freq ~.864 Ghz -->
-        <!-- B CPU - Cluster max freq ~.2.016 Ghz -->
-        <!-- L CPU - Cluster min freq ~.576 Ghz -->
-        <!-- L CPU - Cluster max freq ~1.267 Ghz -->
-        <!-- P CPU - PRIME CPU min freq ~.941 Ghz-->
-        <!-- P CPU - PRIME CPU max freq ~2.054Ghz -->
-        <!-- GPU - min pwrlevel 5 (freq 215 Mhz) -->
-        <!-- GPU - max pwrlevel 0 (freq 600 Mhz) -->
-        <!-- Min Big CPUs 3 -->
-        <!-- Min Prime CPUs 1 -->
-        <!-- Idefinite Duration -->
         <Config
             Id="0x0000130E" Enable="true" Target="neo" Timeout="0"
-            Resources="0x40800000, 0x360, 0x40804000, 0x7E0, 0x40800100, 0x240, 0x40804100, 0x4F3, 0x40800200, 0x3AD, 0x40804200, 0x806,
-            0x42804000, 0x5, 0x42808000, 0x0, 0x41000000, 0x3, 0x41000200, 0x1"/>
+            Resources=""/>
 
         <!-- qvr level cpu2 gpu3 -->
-        <!-- B CPU - Cluster min freq ~.864 Ghz -->
-        <!-- B CPU - Cluster max freq ~.2.016 Ghz -->
-        <!-- L CPU - Cluster min freq ~.576 Ghz -->
-        <!-- L CPU - Cluster max freq ~1.267 Ghz -->
-        <!-- P CPU - PRIME CPU min freq ~.941 Ghz-->
-        <!-- P CPU - PRIME CPU max freq ~2.054Ghz -->
-        <!-- GPU - min pwrlevel 5 (freq 215 Mhz) -->
-        <!-- GPU - max pwrlevel 0 (freq 600 Mhz) -->
-        <!-- Min Big CPUs 3 -->
-        <!-- Min Prime CPUs 1 -->
-        <!-- Idefinite Duration -->
         <Config
             Id="0x0000130F" Enable="true" Target="neo" Timeout="0"
-            Resources="0x40800000, 0x360, 0x40804000, 0x7E0, 0x40800100, 0x240, 0x40804100, 0x4F3, 0x40800200, 0x3AD, 0x40804200, 0x806,
-            0x42804000, 0x5, 0x42808000, 0x0, 0x41000000, 0x3, 0x41000200, 0x1"/>
+            Resources=""/>
 
         <!-- qvr level cpu3 gpu1 -->
-        <!-- B CPU - Cluster min freq ~.864 Ghz -->
-        <!-- B CPU - Cluster max freq ~.2.016 Ghz -->
-        <!-- L CPU - Cluster min freq ~.576 Ghz -->
-        <!-- L CPU - Cluster max freq ~1.267 Ghz -->
-        <!-- P CPU - PRIME CPU min freq ~.941 Ghz-->
-        <!-- P CPU - PRIME CPU max freq ~2.054Ghz -->
-        <!-- GPU - min pwrlevel 5 (freq 215 Mhz) -->
-        <!-- GPU - max pwrlevel 0 (freq 600 Mhz) -->
-        <!-- Min Big CPUs 3 -->
-        <!-- Min Prime CPUs 1 -->
-        <!-- Idefinite Duration -->
         <Config
             Id="0x00001310" Enable="true" Target="neo" Timeout="0"
-            Resources="0x40800000, 0x360, 0x40804000, 0x7E0, 0x40800100, 0x240, 0x40804100, 0x4F3, 0x40800200, 0x3AD, 0x40804200, 0x806,
-            0x42804000, 0x5, 0x42808000, 0x0, 0x41000000, 0x3, 0x41000200, 0x1"/>
+            Resources=""/>
 
         <!-- qvr level cpu3 gpu2 -->
-        <!-- B CPU - Cluster min freq ~.864 Ghz -->
-        <!-- B CPU - Cluster max freq ~.2.016 Ghz -->
-        <!-- L CPU - Cluster min freq ~.576 Ghz -->
-        <!-- L CPU - Cluster max freq ~1.267 Ghz -->
-        <!-- P CPU - PRIME CPU min freq ~.941 Ghz-->
-        <!-- P CPU - PRIME CPU max freq ~2.054Ghz -->
-        <!-- GPU - min pwrlevel 5 (freq 215 Mhz) -->
-        <!-- GPU - max pwrlevel 0 (freq 600 Mhz) -->
-        <!-- Min Big CPUs 3 -->
-        <!-- Min Prime CPUs 1 -->
-        <!-- Idefinite Duration -->
         <Config
             Id="0x00001311" Enable="true" Target="neo" Timeout="0"
-            Resources="0x40800000, 0x360, 0x40804000, 0x7E0, 0x40800100, 0x240, 0x40804100, 0x4F3, 0x40800200, 0x3AD, 0x40804200, 0x806,
-            0x42804000, 0x5, 0x42808000, 0x0, 0x41000000, 0x3, 0x41000200, 0x1"/>
+            Resources=""/>
 
         <!-- qvr level cpu3 gpu3 -->
-        <!-- B CPU - Cluster min freq ~.864 Ghz -->
-        <!-- B CPU - Cluster max freq ~2.016 Ghz -->
-        <!-- L CPU - Cluster min freq ~.576 Ghz -->
-        <!-- L CPU - Cluster max freq ~1.267 Ghz -->
-        <!-- P CPU - PRIME CPU min freq ~.941 Ghz-->
-        <!-- P CPU - PRIME CPU max freq ~2.054Ghz -->
-        <!-- GPU - min pwrlevel 5 (freq 215 Mhz) -->
-        <!-- GPU - max pwrlevel 0 (freq 600 Mhz) -->
-        <!-- Min Big CPUs 3 -->
-        <!-- Min Prime CPUs 1 -->
-        <!-- Idefinite Duration -->
         <Config
             Id="0x00001312" Enable="true" Target="neo" Timeout="0"
-            Resources="0x40800000, 0x360, 0x40804000, 0x7E0, 0x40800100, 0x240, 0x40804100, 0x4F3, 0x40800200, 0x3AD, 0x40804200, 0x806,
-            0x42804000, 0x5, 0x42808000, 0x0, 0x41000000, 0x3, 0x41000200, 0x1"/>
+            Resources=""/>
     </Powerhint>
 </HintConfigs>
 

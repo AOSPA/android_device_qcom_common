@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!--
+ * Copyright (c) 2023 Qualcomm Technologies, Inc.
+ * All Rights Reserved.
+ * Confidential and Proprietary - Qualcomm Technologies, Inc.
+-->
+
+<!-- This is a target specific resource config file which can be
+used to overwrite the node paths mentioned in common resources file
+and also to modify the Supported field information. -->
+
+<!-- This file supports only Config tag, which has the following fields
+* MajorValue and MinorValue, both are required to uniquely
+identify the resource.
+* Node, the new node path to overwrite the already existing path
+of commonresourceconfigs.xml file.
+* Supported, to indicate whether the resource is supported or not.
+* For each config tag, either of Node or Supported fields need
+to be mentioned.
+NOTE - It is not Mandatory to write all the resources which are not supported,
+as anyway perflock calls of these resources would fail.
+
+Exception tag is used to pass the exception why ths node cannot be tested.
+Cluster tag is used when node in resource xml is cluster specific(put logical cluster here).
+Cluster 0=> Big
+Cluster 1=> Little
+Cluster 2=> Prime
+
+| RVal | Wval | Reason
+| Yes  | Yes  | Different Value read and write
+| No   | Yes  | Read Val Same as write Value
+| Blank| Blank| Unsupported Node
+
+(Yes) => Tag is Added
+(No) => Tag is not Added
+(Blank) => Tag is added but written value is blank (eg: WVal="").
+-->
+
+
+<ResourceConfigs>
+    <PerfResources>
+        <Config MajorValue="0x2" MinorValue="0x0" Cluster="1" WVal="1267" RVal="1267200" /> <!-- cpu_min_freq -->
+        <Config MajorValue="0x2" MinorValue="0x1" Cluster="1" WVal="2361" RVal="2361600" /> <!-- cpu_max_freq -->
+    </PerfResources>
+</ResourceConfigs>

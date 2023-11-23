@@ -98,7 +98,6 @@ property Name is called. -->
                 <Prop Name="ro.vendor.perf.ss" Value="true" Target="khaje"/>
                 <Prop Name="ro.vendor.perf.lal" Value="true" Target="khaje"/>
                 <Prop Name="ro.vendor.perf.lgl" Value="true" Target="khaje" SkewType="10"/>
-                <Prop Name="ro.vendor.perf.splh" Value="true" Target="khaje" />
 
                 <!--LMKD Properties -->
                 <Prop Name="ro.lmk.use_new_strategy_dup"        Value="false" Target="khaje" />

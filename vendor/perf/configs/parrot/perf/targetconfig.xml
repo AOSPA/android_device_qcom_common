@@ -46,7 +46,7 @@
              Target="parrot"
              NumClusters="2"
              TotalNumCores="8"
-             SocIds="537,583,613"
+             SocIds="537,583,613,631,633,634,638"
              SynCore="1"
              CoreCtlCpu="4"
              MinCoreOnline="0"
@@ -73,5 +73,39 @@
          <ClustersInfo Id="1" NumCores="2" Type="big" />
 
     </Config2>
+
+    <Config3>
+
+         <TargetInfo
+             Target="montague"
+             NumClusters="2"
+             TotalNumCores="8"
+             SocIds="581"
+             SynCore="1"
+             CoreCtlCpu="4"
+             MinCoreOnline="0"
+             CpufreqGov="1" />
+
+         <ClustersInfo Id="0" NumCores="6" Type="little" />
+         <ClustersInfo Id="1" NumCores="2" Type="big" />
+
+    </Config3>
+
+    <Config4>
+
+         <TargetInfo
+             Target="montaguep"
+             NumClusters="2"
+             TotalNumCores="8"
+             SocIds="582"
+             SynCore="1"
+             CoreCtlCpu="4"
+             MinCoreOnline="0"
+             CpufreqGov="1" />
+
+         <ClustersInfo Id="0" NumCores="6" Type="little" />
+         <ClustersInfo Id="1" NumCores="2" Type="big" />
+
+    </Config4>
 
 </TargetConfig>
