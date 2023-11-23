@@ -14,3 +14,9 @@
 
 on property:vendor.post_boot.parsed=1
     write /dev/cpuset/foreground/cpus 0-6
+
+on property:persist.vendor.power.profile=performance && property:vendor.post_boot.parsed=1
+    write /dev/stune/top-app/schedtune.boost 20
+    write /proc/sys/kernel/sched_ravg_window_nr_ticks 2
+    write /sys/module/msm_performance/parameters/cpu_min_freq "0:672 4:1497 8:1612"
+    write /proc/sys/kernel/sched_busy_hysteresis_enable_cpus 255
