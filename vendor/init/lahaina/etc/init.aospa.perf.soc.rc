@@ -13,4 +13,14 @@
 # limitations under the License.
 
 on property:vendor.post_boot.parsed=1
+
+    # CPUFreq
+    write /sys/devices/system/cpu/cpufreq/policy0/schedutil/up_rate_limit_us 500
+    write /sys/devices/system/cpu/cpufreq/policy0/schedutil/down_rate_limit_us 20000
+    write /sys/devices/system/cpu/cpufreq/policy4/schedutil/up_rate_limit_us 1000
+    write /sys/devices/system/cpu/cpufreq/policy4/schedutil/down_rate_limit_us 10000
+    write /sys/devices/system/cpu/cpufreq/policy7/schedutil/up_rate_limit_us 2000
+    write /sys/devices/system/cpu/cpufreq/policy7/schedutil/down_rate_limit_us 5000
+
+    # CPUSets
     write /dev/cpuset/foreground/cpus 0-6
