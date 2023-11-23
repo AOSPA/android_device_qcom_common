@@ -13,10 +13,14 @@
 # limitations under the License.
 
 on property:vendor.post_boot.parsed=1
+
+# CPU Boost
+    write /sys/devices/system/cpu/cpu_boost/input_boost_ms 200
+
+# CPUSets
     write /dev/cpuset/background/cpus 0-1
     write /dev/cpuset/system-background/cpus 0-2
     write /dev/cpuset/foreground/cpus 0-6
-
 
 # Currently only enabled for Lahaina (not shima/yupik), which matches Qualcomm.
 on property:persist.vendor.power.profile=performance && property:vendor.post_boot.parsed=1 && property:ro.boot.product.vendor.sku=lahaina
