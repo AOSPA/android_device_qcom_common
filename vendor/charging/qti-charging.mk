@@ -16,7 +16,7 @@ PRODUCT_SOONG_NAMESPACES += \
     device/qcom/common/vendor/charging
 
 # Health
-ifeq ($(TARGET_USE_AIDL_QTI_HEALTH),true)
+ifneq ($(TARGET_USE_HIDL_QTI_HEALTH),true)
 $(call inherit-product, vendor/qcom/opensource/healthd-ext/health-vendor-product.mk)
 
 PRODUCT_PACKAGES += \
