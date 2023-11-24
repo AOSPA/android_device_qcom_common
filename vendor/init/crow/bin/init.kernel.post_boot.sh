@@ -30,15 +30,13 @@
 # ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 #=============================================================================
 
+
 function configure_zram_parameters() {
 	MemTotalStr=`cat /proc/meminfo | grep MemTotal`
 	MemTotal=${MemTotalStr:16:8}
 
-	low_ram=`getprop ro.config.low_ram`
-
-	# Zram disk - 75% for Go and < 2GB devices .
-	# For >2GB Non-Go devices, size = 50% of RAM size. Limit the size to 4GB.
-	# And enable lz4 zram compression for Go targets.
+	# Zram disk - 75% for < 2GB devices .
+	# For >2GB Non-Go devices, size = 50% of RAM size. Max 4GB.
 
 	let RamSizeGB="( $MemTotal / 1048576 ) + 1"
 	diskSizeUnit=M
@@ -48,11 +46,12 @@ function configure_zram_parameters() {
 		let zRamSizeMB="( $RamSizeGB * 1024 ) / 2"
 	fi
 
-	# use MB avoid 32 bit overflow
 	if [ $zRamSizeMB -gt 4096 ]; then
 		let zRamSizeMB=4096
 	fi
 
+	# And enable lz4 zram compression for Go targets.
+	low_ram=`getprop ro.config.low_ram`
 	if [ "$low_ram" == "true" ]; then
 		echo lz4 > /sys/block/zram0/comp_algorithm
 	fi
@@ -63,8 +62,8 @@ function configure_zram_parameters() {
 		fi
 		echo "$zRamSizeMB""$diskSizeUnit" > /sys/block/zram0/disksize
 
-		# ZRAM may use more memory than it saves if SLAB_STORE_USER
-		# debug option is enabled.
+		# ZRAM may use more memory than it saves if
+		# SLAB_STORE_USER debug option is enabled.
 		if [ -e /sys/kernel/slab/zs_handle ]; then
 			echo 0 > /sys/kernel/slab/zs_handle/store_user
 		fi
@@ -86,58 +85,33 @@ function configure_read_ahead_kb_values() {
 	# /sys/block/dm-0/queue/read_ahead_kb to /sys/block/dm-10/queue/read_ahead_kb
 	# /sys/block/sda/queue/read_ahead_kb to /sys/block/sdh/queue/read_ahead_kb
 
-	# Set 128 for <= 3GB &
-	# set 512 for >= 4GB targets.
-	if [ $MemTotal -le 3145728 ]; then
+	# Set 128 for <= 4GB &
+	# set 512 for >= 5GB targets.
+	if [ $MemTotal -le 4194304 ]; then
 		ra_kb=128
 	else
 		ra_kb=512
 	fi
+	for dm in $dmpts; do
+		echo $ra_kb > $dm
+	done
 	if [ -f /sys/block/mmcblk0/bdi/read_ahead_kb ]; then
 		echo $ra_kb > /sys/block/mmcblk0/bdi/read_ahead_kb
 	fi
 	if [ -f /sys/block/mmcblk0rpmb/bdi/read_ahead_kb ]; then
 		echo $ra_kb > /sys/block/mmcblk0rpmb/bdi/read_ahead_kb
 	fi
-	for dm in $dmpts; do
-		echo $ra_kb > $dm
-	done
 }
 
 function configure_memory_parameters() {
-	# Set Memory parameters.
-	#
-	# Set per_process_reclaim tuning parameters
-	# All targets will use vmpressure range 50-70,
-	# All targets will use 512 pages swap size.
-	#
-	# Set Low memory killer minfree parameters
-	# 32 bit Non-Go, all memory configurations will use 15K series
-	# 32 bit Go, all memory configurations will use uLMK + Memcg
-	# 64 bit will use Google default LMK series.
-	#
-	# Set ALMK parameters (usually above the highest minfree values)
-	# vmpressure_file_min threshold is always set slightly higher
-	# than LMK minfree's last bin value for all targets. It is calculated as
-	# vmpressure_file_min = (last bin - second last bin ) + last bin
-	#
-	# Set allocstall_threshold to 0 for all targets.
-	#
-
 	configure_zram_parameters
 	configure_read_ahead_kb_values
+
 	echo 100 > /proc/sys/vm/swappiness
 
 	# Disable periodic kcompactd wakeups. We do not use THP, so having many
 	# huge pages is not as necessary.
 	echo 0 > /proc/sys/vm/compaction_proactiveness
-
-	# With THP enabled, the kernel greatly increases min_free_kbytes over its
-	# default value. Disable THP to prevent resetting of min_free_kbytes
-	# value during online/offline pages.
-	if [ -f /sys/kernel/mm/transparent_hugepage/enabled ]; then
-		echo never > /sys/kernel/mm/transparent_hugepage/enabled
-	fi
 
 	MemTotalStr=`cat /proc/meminfo | grep MemTotal`
 	MemTotal=${MemTotalStr:16:8}
@@ -153,8 +127,26 @@ function configure_memory_parameters() {
 	else
 		echo 4096 > /proc/sys/vm/min_free_kbytes
 	fi
+	# Disable wsf for all targets beacause we are using efk.
+	# wsf Range : 1..1000 So set to bare minimum value 1.
+	echo 30 > /proc/sys/vm/watermark_scale_factor
+
 }
 
+#Implementing this mechanism to jump to powersave governor if the script is not running
+#as it would be an indication for devs for debug purposes.
+fallback_setting()
+{
+        governor="powersave"
+        for i in `ls -d /sys/devices/system/cpu/cpufreq/policy[0-9]*`
+        do
+                if [ -f $i/scaling_governor ] ; then
+                        echo $governor > $i/scaling_governor
+                fi
+        done
+}
+
+# Set Memory parameters.
 configure_memory_parameters
 
 if [ -f /sys/devices/soc0/soc_id ]; then
@@ -162,17 +154,13 @@ if [ -f /sys/devices/soc0/soc_id ]; then
 fi
 
 case "$platformid" in
-	"481"|"455"|"496")
-		/vendor/bin/sh /vendor/bin/init.kernel.post_boot-kona.sh
+	"608")
+		#Pass as an argument the max number of clusters supported on the SOC
+		/vendor/bin/sh /vendor/bin/init.kernel.post_boot-crow.sh 3
 		;;
-        "548")
-                /vendor/bin/sh /vendor/bin/init.kernel.post_boot-qcs7230.sh
-                ;;
-        "598"|"599")
-                /vendor/bin/sh /vendor/bin/init.kernel.post_boot-qrb3165.sh
-                ;;
 	*)
 		echo "***WARNING***: Invalid SoC ID\n\t No postboot settings applied!!\n"
+		fallback_setting
 		;;
 esac
 

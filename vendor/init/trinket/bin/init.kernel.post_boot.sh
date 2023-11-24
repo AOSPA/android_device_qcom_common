@@ -124,9 +124,25 @@ function configure_memory_parameters() {
 	# Set allocstall_threshold to 0 for all targets.
 	#
 
-	configure_zram_parameters
-	configure_read_ahead_kb_values
+	# Set swappiness to 100 for all targets
 	echo 100 > /proc/sys/vm/swappiness
+
+	# Disable wsf for all targets beacause we are using efk.
+	# wsf Range : 1..1000 So set to bare minimum value 1.
+	echo 1 > /proc/sys/vm/watermark_scale_factor
+
+	#Set per-app max kgsl reclaim limit and per shrinker call limit
+	if [ -f /sys/class/kgsl/kgsl/page_reclaim_per_call ]; then
+		echo 38400 > /sys/class/kgsl/kgsl/page_reclaim_per_call
+	fi
+
+	if [ -f /sys/class/kgsl/kgsl/max_reclaim_limit ]; then
+		echo 25600 > /sys/class/kgsl/kgsl/max_reclaim_limit
+	fi
+
+	configure_zram_parameters
+
+	configure_read_ahead_kb_values
 
 	# Disable periodic kcompactd wakeups. We do not use THP, so having many
 	# huge pages is not as necessary.
@@ -162,15 +178,9 @@ if [ -f /sys/devices/soc0/soc_id ]; then
 fi
 
 case "$platformid" in
-	"481"|"455"|"496")
-		/vendor/bin/sh /vendor/bin/init.kernel.post_boot-kona.sh
+	"467"|"468")
+		/vendor/bin/sh /vendor/bin/init.kernel.post_boot-trinket.sh
 		;;
-        "548")
-                /vendor/bin/sh /vendor/bin/init.kernel.post_boot-qcs7230.sh
-                ;;
-        "598"|"599")
-                /vendor/bin/sh /vendor/bin/init.kernel.post_boot-qrb3165.sh
-                ;;
 	*)
 		echo "***WARNING***: Invalid SoC ID\n\t No postboot settings applied!!\n"
 		;;

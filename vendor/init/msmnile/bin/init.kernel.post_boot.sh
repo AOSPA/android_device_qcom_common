@@ -1,5 +1,5 @@
 #=============================================================================
-# Copyright (c) 2019-2023 Qualcomm Technologies, Inc.
+# Copyright (c) 2019-2022 Qualcomm Technologies, Inc.
 # All Rights Reserved.
 # Confidential and Proprietary - Qualcomm Technologies, Inc.
 #
@@ -36,7 +36,10 @@ function configure_zram_parameters() {
 
 	low_ram=`getprop ro.config.low_ram`
 
-	# Zram disk - 75% for Go and < 2GB devices .
+	# Zram disk - 75% for Go devices.
+	# For 512MB Go device, size = 384MB, set same for Non-Go.
+	# For 1GB Go device, size = 768MB, set same for Non-Go.
+	# For 2GB Go device, size = 1536MB, set same for Non-Go.
 	# For >2GB Non-Go devices, size = 50% of RAM size. Limit the size to 4GB.
 	# And enable lz4 zram compression for Go targets.
 
@@ -81,10 +84,7 @@ function configure_read_ahead_kb_values() {
 	MemTotalStr=`cat /proc/meminfo | grep MemTotal`
 	MemTotal=${MemTotalStr:16:8}
 
-	dmpts=$(ls /sys/block/*/queue/read_ahead_kb | grep -e dm -e mmc -e sd)
-	# dmpts holds below read_ahead_kb nodes if exists:
-	# /sys/block/dm-0/queue/read_ahead_kb to /sys/block/dm-10/queue/read_ahead_kb
-	# /sys/block/sda/queue/read_ahead_kb to /sys/block/sdh/queue/read_ahead_kb
+	dmpts=$(ls /sys/block/*/queue/read_ahead_kb | grep -e /dm- -e mmc)
 
 	# Set 128 for <= 3GB &
 	# set 512 for >= 4GB targets.
@@ -93,6 +93,7 @@ function configure_read_ahead_kb_values() {
 	else
 		ra_kb=512
 	fi
+
 	if [ -f /sys/block/mmcblk0/bdi/read_ahead_kb ]; then
 		echo $ra_kb > /sys/block/mmcblk0/bdi/read_ahead_kb
 	fi
@@ -105,54 +106,10 @@ function configure_read_ahead_kb_values() {
 }
 
 function configure_memory_parameters() {
-	# Set Memory parameters.
-	#
-	# Set per_process_reclaim tuning parameters
-	# All targets will use vmpressure range 50-70,
-	# All targets will use 512 pages swap size.
-	#
-	# Set Low memory killer minfree parameters
-	# 32 bit Non-Go, all memory configurations will use 15K series
-	# 32 bit Go, all memory configurations will use uLMK + Memcg
-	# 64 bit will use Google default LMK series.
-	#
-	# Set ALMK parameters (usually above the highest minfree values)
-	# vmpressure_file_min threshold is always set slightly higher
-	# than LMK minfree's last bin value for all targets. It is calculated as
-	# vmpressure_file_min = (last bin - second last bin ) + last bin
-	#
-	# Set allocstall_threshold to 0 for all targets.
-	#
-
 	configure_zram_parameters
 	configure_read_ahead_kb_values
+	echo 0 > /proc/sys/vm/page-cluster
 	echo 100 > /proc/sys/vm/swappiness
-
-	# Disable periodic kcompactd wakeups. We do not use THP, so having many
-	# huge pages is not as necessary.
-	echo 0 > /proc/sys/vm/compaction_proactiveness
-
-	# With THP enabled, the kernel greatly increases min_free_kbytes over its
-	# default value. Disable THP to prevent resetting of min_free_kbytes
-	# value during online/offline pages.
-	if [ -f /sys/kernel/mm/transparent_hugepage/enabled ]; then
-		echo never > /sys/kernel/mm/transparent_hugepage/enabled
-	fi
-
-	MemTotalStr=`cat /proc/meminfo | grep MemTotal`
-	MemTotal=${MemTotalStr:16:8}
-	let RamSizeGB="( $MemTotal / 1048576 ) + 1"
-
-	# Set the min_free_kbytes to standard kernel value
-	if [ $RamSizeGB -ge 8 ]; then
-		echo 11584 > /proc/sys/vm/min_free_kbytes
-	elif [ $RamSizeGB -ge 4 ]; then
-		echo 8192 > /proc/sys/vm/min_free_kbytes
-	elif [ $RamSizeGB -ge 2 ]; then
-		echo 5792 > /proc/sys/vm/min_free_kbytes
-	else
-		echo 4096 > /proc/sys/vm/min_free_kbytes
-	fi
 }
 
 configure_memory_parameters
@@ -162,17 +119,13 @@ if [ -f /sys/devices/soc0/soc_id ]; then
 fi
 
 case "$platformid" in
-	"481"|"455"|"496")
-		/vendor/bin/sh /vendor/bin/init.kernel.post_boot-kona.sh
+	"367"|"362")
+		/vendor/bin/sh /vendor/bin/init.kernel.post_boot-sa8155.sh
 		;;
-        "548")
-                /vendor/bin/sh /vendor/bin/init.kernel.post_boot-qcs7230.sh
-                ;;
-        "598"|"599")
-                /vendor/bin/sh /vendor/bin/init.kernel.post_boot-qrb3165.sh
+	"340" | "405")
+                /vendor/bin/sh /vendor/bin/init.kernel.post_boot-sa8195.sh
                 ;;
 	*)
 		echo "***WARNING***: Invalid SoC ID\n\t No postboot settings applied!!\n"
 		;;
 esac
-

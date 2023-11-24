@@ -51,14 +51,14 @@ fallback_setting()
 variant=$(get_num_logical_cores_in_physical_cluster "$1")
 echo "CPU topology: ${variant}"
 case "$variant" in
-	"3_4_1")
-	/vendor/bin/sh /vendor/bin/init.kernel.post_boot-kalama_default_3_4_1.sh
+	"4_3_1")
+	/vendor/bin/sh /vendor/bin/init.kernel.post_boot-crow_default_4_3_1.sh
 	;;
-	"3_2_1")
-	/vendor/bin/sh /vendor/bin/init.kernel.post_boot-kalama_3_2_1.sh
+	"4_2_1")
+	/vendor/bin/sh /vendor/bin/init.kernel.post_boot-crow_4_2_1.sh
 	;;
-	"3_4_0")
-	/vendor/bin/sh /vendor/bin/init.kernel.post_boot-kalama_3_4_0.sh
+	"4_3_0")
+	/vendor/bin/sh /vendor/bin/init.kernel.post_boot-crow_4_3_0.sh
 	;;
 	*)
 	echo "***WARNING***: Postboot script not present for the variant ${variant}"
