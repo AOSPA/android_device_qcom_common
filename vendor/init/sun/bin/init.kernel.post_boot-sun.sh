@@ -1,5 +1,5 @@
 #=============================================================================
-# Copyright (c) 2020-2022 Qualcomm Technologies, Inc.
+# Copyright (c) 2020-2023 Qualcomm Technologies, Inc.
 # All Rights Reserved.
 # Confidential and Proprietary - Qualcomm Technologies, Inc.
 #
@@ -30,19 +30,20 @@
 # ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 #=============================================================================
 
-if [ -f /sys/devices/soc0/soc_id ]; then
-	platformid=`cat /sys/devices/soc0/soc_id`
-fi
+rev=`cat /sys/devices/soc0/revision`
 
-case "$platformid" in
-	"518" | "561" | "585")
-		/vendor/bin/sh /vendor/bin/init.kernel.post_boot-bengal.sh
-		;;
-	"586")
-		/vendor/bin/sh /vendor/bin/init.kernel.post_boot-bengal-iot.sh
-		;;
+echo 4 > /proc/sys/kernel/printk
+
+# Change console log level as per console config property
+console_config=`getprop persist.vendor.console.silent.config`
+case "$console_config" in
+	"1")
+		echo "Enable console config to $console_config"
+		echo 0 > /proc/sys/kernel/printk
+	;;
 	*)
-		echo "***WARNING***: Invalid SoC ID\n\t No postboot settings applied!!\n"
-		;;
+		echo "Enable console config to $console_config"
+	;;
 esac
 
+setprop vendor.post_boot.parsed 1

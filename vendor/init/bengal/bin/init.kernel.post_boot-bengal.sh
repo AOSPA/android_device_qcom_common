@@ -146,6 +146,15 @@ function configure_memory_parameters() {
     # wsf Range : 1..1000 So set to bare minimum value 1.
     echo 1 > /proc/sys/vm/watermark_scale_factor
 
+    #Set per-app max kgsl reclaim limit and per shrinker call limit
+    if [ -f /sys/class/kgsl/kgsl/page_reclaim_per_call ]; then
+       echo 38400 > /sys/class/kgsl/kgsl/page_reclaim_per_call
+    fi
+
+    if [ -f /sys/class/kgsl/kgsl/max_reclaim_limit ]; then
+       echo 25600 > /sys/class/kgsl/kgsl/max_reclaim_limit
+    fi
+
     configure_zram_parameters
 
     configure_read_ahead_kb_values

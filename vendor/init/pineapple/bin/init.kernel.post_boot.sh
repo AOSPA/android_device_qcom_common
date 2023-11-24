@@ -49,8 +49,8 @@ function configure_zram_parameters() {
 	fi
 
 	# use MB avoid 32 bit overflow
-	if [ $zRamSizeMB -gt 4096 ]; then
-		let zRamSizeMB=4096
+	if [ $zRamSizeMB -gt 6144 ]; then
+		let zRamSizeMB=6144
 	fi
 
 	if [ "$low_ram" == "true" ]; then
