@@ -52,9 +52,9 @@ echo 0 > /sys/devices/system/cpu/cpu0/core_ctl/enable
 echo 0 1 1 1 > /sys/devices/system/cpu/cpu0/core_ctl/not_preferred
 echo 1 > /sys/devices/system/cpu/cpu0/core_ctl/min_cpus
 echo 4 > /sys/devices/system/cpu/cpu0/core_ctl/max_cpus
-echo 71 71 60 50 > /sys/devices/system/cpu/cpu0/core_ctl/busy_up_thres
-echo 30 > /sys/devices/system/cpu/cpu0/core_ctl/busy_down_thres
-echo 1000 > /sys/devices/system/cpu/cpu0/core_ctl/offline_delay_ms
+echo 73 73 65 55 > /sys/devices/system/cpu/cpu0/core_ctl/busy_up_thres
+echo 30 30 45 45 > /sys/devices/system/cpu/cpu0/core_ctl/busy_down_thres
+echo 100 > /sys/devices/system/cpu/cpu0/core_ctl/offline_delay_ms
 echo 1 > /sys/devices/system/cpu/cpu0/core_ctl/enable
 
 # Setting b.L scheduler parameters
@@ -80,10 +80,6 @@ echo 1363200 > /sys/devices/system/cpu/cpufreq/policy0/walt/hispeed_freq
 echo 88 > /sys/devices/system/cpu/cpu0/cpufreq/walt/hispeed_load
 echo 1 > /sys/devices/system/cpu/cpufreq/policy0/walt/pl
 echo 1 > /proc/sys/walt/sched_prefer_spread
-echo -10 > /sys/devices/system/cpu/cpu0/sched_load_boost
-echo -10 > /sys/devices/system/cpu/cpu1/sched_load_boost
-echo -10 > /sys/devices/system/cpu/cpu2/sched_load_boost
-echo -10 > /sys/devices/system/cpu/cpu3/sched_load_boost
 
 # configure bus-dcvs
 bus_dcvs="/sys/devices/system/cpu/bus_dcvs"
@@ -95,7 +91,7 @@ done
 
 for ddrbw in $bus_dcvs/DDR/*bwmon-ddr
 do
-	echo "762 1144 1720 2086 2597 2929 3879 5161 5931 6881 7980" > $ddrbw/mbps_zones
+	echo "762 2086 2597 5161 6881 7980" > $ddrbw/mbps_zones
 	echo 4 > $ddrbw/sample_ms
 	echo 68 > $ddrbw/io_percent
 	echo 20 > $ddrbw/hist_memory
@@ -104,7 +100,7 @@ do
 	echo 30 > $ddrbw/guard_band_mbps
 	echo 250 > $ddrbw/up_scale
 	echo 762 > $ddrbw/idle_mbps
-	echo 7980 > $ddrbw/max_freq
+	echo 2029000 > $ddrbw/max_freq
 	echo 40 > $ddrbw/window_ms
 done
 
