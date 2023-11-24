@@ -87,6 +87,24 @@
       "parentUuid": "7e9e843f_4d989226",
       "revId": "ffa84a83d3be252d5bd6c54900450522ee2fd2ca",
       "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "00429d44_ebfffc07",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 8
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000012
+      },
+      "writtenOn": "2023-11-24T18:02:58Z",
+      "side": 1,
+      "message": "which SoCs do we support that do not have C2?  seemingly Bengal.  are we better off extrapolating xmls from other targets for those or just enabling omx for those?",
+      "parentUuid": "415e15a4_63260a16",
+      "revId": "ffa84a83d3be252d5bd6c54900450522ee2fd2ca",
+      "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
     }
   ]
 }
