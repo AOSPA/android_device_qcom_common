@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "83c97063_a39becb3",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000012
+      },
+      "writtenOn": "2023-11-24T17:23:53Z",
+      "side": 1,
+      "message": "sepolicy doesn\u0027t belong here",
+      "revId": "6dd9941011ddce8349c17244b78c4e6dcecda4ff",
+      "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
+    }
+  ]
+}
