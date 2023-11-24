@@ -1,1 +1,1 @@
-binder_call(vendor_hal_iop_default, servicemanager)
+binder_use(vendor_hal_iop_default)
