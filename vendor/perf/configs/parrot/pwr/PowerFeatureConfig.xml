@@ -30,4 +30,8 @@
         <Name>VendorScenarioPowerOptFeature</Name>
         <Enable>0</Enable>
     </Feature>
+    <Feature>
+        <Name>GamePowerOptFeature</Name>
+        <Enable>0</Enable>
+    </Feature>
 </PowerFeature>

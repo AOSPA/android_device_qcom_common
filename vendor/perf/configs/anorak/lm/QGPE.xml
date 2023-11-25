@@ -25,7 +25,7 @@
         <STUTTER_SCALE>10</STUTTER_SCALE>
         <GROUP_UPMIGRATE_PATH>/proc/sys/walt/sched_group_upmigrate</GROUP_UPMIGRATE_PATH>
         <GROUP_DOWNMIGRATE_PATH>/proc/sys/walt/sched_group_downmigrate</GROUP_DOWNMIGRATE_PATH>
-        <BIG_CLUSTER_ID>4,5,6,7</BIG_CLUSTER_ID>
+        <BIG_CLUSTER_ID>2,3,4,5</BIG_CLUSTER_ID>
     </Configs>
 
     <Profiles>

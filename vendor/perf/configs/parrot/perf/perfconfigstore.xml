@@ -73,8 +73,10 @@ ________________________________________________________________________________
                 <Prop Name="ro.lmk.nstrat_low_swap"             Value="10" />
                 <Prop Name="ro.lmk.nstrat_psi_partial_ms"       Value="70" />
                 <Prop Name="ro.lmk.nstrat_psi_complete_ms"      Value="70" />
-                <Prop Name="ro.lmk.psi_scrit_complete_stall_ms" Value="400" />
-                <Prop Name="ro.lmk.nstrat_wmark_boost_factor"   Value="4" />
+                <Prop Name="ro.lmk.psi_scrit_complete_stall_ms" Value="200"/>
+                <Prop Name="ro.lmk.nstrat_wmark_boost_factor"   Value="2" />
+                <Prop Name="ro.lmk.nstrat_wmark_boost_factor"   Value="4"  Ram="8" />
+                <Prop Name="ro.lmk.cache_percent"               Value="10" />
 
                 <!--Appcompaction Properties -->
                 <Prop Name="vendor.appcompact.enable_app_compact"          Value="true" />
@@ -105,7 +107,6 @@ ________________________________________________________________________________
                 <Prop Name="ro.vendor.perf.qape" Value="true" />
 
                 <Prop Name="ro.vendor.iocgrp.config"                 Value="1"      />
-                <Prop Name="vendor.iop.enable_speed"                 Value="false"   />
                 <Prop Name="ro.vendor.qti.sys.fw.bservice_enable"    Value="true"   />
                 <Prop Name="ro.vendor.qti.sys.fw.bservice_age"       Value="300000" />
                 <Prop Name="ro.vendor.qti.sys.fw.bservice_age"       Value="5000"   Ram="3" />

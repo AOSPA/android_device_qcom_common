@@ -123,20 +123,20 @@ as anyway perflock calls of these resources would fail. -->
         <Config MajorValue="0xC" MinorValue="0x3" Supported="no" />
         <Config MajorValue="0xC" MinorValue="0x4" Supported="no" />
          <!-- LLCC_DDR_BW new opcodes-->
-        <Config MajorValue="0xC" MinorValue="0x5" Node="/sys/devices/system/cpu/bus_dcvs/DDR/190b6400.qcom,bwmon-ddr/up_scale" />
+        <Config MajorValue="0xC" MinorValue="0x5" Node="/sys/devices/system/cpu/bus_dcvs/DDR/19091000.qcom,bwmon-ddr/up_scale" />
         <Config MajorValue="0xC" MinorValue="0x6" Supported="no" /> <!-- llcc ddr max freq -->
-        <Config MajorValue="0xC" MinorValue="0x7" Node="/sys/devices/system/cpu/bus_dcvs/DDR/190b6400.qcom,bwmon-ddr/decay_rate" />
-        <Config MajorValue="0xC" MinorValue="0x8" Node="/sys/devices/system/cpu/bus_dcvs/DDR/190b6400.qcom,bwmon-ddr/io_percent" />
-        <Config MajorValue="0xC" MinorValue="0x9" Node="/sys/devices/system/cpu/bus_dcvs/DDR/190b6400.qcom,bwmon-ddr" />
+        <Config MajorValue="0xC" MinorValue="0x7" Node="/sys/devices/system/cpu/bus_dcvs/DDR/19091000.qcom,bwmon-ddr/decay_rate" />
+        <Config MajorValue="0xC" MinorValue="0x8" Node="/sys/devices/system/cpu/bus_dcvs/DDR/19091000.qcom,bwmon-ddr/io_percent" />
+        <Config MajorValue="0xC" MinorValue="0x9" Node="/sys/devices/system/cpu/bus_dcvs/DDR/19091000.qcom,bwmon-ddr" />
         <Config MajorValue="0xC" MinorValue="0xA" Supported="no" />
         <Config MajorValue="0xC" MinorValue="0xB" Supported="no" />
-        <Config MajorValue="0xC" MinorValue="0xC" Node="/sys/devices/system/cpu/bus_dcvs/DDR/190b6400.qcom,bwmon-ddr/window_ms" />
-        <Config MajorValue="0xC" MinorValue="0xD" Node="/sys/devices/system/cpu/bus_dcvs/DDR/190b6400.qcom,bwmon-ddr/sample_ms" />
-        <Config MajorValue="0xC" MinorValue="0xE" Node="/sys/devices/system/cpu/bus_dcvs/DDR/190b6400.qcom,bwmon-ddr/idle_mbps" />
-        <Config MajorValue="0xC" MinorValue="0xF" Node="/sys/devices/system/cpu/bus_dcvs/DDR/190b6400.qcom,bwmon-ddr/min_freq" />
-        <Config MajorValue="0xC" MinorValue="0x10" Node="/sys/devices/system/cpu/bus_dcvs/DDR/190b6400.qcom,bwmon-ddr/max_freq" />
+        <Config MajorValue="0xC" MinorValue="0xC" Node="/sys/devices/system/cpu/bus_dcvs/DDR/19091000.qcom,bwmon-ddr/window_ms" />
+        <Config MajorValue="0xC" MinorValue="0xD" Node="/sys/devices/system/cpu/bus_dcvs/DDR/19091000.qcom,bwmon-ddr/sample_ms" />
+        <Config MajorValue="0xC" MinorValue="0xE" Node="/sys/devices/system/cpu/bus_dcvs/DDR/19091000.qcom,bwmon-ddr/idle_mbps" />
+        <Config MajorValue="0xC" MinorValue="0xF" Node="/sys/devices/system/cpu/bus_dcvs/DDR/19091000.qcom,bwmon-ddr/min_freq" />
+        <Config MajorValue="0xC" MinorValue="0x10" Node="/sys/devices/system/cpu/bus_dcvs/DDR/19091000.qcom,bwmon-ddr/max_freq" />
         <Config MajorValue="0xC" MinorValue="0x11" Supported="no" />
-        <Config MajorValue="0xC" MinorValue="0x12" Node="/sys/devices/system/cpu/bus_dcvs/DDR/190b6400.qcom,bwmon-ddr/ab_scale" />
+        <Config MajorValue="0xC" MinorValue="0x12" Node="/sys/devices/system/cpu/bus_dcvs/DDR/19091000.qcom,bwmon-ddr/ab_scale" />
 
         <Config MajorValue="0xD" MinorValue="0x0" Supported="no" />
         <Config MajorValue="0xD" MinorValue="0x1" Node="/sys/devices/system/cpu/bus_dcvs/L3/soc:qcom,memlat:l3:silver/ipm_ceil" />

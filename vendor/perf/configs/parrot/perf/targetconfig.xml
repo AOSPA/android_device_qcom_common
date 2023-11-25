@@ -69,8 +69,8 @@
              MinCoreOnline="0"
              CpufreqGov="1" />
 
-         <ClustersInfo Id="0" NumCores="2" Type="big" />
-         <ClustersInfo Id="1" NumCores="6" Type="little" />
+         <ClustersInfo Id="0" NumCores="6" Type="little" />
+         <ClustersInfo Id="1" NumCores="2" Type="big" />
 
     </Config2>
 

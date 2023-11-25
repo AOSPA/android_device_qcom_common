@@ -27,7 +27,7 @@
         <!-- CPU_LLCC_BW_MIN_FREQ_V2 resource opcode, value-->
         <!-- POWER COLLAPSE resource opcode, value-->
         <!-- STORAGE CLK SCALING resource opcode, value-->
-        <!-- LLCC DDR LAT CPU0 MIN FREQ resource opcode, value-->
+        <!-- LLCC DDR LAT GOLD MIN FREQ resource opcode, value-->
         <!-- L3_MEMLAT_MIN_FREQ_PRIME resource opcode, value-->
         <!-- GPU DISABLE resource opcode, value-->
 
@@ -36,7 +36,7 @@
             Id="0x00001081" Type="1" Enable="true" Timeout="2000" Target="taro,cape,ukee"
             Resources="0x40C00000, 0x1, 0x40804000, 0xFFF, 0x40804100, 0xFFF, 0x40804200, 0xFFF,
                        0x40800000, 0xFFF, 0x40800100, 0xFFF, 0x40800200, 0xFFF, 0x41848000, 0x104410,
-                       0x41844000, 0x104410, 0x40400000, 0x1, 0x42C10000, 0x1, 0x43460000, 0x30D400,
+                       0x41844000, 0x104410, 0x40400000, 0x1, 0x42C10000, 0x1, 0x43488000, 0x30D400,
                        0x43458000, 0x193138, 0x4281C000, 2000" />
 
         <!-- SCHEDBOOST resource opcode, value-->
@@ -136,6 +136,28 @@
                        0x40800000, 0x76C, 0x40800100, 0x4B0, 0x41844000, 0x927C0,
                        0x4303C000, 0x1A0FE0, 0x43458000, 0x193138" />
 
+    <!-- config_enableLaunchBoost6-->
+        <!-- SLB_BIG, val-->
+        <!-- SLB_PRIME, val-->
+        <!-- MIN_FREQ_BIG, val MHz -->
+        <!-- MIN_FREQ_PRIME, val MHz -->
+        <!-- CPU_DOWN_FREQ_THRESHOLD_US BIG, val us -->
+        <!-- CPU_DOWN_FREQ_THRESHOLD_US PRIME, val us -->
+        <!-- LPM_BIAS resource opcode, val ms-->
+        <!-- SCHED_BUSY_HYSTERSIS_CPU_MASK resource opcode, value-->
+
+        <!-- Type="6", Game Launch boost -->
+        <Config
+            Id="0x00001081" Type="6" Enable="true" Timeout="2000" Target="diwali"
+            Resources="0x40C68000, 60,
+                       0x40C68200, 60,
+                       0x40800000, 1132,
+                       0x40800200, 1363,
+                       0x41448000, 20000,
+                       0x41448200, 20000,
+                       0x40408000, 0x63,
+                       0x40C74000, 0xF0" />
+
     <!--Lightning Launch Base -->
         <!-- SCHEDBOOST resource opcode, value-->
         <!-- CPUBOOST_MAX_FREQ BIG Core resource opcode, value-->
@@ -168,7 +190,7 @@
 
         <!-- Type="8", main launch of 2sec -->
         <Config
-            Id="0x00001081" Type="8" Enable="true" Timeout="2000" Target="diwali"
+            Id="0x00001081" Type="8" Enable="true" Target="diwali" Timeout="2000"
             Resources="0x40C00000, 0x3, 0x40CF4000, 0x00640055, 0x40408000, 0x5,
           0x40C74000, 0xF0" />
 
@@ -265,6 +287,12 @@
                        0x40CE0200, 0x0023000A" />
         <Config
             Id="0x00001080" Type="1" Enable="true" Target="taro,cape,ukee" Fps="144"
+            Resources="0x4303C000, 0xA6428, 0x40800000, 1300, 0x40800100, 1100, 0x40800200, 1300,
+                       0x40C00000, 0x2, 0x43458000, 0x114900, 0x40C74000, 0xFF, 0x40408000, 0x63,
+                       0x41000000, 3, 0x40C78000, 0, 0x40C7C000, 0, 0x41000200, 1,
+                       0x40CE0200, 0x0023000A" />
+        <Config
+            Id="0x00001080" Type="1" Enable="true" Target="cape" Fps="165"
             Resources="0x4303C000, 0xA6428, 0x40800000, 1300, 0x40800100, 1100, 0x40800200, 1300,
                        0x40C00000, 0x2, 0x43458000, 0x114900, 0x40C74000, 0xFF, 0x40408000, 0x63,
                        0x41000000, 3, 0x40C78000, 0, 0x40C7C000, 0, 0x41000200, 1,
@@ -442,6 +470,12 @@
                        0x40C00000, 0x2, 0x43458000, 0x114900, 0x40C74000, 0xFF, 0x40408000, 0x63,
                        0x41000000, 3, 0x40C78000, 0, 0x40C7C000, 0, 0x41000200, 1,
                        0x40CE0200, 0x0023000A" />
+        <Config
+            Id="0x00001080" Type="4" Enable="true" Timeout="80" Target="cape" Fps="165"
+            Resources="0x4303C000, 0xA6428, 0x40800000, 1300, 0x40800100, 1100, 0x40800200, 1300,
+                       0x40C00000, 0x2, 0x43458000, 0x114900, 0x40C74000, 0xFF, 0x40408000, 0x63,
+                       0x41000000, 3, 0x40C78000, 0, 0x40C7C000, 0, 0x41000200, 1,
+                       0x40CE0200, 0x0023000A" />
 
         <!-- CPUBW_MIN_FREQ resource opcode, value-->
         <!-- CPUBOOST_MIN_FREQ BIG CORE resource opcode, value -->
@@ -574,11 +608,16 @@
                        0x40C00000, 0x2, 0x43458000, 0x114900, 0x40C74000, 0xFF, 0x40408000, 0x63,
                        0x41000000, 3, 0x40C78000, 0, 0x40C7C000, 0, 0x41000200, 1,
                        0x40CE0200, 0x0023000A" />
+        <Config
+            Id="0x00001087" Type="1" Enable="true" Timeout="0" Target="cape" Fps="165"
+            Resources="0x40800000, 1300, 0x40800100, 1100, 0x40800200, 1300,
+                       0x40C00000, 0x2, 0x43458000, 0x114900, 0x40C74000, 0xFF, 0x40408000, 0x63,
+                       0x41000000, 3, 0x40C78000, 0, 0x40C7C000, 0, 0x41000200, 1,
+                       0x40CE0200, 0x0023000A" />
 
         <!-- CPUBOOST_MIN_FREQ BIG CORE resource opcode, value -->
         <!-- CPUBOOST_MIN_FREQ LITTLE Core resource opcode, value -->
         <!-- CPUBOOST_MIN_FREQ PRIME CORE resource opcode, value -->
-        <!-- CPU_LLCC_BW_MAX_FREQ_V2 resource opcode, value-->
 
         <!-- Type="1", Drag boost -->
         <Config
@@ -675,11 +714,12 @@
         <!-- SCHED_BUSY_HYSTERSIS_CPU_MASK resource opcode, value-->
         <!-- LPM_BIAS_HYST resource opcode, value-->
         <!-- DISABLE_PASR, value-->
+        <!-- SCHED_MIN_TASK_UTIL_FOR_UCLAMP, value-->
         <!-- Type="", Performance mode -->
         <Config
             Id="0x00001091" Enable="true" Target="taro"
             Resources="0x40CAC000, 20, 0x40CA4000, 2, 0x40800000, 1555, 0x40800100, 800, 0x40800200, 1670,
-                       0x40C74000, 0xFF, 0x40408000, 0x63, 0x42C1C000, 1" />
+                       0x40C74000, 0xFF, 0x40408000, 0x63, 0x42C1C000, 1, 0x40CFC000, 0" />
 
         <Config
             Id="0x00001091" Enable="true" Target="cape,ukee"
@@ -734,6 +774,11 @@
             Id="0x00001094" Type="144" Enable="true" Target="taro,cape,ukee" Timeout="0"
             Resources="0x40CA4000, 2, 0x43468000, 8, 0x40C74000, 15, 0x40408000, 3,
                        0x40800100, 800, 0x40CC8000, 119" />
+        <!-- 165fps -->
+        <Config
+            Id="0x00001094" Type="165" Enable="true" Target="cape" Timeout="0"
+            Resources="0x40CA4000, 2, 0x43468000, 8, 0x40C74000, 15, 0x40408000, 3,
+                       0x40800100, 800, 0x40CC8000, 119" />
         <!-- 180fps -->
         <Config
             Id="0x00001094" Type="180" Enable="true" Target="taro,cape,ukee" Timeout="0"
@@ -778,6 +823,11 @@
         <!-- 144fps -->
         <Config
             Id="0x0000109B" Type="144" Enable="true" Target="taro,cape,ukee" Timeout="0"
+            Resources="0x40CA4000, 2, 0x43468000, 8, 0x40C74000, 15, 0x40408000, 3,
+                       0x40800100, 800, 0x40CC8000, 119" />
+        <!-- 165fps -->
+        <Config
+            Id="0x0000109B" Type="165" Enable="true" Target="cape" Timeout="0"
             Resources="0x40CA4000, 2, 0x43468000, 8, 0x40C74000, 15, 0x40408000, 3,
                        0x40800100, 800, 0x40CC8000, 119" />
         <!-- 180fps -->
@@ -905,6 +955,9 @@
                 Id="0x00001098" Type="0" Enable="true" Target="taro,cape,ukee" Timeout="2000" Fps="144"
                 Resources="0x42C20000, 1, 0x4281C000, 11, 0x41C0C000, 0" />
         <Config
+                Id="0x00001098" Type="0" Enable="true" Target="cape" Timeout="2000" Fps="165"
+                Resources="0x42C20000, 1, 0x4281C000, 11, 0x41C0C000, 0" />
+        <Config
                 Id="0x00001098" Type="0" Enable="true" Target="taro,cape,ukee" Timeout="2000" Fps="180"
                 Resources="0x42C20000, 1, 0x4281C000, 9, 0x41C0C000, 0" />
         <Config
@@ -932,6 +985,9 @@
                 Resources="0x42C20000, 1, 0x4281C000, 13" />
         <Config
                 Id="0x00001099" Type="0" Enable="true" Target="taro,cape,ukee" Timeout="2000" Fps="144"
+                Resources="0x42C20000, 1, 0x4281C000, 11" />
+        <Config
+                Id="0x00001099" Type="0" Enable="true" Target="cape" Timeout="2000" Fps="165"
                 Resources="0x42C20000, 1, 0x4281C000, 11" />
         <Config
                 Id="0x00001099" Type="0" Enable="true" Target="taro,cape,ukee" Timeout="2000" Fps="180"
@@ -962,6 +1018,9 @@
                 Id="0x0000109A" Type="0" Enable="true" Target="taro,cape,ukee" Timeout="2000" Fps="144"
                 Resources="0x42C20000, 1, 0x41C0C000, 0" />
         <Config
+                Id="0x0000109A" Type="0" Enable="true" Target="cape" Timeout="2000" Fps="165"
+                Resources="0x42C20000, 1, 0x41C0C000, 0" />
+        <Config
                 Id="0x0000109A" Type="0" Enable="true" Target="taro,cape,ukee" Timeout="2000" Fps="180"
                 Resources="0x42C20000, 1, 0x41C0C000, 0" />
         <Config
@@ -973,32 +1032,35 @@
                 Id="0x0000109A" Type="0" Enable="true" Target="diwali" Timeout="2000"
                 Resources="0x41C0C000, 0" />
 
-    <!--Large Comp HInt -->
+    <!--Large Comp Hint -->
         <!-- CPU min freq resource opcode, value -->
         <!-- GPU MIN_FREQUENCY resource opcode,value -->
         <!-- PID Affine opcode,value -->
         <Config
-                Id="0x00001097" Type="0" Enable="true" Timeout="9" Target="taro,cape,ukee" Fps="120"
+                Id="0x00001097" Type="0" Enable="true" Timeout="5000" Target="taro,cape,ukee" Fps="120"
                 Resources="0x40800000, 1500, 0x42804000, 0, 0x42C20000, 1" />
 
         <Config
-                Id="0x00001097" Type="0" Enable="true" Timeout="7" Target="taro,cape,ukee" Fps="144"
+                Id="0x00001097" Type="0" Enable="true" Timeout="5000" Target="taro,cape,ukee" Fps="144"
+                Resources="0x40800000, 1500, 0x42804000, 0, 0x42C20000, 1" />
+        <Config
+                Id="0x00001097" Type="0" Enable="true" Timeout="5000" Target="cape" Fps="165"
                 Resources="0x40800000, 1500, 0x42804000, 0, 0x42C20000, 1" />
 
         <Config
-                Id="0x00001097" Type="0" Enable="true" Timeout="6" Target="taro,cape,ukee" Fps="180"
+                Id="0x00001097" Type="0" Enable="true" Timeout="5000" Target="taro,cape,ukee" Fps="180"
                 Resources="0x40800000, 1500, 0x42804000, 0, 0x42C20000, 1" />
 
         <Config
-                Id="0x00001097" Type="0" Enable="true" Timeout="5" Target="taro,cape,ukee" Fps="240"
+                Id="0x00001097" Type="0" Enable="true" Timeout="5000" Target="taro,cape,ukee" Fps="240"
                 Resources="0x40800000, 1500, 0x42804000, 0, 0x42C20000, 1" />
 
-    <!--Large Comp HInt -->
+    <!--Large Comp Hint -->
         <!-- CPU min freq resource opcode, value -->
         <!-- GPU MIN_FREQUENCY resource opcode,value -->
         <!-- PID Affine opcode,value -->
         <Config
-                Id="0x00001097" Type="0" Enable="true" Timeout="7" Target="diwali" Fps="144"
+                Id="0x00001097" Type="0" Enable="true" Timeout="5000" Target="diwali" Fps="144"
                 Resources="0x40800000, 1500, 0x42804000, 0, 0x42C20000, 1" />
 
     <!-- Silky Scroll boost -->
