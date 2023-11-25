@@ -105,6 +105,24 @@
       "parentUuid": "415e15a4_63260a16",
       "revId": "ffa84a83d3be252d5bd6c54900450522ee2fd2ca",
       "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "96549629_93364b4c",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 8
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000737
+      },
+      "writtenOn": "2023-11-25T23:48:56Z",
+      "side": 1,
+      "message": "only 3 SoC have C2:https://github.com/AOSPA/android_device_qcom_common/commit/b3ecc1e97577e7844be7da523031d4a29c7f4c0b#diff-090d30ab840b72ace8b72b2a83737613a55f5f8e6bb1ea8fcf7bb6f43d8e94f1R20",
+      "parentUuid": "00429d44_ebfffc07",
+      "revId": "ffa84a83d3be252d5bd6c54900450522ee2fd2ca",
+      "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
     }
   ]
 }
