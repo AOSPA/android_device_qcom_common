@@ -7,7 +7,7 @@
       Each feature has an xml file to define the feature components
 
   ===========================================================================
-  Copyright (c) 2020-2022 Qualcomm Technologies, Inc.
+  Copyright (c) 2020-2023 Qualcomm Technologies, Inc.
   All Rights Reserved.
   Confidential and Proprietary - Qualcomm Technologies, Inc.
   ===========================================================================
@@ -17,6 +17,7 @@
    <Name>VideoPowerOptFeature</Name>
    <Libname>libvideooptfeature.so</Libname>
    <Configs>
+        <VIDEO_OPT>1</VIDEO_OPT>
         <MAX_CONTENT_FPS>30</MAX_CONTENT_FPS>
         <MAX_HW_CONTENT_FPS>120</MAX_HW_CONTENT_FPS>
         <MAX_PANEL_FPS>120</MAX_PANEL_FPS>
@@ -30,12 +31,9 @@
             <!-- MPCTLV3_SCHEDUTIL_HISPEED_FREQ_CLUSTER_LITTLE -->
             <!-- MPCTLV3_SCHEDUTIL_HISPEED_FREQ_CLUSTER_BIG -->
             <!-- MPCTLV3_TARGET_LOAD_THRESH_CLUSTER_LITTLE -->
-            <!-- MPCTLV3_TARGET_LOAD_SHIFT_CLUSTER_LITTLE -->
+            <!-- MPCTLV3_TARGET_LOAD_THRESH_CLUSTER_BIG -->
             <!-- MPCTLV3_SCHED_LOAD_BOOST_LITTLE -->
-            <!-- MPCTLV3_SCHED_LOAD_BOOST_BIG -->
-            <!-- MPCTLV3_SCHEDUTIL_RTG_BOOST_FREQ_CLUSTER_LITTLE -->
-            <!-- MPCTLV3_SCHEDUTIL_RTG_BOOST_FREQ_CLUSTER_BIG -->
-            <PROFILE1>0x40CA4000, 0x8, 0x4143C100, 844, 0x4143C000, 1113, 0x41450100, 0, 0x41454100, 0x4, 0x40C68100, -20, 0x40C68000, -10, 0x4144C100, 600000, 0x4144C000, 600000</PROFILE1>
+            <PROFILE1>0x40CA4000, 0x8, 0x4143C100, 800, 0x4143C000, 960, 0x41450100, 0, 0x41450000, 0, 0x40C68100, -10</PROFILE1>
         </Profile>
     </Profiles>
     <IgnoredApps>

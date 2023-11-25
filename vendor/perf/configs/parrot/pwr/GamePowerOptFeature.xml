@@ -1,0 +1,55 @@
+<!--
+/******************************************************************************
+  @file    GameOptimizationFeature.xml
+  @brief   Game Optimization feature xml
+
+  DESCRIPTION
+      Each feature has an xml file to define the feature components
+
+  ===========================================================================
+  Copyright (c) 2023 Qualcomm Technologies, Inc.
+  All Rights Reserved.
+  Confidential and Proprietary - Qualcomm Technologies, Inc.
+  ===========================================================================
+******************************************************************************/
+-->
+<Feature>
+   <Name>GamePowerOptFeature</Name>
+   <Libname>libgamepoweroptfeature.so</Libname>
+   <Configs>
+        <!-- FPS threshold values in the order: Increase, Aggressive Increase, Decrease, Target FPS Delta-->
+        <FPS_30_THRESHOLD>0.6, 1.0, 0.2, 0.0</FPS_30_THRESHOLD>
+        <FPS_35_THRESHOLD>0.6, 1.0, 0.3, 0.0</FPS_35_THRESHOLD>
+        <FPS_40_THRESHOLD>0.6, 1.0, 0.4, 0.0</FPS_40_THRESHOLD>
+        <FPS_60_THRESHOLD>0.6, 5.0, 1, 0.0</FPS_60_THRESHOLD>
+        <FPS_90_THRESHOLD>2.0, 5.0, 0.6, 0.0</FPS_90_THRESHOLD>
+        <FPS_120_THRESHOLD>2.0, 5.0, 0.7, 0.0</FPS_120_THRESHOLD>
+        <FPS_144_THRESHOLD>2.0, 5.0, 0.8, 0.0</FPS_144_THRESHOLD>
+        <!-- Parameters: kp, ki, kd, iLimit, outputLimit, dt (fre unit kHz)-->
+        <PID_Parameters1>3, 0.5, 1.5</PID_Parameters1>
+        <PID_Parameters2>20, 200, 0.5</PID_Parameters2>
+        <SAMPLE_CALL_INTERVAL_MSEC>500</SAMPLE_CALL_INTERVAL_MSEC>
+        <MAX_SAMPLE_NUM>15</MAX_SAMPLE_NUM>
+        <FPS_STABLE_CNT>40</FPS_STABLE_CNT>
+        <Freq_Drop_Bottom_ThresholdRatio>30</Freq_Drop_Bottom_ThresholdRatio>
+        <Algo_Engine>Algo_PID</Algo_Engine>
+    </Configs>
+    <Profiles>
+        <Profile>
+        <!-- Profiles which can be configured -->
+        <!-- MPCTLV3_MAX_FREQ_CLUSTER_LITTLE_CORE_0 -->
+        <!-- MPCTLV3_MAX_FREQ_CLUSTER_BIG_CORE_0 -->
+        <!-- MPCTLV3_MIN_FREQ_CLUSTER_LITTLE_CORE_0 -->
+        <!-- MPCTLV3_MIN_FREQ_CLUSTER_BIG_CORE_0 -->
+        <FREQ_MAX_Enable>1, 1</FREQ_MAX_Enable>
+        <FREQ_MIN_Enable>1, 1</FREQ_MIN_Enable>
+        <SCALING_MAX_FREQ>0x40804100, 0x40804000</SCALING_MAX_FREQ>
+        <SCALING_MIN_FREQ>0x40800100, 0x40800000</SCALING_MIN_FREQ>
+        </Profile>
+    </Profiles>
+    <IgnoredApps>
+        <!-- Apps which be excluded for optimization -->
+        <App1></App1>
+        <App2></App2>
+    </IgnoredApps>
+</Feature>
