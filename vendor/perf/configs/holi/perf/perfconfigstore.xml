@@ -80,6 +80,8 @@ ________________________________________________________________________________
                 <Prop Name="vendor.appcompact.compact_throttle_persistent" Value="600000" />
                 <Prop Name="vendor.appcompact.rss_throttle_kb" Value="12000" />
                 <Prop Name="vendor.appcompact.delta_rss_throttle_kb" Value="8000" />
+                <Prop Name="ro.vendor.qti.sys.fw.bg_apps_limit" Value="32"  Ram="4" />
+                <Prop Name="ro.vendor.qti.sys.fw.bg_apps_limit" Value="32"  Ram="3" />
                 <Prop Name="ro.vendor.perf.qgpe" Value="true"/>
 
     </PerfConfigs>
