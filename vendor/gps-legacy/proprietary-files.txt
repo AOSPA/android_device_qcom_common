@@ -7,7 +7,7 @@ vendor/bin/slim_daemon
 vendor/bin/xtra-daemon
 vendor/bin/xtwifi-client
 vendor/bin/xtwifi-inet-agent
--vendor/etc/vintf/manifest/vendor.qti.gnss@4.0-service.xml
+-vendor/etc/vintf/manifest/vendor.qti.gnss@4.2-service.xml
 vendor/etc/apdr.conf
 vendor/etc/cacert_location.pem
 vendor/etc/izat.conf
@@ -16,7 +16,7 @@ vendor/etc/sap.conf
 vendor/etc/sec_config
 vendor/etc/xtra_root_cert.pem
 vendor/etc/xtwifi.conf
-vendor/lib64/hw/vendor.qti.gnss@4.0-impl.so
+vendor/lib64/hw/vendor.qti.gnss@4.2-impl.so
 vendor/lib64/libaoa.so
 vendor/lib64/libasn1cper.so
 vendor/lib64/libasn1crt.so
@@ -33,7 +33,9 @@ vendor/lib64/libizat_core.so
 vendor/lib64/liblbs_core.so
 vendor/lib64/libloc_api_v02.so
 vendor/lib64/libloc_api_wds.so
+vendor/lib64/libloc_qwes_iface.so
 vendor/lib64/libloc_socket.so
+vendor/lib64/libloc_ril_client.so
 vendor/lib64/liblocationservice.so
 vendor/lib64/liblocationservice_glue.so
 vendor/lib64/liblowi_client.so
@@ -51,6 +53,8 @@ vendor/lib64/vendor.qti.gnss@1.2.so
 vendor/lib64/vendor.qti.gnss@2.0.so
 vendor/lib64/vendor.qti.gnss@2.1.so
 vendor/lib64/vendor.qti.gnss@3.0.so
-vendor/lib64/vendor.qti.gnss@4.0-service.so
 vendor/lib64/vendor.qti.gnss@4.0.so
+vendor/lib64/vendor.qti.gnss@4.1.so
+vendor/lib64/vendor.qti.gnss@4.2-service.so
+vendor/lib64/vendor.qti.gnss@4.2.so
 vendor/lib64/vendor.qti.hardware.qccsyshal@1.0.so
