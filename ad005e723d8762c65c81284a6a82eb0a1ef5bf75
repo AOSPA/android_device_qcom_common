@@ -51,6 +51,24 @@
       "message": "bengal is holi? really?!",
       "revId": "ad005e723d8762c65c81284a6a82eb0a1ef5bf75",
       "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "00524f6a_fffe646a",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000737
+      },
+      "writtenOn": "2023-11-26T17:11:14Z",
+      "side": 1,
+      "message": "LMAO, Have you ever seen the structure of a BSP? This change is from A11 GRF vendor for Holi, the BSP is from Bengal, but there are many configs from other SoC.",
+      "parentUuid": "9f357611_9a7f34c3",
+      "revId": "ad005e723d8762c65c81284a6a82eb0a1ef5bf75",
+      "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
     }
   ]
 }
