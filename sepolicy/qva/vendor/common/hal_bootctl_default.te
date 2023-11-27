@@ -3,3 +3,6 @@
 
 #for hal_bootctl_default
 allow hal_bootctl_default vendor_sysfs_scsi_host:dir search;
+
+#============= vold ==============
+allow vold vendor_sysfs_scsi_host:file write;
