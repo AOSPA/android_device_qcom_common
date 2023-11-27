@@ -3,6 +3,8 @@ genfscon sysfs /devices/platform/soc/[0-9]+.qcom,[a-z0-9]-cpu-l3-lat/devfreq u:o
 genfscon sysfs /devices/platform/soc/[0-9]+.qcom,[a-z0-9]-cpu-l3-latfloor/devfreq u:object_r:vendor_sysfs_devfreq:s0
 genfscon sysfs /devices/platform/soc/[0-9]+.qcom,devfreq-l3/[0-9]+.qcom,devfreq-l3:qcom,[a-z0-9]-cpu-l3-lat/devfreq u:object_r:vendor_sysfs_devfreq:s0
 genfscon sysfs /devices/platform/soc/[0-9]+.qcom,snoop-l3-bw/devfreq u:object_r:vendor_sysfs_devfreq:s0
+genfscon sysfs /devices/platform/soc/soc:qcom,[a-z0-9]-cpu-l3-lat/devfreq u:object_r:vendor_sysfs_devfreq:s0
+genfscon sysfs /devices/platform/soc/soc:qcom,[a-z0-9]-cpu-l3-latfloor/devfreq u:object_r:vendor_sysfs_devfreq:s0
 genfscon sysfs /devices/platform/soc/soc:qcom,cpu-cpu-llcc-bw/devfreq u:object_r:vendor_sysfs_devfreq:s0
 genfscon sysfs /devices/platform/soc/soc:qcom,cpu-llcc-ddr-bw/devfreq u:object_r:vendor_sysfs_devfreq:s0
 genfscon sysfs /devices/platform/soc/soc:qcom,[a-z0-9]-cpu-llcc-latfloor/devfreq u:object_r:vendor_sysfs_devfreq:s0
