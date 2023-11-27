@@ -33,3 +33,23 @@
 # Poweropt-service
 /(vendor|system/vendor)/bin/poweropt-service                        u:object_r:vendor_hal_poweroptservice_qti_exec:s0
 /data/vendor/pwr(/.*)?                                              u:object_r:vendor_pm_data_file:s0
+
+# DCVS Nodes
+/sys/devices/platform/soc/[0-9]+.qcom,[a-z0-9]-cpu-l3-lat/devfreq/[0-9]+.qcom,[a-z0-9]-cpu-l3-lat(/.*)? u:object_r:vendor_sysfs_devfreq:s0
+/sys/devices/platform/soc/[0-9]+.qcom,[a-z0-9]-cpu-l3-latfloor/devfreq/[0-9]+.qcom,[a-z0-9]-cpu-l3-latfloor(/.*)? u:object_r:vendor_sysfs_devfreq:s0
+/sys/devices/platform/soc/[0-9]+.qcom,devfreq-l3/[0-9]+.qcom,devfreq-l3:qcom,[a-z0-9]-cpu-l3-lat/devfreq/[0-9]+.qcom,devfreq-l3(/.*)? u:object_r:vendor_sysfs_devfreq:s0
+/sys/devices/platform/soc/[0-9]+.qcom,snoop-l3-bw/devfreq/[0-9]+.qcom,snoop-l3-bw(/.*)? u:object_r:vendor_sysfs_devfreq:s0
+/sys/devices/platform/soc/soc:qcom,cpu[0-9]-cpu-l3-lat/devfreq/soc:qcom,cpu[0-9]-cpu-l3-lat(/.*)? u:object_r:vendor_sysfs_devfreq:s0
+/sys/devices/platform/soc/soc:qcom,cpu[0-9]-cpu-l3-latfloor/devfreq/soc:qcom,cpu[0-9]-cpu-l3-latfloor(/.*)? u:object_r:vendor_sysfs_devfreq:s0
+/sys/devices/platform/soc/soc:qcom,cpu-cpu-llcc-bw/devfreq/soc:qcom,cpu-cpu-llcc-bw(/.*)? u:object_r:vendor_sysfs_devfreq:s0
+/sys/devices/platform/soc/soc:qcom,cpu-llcc-ddr-bw/devfreq/soc:qcom,cpu-llcc-ddr-bw(/.*)? u:object_r:vendor_sysfs_devfreq:s0
+/sys/devices/platform/soc/soc:qcom,cpu[0-9]-cpu-llcc-latfloor/devfreq/soc:qcom,cpu[0-9]-cpu-llcc-latfloor(/.*)? u:object_r:vendor_sysfs_devfreq:s0
+/sys/devices/platform/soc/soc:qcom,cpu[0-9]-cpu-ddr-latfloor/devfreq/soc:qcom,cpu[0-9]-cpu-ddr-latfloor(/.*)? u:object_r:vendor_sysfs_devfreq:s0
+/sys/devices/platform/soc/soc:qcom,cpu[0-9]-cpu-llcc-lat/devfreq/soc:qcom,cpu[0-9]-cpu-llcc-lat(/.*)? u:object_r:vendor_sysfs_devfreq:s0
+/sys/devices/platform/soc/soc:qcom,cpu[0-9]-llcc-ddr-lat/devfreq/soc:qcom,cpu[0-9]-llcc-ddr-lat(/.*)? u:object_r:vendor_sysfs_devfreq:s0
+/sys/devices/platform/soc/soc:qcom,cpu[0-9]-cpu-ddr-qoslat/devfreq/soc:qcom,cpu[0-9]-cpu-ddr-qoslat(/.*)? u:object_r:vendor_sysfs_devfreq:s0
+/sys/devices/platform/soc/soc:qcom,cpu[0-9]-cpu-ddr-qoslatfloor/devfreq/soc:qcom,cpu[0-9]-cpu-ddr-qoslatfloor(/.*)? u:object_r:vendor_sysfs_devfreq:s0
+/sys/devices/platform/soc/soc:qcom,cdsp-cdsp-l3-lat/devfreq/soc:qcom,cdsp-cdsp-l3-lat(/.*)? u:object_r:vendor_sysfs_devfreq:s0
+/sys/devices/platform/soc/soc:qcom,npu-npu-ddr-bw/devfreq/soc:qcom,npu-npu-ddr-bw(/.*)? u:object_r:vendor_sysfs_devfreq:s0
+/sys/devices/platform/soc/soc:qcom,npudsp-npu-ddr-bw/devfreq/soc:qcom,npudsp-npu-ddr-bw(/.*)? u:object_r:vendor_sysfs_devfreq:s0
+/sys/devices/system/cpu/memlat/[a-z0-9]_memlat/[a-z0-9]-cpu-l3-lat u:object_r:vendor_sysfs_devfreq:s0
