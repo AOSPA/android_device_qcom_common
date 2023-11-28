@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "213c50cc_feead079",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 8
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000838
+      },
+      "writtenOn": "2023-11-28T13:51:31Z",
+      "side": 1,
+      "message": "Hi. Just wanted to check why this is not merged 😞",
+      "revId": "aef009c5c76e0e62102be4c093deb70a77694569",
+      "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
+    }
+  ]
+}
