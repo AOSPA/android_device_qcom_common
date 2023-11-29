@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "6f58ccdd_6b493c89",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000429
+      },
+      "writtenOn": "2023-11-29T08:26:04Z",
+      "side": 1,
+      "message": "works and fixed apex compression",
+      "revId": "14bcb9782d89dc1ba3458a696dbc9e18984fdf86",
+      "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
+    }
+  ]
+}
