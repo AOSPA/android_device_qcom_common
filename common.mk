@@ -195,4 +195,9 @@ PRODUCT_PACKAGES += \
 PRODUCT_VENDOR_PROPERTIES += \
     ro.soc.manufacturer=QTI
 
+# NDK
+ifneq (,$(filter 5.10 5.15, $(TARGET_KERNEL_VERSION)))
+NEED_AIDL_NDK_PLATFORM_BACKEND := true
+endif
+
 endif # QCOM_BOARD_PLATFORMS
