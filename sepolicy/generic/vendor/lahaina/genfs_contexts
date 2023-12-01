@@ -98,6 +98,7 @@ genfscon sysfs /devices/platform/soc/soc:qcom,wpss@8a00000/subsys4/wakeup u:obje
 genfscon sysfs /devices/platform/soc/4080000.qcom,mss/subsys5/wakeup u:object_r:sysfs_wakeup:s0
 genfscon sysfs /devices/platform/soc/a300000.qcom,turing/wakeup u:object_r:sysfs_wakeup:s0
 genfscon sysfs /devices/platform/soc/a300000.qcom,turing/subsys6/wakeup u:object_r:sysfs_wakeup:s0
+genfscon sysfs /devices/platform/soc/aab0000.qcom,venus/subsys5/wakeup u:object_r:sysfs_wakeup:s0
 genfscon sysfs /devices/platform/soc/99c000.qcom,qup_uart/wakeup u:object_r:sysfs_wakeup:s0
 genfscon sysfs /devices/platform/soc/aab0000.qcom,venus/subsys7/wakeup u:object_r:sysfs_wakeup:s0
 genfscon sysfs /devices/platform/soc/a84000.i2c/i2c-1/1-0028/wakeup u:object_r:sysfs_wakeup:s0
@@ -123,6 +124,7 @@ genfscon sysfs /devices/platform/soc/aab0000.qcom,venus/subsys6/wakeup u:object_
 genfscon sysfs /devices/platform/soc/b0000000.qcom,cnss-qca6490/subsys7/wakeup u:object_r:sysfs_wakeup:s0
 genfscon sysfs /devices/platform/soc/b0000000.qcom,cnss-qca6490/subsys5/wakeup u:object_r:sysfs_wakeup:s0
 genfscon sysfs /devices/platform/soc/b0000000.qcom,cnss-qca6490/subsys4/wakeup u:object_r:sysfs_wakeup:s0
+genfscon sysfs /devices/platform/soc/b0000000.qcom,cnss-qca6490/subsys6/wakeup u:object_r:sysfs_wakeup:s0
 genfscon sysfs /devices/platform/soc/1c00000.qcom,pcie/pci0000:00/0000:00:00.0/0000:01:00.0/1103_00.01.00/wakeup u:object_r:sysfs_wakeup:s0
 
 # PA - More wakeup nodes
@@ -149,3 +151,5 @@ genfscon sysfs /devices/platform/soc/3d00000.qcom,kgsl-3d0/kgsl/kgsl-3d0/gpu_mod
 
 # UFS
 genfscon sysfs /devices/platform/soc/1d84000.ufshc/host0/target0:0:0/0:0:0:0/block/sda/queue/discard_max_bytes u:object_r:vendor_sysfs_mmc_host:s0
+
+genfscon sysfs /devices/platform/soc/ae94000.qcom,mdss_dsi_ctrl0/uio/uio1/name u:object_r:vendor_sysfs_uio_file:s0

@@ -1,0 +1,1 @@
+allow hal_camera_default vendor_sysfs_camera:file r_file_perms;
