@@ -1,0 +1,5 @@
+# Copyright (c) 2022-2023 Qualcomm Innovation Center, Inc. All rights reserved.
+# SPDX-License-Identifier: BSD-3-Clause-Clear
+
+#Allow audio hal access to aid audio node
+allow hal_audio_default vendor_aid_audio_device:chr_file rw_file_perms;
