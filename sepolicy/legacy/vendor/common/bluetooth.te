@@ -64,6 +64,8 @@ allow bluetooth dun_service:service_manager find;
 
 # for finding wbc_service
 allow bluetooth wbc_service:service_manager find;
+# for finding mediametrics_service
+allow bluetooth mediametrics_service:service_manager find;
 
 # ioctlcmd=c302
 allow bluetooth self:socket ioctl;

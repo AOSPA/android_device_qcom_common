@@ -1,0 +1,10 @@
+# Copyright (c) 2023 Qualcomm Innovation Center, Inc. All rights reserved.
+# SPDX-License-Identifier: BSD-3-Clause-Clear
+
+#Allow base set of permissions for camera hal to be a client of audio hal
+typeattribute hal_camera_default hal_audio_client;
+
+#Allow audio related and read file permissions
+allow hal_camera_default vendor_aid_audio_device:chr_file rw_file_perms;
+allow hal_camera_default audio_device:dir r_dir_perms;
+get_prop(hal_camera_default, vendor_audio_prop)

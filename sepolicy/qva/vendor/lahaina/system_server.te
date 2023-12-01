@@ -1,0 +1,5 @@
+# Copyright (c) 2023 Qualcomm Innovation Center, Inc. All rights reserved.
+# SPDX-License-Identifier: BSD-3-Clause-Clear
+
+# Allow system_server to read vendor_persist_camera_prop
+get_prop(system_server, vendor_persist_camera_prop)
