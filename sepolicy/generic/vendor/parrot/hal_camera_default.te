@@ -68,3 +68,4 @@ allow hal_camera_default vendor_dmabuf_display_heap_device:chr_file r_file_perms
 allow hal_camera_default vendor_vm_cp_non_pixel_device:chr_file r_file_perms;
 allow hal_camera_default vendor_vm_cp_pixel_device:chr_file r_file_perms;
 
+allow hal_camera_default vendor_sysfs_camera:file r_file_perms;

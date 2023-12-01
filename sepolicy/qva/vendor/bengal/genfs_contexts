@@ -1,9 +1,12 @@
 ### 4.19 Nodes
+#PM2250
+genfscon sysfs /devices/platform/soc/1c40000.qcom,spmi/spmi-0/spmi0-00/1c40000.qcom,spmi:qcom,pm2250@0:qcom,pm2250_rtc/rtc/rtc0/wakeup u:object_r:sysfs_wakeup:s0
+
 #PM6125 & PMI632
 genfscon sysfs /devices/platform/soc/1c40000.qcom,spmi/spmi-0/spmi0-00/1c40000.qcom,spmi:qcom,pm6125@0:qcom,pm6125_rtc/rtc u:object_r:sysfs_rtc:s0
-genfscon sysfs /devices/platform/soc/1c40000.qcom,spmi/spmi-0/spmi0-00/1c40000.qcom,spmi:qcom,pm6125@0:qcom,pm6125_rtc/wakeup/wakeup u:object_r:sysfs_wakeup:s0
+genfscon sysfs /devices/platform/soc/1c40000.qcom,spmi/spmi-0/spmi0-00/1c40000.qcom,spmi:qcom,pm6125@0:qcom,pm6125_rtc/wakeup u:object_r:sysfs_wakeup:s0
 genfscon sysfs /devices/platform/soc/1c40000.qcom,spmi/spmi-0/spmi0-00/1c40000.qcom,spmi:qcom,pm6125@0:qcom,pm6125_rtc/rtc/rtc0/wakeup u:object_r:sysfs_wakeup:s0
-genfscon sysfs /devices/platform/soc/1c40000.qcom,spmi/spmi-0/spmi0-00/1c40000.qcom,spmi:qcom,pm6125@0:qcom,power-on@800/wakeup/wakeup u:object_r:sysfs_wakeup:s0
+genfscon sysfs /devices/platform/soc/1c40000.qcom,spmi/spmi-0/spmi0-00/1c40000.qcom,spmi:qcom,pm6125@0:qcom,power-on@800/wakeup u:object_r:sysfs_wakeup:s0
 
 #pm7250b sysfs nodes
 genfscon sysfs /devices/platform/soc/1c40000.qcom,spmi/spmi-0/spmi0-02/1c40000.qcom,spmi:qcom,pm7250b@2:qcom,qpnp-smb5/power_supply/battery u:object_r:vendor_sysfs_battery_supply:s0
@@ -22,12 +25,8 @@ genfscon sysfs /devices/platform/soc/1c40000.qcom,spmi/spmi-0/spmi0-02/1c40000.q
 genfscon sysfs /devices/platform/soc/1c40000.qcom,spmi/spmi-0/spmi0-02/1c40000.qcom,spmi:qcom,pm7250b@2:qpnp,qg/power_supply/bms/wakeup u:object_r:sysfs_wakeup:s0
 genfscon sysfs /devices/platform/soc/1c40000.qcom,spmi/spmi-0/spmi0-02/1c40000.qcom,spmi:qcom,pm7250b@2:qcom,qpnp-smb5/power_supply/pc_port/wakeup  u:object_r:sysfs_wakeup:s0
 genfscon sysfs /devices/platform/soc/1c40000.qcom,spmi/spmi-0/spmi0-02/1c40000.qcom,spmi:qcom,pm7250b@2:qcom,qpnp-smb5/power_supply/usb/wakeup u:object_r:sysfs_wakeup:s0
-genfscon sysfs /devices/platform/soc/1c40000.qcom,spmi/spmi-0/spmi0-02/1c40000.qcom,spmi:qcom,pm7250b@2:qcom,qpnp-smb5/wakeup/wakeup u:object_r:sysfs_wakeup:s0
-genfscon sysfs /devices/platform/soc/1c40000.qcom,spmi/spmi-0/spmi0-02/1c40000.qcom,spmi:qcom,pm7250b@2:qcom,power-on@800/wakeup/wakeup u:object_r:sysfs_wakeup:s0
-
- #wakeup sysfs nodes listed by SuspendSepolicyTests.sh
- genfscon sysfs /devices/platform/soc/1c40000.qcom,spmi/spmi-0/spmi0-00/1c40000.qcom,spmi:qcom,pm6125@0:qcom,power-on@800/wakeup u:object_r:sysfs_wakeup:s0
- genfscon sysfs /devices/platform/soc/1c40000.qcom,spmi/spmi-0/spmi0-00/1c40000.qcom,spmi:qcom,pm6125@0:qcom,pm6125_rtc/wakeup u:object_r:sysfs_wakeup:s0
+genfscon sysfs /devices/platform/soc/1c40000.qcom,spmi/spmi-0/spmi0-02/1c40000.qcom,spmi:qcom,pm7250b@2:qcom,qpnp-smb5/wakeup u:object_r:sysfs_wakeup:s0
+genfscon sysfs /devices/platform/soc/1c40000.qcom,spmi/spmi-0/spmi0-02/1c40000.qcom,spmi:qcom,pm7250b@2:qcom,power-on@800/wakeup u:object_r:sysfs_wakeup:s0
 
 # UFS
 genfscon sysfs /devices/platform/soc/4804000.ufshc/host0/target0:0:0/0:0:0:4/block/sde/queue/discard_max_bytes u:object_r:vendor_sysfs_mmc_host:s0

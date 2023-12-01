@@ -1,0 +1,2 @@
+binder_call(dumpstate, vendor_sxrd_vndr)
+binder_call(dumpstate, vendor_qvrd_vndr)
