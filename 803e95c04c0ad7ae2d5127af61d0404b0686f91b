@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "0a6acda3_0a2a969e",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 6
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000012
+      },
+      "writtenOn": "2023-12-03T16:46:18Z",
+      "side": 1,
+      "message": "discussed internally, Musfiqul gave permission to override his review.",
+      "revId": "803e95c04c0ad7ae2d5127af61d0404b0686f91b",
+      "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
+    }
+  ]
+}
