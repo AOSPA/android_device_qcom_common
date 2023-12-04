@@ -113,16 +113,16 @@
         </Trigger>
     </Triggers>
     <PipelinedPackages>
-        <Package Name="DefaultGamePackage" NumThreads="2" /> <!-- Default Game Setting -->
-        <Package Name="com.tencent.ig" NumThreads="2" /> <!-- PubG -->
-        <Package Name="com.kiloo.subwaysurf" NumThreads="2" /> <!-- SubWaySurfer -->
-        <Package Name="com.epicgames.fortnite" NumThreads="3" /> <!-- Fortnite -->
-        <Package Name="com.tencent.tmgp.pubgmhd" NumThreads="2" /> <!-- GP -->
-        <Package Name="com.tencent.tmgp.sgame" NumThreads="4" /> <!-- HOK default -->
-        <Package Name="com.tencent.tmgp.sgame" FPS="60" NumThreads="2" /> <!-- HOK60 -->
-        <Package Name="com.miHoYo.Yuanshen" NumThreads="3" /> <!-- Genshin -->
-        <Package Name="com.miHoYo.hkrpg" NumThreads="3" /> <!-- StarRail -->
-        <Package Name="com.netease.pm02" NumThreads="3" /> <!-- Tianyu -->
+        <!--Package Name="DefaultGamePackage" NumThreads="2" /> Default Game Setting -->
+        <!--Package Name="com.tencent.ig" NumThreads="2" /> PubG -->
+        <!--Package Name="com.kiloo.subwaysurf" NumThreads="2" /> SubWaySurfer -->
+        <!--Package Name="com.epicgames.fortnite" NumThreads="3" />  Fortnite -->
+        <!--Package Name="com.tencent.tmgp.pubgmhd" NumThreads="2" />  GP -->
+        <!--Package Name="com.tencent.tmgp.sgame" NumThreads="3" /> HOK default -->
+        <!--Package Name="com.tencent.tmgp.sgame" FPS="60" NumThreads="3" />  HOK60 -->
+        <!--Package Name="com.miHoYo.Yuanshen" NumThreads="3" /> Genshin -->
+        <!--Package Name="com.miHoYo.hkrpg" NumThreads="3" />  StarRail -->
+        <!--Package Name="com.netease.pm02" NumThreads="3" />  Tianyu -->
     </PipelinedPackages>
     <IgnoredApps>
         <App>com.google.android.gms</App>
