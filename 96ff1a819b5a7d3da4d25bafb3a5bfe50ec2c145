@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "85e63946_8c58ff2b",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000579
+      },
+      "writtenOn": "2023-12-07T08:54:32Z",
+      "side": 1,
+      "message": "its absent in LA.UM.9.14.1.r1-12200-QCM6490.QSSI13.0 as well",
+      "revId": "96ff1a819b5a7d3da4d25bafb3a5bfe50ec2c145",
+      "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
+    }
+  ]
+}
