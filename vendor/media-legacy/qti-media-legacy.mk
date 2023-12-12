@@ -26,7 +26,8 @@ ifeq ($(TARGET_DISABLE_C2_CODEC),true)
 PRODUCT_PACKAGES += \
     android.hardware.media.omx@1.0-impl \
     android.hardware.media.omx@1.0-service \
-    libstagefright_omx.vendor
+    libstagefright_omx.vendor \
+    libstagefright_softomx.vendor
 
 # Disable C2 propertier
 PRODUCT_ODM_PROPERTIES += \
@@ -61,8 +62,7 @@ PRODUCT_PACKAGES += \
     libavservices_minijail.vendor \
     libcodec2_hidl@1.0.vendor \
     libcodec2_vndk.vendor \
-    libgui_vendor \
-    libstagefright_softomx.vendor
+    libgui_vendor
 
 # Properties
 PRODUCT_SYSTEM_EXT_PROPERTIES += \
