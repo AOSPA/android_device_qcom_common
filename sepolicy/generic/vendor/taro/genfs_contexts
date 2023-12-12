@@ -1,1 +1,0 @@
-genfscon sysfs /kernel/camera/subparts_info u:object_r:vendor_sysfs_camera:s0
