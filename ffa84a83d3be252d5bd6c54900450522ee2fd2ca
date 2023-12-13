@@ -123,6 +123,24 @@
       "parentUuid": "00429d44_ebfffc07",
       "revId": "ffa84a83d3be252d5bd6c54900450522ee2fd2ca",
       "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "152da5fd_4d2d97ef",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 8
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000498
+      },
+      "writtenOn": "2023-12-13T09:48:47Z",
+      "side": 1,
+      "message": "This whole patch is completely useless anyway as AOSP only stopped building OMX service for devices launching on Android U which logically are enforced to fully use C2.\n\nAs a confirmation, OMX service is still builded on realme SM8250 (API launch 29 and 30) and doesn\u0027t crash without that patch, which most likely means it\u0027s a device tree side issue if it doesn\u0027t get built\n\nhttps://android.googlesource.com/platform/build/+/refs/tags/android-14.0.0_r18/target/product/base_vendor.mk#78",
+      "parentUuid": "96549629_93364b4c",
+      "revId": "ffa84a83d3be252d5bd6c54900450522ee2fd2ca",
+      "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
     }
   ]
 }
