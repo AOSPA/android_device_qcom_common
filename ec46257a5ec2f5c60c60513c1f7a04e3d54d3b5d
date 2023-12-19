@@ -1,4 +1,22 @@
 {
-  "comments": [],
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "022c50a4_28ad059b",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 12
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000934
+      },
+      "writtenOn": "2023-12-19T21:53:36Z",
+      "side": 1,
+      "message": "Didn\u0027t you forget to disable it for Bengal 4.19? It seems so to me.",
+      "revId": "ec46257a5ec2f5c60c60513c1f7a04e3d54d3b5d",
+      "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
+    }
+  ],
   "submitRequirementResults": []
 }
