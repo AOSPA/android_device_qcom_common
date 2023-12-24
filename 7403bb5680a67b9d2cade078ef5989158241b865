@@ -16,6 +16,23 @@
       "message": "AIDL health hal works fine with this.",
       "revId": "7403bb5680a67b9d2cade078ef5989158241b865",
       "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "b88aa287_c5f1bce0",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000429
+      },
+      "writtenOn": "2023-12-24T04:58:11Z",
+      "side": 1,
+      "message": "hold",
+      "revId": "7403bb5680a67b9d2cade078ef5989158241b865",
+      "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
     }
   ]
 }
