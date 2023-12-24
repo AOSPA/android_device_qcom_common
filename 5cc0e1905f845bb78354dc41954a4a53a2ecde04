@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "7c62fcce_e3a431c8",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 11
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000498
+      },
+      "writtenOn": "2023-12-24T13:56:27Z",
+      "side": 1,
+      "message": "kindly don\u0027t nuke the previous votes and again, could you label the proc path properly instead of letting perf Hal reading every path under proc label",
+      "revId": "5cc0e1905f845bb78354dc41954a4a53a2ecde04",
+      "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
+    }
+  ]
+}
