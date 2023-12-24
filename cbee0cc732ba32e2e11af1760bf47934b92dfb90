@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "738789a2_efece452",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000498
+      },
+      "writtenOn": "2023-12-24T13:45:36Z",
+      "side": 1,
+      "message": "This makefile is only for Android T and U launch, and that would conflicts with specific vAB setup like sunny (4.14 vAB launch so no compression) and retrofit vAB non-GKI who need a different makefile",
+      "revId": "cbee0cc732ba32e2e11af1760bf47934b92dfb90",
+      "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
+    }
+  ]
+}
