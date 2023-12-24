@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "0db6c52f_d09be33c",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000498
+      },
+      "writtenOn": "2023-12-24T13:43:12Z",
+      "side": 1,
+      "message": "Wouldn\u0027t it be better to use AOSP flag for guarding that ?",
+      "revId": "4aa481f0d37a77eacda465bb6c5ea0104f2abc53",
+      "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
+    }
+  ]
+}
