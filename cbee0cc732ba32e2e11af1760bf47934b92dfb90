@@ -34,6 +34,24 @@
       "parentUuid": "738789a2_efece452",
       "revId": "cbee0cc732ba32e2e11af1760bf47934b92dfb90",
       "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "fd55cb1a_73f7512f",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000498
+      },
+      "writtenOn": "2023-12-24T13:51:05Z",
+      "side": 1,
+      "message": "Well as long you add the necessary conditions for 4.14 vAB and retrofit vAB non-GKI, I\u0027m fine with this",
+      "parentUuid": "96d7a2c0_4233e140",
+      "revId": "cbee0cc732ba32e2e11af1760bf47934b92dfb90",
+      "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
     }
   ]
 }
