@@ -1,4 +1,3 @@
-system_ext/app/workloadclassifier/workloadclassifier.apk
 system_ext/app/PowerSaveMode/PowerSaveMode.apk
 system_ext/bin/perfservice
 system_ext/bin/qspmsvc
