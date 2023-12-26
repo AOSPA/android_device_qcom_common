@@ -7,5 +7,8 @@ genfscon sysfs /devices/platform/soc/soc:qcom,npu-npu-ddr-bw/devfreq u:object_r:
 genfscon sysfs /devices/platform/soc/soc:qcom,npu-npu-llcc-bw/devfreq u:object_r:vendor_sysfs_devfreq:s0
 genfscon sysfs /devices/platform/soc/soc:qcom,npudsp-npu-ddr-bw/devfreq u:object_r:vendor_sysfs_devfreq:s0
 
+# Exetcon
+genfscon sysfs /devices/platform/soc/soc:qcom,msm-ext-disp/extcon u:object_r:sysfs_extcon:s0
+
 # healthd-ext
 genfscon sysfs /devices/platform/soc/soc:qcom,pmic_glink/soc:qcom,pmic_glink:qcom,ucsi/power_supply/ucsi-source-psy-soc:qcom,pmic_glink:qcom,ucsi1 u:object_r:vendor_sysfs_battery_supply:s0
