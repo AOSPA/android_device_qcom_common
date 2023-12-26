@@ -38,6 +38,7 @@
 /sys/devices/platform/soc/[0-9]+.qcom,cpu[0-9]-cpu-l3-lat/devfreq(/.*)? u:object_r:vendor_sysfs_devfreq:s0
 /sys/devices/platform/soc/[0-9]+.qcom,cpu[0-9]-cpu-l3-latfloor/devfreq(/.*)? u:object_r:vendor_sysfs_devfreq:s0
 /sys/devices/platform/soc/[0-9]+.qcom,devfreq-l3/[0-9]+.qcom,devfreq-l3:qcom,cpu[0-9]-cpu-l3-lat/devfreq(/.*)? u:object_r:vendor_sysfs_devfreq:s0
+/sys/devices/platform/soc/[0-9]+.qcom,devfreq-l3/[0-9]+.qcom,devfreq-l3:qcom,cdsp-cdsp-l3-lat/devfreq(/.*)? u:object_r:vendor_sysfs_devfreq:s0
 /sys/devices/platform/soc/[0-9]+.qcom,devfreq-l3:qcom,cpu[0-9]-cpu-l3-lat(/.*)? u:object_r:vendor_sysfs_devfreq:s0
 /sys/devices/platform/soc/[0-9]+.qcom,snoop-l3-bw/devfreq(/.*)? u:object_r:vendor_sysfs_devfreq:s0
 /sys/devices/platform/soc/soc:qcom,cpu[0-9]-cpu-l3-lat/devfreq(/.*)? u:object_r:vendor_sysfs_devfreq:s0

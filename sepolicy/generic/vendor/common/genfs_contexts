@@ -2,7 +2,9 @@
 genfscon sysfs /devices/platform/soc/soc:qcom,cpu-cpu-llcc-bw/devfreq u:object_r:vendor_sysfs_devfreq:s0
 genfscon sysfs /devices/platform/soc/soc:qcom,cpu-llcc-ddr-bw/devfreq u:object_r:vendor_sysfs_devfreq:s0
 genfscon sysfs /devices/platform/soc/soc:qcom,cdsp-cdsp-l3-lat/devfreq u:object_r:vendor_sysfs_devfreq:s0
+genfscon sysfs /devices/platform/soc/soc:qcom,npu-llcc-ddr-bw/devfreq u:object_r:vendor_sysfs_devfreq:s0
 genfscon sysfs /devices/platform/soc/soc:qcom,npu-npu-ddr-bw/devfreq u:object_r:vendor_sysfs_devfreq:s0
+genfscon sysfs /devices/platform/soc/soc:qcom,npu-npu-llcc-bw/devfreq u:object_r:vendor_sysfs_devfreq:s0
 genfscon sysfs /devices/platform/soc/soc:qcom,npudsp-npu-ddr-bw/devfreq u:object_r:vendor_sysfs_devfreq:s0
 
 # healthd-ext
