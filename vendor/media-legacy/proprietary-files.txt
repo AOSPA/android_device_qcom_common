@@ -8,6 +8,7 @@ vendor/etc/seccomp_policy/codec2.vendor.base-arm.policy
 vendor/lib/libOmxSwVdec.so
 vendor/lib/libOmxSwVencMpeg4.so
 vendor/lib/libOmxVideoDSMode.so
+vendor/lib/libqc2vppfilter.so
 vendor/lib/libqcodec2_base.so
 vendor/lib/libqcodec2_core.so
 vendor/lib/libqcodec2_utils.so
@@ -19,6 +20,7 @@ vendor/lib/vendor.qti.hardware.vpp@1.2.so
 vendor/lib/vendor.qti.hardware.vpp@1.3.so
 vendor/lib64/libOmxSwVdec.so
 vendor/lib64/libOmxSwVencMpeg4.so
+vendor/lib64/libqc2vppfilter.so
 vendor/lib64/libqcodec2_base.so
 vendor/lib64/libqcodec2_core.so
 vendor/lib64/libqcodec2_utils.so
