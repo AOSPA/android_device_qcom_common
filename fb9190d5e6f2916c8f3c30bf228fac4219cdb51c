@@ -52,6 +52,24 @@
       "parentUuid": "664dfd9e_33eb776a",
       "revId": "fb9190d5e6f2916c8f3c30bf228fac4219cdb51c",
       "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "56353400_dea4c032",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000579
+      },
+      "writtenOn": "2023-12-27T17:56:38Z",
+      "side": 1,
+      "message": "no it uses it to check if the aidl service is present, this is supposed to fail\nsimilar to how flipendo fails with powerext denial",
+      "parentUuid": "9bea9763_a108edf6",
+      "revId": "fb9190d5e6f2916c8f3c30bf228fac4219cdb51c",
+      "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
     }
   ]
 }
