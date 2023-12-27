@@ -16,6 +16,24 @@
       "message": "label the service, this is definitely going to neverallow",
       "revId": "fb9190d5e6f2916c8f3c30bf228fac4219cdb51c",
       "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "664dfd9e_33eb776a",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000579
+      },
+      "writtenOn": "2023-12-27T17:31:38Z",
+      "side": 1,
+      "message": "also if i remember correctly this is T vendor and newer so doesn\u0027t affect legacy devices",
+      "parentUuid": "973e47dd_04efbd9c",
+      "revId": "fb9190d5e6f2916c8f3c30bf228fac4219cdb51c",
+      "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
     }
   ]
 }
