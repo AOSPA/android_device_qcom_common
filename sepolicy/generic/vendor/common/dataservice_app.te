@@ -1,2 +1,4 @@
 # dataservice_app is a client of ImsFactory HAL
 get_prop(vendor_dataservice_app, vendor_persist_rcs_qti_prop)
+hal_attribute_service(vendor_dataservice_app, vendor_hal_factory_aidlservice)
+
