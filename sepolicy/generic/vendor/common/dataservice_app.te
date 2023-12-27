@@ -1,2 +1,3 @@
 # dataservice_app is a client of ImsFactory HAL
 get_prop(vendor_dataservice_app, vendor_persist_rcs_qti_prop)
+allow vendor_dataservice_app default_android_service:service_manager find;
