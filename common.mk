@@ -184,7 +184,7 @@ PRODUCT_COPY_FILES += \
     $(QCOM_COMMON_PATH)/vendor/seccomp/codec2.vendor.ext.policy:$(TARGET_COPY_OUT_VENDOR)/etc/seccomp_policy/codec2.vendor.ext.policy \
     $(QCOM_COMMON_PATH)/vendor/seccomp/mediacodec-seccomp.policy:$(TARGET_COPY_OUT_VENDOR)/etc/seccomp_policy/mediacodec.policy \
     $(QCOM_COMMON_PATH)/vendor/seccomp/mediaextractor-seccomp.policy:$(TARGET_COPY_OUT_VENDOR)/etc/seccomp_policy/mediaextractor.policy \
-    frameworks/av/services/mediacodec/seccomp_policy/mediaswcodec-arm.policy:$(TARGET_COPY_OUT_VENDOR)/etc/seccomp_policy//mediaswcodec.policy
+    frameworks/av/services/mediacodec/seccomp_policy/mediaswcodec-arm.policy:$(TARGET_COPY_OUT_VENDOR)/etc/seccomp_policy/mediaswcodec.policy
 
 # Permissions
 PRODUCT_COPY_FILES += \
