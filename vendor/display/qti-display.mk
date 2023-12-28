@@ -86,5 +86,10 @@ ifneq (,$(filter 3.18 4.4 4.9 4.14 4.19 5.4 5.10 5.15, $(TARGET_KERNEL_VERSION))
 TARGET_GRALLOC_HANDLE_HAS_NO_UBWCP := true
 endif
 
+# REVERTME WHEN WE HAVE ANDROID 14 QPR1 BLOBS
+# Disable SmoMo / Smooth Motion
+PRODUCT_ODM_PROPERTIES += \
+    vendor.display.use_smooth_motion=0
+
 # Get non-open-source specific aspects.
 $(call inherit-product-if-exists, vendor/qcom/common/vendor/display/$(TARGET_KERNEL_VERSION)/display-vendor.mk)
