@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "10ee9a5d_e115d654",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000092
+      },
+      "writtenOn": "2023-12-28T08:32:02Z",
+      "side": 1,
+      "message": "Fixed surfaceflinger crash when playing games",
+      "revId": "646496985e0850c0c5fedda7daee45af714fd7c0",
+      "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
+    }
+  ]
+}
