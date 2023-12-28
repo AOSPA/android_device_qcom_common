@@ -88,6 +88,24 @@
       "parentUuid": "56353400_dea4c032",
       "revId": "fb9190d5e6f2916c8f3c30bf228fac4219cdb51c",
       "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "eb333d24_d3112294",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000737
+      },
+      "writtenOn": "2023-12-28T22:55:46Z",
+      "side": 1,
+      "message": "There is nothing apparently, but this with another selinux denial, is preventing boot enforcing in spes apparently",
+      "parentUuid": "40a1c7d0_bdd31eaf",
+      "revId": "fb9190d5e6f2916c8f3c30bf228fac4219cdb51c",
+      "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
     }
   ]
 }
