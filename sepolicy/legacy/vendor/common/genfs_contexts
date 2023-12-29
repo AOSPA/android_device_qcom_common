@@ -66,6 +66,7 @@ genfscon sysfs /devices/platform/cam_sync/video4linux/video0/name u:object_r:sys
 genfscon sysfs /devices/virtual/npu/msm_npu/pwr u:object_r:sysfs_npu:s0
 genfscon sysfs /devices/platform/soc/soc:qcom,msm-ext-disp/extcon/extcon0/name u:object_r:sysfs_graphics:s0
 genfscon sysfs /devices/platform/soc/soc:qcom,msm-ext-disp/extcon/extcon0/cable.0/ u:object_r:sysfs_graphics:s0
+genfscon sysfs /devices/platform/soc/soc:qcom,msm-ext-disp/extcon/extcon0/cable.1/ u:object_r:sysfs_graphics:s0
 
 genfscon sysfs /devices/platform/soc/1a00000.qcom,mdss_mdp/1a00000.qcom,mdss_mdp:qcom,mdss_fb_primary/power/runtime_status u:object_r:sysfs_graphics:s0
 genfscon sysfs /devices/platform/soc/soc:qcom,mdm3/esoc0 u:object_r:sysfs_esoc:s0
@@ -74,6 +75,7 @@ genfscon sysfs /devices/system/soc/soc0/id u:object_r:vendor_sysfs_public:s0
 genfscon sysfs /devices/soc0/family u:object_r:vendor_sysfs_public:s0
 genfscon sysfs /devices/platform/soc/soc:qcom,msm-ext-disp/extcon/extcon1/name u:object_r:sysfs_graphics:s0
 genfscon sysfs /devices/platform/soc/soc:qcom,msm-ext-disp/extcon/extcon1/cable.0/ u:object_r:sysfs_graphics:s0
+genfscon sysfs /devices/platform/soc/soc:qcom,msm-ext-disp/extcon/extcon1/cable.1/ u:object_r:sysfs_graphics:s0
 genfscon sysfs /devices/platform/soc/c176000.i2c/i2c-2/2-001d/name u:object_r:sysfs_battery_supply:s0
 genfscon sysfs /devices/system/memory/ u:object_r:sysfs_memory_offline:s0
 
