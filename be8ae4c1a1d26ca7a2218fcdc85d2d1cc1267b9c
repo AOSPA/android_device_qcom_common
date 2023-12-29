@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "7bc23d29_5597d7c5",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 3
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000429
+      },
+      "writtenOn": "2023-12-29T02:24:55Z",
+      "side": 1,
+      "message": "if this is needed, can this be added on legacy sepolicy aswell?",
+      "revId": "be8ae4c1a1d26ca7a2218fcdc85d2d1cc1267b9c",
+      "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
+    }
+  ]
+}
