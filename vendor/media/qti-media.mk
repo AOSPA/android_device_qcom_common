@@ -20,6 +20,10 @@ TARGET_MEDIA_COMPONENT_VARIANT := media
 # Inherit configuration from the HAL.
 $(call inherit-product-if-exists, hardware/qcom/media/product.mk)
 
+# Enable 64-bit mediaserver
+PRODUCT_VENDOR_PROPERTIES += \
+    ro.mediaserver.64b.enable=true
+
 # Media Codecs
 PRODUCT_COPY_FILES += \
     frameworks/av/media/libstagefright/data/media_codecs_google_audio.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs_google_audio.xml \
