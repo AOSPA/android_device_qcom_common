@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "d177116d_55693cf8",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000737
+      },
+      "writtenOn": "2024-01-01T20:08:05Z",
+      "side": 1,
+      "message": "vendor: https://github.com/CHRISL7/proprietary_vendor_qcom_common/commit/98fb2584ce28cef535560d146c823976aeddaa59\n\nGPS HAL: https://github.com/CHRISL7/android_hardware_qcom_gps/commits/uvite-legacy-component/",
+      "revId": "29f4dafd94d83dc4b4152e2352441ea9af8b30b5",
+      "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
+    }
+  ]
+}
