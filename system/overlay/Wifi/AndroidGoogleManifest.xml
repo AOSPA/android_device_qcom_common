@@ -3,6 +3,8 @@
     coreApp="true"
     package="com.google.android.wifi.resources.overlay.common">
 
+    <application android:hasCode="false"/>
+
     <overlay
         android:targetPackage="com.google.android.wifi.resources"
         android:targetName = "WifiCustomization"
