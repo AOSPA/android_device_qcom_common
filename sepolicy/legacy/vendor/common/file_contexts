@@ -364,6 +364,8 @@
 /(vendor|system/vendor)/bin/hw/vendor\.qti\.power\.pasrmanager\@1\.0-service u:object_r:hal_pasrmanager_qti_exec:s0
 /(vendor|system/vendor)/bin/hw/vendor\.qti\.hardware\.capabilityconfigstore@1\.0-service u:object_r:hal_capabilityconfigstore_qti_default_exec:s0
 /(vendor|system/vendor)/bin/hw/vendor\.qti\.hardware\.qccvndhal@1\.0-service       u:object_r:vendor_hal_qccvndhal_qti_exec:s0
+/vendor/bin/vendor\.qti\.qspmhal@1\.0-service                                      u:object_r:vendor_hal_qspmhal_default_exec:s0
+/vendor/bin/vendor\.qti\.qspmhal-service                                           u:object_r:vendor_hal_qspmhal_default_exec:s0
 
 ###################################
 # sysfs files
@@ -597,7 +599,7 @@
 /data/vendor/scve(/.*)?                                             u:object_r:vendor_scve_data_file:s0
 /data/vendor/fm(/.*)?                                               u:object_r:vendor_fm_data_file:s0
 /data/vendor/sensors(/.*)?                                          u:object_r:sensors_vendor_data_file:s0
-
+/data/vendor/gaming(/.*)?                                           u:object_r:vendor_qspmhal_data_file:s0
 
 ###################################
 # persist files --only mnt/vendor/persist should be added here
@@ -736,6 +738,9 @@
 # SVA files
 /vendor/lib(64)?/liblistenjni\.so           u:object_r:same_process_hal_file:s0
 /vendor/lib(64)?/liblistensoundmodel2\.so   u:object_r:same_process_hal_file:s0
+/vendor/lib(64)?/vendor.qti.qspmhal@1.0\.so  u:object_r:same_process_hal_file:s0
+/vendor/lib(64)?/vendor.qti.qspmhal-V1-ndk\.so  u:object_r:same_process_hal_file:s0
+/vendor/lib(64)?/libqspm-mem-utils-vendor\.so  u:object_r:same_process_hal_file:s0
 
 # libnpu
 /vendor/lib(64)?/libnpu\.so                 u:object_r:same_process_hal_file:s0
