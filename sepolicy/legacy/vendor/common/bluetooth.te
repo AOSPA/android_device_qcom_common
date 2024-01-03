@@ -86,6 +86,9 @@ hal_client_domain(bluetooth, hal_btconfigstore);
 #allow bluetooth to access perf hal
 hal_client_domain(bluetooth, vendor_hal_perf);
 
+#allow bluetooth to access qspmhal
+hal_client_domain(bluetooth, vendor_hal_qspmhal)
+
 #allow bluetooth to make binder call to gpuservice
 binder_call(bluetooth, gpuservice);
 
