@@ -52,6 +52,9 @@ hal_client_domain(platform_app, hal_hbtp)
 #for perf-hal call
 hal_client_domain(platform_app, vendor_hal_perf)
 
+#qspmhal
+hal_client_domain(platform_app, vendor_hal_qspmhal)
+
 #allow embms app to access vendor radio property
 get_prop(platform_app, vendor_radio_prop)
 

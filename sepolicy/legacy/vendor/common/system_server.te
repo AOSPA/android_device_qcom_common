@@ -187,4 +187,9 @@ get_prop(system_server, vendor_xlat_prop)
 # allow system_server to access IWifiStats HAL service
 hal_client_domain(system_server, hal_wifilearner)
 
+# allow system_server to access Qspmhal
+hal_client_domain(system_server, vendor_hal_qspmhal);
+
+get_prop(system_server, vendor_qspm_prop)
+
 dontaudit system_server vendor_default_prop:file read;
