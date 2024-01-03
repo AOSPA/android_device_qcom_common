@@ -65,7 +65,7 @@ ________________________________________________________________________________
                 <Prop Name="ro.lmk.nstrat_low_swap" Value="10" />
                 <Prop Name="ro.lmk.nstrat_psi_partial_ms" Value="70" />
                 <Prop Name="ro.lmk.nstrat_psi_complete_ms" Value="70" />
-                <Prop Name="ro.lmk.psi_scrit_complete_stall_ms" Value="75" />
+                <Prop Name="ro.lmk.psi_scrit_complete_stall_ms" Value="250" />
                 <Prop Name="ro.lmk.nstrat_wmark_boost_factor" Value="4" />
                 <Prop Name="vendor.perf.gestureflingboost.enable" Value="true" />
                 <Prop Name="ro.vendor.qti.sys.fw.bg_apps_limit" Value="96" />
