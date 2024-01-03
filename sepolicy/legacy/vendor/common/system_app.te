@@ -174,7 +174,8 @@ hal_client_domain(system_app, hal_soter);
 
 get_prop(system_app, vendor_radio_prop)
 
-
-
 #allow system app to access capabilityconfigstore hal
 hal_client_domain(system_app, hal_capabilityconfigstore_qti);
+
+#allow system app to access hal_qspmhal
+hal_client_domain(system_app, vendor_hal_qspmhal);
