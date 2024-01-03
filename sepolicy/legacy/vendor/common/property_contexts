@@ -238,3 +238,6 @@ vendor.dcvs.prop                 u:object_r:vendor_dcvs_prop:s0
 # PASR
 vendor.pasr.            u:object_r:vendor_pasr_prop:s0
 ro.vendor.pasr.         u:object_r:vendor_pasr_prop:s0
+
+# QSPM
+ro.vendor.qspm.enable            u:object_r:vendor_qspm_prop:s0 exact bool

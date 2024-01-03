@@ -132,4 +132,6 @@ allow vendor_init ipa_dev:file create_file_perms;
 
 set_prop(vendor_init, vendor_persist_dpm_prop)
 
+set_prop(vendor_init, vendor_qspm_prop)
+
 allow vendor_init block_device:lnk_file setattr;

@@ -115,3 +115,4 @@ vendor.qti.hardware.mwqemadapter::IMwqemAdapter              u:object_r:vendor_h
 vendor.qti.hardware.dsp::IDspService                         u:object_r:vendor_hal_dspmanager_hwservice:s0
 vendor.qti.hardware.qccvndhal::IQccvndhal                     u:object_r:vendor_hal_qccvndhal_hwservice:s0
 vendor.qti.hardware.embmssl::IEmbms                          u:object_r:vendor_hal_embmssl_hwservice:s0
+vendor.qti.qspmhal::IQspmhal                                 u:object_r:vendor_hal_qspmhal_hwservice:s0
