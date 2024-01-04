@@ -125,6 +125,10 @@ IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.-->
         <boolean name="carrier_vt_available_bool" value="true" />
         <!-- AOSPA Edit: Hide IMS APN by default -->
         <boolean name="hide_ims_apn_bool" value="true" />
+        <!-- AOSPA Edit: Enable LTE+ icon globally -->
+        <boolean name="hide_lte_plus_data_icon_bool" value="false"/>
+        <!-- AOSPA Edit: Use 4G icon for LTE by popular request -->
+        <boolean name="show_4g_for_lte_data_icon_bool" value="true" />
     </carrier_config>
 
     <carrier_config mcc="001" mnc="01">
