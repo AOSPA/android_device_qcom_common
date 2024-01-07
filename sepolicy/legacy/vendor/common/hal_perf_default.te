@@ -1,4 +1,4 @@
-# Copyright (c) 2017, The Linux Foundation. All rights reserved.
+# Copyright (c) 2017-2018, The Linux Foundation. All rights reserved.
 #
 # Redistribution and use in source and binary forms, with or without
 # modification, are permitted provided that the following conditions are
@@ -26,15 +26,13 @@
 # IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
 type vendor_hal_perf_default, domain, mlstrustedsubject;
-hal_server_domain_bypass(vendor_hal_perf_default, vendor_hal_perf)
+hal_server_domain(vendor_hal_perf_default, vendor_hal_perf)
 
 type vendor_hal_perf_default_exec, exec_type, vendor_file_type, file_type;
 init_daemon_domain(vendor_hal_perf_default)
 
 # Allow hwbinder call from hal client to server
 binder_call(vendor_hal_perf_client, vendor_hal_perf_server)
-
-binder_call(vendor_hal_perf_default, hal_pasrmanager_memory_qti)
 
 #Allow AIDL base perf-hal communication
 hal_attribute_service(vendor_hal_perf, vendor_hal_perf2_service)
@@ -46,7 +44,7 @@ allow vendor_hal_perf_client vendor_hal_perf_hwservice:hwservice_manager find;
 
 allow vendor_hal_perf_default cgroup:file r_file_perms;
 allow vendor_hal_perf_default proc:file rw_file_perms;
-allow vendor_hal_perf device_latency:chr_file rw_file_perms;
+allow vendor_hal_perf vendor_latency_device:chr_file rw_file_perms;
 get_prop(vendor_hal_perf, vendor_freq_prop)
 get_prop(vendor_hal_perf, vendor_mpctl_prop)
 allow vendor_hal_perf_default mpctl_data_file:dir rw_dir_perms;
@@ -55,45 +53,47 @@ allow vendor_hal_perf_default lm_data_file:dir rw_dir_perms;
 allow vendor_hal_perf_default lm_data_file:file create_file_perms;
 allow vendor_hal_perf_default sysfs_lib:file w_file_perms;
 allow vendor_hal_perf_default proc_meminfo:file r_file_perms;
+allow vendor_hal_perf_default self:netlink_generic_socket create_socket_perms_no_ioctl;
+allow vendor_hal_perf_default {appdomain}:process getpgid;
+hal_client_domain(vendor_hal_perf_default, vendor_hal_iop);
+hal_client_domain(vendor_hal_perf_default, vendor_hal_srvctracker);
 r_dir_file(vendor_hal_perf_default, appdomain);
 allow vendor_hal_perf_default {appdomain}:file rw_file_perms;
-allow vendor_hal_perf_default self:capability setuid;
-
-allow vendor_hal_perf_default hal_display_config_hwservice:hwservice_manager find;
-allow vendor_hal_perf_default hal_pasrmanager_memory_hwservice:hwservice_manager find;
 
 allow vendor_hal_perf {
-    sysfs_devices_system_cpu
-    sysfs_mpdecision
-    sysfs_devfreq
-    sysfs_mmc_host
-    sysfs_scsi_host
-    sysfs_kgsl
-    sysfs_kgsl_proc
-    sysfs_cpu_boost
-    sysfs_msm_perf
-    sysfs_memory
-    sysfs_graphics
-    sysfs_msm_power
-    sysfs_battery_supply
-    sysfs_process_reclaim
+     sysfs_devices_system_cpu
+     sysfs_mpctl
+     sysfs_devfreq
+     sysfs_mmc_host
+     sysfs_scsi_host
+     sysfs_kgsl
+     sysfs_kgsl_proc
+     sysfs_cpu_boost
+     sysfs_msm_perf
+     sysfs_memory
+     sysfs_graphics
+     sysfs_msm_power
+     sysfs_battery_supply
+     sysfs_process_reclaim
 }:dir r_dir_perms;
 
 allow vendor_hal_perf {
-    sysfs_devices_system_cpu
-    sysfs_mpdecision
-    sysfs_kgsl
-    sysfs_cpu_boost
-    sysfs_msm_perf
-    sysfs_memory
-    sysfs_graphics
-    sysfs_scsi_host
-    sysfs_devfreq
-    sysfs_mmc_host
-    sysfs_msm_power
-    sysfs_battery_supply
-    sysfs_process_reclaim
-    sysfs_dm
+     sysfs_devices_system_cpu
+     sysfs_mpctl
+     sysfs_cpu_boost
+     sysfs_msm_perf
+     sysfs_kgsl
+     sysfs_cpu_boost
+     sysfs_msm_perf
+     sysfs_memory
+     sysfs_graphics
+     sysfs_scsi_host
+     sysfs_devfreq
+     sysfs_mmc_host
+     sysfs_msm_power
+     sysfs_battery_supply
+     sysfs_process_reclaim
+     sysfs_kgsl_proc
 }:file rw_file_perms;
 
 allow vendor_hal_perf {
@@ -106,9 +106,44 @@ allow vendor_hal_perf {
 # Allow to self kill capability
 allow vendor_hal_perf_default self:capability { kill };
 
-binder_call(vendor_hal_perf_default, hal_graphics_composer_default)
-
-allow vendor_hal_perf_default sysfs_soc:dir r_dir_perms;
-
 # Allow QSPM access
 hal_client_domain(vendor_hal_perf_default, vendor_hal_qspmhal);
+
+# Allow hal_perf to set property
+set_prop(vendor_hal_perf_default, vendor_mpctl_prop)
+set_prop(vendor_hal_perf_default, vendor_wlc_public_prop)
+
+#Allow Display Config access
+hal_client_domain(vendor_hal_perf_default, hal_graphics_composer);
+
+# Allow connecting to thermal_socket
+unix_socket_connect(vendor_hal_perf_default, thermal, thermal-engine)
+
+#Allow display driver access
+allow vendor_hal_perf_default graphics_device:chr_file rw_file_perms;
+
+# Allow shared memory access
+hal_client_domain(vendor_hal_perf_default, hal_allocator);
+
+# Allow perf hal to interact with pasr memory hal
+hal_client_domain(vendor_hal_perf_default, vendor_hal_mem_pasrmanager);
+
+allow vendor_hal_perf_default block_device:dir { open read search };
+allow vendor_hal_perf_default proc_diskstats:file { getattr open read };
+
+allow vendor_hal_perf_default self:capability { sys_nice setuid };
+
+# Rule for vndbinder usage
+allow vendor_hal_perf qdisplay_service:service_manager find;
+vndbinder_use(vendor_hal_perf);
+
+hal_client_domain(vendor_hal_perf_default, hal_thermal);
+
+allow vendor_hal_perf_default surfaceflinger:process setsched;
+allow vendor_hal_perf_default hal_graphics_composer_default:process setsched;
+allow vendor_hal_perf_default appdomain:process setsched;
+allow vendor_hal_perf_default appdomain:process getsched;
+allow vendor_hal_perf_default self:capability sys_nice;
+dontaudit vendor_hal_perf_default self:capability dac_override;
+dontaudit vendor_hal_perf_default system_server:dir search;
+dontaudit vendor_hal_perf_default { domain - appdomain }:process { getsched setsched };
