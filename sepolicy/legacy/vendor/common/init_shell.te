@@ -305,3 +305,6 @@ allow qti_init_shell sysfs_slab_zspage_storeuser:file w_file_perms;
 #dontaudit default_prop and init read
 dontaudit vendor_qti_init_shell default_prop:file read;
 set_prop(qti_init_shell, qemu_hw_prop)
+
+# Allow init shell to access vendor pasr properties
+set_prop(vendor_qti_init_shell, vendor_pasr_prop)

@@ -128,7 +128,7 @@ allow vendor_hal_perf_default graphics_device:chr_file rw_file_perms;
 hal_client_domain(vendor_hal_perf_default, hal_allocator);
 
 # Allow perf hal to interact with pasr memory hal
-hal_client_domain(vendor_hal_perf_default, hal_pasrmanager_memory);
+hal_client_domain(vendor_hal_perf_default, vendor_hal_mem_pasrmanager);
 
 allow vendor_hal_perf_default block_device:dir { open read search };
 allow vendor_hal_perf_default proc_diskstats:file { getattr open read };
