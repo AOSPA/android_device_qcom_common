@@ -75,7 +75,8 @@ genfscon sysfs /devices/soc0/family u:object_r:vendor_sysfs_public:s0
 genfscon sysfs /devices/platform/soc/soc:qcom,msm-ext-disp/extcon/extcon1/name u:object_r:sysfs_graphics:s0
 genfscon sysfs /devices/platform/soc/soc:qcom,msm-ext-disp/extcon/extcon1/cable.0/ u:object_r:sysfs_graphics:s0
 genfscon sysfs /devices/platform/soc/c176000.i2c/i2c-2/2-001d/name u:object_r:sysfs_battery_supply:s0
-genfscon sysfs /devices/system/memory/ u:object_r:sysfs_memory_offline:s0
+genfscon sysfs /devices/system/memory/ u:object_r:vendor_sysfs_system_memory:s0
+genfscon sysfs /kernel/mem-offline/ u:object_r:vendor_sysfs_mem_offline:s0
 
 genfscon sysfs /kernel/qvr_external_sensor u:object_r:sysfs_qvr_external_sensor:s0
 
