@@ -94,6 +94,9 @@ unix_socket_connect(hal_graphics_composer_default, qdcmsocket, qdcm-ss)
 # allow composer client to find display config service.
 allow hal_graphics_composer_client hal_display_config_hwservice:hwservice_manager find;
 
+# allow composer client to find aidl display config service.
+allow hal_graphics_composer_client vendor_hal_vnddisplayconfig_service:service_manager find;
+
 # Rule for pps socket usage
 unix_socket_connect(hal_graphics_composer_default, pps, mm-pp-daemon)
 
@@ -102,6 +105,11 @@ add_hwservice(hal_graphics_composer_server, hal_display_config_hwservice);
 
 # Allow composer access to perf
 hal_client_domain(hal_graphics_composer_default, vendor_hal_perf)
+
+# Allow display config aidl service
+hal_attribute_service(hal_graphics_composer, vendor_hal_displayconfig_service);
+hal_attribute_service(hal_graphics_composer, vendor_hal_vnddisplayconfig_service);
+binder_call(hal_graphics_composer, servicemanager);
 
 # Access /dev/graphics/fb0.
 allow hal_graphics_composer graphics_device:chr_file rw_file_perms;
