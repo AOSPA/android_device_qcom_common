@@ -39,3 +39,4 @@ type dtseagleservice_service,     service_manager_type;
 type gba_auth_service,            service_manager_type;
 type vendor_hal_perf2_service,           hal_service_type, protected_service, service_manager_type;
 type vendor_hal_qspmhal_service,         hal_service_type, service_manager_type;
+type vendor_hal_vnddisplayconfig_service, hal_service_type, protected_service, service_manager_type;
