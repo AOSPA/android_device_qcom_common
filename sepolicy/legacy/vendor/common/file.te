@@ -101,7 +101,7 @@ type sysfs_sensors, sysfs_type, fs_type;
 type vendor_qspmhal_data_file, file_type, data_file_type;
 
 #Memory offlining file types
-type sysfs_memory_offline, sysfs_type, fs_type;
+type vendor_sysfs_system_memory, sysfs_type, fs_type;
 
 #VirtualKeys file type
 type sysfs_virtualkeys, sysfs_type, fs_type;

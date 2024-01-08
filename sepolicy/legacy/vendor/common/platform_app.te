@@ -55,6 +55,9 @@ hal_client_domain(platform_app, vendor_hal_perf)
 #qspmhal
 hal_client_domain(platform_app, vendor_hal_qspmhal)
 
+# allow platform_app to interact with pasr hal
+hal_client_domain(platform_app, vendor_hal_pasrmanager)
+
 #allow embms app to access vendor radio property
 get_prop(platform_app, vendor_radio_prop)
 
