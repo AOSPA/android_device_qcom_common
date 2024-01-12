@@ -58,8 +58,8 @@ PRODUCT_PACKAGES += \
     libstagefright_softomx.vendor
 
 # Properties
-PRODUCT_SYSTEM_EXT_PROPERTIES ?= media.settings.xml=/vendor/etc/media_profiles_vendor.xml
 PRODUCT_SYSTEM_EXT_PROPERTIES += \
+    media.settings.xml=/vendor/etc/media_profiles_vendor.xml \
     media.stagefright.thumbnail.prefer_hw_codecs=true \
     ro.media.recorder-max-base-layer-fps=60
 
