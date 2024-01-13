@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "9d716b6e_fa0c5542",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000012
+      },
+      "writtenOn": "2024-01-13T08:34:32Z",
+      "side": 1,
+      "message": "Oddly, arch/arm/boot/dts is used on 660/8998 (4.4).  I think we still intend to support those for 14.",
+      "revId": "73183c5d3556b398da5a123e603dc89033d0d7be",
+      "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
+    }
+  ]
+}
