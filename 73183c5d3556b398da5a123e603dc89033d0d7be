@@ -34,6 +34,24 @@
       "parentUuid": "9d716b6e_fa0c5542",
       "revId": "73183c5d3556b398da5a123e603dc89033d0d7be",
       "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "15e8afaf_ccc238a5",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000498
+      },
+      "writtenOn": "2024-01-13T16:05:22Z",
+      "side": 1,
+      "message": "And I\u0027m pretty sure we can ignore sdm660 since it got 4.14 and 4.19 kernel from CLO",
+      "parentUuid": "5c2088bb_56dd7364",
+      "revId": "73183c5d3556b398da5a123e603dc89033d0d7be",
+      "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
     }
   ]
 }
