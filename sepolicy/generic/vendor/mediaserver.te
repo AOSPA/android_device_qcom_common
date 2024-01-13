@@ -1,1 +1,2 @@
+allow mediaserver vendor_display_prop:file r_file_perms;
 get_prop(mediaserver, vendor_display_prop)
