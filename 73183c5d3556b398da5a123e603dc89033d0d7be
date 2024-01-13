@@ -16,6 +16,24 @@
       "message": "Oddly, arch/arm/boot/dts is used on 660/8998 (4.4).  I think we still intend to support those for 14.",
       "revId": "73183c5d3556b398da5a123e603dc89033d0d7be",
       "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "5c2088bb_56dd7364",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000498
+      },
+      "writtenOn": "2024-01-13T16:02:59Z",
+      "side": 1,
+      "message": "Ain\u0027t oneplus5 moved to 4.14 tho ?",
+      "parentUuid": "9d716b6e_fa0c5542",
+      "revId": "73183c5d3556b398da5a123e603dc89033d0d7be",
+      "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
     }
   ]
 }
