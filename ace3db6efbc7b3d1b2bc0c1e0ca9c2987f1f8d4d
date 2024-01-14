@@ -1,0 +1,55 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "fed6b0e8_14942b49",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000012
+      },
+      "writtenOn": "2024-01-14T19:12:31Z",
+      "side": 1,
+      "message": "what file is",
+      "revId": "ace3db6efbc7b3d1b2bc0c1e0ca9c2987f1f8d4d",
+      "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "a7aadad9_654a9f08",
+        "filename": "sepolicy/generic/vendor/cameraserver.te",
+        "patchSetId": 2
+      },
+      "lineNbr": 1,
+      "author": {
+        "id": 1000012
+      },
+      "writtenOn": "2024-01-14T19:12:31Z",
+      "side": 1,
+      "message": "why not get_prop",
+      "revId": "ace3db6efbc7b3d1b2bc0c1e0ca9c2987f1f8d4d",
+      "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "02ef049c_6d3d23d3",
+        "filename": "sepolicy/generic/vendor/mediaserver.te",
+        "patchSetId": 2
+      },
+      "lineNbr": 1,
+      "author": {
+        "id": 1000012
+      },
+      "writtenOn": "2024-01-14T19:12:31Z",
+      "side": 1,
+      "message": "the line below should handle this.",
+      "revId": "ace3db6efbc7b3d1b2bc0c1e0ca9c2987f1f8d4d",
+      "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
+    }
+  ]
+}
