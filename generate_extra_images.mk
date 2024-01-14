@@ -119,37 +119,6 @@ endif
 endif
 
 #----------------------------------------------------------------------
-# Generate device tree overlay image (dtbo.img)
-#----------------------------------------------------------------------
-ifneq ($(strip $(TARGET_NO_KERNEL)),true)
-ifeq ($(TARGET_PREBUILT_KERNEL),)
-ifeq ($(strip $(BOARD_KERNEL_SEPARATED_DTBO)),true)
-
-MKDTIMG := $(HOST_OUT_EXECUTABLES)/mkdtimg$(HOST_EXECUTABLE_SUFFIX)
-
-# Most specific paths must come first in possible_dtbo_dirs
-possible_dtbo_dirs = $(TARGET_OUT_INTERMEDIATES)/KERNEL_OBJ/arch/arm64/boot/dts $(TARGET_OUT_INTERMEDIATES)/KERNEL_OBJ/arch/arm/boot/dts
-$(shell mkdir -p $(possible_dtbo_dirs))
-dtbo_dir = $(firstword $(wildcard $(possible_dtbo_dirs)))
-dtbo_objs = $(shell find $(dtbo_dir) -name \*.dtbo)
-
-define build-dtboimage-target
-    $(call pretty,"Target dtbo image: $(BOARD_PREBUILT_DTBOIMAGE)")
-    $(hide) $(MKDTIMG) create $@ --page_size=$(BOARD_KERNEL_PAGESIZE) $(dtbo_objs)
-    $(hide) chmod a+r $@
-endef
-
-# Definition of BOARD_PREBUILT_DTBOIMAGE is in AndroidBoardCommon.mk
-# so as to ensure it is defined well in time to set the dependencies on
-# BOARD_PREBUILT_DTBOIMAGE
-$(BOARD_PREBUILT_DTBOIMAGE): $(MKDTIMG) $(INSTALLED_KERNEL_TARGET)
-	$(build-dtboimage-target)
-
-endif
-endif
-endif
-
-#----------------------------------------------------------------------
 # Generate device tree image (dt.img)
 #----------------------------------------------------------------------
 ifneq ($(strip $(TARGET_NO_KERNEL)),true)
@@ -240,12 +209,6 @@ aboot: $(TARGET_SIGNED_BOOTLOADER) gensecimage_install
 else
 aboot: $(INSTALLED_BOOTLOADER_MODULE)
 endif
-
-.PHONY: kernel
-kernel: $(INSTALLED_BOOTIMAGE_TARGET) $(INSTALLED_DTBOIMAGE_TARGET)
-
-.PHONY: dtboimage
-dtboimage: $(INSTALLED_DTBOIMAGE_TARGET)
 
 .PHONY: recoveryimage
 recoveryimage: $(INSTALLED_RECOVERYIMAGE_TARGET)
