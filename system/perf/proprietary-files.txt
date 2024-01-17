@@ -59,6 +59,7 @@ system_ext/lib64/vendor.qti.qspmhal-V1-ndk.so
 system_ext/priv-app/PerformanceMode/PerformanceMode.apk
 system/etc/permissions/com.qualcomm.qti.Performance.xml|7976f2fd46b8d07814310cc957a70f829bdd6932
 system/etc/permissions/com.qualcomm.qti.UxPerformance.xml|d92749d80c5d956db8251b08ea6388d3f107a32c
+system/lib/vendor.qti.hardware.perf2-V1-ndk.so
 system/lib64/vendor.qti.hardware.perf2-V1-ndk.so
 system/framework/QXPerformance.jar
 system/framework/QPerformance.jar
