@@ -203,6 +203,9 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     android.hidl.memory.block@1.0.vendor
 
+#usbudev service for usb ip assigment
+PRODUCT_PACKAGES += usbudev
+
 # Vendor Service Manager
 PRODUCT_PACKAGES += \
     vndservicemanager
