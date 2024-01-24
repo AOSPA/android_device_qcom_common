@@ -164,6 +164,11 @@ include $(QCOM_COMMON_PATH)/components.mk
 # Filesystem
 TARGET_FS_CONFIG_GEN += $(QCOM_COMMON_PATH)/config.fs
 
+# Mainline Modules
+ifneq (,$(filter 3.18 4.4 4.9, $(TARGET_KERNEL_VERSION)))
+    TARGET_EXCLUDE_GMODULES := true
+endif
+
 # Partition source order for Product/Build properties pickup.
 PRODUCT_SYSTEM_PROPERTIES += \
     ro.product.property_source_order=odm,vendor,product,system_ext,system
