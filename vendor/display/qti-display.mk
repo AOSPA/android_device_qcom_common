@@ -91,5 +91,9 @@ endif
 PRODUCT_ODM_PROPERTIES += \
     vendor.display.use_smooth_motion=0
 
+# Copy Advanced SF Offsets Config if present
+PRODUCT_COPY_FILES += \
+    $(wildcard device/qcom/common/vendor/display/$(TARGET_KERNEL_VERSION)/advanced_sf_offsets.xml):$(TARGET_COPY_OUT_VENDOR)/etc/display/advanced_sf_offsets.xml
+
 # Get non-open-source specific aspects.
 $(call inherit-product-if-exists, vendor/qcom/common/vendor/display/$(TARGET_KERNEL_VERSION)/display-vendor.mk)
