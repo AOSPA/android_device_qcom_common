@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "dd37c6f0_fd232682",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 3
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000469
+      },
+      "writtenOn": "2024-01-27T15:47:12Z",
+      "side": 1,
+      "message": "https://github.com/pa-gr/proprietary_vendor_qcom_common/commits/display-5.10",
+      "revId": "65420a00d25a5938aaec9f10561367b3c13f3887",
+      "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
+    }
+  ]
+}
