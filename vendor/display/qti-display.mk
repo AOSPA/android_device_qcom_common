@@ -91,10 +91,17 @@ endif
 PRODUCT_ODM_PROPERTIES += \
     vendor.display.use_smooth_motion=0
 
+# Use TARGET_KERNEL_VERSION for TARGET_DISP_DIR unless otherwise specified
+ifeq ($(TARGET_KERNEL_VERSION)_$(TARGET_BOARD_PLATFORM),5.15_bengal)
+    TARGET_DISP_DIR := 5.15_bengal
+else
+    TARGET_DISP_DIR := $(TARGET_KERNEL_VERSION)
+endif
+
 # Copy Advanced SF Offsets Config if present
 PRODUCT_COPY_FILES += \
-    $(call find-copy-subdir-files,advanced_sf_offsets.xml,device/qcom/common/vendor/display/$(TARGET_KERNEL_VERSION),$(TARGET_COPY_OUT_VENDOR)/etc/display)
+    $(call find-copy-subdir-files,advanced_sf_offsets.xml,device/qcom/common/vendor/display/$(TARGET_DISP_DIR),$(TARGET_COPY_OUT_VENDOR)/etc/display)
 
 # Get non-open-source specific aspects.
-$(call inherit-product-if-exists, vendor/qcom/common/vendor/display/$(TARGET_KERNEL_VERSION)/display-vendor.mk)
+$(call inherit-product-if-exists, vendor/qcom/common/vendor/display/$(TARGET_DISP_DIR)/display-vendor.mk)
 $(call inherit-product, vendor/qcom/common/vendor/display/display-vendor.mk)
