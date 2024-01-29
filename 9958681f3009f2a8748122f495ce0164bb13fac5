@@ -16,6 +16,24 @@
       "message": "Make a condition to skip this in bengal_515",
       "revId": "9958681f3009f2a8748122f495ce0164bb13fac5",
       "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "25ec54f5_34764225",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000488
+      },
+      "writtenOn": "2024-01-29T12:10:52Z",
+      "side": 1,
+      "message": "Can be done when we have a bengal device booting on 5.15",
+      "parentUuid": "cc8dc163_42adf50e",
+      "revId": "9958681f3009f2a8748122f495ce0164bb13fac5",
+      "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
     }
   ]
 }
