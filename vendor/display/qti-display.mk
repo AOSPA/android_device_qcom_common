@@ -93,7 +93,7 @@ PRODUCT_ODM_PROPERTIES += \
 
 # Copy Advanced SF Offsets Config if present
 PRODUCT_COPY_FILES += \
-    $(find-copy-subdir-files,advanced_sf_offsets.xml,device/qcom/common/vendor/display/$(TARGET_KERNEL_VERSION),$(TARGET_COPY_OUT_VENDOR)/etc/display)
+    $(call find-copy-subdir-files,advanced_sf_offsets.xml,device/qcom/common/vendor/display/$(TARGET_KERNEL_VERSION),$(TARGET_COPY_OUT_VENDOR)/etc/display)
 
 # Get non-open-source specific aspects.
 $(call inherit-product-if-exists, vendor/qcom/common/vendor/display/$(TARGET_KERNEL_VERSION)/display-vendor.mk)
