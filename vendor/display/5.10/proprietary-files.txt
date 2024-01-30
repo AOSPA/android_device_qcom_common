@@ -12,7 +12,6 @@ vendor/etc/display/DPU830.xml
 vendor/etc/display/DPU860.xml
 vendor/etc/display/DPU8__.xml
 vendor/etc/display/DPU9__.xml
-vendor/etc/display/advanced_sf_offsets.xml
 vendor/etc/display/thermallevel_to_fps.xml
 vendor/etc/init/feature_enabler_client.rc
 vendor/etc/init/qdcmss.rc
