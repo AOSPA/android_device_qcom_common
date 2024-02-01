@@ -200,4 +200,8 @@ PRODUCT_PACKAGES += \
 PRODUCT_VENDOR_PROPERTIES += \
     ro.soc.manufacturer=QTI
 
+# WiFi Display
+PRODUCT_PACKAGES += \
+    libwfdaac_vendor
+
 endif # QCOM_BOARD_PLATFORMS
