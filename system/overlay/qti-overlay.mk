@@ -18,7 +18,6 @@ PRODUCT_SOONG_NAMESPACES += \
 # Overlays
 PRODUCT_PACKAGES += \
     CarrierConfigResCommon_Sys \
-    CellBroadcastReceiverResCommon_Sys \
     FrameworksResCommon_Sys \
     SettingsResCommon_Sys \
     SystemUIResCommon_Sys \
