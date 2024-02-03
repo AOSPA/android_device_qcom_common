@@ -33,11 +33,13 @@
             Id="0x00001081" Type="1" Enable="true" Timeout="2000" Target="scuba"
             Resources="0x40804000, 0xFFF, 0x40800000, 1500" />
 
+      <!-- AOSPA Edit: Boost CPU and GPU frequencies for main 2s app launch -->
        <Config
            Id="0x00001081" Type="1" Enable="true" Timeout="2000" Target="khaje"
            Resources="0x40C00000, 0x1, 0x40804000, 0xFFF, 0x40804100, 0xFFF, 0x40800000, 0xFFF,
                       0x40800100, 0xFFF, 0x4280C000, 1114" />
 
+        <!-- AOSPA Edit: Add App Resume Boost -->
         <!-- Type="2", resume boost of 0.6sec -->
         <Config
             Id="0x00001082" Type="2" Enable="true" Timeout="600" Target="khaje"
@@ -118,6 +120,8 @@
            Id="0x00001081" Type="6" Enable="true" Timeout="2000" Target="scuba"
            Resources="0x40408000, 0x63, 0x40C74000, 0x0F,
                       0x40800000, 1056, 0x41448000, 20000"/>
+
+       <!-- AOSPA Edit: Boost all CPUs to max frequency for Launch Boost 6 -->
        <Config
           Id="0x00001081" Type="6" Enable="true" Timeout="2000" Target="khaje"
           Resources="0x40408000, 0x63, 0x40C74000, 0xF0,
@@ -138,6 +142,8 @@
         <Config
             Id="0x00001083" Enable="true" Timeout="400" Target="scuba"
             Resources="0x40804000, 2016, 0x40800000, 2208" />
+
+        <!-- AOSPA Edit: Boost GPU frequencies for animation boost -->
         <Config
             Id="0x00001083" Enable="true" Timeout="400" Target="khaje"
             Resources="0x40804000, 2016, 0x40804100, 1804, 0x40800000, 0xFFF, 0x40800100, 0xFFF,
@@ -161,6 +167,7 @@
         <!-- CPUBOOST_MIN_FREQ BIG CORE resource opcode, value -->
         <!-- CPUBOOST_MIN_FREQ LITTLE Core resource opcode, value -->
         <!-- SCHEDBOOST resource opcode, value-->
+        <!-- AOSPA Edit: Increase CPU frequency for 60 Hz vertical scroll -->
         <Config
             Id="0x00001080" Type="1" Enable="true" Target="khaje" Fps="60"
             Resources="0x43010000, 0x26, 0x40800000, 1344, 0x40800100, 1516, 0x40C00000, 2" />
@@ -213,6 +220,7 @@
         <!-- CPUBOOST_MIN_FREQ BIG CORE resource opcode, value -->
         <!-- CPUBOOST_MIN_FREQ LITTLE Core resource opcode, value -->
         <!-- SCHEDBOOST resource opcode, value-->
+        <!-- AOSPA Edit: Increase CPU frequency for 60 Hz horizontal scroll -->
         <Config
             Id="0x00001080" Type="2" Enable="true" Target="khaje" Fps="60"
             Resources="0x43010000, 0x26, 0x40800000, 1766, 0x40800100, 1516, 0x40C00000, 2" />
@@ -250,7 +258,6 @@
         <!-- CPUBOOST_MIN_FREQ BIG CORE resource opcode, value -->
         <!-- CPUBOOST_MIN_FREQ LITTLE Core resource opcode, value -->
         <!-- SCHEDBOOST resource opcode, value-->
-        <!-- GPU MIN_FREQUENCY resource opcode, value-->
 
         <!-- Type="4", Pre-Fling boost -->
         <Config
@@ -264,6 +271,8 @@
         <!-- CPUBOOST_MIN_FREQ BIG CORE resource opcode, value -->
         <!-- CPUBOOST_MIN_FREQ LITTLE Core resource opcode, value -->
         <!-- SCHEDBOOST resource opcode, value-->
+        <!-- GPU MIN_FREQUENCY resource opcode, value-->
+        <!-- AOSPA Edit: Boost CPU and GPU frequencies for main 2s app launch -->
         <Config
             Id="0x00001080" Type="4" Enable="true" Timeout="80" Target="khaje" Fps="60"
             Resources="0x43010000, 0x26, 0x40800000, 1344, 0x40800100, 1190, 0x40C00000, 2,
@@ -319,6 +328,8 @@
         <Config
             Id="0x00001086" Enable="true" Target="scuba"
             Resources="0x40804000, 0xFFF, 0x40800000, 1401, 0x42C10000, 0x1, 0x40408000, 99, 0x40c74000, 15" />
+
+        <!-- AOSPA Edit: Increase CPU frequency for MTP -->
         <Config
             Id="0x00001086" Enable="true" Target="khaje"
             Resources="0x40C00000, 0x1, 0x40804000, 0xFFF, 0x40804100, 0xFFF, 0x40800000, 2208,
@@ -383,6 +394,8 @@
          <Config
              Id="0x00001087" Type="1" Enable="true" Timeout="0" Target="scuba"
              Resources="0x40800000, 1056" />
+
+         <!-- AOSPA Edit: Increase CPU frequency for Drag Boost -->
          <Config
              Id="0x00001087" Type="1" Enable="true" Timeout="0" Target="khaje"
              Resources="0x40800000, 1766, 0x40800100, 1516" />
@@ -393,6 +406,7 @@
         <!-- SCHEDBOOST resource opcode, value-->
         <!-- LLCBW_MIN_FREQ resource opcode, value-->
         <!-- L3_MEMLAT_MIN_FREQ resource opcode, value -->
+        <!-- AOSPA Edit: Increase CPU frequency for 120 Hz Drag Boost -->
          <Config
              Id="0x00001087" Type="1" Enable="true" Timeout="0" Target="khaje" Fps="120"
              Resources="0x40800000, 1766, 0x40800100, 1516, 0x40C00000, 2,

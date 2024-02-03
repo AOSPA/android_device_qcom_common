@@ -26,10 +26,13 @@
         <!-- GPU MIN_FREQUENCY resource opcode, value-->
 
         <!-- Type="1", main launch boost of 2sec -->
+        <!-- AOSPA Edit: Boost CPU and GPU freq for main app launch boost -->
         <Config
             Id="0x00001081" Type="1" Enable="true" Timeout="2000" Target="msmsteppe"
             Resources="0x40C20000, 0x28, 0x40C1C000, 0x32, 0x40804000, 0xFFF, 0x40804100, 0xFFF, 0x40800000, 0xFFF,
                        0x40800100, 0xFFF, 0x4280C000, 596" />
+
+       <!-- AOSPA Edit: Boost CPU and GPU freq for main app launch boost -->
        <Config
            Id="0x00001081" Type="1" Enable="true" Timeout="2000" Target="sdmmagpie"
            Resources="0x40C20000, 0x28, 0x40C1C000, 0x32, 0x40804000, 0xFFF, 0x40804100, 0xFFF, 0x40800000, 0xFFF,
@@ -54,6 +57,7 @@
            Resources="0x40400000, 0x1, 0x42C10000, 0x1, 0x43010000, 59,
                       0x41828000, 806, 0x43400000, 1190, 0x4281C000, 1500" />
 
+    <!-- AOSPA Edit: Add App Resume Boost -->
     <!--app resume boost-->
         <!-- SCHEDBOOST resource opcode, value-->
         <!-- CPUBOOST_MAX_FREQ BIG Core resource opcode, value-->
@@ -138,6 +142,7 @@
         <!-- CPU_DOWN_FREQ_THRESHOLD_US, val us -->
 
         <!-- Type="6", Game Launch boost -->
+        <!-- AOSPA Edit: Increase CPU freq for Game Launch Boost -->
         <Config
             Id="0x00001081" Type="6" Enable="true" Timeout="2000" Target="msmsteppe"
             Resources="0x40408000, 0x5,
@@ -146,6 +151,7 @@
                        0x40800000, 2016,
                        0x41448000, 20000 "/>
 
+        <!-- AOSPA Edit: Increase CPU freq for Game Launch Boost -->
         <Config
             Id="0x00001081" Type="6" Enable="true" Timeout="2000" Target="sdmmagpie"
             Resources="0x40408000, 0x5,
@@ -160,11 +166,13 @@
         <!-- CPUBOOST_MIN_FREQ BIG Core resource opcode, value-->
         <!-- CPUBOOST_MIN_FREQ LITTLE Core resource opcode, value-->
         <!-- GPU MIN_FREQUENCY resource opcode, value-->
+        <!-- AOSPA Edit: Modify CPU and GPU freq for Animation Boost -->
         <Config
             Id="0x00001083" Enable="true" Timeout="400" Target="msmsteppe"
             Resources="0x40804000, 0xFFF, 0x40804100, 0xFFF, 0x40800000, 2016, 0x40800100, 1708,
                        0x4280C000, 596" />
 
+       <!-- AOSPA Edit: Modify CPU and GPU freq for Animation Boost -->
        <Config
            Id="0x00001083" Enable="true" Timeout="400" Target="sdmmagpie"
            Resources="0x40804000, 0xFFF, 0x40804100, 0xFFF, 0x40800000, 1843, 0x40800100, 1708,
@@ -177,10 +185,12 @@
         <!-- SCHEDBOOST resource opcode, value-->
 
         <!-- Type="1", Vertical Scroll boost -->
+        <!-- AOSPA Edit: Increase CPU freq for Vertical Scroll Boost -->
         <Config
             Id="0x00001080" Type="1" Enable="true" Target="msmsteppe"
             Resources="0x43010000, 0x26, 0x40800000, 1363, 0x40800100, 1363, 0x40C00000, 2" />
 
+        <!-- AOSPA Edit: Increase CPU freq for Vertical Scroll Boost -->
         <Config
             Id="0x00001080" Type="1" Enable="true" Target="sdmmagpie"
             Resources="0x43010000, 0x26, 0x40800000, 1324, 0x40800100, 1612, 0x40C00000, 2" />
@@ -192,10 +202,12 @@
         <!-- SCHEDBOOST resource opcode, value-->
 
         <!-- Type="2", Horizontal Scroll boost -->
+        <!-- AOSPA Edit: Increase CPU freq for Horizontal Scroll Boost -->
         <Config
             Id="0x00001080" Type="2" Enable="true" Target="msmsteppe"
             Resources="0x43010000, 0x26, 0x40800000, 1363, 0x40800100, 1363, 0x40C00000, 2" />
 
+        <!-- AOSPA Edit: Increase CPU freq for Horizontal Scroll Boost -->
         <Config
             Id="0x00001080" Type="2" Enable="true" Target="sdmmagpie"
             Resources="0x43010000, 0x26, 0x40800000, 1324, 0x40800100, 1612, 0x40C00000, 2" />
@@ -208,11 +220,13 @@
         <!-- GPU MIN_FREQUENCY resource opcode, value-->
 
         <!-- Type="4", Pre-Fling boost -->
+        <!-- AOSPA Edit: Increase CPU and GPU freq for Pre-Fling Boost -->
         <Config
             Id="0x00001080" Type="4" Enable="true" Timeout="80" Target="msmsteppe"
             Resources="0x43010000, 0x26, 0x40800000, 1363, 0x40800100, 1363, 0x40C00000, 2,
                        0x4280C000, 596" />
 
+        <!-- AOSPA Edit: Increase CPU and GPU freq for Pre-Fling Boost -->
         <Config
             Id="0x00001080" Type="4" Enable="true" Timeout="80" Target="sdmmagpie"
             Resources="0x43010000, 0x26, 0x40800000, 1324, 0x40800100, 1324, 0x40C00000, 2,
@@ -227,12 +241,13 @@
         <!-- STORAGE CLK SCALING resource opcode, value-->
 
         <!-- Type="", MTP boost -->
-
+        <!-- AOSPA Edit: Increase CPU freq for MTP Boost -->
         <Config
             Id="0x00001086" Enable="true" Target="msmsteppe"
             Resources="0x40C00000, 0x1, 0x40804000, 0xFFF, 0x40804100, 0xFFF, 0x40800000, 1708,
                        0x40800100, 1708, 0x42C10000, 0x1" />
 
+        <!-- AOSPA Edit: Increase CPU freq for MTP Boost -->
         <Config
             Id="0x00001086" Enable="true" Target="sdmmagpie"
             Resources="0x40C00000, 0x1, 0x40804000, 0xFFF, 0x40804100, 0xFFF, 0x40800000, 1708,
@@ -279,11 +294,12 @@
         <!-- CPUBOOST_MIN_FREQ LITTLE Core resource opcode, value-->
         <!-- GPU MIN_FREQUENCY resource opcode,value-->
         <!-- Type="", Rotation animation boost -->
-
+        <!-- AOSPA Edit: Increase CPU freq for Rotation Boost -->
         <Config
             Id="0x00001090" Enable="true" Timeout="1000" Target="msmsteppe"
             Resources="0x40800100, 1516, 0x4280C000, 596" />
 
+        <!-- AOSPA Edit: Increase CPU freq for Rotation Boost -->
         <Config
             Id="0x00001090" Enable="true" Timeout="1000" Target="sdmmagpie"
             Resources="0x40800100, 1612, 0x4280C000, 800" />
@@ -293,6 +309,7 @@
         <!-- CPUBOOST_MIN_FREQ LITTLE Core resource opcode, value -->
 
          <!-- Type="1", Drag boost -->
+         <!-- AOSPA Edit: Increase CPU freq for Drag Boost -->
          <Config
              Id="0x00001087" Type="1" Enable="true" Timeout="0" Target="sdmmagpie"
              Resources="0x40800000, 1708, 0x40800100, 1324" />

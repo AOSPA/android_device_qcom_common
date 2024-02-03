@@ -58,6 +58,7 @@ property Name is called. -->
                 <Prop Name="ro.lmk.enable_userspace_lmk" Value="true" />
                 <Prop Name="ro.lmk.use_new_strategy_dup" Value="true"/>
                 <Prop Name="vendor.perf.gestureflingboost.enable" Value="true" />
+                <!-- AOSPA Edit: Lower background apps to 38 -->
                 <Prop Name="ro.vendor.qti.sys.fw.bg_apps_limit" Value="38" />
                 <Prop Name="ro.vendor.at_library" Value="libqti-at.so" />
                 <Prop Name="vendor.appcompact.enable_app_compact" Value="true" />
