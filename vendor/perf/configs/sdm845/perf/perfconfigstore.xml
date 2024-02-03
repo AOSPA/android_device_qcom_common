@@ -18,17 +18,28 @@ property Name is called. -->
     <PerfConfigs>
 
                 <!--Vendor Properties -->
+                <!-- AOSPA Edit: Comment out IOP
                 <Prop Name="vendor.iop.enable_uxe" Value="1" />
                 <Prop Name="vendor.perf.iop_v3.enable" Value="true" />
                 <Prop Name="vendor.perf.iop_v3.enable.debug" Value="false" />
                 <Prop Name="vendor.enable.prefetch" Value="false" />
-                <Prop Name="vendor.iop.enable_prefetch_ofr" Value="false" />
+                <Prop Name="vendor.iop.enable_prefetch_ofr" Value="false" /> -->
+                <!-- AOSPA Edit: Enable Preferred Apps for pre-5.4 targets -->
+                <Prop Name="vendor.iop.enable_speed" Value="true" /> <!--rename to perf-->
 
                 <!--System Properties -->
                 <Prop Name="ro.vendor.qti.sys.fw.bg_apps_limit" Value="60" />
                 <Prop Name="ro.vendor.at_library" Value="libqti-at.so" />
                 <Prop Name="ro.lmk.enable_userspace_lmk" Value="false" />
                 <Prop Name="vendor.perf.gestureflingboost.enable" Value="true" />
+
+                <!-- AOSPA Edit: Enable Preferred Apps -->
+                <Prop Name="ro.lmk.enable_preferred_apps" Value="true" />
+                <Prop Name="ro.vendor.perf.enable.prefapps" Value="true" />
+                <Prop Name="ro.vendor.perf.count.prefapps" Value="12" />
+                <Prop Name="ro.vendor.use_perf_hal_for_preferredapps" Value="true" />
+                <Prop Name="vendor.prefapps.pkg_retention_mins" Value="28800" />
+                <Prop Name="vendor.prefapps.last_launch_threshold" Value="21600" />
 
     </PerfConfigs>
 </PerfConfigsStore>

@@ -29,6 +29,16 @@ property Name is called. -->
                  <Prop Name="vendor.debug.enable.memperfd" Value="true" />
                  <Prop Name="ro.vendor.qti.am.reschedule_service" Value="true" />
                  <Prop Name="ro.vendor.perf.qgpe" Value="true"/>
+                <!-- AOSPA Edit: Enable Preferred Apps for pre-5.4 targets -->
+                <Prop Name="vendor.iop.enable_speed" Value="true" /> <!--rename to perf-->
+
+                <!-- AOSPA Edit: Enable Preferred Apps -->
+                <Prop Name="ro.lmk.enable_preferred_apps" Value="true" />
+                <Prop Name="ro.vendor.perf.enable.prefapps" Value="true" />
+                <Prop Name="ro.vendor.perf.count.prefapps" Value="12" />
+                <Prop Name="ro.vendor.use_perf_hal_for_preferredapps" Value="true" />
+                <Prop Name="vendor.prefapps.pkg_retention_mins" Value="28800" />
+                <Prop Name="vendor.prefapps.last_launch_threshold" Value="21600" />
 
     </PerfConfigs>
 </PerfConfigsStore>
