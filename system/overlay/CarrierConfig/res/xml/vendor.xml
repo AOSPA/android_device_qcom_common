@@ -45,11 +45,11 @@ IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.-->
 
     <carrier_config>
         <boolean name="apn_expand_bool" value="true" />
-        <!-- PA: Disable World Mode to clean up network modes -->
+        <!-- AOSPA Edit: Disable World Mode to clean up network modes -->
         <boolean name="world_phone_bool" value="false" />
         <boolean name="allow_adding_apns_bool" value="true" />
         <boolean name="hide_preferred_network_type_bool" value="false" />
-        <!-- PA: Disable CDMA Choices to clean up settings -->
+        <!-- AOSPA Edit: Disable CDMA Choices to clean up settings -->
         <boolean name="show_cdma_choices_bool" value="false" />
         <boolean name="allow_video_call_in_low_battery" value="true" />
         <boolean name="config_enable_display_14digit_imei" value="false" />
@@ -119,11 +119,11 @@ IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.-->
         <!-- Config for B2C Enriched Calls Feature support -->
         <boolean name="carrier_b2c_enriched_calling_supported_bool" value="false"/>
         <boolean name="carrier_call_progress_notification" value="true" />
-        <!-- PA: Allow VoLTE, WFC, and ViLTE by default -->
+        <!-- AOSPA Edit: Allow VoLTE, WFC, and ViLTE by default -->
         <boolean name="carrier_volte_available_bool" value="true" />
         <boolean name="carrier_wfc_ims_available_bool" value="true" />
         <boolean name="carrier_vt_available_bool" value="true" />
-        <!-- PA: Hide IMS APN by default -->
+        <!-- AOSPA Edit: Hide IMS APN by default -->
         <boolean name="hide_ims_apn_bool" value="true" />
     </carrier_config>
 
@@ -3105,7 +3105,7 @@ IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.-->
         <boolean name="is_private_network" value="true" />
     </carrier_config>
 
-    <!-- PA: Do not allow VoLTE on TIM Brazil -->
+    <!-- AOSPA Edit: Do not allow VoLTE on TIM Brazil -->
     <carrier_config mcc="724" mnc="02,03,04">
         <boolean name="carrier_volte_available_bool" value="false" />
         <boolean name="carrier_wfc_ims_available_bool" value="false" />
