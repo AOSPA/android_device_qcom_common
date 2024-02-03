@@ -67,7 +67,7 @@ as anyway perflock calls of these resources would fail. -->
         <Config MajorValue="0xD" MinorValue="0xE" Node="/sys/class/devfreq/soc:qcom,cpu6-llcc-ddr-lat/mem_latency/ratio_ceil" />
         <Config MajorValue="0xD" MinorValue="0x10" Node="/sys/class/devfreq/soc:qcom,cpu6-llcc-ddr-lat/mem_latency/stall_floor" />
 
-        <!-- PA: Disable unsupported nodes on 5.4 and lower -->
+        <!-- AOSPA Edit: Disable unsupported nodes on 5.4 and lower -->
         <Config MajorValue="0x2" MinorValue="0x2" Supported="no" />
         <Config MajorValue="0x2" MinorValue="0x3" Supported="no" />
         <Config MajorValue="0x3" MinorValue="0x20" Node="/proc/%d/sched_boost" />

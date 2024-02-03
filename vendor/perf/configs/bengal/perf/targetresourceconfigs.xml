@@ -117,7 +117,7 @@ as anyway perflock calls of these resources would fail. -->
         <Config MajorValue="0xD" MinorValue="0xF" Node="/sys/class/devfreq/soc:qcom,cpu0-cpu-ddr-lat/mem_latency/stall_floor" />
         <Config MajorValue="0xD" MinorValue="0x10" Node="/sys/class/devfreq/soc:qcom,cpu4-cpu-ddr-lat/mem_latency/stall_floor" />
 
-        <!-- PA: Disable unsupported nodes -->
+        <!-- AOSPA Edit: Disable unsupported nodes -->
         <Config MajorValue="0x2" MinorValue="0x2" Supported="no" />
         <Config MajorValue="0x2" MinorValue="0x3" Supported="no" />
         <Config MajorValue="0x3" MinorValue="0x20" Node="/proc/%d/sched_boost" />
