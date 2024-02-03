@@ -32,11 +32,12 @@ ________________________________________________________________________________
     <PerfConfigs>
 
                 <!--Vendor Properties -->
+                <!-- AOSPA Edit: Comment out IOP
                 <Prop Name="vendor.iop.enable_uxe"            Value="1" />
                 <Prop Name="vendor.perf.iop_v3.enable"        Value="false" />
                 <Prop Name="vendor.perf.iop_v3.enable.debug"  Value="false" />
                 <Prop Name="vendor.enable.prefetch"           Value="false" />
-                <Prop Name="vendor.iop.enable_prefetch_ofr"   Value="false" />
+                <Prop Name="vendor.iop.enable_prefetch_ofr"   Value="false" /> -->
                 <Prop Name="vendor.iop.enable_speed"          Value="true" />
                 <Prop Name="vendor.debug.enable.lm"           Value="true" />
                 <Prop Name="vendor.perf.test_avc"             Value="false" />
@@ -124,6 +125,13 @@ ________________________________________________________________________________
                 <Prop Name="ro.vendor.qti.sys.fw.bg_apps_limit"      Value="60"     />
                 <Prop Name="ro.vendor.qti.sys.fw.bg_apps_limit"      Value="32"     Ram="3" />
                 <Prop Name="ro.vendor.qti.sys.fw.bg_apps_limit"      Value="32"     Ram="4" />
+
+                <!-- AOSPA Edit: Enable Preferred Apps -->
+                <Prop Name="ro.vendor.perf.enable.prefapps" Value="true" />
+                <Prop Name="ro.vendor.perf.count.prefapps" Value="12" />
+                <Prop Name="ro.vendor.use_perf_hal_for_preferredapps" Value="true" />
+                <Prop Name="vendor.prefapps.pkg_retention_mins" Value="28800" />
+                <Prop Name="vendor.prefapps.last_launch_threshold" Value="21600" />
 
     </PerfConfigs>
 </PerfConfigsStore>
