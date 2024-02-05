@@ -1,0 +1,4 @@
+runtime_resource_overlay {
+    name: "BluetoothResTarget_anorak",
+    vendor: true,
+}

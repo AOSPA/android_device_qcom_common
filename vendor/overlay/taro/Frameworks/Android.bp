@@ -1,0 +1,4 @@
+runtime_resource_overlay {
+    name: "FrameworksResTarget_taro",
+    vendor: true,
+}

@@ -1,0 +1,243 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    Copyright (c) 2016, The Linux Foundation. 
+
+    Redistribution and use in source and binary forms, with or without
+    modification, are permitted provided that the following conditions are
+    met:
+        * Redistributions of source code must retain the above copyright
+          notice, this list of conditions and the following disclaimer.
+        * Redistributions in binary form must reproduce the above
+          copyright notice, this list of conditions and the following
+          disclaimer in the documentation and/or other materials provided
+          with the distribution.
+        * Neither the name of The Linux Foundation nor the names of its
+          contributors may be used to endorse or promote products derived
+          from this software without specific prior written permission.
+
+    THIS SOFTWARE IS PROVIDED "AS IS" AND ANY EXPRESS OR IMPLIED
+    WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF
+    MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NON-INFRINGEMENT
+    ARE DISCLAIMED.  IN NO EVENT SHALL THE COPYRIGHT OWNER OR CONTRIBUTORS
+    BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR
+    CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF
+    SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR
+    BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY,
+    WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE
+    OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN
+    IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE
+-->
+
+
+<device name="Android">
+  <!-- Most values are the incremental current used by a feature,
+       in mA (measured at nominal voltage).
+       The default values are deliberately incorrect dummy values.
+       OEM's must measure and provide actual values before
+       shipping a device.
+       Example real-world values are given in comments, but they
+       are totally dependent on the platform and can vary
+       significantly, so should be measured on the shipping platform
+       with a power meter. -->
+  <item name="none">0</item>
+  <item name="screen.on">119.79</item>  <!-- ~200mA -->
+  <item name="screen.full">430</item>   <!-- ~300mA -->
+
+  <!-- A list of heterogeneous CPU clusters, where the value for each cluster represents the
+       number of CPU cores for that cluster.
+
+       Ex:
+       <array name="cpu.clusters.cores">
+         <value>4</value> // cluster 0 has cpu0, cpu1, cpu2, cpu3
+         <value>4</value> // cluster 1 has cpu4, cpu5, cpu6, cpu7
+       </array> -->
+  <array name="cpu.clusters.cores">
+      <value>4</value> <!-- cluster 0 has cpu0, cpu1, cpu2, cpu3 -->
+      <value>4</value> <!-- cluster 1 has cpu4, cpu5， cpu6, cpu7 -->
+  </array>
+
+    <!-- Different CPU speeds for cluster 0 as reported in
+       /sys/devices/system/cpu/cpu0/cpufreq/stats/time_in_state.
+
+       There must be one of these for each cluster, labeled:
+       cpu.speeds.cluster0, cpu.speeds.cluster1, etc... -->
+  <array name="cpu.core_speeds.cluster0">
+      <value>518400</value>   <!-- 518.4  MHz CPU speed -->
+      <value>614400</value>   <!-- 614.4  MHz CPU speed -->
+      <value>691200</value>  <!-- 691.2 MHz CPU speed -->
+      <value>787200</value>  <!-- 787.2 MHz CPU speed -->
+      <value>883200</value>  <!-- 883.2 MHz CPU speed -->
+      <value>979200</value>  <!-- 979.2 MHz CPU speed -->
+      <value>1075200</value>  <!-- 1075.2 MHz CPU speed -->
+      <value>1171200</value>  <!-- 1171.2 MHz CPU speed -->
+      <value>1248000</value>  <!-- 1248 MHz CPU speed -->
+      <value>1344000</value>  <!-- 1344 MHz CPU speed -->
+      <value>1420800</value>  <!-- 1420.8 MHz CPU speed -->
+      <value>1516800</value>  <!-- 1516.8 MHz CPU speed -->
+      <value>1612800</value>  <!-- 1612.8 MHz CPU speed -->
+      <value>1708800</value>  <!-- 1708.8 MHz CPU speed -->
+      <value>1804800</value>  <!-- 1804.8 MHz CPU speed -->
+  </array>
+
+  <!-- Current at each CPU speed for cluster 0, as per 'cpu.speeds.cluster0'.
+       Like cpu.speeds.cluster0, there must be one of these present for
+       each heterogeneous CPU cluster. -->
+  <array name="cpu.core_power.cluster0">
+      <value>7</value>  <!-- ~7mA -->
+      <value>8</value>  <!-- ~8mA -->
+      <value>10</value>  <!-- ~10mA -->
+      <value>11</value>  <!-- ~11mA -->
+      <value>12</value>  <!-- ~12mA -->
+      <value>13</value>  <!-- ~13mA -->
+      <value>15</value>  <!-- ~15mA -->
+      <value>16</value>  <!-- ~16mA -->
+      <value>17</value>  <!-- ~17mA -->
+      <value>19</value>  <!-- ~19mA -->
+      <value>21</value>  <!-- ~21mA -->
+      <value>23</value>  <!-- ~23mA -->
+      <value>25</value>  <!-- ~25mA -->
+      <value>29</value>  <!-- ~29mA -->
+      <value>31</value>  <!-- ~31mA -->
+  </array>
+
+   <array name="cpu.core_speeds.cluster1">
+      <value>710400</value>  <!-- 710.4  MHz CPU speed -->
+      <value>825600</value>  <!-- 825.6  MHz CPU speed -->
+	  <value>844800</value>  <!-- 844.8  MHz CPU speed -->
+      <value>940800</value>  <!-- 940.8  MHz CPU speed -->
+      <value>960000</value>  <!-- 960.0  MHz CPU speed -->
+      <value>1056000</value>  <!-- 1056  MHz CPU speed -->
+      <value>1075200</value>  <!-- 1075.2  MHz CPU speed -->
+      <value>1171200</value>  <!-- 1171.2  MHz CPU speed -->
+      <value>1190400</value>  <!-- 1190.4  MHz CPU speed -->
+      <value>1286400</value>  <!-- 1286.4  MHz CPU speed -->
+      <value>1305600</value>  <!-- 1305.6  MHz CPU speed -->
+      <value>1382400</value>  <!-- 1382.4  MHz CPU speed -->
+      <value>1401600</value>  <!-- 1401.6  MHz CPU speed -->
+      <value>1478400</value>  <!-- 1478.4  MHz CPU speed -->
+      <value>1516800</value>  <!-- 1516.8  MHz CPU speed -->
+      <value>1574400</value>  <!-- 1574.4  MHz CPU speed -->
+      <value>1632000</value>  <!-- 1632.0  MHz CPU speed -->
+      <value>1670400</value>  <!-- 1670.4  MHz CPU speed -->
+      <value>1747200</value>  <!-- 1747.2  MHz CPU speed -->
+      <value>1766400</value>  <!-- 1766.4  MHz CPU speed -->
+      <value>1862400</value>  <!-- 1862.4  MHz CPU speed -->
+      <value>1958400</value>  <!-- 1958.4  MHz CPU speed -->
+      <value>1977600</value>  <!-- 1977.6  MHz CPU speed -->
+      <value>2054400</value>  <!-- 2954.4  MHz CPU speed -->
+      <value>2073600</value>  <!-- 2073.6  MHz CPU speed -->
+      <value>2150400</value>  <!-- 2150.4  MHz CPU speed -->
+      <value>2169600</value>  <!-- 2169.6  MHz CPU speed -->
+      <value>2246400</value>  <!-- 2246.4  MHz CPU speed -->
+      <value>2265600</value>  <!-- 2265.6  MHz CPU speed -->
+      <value>2342400</value>  <!-- 2342.4  MHz CPU speed -->
+      <value>2361600</value>  <!-- 2361.6  MHz CPU speed -->
+      <value>2419200</value>  <!-- 2419.2  MHz CPU speed -->
+      <value>2457600</value>  <!-- 2457.6  MHz CPU speed -->
+      <value>2553600</value>  <!-- 2553.6  MHz CPU speed -->
+      <value>2649600</value>  <!-- 2649.6  MHz CPU speed -->
+      <value>2745600</value>  <!-- 2745.6  MHz CPU speed -->
+      <value>2841600</value>  <!-- 2841.6  MHz CPU speed -->
+  </array>
+
+  <!-- Current at each CPU speed for cluster 1, as per 'cpu.speeds.cluster1'.
+       Like cpu.speeds.cluster1, there must be one of these present for
+       each heterogeneous CPU cluster. -->
+  <array name="cpu.core_power.cluster1">
+      <value>30</value>  <!-- ~30mA -->
+      <value>37</value>  <!-- ~37mA -->
+      <value>53</value>  <!-- ~53mA -->
+      <value>45</value>  <!-- ~45mA -->
+      <value>61</value>  <!-- ~61mA -->
+      <value>51</value>  <!-- ~51mA -->
+      <value>67</value>  <!-- ~67mA -->
+      <value>60</value>  <!-- ~60mA -->
+      <value>76</value>  <!-- ~76mA -->
+      <value>68</value>  <!-- ~68mA -->
+      <value>88</value>  <!-- ~88mA -->
+      <value>72</value>  <!-- ~72mA -->
+      <value>92</value>  <!-- ~92mA -->
+      <value>81</value>  <!-- ~81mA -->
+      <value>102</value>  <!-- ~102mA -->
+      <value>94</value>  <!-- ~94mA -->
+      <value>116</value>  <!-- ~116mA -->
+      <value>100</value>  <!-- ~100mA -->
+      <value>129</value>  <!-- ~129mA -->
+      <value>109</value>  <!-- ~109mA -->
+      <value>133</value>  <!-- ~133mA -->
+      <value>141</value>  <!-- ~141mA -->
+      <value>168</value>  <!-- ~168mA -->
+      <value>149</value>  <!-- ~149mA -->
+      <value>182</value>  <!-- ~182mA -->
+      <value>163</value>  <!-- ~163mA -->
+      <value>224</value>  <!-- ~224mA -->
+      <value>180</value>  <!-- ~180mA -->
+      <value>233</value>  <!-- ~233mA -->
+      <value>198</value>  <!-- ~198mA -->
+      <value>240</value>  <!-- ~240mA -->
+      <value>209</value>  <!-- ~209mA -->
+      <value>249</value>  <!-- ~249mA -->
+      <value>272</value>  <!-- ~272mA -->
+      <value>295</value>  <!-- ~295mA -->
+      <value>330</value>  <!-- ~330mA -->
+      <value>366</value>  <!-- ~366mA -->
+  </array>
+
+  <!-- Current when CPU is active -->
+  <item name="cpu.active">7.6</item>
+  <!-- Current when CPU is idle -->
+  <item name="cpu.idle">0.1</item>
+  <!-- Current when CPU is suspend -->
+  <item name="cpu.suspend">0</item>
+
+  <!-- This is the battery capacity in mAh (measured at nominal voltage) -->
+  <item name="battery.capacity">3550</item>
+
+  <item name="wifi.on">0.1</item>  <!-- ~3mA -->
+  <item name="wifi.active">168</item>  <!-- WIFI data transfer, ~200mA -->
+  <item name="wifi.scan">1.3</item>  <!-- WIFI network scanning, ~100mA -->
+
+  <item name="dsp.audio">24</item> <!-- ~10mA -->
+  <item name="dsp.video">63</item> <!-- ~50mA -->
+
+  <item name="camera.flashlight">650</item> <!-- Avg. power for camera flash, ~160mA -->
+  <item name="camera.avg">380</item> <!-- Avg. power use of camera in standard usecases, ~550mA -->
+
+  <item name="gps.on">10</item> <!-- ~50mA -->
+
+  <item name="radio.active">168</item> <!-- ~200mA -->
+  <item name="radio.scanning">6</item>
+  <array name="radio.on"> <!-- Strength 0 to BINS-1 -->
+    <value>88</value> <!-- ~2mA -->
+    <value>8</value> <!-- ~1mA -->
+  </array>
+
+  <item name="modem.controller.idle">6</item>
+  <item name="modem.controller.rx">180</item>
+  <item name="modem.controller.tx">186</item>
+  <item name="modem.controller.voltage">3700</item>
+
+  <array name="memory.bandwidths">
+    <value>17</value> <!-- mA for bucket: 100mb/s-1.5 GB/s memory bandwidth -->
+  </array>
+
+  <item name="wifi.controller.idle">1</item>
+  <item name="wifi.controller.rx">152</item>
+  <item name="wifi.controller.tx">190</item>
+  <array name="wifi.controller.tx_levels">1 <!-- mA -->
+  </array>
+  <item name="wifi.controller.voltage">3700</item>
+
+  <array name="wifi.batchedscan"> <!-- mA -->
+    <value>.0001</value> <!-- 1-8/hr -->
+    <value>.001</value>  <!-- 9-64/hr -->
+    <value>.01</value>   <!-- 65-512/hr -->
+    <value>.1</value>    <!-- 513-4,096/hr -->
+    <value>1</value>     <!-- 4097-/hr -->
+  </array>
+
+  <item name="bluetooth.active">135</item> <!-- Bluetooth data transfer, ~56mA -->
+  <item name="bluetooth.on">0.6</item>  <!-- Bluetooth on & connectable, but not connected, ~0.1mA -->
+  <item name="bluetooth.controller.voltage">3700</item>
+
+</device>
