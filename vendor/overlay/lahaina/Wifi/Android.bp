@@ -1,0 +1,18 @@
+runtime_resource_overlay {
+    name: "WifiResTarget_lahaina",
+    vendor: true,
+}
+
+runtime_resource_overlay {
+    name: "WifiResTarget_spf_lahaina",
+    manifest: "AndroidManifest-spf.xml",
+    resource_dirs : ["spf/res"],
+    vendor: true,
+}
+
+runtime_resource_overlay {
+    name: "WifiResTarget_spf_yupik_iot",
+    manifest: "AndroidManifest-yupik-iot.xml",
+    resource_dirs : ["yupik-iot/res"],
+    vendor: true,
+}
