@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    Copyright (c) 2016-2019, The Linux Foundation. 
+
+    Redistribution and use in source and binary forms, with or without
+    modification, are permitted provided that the following conditions are
+    met:
+        * Redistributions of source code must retain the above copyright
+          notice, this list of conditions and the following disclaimer.
+        * Redistributions in binary form must reproduce the above
+          copyright notice, this list of conditions and the following
+          disclaimer in the documentation and/or other materials provided
+          with the distribution.
+        * Neither the name of The Linux Foundation nor the names of its
+          contributors may be used to endorse or promote products derived
+          from this software without specific prior written permission.
+
+    THIS SOFTWARE IS PROVIDED "AS IS" AND ANY EXPRESS OR IMPLIED
+    WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF
+    MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NON-INFRINGEMENT
+    ARE DISCLAIMED.  IN NO EVENT SHALL THE COPYRIGHT OWNER OR CONTRIBUTORS
+    BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR
+    CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF
+    SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR
+    BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY,
+    WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE
+    OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN
+    IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE
+-->
+<resources>
+   <!-- List of regexpressions describing the interface (if any) that represent tetherable
+          Wifi interfaces.  If the device doesn't want to support tethering over Wifi this
+          should be empty.  An example would be "softap.*" -->
+   <string-array translatable="false" name="config_tether_wifi_regexs">
+       <item>"softap0"</item>
+       <item>"wigig0"</item>
+   </string-array>
+
+    <!-- Control whether the always on display mode is available. This should only be enabled on
+         devices where the display has been tuned to be power efficient in DOZE and/or DOZE_SUSPEND
+         states. -->
+    <bool name="config_dozeAlwaysOnDisplayAvailable">true</bool>
+
+    <!-- Control whether the always on display mode is enabled by default. This value will be used
+         during initialization when the setting is still null. -->
+    <bool name="config_dozeAlwaysOnEnabled">false</bool>
+
+    <!-- When true use the linux /dev/input/event subsystem to detect the switch changes
+    on the headphone/microphone jack. When false use the older uevent framework -->
+    <bool name="config_useDevInputEventForAudioJack">true</bool>
+
+   <!-- Whether a software navigation bar should be shown. NOTE: in the future this may be
+       autodetected from the Configuration. -->
+   <bool name="config_showNavigationBar">true</bool>
+
+   <!-- Package names to use with vendor iwlan implementation. -->
+   <string name="config_wlan_data_service_package" translatable="false">vendor.qti.iwlan</string>
+   <string name="config_wlan_network_service_package" translatable="false">vendor.qti.iwlan</string>
+   <string name="config_qualified_networks_service_package" translatable="false">vendor.qti.iwlan</string>
+
+   <dimen name="rounded_corner_radius">20dp</dimen>
+   <dimen name="rounded_corner_content_padding">0dp</dimen>
+
+   <string translatable="false" name="config_mainBuiltInDisplayCutout">
+     M 0,0
+     L -175, 0
+     L -164.9859, 50.0
+     C -163.0157, 55.25359834575 -153.6857, 80.0 -122.2, 80.0
+     L 122.2, 80.0
+     C 153.6857, 80.0 163.0157, 55.25359834575 164.9859, 50.0
+     L 175, 0
+     Z
+   </string>
+   <bool name="config_fillMainBuiltInDisplayCutout">true</bool>
+
+    <!-- List of biometric sensors on the device, in decreasing strength. Consumed by AuthService
+         when registering authenticators with BiometricService. Format must be ID:Modality:Strength,
+         where: IDs are unique per device, Modality as defined in BiometricAuthenticator.java,
+         and Strength as defined in Authenticators.java -->
+    <string-array name="config_biometric_sensors" translatable="false" >
+        <item>0:2:15</item>  <!-- ID0:Fingerprint:Strong -->
+    </string-array>
+
+</resources>

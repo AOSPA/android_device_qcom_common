@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Copyright (c) 2018, The Linux Foundation. All rights reserved.
+
+     Redistribution and use in source and binary forms, with or without
+     modification, are permitted (subject to the limitations in the
+     disclaimer below) provided that the following conditions are met:
+
+        * Redistributions of source code must retain the above copyright
+          notice, this list of conditions and the following disclaimer.
+        * Redistributions in binary form must reproduce the above
+          copyright notice, this list of conditions and the following
+          disclaimer in the documentation and/or other materials provided
+          with the distribution.
+        * Neither the name of the Linux Foundation nor the names of its
+          contributors may be used to endorse or promote products derived
+          from this software without specific prior written permission.
+
+     NO EXPRESS OR IMPLIED LICENSES TO ANY PARTY'S PATENT RIGHTS ARE
+     GRANTED BY THIS LICENSE.  THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT
+     HOLDERS AND CONTRIBUTORS "AS IS" AND ANY EXPRESS OR IMPLIED
+     WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF
+     MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE
+     DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT OWNER OR CONTRIBUTORS BE
+     LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR
+     CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF
+     SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR
+     BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY,
+     WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE
+     OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN
+     IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+-->
+<resources>
+    <!-- Wifi driver supports OCV for softap -->
+    <bool translatable="false" name="config_vendor_softap_ocv_supported">true</bool>
+
+    <!-- Wifi driver supports beacon protection for softap -->
+    <bool translatable="false" name="config_vendor_softap_beacon_protection_supported">true</bool>
+
+    <!-- Wifi driver supports IEEE80211AX for softap -->
+    <bool translatable="false" name="config_wifiSoftapIeee80211axSupported">true</bool>
+
+    <!-- Wifi driver supports IEEE80211AX single user beamformer for softap -->
+    <bool translatable="false" name="config_wifiSoftapHeSuBeamformerSupported">true</bool>
+
+    <!-- Wifi driver supports IEEE80211AX single user beamformee for softap -->
+    <bool translatable="false" name="config_wifiSoftapHeSuBeamformeeSupported">true</bool>
+
+    <!-- Configure wifi tcp buffersizes in the form:
+        rmem_min,rmem_def,rmem_max,wmem_min,wmem_def,wmem_max -->
+    <string name="config_wifi_tcp_buffers" translatable="false">524288,1048576,2097152,524288,1048576,4194304</string>
+
+    <!-- boolean indicating whether the WiFi chipset has 6GHz band support -->
+    <bool translatable="false" name ="config_wifi6ghzSupport">true</bool>
+
+    <!-- Wifi driver supports 6GHz band for softap when chip support 6GHz -->
+    <bool translatable="false" name="config_wifiSoftap6ghzSupported">true</bool>
+
+    <!-- Indicates that SAE Hash-to-Element is supported on this device -->
+    <bool translatable="false" name="config_wifiSaeH2eSupported">true</bool>
+
+    <!-- Boolean indicating performing a partial initial scan is enabled -->
+    <bool translatable="false" name="config_wifiEnablePartialInitialScan">true</bool>
+
+    <!-- Boolean indicating supports for quick connect -->
+    <bool translatable="false" name="config_wifi_framework_enable_quick_connect">true</bool>
+
+    <!-- Integer for Wifi Partial scan results fetching period(in ms) -->
+    <integer translatable="false" name="config_wifi_partial_scan_results_fetching_period_ms">1000</integer>
+
+    <!-- Boolean indicating whether the wifi chipset has 5GHz frequency band support. -->
+    <bool translatable="false" name="config_wifi5ghzSupport">true</bool>
+
+    <!-- Wifi driver supports Automatic channel selection (ACS) for softap -->
+    <bool translatable="false" name="config_wifi_softap_acs_supported">true</bool>
+
+    <!-- Enable connected frequency enhancement for pno scan -->
+    <bool translatable="false" name="config_wifiConnectedFrequencyEnhancementEnabled">true</bool>
+
+    <!-- Boolean indicating whether the wifi chipset has background scan support -->
+    <bool translatable="false" name="config_wifi_background_scan_support">true</bool>
+
+    <!-- Enable Make-Before-Break Wifi network switching.
+         Note: this is conditional on the device supporting dual concurrent STAs. -->
+    <bool translatable="false" name="config_wifiMultiStaNetworkSwitchingMakeBeforeBreakEnabled">true</bool>
+
+    <!-- Enable concurrent peer to peer + internet connectivity
+         Note: this is conditional on the device supporting dual concurrent STAs. -->
+    <bool translatable="false" name="config_wifiMultiStaLocalOnlyConcurrencyEnabled">true</bool>
+    <!-- Enable concurrent restricted connectivity + internet connectivity
+         Note: this is conditional on the device supporting dual concurrent STAs. -->
+    <bool translatable="false" name="config_wifiMultiStaRestrictedConcurrencyEnabled">true</bool>
+
+    <!-- Enable concurrent internet connectivity + internet connectivity
+         Note: this is conditional on the device supporting dual concurrent STAs. -->
+    <bool translatable="false" name="config_wifiMultiStaMultiInternetConcurrencyEnabled">true</bool>
+
+    <!-- dual sap mode is supported on this device. -->
+    <bool name="config_wifiBridgedSoftApSupported">true</bool>
+
+    <!-- Indicates whether or not the network-centric QoS policy feature is enabled. -->
+    <bool translatable="false" name="config_wifiNetworkCentricQosPolicyFeatureEnabled">true</bool>
+
+    <!-- Indicates whether or not the WLAN driver supports the NL80211_CMD_REG_CHANGE or
+         NL80211_CMD_WIPHY_REG_CHANGE events which indicate the current country code which is
+         being used by the WLAN driver. If the driver doesn't support these events
+         (configuration is `false`) then the driver must handle the setCountryCode request from
+         HAL as a blocking call. In such a case the country code will be applied
+         immediately after the country code is sent to the driver (if the method returns a
+         success). -->
+    <bool translatable="false" name="config_wifiDriverSupportedNl80211RegChangedEvent">true</bool>
+
+    <!-- Indicates whether or not the Soft AP needs to be restarted when country code changed -->
+    <bool translatable="false" name="config_wifiForcedSoftApRestartWhenCountryCodeChanged">false</bool>
+
+    <!-- Integer threshold for max number of WifiConfigurations that can be saved on the device.
+         A value of -1 indicates no limit. If a max number is specified, then under-used configs will
+         be deleted to make room for new configs.-->
+    <integer translatable="false" name="config_wifiMaxNumWifiConfigurations">1000</integer>
+</resources>
