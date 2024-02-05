@@ -1076,6 +1076,11 @@ else
     # wsf Range : 1..1000 So set to bare minimum value 1.
     echo 1 > /proc/sys/vm/watermark_scale_factor
 
+    # Disable the feature of watermark boost
+    if [ $MemTotal -le 6291456 ]; then
+        echo 0 > /proc/sys/vm/watermark_boost_factor
+    fi
+
     configure_zram_parameters
 
     configure_read_ahead_kb_values
