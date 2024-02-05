@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.android.wifi.resources.overlay.target">
+
+    <application
+        android:hasCode="false"/>
+
+    <overlay android:targetPackage="com.android.wifi.resources"
+        android:targetName="WifiCustomization"
+        android:isStatic="true"
+        android:priority="500"
+        android:requiredSystemPropertyName="ro.boot.product.vendor.sku"
+        android:requiredSystemPropertyValue="kalama" />
+</manifest>
