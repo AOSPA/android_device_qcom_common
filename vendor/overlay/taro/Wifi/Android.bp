@@ -1,0 +1,18 @@
+runtime_resource_overlay {
+    name: "WifiResTarget_taro",
+    vendor: true,
+}
+
+runtime_resource_overlay {
+    name: "WifiResTarget_spf_taro",
+    manifest: "AndroidManifest-spf.xml",
+    resource_dirs : ["spf/res"],
+    vendor: true,
+}
+
+runtime_resource_overlay {
+    name: "WifiResTarget_cape",
+    manifest: "AndroidManifest-cape.xml",
+    resource_dirs : ["cape/res"],
+    vendor: true,
+}

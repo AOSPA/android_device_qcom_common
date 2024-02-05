@@ -1,0 +1,4 @@
+runtime_resource_overlay {
+    name: "SecureElementResTarget_kalama",
+    vendor: true,
+}

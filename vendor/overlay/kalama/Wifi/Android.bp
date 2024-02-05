@@ -1,0 +1,11 @@
+runtime_resource_overlay {
+    name: "WifiResTarget_kalama",
+    vendor: true,
+}
+
+runtime_resource_overlay {
+    name: "WifiResTarget_spf_kalama",
+    manifest: "AndroidManifest-spf.xml",
+    resource_dirs : ["spf/res"],
+    vendor: true,
+}
