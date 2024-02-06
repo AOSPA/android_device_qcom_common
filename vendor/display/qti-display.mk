@@ -60,6 +60,12 @@ PRODUCT_VENDOR_PROPERTIES += \
     debug.sf.latch_unsignaled=1
 endif
 
+# Properties to be explicitly disabled for <4.19 targets
+ifneq (,$(filter 3.18 4.4 4.9 4.14, $(TARGET_KERNEL_VERSION)))
+PRODUCT_VENDOR_PROPERTIES += \
+    debug.sf.enable_gl_backpressure=0
+endif
+
 # Copy feature_enabler rc only for lahaina on 5.4
 ifeq ($(call is-board-platform-in-list, lahaina),true)
 PRODUCT_COPY_FILES += \
