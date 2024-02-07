@@ -24,7 +24,7 @@ on property:vendor.post_boot.parsed=1
     setprop dalvik.vm.dex2oat-threads 6
 
     write /sys/module/process_reclaim/parameters/enable_process_reclaim 0
-    write /proc/sys/vm/swappiness 180
+    write /proc/sys/vm/swappiness 150
     write /proc/sys/vm/vfs_cache_pressure 50
 
 on property:dalvik.vm.heapstartsize=16
