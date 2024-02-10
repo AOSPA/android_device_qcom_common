@@ -16,6 +16,24 @@
       "message": "Kona changes is for 4.19, but the init folder is for 5.15",
       "revId": "cce1bd5dfca14845cb251786f621ba4010f38ba4",
       "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "a4a142ce_50e0ef9f",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000890
+      },
+      "writtenOn": "2024-02-10T09:10:52Z",
+      "side": 1,
+      "message": "How do you propose we go about this then? separate kona and kona_515 ?",
+      "parentUuid": "cc909a31_587ed674",
+      "revId": "cce1bd5dfca14845cb251786f621ba4010f38ba4",
+      "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
     }
   ]
 }
