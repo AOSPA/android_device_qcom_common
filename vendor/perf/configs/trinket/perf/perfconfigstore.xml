@@ -29,6 +29,8 @@ property Name is called. -->
                  <Prop Name="vendor.debug.enable.memperfd" Value="true" />
                  <Prop Name="ro.vendor.qti.am.reschedule_service" Value="true" />
                  <Prop Name="ro.vendor.perf.qgpe" Value="true"/>
+                <!-- AOSPA Edit: Disable IOPd explicitly -->
+                <Prop Name="vendor.iop.enabled" Value="false" />
                 <!-- AOSPA Edit: Enable Preferred Apps for pre-5.4 targets -->
                 <Prop Name="vendor.iop.enable_speed" Value="true" /> <!--rename to perf-->
 
