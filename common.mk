@@ -153,6 +153,9 @@ DEVICE_MATRIX_FILE += \
 
 DEVICE_FRAMEWORK_COMPATIBILITY_MATRIX_FILE += \
     vendor/qcom/opensource/core-utils/vendor_framework_compatibility_matrix.xml
+
+DEVICE_FRAMEWORK_MANIFEST_FILE += \
+    device/qcom/qssi/framework_manifest.xml
 endif
 
 # Opt out of 16K alignment changes
