@@ -774,7 +774,7 @@
         <!-- DISABLE_PASR, value-->
         <!-- SCHED_PREFER_SPREAD resource opcode, value -->
         <!-- Type="", Performance mode -->
-        <!-- PA Edit: Disable Performance Mode
+        <!-- AOSPA Edit: Disable Performance Mode
         <Config
             Id="0x00001091" Enable="true" Target="lahaina"
             Resources="0x40CAC000, 20, 0x40CA4000, 2, 0x40800000, 1555, 0x40800100, 800, 0x40800200, 1670,
