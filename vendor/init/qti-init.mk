@@ -58,6 +58,12 @@ ifeq ($(call is-kernel-greater-than-or-equal-to,5.4),true)
 PRODUCT_COPY_FILES += \
     $(call find-copy-subdir-files,*,$(QCOM_COMMON_PATH)/vendor/init/$(TARGET_BOARD_PLATFORM),$(TARGET_COPY_OUT_VENDOR))
 
+# Copy kona_515-specific configuration"
+ifeq ($(TARGET_BOARD_PLATFORM),kona)
+    PRODUCT_COPY_FILES += \
+        $(call find-copy-subdir-files,*,device/qcom/common/vendor/init/kona_515/etc,$(TARGET_COPY_OUT_VENDOR)/etc/init)
+endif
+
 PRODUCT_PACKAGES += \
     init.qti.kernel.rc \
     init.qti.kernel.sh \
