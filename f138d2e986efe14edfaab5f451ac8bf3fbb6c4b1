@@ -16,6 +16,24 @@
       "message": "Do it in CarrierConfig too",
       "revId": "f138d2e986efe14edfaab5f451ac8bf3fbb6c4b1",
       "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "b2bd2b7e_b8431312",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000890
+      },
+      "writtenOn": "2024-02-11T06:01:50Z",
+      "side": 1,
+      "message": "? It\u0027s already done in CarrierConfig. What do I do there?",
+      "parentUuid": "3e780dea_30a8eb6d",
+      "revId": "f138d2e986efe14edfaab5f451ac8bf3fbb6c4b1",
+      "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
     }
   ]
 }
