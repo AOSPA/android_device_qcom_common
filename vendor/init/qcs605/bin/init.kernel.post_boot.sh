@@ -1,5 +1,5 @@
 #=============================================================================
-# Copyright (c) 2019-2022 Qualcomm Technologies, Inc.
+# Copyright (c) 2019-2023 Qualcomm Technologies, Inc.
 # All Rights Reserved.
 # Confidential and Proprietary - Qualcomm Technologies, Inc.
 #
@@ -29,11 +29,6 @@
 # OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF
 # ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 #=============================================================================
-
-if [[ "$(getprop vendor.post_boot.custom)" == "true" ]]; then
-  echo "Device overrides post_boot, skipping $0"
-  exit 0
-fi
 
 function configure_zram_parameters() {
 	MemTotalStr=`cat /proc/meminfo | grep MemTotal`
@@ -91,9 +86,9 @@ function configure_read_ahead_kb_values() {
 	# /sys/block/dm-0/queue/read_ahead_kb to /sys/block/dm-10/queue/read_ahead_kb
 	# /sys/block/sda/queue/read_ahead_kb to /sys/block/sdh/queue/read_ahead_kb
 
-	# Set 128 for <= 4GB &
-	# set 512 for >= 5GB targets.
-	if [ $MemTotal -le 4194304 ]; then
+	# Set 128 for <= 3GB &
+	# set 512 for >= 4GB targets.
+	if [ $MemTotal -le 3145728 ]; then
 		ra_kb=128
 	else
 		ra_kb=512
@@ -108,7 +103,6 @@ function configure_read_ahead_kb_values() {
 		if [ `cat $(dirname $dm)/../removable` -eq 0 ]; then
 			echo $ra_kb > $dm
 		fi
-
 	done
 }
 
@@ -165,24 +159,16 @@ function configure_memory_parameters() {
 
 configure_memory_parameters
 
-if [ -f /sys/devices/soc0/chip_family ]; then
-	chipfamily=`cat /sys/devices/soc0/chip_family`
+if [ -f /sys/devices/soc0/soc_id ]; then
+	platformid=`cat /sys/devices/soc0/soc_id`
 fi
 
-case "$chipfamily" in
-    "0x74")
-	/vendor/bin/sh /vendor/bin/init.kernel.post_boot-taro.sh
-	;;
-
-    "0x7B"|"0x7b")
-	/vendor/bin/sh /vendor/bin/init.kernel.post_boot-diwali.sh
-	;;
-
-    "0x82")
-	/vendor/bin/sh /vendor/bin/init.kernel.post_boot-cape.sh
-	;;
-     *)
-	echo "***WARNING***: Invalid chip family\n\t No postboot settings applied!!\n"
-	;;
+case "$platformid" in
+	"481"|"455"|"496"|"347")
+		/vendor/bin/sh /vendor/bin/init.kernel.post_boot-qcs605.sh
+		;;
+	*)
+		echo "***WARNING***: Invalid SoC ID\n\t No postboot settings applied!!\n"
+		;;
 esac
 

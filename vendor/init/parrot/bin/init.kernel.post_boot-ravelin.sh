@@ -1,5 +1,5 @@
 #=============================================================================
-# Copyright (c) 2020-2021 Qualcomm Technologies, Inc.
+# Copyright (c) 2020-2023 Qualcomm Technologies, Inc.
 # All Rights Reserved.
 # Confidential and Proprietary - Qualcomm Technologies, Inc.
 #
@@ -40,18 +40,24 @@ if [ -e $policy_path ]; then
 fi
 goldpolicy_id=$silver_core_nums
 
-# Disable Core control on silver
-echo 0 > /sys/devices/system/cpu/cpu0/core_ctl/enable
+# Disable Core control on gold
+echo 0 > /sys/devices/system/cpu/cpu$goldpolicy_id/core_ctl/enable
 
-# Core control parameters for gold
-if [ $silver_core_nums -le 3 ]; then
-	echo 0 > /sys/devices/system/cpu/cpu$goldpolicy_id/core_ctl/enable
+# Core control parameters for silver
+if [ $silver_core_nums -le 4 ]; then
+	echo 0 > /sys/devices/system/cpu/cpu0/core_ctl/enable
 else
-	echo 2 > /sys/devices/system/cpu/cpu$goldpolicy_id/core_ctl/min_cpus
-	echo 60 > /sys/devices/system/cpu/cpu$goldpolicy_id/core_ctl/busy_up_thres
-	echo 30 > /sys/devices/system/cpu/cpu$goldpolicy_id/core_ctl/busy_down_thres
-	echo 100 > /sys/devices/system/cpu/cpu$goldpolicy_id/core_ctl/offline_delay_ms
-	echo 4 > /sys/devices/system/cpu/cpu$goldpolicy_id/core_ctl/task_thres
+	if [ $silver_core_nums -eq 5 ]; then
+		echo 0 0 0 0 1 > /sys/devices/system/cpu/cpu0/core_ctl/not_preferred
+	elif [ $silver_core_nums -eq 6 ]; then
+		echo 0 0 0 0 1 1 > /sys/devices/system/cpu/cpu0/core_ctl/not_preferred
+	fi
+
+	echo 4 > /sys/devices/system/cpu/cpu0/core_ctl/min_cpus
+	echo 60 > /sys/devices/system/cpu/cpu0/core_ctl/busy_up_thres
+	echo 40 > /sys/devices/system/cpu/cpu0/core_ctl/busy_down_thres
+	echo 100 > /sys/devices/system/cpu/cpu0/core_ctl/offline_delay_ms
+	echo 8 > /sys/devices/system/cpu/cpu0/core_ctl/task_thres
 fi
 
 # Setting b.L scheduler parameters
@@ -77,8 +83,8 @@ echo 0 > /proc/sys/kernel/sched_util_clamp_min_rt_default
 echo "walt" > /sys/devices/system/cpu/cpufreq/policy0/scaling_governor
 echo 0 > /sys/devices/system/cpu/cpufreq/policy0/walt/down_rate_limit_us
 echo 0 > /sys/devices/system/cpu/cpufreq/policy0/walt/up_rate_limit_us
-echo 1110000 > /sys/devices/system/cpu/cpufreq/policy0/walt/hispeed_freq
-echo 691200 > /sys/devices/system/cpu/cpufreq/policy0/scaling_min_freq
+echo 1094000 > /sys/devices/system/cpu/cpufreq/policy0/walt/hispeed_freq
+echo 672000 > /sys/devices/system/cpu/cpufreq/policy0/scaling_min_freq
 echo 85 > /sys/devices/system/cpu/cpufreq/policy0/walt/hispeed_load
 echo 0 > /sys/devices/system/cpu/cpufreq/policy0/walt/pl
 
