@@ -178,7 +178,7 @@ if [ -f /sys/devices/soc0/soc_id ]; then
 fi
 
 case "$platformid" in
-	"467"|"468")
+	"394"|"467"|"468")
 		/vendor/bin/sh /vendor/bin/init.kernel.post_boot-trinket.sh
 		;;
 	*)

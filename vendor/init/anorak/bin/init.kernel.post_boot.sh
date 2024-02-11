@@ -30,10 +30,6 @@
 # ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 #=============================================================================
 
-if [[ "$(getprop vendor.post_boot.custom)" == "true" ]]; then
-  echo "Device overrides post_boot, skipping $0"
-  exit 0
-fi
 
 function configure_zram_parameters() {
 	MemTotalStr=`cat /proc/meminfo | grep MemTotal`
@@ -108,7 +104,6 @@ function configure_read_ahead_kb_values() {
 		if [ `cat $(dirname $dm)/../removable` -eq 0 ]; then
 			echo $ra_kb > $dm
 		fi
-
 	done
 }
 
@@ -170,19 +165,10 @@ if [ -f /sys/devices/soc0/chip_family ]; then
 fi
 
 case "$chipfamily" in
-    "0x74")
-	/vendor/bin/sh /vendor/bin/init.kernel.post_boot-taro.sh
-	;;
-
-    "0x7B"|"0x7b")
-	/vendor/bin/sh /vendor/bin/init.kernel.post_boot-diwali.sh
-	;;
-
-    "0x82")
-	/vendor/bin/sh /vendor/bin/init.kernel.post_boot-cape.sh
-	;;
-     *)
-	echo "***WARNING***: Invalid chip family\n\t No postboot settings applied!!\n"
-	;;
+	"0x87")
+		/vendor/bin/sh /vendor/bin/init.kernel.post_boot-anorak.sh
+		;;
+	*)
+		echo "***WARNING***: Invalid Chip Family\n\t No postboot settings applied!!\n"
+		;;
 esac
-

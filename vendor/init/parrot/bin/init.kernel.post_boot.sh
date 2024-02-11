@@ -1,5 +1,5 @@
 #=============================================================================
-# Copyright (c) 2019-2021 Qualcomm Technologies, Inc.
+# Copyright (c) 2019-2023 Qualcomm Technologies, Inc.
 # All Rights Reserved.
 # Confidential and Proprietary - Qualcomm Technologies, Inc.
 #
@@ -97,7 +97,9 @@ function configure_read_ahead_kb_values() {
 		ra_kb=512
 	fi
 	for dm in $dmpts; do
-		echo $ra_kb > $dm
+		if [ `cat $(dirname $dm)/../removable` -eq 0 ]; then
+			echo $ra_kb > $dm
+		fi
 	done
 	if [ -f /sys/block/mmcblk0/bdi/read_ahead_kb ]; then
 		echo $ra_kb > /sys/block/mmcblk0/bdi/read_ahead_kb
@@ -152,8 +154,11 @@ if [ -f /sys/devices/soc0/soc_id ]; then
 fi
 
 case "$platformid" in
-	"537")
+	"537" | "583" | "613" | "631" | "633" | "634" | "638")
 		/vendor/bin/sh /vendor/bin/init.kernel.post_boot-parrot.sh
+		;;
+	"568" | "602" | "581" | "582")
+		/vendor/bin/sh /vendor/bin/init.kernel.post_boot-ravelin.sh
 		;;
 	*)
 		echo "***WARNING***: Invalid SoC ID\n\t No postboot settings applied!!\n"

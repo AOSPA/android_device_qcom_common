@@ -108,7 +108,7 @@ echo 0-3 > /dev/cpuset/background/cpus
 echo 0-3 > /dev/cpuset/system-background/cpus
 
 # Turn off scheduler boost at the end
-echo 0 > /proc/sys/kernel/sched_boost
+echo 0 > /proc/sys/walt/sched_boost
 
 # Reset the RT boost, which is 1024 (max) by default.
 echo 0 > /proc/sys/kernel/sched_util_clamp_min_rt_default
@@ -128,19 +128,6 @@ echo 0 > /sys/devices/system/cpu/cpufreq/policy4/walt/up_rate_limit_us
 echo 1401600 > /sys/devices/system/cpu/cpufreq/policy4/walt/hispeed_freq
 echo 1056000 > /sys/devices/system/cpu/cpufreq/policy4/scaling_min_freq
 echo 1 > /sys/devices/system/cpu/cpufreq/policy4/walt/pl
-
-
-# sched_load_boost as -6 is equivalent to target load as 85. It is per cpu tunable.
-#echo -6 >  /sys/devices/system/cpu/cpu0/sched_load_boost
-#echo -6 >  /sys/devices/system/cpu/cpu1/sched_load_boost
-#echo -6 >  /sys/devices/system/cpu/cpu2/sched_load_boost
-#echo -6 >  /sys/devices/system/cpu/cpu3/sched_load_boost
-#echo -6 >  /sys/devices/system/cpu/cpu4/sched_load_boost
-#echo -6 >  /sys/devices/system/cpu/cpu5/sched_load_boost
-#echo -6 >  /sys/devices/system/cpu/cpu6/sched_load_boost
-#echo -6 >  /sys/devices/system/cpu/cpu7/sched_load_boost
-#echo 85 > /sys/devices/system/cpu/cpu0/cpufreq/walt/hispeed_load
-#echo 85 > /sys/devices/system/cpu/cpu4/cpufreq/wal/hispeed_load
 
 # configure bus-dcvs
 bus_dcvs="/sys/devices/system/cpu/bus_dcvs"
@@ -167,13 +154,10 @@ done
 
 # memlat specific settings are moved to seperate file under
 # device/target specific folder
-#setprop vendor.dcvs.prop 1
+setprop vendor.dcvs.prop 1
 
-# colcoation v3 disabled
-#echo 0 > /proc/sys/kernel/sched_min_task_util_for_boost
-#echo 0 > /proc/sys/kernel/sched_min_task_util_for_colocation
-#echo 0 > /proc/sys/kernel/sched_little_cluster_coloc_fmin_khz
-
+#Disable sched_boost after boot is completed
+echo 0 > /proc/sys/walt/sched_boost
 
 # Turn on sleep modes.
 echo s2idle > /sys/power/mem_sleep
