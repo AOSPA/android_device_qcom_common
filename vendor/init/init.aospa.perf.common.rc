@@ -128,3 +128,7 @@ on property:vendor.post_boot.parsed=1
     # Set CPU Boost Duration
     write /sys/devices/system/cpu/cpu_boost/input_boost_ms 200
     write /proc/sys/walt/input_boost/input_boost_ms 200
+
+# Dynamically set IRQ affinity for KGSL and DRM/MDSS
+on property:vendor.post_boot.parsed=1 && property:init.svc.vendor.msm_irqbalance=running
+    exec u:r:vendor_qti_init_shell:s0 -- /vendor/bin/init.aospa.perf.common.sh
