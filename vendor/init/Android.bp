@@ -72,6 +72,12 @@ prebuilt_hidl_interfaces {
 }
 
 sh_binary {
+    name: "init.aospa.perf.common.sh",
+    src: "init.aospa.perf.common.sh",
+    vendor: true,
+}
+
+sh_binary {
     name: "init.class_main.sh",
     src: "init.class_main.sh",
     vendor: true,
