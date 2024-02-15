@@ -1845,6 +1845,7 @@ IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.-->
         <boolean name="allow_hold_call_during_emergency_bool" value="false" />
         <boolean name="vonr_enabled_bool" value="true"/>
         <int name="carrier_default_wfc_ims_mode_int" value="1" />
+        <boolean name="carrier_data_channel_supported_bool" value="true"/>
     </carrier_config>
 
     <carrier_config mcc="460" mnc="04">
@@ -1939,6 +1940,7 @@ IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.-->
         <boolean name="carrier_video_crs_supported_bool" value="true" />
         <boolean name="support_video_conference_call_bool" value="false"/>
         <int name="carrier_default_wfc_ims_mode_int" value="1" />
+        <boolean name="carrier_data_channel_supported_bool" value="true"/>
     </carrier_config>
 
     <carrier_config mcc="460" mnc="06">
@@ -2198,6 +2200,7 @@ IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.-->
         <boolean name="allow_hold_call_during_emergency_bool" value="false" />
         <boolean name="vonr_enabled_bool" value="true"/>
         <int name="carrier_default_wfc_ims_mode_int" value="1" />
+        <boolean name="carrier_data_channel_supported_bool" value="true"/>
     </carrier_config>
 
     <carrier_config mcc="460" mnc="12">
@@ -2234,6 +2237,7 @@ IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.-->
         <boolean name="allow_hold_call_during_emergency_bool" value="false" />
         <boolean name="support_video_conference_call_bool" value="false"/>
         <int name="carrier_default_wfc_ims_mode_int" value="1" />
+        <boolean name="carrier_data_channel_supported_bool" value="true"/>
     </carrier_config>
 
     <carrier_config mcc="460" mnc="13">
@@ -2871,6 +2875,18 @@ IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.-->
     </carrier_config>
 
     <carrier_config device="crow" mcc="311" mnc="480">
+        <boolean name="show_rtt_visibility_setting_bool" value="true" />
+        <boolean name="ignore_rtt_mode_setting_bool" value="true"/>
+        <int name="default_rtt_mode_int" value="1" />
+    </carrier_config>
+
+    <carrier_config device="blair" mcc="311" mnc="480">
+        <boolean name="show_rtt_visibility_setting_bool" value="true" />
+        <boolean name="ignore_rtt_mode_setting_bool" value="true"/>
+        <int name="default_rtt_mode_int" value="1" />
+    </carrier_config>
+
+    <carrier_config device="pitti" mcc="311" mnc="480">
         <boolean name="show_rtt_visibility_setting_bool" value="true" />
         <boolean name="ignore_rtt_mode_setting_bool" value="true"/>
         <int name="default_rtt_mode_int" value="1" />
