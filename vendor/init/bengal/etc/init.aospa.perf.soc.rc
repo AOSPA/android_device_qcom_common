@@ -17,6 +17,10 @@ on property:vendor.post_boot.parsed=1
    write /proc/sys/vm/swappiness 180
    write /proc/sys/vm/vfs_cache_pressure 50
 
+   # CPUSets
+   setprop dalvik.vm.dex2oat-cpu-set 0,1,2,3,4,5,7
+   setprop dalvik.vm.dex2oat-threads 6
+
    # CPUFreq
    write /sys/devices/system/cpu/cpu0/cpufreq/schedutil/up_rate_limit_us 500
    write /sys/devices/system/cpu/cpu0/cpufreq/schedutil/down_rate_limit_us 20000
