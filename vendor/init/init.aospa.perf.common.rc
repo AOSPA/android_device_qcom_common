@@ -54,7 +54,10 @@ on boot
     chmod 0666 /dev/stune/top-app/cgroup.procs
 
 on property:vendor.post_boot.parsed=1
-    # Set cpuset audio-app
+    # Set background cpuset
+    write /dev/cpuset/background/cpus 0-1
+
+    # Set audio-app cpuset
     write /dev/cpuset/audio-app/cpus 1-2
 
     # Set restricted cpuset to the same CPUs as system-background
