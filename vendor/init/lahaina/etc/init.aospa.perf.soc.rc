@@ -24,3 +24,5 @@ on property:vendor.post_boot.parsed=1
 
     # CPUSets
     write /dev/cpuset/foreground/cpus 0-6
+    setprop dalvik.vm.dex2oat-cpu-set 0,1,2,3,4,5,6
+    setprop dalvik.vm.dex2oat-threads 6
