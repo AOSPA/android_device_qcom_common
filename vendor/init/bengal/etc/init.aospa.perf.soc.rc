@@ -19,6 +19,10 @@ on property:vendor.post_boot.parsed=1
     write /sys/devices/system/cpu/cpufreq/policy4/schedutil/up_rate_limit_us 500
     write /sys/devices/system/cpu/cpufreq/policy4/schedutil/down_rate_limit_us 10000
 
+    # CPUSets
+    setprop dalvik.vm.dex2oat-cpu-set 0,1,2,3,4,5,7
+    setprop dalvik.vm.dex2oat-threads 6
+
     write /sys/module/process_reclaim/parameters/enable_process_reclaim 0
     write /proc/sys/vm/swappiness 180
     write /proc/sys/vm/vfs_cache_pressure 50
