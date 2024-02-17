@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "a4cdb5bf_7e819165",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000737
+      },
+      "writtenOn": "2024-02-17T10:12:58Z",
+      "side": 1,
+      "message": "bengal not support armv8-2a-dotprod",
+      "revId": "153a1dc3b0f08d03679e81dfac310c861baa470a",
+      "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
+    }
+  ]
+}
