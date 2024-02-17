@@ -16,6 +16,24 @@
       "message": "They aren\u0027t exactly crashes, just warnings that spam logcat. Happens only during an update.",
       "revId": "62c2c6ca53a3522eb65bf1462d2c9995cbdff858",
       "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "727af2a1_8e9a6be4",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 4
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000469
+      },
+      "writtenOn": "2024-02-17T14:03:47Z",
+      "side": 1,
+      "message": "02-16 21:52:30.455  6597 14816 E SQLiteDatabase: android.database.sqlite.SQLiteConstraintException: UNIQUE constraint failed: WLCHGC.packagename (code 1555 SQLITE_CONSTRAINT_PRIMARYKEY)\n\nthat doesn\u0027t crash the app itself, just a denied sqlite command.",
+      "parentUuid": "0404c628_fdb3607a",
+      "revId": "62c2c6ca53a3522eb65bf1462d2c9995cbdff858",
+      "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
     }
   ]
 }
