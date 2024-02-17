@@ -14,6 +14,9 @@
 
 ifeq ($(call is-board-platform-in-list,sm6150),true)
 -include $(TOPDIR)vendor/qcom/opensource/audio-hal/primary-hal/configs/msmsteppe/msmsteppe.mk
+# Flags for inheriting audio_vendor_product.mk on >4.19 targets
+else ifeq (,$(filter 3.18 4.4 4.9 4.14, $(TARGET_KERNEL_VERSION)))
+-include $(TOPDIR)vendor/qcom/opensource/audio-hal/primary-hal/configs/audio_vendor_product.mk
 else
 -include $(TOPDIR)vendor/qcom/opensource/audio-hal/primary-hal/configs/$(TARGET_BOARD_PLATFORM)/$(TARGET_BOARD_PLATFORM).mk
 endif
