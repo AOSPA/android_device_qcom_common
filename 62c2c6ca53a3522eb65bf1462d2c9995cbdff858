@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "0404c628_fdb3607a",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 4
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000469
+      },
+      "writtenOn": "2024-02-17T14:02:45Z",
+      "side": 1,
+      "message": "They aren\u0027t exactly crashes, just warnings that spam logcat. Happens only during an update.",
+      "revId": "62c2c6ca53a3522eb65bf1462d2c9995cbdff858",
+      "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
+    }
+  ]
+}
