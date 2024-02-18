@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "320c889d_6113130a",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000012
+      },
+      "writtenOn": "2024-02-18T02:32:31Z",
+      "side": 1,
+      "message": "is there really any value in this? only the etc code is used anyway for 4.19.  I\u0027d rather keep both directories easier to merge with the branches that are still maintained.",
+      "revId": "732faf65582c6e8768a5317c71a88310ff734ca1",
+      "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
+    }
+  ]
+}
