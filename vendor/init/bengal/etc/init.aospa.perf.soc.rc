@@ -14,3 +14,4 @@
 
 on property:vendor.post_boot.parsed=1
    write /sys/module/process_reclaim/parameters/enable_process_reclaim 0
+   write /proc/sys/vm/swappiness 180
