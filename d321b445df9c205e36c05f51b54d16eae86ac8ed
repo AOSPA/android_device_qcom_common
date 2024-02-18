@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "0d26f081_060d5c45",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 5
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000737
+      },
+      "writtenOn": "2024-02-18T02:51:08Z",
+      "side": 1,
+      "message": "vendor commit: https://github.com/CHRISL7/proprietary_vendor_qcom_common/commit/e49a3facd91cee83f0c113b90e6280a02e6f015b",
+      "revId": "d321b445df9c205e36c05f51b54d16eae86ac8ed",
+      "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
+    }
+  ]
+}
