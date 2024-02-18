@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "1614f3d0_7f218f3f",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 8
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000737
+      },
+      "writtenOn": "2024-02-18T02:53:33Z",
+      "side": 1,
+      "message": "cd ~/pa/vendor/qcom/common \u0026\u0026 git fetch https://github.com/CHRISL7/proprietary_vendor_qcom_common \u0026\u0026 git cherry-pick 039de94773752088fbcdb90ee92fa926a8290bac \u0026\u0026 cd ~/pa/hardware/qcom/gps \u0026\u0026 git pull https://github.com/CHRISL7/android_hardware_qcom_gps",
+      "revId": "bca7dc5eb095cb13352c2426b368ed5b204a01e3",
+      "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
+    }
+  ]
+}
