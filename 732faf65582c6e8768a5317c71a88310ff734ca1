@@ -16,6 +16,24 @@
       "message": "is there really any value in this? only the etc code is used anyway for 4.19.  I\u0027d rather keep both directories easier to merge with the branches that are still maintained.",
       "revId": "732faf65582c6e8768a5317c71a88310ff734ca1",
       "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "17d70dc3_52896537",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000737
+      },
+      "writtenOn": "2024-02-18T10:56:03Z",
+      "side": 1,
+      "message": "What if it is necessary to make changes to .rc for 5.15 as well, or will we do everything in shell script?",
+      "parentUuid": "320c889d_6113130a",
+      "revId": "732faf65582c6e8768a5317c71a88310ff734ca1",
+      "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
     }
   ]
 }
