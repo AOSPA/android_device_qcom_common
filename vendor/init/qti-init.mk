@@ -15,6 +15,15 @@
 PRODUCT_SOONG_NAMESPACES += \
     device/qcom/common/vendor/init
 
+# Use the configs for TARGET_BOARD_PLATFORM unless otherwise specified
+ifeq ($(TARGET_BOARD_PLATFORM)$(TARGET_BOARD_SUFFIX),bengal_515)
+    TARGET_INIT_DIR := bengal_515
+else ifeq ($(TARGET_BOARD_PLATFORM)$(TARGET_BOARD_SUFFIX),kona_515)
+    TARGET_INIT_DIR := kona_515
+else
+    TARGET_INIT_DIR := $(TARGET_BOARD_PLATFORM)
+endif
+
 # Add legacy services and permissions for pre-5.10 targets
 ifeq (,$(filter 5.10 5.15, $(TARGET_KERNEL_VERSION)))
 PRODUCT_COPY_FILES += \
@@ -56,8 +65,9 @@ endif
 
 # Kernel
 ifneq (,$(filter 5.4 5.10 5.15, $(TARGET_KERNEL_VERSION)))
+
 PRODUCT_COPY_FILES += \
-    $(call find-copy-subdir-files,*,$(QCOM_COMMON_PATH)/vendor/init/$(TARGET_BOARD_PLATFORM),$(TARGET_COPY_OUT_VENDOR))
+    $(call find-copy-subdir-files,*,$(QCOM_COMMON_PATH)/vendor/init/$(TARGET_INIT_DIR),$(TARGET_COPY_OUT_VENDOR))
 
 PRODUCT_PACKAGES += \
     init.qti.kernel.rc \
@@ -75,8 +85,8 @@ PRODUCT_VENDOR_PROPERTIES += \
 endif
 
 else # < 5.4
-$(warning Building for kernel $(TARGET_KERNEL_VERSION). Only copying device/qcom/common/vendor/init/$(TARGET_BOARD_PLATFORM)/etc folder.)
+$(warning Building for kernel $(TARGET_KERNEL_VERSION). Only copying device/qcom/common/vendor/init/$(TARGET_INIT_DIR)/etc folder.)
 PRODUCT_COPY_FILES += \
-    $(call find-copy-subdir-files,*,device/qcom/common/vendor/init/$(TARGET_BOARD_PLATFORM)/etc,$(TARGET_COPY_OUT_VENDOR)/etc/init)
+    $(call find-copy-subdir-files,*,device/qcom/common/vendor/init/$(TARGET_INIT_DIR)/etc,$(TARGET_COPY_OUT_VENDOR)/etc/init)
 
 endif
