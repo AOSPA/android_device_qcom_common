@@ -70,6 +70,41 @@
       "parentUuid": "2be09ac7_1c971aca",
       "revId": "bc27effeb86824a3d80f50476f4af506e942f531",
       "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "e58d7c2b_abec9f64",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000737
+      },
+      "writtenOn": "2024-02-19T13:29:18Z",
+      "side": 1,
+      "message": "furthermore,",
+      "revId": "bc27effeb86824a3d80f50476f4af506e942f531",
+      "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "dac2aaa2_f24faf56",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000737
+      },
+      "writtenOn": "2024-02-19T13:29:18Z",
+      "side": 1,
+      "message": "the result of your commit is practically doing the same thing as activating the flag, in addition this follows the principle of HIDL and AIDL health HAL, we will not force this, It will be optional as it already is.",
+      "parentUuid": "70dad360_406e0855",
+      "revId": "bc27effeb86824a3d80f50476f4af506e942f531",
+      "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
     }
   ]
 }
