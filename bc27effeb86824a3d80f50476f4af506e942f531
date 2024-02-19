@@ -105,6 +105,24 @@
       "parentUuid": "70dad360_406e0855",
       "revId": "bc27effeb86824a3d80f50476f4af506e942f531",
       "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "a745c69f_0ba7148c",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000579
+      },
+      "writtenOn": "2024-02-19T13:34:25Z",
+      "side": 1,
+      "message": "eh if you just look for dlopens it also complains about lack of sounddose, that\u0027s not a worthwhile reason to force all devices to drop hidl\nas long as no functionality is gained I don\u0027t see a reason to switch",
+      "parentUuid": "dac2aaa2_f24faf56",
+      "revId": "bc27effeb86824a3d80f50476f4af506e942f531",
+      "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
     }
   ]
 }
