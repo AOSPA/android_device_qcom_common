@@ -158,6 +158,24 @@
       "message": "Then do the opposite commit, make HIDL stay inside the flag, just like I did with health",
       "revId": "bc27effeb86824a3d80f50476f4af506e942f531",
       "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "9fe2dd0a_b93f4565",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000498
+      },
+      "writtenOn": "2024-02-19T13:38:20Z",
+      "side": 1,
+      "message": "fyi, SM8250-AC, lahaina and yupik have the hardware capabilities to support LE Audio codecs but can\u0027t use it properly due to hidl 2.1 even tho it has BLE support, the AIDL impl have a better support for those",
+      "parentUuid": "a8bbebc5_2bbe7128",
+      "revId": "bc27effeb86824a3d80f50476f4af506e942f531",
+      "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
     }
   ]
 }
