@@ -211,6 +211,24 @@
       "message": "Activate it for your device if it works well, that\u0027s all, there\u0027s no need to force it at the moment",
       "revId": "bc27effeb86824a3d80f50476f4af506e942f531",
       "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "238d0195_896a1acb",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000579
+      },
+      "writtenOn": "2024-02-19T13:42:28Z",
+      "side": 1,
+      "message": "its not a \"dlopen issue\", thats just the service\u0027s way of checking what to load in a order instead of looking for vintf fragments. qti gnss or audio hal does the same thing as well. e.g libhfp isnt enabled on recent targets yet you would always see an attempt to load. and speaking of lhdc patches its also just adding what is essentially bunch of stuff to dlopen libs like the old aptx used to do from hal\u0027s perspective",
+      "parentUuid": "a8bbebc5_2bbe7128",
+      "revId": "bc27effeb86824a3d80f50476f4af506e942f531",
+      "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
     }
   ]
 }
