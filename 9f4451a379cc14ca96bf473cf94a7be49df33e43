@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "4fcd6444_06d1671d",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 21
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000737
+      },
+      "writtenOn": "2024-02-19T18:07:40Z",
+      "side": 1,
+      "message": "bengal don\u0027t have cpufreq/policy7",
+      "revId": "9f4451a379cc14ca96bf473cf94a7be49df33e43",
+      "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
+    }
+  ]
+}
