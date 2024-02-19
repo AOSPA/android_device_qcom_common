@@ -265,6 +265,24 @@
       "parentUuid": "bafdef73_f7dbdab9",
       "revId": "bc27effeb86824a3d80f50476f4af506e942f531",
       "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "2958cade_2ccb1c2f",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000579
+      },
+      "writtenOn": "2024-02-19T14:01:35Z",
+      "side": 1,
+      "message": "lhdc seems to work on stock which is 2.0 impl on qcom and 2.1 impl on mtk, I don\u0027t think that is necessary. and modifying aosp interfaces would break",
+      "parentUuid": "bc30e71c_7c79ad22",
+      "revId": "bc27effeb86824a3d80f50476f4af506e942f531",
+      "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
     }
   ]
 }
