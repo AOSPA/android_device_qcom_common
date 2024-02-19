@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "122df2b5_58bf5184",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 22
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000012
+      },
+      "writtenOn": "2024-02-19T22:07:05Z",
+      "side": 1,
+      "message": "not working on lahaina.  tried changing from the symlink to the real path, but still failing.\n\n$ cat /sys/devices/system/cpu/cpufreq/policy0/schedutil/down_rate_limit_us\n0\n\n$ ls -laZ /sys/devices/system/cpu/cpufreq/policy0/schedutil/down_rate_limit_us\n-rw-r--r-- 1 root root u:object_r:sysfs_devices_system_cpu:s0  4096 2024-02-19 15:43 down_rate_limit_us",
+      "revId": "0cc22a5f76bb7b0816f42f5cfe00faa2dc14eb25",
+      "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
+    }
+  ]
+}
