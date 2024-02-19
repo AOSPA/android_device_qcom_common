@@ -247,6 +247,24 @@
       "parentUuid": "7debf00c_8e4bc1f8",
       "revId": "bc27effeb86824a3d80f50476f4af506e942f531",
       "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "bc30e71c_7c79ad22",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000498
+      },
+      "writtenOn": "2024-02-19T13:45:01Z",
+      "side": 1,
+      "message": "lhdc patches also modify the khz frequency available as they support an higher range than LDAC and aptx and that range is defined on the BtAudio impl",
+      "parentUuid": "bafdef73_f7dbdab9",
+      "revId": "bc27effeb86824a3d80f50476f4af506e942f531",
+      "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
     }
   ]
 }
