@@ -16,6 +16,24 @@
       "message": "only use TARGET_USE_AIDL_QTI_BT_AUDIO for your need",
       "revId": "bc27effeb86824a3d80f50476f4af506e942f531",
       "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "d4640773_7662de97",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000498
+      },
+      "writtenOn": "2024-02-19T13:20:11Z",
+      "side": 1,
+      "message": "No, this brings dlopen errors and it works fine on all devices now, I don\u0027t see why you need to -2 this",
+      "parentUuid": "1227cce5_0b890d46",
+      "revId": "bc27effeb86824a3d80f50476f4af506e942f531",
+      "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
     }
   ]
 }
