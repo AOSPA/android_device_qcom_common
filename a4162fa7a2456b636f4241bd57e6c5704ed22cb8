@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "16654b82_f6bf8b03",
+        "filename": "vendor/gps-legacy/proprietary-files.txt",
+        "patchSetId": 12
+      },
+      "lineNbr": 42,
+      "author": {
+        "id": 1000974
+      },
+      "writtenOn": "2024-02-19T22:30:55Z",
+      "side": 1,
+      "message": "duplicate",
+      "range": {
+        "startLine": 42,
+        "startChar": 0,
+        "endLine": 42,
+        "endChar": 33
+      },
+      "revId": "a4162fa7a2456b636f4241bd57e6c5704ed22cb8",
+      "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
+    }
+  ]
+}
