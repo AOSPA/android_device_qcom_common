@@ -283,6 +283,24 @@
       "parentUuid": "bc30e71c_7c79ad22",
       "revId": "bc27effeb86824a3d80f50476f4af506e942f531",
       "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "0d8fb195_c3cccd8a",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000579
+      },
+      "writtenOn": "2024-02-19T14:02:04Z",
+      "side": 1,
+      "message": "well not in this case but usually thats a big no no vts wise",
+      "parentUuid": "2958cade_2ccb1c2f",
+      "revId": "bc27effeb86824a3d80f50476f4af506e942f531",
+      "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
     }
   ]
 }
