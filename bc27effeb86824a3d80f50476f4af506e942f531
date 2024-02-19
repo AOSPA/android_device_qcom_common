@@ -123,6 +123,24 @@
       "parentUuid": "dac2aaa2_f24faf56",
       "revId": "bc27effeb86824a3d80f50476f4af506e942f531",
       "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "a8bbebc5_2bbe7128",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000498
+      },
+      "writtenOn": "2024-02-19T13:35:50Z",
+      "side": 1,
+      "message": "as I said, this brings dlopen issues to device who doesn\u0027t uses AIDL QTI BT and unlike health, BtAudio AIDL was enforced way earlier but was reverted due to issues with LDAC offloading which is now fixed. BtAudio AIDL gives support to LE Audio codecs and this is easier for LHDC bring up as they only do changes on the AIDL impl since a13",
+      "parentUuid": "dac2aaa2_f24faf56",
+      "revId": "bc27effeb86824a3d80f50476f4af506e942f531",
+      "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
     }
   ]
 }
