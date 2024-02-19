@@ -301,6 +301,24 @@
       "parentUuid": "2958cade_2ccb1c2f",
       "revId": "bc27effeb86824a3d80f50476f4af506e942f531",
       "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "5060a3d2_934a9569",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000498
+      },
+      "writtenOn": "2024-02-19T14:06:57Z",
+      "side": 1,
+      "message": "Well it\u0027s kinda complicated, but LHDC said that the higher frequencies only are supported on specific SoC bt chips and none of them are from mtk and qcom sadly. Tho they did modify the interfaces for their hidl impl on older android versions tho",
+      "parentUuid": "0d8fb195_c3cccd8a",
+      "revId": "bc27effeb86824a3d80f50476f4af506e942f531",
+      "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
     }
   ]
 }
