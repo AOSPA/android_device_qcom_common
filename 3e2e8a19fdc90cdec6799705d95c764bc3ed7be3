@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "ae0a792b_a354445a",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000579
+      },
+      "writtenOn": "2024-02-20T05:33:00Z",
+      "side": 1,
+      "message": "we could restore the entire domain but it has similar permissions to personally relabelling seems easier",
+      "revId": "3e2e8a19fdc90cdec6799705d95c764bc3ed7be3",
+      "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
+    }
+  ]
+}
