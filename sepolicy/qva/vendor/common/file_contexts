@@ -9,3 +9,6 @@
 
 # SSG QMI Gateway Daemon
 /(vendor|system/vendor)/bin/ssgqmigd64		u:object_r:vendor_ssgqmigd_exec:s0
+
+# QCCVND
+/(vendor|system/vendor)/bin/hw/vendor\.qti\.hardware\.qccvndhal@1\.0-service       u:object_r:vendor_qcc_trd_exec:s0
