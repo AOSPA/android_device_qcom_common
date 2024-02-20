@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "6494bca0_26c86a4b",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 7
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000463
+      },
+      "writtenOn": "2024-02-20T10:18:20Z",
+      "side": 1,
+      "message": "tested on Xiaomi Kona, seems fine.",
+      "revId": "33fa1fdfc0e04aa5a780435c4edbf7297a2c9316",
+      "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
+    }
+  ]
+}
