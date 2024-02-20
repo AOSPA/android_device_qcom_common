@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "3051f085_6ac617f8",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000579
+      },
+      "writtenOn": "2024-02-20T06:34:45Z",
+      "side": 1,
+      "message": "```02-20 12:03:32.149  1104  1104 I vendor.qti.hardware.qccvndhal@1.0-service: Start with vendor binder\n02-20 12:03:32.149  1104  1104 I vendor.qti.hardware.qccvndhal@1.0-service: Registering qccvndhal service...\n02-20 12:03:32.151  1104  1104 I HidlServiceManagement: Registered vendor.qti.hardware.qccvndhal@1.0::IQccvndhal/qccvndhal\n02-20 12:03:32.151  1104  1104 I HidlServiceManagement: Removing namespace from process name vendor.qti.hardware.qccvndhal@1.0-service to qccvndhal@1.0-service.```\n\nseems to work fine",
+      "revId": "1045946c81843f71cc0eb95f240ede4f52681fbe",
+      "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
+    }
+  ]
+}
