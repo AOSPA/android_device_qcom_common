@@ -48,6 +48,9 @@ PRODUCT_PACKAGES += \
     qca6234-service.sh \
     ueventd.qcom.rc
 
+PRODUCT_COPY_FILES += \
+    $(call find-copy-subdir-files,*,$(QCOM_COMMON_PATH)/vendor/init/$(TARGET_BOARD_PLATFORM),$(TARGET_COPY_OUT_VENDOR))
+
 # Charger
 ifneq ($(TARGET_USE_HIDL_QTI_HEALTH),true)
 PRODUCT_COPY_FILES += \
@@ -56,9 +59,6 @@ endif
 
 # Kernel
 ifneq (,$(filter 5.4 5.10 5.15, $(TARGET_KERNEL_VERSION)))
-PRODUCT_COPY_FILES += \
-    $(call find-copy-subdir-files,*,$(QCOM_COMMON_PATH)/vendor/init/$(TARGET_BOARD_PLATFORM),$(TARGET_COPY_OUT_VENDOR))
-
 PRODUCT_PACKAGES += \
     init.qti.kernel.rc \
     init.qti.kernel.sh \
@@ -73,10 +73,4 @@ else
 PRODUCT_VENDOR_PROPERTIES += \
     vendor.all.modules.ready=1
 endif
-
-else # < 5.4
-$(warning Building for kernel $(TARGET_KERNEL_VERSION). Only copying device/qcom/common/vendor/init/$(TARGET_BOARD_PLATFORM)/etc folder.)
-PRODUCT_COPY_FILES += \
-    $(call find-copy-subdir-files,*,device/qcom/common/vendor/init/$(TARGET_BOARD_PLATFORM)/etc,$(TARGET_COPY_OUT_VENDOR)/etc/init)
-
 endif
