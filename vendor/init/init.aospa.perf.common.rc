@@ -58,7 +58,7 @@ on property:vendor.post_boot.parsed=1
     write /dev/cpuset/background/cpus 0-1
 
     # Set audio-app cpuset
-    write /dev/cpuset/audio-app/cpus 1-2
+    write /dev/cpuset/audio-app/cpus 0-1
 
     # Set restricted cpuset to the same CPUs as system-background
     copy /dev/cpuset/system-background/cpus /dev/cpuset/restricted/cpus
