@@ -33,6 +33,3 @@
 # Poweropt-service
 /(vendor|system/vendor)/bin/poweropt-service                        u:object_r:vendor_hal_poweroptservice_qti_exec:s0
 /data/vendor/pwr(/.*)?                                              u:object_r:vendor_pm_data_file:s0
-
-# Init
-/(vendor|system/vendor)/bin/init\.aospa\.perf\.common\.sh u:object_r:vendor_qti_init_shell_exec:s0
