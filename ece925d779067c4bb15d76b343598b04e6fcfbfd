@@ -16,6 +16,23 @@
       "message": "you can just make a condition for not adapting it to your platform. cuz this issue isn\u0027t persisting across other platforms and I don\u0027t think it\u0027s worth sacrificing the performance gains just because a device couldn\u0027t handle it properly.",
       "revId": "ece925d779067c4bb15d76b343598b04e6fcfbfd",
       "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "afc0b182_6b88c0cc",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000012
+      },
+      "writtenOn": "2024-02-23T02:44:12Z",
+      "side": 1,
+      "message": "Don\u0027t move the mountain to Muhammad, move Muhammad to the mountain",
+      "revId": "ece925d779067c4bb15d76b343598b04e6fcfbfd",
+      "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
     }
   ]
 }
