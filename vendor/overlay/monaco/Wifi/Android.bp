@@ -2,3 +2,9 @@ runtime_resource_overlay {
     name: "WifiResTarget_monaco",
     vendor: true,
 }
+
+runtime_resource_overlay {
+    name: "WifiResTargetMainline_monaco",
+    manifest: "AndroidGoogleManifest.xml",
+    vendor: true,
+}
