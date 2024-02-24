@@ -21,14 +21,18 @@ PRODUCT_PACKAGES += \
     FrameworksResTarget_$(TARGET_BOARD_PLATFORM) \
     SecureElementResTarget_$(TARGET_BOARD_PLATFORM) \
     WifiResTarget_$(TARGET_BOARD_PLATFORM) \
-    WifiResTarget_spf_$(TARGET_BOARD_PLATFORM)
+    WifiResTarget_spf_$(TARGET_BOARD_PLATFORM) \
+    WifiResTargetMainline_$(TARGET_BOARD_PLATFORM) \
+    WifiResTargetMainline_spf_$(TARGET_BOARD_PLATFORM)
 
 ifeq ($(TARGET_BOARD_PLATFORM),lahaina)
 PRODUCT_PACKAGES += \
-    WifiResTarget_yupik_iot
+    WifiResTarget_yupik_iot \
+    WifiResTargetMainline_yupik_iot
 endif
 
 ifeq ($(TARGET_BOARD_PLATFORM),taro)
 PRODUCT_PACKAGES += \
-    WifiResTarget_cape
+    WifiResTarget_cape \
+    WifiResTargetMainline_cape
 endif
