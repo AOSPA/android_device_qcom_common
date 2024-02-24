@@ -15,6 +15,7 @@
 PRODUCT_SOONG_NAMESPACES += \
     device/qcom/common/vendor/overlay
 
+ifneq ($(TARGET_BOARD_SUFFIX),_515)
 # Overlays
 PRODUCT_PACKAGES += \
     BluetoothResTarget_$(TARGET_BOARD_PLATFORM) \
@@ -24,6 +25,7 @@ PRODUCT_PACKAGES += \
     WifiResTarget_spf_$(TARGET_BOARD_PLATFORM) \
     WifiResTargetMainline_$(TARGET_BOARD_PLATFORM) \
     WifiResTargetMainline_spf_$(TARGET_BOARD_PLATFORM)
+endif
 
 ifeq ($(TARGET_BOARD_PLATFORM),lahaina)
 PRODUCT_PACKAGES += \
