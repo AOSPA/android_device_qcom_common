@@ -52,6 +52,24 @@
       "parentUuid": "3f481903_8d2fb382",
       "revId": "48145a01cbad992efaa2127247dedc490c324ae1",
       "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "1dfdfda7_2c2101cd",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000956
+      },
+      "writtenOn": "2024-02-24T11:51:34Z",
+      "side": 1,
+      "message": "after 3 days it stays to core 6 and 7, also sultan confirms that irq affinity is remembered after it is unplugged and plugged back in, it will move back to where it should be",
+      "parentUuid": "37713952_53cfc4b9",
+      "revId": "48145a01cbad992efaa2127247dedc490c324ae1",
+      "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
     }
   ]
 }
