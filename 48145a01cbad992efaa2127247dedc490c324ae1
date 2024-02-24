@@ -16,6 +16,24 @@
       "message": "I\u0027m not sure if this is a good idea, since core control turns big cluster off when idle and that would result in IRQ migrating back to cpu0(?); in some cases even leads to kernel panic",
       "revId": "48145a01cbad992efaa2127247dedc490c324ae1",
       "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "3f481903_8d2fb382",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000956
+      },
+      "writtenOn": "2024-02-24T11:45:00Z",
+      "side": 1,
+      "message": "hmm you do make a point, but in my testing for a couple of weeks i havent had a kernel panic so far",
+      "parentUuid": "36fc968b_207c9547",
+      "revId": "48145a01cbad992efaa2127247dedc490c324ae1",
+      "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
     }
   ]
 }
