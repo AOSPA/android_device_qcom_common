@@ -9,3 +9,15 @@ runtime_resource_overlay {
     resource_dirs : ["spf/res"],
     vendor: true,
 }
+
+runtime_resource_overlay {
+    name: "WifiResTargetMainline_kalama",
+    manifest: "AndroidGoogleManifest.xml",
+    vendor: true,
+}
+
+runtime_resource_overlay {
+    name: "WifiResTargetMainline_spf_kalama",
+    manifest: "AndroidGoogleManifest-spf.xml",
+    vendor: true,
+}
