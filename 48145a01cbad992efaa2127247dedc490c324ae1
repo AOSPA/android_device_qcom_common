@@ -34,6 +34,24 @@
       "parentUuid": "36fc968b_207c9547",
       "revId": "48145a01cbad992efaa2127247dedc490c324ae1",
       "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "37713952_53cfc4b9",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000469
+      },
+      "writtenOn": "2024-02-24T11:48:54Z",
+      "side": 1,
+      "message": "have you checked `cat /proc/irq/\u003cnum\u003e/smp_affinity_list` if it stays 6 and 7 after like one day or it reset back to 0?",
+      "parentUuid": "3f481903_8d2fb382",
+      "revId": "48145a01cbad992efaa2127247dedc490c324ae1",
+      "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
     }
   ]
 }
