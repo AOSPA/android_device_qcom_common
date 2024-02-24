@@ -16,3 +16,21 @@ runtime_resource_overlay {
     resource_dirs : ["cape/res"],
     vendor: true,
 }
+
+runtime_resource_overlay {
+    name: "WifiResTargetMainline_taro",
+    manifest: "AndroidGoogleManifest.xml",
+    vendor: true,
+}
+
+runtime_resource_overlay {
+    name: "WifiResTargetMainline_spf_taro",
+    manifest: "AndroidGoogleManifest-spf.xml",
+    vendor: true,
+}
+
+runtime_resource_overlay {
+    name: "WifiResTargetMainline_cape",
+    manifest: "AndroidGoogleManifest-cape.xml",
+    vendor: true,
+}

@@ -2,3 +2,9 @@ runtime_resource_overlay {
     name: "WifiResTarget_neo",
     vendor: true,
 }
+
+runtime_resource_overlay {
+    name: "WifiResTargetMainline_neo",
+    manifest: "AndroidGoogleManifest.xml",
+    vendor: true,
+}
