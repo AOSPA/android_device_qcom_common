@@ -18,6 +18,13 @@ runtime_resource_overlay {
 }
 
 runtime_resource_overlay {
+    name: "WifiResTarget_ukee",
+    manifest: "AndroidManifest-ukee.xml",
+    resource_dirs : ["cape/res"],
+    vendor: true,
+}
+
+runtime_resource_overlay {
     name: "WifiResTargetMainline_taro",
     manifest: "AndroidGoogleManifest.xml",
     vendor: true,
@@ -33,6 +40,13 @@ runtime_resource_overlay {
 runtime_resource_overlay {
     name: "WifiResTargetMainline_cape",
     manifest: "AndroidGoogleManifest-cape.xml",
+    resource_dirs : ["cape/res"],
+    vendor: true,
+}
+
+runtime_resource_overlay {
+    name: "WifiResTargetMainline_ukee",
+    manifest: "AndroidGoogleManifest-ukee.xml",
     resource_dirs : ["cape/res"],
     vendor: true,
 }
