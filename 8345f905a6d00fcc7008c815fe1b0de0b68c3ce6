@@ -33,6 +33,23 @@
       "message": "ngl, feels more like the repo is device_qcom_bengal at this point.",
       "revId": "8345f905a6d00fcc7008c815fe1b0de0b68c3ce6",
       "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "a31f8e05_9961fea6",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000760
+      },
+      "writtenOn": "2024-02-25T15:32:08Z",
+      "side": 1,
+      "message": "no offence but it feels like we\u0027re trying to move towards a bengal centric repo",
+      "revId": "8345f905a6d00fcc7008c815fe1b0de0b68c3ce6",
+      "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
     }
   ]
 }
