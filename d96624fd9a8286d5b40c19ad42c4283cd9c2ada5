@@ -33,6 +33,23 @@
       "message": "this makes no sense, also 1-2 was chosen to be inline with pmqos request cpus in the audio driver",
       "revId": "d96624fd9a8286d5b40c19ad42c4283cd9c2ada5",
       "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "65878c38_892f90eb",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000012
+      },
+      "writtenOn": "2024-02-25T09:52:26Z",
+      "side": 1,
+      "message": "I agree with Adithya.  The reasoning in the commit message does apply to why we don\u0027t use 0-7, but it does not apply any more to 0-1 than it does to 1-2.",
+      "revId": "d96624fd9a8286d5b40c19ad42c4283cd9c2ada5",
+      "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
     }
   ]
 }
