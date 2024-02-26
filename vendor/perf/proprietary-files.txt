@@ -1,15 +1,17 @@
+# IRQBalance from LA.VENDOR.13.2.6.r1-01200-KAILUA.0
+vendor/bin/msm_irqbalance|057fba01bad6fa18877315ad1f0dc647c85c62e6
+
 vendor/bin/hw/vendor.qti.hardware.iop@2.0-service
 vendor/bin/hw/vendor.qti.hardware.perf2-hal-service
-vendor/bin/hw/vendor.qti.hardware.servicetracker@1.2-service
+vendor/bin/hw/vendor.qti.hardware.servicetrackeraidl-service
 vendor/bin/hw/vendor.qti.memory.pasrmanager-service
 vendor/bin/hw/vendor.qti.psiclient@1.0-service
-vendor/bin/msm_irqbalance
 vendor/bin/poweropt-service
 vendor/bin/vendor.qti.qspmhal-service
 vendor/etc/init/poweropt-service.rc
 vendor/etc/init/vendor.qti.hardware.iop@2.0-service.rc
 vendor/etc/init/vendor.qti.hardware.perf2-hal-service.rc
-vendor/etc/init/vendor.qti.hardware.servicetracker@1.2-service.rc
+vendor/etc/init/vendor.qti.hardware.servicetrackeraidl-service.rc
 vendor/etc/init/vendor.qti.memory.pasrmanager-service.rc
 vendor/etc/init/vendor.qti.psiclient@1.0-service.rc
 vendor/etc/init/vendor.qti.qspmhal-service.rc
@@ -17,9 +19,9 @@ vendor/etc/seccomp_policy/qspm.policy
 vendor/etc/vintf/manifest/vendor.qti.hardware.perf2.xml
 vendor/etc/vintf/manifest/vendor.qti.hardware.power.powermodule.xml
 vendor/etc/vintf/manifest/vendor.qti.qspmhal-service.xml
-vendor/etc/vintf/manifest/vendor.qti.hardware.servicetracker@1.2-service.xml
+vendor/etc/vintf/manifest/vendor.qti.hardware.servicetrackeraidl-service.xml
 vendor/etc/vintf/manifest/vendor.qti.memory.pasrmanager-service.xml
-vendor/lib64/hw/vendor.qti.hardware.servicetracker@1.2-impl.so
+vendor/lib64/hw/vendor.qti.hardware.servicetrackeraidl-impl.so
 vendor/lib64/hw/vendor.qti.memory.pasrmanager-impl.so
 vendor/lib64/libadaptlaunch.so
 vendor/lib64/libaodoptfeature.so
@@ -68,6 +70,9 @@ vendor/lib64/vendor.qti.hardware.perf@2.2.so
 vendor/lib64/vendor.qti.hardware.perf@2.3.so
 vendor/lib64/vendor.qti.hardware.perf2-V1-ndk.so
 vendor/lib64/vendor.qti.hardware.power.powermodule-V1-ndk.so
+vendor/lib64/vendor.qti.hardware.servicetracker@1.0.so
+vendor/lib64/vendor.qti.hardware.servicetracker@1.1.so
+vendor/lib64/vendor.qti.hardware.servicetrackeraidl-V1-ndk.so
 vendor/lib64/vendor.qti.memory.pasrmanager@1.0.so
 vendor/lib64/vendor.qti.memory.pasrmanager@1.1.so
 vendor/lib64/vendor.qti.memory.pasrmanager-V1-ndk.so
