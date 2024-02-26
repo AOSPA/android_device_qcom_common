@@ -12,6 +12,7 @@
 <!--follow the number format rules while specifying number, can be given
     in any format-->
 
+<!-- MIUI ADD: Performance_BoostFramework -->
 <BoostConfigs>
     <PerfBoost>
 
@@ -67,14 +68,6 @@
                        0x42804000, 0x0, 0x43498000, 4224000,
                        0x4349C000, 2035200, 0x434A0000, 1066000,
                        0X43C20000, 4096" />
-
-    <!-- camera postprocess tunings-->
-        <!-- MPCTLV3_CPUCTL_CAMERA_CPUSHARE,          4096 -->
-
-        <!-- Type="202", Camera Postprocess Boost -->
-        <Config
-            Id="0x00001081" Type="202" Enable="true" Timeout="10000" Target="pineapple"
-            Resources="0X43C24000, 4096"/>
 
     <!--app lauch boost (disabling packing)-->
 
@@ -524,7 +517,7 @@
 
         <Config
             Id="0x00001090" Enable="true" Timeout="1000" Target="pineapple"
-            Resources="0x40800100, 1000, 0x42804000, 0" />
+            Resources="0x40800100, 1000, 0x4280C000, 680" />
 
     <!--Performance mode-->
         <!-- UCLAMP_BOOST -->
@@ -537,11 +530,19 @@
         <!-- LPM_BIAS_HYST resource opcode, value-->
         <!-- DISABLE_PASR, value-->
         <!-- SCHED_MIN_TASK_UTIL_FOR_UCLAMP, value-->
+        <!-- LLCC resource opcode, value-->
+        <!-- MPCTLV3_SCHED_FMAX_CAP_BIG resource opcode, value-->
+        <!-- MPCTLV3_SCHED_FMAX_CAP_LITTLE resource opcode, value-->
+        <!-- MPCTLV3_SCHED_FMAX_CAP_PRIME resource opcode, value-->
+        <!-- MPCTLV3_SCHED_FMAX_CAP_TITANIUM resource opcode, value-->
+        <!-- MPCTLV3_SCHED_MAX_FREQ_PARTIAL_HALT resource opcode, value-->
         <!-- Type="", Performance mode -->
         <Config
             Id="0x00001091" Enable="true" Target="pineapple"
-            Resources="0x40CAC000, 20, 0x40CA4000, 2, 0x40800000, 1555, 0x40800100, 800, 0x40800200, 1670,
-                       0x40800300, 1555, 0x40C74000, 0xFF, 0x40408000, 0x63, 0x42C1C000, 1, 0x40CFC000, 0" />
+            Resources="0x40CAC000, 20, 0x40CA4000, 2, 0x40800000, 1785, 0x40800100, 800, 0x40800200, 1670,
+                       0x40800300, 1785, 0x40C74000, 0xFF, 0x40408000, 0x63, 0x42C1C000, 1, 0x40CFC000, 0, 0x4348C000,0x71C50,
+                       0X43C1C000, 0x7FFFFFFF, 0X43C1C100, 0x7FFFFFFF, 0X43C1C200, 0x7FFFFFFF, 0X43C1C300, 0x7FFFFFFF,
+                       0X43C20000, 0x7FFFFFFF" />
 
     <!--Display on Resource -->
         <!-- Display on resource opcode, value -->
@@ -737,19 +738,30 @@
 
         <Config
                 Id="0x00001097" Type="0" Enable="true" Timeout="5000" Target="pineapple" Fps="120"
-                Resources="0x40800000, 1200, 0x42804000, 8" />
+                Resources="0x40800000, 1500, 0x4280C000, 680" />
 
         <Config
                 Id="0x00001097" Type="0" Enable="true" Timeout="5000" Target="pineapple" Fps="144"
-                Resources="0x40800000, 1500, 0x42804000, 0" />
+                Resources="0x40800000, 1500, 0x4280C000, 680" />
 
         <Config
                 Id="0x00001097" Type="0" Enable="true" Timeout="5000" Target="pineapple" Fps="180"
-                Resources="0x40800000, 1500, 0x42804000, 0" />
+                Resources="0x40800000, 1500, 0x4280C000, 680" />
 
         <Config
                 Id="0x00001097" Type="0" Enable="true" Timeout="5000" Target="pineapple" Fps="240"
-                Resources="0x40800000, 1500, 0x42804000, 0" />
+                Resources="0x40800000, 1500, 0x4280C000, 680" />
+
+    <!--HDR Content Hint -->
+        <!-- CPU min freq resource opcode, value -->
+        <!-- PID Affine opcode,value -->
+        <Config
+                Id="0x000010A8" Type="0" Enable="true" Timeout="5000" Target="pineapple" Fps="30, 60, 90"
+                Resources="0x40800000, 500, 0x42C20000, 1" />
+
+        <Config
+                Id="0x000010A8" Type="0" Enable="true" Timeout="5000" Target="pineapple" Fps="120, 144, 180, 240"
+                Resources="0x40800000, 1500, 0x42C20000, 1" />
 
     <!-- Silky Scroll boost -->
         <!-- SCHEDBOOST resource opcode, value-->

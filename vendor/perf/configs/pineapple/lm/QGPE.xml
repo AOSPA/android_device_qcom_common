@@ -78,22 +78,18 @@
             </PREDICTIVE_PROFILE4>
             <!-- MAX_FREQ_CLUSTER_BIG_CORE_0, value-->
             <!-- MAX_FREQ_CLUSTER_PRIME_CORE_0, value-->
-            <!-- MAX_FREQ_CLUSTER_TITANIUM_CORE_0, value-->
             <!-- LLCC_DDR_BW_MAX_FREQ_V2, value-->
             <THERMAL_PROFILE0>
-                0x40804000, 2188,
-                0x40804200, 2188,
-                0x40804300, 2208,
+                0x40804000, 2246,
+                0x40804200, 2342,
                 0x43040000, 2000000
             </THERMAL_PROFILE0>
             <!-- MAX_FREQ_CLUSTER_BIG_CORE_0, value-->
             <!-- MAX_FREQ_CLUSTER_PRIME_CORE_0, value-->
-            <!-- MAX_FREQ_CLUSTER_TITANIUM_CORE_0, value-->
             <!-- LLCC_DDR_BW_MAX_FREQ_V2, value-->
             <THERMAL_PROFILE1>
-                0x40804000, 1958,
-                0x40804200, 1958,
-                0x40804300, 1939,
+                0x40804000, 2035,
+                0x40804200, 2150,
                 0x43040000, 1500000
             </THERMAL_PROFILE1>
         </Profile>

@@ -32,16 +32,25 @@ ________________________________________________________________________________
     <PerfConfigs>
 
                 <!--Vendor Properties -->
-                <Prop Name="vendor.iop.enable_uxe" Value="1" />
+                <!-- MIUI ADD: Performance_BoostFramework -->
+                <Prop Name="vendor.iop.enable_uxe" Value="0" />
+                <!-- END Performance_BoostFramework -->
                 <Prop Name="vendor.debug.enable.lm" Value="true" />
                 <Prop Name="vendor.enable.prefetch" Value="false" />
-                <Prop Name="vendor.iop.enable_speed" Value="true" /> <!--rename to perf-->
+                <!-- MIUI MOD: Performance_BoostFramework -->
+		<Prop Name="vendor.iop.enable_speed" Value="false" /> <!--rename to perf-->
+		<Prop Name="vendor.perf.iop_v3.enable" Value="false" />
                 <!-- AOSPA Edit: Disable IOPd explicitly -->
                 <Prop Name="vendor.iop.enabled" Value="false" />
+                <!-- END Performance_BoostFramework -->
                 <Prop Name="vendor.perf.fps_switch_hyst_time_secs" Value="10" />
-                <Prop Name="ro.vendor.perf.enable.prekill" Value="true" />
+                <!-- MIUI MOD: Performance_BoostFramework -->
+                <Prop Name="ro.vendor.perf.enable.prekill"        Value="false"     />
+                <!-- END Performance_BoostFramework -->
                 <Prop Name="ro.vendor.perf.enable.procomp" Value="true"/>
-                <Prop Name="ro.vendor.perf.enable.prefapps" Value="true" />
+                <!-- MIUI MOD: Performance_BoostFramework -->
+                <Prop Name="ro.vendor.perf.enable.prefapps" Value="false" />
+                <!-- END Performance_BoostFramework -->
                 <Prop Name="vendor.prekill_MIN_ADJ_to_Kill" Value="800"  />
                 <Prop Name="vendor.prekill_MAX_ADJ_to_Kill" Value="1000"  />
                 <Prop Name="ro.vendor.perf.count.prefapps" Value="12" />
@@ -57,20 +66,27 @@ ________________________________________________________________________________
                 <Prop Name="ro.vendor.perf.lgl" Value="false" Target="pineapple" SkewType="10"/>
 
                 <!--System Properties -->
-                <Prop Name="ro.lmk.kill_heaviest_task_dup" Value="true" />
-                <Prop Name="ro.lmk.kill_timeout_ms_dup" Value="100" />
-                <Prop Name="ro.lmk.thrashing_threshold" Value="30" />
-                <Prop Name="ro.lmk.thrashing_decay" Value="5" />
-                <Prop Name="ro.lmk.nstrat_low_swap" Value="10" />
-                <Prop Name="ro.lmk.nstrat_psi_partial_ms" Value="70" />
-                <Prop Name="ro.lmk.nstrat_psi_complete_ms" Value="70" />
+                <!--LMKD Properties -->
+                <Prop Name="ro.lmk.enable_userspace_lmk"        Value="true" />
+                <Prop Name="ro.lmk.kill_heaviest_task_dup"      Value="true" />
+                <Prop Name="ro.lmk.enable_preferred_apps"       Value="true" />
+                <Prop Name="ro.lmk.kill_timeout_ms_dup"         Value="100" />
+                <Prop Name="ro.lmk.thrashing_threshold"         Value="30" />
+                <Prop Name="ro.lmk.thrashing_decay"             Value="5" />
+                <Prop Name="ro.lmk.nstrat_low_swap"             Value="10" />
+                <Prop Name="ro.lmk.nstrat_psi_partial_ms"       Value="70" />
+                <Prop Name="ro.lmk.nstrat_psi_complete_ms"      Value="70" />
                 <Prop Name="ro.lmk.psi_scrit_complete_stall_ms" Value="400" />
-                <Prop Name="ro.lmk.nstrat_wmark_boost_factor" Value="4" />
+                <Prop Name="ro.lmk.nstrat_wmark_boost_factor"   Value="2" />
+                <Prop Name="ro.lmk.cache_percent"               Value="10" />
+
                 <Prop Name="vendor.perf.gestureflingboost.enable" Value="true" />
                 <Prop Name="ro.vendor.qti.sys.fw.bg_apps_limit" Value="96" />
                 <Prop Name="ro.vendor.at_library" Value="libqti-at.so" />
+                <!-- MIUI ADD: Performance_AppLaunchEnhance -->
+                <Prop Name="ro.vendor.perf.batch.set.enable" Value="true" />
+                <!-- END Performance_AppLaunchEnhance -->
                 <Prop Name="vendor.perf.performancemode.support" Value="true" Target="pineapple" />
-                <Prop Name="ro.lmk.enable_preferred_apps" Value="true" />
                 <Prop Name="vendor.appcompact.enable_app_compact" Value="false" />
                 <Prop Name="vendor.appcompact.full_compact_type" Value="2" />
                 <Prop Name="vendor.appcompact.some_compact_type" Value="4" />
@@ -83,14 +99,19 @@ ________________________________________________________________________________
                 <Prop Name="vendor.appcompact.rss_throttle_kb" Value="12000" />
                 <Prop Name="vendor.appcompact.delta_rss_throttle_kb" Value="8000" />
                 <Prop Name="vendor.perf.topAppRenderThreadBoost.enable" Value="false" Target="pineapple" />
-                <Prop Name="ro.lmk.enable_userspace_lmk" Value="true" />
-                <Prop Name="vendor.perf.phr.enable" Value="0" Target="pineapple"/>
+                <!-- MIUI MOD: Touch_MIUITouchFrame -->
+                <Prop Name="vendor.perf.phr.enable" Value="1" Target="pineapple"/>
                 <Prop Name="vendor.perf.phr.hr_min_rate" Value="0.5" Target="pineapple"/>
-                <Prop Name="vendor.perf.pfar2.enable" Value="0" Target="pineapple"/>
-                <Prop Name="vendor.perf.pfar2.boost_level" Value="3" Target="pineapple"/>
+                <Prop Name="vendor.perf.pfar2.enable" Value="1" Target="pineapple"/>
+                <Prop Name="vendor.perf.pfar2.boost_level" Value="1" Target="pineapple"/>
+                <Prop Name="vendor.perf.pfar2.disable_pl" Value="1" Target="pineapple"/>
+                <Prop Name="vendor.perf.pfar2.disable_core_ctl" Value="1" Target="pineapple"/>
+                <!-- END Touch_MIUITouchFrame -->
                 <Prop Name="ro.vendor.perf.splh" Value="none" Target="pineapple" />
                 <Prop Name="ro.vendor.perf.qhf" Value="true" Target="pineapple"/>
+                <!-- MIUI MOD: Touch_MIUITouchFrame -->
                 <Prop Name="ro.vendor.perf.qgpe" Value="false" Target="pineapple"/>
+                <!-- END Touch_MIUITouchFrame -->
                 <Prop Name="ro.vendor.perf.qape" Value="true" Target="pineapple"/>
                 <Prop Name="ro.vendor.perf.qape.boost_duration" Value="10" />
                 <Prop Name="ro.vendor.perf.qape.max_boost_count" Value="3" />
