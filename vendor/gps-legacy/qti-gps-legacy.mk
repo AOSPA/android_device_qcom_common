@@ -24,6 +24,10 @@ LOC_HIDL_VERSION := 4.3
 # Inherit the GPS HAL.
 $(call inherit-product-if-exists, hardware/qcom/gps/gps_vendor_product.mk)
 
+# Manifest
+DEVICE_MANIFEST_FILE += \
+    $(QCOM_COMMON_PATH)/vendor/gps-legacy/qcc-manifest.xml
+
 # Overlays
 PRODUCT_PACKAGES += \
     QCOMGPSFrameworksOverlay
