@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "a61ae70f_5e0ba8a0",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000579
+      },
+      "writtenOn": "2024-02-27T07:01:00Z",
+      "side": 1,
+      "message": "https://git.codelinaro.org/clo/la/device/qcom/qssi/-/blob/LA.QSSI.14.0.r1-12100-qssi.0/base.mk?ref_type\u003dtags#L151",
+      "revId": "82ec6ed502f64ebff7a9a268ea34bfc5f7e934b5",
+      "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
+    }
+  ]
+}
