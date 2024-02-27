@@ -16,6 +16,24 @@
       "message": "@jake@aospa.co If you get time please check and make sure ximi didn\u0027t add checks for hyperos/miui in their blobs. Kalama had it:\n* ANDR-PERF-TARGET-INIT: ANDR-PERF-TARGET-INIT: InitializeTarget() 275: rom is not miui_version",
       "revId": "98b5681a0d45d0f93edbf35402e4fe3894e383da",
       "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "395bf1a5_f4800456",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000012
+      },
+      "writtenOn": "2024-02-27T02:13:40Z",
+      "side": 1,
+      "message": "no results for miui in the strings",
+      "parentUuid": "c8f44b45_6493a0eb",
+      "revId": "98b5681a0d45d0f93edbf35402e4fe3894e383da",
+      "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
     }
   ]
 }
