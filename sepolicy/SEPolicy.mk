@@ -4,7 +4,7 @@ ifeq ($(TARGET_SEPOLICY_DIR),)
     TARGET_SEPOLICY_DIR := $(TARGET_BOARD_PLATFORM)
 endif
 
-ifeq (,$(filter sdm845 sdm710 sdm660 msm8937 msm8953 msm8998, $(TARGET_BOARD_PLATFORM)))
+ifeq (,$(filter sdm845 sdm710 sdm660 msm8953 msm8998, $(TARGET_BOARD_PLATFORM)))
     BOARD_VENDOR_SEPOLICY_DIRS += \
         $(COMMON_SEPOLICY_PATH)/generic/vendor/common \
         $(COMMON_SEPOLICY_PATH)/qva/vendor/common \
