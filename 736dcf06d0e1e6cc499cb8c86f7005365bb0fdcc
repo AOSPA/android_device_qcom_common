@@ -34,6 +34,23 @@
       "parentUuid": "92534ef6_91dafeaf",
       "revId": "736dcf06d0e1e6cc499cb8c86f7005365bb0fdcc",
       "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "678e70c1_b6eef380",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000984
+      },
+      "writtenOn": "2024-03-01T17:39:35Z",
+      "side": 1,
+      "message": "fixed offline charging for me, no idea how but thanks :D",
+      "revId": "736dcf06d0e1e6cc499cb8c86f7005365bb0fdcc",
+      "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
     }
   ]
 }
