@@ -49,7 +49,7 @@ PRODUCT_PACKAGES += \
     ueventd.qcom.rc
 
 # Charger
-ifneq ($(TARGET_USE_HIDL_QTI_HEALTH),true)
+ifeq ($(TARGET_USE_HIDL_QTI_HEALTH),true)
 PRODUCT_COPY_FILES += \
     $(QCOM_COMMON_PATH)/vendor/init/init.charger_service.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/init.charger_service.rc
 endif
