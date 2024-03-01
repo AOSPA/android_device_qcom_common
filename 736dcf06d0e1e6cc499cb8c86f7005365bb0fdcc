@@ -16,6 +16,24 @@
       "message": "fuck off outta here with this commit message",
       "revId": "736dcf06d0e1e6cc499cb8c86f7005365bb0fdcc",
       "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "84783238_6d64c354",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000890
+      },
+      "writtenOn": "2024-03-01T17:36:52Z",
+      "side": 1,
+      "message": "It is the truth. Missing that conditional operator change broke offline charging here. Correcting it partially fixed it here. Not the first time something he did broke things for others. I don\u0027t mind removing that sentence but it is indeed the truth.",
+      "parentUuid": "92534ef6_91dafeaf",
+      "revId": "736dcf06d0e1e6cc499cb8c86f7005365bb0fdcc",
+      "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
     }
   ]
 }
