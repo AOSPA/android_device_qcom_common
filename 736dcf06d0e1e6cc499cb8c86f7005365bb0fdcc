@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "92534ef6_91dafeaf",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000012
+      },
+      "writtenOn": "2024-03-01T14:04:37Z",
+      "side": 1,
+      "message": "fuck off outta here with this commit message",
+      "revId": "736dcf06d0e1e6cc499cb8c86f7005365bb0fdcc",
+      "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
+    }
+  ]
+}
