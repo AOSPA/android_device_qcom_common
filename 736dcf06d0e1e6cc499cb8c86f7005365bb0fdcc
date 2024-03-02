@@ -51,6 +51,24 @@
       "message": "fixed offline charging for me, no idea how but thanks :D",
       "revId": "736dcf06d0e1e6cc499cb8c86f7005365bb0fdcc",
       "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "fcb6343a_8557f676",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000579
+      },
+      "writtenOn": "2024-03-02T03:54:46Z",
+      "side": 1,
+      "message": "pinning the blame on single person when nocr exists is dumb. chris often takes the initiative so it also happens that when things do go wrong he is involved somewhere. The changes are on gerrit for quite some time but usually remain untested by the masses where things usually slip by. Unless you are willing to take the responsibility do everything he does and never break anything, get the fuck out with this toxicity.",
+      "parentUuid": "84783238_6d64c354",
+      "revId": "736dcf06d0e1e6cc499cb8c86f7005365bb0fdcc",
+      "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
     }
   ]
 }
