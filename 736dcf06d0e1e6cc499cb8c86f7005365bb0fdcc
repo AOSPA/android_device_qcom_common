@@ -69,6 +69,24 @@
       "parentUuid": "84783238_6d64c354",
       "revId": "736dcf06d0e1e6cc499cb8c86f7005365bb0fdcc",
       "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "65a73d9e_893a868d",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000012
+      },
+      "writtenOn": "2024-03-02T03:59:00Z",
+      "side": 1,
+      "message": "if I could +2 Omkar\u0027s comment, I would, but sadly Gerrit only does code review, not comment review.",
+      "parentUuid": "fcb6343a_8557f676",
+      "revId": "736dcf06d0e1e6cc499cb8c86f7005365bb0fdcc",
+      "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
     }
   ]
 }
