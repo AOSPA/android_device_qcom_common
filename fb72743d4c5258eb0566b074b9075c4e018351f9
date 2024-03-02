@@ -16,6 +16,23 @@
       "message": "while i agree that this is unintended, it also means that there is a breakage somewhere in the device, as charger service isn\u0027t called with aidl health, instead its replaced with vendor.charger service",
       "revId": "fb72743d4c5258eb0566b074b9075c4e018351f9",
       "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "4dbb1cfa_8d455ca4",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 3
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000730
+      },
+      "writtenOn": "2024-03-02T17:34:16Z",
+      "side": 1,
+      "message": "guys, let\u0027s discuss this in #components like civilized people we are, unless it\u0027s been already resolved",
+      "revId": "fb72743d4c5258eb0566b074b9075c4e018351f9",
+      "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
     }
   ]
 }
