@@ -167,7 +167,7 @@ on property:sys.boot_completed=1
     start kernel-boot
     start kernel-post-boot
 
-on charger
+on property:init.svc.vendor.charger=running
     start kernel-post-boot
 
 service vendor.msm_irqbalance /vendor/bin/msm_irqbalance -f /system/vendor/etc/msm_irqbalance.conf
