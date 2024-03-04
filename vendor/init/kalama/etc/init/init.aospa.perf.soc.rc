@@ -19,9 +19,9 @@ on property:vendor.post_boot.parsed=1
     setprop dalvik.vm.dex2oat-threads 6
 
     # CPUFreq
-    write /sys/devices/system/cpu/cpufreq/policy0/schedutil/up_rate_limit_us 500
-    write /sys/devices/system/cpu/cpufreq/policy0/schedutil/down_rate_limit_us 20000
-    write /sys/devices/system/cpu/cpufreq/policy4/schedutil/up_rate_limit_us 1000
-    write /sys/devices/system/cpu/cpufreq/policy4/schedutil/down_rate_limit_us 10000
-    write /sys/devices/system/cpu/cpufreq/policy7/schedutil/up_rate_limit_us 2000
-    write /sys/devices/system/cpu/cpufreq/policy7/schedutil/down_rate_limit_us 5000
+    write /sys/devices/system/cpu/cpufreq/policy0/walt/up_rate_limit_us 500
+    write /sys/devices/system/cpu/cpufreq/policy0/walt/down_rate_limit_us 20000
+    write /sys/devices/system/cpu/cpufreq/policy4/walt/up_rate_limit_us 1000
+    write /sys/devices/system/cpu/cpufreq/policy4/walt/down_rate_limit_us 10000
+    write /sys/devices/system/cpu/cpufreq/policy7/walt/up_rate_limit_us 2000
+    write /sys/devices/system/cpu/cpufreq/policy7/walt/down_rate_limit_us 5000
