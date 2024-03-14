@@ -61,7 +61,8 @@ PRODUCT_VENDOR_PROPERTIES += \
     persist.vendor.radio.apm_sim_not_pwdn=1 \
     persist.vendor.radio.custom_ecc=1 \
     persist.vendor.radio.procedure_bytes=SKIP \
-    persist.vendor.radio.sib16_support=1
+    persist.vendor.radio.sib16_support=1 \
+    persist.vendor.ssr.restart_level=ALL_ENABLE
 
 ifeq ($(call is-board-platform-in-list, $(3_18_FAMILY) $(4_4_FAMILY) $(4_9_FAMILY)),true)
 PRODUCT_VENDOR_PROPERTIES += \
