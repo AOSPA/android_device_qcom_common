@@ -14,6 +14,7 @@
 
 # Packages
 PRODUCT_PACKAGES += \
+    android.hardware.bluetooth.audio-impl \
     android.hardware.bluetooth@1.1.vendor \
     audio.bluetooth.default \
     com.dsi.ant@1.0.vendor \
@@ -26,7 +27,6 @@ PRODUCT_PACKAGES += \
 
 ifeq ($(TARGET_USE_AIDL_QTI_BT_AUDIO),true)
 PRODUCT_PACKAGES += \
-    android.hardware.bluetooth.audio-impl \
     android.hardware.bluetooth.audio-V3-ndk.vendor \
     vendor.qti.hardware.bluetooth.audio-V1-ndk.vendor
 else
