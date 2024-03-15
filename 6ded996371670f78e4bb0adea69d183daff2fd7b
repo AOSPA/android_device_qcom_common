@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "f91d2cfd_987a10aa",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000488
+      },
+      "writtenOn": "2024-03-15T03:28:07Z",
+      "side": 1,
+      "message": "I\u0027m kinda tired with this.\nTry a kernel which is as inline as possible with CLO.\nCheck for all the functionalities including deepsleep with our existing platform commits.\nIf it still doesn\u0027t work properly, then fix the kernel.\n\nAt this point, this is not qcom/bengal specific, it feels like spes specific only.",
+      "revId": "6ded996371670f78e4bb0adea69d183daff2fd7b",
+      "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
+    }
+  ]
+}
