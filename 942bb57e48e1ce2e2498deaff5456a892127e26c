@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "6056f2ed_ea7f6618",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000488
+      },
+      "writtenOn": "2024-03-15T11:06:03Z",
+      "side": 1,
+      "message": "would be nicer if we remove it completely and follow init.rc in system/core.",
+      "revId": "942bb57e48e1ce2e2498deaff5456a892127e26c",
+      "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
+    }
+  ]
+}
