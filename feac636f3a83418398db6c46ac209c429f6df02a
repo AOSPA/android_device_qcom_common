@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "b988f227_a4e55eb6",
+        "filename": "vendor/perf/configs/common/perf/exceptionrecoveryconfig.xml",
+        "patchSetId": 3
+      },
+      "lineNbr": 14,
+      "author": {
+        "id": 1000012
+      },
+      "writtenOn": "2024-03-18T15:43:34Z",
+      "side": 1,
+      "message": "the changes here probably aren\u0027t necessary.  not sure if we need this file at all.",
+      "revId": "feac636f3a83418398db6c46ac209c429f6df02a",
+      "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "d34adcad_9d1a9e61",
+        "filename": "vendor/perf/configs/pineapple/perf/perfconfigstore.xml",
+        "patchSetId": 3
+      },
+      "lineNbr": 35,
+      "author": {
+        "id": 1000012
+      },
+      "writtenOn": "2024-03-18T15:43:34Z",
+      "side": 1,
+      "message": "we should consider reverting the changes in this file",
+      "revId": "feac636f3a83418398db6c46ac209c429f6df02a",
+      "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
+    }
+  ]
+}

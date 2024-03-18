@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "f8757333_8e466f40",
+        "filename": "vendor/perf/configs/bengal/perf/targetresourceconfigs.xml",
+        "patchSetId": 3
+      },
+      "lineNbr": 151,
+      "author": {
+        "id": 1000012
+      },
+      "writtenOn": "2024-03-18T15:43:34Z",
+      "side": 0,
+      "message": "whitespace",
+      "revId": "2d1ea83d5844b3d265cd3361d92a7036d86c6913",
+      "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
+    }
+  ]
+}
