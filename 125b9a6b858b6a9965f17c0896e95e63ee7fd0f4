@@ -16,6 +16,24 @@
       "message": "you want me to remove the new line?",
       "revId": "125b9a6b858b6a9965f17c0896e95e63ee7fd0f4",
       "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "90084ea3_083bd24d",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 4
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000890
+      },
+      "writtenOn": "2024-03-19T06:20:16Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "1a39c760_3b7b88d8",
+      "revId": "125b9a6b858b6a9965f17c0896e95e63ee7fd0f4",
+      "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
     }
   ]
 }
