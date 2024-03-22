@@ -202,6 +202,12 @@ PRODUCT_COPY_FILES += \
     device/qcom/qssi/qti_whitelist.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/sysconfig/qti_whitelist.xml \
     device/qcom/qssi/qti_whitelist_system_ext.xml:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/sysconfig/qti_whitelist_system_ext.xml
 
+# TODO(b/330696629) remove this once device can drop HIDL.
+# This adds hwservicemanager and the allocator service to the device.
+PRODUCT_PACKAGES += \
+    hwservicemanager \
+    android.hidl.allocator@1.0-service
+
 # Trusted User Interface
 PRODUCT_PACKAGES += \
     android.hidl.memory.block@1.0.vendor
