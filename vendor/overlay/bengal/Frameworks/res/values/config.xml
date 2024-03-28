@@ -70,9 +70,6 @@
    <string name="config_wlan_network_service_package" translatable="false">vendor.qti.iwlan</string>
    <string name="config_qualified_networks_service_package" translatable="false">vendor.qti.iwlan</string>
 
-   <dimen name="rounded_corner_radius">20dp</dimen>
-   <dimen name="rounded_corner_content_padding">0dp</dimen>
-
     <!-- List of biometric sensors on the device, in decreasing strength. Consumed by AuthService
          when registering authenticators with BiometricService. Format must be ID:Modality:Strength,
          where: IDs are unique per device, Modality as defined in BiometricAuthenticator.java,

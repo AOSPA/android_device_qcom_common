@@ -65,9 +65,6 @@
         <item>"/system/lib64/libsurfaceflinger.so"</item>
     </string-array>
 
-    <dimen name="rounded_corner_radius">20dp</dimen>
-    <dimen name="rounded_corner_content_padding">0dp</dimen>
-
     <!-- Whether a software navigation bar should be shown. NOTE: in the future this may be
         autodetected from the Configuration. -->
     <bool name="config_showNavigationBar">true</bool>

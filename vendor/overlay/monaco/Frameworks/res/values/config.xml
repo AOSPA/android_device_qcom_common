@@ -28,6 +28,4 @@
     IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE
 -->
 <resources>
-   <dimen name="rounded_corner_radius">20dp</dimen>
-   <dimen name="rounded_corner_content_padding">0dp</dimen>
 </resources>
