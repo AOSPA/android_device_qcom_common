@@ -47,10 +47,6 @@
          during initialization when the setting is still null. -->
     <bool name="config_dozeAlwaysOnEnabled">false</bool>
 
-    <!-- Needed for Rounded corner (RC) enablement. -->
-    <dimen name="rounded_corner_radius">20dp</dimen>
-    <dimen name="rounded_corner_content_padding">0dp</dimen>
-
     <!-- Whether the device has the standalone (SA) mode of 5G NR enabled.-->
     <bool name="config_telephony5gStandalone">true</bool>
     <!-- Whether the device has the non-standalone (NSA) mode of 5G NR enabled.-->

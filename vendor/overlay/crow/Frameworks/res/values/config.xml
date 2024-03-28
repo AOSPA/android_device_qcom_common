@@ -43,10 +43,6 @@
          during initialization when the setting is still null. -->
     <bool name="config_dozeAlwaysOnEnabled">false</bool>
 
-    <!-- Needed for Rounded corner (RC) enablement. -->
-    <dimen name="rounded_corner_radius">20dp</dimen>
-    <dimen name="rounded_corner_content_padding">0dp</dimen>
-
     <!-- Default list of files pinned by the Pinner Service -->
     <string-array translatable="false" name="config_defaultPinnerServiceFiles">
 

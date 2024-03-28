@@ -58,20 +58,6 @@
    <string name="config_wlan_network_service_package" translatable="false">vendor.qti.iwlan</string>
    <string name="config_qualified_networks_service_package" translatable="false">vendor.qti.iwlan</string>
 
-   <dimen name="rounded_corner_radius">20dp</dimen>
-   <dimen name="rounded_corner_content_padding">0dp</dimen>
-   <string translatable="false" name="config_mainBuiltInDisplayCutout">
-     M 0,0
-     L -28, 0
-     L -24.3940446283, 16.0595537175
-     C -23.5582133885, 24.4178661152 -19.6, 90.0 -11.2, 90.0
-     L 11.2, 90.0
-     C 19.6, 90.0 23.5582133885, 24.4178661152 24.3940446283, 16.0595537175
-     L 28, 0
-     Z
-   </string>
-   <bool name="config_fillMainBuiltInDisplayCutout">true</bool>
-
     <!-- List of biometric sensors on the device, in decreasing strength. Consumed by AuthService
          when registering authenticators with BiometricService. Format must be ID:Modality:Strength,
          where: IDs are unique per device, Modality as defined in BiometricAuthenticator.java,

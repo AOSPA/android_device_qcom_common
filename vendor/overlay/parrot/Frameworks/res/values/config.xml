@@ -45,8 +45,6 @@
         <item>"/system/framework/arm64/boot-framework.oat"</item>
     </string-array>
 
-    <dimen name="rounded_corner_radius">20dp</dimen>
-    <dimen name="rounded_corner_content_padding">0dp</dimen>
     <!-- When true use the linux /dev/input/event subsystem to detect the switch changes
     on the headphone/microphone jack. When false use the older uevent framework -->
     <bool name="config_useDevInputEventForAudioJack">true</bool>
