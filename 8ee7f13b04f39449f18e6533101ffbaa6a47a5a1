@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "7812f8ce_8a081c5d",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000890
+      },
+      "writtenOn": "2024-04-01T23:18:53Z",
+      "side": 1,
+      "message": "Would this change force the developer to address a rule for logdump even if they don’t use it for metadata?",
+      "revId": "8ee7f13b04f39449f18e6533101ffbaa6a47a5a1",
+      "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
+    }
+  ]
+}
