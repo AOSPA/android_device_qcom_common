@@ -47,7 +47,6 @@
 /dev/block/platform/soc/7824900.sdhci/by-name/boot                  u:object_r:boot_block_device:s0
 /dev/block/platform/soc/7824900.sdhci/by-name/recovery              u:object_r:recovery_block_device:s0
 /dev/block/platform/soc/7824900.sdhci/by-name/cache                 u:object_r:cache_block_device:s0
-/dev/block/platform/soc/7824900.sdhci/by-name/logdump               u:object_r:logdump_partition:s0
 /dev/block/platform/soc/7824900.sdhci/by-name/super                 u:object_r:super_block_device:s0
 /dev/block/platform/soc/7824900.sdhci/by-name/persist               u:object_r:persist_block_device:s0
 
