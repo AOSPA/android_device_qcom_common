@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "9bf22a6c_1fc1ad76",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000012
+      },
+      "writtenOn": "2024-04-02T11:44:44Z",
+      "side": 1,
+      "message": "can you do for the other socs too just to be consistent?",
+      "revId": "800e3e0be7be9b8e4e726c6a9cc6cfd76c046bdf",
+      "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
+    }
+  ]
+}
