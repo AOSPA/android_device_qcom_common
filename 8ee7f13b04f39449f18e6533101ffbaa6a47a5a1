@@ -16,6 +16,24 @@
       "message": "Would this change force the developer to address a rule for logdump even if they don’t use it for metadata?",
       "revId": "8ee7f13b04f39449f18e6533101ffbaa6a47a5a1",
       "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "38c2dd04_f925caa5",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000429
+      },
+      "writtenOn": "2024-04-02T00:35:27Z",
+      "side": 1,
+      "message": "only for msm8937 devices. and only msm8937 based that is officially supported right now is sdm439.",
+      "parentUuid": "7812f8ce_8a081c5d",
+      "revId": "8ee7f13b04f39449f18e6533101ffbaa6a47a5a1",
+      "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
     }
   ]
 }
