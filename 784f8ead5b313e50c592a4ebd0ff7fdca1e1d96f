@@ -16,6 +16,24 @@
       "message": "https://github.com/AOSPA/android_device_xiaomi_alioth/blob/f2177142cad23cd33e981df48c131014a0719d77/overlay/AliothFrameworks/res/values/config.xml#L467 alioth has it in-tree alongside most other devices",
       "revId": "784f8ead5b313e50c592a4ebd0ff7fdca1e1d96f",
       "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "a413cbda_4292f3a3",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000463
+      },
+      "writtenOn": "2024-04-02T11:59:55Z",
+      "side": 1,
+      "message": "somehow it seems to be not overriding. I also had it on my dt.",
+      "parentUuid": "bd7faabd_7d1a2100",
+      "revId": "784f8ead5b313e50c592a4ebd0ff7fdca1e1d96f",
+      "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
     }
   ]
 }
