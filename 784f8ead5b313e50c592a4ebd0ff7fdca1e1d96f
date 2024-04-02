@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "bd7faabd_7d1a2100",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000579
+      },
+      "writtenOn": "2024-04-02T07:41:00Z",
+      "side": 1,
+      "message": "https://github.com/AOSPA/android_device_xiaomi_alioth/blob/f2177142cad23cd33e981df48c131014a0719d77/overlay/AliothFrameworks/res/values/config.xml#L467 alioth has it in-tree alongside most other devices",
+      "revId": "784f8ead5b313e50c592a4ebd0ff7fdca1e1d96f",
+      "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
+    }
+  ]
+}
