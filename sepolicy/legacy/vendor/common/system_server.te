@@ -55,7 +55,7 @@ allow system_server bluetooth:unix_stream_socket connectto;
 unix_socket_send(system_server, iop, dumpstate)
 unix_socket_connect(system_server, iop, dumpstate)
 
-hal_client_domain(system_server, hal_srvctracker)
+hal_client_domain(system_server, vendor_hal_srvctracker)
 
 # allow  system/framework applications to update the dpmd configuration files
 #unix_socket_connect(system_server, dpmd, dpmd);

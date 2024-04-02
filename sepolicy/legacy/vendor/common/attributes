@@ -114,10 +114,6 @@ attribute hal_wifilearner;
 attribute hal_wifilearner_client;
 attribute hal_wifilearner_server;
 
-attribute hal_srvctracker;
-attribute hal_srvctracker_client;
-attribute hal_srvctracker_server;
-
 attribute hal_fm;
 attribute hal_fm_client;
 attribute hal_fm_server;
