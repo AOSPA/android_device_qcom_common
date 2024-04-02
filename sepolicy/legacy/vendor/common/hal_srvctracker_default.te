@@ -28,17 +28,17 @@
 #Define Domain
 type vendor_hal_srvctracker_default, domain;
 type vendor_hal_srvctracker_default_exec, exec_type, vendor_file_type, file_type;
-hal_server_domain(vendor_hal_srvctracker_default, hal_srvctracker)
+hal_server_domain(vendor_hal_srvctracker_default, vendor_hal_srvctracker)
 init_daemon_domain(vendor_hal_srvctracker_default)
 
-binder_call(hal_srvctracker_client, hal_srvctracker_server)
-binder_call(hal_srvctracker_server, hal_srvctracker_client)
+binder_call(vendor_hal_srvctracker_client, vendor_hal_srvctracker_server)
+binder_call(vendor_hal_srvctracker_server, vendor_hal_srvctracker_client)
 
-add_hwservice(hal_srvctracker, vendor_hal_srvctracker_hwservice)
+add_hwservice(vendor_hal_srvctracker, vendor_hal_srvctracker_hwservice)
 hal_attribute_service(vendor_hal_srvctracker, vendor_hal_servicetrackeraidl_service)
 binder_call(vendor_hal_srvctracker_server, servicemanager)
 
-allow hal_srvctracker_client vendor_hal_srvctracker_hwservice:hwservice_manager find;
-hwbinder_use(hal_srvctracker)
+allow vendor_hal_srvctracker_client vendor_hal_srvctracker_hwservice:hwservice_manager find;
+allow vendor_hal_srvctracker hwservicemanager:binder call;
 
 get_prop(vendor_hal_srvctracker_default, hwservicemanager_prop)
