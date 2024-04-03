@@ -47,6 +47,7 @@ need to be added just before the end of it's major group. -->
         <Minor OpcodeValue="0x1" Node="/sys/module/msm_performance/parameters/cpu_max_freq" />
         <Minor OpcodeValue="0x2" Node="/sys/devices/system/cpu/cpufreq/policy0/walt/adaptive_low_freq" />
         <Minor OpcodeValue="0x3" Node="/sys/devices/system/cpu/cpufreq/policy0/walt/adaptive_high_freq" />
+        <Minor OpcodeValue="0x4" Node="/sys/devices/system/cpu/cpufreq/policy0/scaling_min_freq" Supported="no" />
     <!-- cpufreq major end -->
 
     <!-- sched major start -->
@@ -127,9 +128,9 @@ need to be added just before the end of it's major group. -->
         <Minor OpcodeValue="0x0" Node="SPECIAL_NODE - lock_min_cores" />
         <Minor OpcodeValue="0x1" Node="SPECIAL_NODE - lock_max_cores" />
         <Minor OpcodeValue="0x2" Node="/sys/devices/system/cpu/cpu0/core_ctl/enable" />
-        <Minor OpcodeValue="0x3" Node="/sys/devices/system/cpu/cpu3/core_ctl/not_preferred" />
-        <Minor OpcodeValue="0x5" Node="/sys/devices/system/cpu/cpu5/core_ctl/offline_delay_ms" />
-        <Minor OpcodeValue="0x4" Node="/sys/devices/system/cpu/cpu5/core_ctl/min_partial_cpus" />
+        <Minor OpcodeValue="0x3" Node="/sys/devices/system/cpu/cpu0/core_ctl/not_preferred" />
+        <Minor OpcodeValue="0x5" Node="/sys/devices/system/cpu/cpu0/core_ctl/offline_delay_ms" />
+        <Minor OpcodeValue="0x4" Node="/sys/devices/system/cpu/cpu0/core_ctl/min_partial_cpus" />
     <!-- core hotplug major end-->
 
     <!-- interactive major start -->
@@ -229,6 +230,7 @@ need to be added just before the end of it's major group. -->
         <Minor OpcodeValue="0xA" Node="SPECIAL_NODE - apply_value" />
         <Minor OpcodeValue="0xB" Node="/sys/class/kgsl/kgsl-3d0/idle_timer" />
         <Minor OpcodeValue="0xC" Node="/sys/class/kgsl/kgsl-3d0/min_clock_mhz" />
+        <Minor OpcodeValue="0xD" Node="/sys/class/kgsl/kgsl-3d0/touch_wake" />
     <!-- gpu major end -->
 
     <!-- misc major start -->

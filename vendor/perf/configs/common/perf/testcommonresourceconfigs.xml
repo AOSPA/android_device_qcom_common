@@ -64,6 +64,7 @@ Cluster 2=> Prime
         <Minor OpcodeValue="0x1" Cluster="1" WVal="1478" RVal="1478400" />
         <Minor OpcodeValue="0x2" WVal="0xDF4" RVal="3572" />
         <Minor OpcodeValue="0x3" WVal="0xFFA" RVal="4090" />
+        <Minor OpcodeValue="0x4" WVal="" RVal="" /> <!-- not supported -->
     <!-- cpufreq major end -->
 
     <!-- sched major start -->
@@ -247,6 +248,7 @@ Cluster 2=> Prime
         <Minor OpcodeValue="0xA" Exception="Node is QESDK-SEC Protected, Should be tested by that." />
         <Minor OpcodeValue="0xB" WVal="32" RVal="32" />
         <Minor OpcodeValue="0xC" WVal="440" Rval="450" />
+        <Minor OpcodeValue="0xD" WVal="" Rval="" /> <!-- not supported -->
     <!-- gpu major end -->
 
     <!-- misc major start -->
@@ -367,6 +369,10 @@ Cluster 2=> Prime
         <Minor OpcodeValue="0x4" WVal="0x12C" RVal="300" />
         <Minor OpcodeValue="0x5" WVal="0xDC" RVal="220" />
         <Minor OpcodeValue="0x6" WVal="2" RVal="2" />
+        <Minor OpcodeValue="0x7" Cluster="0" WVal="0x208500" RVal="2131200" />
+        <Minor OpcodeValue="0x8" WVal="0x208500" RVal="2131200" />
+        <Minor OpcodeValue="0x9" Cluster="0" WVal="40" RVal="40" />
+        <Minor OpcodeValue="0xA" Cluster="0" WVal="50" RVal="50" />
     <!-- sched2 major end -->
 
     </PerfResources>

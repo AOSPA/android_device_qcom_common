@@ -25,6 +25,18 @@
         <LIGHTLOAD_STABLE_TIMER>5000</LIGHTLOAD_STABLE_TIMER>
    </Configs>
     <Profiles>
+      <Profile target = "cliffs">
+        <!-- config_enableDefault -->
+            <!-- ALL_ALLOW_DISPLAY_OFF -->
+            <!-- MPCTLV3_LLCC_DDR_BW_SAMPLE_MS -->
+            <!-- MPCTLV3_SCHEDUTIL_PREDICTIVE_LOAD_CLUSTER_LITTLE -->
+            <!-- MPCTLV3_SCHEDUTIL_PREDICTIVE_LOAD_CLUSTER_BIG -->
+            <!-- MPCTLV3_SCHED_IDLE_ENOUGH -->
+            <!-- MPCTLV3_SCHED_EM_INFLATE_PCT -->
+            <!-- MPCTLV3_SCHED_EM_INFLATE_THRES -->
+            <!-- MPCTLV3_SCHED_GROUP_UP_DOWN_MIGRATE, value -->
+          <DEFAULT>0x42C28000, 0x1, 0x43034000, 0xA, 0x41444100, 0, 0x41444000, 0, 0x43C0C000, 0x50, 0X43C10000, 300, 0X43C14000, 173, 0x40CE0000, 0x0032000A, 0x40CE0300, 0x00550050</DEFAULT>
+      </Profile>
         <Profile>
         <!-- config_enableDefault -->
             <!-- ALL_ALLOW_DISPLAY_OFF -->
@@ -37,8 +49,7 @@
             <!-- MPCTLV3_SCHED_GROUP_UP_DOWN_MIGRATE, value -->
             <!-- MPCTLV3_CORE_CTL_MIN_PARTIAL_CPUS_TITANIUM, value -->
             <!-- MPCTLV3_CORE_CTL_ENABLE_TITANIUM, value -->
-            <DEFAULT>0x42C28000, 0x1, 0x43034000, 0xA, 0x41444100, 0, 0x41444000, 0, 0x43C0C000, 0x50, 0X43C10000, 300, 0X43C14000, 173, 0x40CE0000, 0x0032000A, 0x40CE0300, 0x00550050,
-            0x41010300, 0, 0x41008300, 0, 0x41008300, 1</DEFAULT>
-        </Profile>
+          <DEFAULT>0x42C28000, 0x1, 0x43034000, 0xA, 0x41444100, 0, 0x41444000, 0, 0x43C0C000, 0x50, 0X43C10000, 300, 0X43C14000, 173, 0x40CE0000, 0x0032000A, 0x40CE0300, 0x00550050, 0x41010300, 0, 0x41008300, 0, 0x41008300, 1</DEFAULT>
+      </Profile>  
     </Profiles>
 </Feature>

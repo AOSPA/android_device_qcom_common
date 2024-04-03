@@ -22,9 +22,9 @@
     <Libname>libqapesdk.so</Libname>
     <Profiles>
         <Profile>
-            <!-- SCHED_WINDOW_TICKS_UPDATE -->
+            <!-- SCHED_WINDOW_TICKS_UPDATE, BUS_DCVS_MEMLAT_SAMPLE_MS -->
             <RENDER_RATE>
-                0x40CA4000,0
+                0x40CA4000,0,0x43468000,0
             </RENDER_RATE>
             <!-- SLB -->
             <LOAD_RATE_CPU>
@@ -64,6 +64,45 @@
             </PIPELINE_NUMBER>
         </Profile>
     </Profiles>
+
+    <Meters>
+        <SamplesRequired>4</SamplesRequired>
+        <Meter>
+            <Name>Gpu</Name>
+            <Triggers>
+                <Trigger>
+                   <Primary>true</Primary>
+                   <AsyncId>VENDOR_HINT_ACTIVITY_START</AsyncId>
+                   <AsyncType>-1</AsyncType>
+                </Trigger>
+                <Trigger>
+                    <Primary>true</Primary>
+                    <AsyncId>VENDOR_HINT_ACTIVITY_PAUSE</AsyncId>
+                    <AsyncType>-1</AsyncType>
+                </Trigger>
+                <Trigger>
+                    <Primary>true</Primary>
+                    <AsyncId>VENDOR_HINT_ACTIVITY_RESUME</AsyncId>
+                    <AsyncType>-1</AsyncType>
+                </Trigger>
+                <Trigger>
+                   <Primary>true</Primary>
+                   <AsyncId>VENDOR_HINT_ACTIVITY_STOP</AsyncId>
+                   <AsyncType>-1</AsyncType>
+                </Trigger>
+            </Triggers>
+
+            <Configs>
+                <GPU_AVAILABLE_FREQUENCIES>/sys/class/kgsl/kgsl-3d0/gpu_available_frequencies</GPU_AVAILABLE_FREQUENCIES>
+                <GPU_CLOCK_STATS>/sys/class/kgsl/kgsl-3d0/gpu_clock_stats</GPU_CLOCK_STATS>
+                <GPU_CLK>/sys/class/kgsl/kgsl-3d0/gpuclk</GPU_CLK>
+                <GPU_BUSY_PERCENTAGE>/sys/class/kgsl/kgsl-3d0/gpu_busy_percentage</GPU_BUSY_PERCENTAGE>
+                <GPU_MAX_CLK>/sys/class/kgsl/kgsl-3d0/max_gpuclk</GPU_MAX_CLK>
+            </Configs>
+            <Samples>100</Samples>
+        </Meter>
+    </Meters>
+
     <Triggers>
         <Trigger>
            <Primary>true</Primary>
@@ -142,6 +181,9 @@
          <!--Package Name="com.miHoYo.GenshinImpact" NumThreads="3" /> Genshin USA -->
          <!--Package Name="com.miHoYo.hkrpg" NumThreads="3" />  StarRail -->
         <!--Package Name="com.netease.pm02" NumThreads="3" />  Tianyu -->
+        <Package target="pineapple" Name="com.tencent.tmgp.pubgmhd" NumThreads="2" /> <!-- GP -->
+        <Package target="pineapple" Name="com.tencent.tmgp.pubgmhd" FPS="90" NumThreads="3" /> <!-- GP90 -->
+        <Package target="cliffs" Name="com.tencent.tmgp.pubgmhd" NumThreads="3" /> <!-- GP -->
     </PipelinedPackages>
     <IgnoredApps>
         <App>com.google.android.gms</App>

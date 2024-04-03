@@ -38,10 +38,10 @@ ________________________________________________________________________________
                 <Prop Name="vendor.debug.enable.lm" Value="true" />
                 <Prop Name="vendor.enable.prefetch" Value="false" />
                 <!-- MIUI MOD: Performance_BoostFramework -->
-		<Prop Name="vendor.iop.enable_speed" Value="false" /> <!--rename to perf-->
-		<Prop Name="vendor.perf.iop_v3.enable" Value="false" />
+                <Prop Name="vendor.iop.enable_speed" Value="false" /> <!--rename to perf-->
                 <!-- AOSPA Edit: Disable IOPd explicitly -->
                 <Prop Name="vendor.iop.enabled" Value="false" />
+                <Prop Name="vendor.perf.iop_v3.enable" Value="false" />
                 <!-- END Performance_BoostFramework -->
                 <Prop Name="vendor.perf.fps_switch_hyst_time_secs" Value="10" />
                 <!-- MIUI MOD: Performance_BoostFramework -->
@@ -60,10 +60,10 @@ ________________________________________________________________________________
                 <Prop Name="vendor.debug.enable.memperfd"         Value="true"     />
                 <Prop Name="vendor.enable.memperfd_MIN_RAM_in_KB" Value="1048576"  />
                 <Prop Name="vendor.enable.memperfd_MAX_RAM_in_KB" Value="4000000" />
-                <Prop Name="ro.vendor.perf.ss" Value="false" Target="pineapple"/>
-                <Prop Name="ro.vendor.perf.ssv2" Value="false" Target="pineapple"/>
-                <Prop Name="ro.vendor.perf.lal" Value="false" Target="pineapple"/>
-                <Prop Name="ro.vendor.perf.lgl" Value="false" Target="pineapple" SkewType="10"/>
+                <Prop Name="ro.vendor.perf.ss" Value="false" Target="pineapple,cliffs"/>
+                <Prop Name="ro.vendor.perf.ssv2" Value="false" Target="pineapple,cliffs"/>
+                <Prop Name="ro.vendor.perf.lal" Value="false" Target="pineapple,cliffs"/>
+                <Prop Name="ro.vendor.perf.lgl" Value="false" Target="pineapple,cliffs" SkewType="10"/>
 
                 <!--System Properties -->
                 <!--LMKD Properties -->
@@ -81,12 +81,13 @@ ________________________________________________________________________________
                 <Prop Name="ro.lmk.cache_percent"               Value="10" />
 
                 <Prop Name="vendor.perf.gestureflingboost.enable" Value="true" />
-                <Prop Name="ro.vendor.qti.sys.fw.bg_apps_limit" Value="96" />
+                <Prop Name="ro.vendor.qti.sys.fw.bg_apps_limit" Value="96"/>
+                <Prop Name="ro.vendor.qti.sys.fw.bg_apps_limit" Value="60"       Ram="8"           Target="cliffs"/>
                 <Prop Name="ro.vendor.at_library" Value="libqti-at.so" />
                 <!-- MIUI ADD: Performance_AppLaunchEnhance -->
                 <Prop Name="ro.vendor.perf.batch.set.enable" Value="true" />
                 <!-- END Performance_AppLaunchEnhance -->
-                <Prop Name="vendor.perf.performancemode.support" Value="true" Target="pineapple" />
+                <Prop Name="vendor.perf.performancemode.support" Value="true" Target="pineapple,cliffs" />
                 <Prop Name="vendor.appcompact.enable_app_compact" Value="false" />
                 <Prop Name="vendor.appcompact.full_compact_type" Value="2" />
                 <Prop Name="vendor.appcompact.some_compact_type" Value="4" />
@@ -98,26 +99,39 @@ ________________________________________________________________________________
                 <Prop Name="vendor.appcompact.compact_throttle_persistent" Value="600000" />
                 <Prop Name="vendor.appcompact.rss_throttle_kb" Value="12000" />
                 <Prop Name="vendor.appcompact.delta_rss_throttle_kb" Value="8000" />
-                <Prop Name="vendor.perf.topAppRenderThreadBoost.enable" Value="false" Target="pineapple" />
+                <Prop Name="vendor.perf.topAppRenderThreadBoost.enable" Value="false" Target="pineapple,cliffs" />
                 <!-- MIUI MOD: Touch_MIUITouchFrame -->
-                <Prop Name="vendor.perf.phr.enable" Value="1" Target="pineapple"/>
-                <Prop Name="vendor.perf.phr.hr_min_rate" Value="0.5" Target="pineapple"/>
-                <Prop Name="vendor.perf.pfar2.enable" Value="1" Target="pineapple"/>
-                <Prop Name="vendor.perf.pfar2.boost_level" Value="1" Target="pineapple"/>
+                <Prop Name="vendor.perf.phr.enable" Value="1" Target="pineapple,cliffs"/>
+                <Prop Name="vendor.perf.phr.hr_min_rate" Value="0.5" Target="pineapple,cliffs"/>
+                <Prop Name="vendor.perf.pfar2.enable" Value="1" Target="pineapple,cliffs"/>
+                <Prop Name="vendor.perf.pfar2.boost_level" Value="1" Target="pineapple,cliffs"/>
                 <Prop Name="vendor.perf.pfar2.disable_pl" Value="1" Target="pineapple"/>
                 <Prop Name="vendor.perf.pfar2.disable_core_ctl" Value="1" Target="pineapple"/>
                 <!-- END Touch_MIUITouchFrame -->
-                <Prop Name="ro.vendor.perf.splh" Value="none" Target="pineapple" />
-                <Prop Name="ro.vendor.perf.qhf" Value="true" Target="pineapple"/>
+                <Prop Name="ro.vendor.perf.splh" Value="none" Target="pineapple,cliffs" />
+                <Prop Name="ro.vendor.perf.qhf" Value="true" Target="pineapple,cliffs"/>
                 <!-- MIUI MOD: Touch_MIUITouchFrame -->
-                <Prop Name="ro.vendor.perf.qgpe" Value="false" Target="pineapple"/>
+                <Prop Name="ro.vendor.perf.qgpe" Value="false" Target="pineapple,cliffs"/>
                 <!-- END Touch_MIUITouchFrame -->
-                <Prop Name="ro.vendor.perf.qape" Value="true" Target="pineapple"/>
+                <Prop Name="ro.vendor.perf.qape" Value="true" Target="pineapple,cliffs"/>
                 <Prop Name="ro.vendor.perf.qape.boost_duration" Value="10" />
                 <Prop Name="ro.vendor.perf.qape.max_boost_count" Value="3" />
                 <Prop Name="ro.vendor.perf.qape.max_pipeline_number" Value="4" />
                 <Prop Name="vendor.perf.bgt.enable" Value="true" />
                 <Prop Name="ro.vendor.perf.sagt" Value="true"/>
+                <Prop Name="ro.vendor.qti.sys.fw.use_trim_settings"            Value="true"                  Target="cliffs"/>
+                <Prop Name="ro.vendor.qti.sys.fw.empty_app_percent"            Value="50"                    Target="cliffs"/>
+                <Prop Name="ro.vendor.qti.sys.fw.trim_empty_percent"           Value="100"                   Target="cliffs"/>
+                <Prop Name="ro.vendor.qti.sys.fw.trim_cache_percent"           Value="100"                   Target="cliffs"/>
+                <Prop Name="ro.vendor.qti.sys.fw.trim_enable_memory"           Value="4294967296"            Target="cliffs"/>
+                <Prop Name="ro.vendor.qti.am.reschedule_service"               Value="true"                  Target="cliffs"/>
+                <Prop Name="ro.vendor.qti.sys.fw.bservice_age"                 Value="300000"                Target="cliffs"/>
+                <Prop Name="ro.vendor.qti.sys.fw.bservice_age"                 Value="5000"   Ram="3"        Target="cliffs"/>
+                <Prop Name="ro.vendor.qti.sys.fw.bservice_age"                 Value="5000"   Ram="4"        Target="cliffs"/>
+                <Prop Name="ro.vendor.qti.sys.fw.bservice_limit"               Value="15"                    Target="cliffs"/>
+                <Prop Name="ro.vendor.qti.sys.fw.bservice_limit"               Value="5"      Ram="3"        Target="cliffs"/>
+                <Prop Name="ro.vendor.qti.sys.fw.bservice_limit"               Value="5"      Ram="4"        Target="cliffs"/>
+                <Prop Name="ro.vendor.qti.sys.fw.bservice_enable"              Value="true"                  Target="cliffs"/>
 
     </PerfConfigs>
 </PerfConfigsStore>
