@@ -33,6 +33,7 @@ as anyway perflock calls of these resources would fail. -->
         <Config MajorValue="0x2" MinorValue="0x1" Node="/sys/kernel/msm_performance/parameters/cpu_max_freq" /> <!-- cpu_max_freq -->
         <Config MajorValue="0x2" MinorValue="0x2" Node="/sys/devices/system/cpu/cpufreq/policy0/walt/adaptive_low_freq" />
         <Config MajorValue="0x2" MinorValue="0x3" Node="/sys/devices/system/cpu/cpufreq/policy0/walt/adaptive_high_freq" />
+        <Config MajorValue="0x2" MinorValue="0x4" Supported="yes" Target="cliffs" />
         <Config MajorValue="0x3" MinorValue="0x0" Node="/proc/sys/walt/sched_boost" />
         <Config MajorValue="0x3" MinorValue="0x2" Supported="no" /> <!-- sched_migration_cost_ns -->
         <Config MajorValue="0x3" MinorValue="0x3" Supported="no" /> <!-- sched_small_task -->
@@ -86,26 +87,26 @@ as anyway perflock calls of these resources would fail. -->
         <Config MajorValue="0x5" MinorValue="0x13" Node="/sys/devices/system/cpu/cpu0/cpufreq/walt/rtg_boost_freq" />
 
          <!-- CPU_LLCC_BW major old opcodes unsupported-->
-        <Config MajorValue="0x6" MinorValue="0x0" Supported="no" Target="pineapple" />
-        <Config MajorValue="0x6" MinorValue="0x1" Supported="no" Target="pineapple" />
-        <Config MajorValue="0x6" MinorValue="0x2" Supported="no" Target="pineapple" />
-        <Config MajorValue="0x6" MinorValue="0x3" Supported="no" Target="pineapple" />
-        <Config MajorValue="0x6" MinorValue="0x4" Supported="no" Target="pineapple" />
-        <Config MajorValue="0x6" MinorValue="0x5" Supported="no" Target="pineapple" />
-        <Config MajorValue="0x6" MinorValue="0x6" Supported="no" Target="pineapple" />
-        <Config MajorValue="0x6" MinorValue="0x7" Supported="no" Target="pineapple" />
-        <Config MajorValue="0x6" MinorValue="0x8" Supported="no" Target="pineapple" />
-        <Config MajorValue="0x6" MinorValue="0x9" Supported="no" Target="pineapple" />
+        <Config MajorValue="0x6" MinorValue="0x0" Supported="no" />
+        <Config MajorValue="0x6" MinorValue="0x1" Supported="no" />
+        <Config MajorValue="0x6" MinorValue="0x2" Supported="no" />
+        <Config MajorValue="0x6" MinorValue="0x3" Supported="no" />
+        <Config MajorValue="0x6" MinorValue="0x4" Supported="no" />
+        <Config MajorValue="0x6" MinorValue="0x5" Supported="no" />
+        <Config MajorValue="0x6" MinorValue="0x6" Supported="no" />
+        <Config MajorValue="0x6" MinorValue="0x7" Supported="no" />
+        <Config MajorValue="0x6" MinorValue="0x8" Supported="no" />
+        <Config MajorValue="0x6" MinorValue="0x9" Supported="no" />
         <!-- CPU_LLCC_BW major new opcodes-->
-        <Config MajorValue="0x6" MinorValue="0xA" Supported="no" Target="pineapple" />
-        <Config MajorValue="0x6" MinorValue="0xB" Node="/sys/devices/system/cpu/bus_dcvs/LLCC/240b7400.qcom,bwmon-llcc/up_scale" Target="pineapple" />
+        <Config MajorValue="0x6" MinorValue="0xA" Supported="no" />
+        <Config MajorValue="0x6" MinorValue="0xB" Node="/sys/devices/system/cpu/bus_dcvs/LLCC/240b7400.qcom,bwmon-llcc/up_scale" />
         <Config MajorValue="0x6" MinorValue="0xC" Supported="no" />
-        <Config MajorValue="0x6" MinorValue="0xD" Node="/sys/devices/system/cpu/bus_dcvs/LLCC/240b7400.qcom,bwmon-llcc/io_percent" Target="pineapple" />
-        <Config MajorValue="0x6" MinorValue="0xE" Node="/sys/devices/system/cpu/bus_dcvs/LLCC/240b7400.qcom,bwmon-llcc" Target="pineapple" />
-        <Config MajorValue="0x6" MinorValue="0xF" Node="/sys/devices/system/cpu/bus_dcvs/LLCC/240b7400.qcom,bwmon-llcc/sample_ms" Target="pineapple" />
-        <Config MajorValue="0x6" MinorValue="0x10" Node="/sys/devices/system/cpu/bus_dcvs/LLCC/240b7400.qcom,bwmon-llcc/window_ms" Target="pineapple" />
-        <Config MajorValue="0x6" MinorValue="0x11" Node="/sys/devices/system/cpu/bus_dcvs/LLCC/240b7400.qcom,bwmon-llcc/min_freq" Target="pineapple" />
-        <Config MajorValue="0x6" MinorValue="0x12" Node="/sys/devices/system/cpu/bus_dcvs/LLCC/240b7400.qcom,bwmon-llcc/max_freq" Target="pineapple" />
+        <Config MajorValue="0x6" MinorValue="0xD" Node="/sys/devices/system/cpu/bus_dcvs/LLCC/240b7400.qcom,bwmon-llcc/io_percent" />
+        <Config MajorValue="0x6" MinorValue="0xE" Node="/sys/devices/system/cpu/bus_dcvs/LLCC/240b7400.qcom,bwmon-llcc" />
+        <Config MajorValue="0x6" MinorValue="0xF" Node="/sys/devices/system/cpu/bus_dcvs/LLCC/240b7400.qcom,bwmon-llcc/sample_ms" />
+        <Config MajorValue="0x6" MinorValue="0x10" Node="/sys/devices/system/cpu/bus_dcvs/LLCC/240b7400.qcom,bwmon-llcc/window_ms" />
+        <Config MajorValue="0x6" MinorValue="0x11" Node="/sys/devices/system/cpu/bus_dcvs/LLCC/240b7400.qcom,bwmon-llcc/min_freq" />
+        <Config MajorValue="0x6" MinorValue="0x12" Node="/sys/devices/system/cpu/bus_dcvs/LLCC/240b7400.qcom,bwmon-llcc/max_freq" />
 
         <Config MajorValue="0xA" MinorValue="0x5" Supported="no" />
         <Config MajorValue="0xA" MinorValue="0x6" Supported="no" />
@@ -114,31 +115,31 @@ as anyway perflock calls of these resources would fail. -->
 
         <Config MajorValue="0xB" MinorValue="0x2" Node="/proc/sys/walt/input_boost/input_boost_freq" />
         <Config MajorValue="0xB" MinorValue="0x3" Supported="no" />
-        <Config MajorValue="0xB" MinorValue="0x6" Supported="no" Target="pineapple" /><!-- disable_ppr -->
-        <Config MajorValue="0xB" MinorValue="0xB" Node="SPECIAL_NODE - apply_value" Target="pineapple" />
+        <Config MajorValue="0xB" MinorValue="0x6" Supported="no" /><!-- disable_ppr -->
+        <Config MajorValue="0xB" MinorValue="0xB" Node="SPECIAL_NODE - apply_value" />
 
         <!-- GPU -->
-        <Config MajorValue="0xA" MinorValue="0xA" Node="SPECIAL_NODE - apply_value" Target="pineapple" />
+        <Config MajorValue="0xA" MinorValue="0xA" Node="SPECIAL_NODE - apply_value" />
 
         <!-- LLCC_DDR_BW old opcodes unsupported-->
-        <Config MajorValue="0xC" MinorValue="0x0" Supported="no" Target="pineapple" />
-        <Config MajorValue="0xC" MinorValue="0x1" Supported="no" Target="pineapple" />
-        <Config MajorValue="0xC" MinorValue="0x2" Supported="no" Target="pineapple" />
-        <Config MajorValue="0xC" MinorValue="0x3" Supported="no" Target="pineapple" />
-        <Config MajorValue="0xC" MinorValue="0x4" Supported="no" Target="pineapple" />
+        <Config MajorValue="0xC" MinorValue="0x0" Supported="no" />
+        <Config MajorValue="0xC" MinorValue="0x1" Supported="no" />
+        <Config MajorValue="0xC" MinorValue="0x2" Supported="no" />
+        <Config MajorValue="0xC" MinorValue="0x3" Supported="no" />
+        <Config MajorValue="0xC" MinorValue="0x4" Supported="no" />
          <!-- LLCC_DDR_BW new opcodes-->
-        <Config MajorValue="0xC" MinorValue="0x5" Node="/sys/devices/system/cpu/bus_dcvs/DDR/24091000.qcom,bwmon-ddr/up_scale" Target="pineapple" />
-        <Config MajorValue="0xC" MinorValue="0x6" Supported="no" Target="pineapple" /> <!-- llcc ddr max freq -->
-        <Config MajorValue="0xC" MinorValue="0x7" Node="/sys/devices/system/cpu/bus_dcvs/DDR/24091000.qcom,bwmon-ddr/decay_rate" Target="pineapple" />
-        <Config MajorValue="0xC" MinorValue="0x8" Node="/sys/devices/system/cpu/bus_dcvs/DDR/24091000.qcom,bwmon-ddr/io_percent" Target="pineapple" />
-        <Config MajorValue="0xC" MinorValue="0x9" Node="/sys/devices/system/cpu/bus_dcvs/DDR/24091000.qcom,bwmon-ddr" Target="pineapple" />
-        <Config MajorValue="0xC" MinorValue="0xA" Supported="no" Target="pineapple" />
-        <Config MajorValue="0xC" MinorValue="0xB" Supported="no" Target="pineapple" />
-        <Config MajorValue="0xC" MinorValue="0xC" Node="/sys/devices/system/cpu/bus_dcvs/DDR/24091000.qcom,bwmon-ddr/window_ms" Target="pineapple" />
-        <Config MajorValue="0xC" MinorValue="0xD" Node="/sys/devices/system/cpu/bus_dcvs/DDR/24091000.qcom,bwmon-ddr/sample_ms" Target="pineapple" />
-        <Config MajorValue="0xC" MinorValue="0xE" Node="/sys/devices/system/cpu/bus_dcvs/DDR/24091000.qcom,bwmon-ddr/idle_mbps" Target="pineapple" />
-        <Config MajorValue="0xC" MinorValue="0xF" Node="/sys/devices/system/cpu/bus_dcvs/DDR/24091000.qcom,bwmon-ddr/min_freq" Target="pineapple" />
-        <Config MajorValue="0xC" MinorValue="0x10" Node="/sys/devices/system/cpu/bus_dcvs/DDR/24091000.qcom,bwmon-ddr/max_freq" Target="pineapple" />
+        <Config MajorValue="0xC" MinorValue="0x5" Node="/sys/devices/system/cpu/bus_dcvs/DDR/24091000.qcom,bwmon-ddr/up_scale" />
+        <Config MajorValue="0xC" MinorValue="0x6" Supported="no" /> <!-- llcc ddr max freq -->
+        <Config MajorValue="0xC" MinorValue="0x7" Node="/sys/devices/system/cpu/bus_dcvs/DDR/24091000.qcom,bwmon-ddr/decay_rate" />
+        <Config MajorValue="0xC" MinorValue="0x8" Node="/sys/devices/system/cpu/bus_dcvs/DDR/24091000.qcom,bwmon-ddr/io_percent" />
+        <Config MajorValue="0xC" MinorValue="0x9" Node="/sys/devices/system/cpu/bus_dcvs/DDR/24091000.qcom,bwmon-ddr" />
+        <Config MajorValue="0xC" MinorValue="0xA" Supported="no" />
+        <Config MajorValue="0xC" MinorValue="0xB" Supported="no" />
+        <Config MajorValue="0xC" MinorValue="0xC" Node="/sys/devices/system/cpu/bus_dcvs/DDR/24091000.qcom,bwmon-ddr/window_ms" />
+        <Config MajorValue="0xC" MinorValue="0xD" Node="/sys/devices/system/cpu/bus_dcvs/DDR/24091000.qcom,bwmon-ddr/sample_ms" />
+        <Config MajorValue="0xC" MinorValue="0xE" Node="/sys/devices/system/cpu/bus_dcvs/DDR/24091000.qcom,bwmon-ddr/idle_mbps" />
+        <Config MajorValue="0xC" MinorValue="0xF" Node="/sys/devices/system/cpu/bus_dcvs/DDR/24091000.qcom,bwmon-ddr/min_freq" />
+        <Config MajorValue="0xC" MinorValue="0x10" Node="/sys/devices/system/cpu/bus_dcvs/DDR/24091000.qcom,bwmon-ddr/max_freq" />
         <Config MajorValue="0xC" MinorValue="0x11" Supported="no" />
         <Config MajorValue="0xC" MinorValue="0x12" Supported="no" />
 

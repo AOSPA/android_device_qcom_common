@@ -41,14 +41,20 @@ Cluster 2=> Prime
 <ResourceConfigs>
     <PerfResources>
 		<Config MajorValue="0x1" MinorValue="0x2" WVal="0x63" RVal="99000000" />
+        <Config MajorValue="0x2" MinorValue="0x4" Cluster="0" WVal="480" RVal="480000" Target="cliffs"/>
+        <Config MajorValue="0x3" MinorValue="0x23" WVal="120000000" RVal="120000000" Taregt="cliffs" />
 		<Config MajorValue="0x3" MinorValue="0x3C" Exception="To be tested Manually - Special read Node" />
-        <Config MajorValue="0x4" MinorValue="0x5" Cluster="3" WVal="50" RVal="50" />
-        <Config MajorValue="0x4" MinorValue="0x4" Cluster="3" WVal="0" RVal="0" />
-		<Config MajorValue="0xA" MinorValue="0x0" WVal="1" RVal="1" />
+        <Config MajorValue="0x3" MinorValue="0x36" WVal="145" RVal="145" Target="cliffs" />
+        <Config MajorValue="0x4" MinorValue="0x5" Cluster="3" WVal="50" RVal="50" Target="pineapple"/>
+        <Config MajorValue="0x4" MinorValue="0x5" Cluster="2" WVal="50" RVal="50" Target="cliffs"/>
+        <Config MajorValue="0x4" MinorValue="0x4" Cluster="3" WVal="0" RVal="0" Target="pineapple"/>
+        <Config MajorValue="0x4" MinorValue="0x4" Cluster="2" WVal="0" RVal="0" Target="cliffs"/>
+        <Config MajorValue="0xA" MinorValue="0x0" WVal="1" RVal="1" Target="cliffs"/>
+        <Config MajorValue="0xA" MinorValue="0x3" WVal="353" RVal="353000000" Target="cliffs" />
         <Config MajorValue="0xC" MinorValue="0x10" WVal="0x1FEABF3" RVal="4243000" />
-		<Config MajorValue="0xD" MinorValue="0x26" WVal="60000" RVal="547000" />
-        <Config MajorValue="0xD" MinorValue="0x27" WVal="60000" RVal="307200" />
-        <Config MajorValue="0xD" MinorValue="0x28" WVal="60000" RVal="300000" />
+        <Config MajorValue="0xD" MinorValue="0x26" WVal="600000" RVal="600000" />
+        <Config MajorValue="0xD" MinorValue="0x27" WVal="600000" RVal="600000" />
+        <Config MajorValue="0xD" MinorValue="0x28" WVal="600000" RVal="600000" />
         <Config MajorValue="0xF" MinorValue="0x6" Exception="Node not present on target yet, so avoid testing for now" />
         <Config MajorValue="0xA" MinorValue="0xC" WVal="440" RVal="500" />
     </PerfResources>
