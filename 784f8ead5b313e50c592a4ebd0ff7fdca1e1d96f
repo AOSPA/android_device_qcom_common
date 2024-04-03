@@ -34,6 +34,24 @@
       "parentUuid": "bd7faabd_7d1a2100",
       "revId": "784f8ead5b313e50c592a4ebd0ff7fdca1e1d96f",
       "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "5f4e455b_52482458",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000579
+      },
+      "writtenOn": "2024-04-03T08:22:34Z",
+      "side": 1,
+      "message": "check the partition order",
+      "parentUuid": "a413cbda_4292f3a3",
+      "revId": "784f8ead5b313e50c592a4ebd0ff7fdca1e1d96f",
+      "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
     }
   ]
 }
