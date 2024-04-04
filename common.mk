@@ -164,6 +164,11 @@ PRODUCT_MAX_PAGE_SIZE_SUPPORTED ?= 4096
 # Components
 include $(QCOM_COMMON_PATH)/components.mk
 
+ifneq (,$(filter 3.18 4.4 4.9 4.14 4.19 5.4 5.10 5.15, $(TARGET_KERNEL_VERSION)))
+#Enable AOSP to be page size agnostic
+PRODUCT_NO_BIONIC_PAGE_SIZE_MACRO := true
+endif
+
 # Filesystem
 TARGET_FS_CONFIG_GEN += $(QCOM_COMMON_PATH)/config.fs
 
