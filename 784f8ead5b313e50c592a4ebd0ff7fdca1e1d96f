@@ -52,6 +52,24 @@
       "parentUuid": "a413cbda_4292f3a3",
       "revId": "784f8ead5b313e50c592a4ebd0ff7fdca1e1d96f",
       "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "b04d132d_d2a9b6fd",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000463
+      },
+      "writtenOn": "2024-04-05T12:59:15Z",
+      "side": 1,
+      "message": "I\u0027ll try it again as now I moved my overlays to odm partiton.\nBut what\u0027s the point on keeping a config that breaks a feature for almost devices (if not all of them)",
+      "parentUuid": "5f4e455b_52482458",
+      "revId": "784f8ead5b313e50c592a4ebd0ff7fdca1e1d96f",
+      "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
     }
   ]
 }
