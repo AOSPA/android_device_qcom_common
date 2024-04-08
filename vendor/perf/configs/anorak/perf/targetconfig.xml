@@ -46,7 +46,7 @@
              Target="anorak"
              NumClusters="2"
              TotalNumCores="6"
-             SocIds="549"
+             SocIds="549,649"
              SynCore="1"
              MinCoreOnline="1"
              CpufreqGov="1" />

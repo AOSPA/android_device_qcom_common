@@ -35,8 +35,6 @@ ________________________________________________________________________________
                 <Prop Name="vendor.debug.enable.lm" Value="true" />
                 <Prop Name="vendor.enable.prefetch" Value="false" />
                 <Prop Name="vendor.iop.enable_speed" Value="true" /> <!--rename to perf-->
-                <!-- AOSPA Edit: Disable IOPd explicitly -->
-                <Prop Name="vendor.iop.enabled" Value="false" />
                 <Prop Name="vendor.perf.fps_switch_hyst_time_secs" Value="10" />
                 <Prop Name="ro.vendor.perf.enable.prekill"        Value="true"     />
                 <Prop Name="ro.vendor.perf.enable.procomp" Value="true"/>
