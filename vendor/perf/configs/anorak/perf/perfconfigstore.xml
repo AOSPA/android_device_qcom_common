@@ -56,7 +56,7 @@ property Name is called. -->
                 <Prop Name="ro.lmk.psi_scrit_complete_stall_ms" Value="400" />
                 <Prop Name="ro.lmk.nstrat_wmark_boost_factor" Value="4" />
                 <Prop Name="vendor.perf.gestureflingboost.enable" Value="true" />
-                <Prop Name="ro.vendor.qti.sys.fw.bg_apps_limit" Value="16" />
+                <Prop Name="ro.vendor.qti.sys.fw.bg_apps_limit" Value="96" />
                 <Prop Name="ro.vendor.at_library" Value="libqti-at.so" />
                 <Prop Name="ro.lmk.enable_preferred_apps" Value="true" />
                 <Prop Name="vendor.appcompact.enable_app_compact" Value="true" />
@@ -70,7 +70,6 @@ property Name is called. -->
                 <Prop Name="vendor.appcompact.compact_throttle_persistent" Value="600000" />
                 <Prop Name="vendor.appcompact.rss_throttle_kb" Value="12000" />
                 <Prop Name="vendor.appcompact.delta_rss_throttle_kb" Value="8000" />
-                <Prop Name="ro.lmk.enhance_batch_kill" Value="true" />
 
                 <Prop Name="ro.lmk.enable_userspace_lmk" Value="true" />
                 <Prop Name="vendor.perf.phr.enable" Value="1"/>
@@ -93,5 +92,25 @@ property Name is called. -->
                 <Prop Name="ro.vendor.qti.sys.fw.trim_cache_percent" Value="100"         />
                 <Prop Name="ro.vendor.qti.sys.fw.trim_enable_memory" Value="4294967296"  />
                 <Prop Name="ro.vendor.qti.am.reschedule_service"     Value="true"        />
+                <Prop Name="ro.vendor.qti.sys.fw.bg_apps_limit"      Value="60"          />
+                <Prop Name="ro.vendor.qti.sys.fw.bg_apps_limit"      Value="32"          Ram="4" />
+                <Prop Name="ro.vendor.qti.sys.fw.bg_apps_limit"      Value="32"          Ram="3" />
+
+                <!--Mention all 6GB default properties here -->
+                <Prop Name="ro.vendor.iocgrp.config"                 Value="1"          Ram="6" />
+                <Prop Name="vendor.perf.iop_v3.enable"               Value="false"      Ram="6" />
+                <Prop Name="vendor.iop.enable_speed"                 Value="false"      Ram="6" />
+                <Prop Name="ro.vendor.qti.sys.fw.bservice_age"       Value="300000"     Ram="6" />
+                <Prop Name="ro.vendor.qti.sys.fw.bservice_limit"     Value="15"         Ram="6" />
+                <Prop Name="ro.vendor.qti.sys.fw.bservice_enable"    Value="true"       Ram="6" />
+                <Prop Name="ro.vendor.qti.sys.fw.use_trim_settings"  Value="true"       Ram="6" />
+                <Prop Name="ro.vendor.qti.sys.fw.empty_app_percent"  Value="50"         Ram="6" />
+                <Prop Name="ro.vendor.qti.sys.fw.trim_empty_percent" Value="100"        Ram="6" />
+                <Prop Name="ro.vendor.qti.sys.fw.trim_cache_percent" Value="100"        Ram="6" />
+                <Prop Name="ro.vendor.qti.sys.fw.trim_enable_memory" Value="4294967296" Ram="6" />
+                <Prop Name="ro.vendor.qti.am.reschedule_service"     Value="true"       Ram="6" />
+                <Prop Name="ro.vendor.qti.sys.fw.bg_apps_limit"      Value="60"         Ram="6" />
+                <Prop Name="ro.vendor.perf.enable.procomp"           Value="true"       Ram="6" />
+
     </PerfConfigs>
 </PerfConfigsStore>

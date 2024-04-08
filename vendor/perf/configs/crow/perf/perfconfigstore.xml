@@ -34,7 +34,7 @@ ________________________________________________________________________________
                 <!--Vendor Properties -->
                 <Prop Name="vendor.debug.enable.lm"                            Value="true" />
                 <Prop Name="vendor.perf.test_avc"                              Value="false" />
-                <Prop Name="vendor.perf.fps_switch_hyst_time_secs"             Value="10" />
+                <Prop Name="vendor.perf.fps_switch_hyst_time_secs"             Value="6" />
                 <Prop Name="ro.vendor.perf.gfl.tap_ignore_enable"              Value="true" />
                 <Prop Name="ro.vendor.perf.ss"                                 Value="true" />
                 <Prop Name="ro.vendor.iocgrp.config"                           Value="1" />
