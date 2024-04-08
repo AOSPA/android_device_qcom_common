@@ -46,7 +46,7 @@
              Target="trinket"
              NumClusters="2"
              TotalNumCores="8"
-             SocIds="394"
+             SocIds="394,467,468"
              SynCore="1"
              CoreCtlCpu="4"
              MinCoreOnline="0"

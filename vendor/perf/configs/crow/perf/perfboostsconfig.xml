@@ -184,6 +184,12 @@
             Resources="0x40804000, 0xFFF, 0x40804100, 0xFFF, 0x40804200, 0xFFF,
                        0x40800000, 0xFFF, 0x40800100, 0xFFF, 0x40800200, 0xFFF" />
 
+    <!--Exit app Animation boost -->
+        <!-- CPUBOOST_MIN_FREQ LITTLE Core resource opcode, value-->
+        <Config
+            Id="0x000010A9" Enable="true" Timeout="400"  Fps="60"
+            Resources="0x40800100, 1300" />
+
     <!--Vertical Scroll boost-->
         <!-- CPUBW_MIN_FREQ resource opcode, value-->
         <!-- CPUBOOST_MIN_FREQ BIG CORE resource opcode, value -->
