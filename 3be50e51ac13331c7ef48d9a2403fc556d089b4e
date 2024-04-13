@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "807a6d02_9cdc588f",
+        "filename": "dlkm/Build_external_kernelmodule.mk",
+        "patchSetId": 1
+      },
+      "lineNbr": 188,
+      "author": {
+        "id": 1000579
+      },
+      "writtenOn": "2024-04-13T07:36:30Z",
+      "side": 1,
+      "message": "gonna have to be weary of this",
+      "revId": "3be50e51ac13331c7ef48d9a2403fc556d089b4e",
+      "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
+    }
+  ]
+}
