@@ -1,0 +1,32 @@
+# Copyright (c) 2022-2023 Qualcomm Innovation Center, Inc. All rights reserved.
+# SPDX-License-Identifier: BSD-3-Clause-Clear
+#
+
+# ipc logging char device nodes
+subsystem ipc_logging
+    devname uevent_devpath
+    dirname /dev/ipc_logging
+
+# qdss sysfs node attributes
+/sys/bus/coresight/devices/coresight-tmc-etf       curr_sink       0664   system   system
+/sys/bus/coresight/devices/coresight-tmc-etf       enable_sink     0664   system   system
+/sys/bus/coresight/devices/coresight-tmc-etr       curr_sink       0664   system   system
+/sys/bus/coresight/devices/coresight-tmc-etr       enable_sink     0664   system   system
+/sys/bus/coresight/devices/coresight-tmc-etr       out_mode        0664   system   system
+/sys/bus/coresight/devices/coresight-tpiu          curr_sink       0664   system   system
+/sys/bus/coresight/devices/coresight-tpiu          out_mode        0664   system   system
+/sys/bus/coresight/devices/coresight-stm           enable          0664   system   system
+/sys/bus/coresight/devices/coresight-stm           enable_source   0664   system   system
+/sys/bus/coresight/devices/coresight-hwevent       enable          0664   system   system
+/sys/bus/coresight/devices/coresight-stm           hwevent_enable  0664   system   system
+/sys/bus/coresight/devices/coresight-hwevent       setreg          0664   system   system
+/sys/bus/coresight/devices/coresight-swao-csr      timestamp       0664   system   system
+/sys/bus/coresight/devices/coresight-modem-diag    enable_source   0664   system   system
+/sys/bus/coresight/devices/coresight-tmc-etr1      enable_sink     0664   system   system
+/sys/bus/coresight/devices/coresight-tmc-etr1      out_mode        0664   system   system
+
+# ipc logging char device nodes
+/dev/ipc_logging/*                                                 0400   root     root
+
+# Q2SPI UWB device
+/dev/q2spiuwbtest    0664    uwb    uwb
