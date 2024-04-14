@@ -48,6 +48,12 @@ PRODUCT_PACKAGES += \
     qca6234-service.sh \
     ueventd.qcom.rc
 
+ifneq (,$(filter userdebug, $(TARGET_BUILD_VARIANT)))
+PRODUCT_PACKAGES += \
+    ueventd.qcom.userdebug.rc
+endif
+
+
 # Charger
 ifeq ($(TARGET_USE_HIDL_QTI_HEALTH),true)
 PRODUCT_COPY_FILES += \
