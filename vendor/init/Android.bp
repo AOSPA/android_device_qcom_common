@@ -64,6 +64,13 @@ prebuilt_etc {
     vendor: true,
 }
 
+prebuilt_etc {
+    name: "ueventd.qcom.userdebug.rc",
+    filename: "ueventd.qcom.userdebug.rc",
+    src: "ueventd.qcom.userdebug.rc",
+    vendor: true,
+}
+
 prebuilt_hidl_interfaces {
     name: "hidl_netperftuner_interface",
     interfaces: [
