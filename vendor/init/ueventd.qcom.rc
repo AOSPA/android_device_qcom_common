@@ -1,7 +1,5 @@
 # Copyright (c) 2012-2015, 2017-2021, The Linux Foundation. All rights reserved.
 #
-# Copyright (c) 2022 Qualcomm Innovation Center, Inc. All rights reserved.
-#
 # Redistribution and use in source and binary forms, with or without
 # modification, are permitted provided that the following conditions are met:
 #     * Redistributions of source code must retain the above copyright
@@ -60,6 +58,11 @@
 # OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN
 # IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
+
+#Import rc file
+import /vendor/etc/ueventd.qcom.userdebug.rc
+
+
 # Firmware directory Path
 # Below macro will be read by uevent and path will
 # be added to search path for firmware loading
@@ -86,7 +89,7 @@ subsystem mem_buf_vm
 /dev/ion                  0664   system     system
 /dev/membuf               0664   system     system
 /dev/mem_buf_vm/*         0444   system     system
-/dev/dma_heap/qcom,*      0664   system     system
+/dev/dma_heap/qcom,*      0444   system     system
 /dev/rtc0                 0660   system     system
 /dev/smd0                 0660   system     system
 /dev/smd4                 0660   system     system
@@ -104,6 +107,7 @@ subsystem mem_buf_vm
 /dev/ipa_odl_ctl          0660   radio      radio
 /dev/ipa_adpl             0660   system     oem_2905
 /dev/synx_device          0660   root       camera
+/dev/ubwcp                0660   root       camera
 /dev/hab                  0666   system     system
 /dev/iio:device*          0664   system     system
 /dev/qmc_dma              0660   radio      radio
@@ -187,11 +191,11 @@ subsystem mem_buf_vm
 /dev/cvp*                 0660   system     camera
 /dev/media*               0660   system     camera
 /dev/v4l-subdev*          0660   system     camera
-/dev/hdmi_bdg_irq_handler 0660   system     camera
 /dev/qseecom              0660   system     drmrpc
 /dev/qce                  0660   system     drmrpc
 /dev/smcinvoke            0660   system     drmrpc
 /dev/qsee_ipc_irq_spss    0660   system     drmrpc
+/dev/qti-smmu-proxy       0660   system     system
 /dev/seemplog             0660   system     system
 /dev/pft                  0660   system     drmrpc
 /dev/spcom                0660   system     system
@@ -431,9 +435,6 @@ subsystem mem_buf_vm
 /dev/block/platform/soc/7c4000.sdhci/by-name/frp        0600   system     system
 /dev/block/platform/soc/4744000.sdhci/by-name/frp       0600   system     system
 /dev/block/platform/soc/4804000.ufshc/by-name/frp       0600   system     system
-/dev/block/platform/soc/7c4000.sdhci/by-name/rawdump    0660   root       system
-/dev/block/platform/soc/1d84000.ufshc/by-name/rawdump   0660   root       system
-/dev/block/platform/soc/4804000.ufshc/by-name/rawdump   0600   root       system
 
 # This is temporary while using SD card for initial bring-up
 /dev/block/platform/soc/8804000.sdhci/by-name/frp       0600   system     system
@@ -445,15 +446,21 @@ subsystem mem_buf_vm
 /sys/class/leds/red      delay_on     0640    system    system
 /sys/class/leds/red      delay_off    0640    system    system
 /sys/class/leds/red      breath       0640    system    system
+/sys/class/leds/red      repeat       0640    system    system
+/sys/class/leds/red      hw_pattern   0640    system    system
 /sys/class/leds/red      trigger      0640    system    system
 /sys/class/leds/green    delay_on     0640    system    system
 /sys/class/leds/green    delay_off    0640    system    system
 /sys/class/leds/green    breath       0640    system    system
 /sys/class/leds/green    trigger      0640    system    system
+/sys/class/leds/green    repeat       0640    system    system
+/sys/class/leds/green    hw_pattern   0640    system    system
 /sys/class/leds/blue     delay_on     0640    system    system
 /sys/class/leds/blue     delay_off    0640    system    system
 /sys/class/leds/blue     breath       0640    system    system
 /sys/class/leds/blue     trigger      0640    system    system
+/sys/class/leds/blue     repeat       0640    system    system
+/sys/class/leds/blue     hw_pattern   0640    system    system
 
 # NPU device
 /dev/msm_npu             0644   system     system
@@ -463,8 +470,27 @@ subsystem mem_buf_vm
 /sys/class/dual_role_usb/*	power_role	0660	system	system
 /sys/class/dual_role_usb/*	mode		0660	system	system
 
+/sys/class/typec/port0		data_role	0660	system	usb
+/sys/class/typec/port0		power_role	0660	system	usb
+/sys/class/typec/port0		port_type	0660	system	usb
+/sys/class/typec/port0-partner	accessory_mode	0440	system	usb
+
 # USB Dynamic Disable
 /sys/bus/platform/devices/a600000.ssusb	dynamic_disable	0220	root	usb
+
+# USB autosuspend/wakeup settings
+/sys/bus/usb/devices/*      power/autosuspend          0660  system  usb
+/sys/bus/usb/devices/*      power/autosuspend_delay_ms 0660  system  usb
+/sys/bus/usb/devices/*      power/control              0660  system  usb
+/sys/bus/usb/devices/*      power/wakeup               0660  system  usb
+
+#USB root hub authorize setting
+/sys/bus/usb/devices/usb*   authorized                 0660  system  usb
+
+#USB mode setting
+/sys/bus/platform/devices/a400000.ssusb    mode        0660  system  usb
+/sys/bus/platform/devices/a600000.ssusb    mode        0660  system  usb
+/sys/bus/platform/devices/4e00000.ssusb    mode        0660  system  usb
 
 #Memory Offline
 /sys/devices/system/memory/memory* state    0660 system system
@@ -570,6 +596,8 @@ subsystem mem_buf_vm
 # devcoredump data attributes
 /sys/class/devcoredump/devcd*                           data                            0600    system  system
 
-# hdmi cec hal
-/dev/cec*                                            0660    system  system
-/sys/devices/platform/soc/984000.i2c/i2c-0/0-002b    get_hpd_stat    0660   system   system
+#Virtualization Attributes
+/dev/gunyah                 0666   root     root
+
+# Q2SPI UWB device
+/dev/q2spiuwb    0660    uwb    uwb
