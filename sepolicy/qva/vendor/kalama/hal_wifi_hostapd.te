@@ -1,0 +1,9 @@
+# Copyright (c) 2023 Qualcomm Innovation Center, Inc. All rights reserved.
+# SPDX-License-Identifier: BSD-3-Clause-Clear
+
+# Allow hostapd to connect to qvr using control socket
+allow hal_wifi_hostapd_default vendor_qvrd_vndr:unix_dgram_socket sendto;
+# Allow hostapd to access wpa data folder
+allow hal_wifi_hostapd_default wpa_data_file:dir search;
+# Allow hostapd to attach to wpa socket
+allow hal_wifi_hostapd_default wpa_data_file:sock_file write;
