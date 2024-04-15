@@ -1,0 +1,15 @@
+# Copyright (c) 2023 Qualcomm Innovation Center, Inc. All rights reserved.
+# SPDX-License-Identifier: BSD-3-Clause-Clear
+
+# for mediacodec permission
+type vendor_media_aac_device, dev_type;
+type vendor_media_wma_device, dev_type;
+type vendor_media_wmapro_device, dev_type;
+type vendor_media_evrc_device, dev_type;
+type vendor_media_qcelp_device, dev_type;
+allow mediacodec vendor_media_aac_device:chr_file rw_file_perms;
+allow mediacodec vendor_media_wma_device:chr_file rw_file_perms;
+allow mediacodec vendor_media_wmapro_device:chr_file rw_file_perms;
+allow mediacodec vendor_media_evrc_device:chr_file rw_file_perms;
+allow mediacodec vendor_media_qcelp_device:chr_file rw_file_perms;
+allow mediacodec logdr_socket:sock_file { write };

@@ -1,0 +1,2 @@
+#allow cameraserver to read sys_video_prop
+get_prop(cameraserver, vendor_sys_video_prop)

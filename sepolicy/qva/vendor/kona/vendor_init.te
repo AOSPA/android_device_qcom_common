@@ -1,0 +1,6 @@
+# Copyright (c) 2023 Qualcomm Innovation Center, Inc. All rights reserved.
+# SPDX-License-Identifier: BSD-3-Clause-Clear
+
+#for init
+allow init vendor_sysfs_graphics:file { setattr w_file_perms };
+allow init vendor_spunvm_file:filesystem { unmount };

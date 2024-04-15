@@ -1,0 +1,14 @@
+# Copyright (c) 2023 Qualcomm Innovation Center, Inc. All rights reserved.
+# SPDX-License-Identifier: BSD-3-Clause-Clear
+
+#define cec device
+type vendor_cec_device, dev_type;
+
+#define HDMI-IN device
+type vendor_hdmi_bdg_irq_device, dev_type;
+
+#define msm_lsm char device
+type vendor_msm_lsm_cdev_device, dev_type;
+
+#define aidirector audio device
+type vendor_aid_audio_device, dev_type;

@@ -1,0 +1,7 @@
+# Copyright (c) 2023 Qualcomm Innovation Center, Inc. All rights reserved.
+# SPDX-License-Identifier: BSD-3-Clause-Clear
+
+#for adb pull from data rules
+userdebug_or_eng(`
+    allow adbd system_data_file:file { getattr };
+')

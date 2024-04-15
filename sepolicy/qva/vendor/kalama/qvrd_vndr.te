@@ -1,0 +1,19 @@
+# Copyright (c) 2023 Qualcomm Innovation Center, Inc. All rights reserved.
+# SPDX-License-Identifier: BSD-3-Clause-Clear
+
+#
+# Wi-Fi
+#
+
+# Allow access to wpa data folder
+allow vendor_qvrd_vndr wpa_data_file:dir { add_name remove_name search write };
+# Allow access to attach to wpa socket
+allow vendor_qvrd_vndr wpa_data_file:sock_file { create setattr unlink };
+# Allow access to attach to hostapd socket
+allow vendor_qvrd_vndr hal_wifi_hostapd_default:unix_dgram_socket sendto;
+# Allow access to hostapd data folder
+allow vendor_qvrd_vndr hostapd_data_file:dir search;
+# Allow access to attach to hostapd socket
+allow vendor_qvrd_vndr hostapd_data_file:sock_file write;
+# Allow access to wifi vendor data file
+allow vendor_qvrd_vndr vendor_wifi_vendor_data_file:dir search;

@@ -1,0 +1,2 @@
+#allow use of netmgrd unix sockets
+netmgr_socket(vendor_qmipriod);

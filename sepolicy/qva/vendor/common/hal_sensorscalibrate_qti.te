@@ -1,0 +1,3 @@
+add_hwservice(vendor_hal_sensorscalibrate_qti_server, vendor_hal_sensorscalibrate_qti_hwservice)
+
+allow vendor_hal_sensorscalibrate_qti_client vendor_hal_sensorscalibrate_qti_hwservice:hwservice_manager find;

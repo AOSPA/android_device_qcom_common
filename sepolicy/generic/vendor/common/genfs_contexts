@@ -9,3 +9,13 @@ genfscon sysfs /devices/platform/soc/soc:qcom,pmic_glink/soc:qcom,pmic_glink:qco
 
 # healthd-ext
 genfscon sysfs /devices/platform/soc/soc:qcom,pmic_glink/soc:qcom,pmic_glink:qcom,ucsi/power_supply/ucsi-source-psy-soc:qcom,pmic_glink:qcom,ucsi1 u:object_r:vendor_sysfs_battery_supply:s0
+
+genfscon sysfs /kernel/camera/num_ifes u:object_r:vendor_sysfs_camera:s0
+genfscon sysfs /kernel/camera/num_ife_lites u:object_r:vendor_sysfs_camera:s0
+genfscon sysfs /kernel/camera/num_sfes u:object_r:vendor_sysfs_camera:s0
+genfscon sysfs /kernel/camera/num_sbi u:object_r:vendor_sysfs_camera:s0
+
+# fs ext4
+genfscon sysfs   /fs/ext4/dm-[0-9]+/lifetime_write_kbytes   u:object_r:vendor_sysfs_fs_ext4:s0
+genfscon sysfs   /fs/ext4/sda[0-11]+/lifetime_write_kbytes   u:object_r:vendor_sysfs_fs_ext4:s0
+genfscon sysfs   /fs/ext4/sde[0-11]+/lifetime_write_kbytes   u:object_r:vendor_sysfs_fs_ext4:s0
