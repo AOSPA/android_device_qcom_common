@@ -1,0 +1,5 @@
+# Copyright (c) 2022 Qualcomm Innovation Center, Inc. All rights reserved.
+# SPDX-License-Identifier: BSD-3-Clause-Clear
+
+# Allow imsservice to access generic socket
+allow vendor_ims_service self:netlink_generic_socket create_socket_perms_no_ioctl;

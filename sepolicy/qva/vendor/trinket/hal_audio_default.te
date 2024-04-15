@@ -1,0 +1,9 @@
+# Copyright (c) 2023 Qualcomm Innovation Center, Inc. All rights reserved.
+# SPDX-License-Identifier: BSD-3-Clause-Clear
+
+# for hal_audio_default to device permission
+allow hal_audio_default vendor_audio_cal_device:chr_file rw_file_perms;
+
+# Allow audio hal to communicate with msm_lsm char dev
+allow hal_audio_default vendor_msm_lsm_cdev_device:chr_file rw_file_perms;
+allow hal_audio_default vendor_msm_rtac_device:chr_file rw_file_perms;

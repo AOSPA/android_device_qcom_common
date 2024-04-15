@@ -1,0 +1,24 @@
+# Copyright (c) 2023 Qualcomm Innovation Center, Inc. All rights reserved.
+# SPDX-License-Identifier: BSD-3-Clause-Clear
+
+#Allow base set of permissions for camera hal to be a client of audio hal
+typeattribute hal_camera_default hal_audio_client;
+
+#Allow camera to access hdmi bridge device
+allow hal_camera_default vendor_hdmi_bdg_irq_device:chr_file rw_file_perms;
+
+#Allow camera to read vendor_umd_prop and binder call vendor_hal_umd_qti
+get_prop(hal_camera_default, vendor_umd_prop)
+allow hal_camera_default vendor_hal_umd_qti:binder call;
+
+#Allow audio related and read file permissions
+allow hal_camera_default vendor_aid_audio_device:chr_file rw_file_perms;
+allow hal_camera_default audio_device:dir r_dir_perms;
+get_prop(hal_camera_default, vendor_audio_prop)
+
+#Allow access to /data/vendor/camera
+allow hal_camera_default vendor_camera_data_file:dir { add_name write };
+allow hal_camera_default vendor_camera_data_file:file { create getattr open write };
+
+#Allow accessto vendor display properties
+get_prop(hal_camera_default, vendor_display_prop);
