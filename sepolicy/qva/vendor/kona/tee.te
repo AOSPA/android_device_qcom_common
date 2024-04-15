@@ -1,0 +1,9 @@
+# Copyright (c) 2022-2023 Qualcomm Innovation Center, Inc. All rights reserved.
+# SPDX-License-Identifier: BSD-3-Clause-Clear
+
+#dev permission
+type vendor_dev_tee, dev_type;
+allow tee vendor_gpt_block_device:blk_file r_file_perms;
+allow tee vendor_xbl_block_device:blk_file r_file_perms;
+allow tee boot_block_device:blk_file r_file_perms;
+allow tee vendor_dev_tee:chr_file rw_file_perms;

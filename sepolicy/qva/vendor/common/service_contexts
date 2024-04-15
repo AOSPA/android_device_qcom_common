@@ -1,0 +1,4 @@
+vendor.qti.hardware.power.powermodule.IPowerModule/default     u:object_r:vendor_hal_poweroptservice_service:s0
+android.hardware.drm.IDrmFactory/playready             u:object_r:hal_drm_service:s0
+vendor.qti.hardware.qteeconnector.IAppConnector/default                   u:object_r:vendor_hal_qteeconnector_service:s0
+vendor.qti.hardware.qteeconnector.IGPAppConnector/default                 u:object_r:vendor_hal_qteeconnector_service:s0

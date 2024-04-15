@@ -1,0 +1,2 @@
+binder_call(vendor_tzas_app,vendor_hal_perf_default)
+allow vendor_tzas_app vendor_hal_perf_hwservice:hwservice_manager find;
