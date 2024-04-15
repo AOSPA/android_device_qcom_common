@@ -1,2 +1,6 @@
 allow vendor_qtelephony vendor_hal_datafactory_hwservice:hwservice_manager find;
 binder_call(vendor_qtelephony, vendor_cnd)
+
+#dontaudit for U upgrade since AServiceManager_isDeclared internally does find
+dontaudit vendor_qtelephony default_android_service:service_manager find;
+binder_call(vendor_qtelephony, vendor_hal_imsrtp)

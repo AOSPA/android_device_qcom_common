@@ -1,0 +1,2 @@
+#allow the service to be added to hwservice list
+hal_attribute_hwservice(vendor_hal_qseecom, vendor_hal_qseecom_hwservice)

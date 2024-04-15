@@ -1,0 +1,5 @@
+#/sys/block/dev/sd*
+type vendor_sysfs_sd, sysfs_type, fs_type;
+
+# Swap
+type vendor_proc_swappiness, proc_type, fs_type;

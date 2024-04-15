@@ -1,0 +1,6 @@
+type vendor_hal_poweroptservice_hwservice, hwservice_manager_type, protected_hwservice;
+type vendor_hal_dataconnection_hwservice, hwservice_manager_type, protected_hwservice;
+type vendor_hal_iwlan_hwservice, hwservice_manager_type, protected_hwservice;
+type vendor_hal_display_color_hwservice, hwservice_manager_type, protected_hwservice;
+type vendor_hal_display_postproc_hwservice, hwservice_manager_type, protected_hwservice;
+type vendor_hal_embmssl_hwservice, hwservice_manager_type, protected_hwservice;

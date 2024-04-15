@@ -1,0 +1,5 @@
+# Copyright (c) 2023 Qualcomm Innovation Center, Inc. All rights reserved.
+# SPDX-License-Identifier: BSD-3-Clause-Clear
+
+#mm-video
+persist.vendor.wfd.source.hdmi.enable        u:object_r:vendor_video_prop:s0
