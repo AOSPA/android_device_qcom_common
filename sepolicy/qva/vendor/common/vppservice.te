@@ -1,1 +1,2 @@
 allow vendor_vppservice ion_device:chr_file rw_file_perms;
+hal_attribute_hwservice(vendor_hal_vpp, vendor_hal_vpp_hwservice)

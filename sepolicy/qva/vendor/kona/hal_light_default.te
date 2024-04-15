@@ -1,0 +1,5 @@
+# Copyright (c) 2023 Qualcomm Innovation Center, Inc. All rights reserved.
+# SPDX-License-Identifier: BSD-3-Clause-Clear
+
+# for hal_light_default permission
+allow hal_light_default vendor_sysfs_graphics:file { write r_file_perms };
