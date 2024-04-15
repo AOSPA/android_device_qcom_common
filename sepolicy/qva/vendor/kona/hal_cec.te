@@ -1,0 +1,11 @@
+# Copyright (c) 2023 Qualcomm Innovation Center, Inc. All rights reserved.
+# SPDX-License-Identifier: BSD-3-Clause-Clear
+
+allow hal_tv_cec_default vendor_cec_device:chr_file rw_file_perms;
+get_prop(hal_tv_cec_default, vendor_display_prop);
+allow hal_tv_cec_default vendor_qdisplay_service:service_manager find;
+get_prop(hal_tv_cec_default,boot_status_prop);
+binder_use(hal_tv_cec_default);
+vndbinder_use(hal_tv_cec_default);
+allow hal_tv_cec_default vendor_sysfs_hdmi:file rw_file_perms;
+allow hal_tv_cec_default self:netlink_kobject_uevent_socket create_socket_perms_no_ioctl;

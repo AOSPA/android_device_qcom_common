@@ -1,4 +1,6 @@
-# Copyright (c) 2020, The Linux Foundation. All rights reserved.
+# Copyright (c) 2019, The Linux Foundation. All rights reserved.
+# Copyright (c) 2023 Qualcomm Innovation Center, Inc. All rights reserved.
+# SPDX-License-Identifier: BSD-3-Clause-Clear
 #
 # Redistribution and use in source and binary forms, with or without
 # modification, are permitted provided that the following conditions are
@@ -13,7 +15,7 @@
 #       contributors may be used to endorse or promote products derived
 #       from this software without specific prior written permission.
 #
-# THIS SOFTWARE IS PROVIDED"AS IS" AND ANY EXPRESS OR IMPLIED
+# THIS SOFTWARE IS PROVIDED "AS IS" AND ANY EXPRESS OR IMPLIED
 # WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF
 # MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NON-INFRINGEMENT
 # ARE DISCLAIMED.  IN NO EVENT SHALL THE COPYRIGHT OWNER OR CONTRIBUTORS
@@ -25,4 +27,20 @@
 # OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN
 # IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
-vendor.qti.hardware.eid::IEid                                u:object_r:vendor_hal_eid_hwservice:s0
+#logdump partition
+type vendor_logdump_partition, dev_type;
+type vendor_mba_debug_dev, dev_type;
+type vendor_dip_device, dev_type;
+type vendor_rawdump_block_device, dev_type;
+
+#define msm_lsm char device
+type vendor_msm_lsm_cdev_device, dev_type;
+
+# for mediacodec permission
+type vendor_audio_cal_device, dev_type;
+type vendor_msm_rtac_device, dev_type;
+type vendor_media_aac_device, dev_type;
+type vendor_media_evrc_device, dev_type;
+type vendor_media_qcelp_device, dev_type;
+type vendor_media_wma_device, dev_type;
+type vendor_media_wmapro_device, dev_type;

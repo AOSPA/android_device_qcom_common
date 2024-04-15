@@ -1,0 +1,8 @@
+# Copyright (c) 2022 Qualcomm Innovation Center, Inc. All rights reserved.
+# SPDX-License-Identifier: BSD-3-Clause-Clear
+
+# Allow search of location vendor data files
+allow vendor_tlocd vendor_location_data_file:dir search;
+
+#Allow access to DMA Buf
+allow vendor_tlocd vendor_dmabuf_qseecom_heap_device:chr_file r_file_perms;
