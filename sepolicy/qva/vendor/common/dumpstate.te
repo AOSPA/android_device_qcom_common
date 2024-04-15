@@ -1,3 +1,6 @@
 binder_call(dumpstate, vendor_sxrd_vndr)
 binder_call(dumpstate, vendor_qvrd_vndr)
 binder_call(dumpstate, rild)
+dontaudit dumpstate vendor_sysfs_scsi_host:file *;
+binder_call(dumpstate, vendor_ims_dcservice)
+binder_call(dumpstate, vendor_hal_qspa_default)

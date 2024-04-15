@@ -1,0 +1,8 @@
+# Copyright (c) 2023 Qualcomm Innovation Center, Inc. All rights reserved.
+# SPDX-License-Identifier: BSD-3-Clause-Clear
+
+#for hal_bootctl_default
+allow hal_bootctl_default vendor_sysfs_scsi_host:dir search;
+
+#============= vold ==============
+allow vold vendor_sysfs_scsi_host:file write;

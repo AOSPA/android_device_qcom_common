@@ -24,3 +24,6 @@ allow vendor_init vendor_proc_swappiness:file rw_file_perms;
 
 # Allow tuning UFS nodes
 allow vendor_qti_init_shell vendor_sysfs_scsi_host:file rw_file_perms;
+
+# Access vendor dynamic sensor properties
+set_prop(vendor_init, vendor_dynamic_sensor_prop)

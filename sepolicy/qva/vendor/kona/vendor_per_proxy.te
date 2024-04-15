@@ -1,0 +1,5 @@
+# Copyright (c) 2023 Qualcomm Innovation Center, Inc. All rights reserved.
+# SPDX-License-Identifier: BSD-3-Clause-Clear
+
+# for vendor_per_proxy permission
+allow vendor_per_proxy vendor_sysfs_ssr:file r_file_perms;
