@@ -440,7 +440,11 @@ service qcomsysd /system/vendor/bin/qcom-system-daemon
     group root diag oem_2901
     disabled
 
-on property:persist.vendor.qcomsysd.enabled=1
+# Not launch qcomsysd process in USER BUILD
+on property:persist.vendor.qcomsysd.enabled=1 && property:ro.build.type=userdebug
+    enable qcomsysd
+
+on property:persist.vendor.qcomsysd.enabled=1 && property:ro.build.type=eng
     enable qcomsysd
 
 on property:persist.vendor.qcomsysd.enabled=0
