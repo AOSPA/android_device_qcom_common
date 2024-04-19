@@ -34,19 +34,19 @@
             <Level Val="1200000" Pos="2"/>
         </Opcode>
         <Opcode Resource="0x40800200" Name="MIN_FREQ_CLUSTER_PRIME_CORE_0"  Supported="Yes">
-            <Level Val="800"  Pos="0"/>
-            <Level Val="800" Pos="1"/>
-            <Level Val="800" Pos="2"/>
+            <Level Val="1000"  Pos="0"/>
+            <Level Val="1651" Pos="1"/>
+            <Level Val="2246" Pos="2"/>
         </Opcode>
         <Opcode Resource="0x40800000" Name="MIN_FREQ_CLUSTER_BIG_CORE_0" Supported="Yes">
-            <Level Val="800"  Pos="0"/>
-            <Level Val="800" Pos="1"/>
-            <Level Val="800" Pos="2"/>
+            <Level Val="1000"  Pos="0"/>
+            <Level Val="1651" Pos="1"/>
+            <Level Val="2246" Pos="2"/>
         </Opcode>
         <Opcode Resource="0x40800100" Name="MIN_FREQ_CLUSTER_LITTLE_CORE_0" Supported="Yes">
-            <Level Val="800"  Pos="0"/>
-            <Level Val="800" Pos="1"/>
-            <Level Val="800" Pos="2"/>
+            <Level Val="1000"  Pos="0"/>
+            <Level Val="1324" Pos="1"/>
+            <Level Val="1804" Pos="2"/>
         </Opcode>
     </Group>
     <Group ActionCat="Sched">
