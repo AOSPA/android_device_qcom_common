@@ -29,12 +29,6 @@ PRODUCT_COPY_FILES += \
     $(call find-copy-subdir-files,*,$(QCOM_COMMON_PATH)/vendor/perf/configs/common,$(TARGET_COPY_OUT_VENDOR)/etc) \
     $(call find-copy-subdir-files,*,$(QCOM_COMMON_PATH)/vendor/perf/configs/$(TARGET_PERF_DIR),$(TARGET_COPY_OUT_VENDOR)/etc)
 
-# Disable the poweropt service for <5.4 platforms.
-ifeq (,$(filter 5.4 5.10 5.15, $(TARGET_KERNEL_VERSION)))
-PRODUCT_COPY_FILES += \
-    $(QCOM_COMMON_PATH)/vendor/perf/poweropt-service-disable.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/poweropt-service-disable.rc
-endif
-
 # Packages
 PRODUCT_PACKAGES += \
     android.hardware.thermal@2.0.vendor \

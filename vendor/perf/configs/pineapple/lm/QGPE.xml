@@ -316,8 +316,5 @@
         <App>com.kiloo.subwaysurf</App>
         <App>com.imangi.templerun2</App>
         <App>com.ogien.trainsim</App>
-<!-- MIUI ADD: Performance_BoostFramework -->
-        <App>com.phonetest.stresstest</App>
-<!-- END Performance_BoostFramework -->
     </IgnoredApps>
 </Feature>
