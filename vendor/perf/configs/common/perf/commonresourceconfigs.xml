@@ -346,24 +346,15 @@ need to be added just before the end of it's major group. -->
         <Minor OpcodeValue="0x4" Node="/proc/sys/walt/sched_em_inflate_pct" />
         <Minor OpcodeValue="0x5" Node="/proc/sys/walt/sched_em_inflate_thres" />
         <Minor OpcodeValue="0x6" Node="/proc/sys/walt/sched_heavy_nr" />
-<!-- MIUI ADD: Performance_BoostFramework -->
-        <Minor OpcodeValue="0x7" Node="/proc/sys/walt/sched_fmax_cap"/>
-        <Minor OpcodeValue="0x8" Node="/proc/sys/walt/sched_max_freq_partial_halt"/>
-<!-- END Performance_BoostFramework -->
-        <Minor OpcodeValue="0x9" Node="/dev/cpuctl/camera-daemon/cpu.shares" />
-        <Minor OpcodeValue="0xA" Node="/dev/cpuctl/top-app/cpu.shares" />
-        <Minor OpcodeValue="0xB" Node="/dev/cpuctl/background/cpu.shares" />
-        <Minor OpcodeValue="0xC" Node="/proc/sys/walt/sched_idle_enough_clust" />
-        <Minor OpcodeValue="0xD" Node="/proc/sys/walt/sched_cluster_util_thres_pct_clust" />
+        <Minor OpcodeValue="0x7" Node="/proc/sys/walt/sched_fmax_cap" />
+        <Minor OpcodeValue="0x8" Node="/proc/sys/walt/sched_max_freq_partial_halt" />
+        <Minor OpcodeValue="0x9" Node="/proc/sys/walt/sched_idle_enough_clust" />
+        <Minor OpcodeValue="0xA" Node="/proc/sys/walt/sched_cluster_util_thres_pct_clust" />
 
     <!-- sched2 major end -->
     <!--Add new resource expected value and write value in configs/test/common/perfcommonresourceconfigs.xml
     for support in regression framework-->
 
-    <!-- game solution major start -->
-    <Major OpcodeValue="0x10" />
-        <Minor OpcodeValue="0x0" Node="/proc/sys/walt/sched_auto_penalty" />
-    <!-- game solution major end -->
 
     </PerfResources>
 </ResourceConfigs>
