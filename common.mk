@@ -18,6 +18,7 @@ QCOM_BOARD_PLATFORMS += \
     $(TRINKET) \
     atoll \
     bengal \
+    blair \
     crow \
     holi \
     kona \
@@ -31,10 +32,12 @@ QCOM_BOARD_PLATFORMS += \
     msm8998 \
     msmnile \
     parrot \
+    pineapple \
     sdm660 \
     sdm710 \
     sdm845 \
-    taro
+    taro \
+    volcano
 
 # List of targets that use video hardware.
 MSM_VIDC_TARGET_LIST ?= \
@@ -74,10 +77,12 @@ ifeq ($(TARGET_FWK_SUPPORTS_FULL_VALUEADDS),true)
 include vendor/qcom/opensource/core-utils/build/utils.mk
 endif
 
-6_1_FAMILY := \
-    pineapple
-
 # Kernel Families
+6_1_FAMILY := \
+    blair \
+    pineapple \
+    volcano
+
 5_15_FAMILY := \
     crow \
     kalama \
