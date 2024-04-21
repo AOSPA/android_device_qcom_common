@@ -30,7 +30,7 @@ PRODUCT_COPY_FILES += \
     $(call find-copy-subdir-files,*,$(QCOM_COMMON_PATH)/vendor/perf/configs/$(TARGET_PERF_DIR),$(TARGET_COPY_OUT_VENDOR)/etc)
 
 # Disable the poweropt service for <5.4 platforms.
-ifeq (,$(filter 5.4 5.10 5.15, $(TARGET_KERNEL_VERSION)))
+ifeq (,$(filter 5.4 5.10 5.15 6.1, $(TARGET_KERNEL_VERSION)))
 PRODUCT_COPY_FILES += \
     $(QCOM_COMMON_PATH)/vendor/perf/poweropt-service-disable.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/poweropt-service-disable.rc
 endif
@@ -60,7 +60,7 @@ PRODUCT_VENDOR_PROPERTIES += \
     vendor.pasr.activemode.enabled=false \
     vendor.perf.framepacing.enable=1
 
-ifneq (,$(filter 4.19 5.4 5.10 5.15, $(TARGET_KERNEL_VERSION)))
+ifneq (,$(filter 4.19 5.4 5.10 5.15 6.1, $(TARGET_KERNEL_VERSION)))
 PRODUCT_VENDOR_PROPERTIES += \
     ro.vendor.beluga.p=0x3 \
     ro.vendor.beluga.c=0x4800 \
