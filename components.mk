@@ -91,7 +91,7 @@ endif
 
 ifneq (,$(filter gps, $(TARGET_COMMON_QTI_COMPONENTS)))
   include $(QCOM_COMMON_PATH)/system/gps/qti-gps.mk
-  ifeq ($(call is-board-platform-in-list,$(5_10_FAMILY) $(5_15_FAMILY)),true)
+  ifeq ($(call is-board-platform-in-list,$(5_10_FAMILY) $(5_15_FAMILY) $(6_1_FAMILY)),true)
     TARGET_GPS_COMPONENT_VARIANT ?= gps
   else
     TARGET_GPS_COMPONENT_VARIANT ?= gps-legacy
@@ -108,7 +108,7 @@ ifneq (,$(filter keymaster, $(TARGET_COMMON_QTI_COMPONENTS)))
 endif
 
 ifneq (,$(filter media, $(TARGET_COMMON_QTI_COMPONENTS)))
-  ifeq ($(call is-board-platform-in-list,$(5_10_FAMILY) $(5_15_FAMILY)),true)
+  ifeq ($(call is-board-platform-in-list,$(5_10_FAMILY) $(5_15_FAMILY) $(6_1_FAMILY)),true)
     TARGET_MEDIA_COMPONENT_VARIANT ?= media
   else ifeq ($(call is-board-platform-in-list,$(5_4_FAMILY)),true)
     TARGET_MEDIA_COMPONENT_VARIANT ?= media-5.4
@@ -133,7 +133,7 @@ ifneq (,$(filter perf, $(TARGET_COMMON_QTI_COMPONENTS)))
 endif
 
 ifneq (,$(filter qseecomd, $(TARGET_COMMON_QTI_COMPONENTS)))
-  ifeq ($(call is-board-platform-in-list,$(5_4_FAMILY) $(5_10_FAMILY) $(5_15_FAMILY)),true)
+  ifeq ($(call is-board-platform-in-list,$(5_4_FAMILY) $(5_10_FAMILY) $(5_15_FAMILY) $(6_1_FAMILY)),true)
     TARGET_QSEECOMD_COMPONENT_VARIANT ?= qseecomd
   else
     TARGET_QSEECOMD_COMPONENT_VARIANT ?= qseecomd-legacy
