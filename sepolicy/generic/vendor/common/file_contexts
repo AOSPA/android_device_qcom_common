@@ -42,3 +42,9 @@
 
 #emmc node
 /dev/block/platform/soc/7c4000.sdhci/by-name/vbmeta_vendor_[ab]     u:object_r:vendor_custom_ab_block_device:s0
+
+# files in /vendor
+/vendor/bin/hw/android\.hardware\.gatekeeper@1\.0-service-qti        u:object_r:vendor_hal_gatekeeper_qti_exec:s0
+/vendor/bin/hw/android\.hardware\.gatekeeper@1\.0-service-spu-qti    u:object_r:vendor_hal_gatekeeper_spu_qti_exec:s0
+/vendor/bin/hw/vendor\.display\.color@1\.0-service                   u:object_r:vendor_hal_display_color_default_exec:s0
+/dev/block/platform/soc/1d84000.ufshc/by-name/swap_[ab]              u:object_r:vendor_custom_ab_block_device:s0 

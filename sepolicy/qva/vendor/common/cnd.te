@@ -1,2 +1,4 @@
 # allow vendor_cnd to read wifi_hal_prop
 get_prop(vendor_cnd, wifi_hal_prop)
+hal_client_domain(vendor_cnd,vendor_hal_qms_qti)
+dontaudit vndservicemanager vendor_cnd:binder call;

@@ -1,0 +1,3 @@
+allow vendor_modprobe self:capability2 perfmon;
+allow vendor_modprobe self:key write;
+allow vendor_modprobe self:perf_event cpu;

@@ -1,2 +1,0 @@
-# Access to wakelock sysfs
-wakelock_use(vendor_spdaemon)

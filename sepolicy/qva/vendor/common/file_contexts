@@ -30,3 +30,4 @@
 /vendor/bin/hw/android\.hardware\.nfc@1\.2-service-st                              u:object_r:hal_nfc_default_exec:s0
 /(vendor|system/vendor)/bin/hw/android\.hardware\.nfc-service\.nxp                 u:object_r:hal_nfc_default_exec:s0
 /vendor/bin/hw/android\.hardware\.authsecret@1\.0-service-qti                      u:object_r:vendor_hal_authsecret_qti_exec:s0
+/vendor/bin/hw/android\.hardware\.security\.keymint-service\.strongbox             u:object_r:vendor_hal_keymint_strongbox_exec:s0
