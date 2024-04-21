@@ -16,6 +16,24 @@
       "message": "blair?",
       "revId": "d35232e72f34cb54e0150e8f5b64887d7179222e",
       "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "dbe7d204_966cad2c",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000737
+      },
+      "writtenOn": "2024-04-21T22:33:16Z",
+      "side": 1,
+      "message": "Yes, Qualcomm supported this platform in 6.1 version, based on holi\n\n\n• https://git.codelinaro.org/clo/la/platform/vendor/qcom/blair",
+      "parentUuid": "9a723682_4db5084b",
+      "revId": "d35232e72f34cb54e0150e8f5b64887d7179222e",
+      "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
     }
   ]
 }
