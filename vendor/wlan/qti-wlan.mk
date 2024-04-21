@@ -52,7 +52,7 @@ PRODUCT_PACKAGES += \
     vendor.qti.hardware.wifi.supplicant-V1-ndk.vendor
 
 # Enable IEEE 802.11ax support
-ifneq (,$(filter 5.10 5.15, $(TARGET_KERNEL_VERSION)))
+ifneq (,$(filter 5.10 5.15 6.1, $(TARGET_KERNEL_VERSION)))
 CONFIG_IEEE80211AX := true
 endif
 
