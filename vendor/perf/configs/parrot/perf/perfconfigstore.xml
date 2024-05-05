@@ -59,11 +59,12 @@ ________________________________________________________________________________
 
                 <!--splh is true/false for ss -->
                 <Prop Name="ro.vendor.perf.lplh" Value="true" Target="parrot"/>
-                <Prop Name="ro.vendor.perf.lplh" Value="false" Target="ravelin"/>
+                <Prop Name="ro.vendor.perf.lplh" Value="false" Target="ravelin,montague,montaguep"/>
                 <Prop Name="ro.vendor.perf.lal" Value="true" Target="parrot"/>
-                <Prop Name="ro.vendor.perf.lal" Value="false" Target="ravelin"/>
+                <Prop Name="ro.vendor.perf.lal" Value="false" Target="ravelin,montague,montaguep"/>
                 <Prop Name="ro.vendor.perf.lgl" Value="true" SkewType="10" Target="parrot"/>
-                <Prop Name="ro.vendor.perf.lgl" Value="false" SkewType="10" Target="ravelin"/>
+                <Prop Name="ro.vendor.perf.lgl" Value="false" SkewType="10" 
+                    Target="ravelin,montague,montaguep"/>
                 <Prop Name="vendor.perf.enable_gplaf_hw" Value="false" />
                 <Prop Name="ro.vendor.perf.dplh" Value="false" />
 
@@ -100,14 +101,14 @@ ________________________________________________________________________________
                 <Prop Name="ro.vendor.at_library" Value="libqti-at.so" />
 
                 <Prop Name="vendor.perf.phr.enable" Value="1" Target="parrot"/>
-                <Prop Name="vendor.perf.phr.enable" Value="0" Target="ravelin"/>
+                <Prop Name="vendor.perf.phr.enable" Value="0" Target="ravelin,montague,montaguep"/>
                 <Prop Name="vendor.perf.phr.hr_min_rate" Value="0.5"/>
                 <Prop Name="vendor.perf.pfar2.enable" Value="1" Target="parrot"/>
-                <Prop Name="vendor.perf.pfar2.enable" Value="0" Target="ravelin"/>
+                <Prop Name="vendor.perf.pfar2.enable" Value="0" Target="ravelin,montague,montaguep"/>
                 <Prop Name="vendor.perf.pfar2.boost_level" Value="3" />
                 <Prop Name="ro.vendor.perf.qhf"  Value="true" />
                 <Prop Name="ro.vendor.perf.qgpe" Value="true" Target="parrot"/>
-                <Prop Name="ro.vendor.perf.qgpe" Value="false" Target="ravelin"/>
+                <Prop Name="ro.vendor.perf.qgpe" Value="false" Target="ravelin,montague,montaguep"/>
                 <Prop Name="ro.vendor.perf.qape" Value="true" />
 
                 <Prop Name="ro.vendor.iocgrp.config"                 Value="1"      />
