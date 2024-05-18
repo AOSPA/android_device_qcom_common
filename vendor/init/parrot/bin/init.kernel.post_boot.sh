@@ -149,19 +149,19 @@ function configure_memory_parameters() {
 # Set Memory parameters.
 configure_memory_parameters
 
-if [ -f /sys/devices/soc0/soc_id ]; then
-	platformid=`cat /sys/devices/soc0/soc_id`
+if [ -f /sys/devices/soc0/chip_family ]; then
+	chipfamily=`cat /sys/devices/soc0/chip_family`
 fi
 
-case "$platformid" in
-	"537" | "583" | "613" | "631" | "633" | "634" | "638")
+case "$chipfamily" in
+	"0x84")
 		/vendor/bin/sh /vendor/bin/init.kernel.post_boot-parrot.sh
 		;;
-	"568" | "602" | "581" | "582")
+	"0x8d")
 		/vendor/bin/sh /vendor/bin/init.kernel.post_boot-ravelin.sh
 		;;
 	*)
-		echo "***WARNING***: Invalid SoC ID\n\t No postboot settings applied!!\n"
+		echo "***WARNING***: Invalid chip family\n\t No postboot settings applied!!\n"
 		;;
 esac
 
