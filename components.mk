@@ -107,6 +107,12 @@ ifneq (,$(filter keymaster, $(TARGET_COMMON_QTI_COMPONENTS)))
   include $(QCOM_COMMON_PATH)/vendor/keymaster/qti-keymaster.mk
 endif
 
+ifneq (,$(filter keymint, $(TARGET_COMMON_QTI_COMPONENTS)))
+  ifeq ($(call is-board-platform-in-list,$(6_1_FAMILY)),true)
+    include $(QCOM_COMMON_PATH)/vendor/keymint/qti-keymint.mk
+  endif
+endif
+
 ifneq (,$(filter media, $(TARGET_COMMON_QTI_COMPONENTS)))
   ifeq ($(call is-board-platform-in-list,$(5_10_FAMILY) $(5_15_FAMILY) $(6_1_FAMILY)),true)
     TARGET_MEDIA_COMPONENT_VARIANT ?= media
