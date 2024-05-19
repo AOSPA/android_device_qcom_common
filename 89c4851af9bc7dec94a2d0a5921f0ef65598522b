@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "47cd9a44_18fc2712",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000012
+      },
+      "writtenOn": "2024-05-19T00:15:31Z",
+      "side": 1,
+      "message": "maybe useful for R devices, but not used on taro/parrot",
+      "revId": "89c4851af9bc7dec94a2d0a5921f0ef65598522b",
+      "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
+    }
+  ]
+}
