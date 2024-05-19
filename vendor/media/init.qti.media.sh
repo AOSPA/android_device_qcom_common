@@ -44,17 +44,13 @@ fi
 
 target=`getprop ro.board.platform`
 case "$target" in
-    "neo")
-        setprop vendor.mm.target.enable.qcom_parser 1040463
-        setprop vendor.netflix.bsp_rev ""
-        case "$soc_hwid" in
-            579)
-                setprop vendor.media.target_variant "_neo_v2"
-                ;;
-            *)
-                setprop vendor.media.target_variant "_neo_v1"
-                ;;
-        esac
+    "anorak")
+        setprop vendor.mm.target.enable.qcom_parser 0
+        setprop vendor.media.target_variant "_anorak"
+        ;;
+    "kalama")
+        setprop vendor.mm.target.enable.qcom_parser 0
+        setprop vendor.media.target_variant "_kalama"
         ;;
     "parrot")
         setprop vendor.mm.target.enable.qcom_parser 1040463
@@ -71,6 +67,24 @@ case "$target" in
                     setprop vendor.media.target_variant "_parrot_v1"
                 fi
                     setprop vendor.netflix.bsp_rev "Q6450-36256-1"
+                ;;
+        esac
+        ;;
+    "pineapple")
+        setprop vendor.mm.target.enable.qcom_parser 0
+        case "$soc_hwid" in
+            614|632|642|643)
+                setprop vendor.media.target_variant "_cliffs_v0"
+                sku_ver=`cat /sys/devices/platform/soc/aa00000.qcom,vidc/sku_version` 2> /dev/null
+                if [ $sku_ver -eq 1 ]; then
+                    setprop vendor.media.target_variant "_cliffs_v1"
+                fi
+                ;;
+            *)
+                setprop vendor.media.target_variant "_pineapple"
+                if [ $build_codename -le "14" ]; then
+                    setprop vendor.netflix.bsp_rev "Q8650-37577-1"
+                fi
                 ;;
         esac
         ;;
@@ -128,14 +142,10 @@ case "$target" in
                 setprop vendor.netflix.bsp_rev "Q6115-31409-1"
                 ;;
         esac
-        ;;
     "holi")
         setprop vendor.media.target_variant "_holi"
         ;;
     "msmnile")
         setprop vendor.media.target_variant "_msmnile"
-        ;;
-    "monaco")
-        setprop vendor.media.target_variant "_monaco"
         ;;
 esac
