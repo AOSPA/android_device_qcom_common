@@ -27,7 +27,7 @@
         <!-- CPU_LLCC_BW_MIN_FREQ_V2 resource opcode, value-->
         <!-- POWER COLLAPSE resource opcode, value-->
         <!-- STORAGE CLK SCALING resource opcode, value-->
-        <!-- LLCC DDR LAT GOLD MIN FREQ resource opcode, value-->
+        <!-- LLCC DDR LAT CPU0 MIN FREQ resource opcode, value-->
         <!-- L3_MEMLAT_MIN_FREQ_PRIME resource opcode, value-->
         <!-- GPU DISABLE resource opcode, value-->
 
@@ -36,7 +36,7 @@
             Id="0x00001081" Type="1" Enable="true" Timeout="2000" Target="taro,cape,ukee"
             Resources="0x40C00000, 0x1, 0x40804000, 0xFFF, 0x40804100, 0xFFF, 0x40804200, 0xFFF,
                        0x40800000, 0xFFF, 0x40800100, 0xFFF, 0x40800200, 0xFFF, 0x41848000, 0x104410,
-                       0x41844000, 0x104410, 0x40400000, 0x1, 0x42C10000, 0x1, 0x43488000, 0x30D400,
+                       0x41844000, 0x104410, 0x40400000, 0x1, 0x42C10000, 0x1, 0x43460000, 0x30D400,
                        0x43458000, 0x193138, 0x4281C000, 2000" />
 
         <!-- SCHEDBOOST resource opcode, value-->
