@@ -99,10 +99,6 @@ as anyway perflock calls of these resources would fail. -->
         <Config MajorValue="0xF" MinorValue="0x8" Supported="no" />
         <Config MajorValue="0xF" MinorValue="0x9" Supported="no" />
         <Config MajorValue="0xF" MinorValue="0xA" Supported="no" />
-        <Config MajorValue="0xF" MinorValue="0xB" Supported="no" />
-        <Config MajorValue="0xF" MinorValue="0xC" Supported="no" />
-        <Config MajorValue="0xF" MinorValue="0xD" Supported="no" />
-        <Config MajorValue="0x10" MinorValue="0x0" Supported="no" />
 
     </PerfResources>
 </ResourceConfigs>
