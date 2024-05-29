@@ -1,3 +1,11 @@
+system/system/lib/liblhdc.so|3aa0e656ba9991b392a0fd1451916799d3a48444
+system/system/lib/liblhdcBT_enc.so|ca97adebee3ee7178b411ffa682836c84f43b717
+system/system/lib/liblhdcv5.so|6ed3ade78569dae28897289dde1581b63cff1d71
+system/system/lib/liblhdcv5BT_enc.so|70a039f4ca2a2d8dd4bfdab06945c43b2e5385cf
+system/system/lib64/liblhdc.so|b8e88fc77386ca814dc56aea5c0ad2a0cc19119b
+system/system/lib64/liblhdcBT_enc.so|2eed622007117fefb12c1b7e973155a6a0aa2e52
+system/system/lib64/liblhdcv5.so|d3142f5005bf884870ff3a389cff18001d9b35b2
+system/system/lib64/liblhdcv5BT_enc.so|73213530f095cdda12604bbd103650612e27a3c3
 system_ext/app/BluetoothDsDaService/BluetoothDsDaService.apk
 system_ext/etc/default-permissions/com.qualcomm.qtil.btdsda.xml
 system_ext/lib/com.qualcomm.qti.ant@1.0.so
