@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "646cffe7_66a7be1d",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 10
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000012
+      },
+      "writtenOn": "2024-05-30T18:41:32Z",
+      "side": 1,
+      "message": "did you check common perf configs?  vendor/etc/perf/common*\n\nI think there were some Xiaomi customizations there, so this is -1 is really a -0.5",
+      "revId": "bdf342a270804175394e227563cfffa8f4e8ba3f",
+      "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
+    }
+  ]
+}
