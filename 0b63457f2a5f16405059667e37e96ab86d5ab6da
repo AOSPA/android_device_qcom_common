@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "67e55b5c_c6a7c3fc",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000012
+      },
+      "writtenOn": "2024-06-02T14:31:43Z",
+      "side": 1,
+      "message": "Add AOSPA Edit to the comment",
+      "revId": "0b63457f2a5f16405059667e37e96ab86d5ab6da",
+      "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
+    }
+  ]
+}
