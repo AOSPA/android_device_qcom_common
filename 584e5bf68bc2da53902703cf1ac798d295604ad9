@@ -16,6 +16,23 @@
       "message": "tested on phone1, marble",
       "revId": "584e5bf68bc2da53902703cf1ac798d295604ad9",
       "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "1c5a3e0d_126520c2",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000579
+      },
+      "writtenOn": "2024-06-02T08:14:49Z",
+      "side": 1,
+      "message": "https://github.com/gotenksIN/proprietary_vendor_qcom_common/commit/84875f0552d72be21d75ec2fd25404018dd43eed",
+      "revId": "584e5bf68bc2da53902703cf1ac798d295604ad9",
+      "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
     }
   ]
 }
