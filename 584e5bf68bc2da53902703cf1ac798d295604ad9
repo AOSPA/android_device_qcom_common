@@ -33,6 +33,23 @@
       "message": "https://github.com/gotenksIN/proprietary_vendor_qcom_common/commit/84875f0552d72be21d75ec2fd25404018dd43eed",
       "revId": "584e5bf68bc2da53902703cf1ac798d295604ad9",
       "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "f0b4174a_86f78fec",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000730
+      },
+      "writtenOn": "2024-06-02T23:02:56Z",
+      "side": 1,
+      "message": "fine on atoll",
+      "revId": "584e5bf68bc2da53902703cf1ac798d295604ad9",
+      "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
     }
   ]
 }
