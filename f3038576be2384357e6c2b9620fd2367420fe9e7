@@ -16,6 +16,24 @@
       "message": "already copied by halimpl\nhttps://github.com/AOSPA/android_vendor_nxp_opensource_halimpl/blob/390305d04d2ddc708aea19be19af7530cae94a0e/nfc_vendor_product.mk#L26",
       "revId": "f3038576be2384357e6c2b9620fd2367420fe9e7",
       "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "438aa256_afb97f15",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000730
+      },
+      "writtenOn": "2024-06-02T05:12:54Z",
+      "side": 1,
+      "message": "not on https://github.com/AOSPA/android_vendor_nxp_opensource_halimpl/blob/uvite-pn5xx/nfc_vendor_product.mk",
+      "parentUuid": "3a2061b9_33df0dd3",
+      "revId": "f3038576be2384357e6c2b9620fd2367420fe9e7",
+      "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
     }
   ]
 }
