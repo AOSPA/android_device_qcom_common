@@ -34,6 +34,24 @@
       "parentUuid": "3a2061b9_33df0dd3",
       "revId": "f3038576be2384357e6c2b9620fd2367420fe9e7",
       "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "ff46cf6f_20f446e1",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000579
+      },
+      "writtenOn": "2024-06-02T06:37:49Z",
+      "side": 1,
+      "message": "add it there, make it inline with snxxx",
+      "parentUuid": "438aa256_afb97f15",
+      "revId": "f3038576be2384357e6c2b9620fd2367420fe9e7",
+      "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
     }
   ]
 }
