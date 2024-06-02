@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "a87ab785_d91559e3",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000012
+      },
+      "writtenOn": "2024-06-02T14:31:26Z",
+      "side": 1,
+      "message": "add comments to both files with AOSPA Edit so we can easily add this back if we pull in later QC tags.",
+      "revId": "78af0b3826a42ab67383014577145d93b0aecc28",
+      "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
+    }
+  ]
+}
