@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "1c7df673_5a2f506d",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 3
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000012
+      },
+      "writtenOn": "2024-06-02T14:30:25Z",
+      "side": 1,
+      "message": "This makes sense to me here since we know the latest QC Power HALs support ADPF while we don\u0027t know that others do.",
+      "revId": "24299da8595ee5a8378e087a0dbcc794b5d183b8",
+      "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
+    }
+  ]
+}
