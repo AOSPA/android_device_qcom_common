@@ -107,8 +107,7 @@ ________________________________________________________________________________
                 <Prop Name="vendor.perf.pfar2.enable" Value="0" Target="ravelin,montague,montaguep"/>
                 <Prop Name="vendor.perf.pfar2.boost_level" Value="3" />
                 <Prop Name="ro.vendor.perf.qhf"  Value="true" />
-                <Prop Name="ro.vendor.perf.qgpe" Value="true" Target="parrot"/>
-                <Prop Name="ro.vendor.perf.qgpe" Value="false" Target="ravelin,montague,montaguep"/>
+                <Prop Name="ro.vendor.perf.qgpe" Value="true" />
                 <Prop Name="ro.vendor.perf.qape" Value="true" />
 
                 <Prop Name="ro.vendor.iocgrp.config"                 Value="1"      />
