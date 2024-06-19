@@ -107,8 +107,10 @@ ________________________________________________________________________________
                 <Prop Name="vendor.perf.pfar2.enable" Value="0" Target="ravelin,montague,montaguep"/>
                 <Prop Name="vendor.perf.pfar2.boost_level" Value="3" />
                 <Prop Name="ro.vendor.perf.qhf"  Value="true" />
-                <Prop Name="ro.vendor.perf.qgpe" Value="true" />
                 <Prop Name="ro.vendor.perf.qape" Value="true" />
+
+                <!-- AOSPA Edit: Enable QGPE -->
+                <Prop Name="ro.vendor.perf.qgpe" Value="true" />
 
                 <Prop Name="ro.vendor.iocgrp.config"                 Value="1"      />
                 <Prop Name="ro.vendor.qti.sys.fw.bservice_enable"    Value="true"   />
