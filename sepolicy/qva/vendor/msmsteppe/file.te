@@ -67,3 +67,6 @@ type sysfs_power_imagesize, sysfs_type, fs_type;
 
 # Proc sys-vm-swappiness file type
 type proc_swappiness, proc_type, fs_type;
+
+#qtee
+type vendor_qtee_data_file, file_type, data_file_type;
