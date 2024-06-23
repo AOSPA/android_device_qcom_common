@@ -188,8 +188,8 @@ system_ext/lib64/libdpmtcm.so
 system_ext/lib64/libembmsmmosal.so
 system_ext/lib64/libembmsmmparser_lite.so
 system_ext/lib64/libembmstinyxml.so
-system_ext/lib64/libimscamera_jni.so
-system_ext/lib64/libimsmedia_jni.so
+system_ext/lib64/libimscamera_jni.so;SYMLINK=system_ext/priv-app/ims/lib/arm64/libimscamera_jni.so
+system_ext/lib64/libimsmedia_jni.so;SYMLINK=system_ext/priv-app/ims/lib/arm64/libimsmedia_jni.so
 system_ext/lib64/libjnihelpers.so
 system_ext/lib64/libmink-sock-native-api.so
 system_ext/lib64/libminksocket_system.so
