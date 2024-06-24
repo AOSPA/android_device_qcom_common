@@ -1,0 +1,16 @@
+//
+// Copyright (C) 2024 Paranoid Android
+//
+// SPDX-License-Identifier: Apache-2.0
+//
+
+runtime_resource_overlay {
+    name: "WifiResTarget_pineapple",
+    device_specific: true,
+}
+
+runtime_resource_overlay {
+    name: "WifiResTargetMainline_pineapple",
+    manifest: "AndroidGoogleManifest.xml",
+    device_specific: true,
+}
