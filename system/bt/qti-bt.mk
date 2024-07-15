@@ -25,5 +25,8 @@ PRODUCT_SYSTEM_EXT_PROPERTIES += \
     ro.bluetooth.library_name=libbluetooth_qti.so
 endif
 
+PRODUCT_SYSTEM_EXT_PROPERTIES += \
+    ro.bluetooth.finder.supported=true
+
 # Get non-open-source specific aspects.
 $(call inherit-product-if-exists, vendor/qcom/common/system/bt/bt-vendor.mk)
