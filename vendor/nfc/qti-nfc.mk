@@ -32,6 +32,21 @@ PRODUCT_COPY_FILES += \
 # Get non-open-source specific aspects.
 $(call inherit-product-if-exists, vendor/qcom/common/vendor/nfc/nq/nfc-vendor.mk)
 
+else ifeq ($(TARGET_USES_ST_NFC), true)
+
+# Inherit from AOSP STNFC
+$(call inherit-product, hardware/st/nfc/nfc_vendor_product.mk)
+
+PRODUCT_PACKAGES += \
+    com.android.nfc_extras \
+    libchrome.vendor \
+    NfcNci \
+    SecureElement \
+    Tag
+
+PRODUCT_SYSTEM_PROPERTIES += \
+    ro.nfc.port=I2C
+
 else
 
 PRODUCT_PACKAGES += \
