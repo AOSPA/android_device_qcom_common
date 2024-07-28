@@ -1,1 +1,4 @@
 vendor_restricted_prop(vendor_persist_rcs_qti_prop)
+
+#GNSS Frimware State
+vendor_internal_prop(vendor_gnss_fw_state)

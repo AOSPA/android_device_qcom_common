@@ -1,1 +1,2 @@
 persist.vendor.bt.a2dp_offload_cap           u:object_r:vendor_bluetooth_prop:s0
+vendor.nfc.min_firmware                      u:object_r:vendor_nfc_prop:s0

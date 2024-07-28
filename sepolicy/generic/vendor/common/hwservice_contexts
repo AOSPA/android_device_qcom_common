@@ -1,0 +1,8 @@
+vendor.qti.hardware.power.powermodule::IPowerModule          u:object_r:vendor_hal_poweroptservice_hwservice:s0
+vendor.qti.hardware.data.iwlan::IIWlan                          u:object_r:vendor_hal_iwlan_hwservice:s0
+vendor.qti.ims.factor::IImsFactory                              u:object_r:vendor_hal_imsfactory_hwservice:s0
+vendor.qti.hardware.data.connection::IDataConnection            u:object_r:vendor_hal_dataconnection_hwservice:s0
+vendor.display.color::IDisplayColor                             u:object_r:vendor_hal_display_color_hwservice:s0
+vendor.display.postproc::IDisplayPostproc                       u:object_r:vendor_hal_display_postproc_hwservice:s0
+vendor.qti.hardware.display.composer::IQtiComposer           u:object_r:hal_graphics_composer_hwservice:s0
+vendor.qti.hardware.embmssl::IEmbms                          u:object_r:vendor_hal_embmssl_hwservice:s0

@@ -1,0 +1,10 @@
+vendor.qti.hardware.vpp::IHidlVppService                     u:object_r:vendor_hal_vpp_hwservice:s0
+vendor.qti.hardware.vpp::IVppService                         u:object_r:vendor_hal_vpp_hwservice:s0
+vendor.qti.hardware.qconfig::IQConfig                        u:object_r:vendor_hal_qconfig_hwservice:s0
+vendor.qti.memory.pasrmanager::IPasrManager                  u:object_r:vendor_hal_pasrmanager_memory_hwservice:s0
+vendor.qti.hardware.sensorscalibrate::ISensorsCalibrate      u:object_r:vendor_hal_sensorscalibrate_qti_hwservice:s0
+vendor.qti.hardware.AGMIPC::IAGM                             u:object_r:vendor_agm_hwservice:s0
+vendor.qti.esepowermanager::IEsePowerManager                 u:object_r:vendor_hal_esepowermanager_hwservice:s0
+vendor.qti.hardware.qseecom::IQSEECom                        u:object_r:vendor_hal_qseecom_hwservice:s0
+vendor.qti.hardware.qccvndhal::IQccvndhal                     u:object_r:vendor_hal_qccvndhal_hwservice:s0
+vendor.qti.hardware.wifi.wificfr::IWificfr                   u:object_r:hal_wificfr_hwservice:s0

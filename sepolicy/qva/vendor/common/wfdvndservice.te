@@ -1,0 +1,11 @@
+#Allow access to firmware files for HDCP session
+r_dir_file(vendor_wfdvndservice, firmware_file)
+
+#Allow access to tee/ion device
+allow vendor_wfdvndservice tee_device:chr_file rw_file_perms;
+allow vendor_wfdvndservice ion_device:chr_file r_file_perms;
+
+#Allow /dev/dma_heap file access
+allow vendor_wfdvndservice vendor_dmabuf_system_heap_device:chr_file r_file_perms;
+allow vendor_wfdvndservice vendor_dmabuf_qseecom_heap_device:chr_file r_file_perms;
+allow vendor_wfdvndservice vendor_dmabuf_qseecom_ta_heap_device:chr_file r_file_perms;

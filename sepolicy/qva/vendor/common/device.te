@@ -1,0 +1,2 @@
+#swap partition
+type vendor_swap_block_device, dev_type;

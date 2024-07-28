@@ -1,0 +1,8 @@
+# Add hwservice related rules
+add_hwservice(vendor_hal_display_color_server, vendor_hal_display_color_hwservice)
+allow vendor_hal_display_color_client vendor_hal_display_color_hwservice:hwservice_manager find;
+allow platform_app vendor_hal_display_color_hwservice:hwservice_manager find;
+
+#Add rules for postproc hal
+add_hwservice(vendor_hal_display_color_server, vendor_hal_display_postproc_hwservice)
+allow vendor_hal_display_postproc_client vendor_hal_display_postproc_hwservice:hwservice_manager find;

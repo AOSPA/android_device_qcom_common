@@ -1,0 +1,9 @@
+type vendor_hal_pasrmanager_memory_hwservice, hwservice_manager_type, protected_hwservice;
+type vendor_agm_hwservice, hwservice_manager_type, protected_hwservice;
+type vendor_hal_vpp_hwservice , hwservice_manager_type, protected_hwservice;
+type vendor_hal_qconfig_hwservice , hwservice_manager_type, protected_hwservice;
+type vendor_hal_sensorscalibrate_qti_hwservice , hwservice_manager_type, protected_hwservice;
+type vendor_hal_esepowermanager_hwservice, hwservice_manager_type, protected_hwservice;
+type vendor_hal_qseecom_hwservice, hwservice_manager_type, protected_hwservice;
+type vendor_hal_qccvndhal_hwservice , hwservice_manager_type, protected_hwservice;
+type hal_wificfr_hwservice, hwservice_manager_type, protected_hwservice;

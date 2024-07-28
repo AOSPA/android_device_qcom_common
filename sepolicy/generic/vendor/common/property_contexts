@@ -1,1 +1,4 @@
 persist.vendor.rcs.singlereg.                        u:object_r:vendor_persist_rcs_qti_prop:s0
+
+#Location: Apply default value for firmware state and version
+vendor.gnss.firmware. u:object_r:vendor_gnss_fw_state:s0

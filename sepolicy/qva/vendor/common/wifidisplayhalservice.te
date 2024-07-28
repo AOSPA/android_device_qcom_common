@@ -1,0 +1,9 @@
+#Allow access to firmware files for HDCP session
+r_dir_file(vendor_wifidisplayhalservice_qti, firmware_file)
+
+#Allow access to tee/ion device and tcp socket for HDCP sessions
+allow vendor_wifidisplayhalservice_qti tee_device:chr_file rw_file_perms;
+
+#Allow ion device access
+allow vendor_wifidisplayhalservice_qti ion_device:chr_file r_file_perms;
+allow vendor_wifidisplayhalservice_qti vendor_dmabuf_qseecom_ta_heap_device:chr_file r_file_perms;
