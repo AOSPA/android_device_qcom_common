@@ -1,2 +1,5 @@
 binder_call(system_server, vendor_qvrd_vndr)
 binder_call(system_server, vendor_location_xtwifi_inetagent);
+
+#allow system server to get vendor_audio_prop
+get_prop(system_server, vendor_audio_prop)

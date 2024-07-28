@@ -1,0 +1,2 @@
+# Swap
+type vendor_proc_swappiness, proc_type, fs_type;

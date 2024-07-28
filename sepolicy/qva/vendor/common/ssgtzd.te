@@ -1,2 +1,7 @@
 #Allow ssgtzd to create sockets for HTTP
 allow vendor_ssgtzd self:udp_socket create_socket_perms;
+
+#Allow ssgtzd to access servicemanager
+binder_call(vendor_ssgtzd, servicemanager)
+#Allow ssgtzd to access vndbinder_use
+qtr_sdk_use(vendor_ssgtzd)
