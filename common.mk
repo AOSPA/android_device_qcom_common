@@ -171,6 +171,9 @@ TARGET_FS_CONFIG_GEN += $(QCOM_COMMON_PATH)/config.fs
 PRODUCT_PACKAGES += \
     libcurl
 
+# Media
+TARGET_DYNAMIC_64_32_MEDIASERVER ?= true
+
 # Partition source order for Product/Build properties pickup.
 PRODUCT_SYSTEM_PROPERTIES += \
     ro.product.property_source_order=odm,vendor,product,system_ext,system
