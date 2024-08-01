@@ -1,16 +1,6 @@
 # Allow init.aospa.perf.rc to read CPUSets
 allow vendor_init cgroup:file r_file_perms;
 
-# Allow init.qcom.post_boot.sh to set watermark_scale_factor
-allow vendor_qti_init_shell proc_watermark_scale_factor:file w_file_perms;
-
-# Allow init.qcom.usb.sh to create files in uvc.0
-allow vendor_qti_init_shell configfs:dir create_dir_perms;
-allow vendor_qti_init_shell configfs:{
-  file
-  lnk_file
-} create_file_perms;
-
 # Allow build.prop to set vendor.all.modules.ready
 set_prop(vendor_init, vendor_modprobe_prop)
 
@@ -18,9 +8,4 @@ set_prop(vendor_init, vendor_modprobe_prop)
 set_prop(vendor_init, vendor_persist_rcs_qti_prop)
 
 # Allow changing swap settings
-allow vendor_qti_init_shell proc_swaps:file rw_file_perms;
-allow vendor_qti_init_shell vendor_proc_swappiness:file rw_file_perms;
 allow vendor_init vendor_proc_swappiness:file rw_file_perms;
-
-# Allow tuning UFS nodes
-allow vendor_qti_init_shell vendor_sysfs_scsi_host:file rw_file_perms;
