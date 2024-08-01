@@ -8,3 +8,13 @@ get_prop(vendor_qti_init_shell,  vendor_hvdcp_opti_prop)
 
 allow vendor_qti_init_shell proc_watermark_boost_factor:file rw_file_perms;
 allow vendor_qti_init_shell proc_watermark_scale_factor:file rw_file_perms;
+
+# Allow init.qcom.post_boot.sh to set watermark_scale_factor
+allow vendor_qti_init_shell proc_watermark_scale_factor:file w_file_perms;
+
+# Allow changing swap settings
+allow vendor_qti_init_shell proc_swaps:file rw_file_perms;
+allow vendor_qti_init_shell vendor_proc_swappiness:file rw_file_perms;
+
+# Allow tuning UFS nodes
+allow vendor_qti_init_shell vendor_sysfs_scsi_host:file rw_file_perms;
