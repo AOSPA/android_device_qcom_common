@@ -323,4 +323,14 @@ PRODUCT_PACKAGES += \
     rfs_msm_wpss_readwrite_symlink \
     rfs_msm_wpss_shared_symlink
 
+# Add rfs to soong config namespaces
+SOONG_CONFIG_NAMESPACES += rfs
+
+# Add supported variables to rfs config
+SOONG_CONFIG_rfs += \
+    mpss_firmware_symlink_target
+
+# Set default values for rfs config
+SOONG_CONFIG_rfs_mpss_firmware_symlink_target ?= firmware_mnt
+
 endif # QCOM_BOARD_PLATFORMS
