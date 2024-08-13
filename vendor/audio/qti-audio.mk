@@ -70,9 +70,6 @@ PRODUCT_PACKAGES += \
 ifeq (,$(filter 3.18 4.4 4.9 4.14 4.19 5.4, $(TARGET_KERNEL_VERSION)))
 # Audio Packages
 PRODUCT_PACKAGES += \
-    agmcap \
-    agmcompressplay \
-    agmplay \
     libagm_compress_plugin \
     libagm_mixer_plugin \
     libagm_pcm_plugin \
