@@ -33,6 +33,24 @@
       "message": "Wouldnt this condition make more sense?\nifneq (,$(filter 5.10 5.15, $(TARGET_KERNEL_VERSION)))",
       "revId": "6bc8a5122ee582e3a120a5626ccdbd31b2054294",
       "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "bef446b5_01dfa108",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000143
+      },
+      "writtenOn": "2024-08-15T08:02:02Z",
+      "side": 1,
+      "message": "Nvm we already use this within qti-audio.mk\nifneq (,$(filter 3.18 4.4 4.9 4.14 4.19 5.4, $(TARGET_KERNEL_VERSION)))",
+      "parentUuid": "e9bd5062_21c166ee",
+      "revId": "6bc8a5122ee582e3a120a5626ccdbd31b2054294",
+      "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
     }
   ]
 }
