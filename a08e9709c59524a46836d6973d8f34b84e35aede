@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "b70912c6_b3ce099c",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000687
+      },
+      "writtenOn": "2024-08-15T07:55:01Z",
+      "side": 1,
+      "message": "Works on samsung sm8550, need changes on audio hal and AGM/Pal repos",
+      "revId": "a08e9709c59524a46836d6973d8f34b84e35aede",
+      "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
+    }
+  ]
+}
