@@ -52,6 +52,12 @@ include $(QCOM_COMMON_PATH)/dlkm/kernel-platform.mk
 -include vendor/qcom/opensource/mmrm-driver/mmrm_kernel_board.mk
 -include vendor/qcom/opensource/mmrm-driver/mmrm_kernel_product.mk
 
+# NFC
+-include vendor/nxp/opensource/driver/nfc_kernel_dlkm_vendor_board.mk
+-include vendor/nxp/opensource/driver/nfc_kernel_dlkm_vendor_product.mk
+-include vendor/st/opensource/driver/nfc_kernel_dlkm_vendor_board.mk
+-include vendor/st/opensource/driver/nfc_kernel_dlkm_vendor_product.mk
+
 # SecureMSM
 -include vendor/qcom/opensource/securemsm-kernel/securemsm_kernel_product_board.mk
 -include vendor/qcom/opensource/securemsm-kernel/securemsm_kernel_vendor_board.mk
