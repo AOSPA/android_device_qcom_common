@@ -92,11 +92,7 @@ PRODUCT_ODM_PROPERTIES += \
     vendor.display.use_smooth_motion=0
 
 # Use TARGET_KERNEL_VERSION for TARGET_DISP_DIR unless otherwise specified
-ifeq ($(TARGET_KERNEL_VERSION)_$(TARGET_BOARD_PLATFORM),5.15_bengal)
-    TARGET_DISP_DIR := 5.15_bengal
-else
-    TARGET_DISP_DIR := $(TARGET_KERNEL_VERSION)
-endif
+TARGET_DISP_DIR := $(TARGET_KERNEL_VERSION)
 
 # Copy Advanced SF Offsets Config if present
 PRODUCT_COPY_FILES += \
