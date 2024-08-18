@@ -45,7 +45,8 @@ PRODUCT_PACKAGES += \
     init.recovery.qcom.rc \
     init.veth_ipa_config.sh \
     qca6234-service.sh \
-    ueventd.qcom.rc
+    ueventd.qcom.rc \
+    init.aospa.perf.common.sh
 
 # Charger
 ifneq ($(TARGET_USE_AIDL_QTI_HEALTH),true)

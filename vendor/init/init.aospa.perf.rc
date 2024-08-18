@@ -141,3 +141,7 @@ on property:ro.board.platform=taro && property:vendor.post_boot.parsed=1
 on property:ro.board.platform=kalama && property:vendor.post_boot.parsed=1
     # Setup foreground cpuset for display composer.
     write /dev/cpuset/foreground/cpus 0-6
+
+# Dynamically set IRQ affinity for KGSL and DRM/MDSS
+on property:vendor.post_boot.parsed=1
+    exec u:r:vendor_qti_init_shell:s0 -- /vendor/bin/init.aospa.perf.common.sh

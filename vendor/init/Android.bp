@@ -148,3 +148,9 @@ sh_binary {
     src: "vendor_modprobe.sh",
     vendor: true,
 }
+
+sh_binary {
+    name: "init.aospa.perf.common.sh",
+    src: "init.aospa.perf.common.sh",
+    vendor: true,
+}
