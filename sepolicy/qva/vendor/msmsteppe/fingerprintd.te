@@ -62,5 +62,5 @@
 allow hal_fingerprint input_device:dir r_dir_perms;
 allow hal_fingerprint vendor_sysfs_fps_attr:file rw_file_perms;
 allow hal_fingerprint uhid_device:chr_file rw_file_perms;
-r_dir_file(hal_fingerprint, firmware_file);
-r_dir_file(hal_fingerprint, sysfs_leds);
+r_dir_file({ hal_fingerprint -coredomain }, firmware_file);
+r_dir_file({ hal_fingerprint -coredomain }, sysfs_leds);
