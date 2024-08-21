@@ -1,3 +1,0 @@
-# Allow vendor_netmgrd to set rmnet module parameters
-allow vendor_netmgrd vendor_sysfs_rmnet:dir r_dir_perms;
-allow vendor_netmgrd vendor_sysfs_rmnet:file rw_file_perms;
