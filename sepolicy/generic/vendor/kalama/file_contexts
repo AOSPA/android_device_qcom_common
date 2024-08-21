@@ -1,0 +1,6 @@
+# hdmi device
+/dev/hdmi_bdg_irq_handler                                      u:object_r:vendor_hdmi_bdg_irq_device:s0
+/dev/hdmi_bdg_uxe_irq_handler                                  u:object_r:vendor_hdmi_bdg_uxe_irq_device:s0
+
+# dp device
+/dev/dp_bdg_irq_handler                                      u:object_r:vendor_dp_bdg_irq_device:s0

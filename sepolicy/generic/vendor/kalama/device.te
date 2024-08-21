@@ -1,0 +1,6 @@
+#define HDMI-IN device
+type vendor_hdmi_bdg_irq_device, dev_type;
+type vendor_hdmi_bdg_uxe_irq_device, dev_type;
+
+#define DP-IN device
+type vendor_dp_bdg_irq_device, dev_type;

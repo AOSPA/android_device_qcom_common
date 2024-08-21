@@ -1,0 +1,1 @@
+allow vendor_nicmd vendor_toolbox_exec:file rx_file_perms;
