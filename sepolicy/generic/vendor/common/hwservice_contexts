@@ -1,0 +1,2 @@
+vendor.qti.hardware.data.iwlan::IIWlan                          u:object_r:vendor_hal_iwlan_hwservice:s0
+vendor.qti.hardware.data.connection::IDataConnection            u:object_r:vendor_hal_dataconnection_hwservice:s0

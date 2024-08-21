@@ -1,2 +1,4 @@
 # rild to read singlereg property
 get_prop(rild, vendor_persist_rcs_qti_prop)
+
+hal_attribute_hwservice(vendor_hal_iwlanservice_qti, vendor_hal_iwlan_hwservice)
