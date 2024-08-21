@@ -1,0 +1,6 @@
+#Allow camera to access hdmi bridge device
+allow hal_camera_default vendor_hdmi_bdg_irq_device:chr_file rw_file_perms;
+allow hal_camera_default vendor_hdmi_bdg_uxe_irq_device:chr_file rw_file_perms;
+
+#Allow camera to access dp bridge device
+allow hal_camera_default vendor_dp_bdg_irq_device:chr_file rw_file_perms;
