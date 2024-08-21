@@ -1,0 +1,5 @@
+# Copyright (c) 2023 Qualcomm Innovation Center, Inc. All rights reserved.
+# SPDX-License-Identifier: BSD-3-Clause-Clear
+
+allow hal_health_default sysfs_wakeup:file rw_file_perms;
+allow hal_health_default sysfs_wakeup:dir search;

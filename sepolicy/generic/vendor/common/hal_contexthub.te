@@ -1,2 +1,4 @@
 # Allow context hub HAL to communicate with daemon via socket
 unix_socket_connect(hal_contexthub, vendor_chre, vendor_chre)
+
+allow hal_contexthub_default vendor_dsp_device:chr_file r_file_perms;
