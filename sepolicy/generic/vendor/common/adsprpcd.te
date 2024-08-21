@@ -1,0 +1,1 @@
+allow vendor_adsprpcd device:dir { read watch };

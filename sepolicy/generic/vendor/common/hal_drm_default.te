@@ -1,0 +1,7 @@
+#Allow firmware file access
+allow hal_drm firmware_file:dir r_dir_perms;
+allow hal_drm firmware_file:file r_file_perms;
+
+#Allow data partition access
+allow hal_drm_default vendor_mediadrm_vendor_data_file:dir create_dir_perms;
+allow hal_drm_default vendor_mediadrm_vendor_data_file:file create_file_perms;
