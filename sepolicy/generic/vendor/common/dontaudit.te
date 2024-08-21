@@ -10,7 +10,6 @@ dontaudit {
   vendor_dpmd
   vendor_hal_imsrtp
   vendor_ims_service
-  vendor_netmgrd
   vendor_qti
   vendor_wcnss_service
 } vendor_diag_device:chr_file rw_file_perms;
