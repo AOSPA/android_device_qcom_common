@@ -1,1 +1,8 @@
 persist.vendor.bt.a2dp_offload_cap           u:object_r:vendor_bluetooth_prop:s0
+
+# netmgrd ko loading
+persist.vendor.data.shs_ko_load u:object_r:vendor_data_ko_prop:s0
+persist.vendor.data.perf_ko_load u:object_r:vendor_data_ko_prop:s0
+persist.vendor.data.offload_ko_load u:object_r:vendor_data_ko_prop:s0
+
+vendor.nfc.min_firmware                      u:object_r:vendor_nfc_prop:s0
