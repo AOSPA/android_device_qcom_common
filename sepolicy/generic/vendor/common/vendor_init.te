@@ -7,5 +7,5 @@ set_prop(vendor_init, vendor_modprobe_prop)
 #Access rcs service
 set_prop(vendor_init, vendor_persist_rcs_qti_prop)
 
-# Allow changing swap settings
-allow vendor_init vendor_proc_swappiness:file rw_file_perms;
+# Access vendor dynamic sensor properties
+set_prop(vendor_init, vendor_dynamic_sensor_prop)

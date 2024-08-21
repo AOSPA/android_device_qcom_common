@@ -1,0 +1,7 @@
+# Add hwservice related rules
+add_hwservice(vendor_hal_embmssl_server, vendor_hal_embmssl_hwservice)
+
+allow vendor_hal_embmssl_client vendor_hal_embmssl_hwservice:hwservice_manager find;
+
+allow vendor_hal_embmssl_qti vendor_nicmd_socket:dir search;
+unix_socket_connect(vendor_hal_embmssl_qti, vendor_nicmd, vendor_nicmd)
