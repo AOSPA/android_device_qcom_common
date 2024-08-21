@@ -1,0 +1,29 @@
+# Allow vendor_nicmd to set rmnet module parameters
+allow vendor_nicmd vendor_sysfs_rmnet:dir r_dir_perms;
+allow vendor_nicmd vendor_sysfs_rmnet:file rw_file_perms;
+
+userdebug_or_eng(`
+    domain_auto_trans(shell, vendor_nicmd_exec, vendor_nicmd)
+    diag_use(vendor_nicmd)
+    diag_use(netutils_wrapper)
+')
+
+#Allow vendor_nicmd operations
+allow vendor_nicmd vendor_nicmd:capability {
+    fsetid
+};
+
+#Allow logging
+allow vendor_nicmd vendor_smem_log_device:chr_file rw_file_perms;
+
+allow vendor_nicmd netutils_wrapper:process sigkill;
+
+#Allow operations on different types of sockets
+allow vendor_nicmd vendor_nicmd:rawip_socket { create getopt setopt write };
+
+unix_socket_connect(vendor_nicmd, vendor_cnd, vendor_cnd);
+
+allow vendor_nicmd { vendor_wcnss_service_exec vendor_shell_exec }:file rx_file_perms;
+
+# Allow vendor_nicmd to set vendor properties
+set_prop(vendor_nicmd, vendor_data_ko_prop)
