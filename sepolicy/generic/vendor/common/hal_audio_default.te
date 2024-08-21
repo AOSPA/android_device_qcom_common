@@ -1,0 +1,4 @@
+#Allow for property access
+userdebug_or_eng(`
+get_prop(hal_audio, vendor_pd_locater_dbg_prop)
+')

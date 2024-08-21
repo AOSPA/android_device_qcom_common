@@ -1,1 +1,3 @@
 persist.vendor.rcs.singlereg.                        u:object_r:vendor_persist_rcs_qti_prop:s0
+
+ctl.vendor.netmgrd         u:object_r:vendor_ctl_netmgrd_prop:s0
