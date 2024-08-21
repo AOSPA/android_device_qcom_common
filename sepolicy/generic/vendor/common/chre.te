@@ -1,0 +1,2 @@
+allow vendor_chre vendor_qdsp_device:chr_file r_file_perms;
+allow vendor_chre vendor_dsp_device:chr_file r_file_perms;
