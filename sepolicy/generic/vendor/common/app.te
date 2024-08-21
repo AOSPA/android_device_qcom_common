@@ -1,2 +1,5 @@
 #Allow all apps to have read access to vendor_display_prop
 get_prop(appdomain, vendor_display_prop)
+
+# Restrict access to non-secure fastrpc device for untrusted applications
+allow appdomain vendor_qdsp_device:chr_file {ioctl read};

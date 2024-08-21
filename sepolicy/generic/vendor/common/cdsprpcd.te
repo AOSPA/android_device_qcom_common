@@ -1,0 +1,1 @@
+allow vendor_cdsprpcd device:dir { read watch };
