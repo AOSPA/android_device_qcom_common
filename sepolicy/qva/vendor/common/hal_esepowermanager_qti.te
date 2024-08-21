@@ -1,2 +1,0 @@
-# Allow esepmdaemon to interract with ion_device
-allow vendor_hal_esepowermanager_qti ion_device:chr_file r_file_perms;
