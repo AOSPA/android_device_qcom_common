@@ -356,8 +356,8 @@
 /vendor/bin/hw/vendor\.qti\.hardware\.vibrator@1\.[0-2]-service    u:object_r:hal_vibrator_default_exec:s0
 /vendor/bin/hw/vendor\.qti\.hardware\.vibrator\.service    u:object_r:hal_vibrator_default_exec:s0
 /vendor/bin/hw/android\.hardware\.health-service\.qti                              u:object_r:hal_health_default_exec:s0
-/vendor/bin/hw/android\.hardware\.usb\@1\.[0-2]-service-qti                        u:object_r:hal_usb_default_qti_exec:s0
-/(vendor|system/vendor)/bin/hw/android\.hardware\.usb\.gadget@1\.0-service-qti u:object_r:hal_usb_gadget_qti_exec:s0
+/vendor/bin/hw/android\.hardware\.usb\@1\.[0-3]-service-qti                        u:object_r:hal_usb_default_qti_exec:s0
+/(vendor|system/vendor)/bin/hw/android\.hardware\.usb\.gadget\@1\.[0-2]-service-qti u:object_r:hal_usb_gadget_qti_exec:s0
 /(vendor|system/vendor)/bin/hw/vendor\.qti\.hardware\.scve\.panorama@1\.0-service    u:object_r:vendor_scve_exec:s0
 /(vendor|system/vendor)/bin/hw/vendor\.qti\.hardware\.scve\.objecttracker@1\.0-service    u:object_r:vendor_scve_exec:s0
 /(vendor|system/vendor)/bin/hdcp_srm               u:object_r:hdcp_srm_exec:s0
