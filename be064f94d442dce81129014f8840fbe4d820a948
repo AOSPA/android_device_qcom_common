@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "7351782f_8fff7c1f",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000825
+      },
+      "writtenOn": "2024-09-07T17:13:24Z",
+      "side": 1,
+      "message": "i have booted AOSPA on Redmi Note 12 4G with 5.15 display component.",
+      "revId": "be064f94d442dce81129014f8840fbe4d820a948",
+      "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
+    }
+  ]
+}
