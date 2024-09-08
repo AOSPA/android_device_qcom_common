@@ -26,9 +26,6 @@ BOARD_WPA_SUPPLICANT_PRIVATE_LIB := lib_driver_cmd_$(BOARD_WLAN_DEVICE)
 WIFI_DRIVER_BUILT := qca_cld3
 WIFI_DRIVER_DEFAULT := qca_cld3
 WIFI_DRIVER_INSTALL_TO_KERNEL_OUT := true
-WIFI_DRIVER_STATE_CTRL_PARAM := "/dev/wlan"
-WIFI_DRIVER_STATE_ON := "ON"
-WIFI_DRIVER_STATE_OFF := "OFF"
 WPA_SUPPLICANT_VERSION := VER_0_8_X
 
 PRODUCT_COPY_FILES += \
@@ -67,12 +64,16 @@ $(call inherit-product, vendor/qcom/opensource/data-ipa-cfg-mgr/ipacm_vendor_pro
 # Include QCOM WLAN makefiles.
 ifeq ($(call is-board-platform-in-list,sdm845),true)
 -include device/qcom/wlan/skunk/wlan.mk
+-include device/qcom/wlan/skunk/BoardConfigWlan.mk
 else ifeq ($(call is-board-platform-in-list,msm8998 sdm660),true)
 -include device/qcom/wlan/sdm660_64/wlan.mk
+-include device/qcom/wlan/sdm660_64/BoardConfigWlan.mk
 else ifeq ($(call is-board-platform-in-list,sm6150),true)
 -include device/qcom/wlan/talos/wlan.mk
+-include device/qcom/wlan/talos/BoardConfigWlan.mk
 else
 -include device/qcom/wlan/$(TARGET_BOARD_PLATFORM)/wlan.mk
+-include device/qcom/wlan/$(TARGET_BOARD_PLATFORM)/BoardConfigWlan.mk
 endif
 
 # Get non-open-source specific aspects.
