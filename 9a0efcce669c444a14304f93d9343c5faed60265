@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "cc8bf96f_a089d951",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000579
+      },
+      "writtenOn": "2024-09-08T07:14:10Z",
+      "side": 1,
+      "message": "ill wait for the msm-5.15 guy to verify the dlkm modules load",
+      "revId": "9a0efcce669c444a14304f93d9343c5faed60265",
+      "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
+    }
+  ]
+}
