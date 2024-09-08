@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "d3e452b1_2beaf4a3",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000579
+      },
+      "writtenOn": "2024-09-08T11:39:44Z",
+      "side": 1,
+      "message": "verbal V+1 from fabian, although system_dlkm modules arent loaded still, but that doesnt look like a script problem",
+      "revId": "8c0d1bd0a231329e6b123323b84a63ac25466aa5",
+      "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
+    }
+  ]
+}
