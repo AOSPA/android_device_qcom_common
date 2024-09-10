@@ -85,7 +85,7 @@ ifneq (,$(filter dsprpcd, $(TARGET_COMMON_QTI_COMPONENTS)))
   include $(QCOM_COMMON_PATH)/vendor/dsprpcd/qti-dsprpcd.mk
 endif
 
-ifneq (,$(filter 5.10 5.15, $(TARGET_KERNEL_VERSION)))
+ifeq (,$(filter 4.4 4.9 4.14 4.19 5.4, $(TARGET_KERNEL_VERSION)))
   include $(QCOM_COMMON_PATH)/dlkm/qti-dlkm.mk
 endif
 
@@ -159,7 +159,7 @@ ifneq (,$(filter wfd, $(TARGET_COMMON_QTI_COMPONENTS)))
 endif
 
 ifneq (,$(filter wlan, $(TARGET_COMMON_QTI_COMPONENTS)))
-  ifeq ($(call is-board-platform-in-list,$(5_10_FAMILY) $(5_15_FAMILY)),true)
+  ifneq ($(call is-board-platform-in-list,$(4_4_FAMILY) $(4_9_FAMILY) $(4_14_FAMILY) $(4_19_FAMILY) $(5_4_FAMILY)),true)
     TARGET_WLAN_COMPONENT_VARIANT ?= wlan
   else
     TARGET_WLAN_COMPONENT_VARIANT ?= wlan-legacy
