@@ -85,8 +85,10 @@ ifneq (,$(filter dsprpcd, $(TARGET_COMMON_QTI_COMPONENTS)))
   include $(QCOM_COMMON_PATH)/vendor/dsprpcd/qti-dsprpcd.mk
 endif
 
+ifeq ($(TARGET_FWK_SUPPORTS_FULL_VALUEADDS),true)
 ifeq (,$(filter 4.4 4.9 4.14 4.19 5.4, $(TARGET_KERNEL_VERSION)))
   include $(QCOM_COMMON_PATH)/dlkm/qti-dlkm.mk
+endif
 endif
 
 ifneq (,$(filter gps, $(TARGET_COMMON_QTI_COMPONENTS)))
