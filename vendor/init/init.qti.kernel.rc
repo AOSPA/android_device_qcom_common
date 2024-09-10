@@ -1,5 +1,5 @@
 #=============================================================================
-# Copyright (c) 2019-2022 Qualcomm Technologies, Inc.
+# Copyright (c) 2019-2023 Qualcomm Technologies, Inc.
 # All Rights Reserved.
 # Confidential and Proprietary - Qualcomm Technologies, Inc.
 #
@@ -31,13 +31,17 @@
 #=============================================================================
 import /vendor/etc/init/hw/init.qti.kernel.test.rc
 
+on early-init && property:ro.vendor.qti.load_dlkm.service=native
+    start load_dlkm
+
+on early-init && property:ro.vendor.qti.load_dlkm.service=""
+    exec_start gki.modprobe
+    start vendor.modprobe
+
 on early-init
     # Set the console loglevel to < KERN_WARN
     # Set the default message loglevel to KERN_INFO
     write /proc/sys/kernel/printk "4 6 1 7"
-
-    start gki.modprobe
-    start vendor.modprobe
 
     # Mount tracefs in /sys/kernel/tracing as CONFIG_DEBUG_FS might be
     # disabled and /sys/kernel/debug/tracing might not be available
@@ -75,6 +79,7 @@ on post-fs
 
 on early-boot
     # Allow subsystem (modem etc) debugging
+    start vendor.pd_mapper
     exec_background u:r:vendor_qti_init_shell_bg:s0 -- /vendor/bin/init.qti.write.sh /sys/kernel/boot_adsp/boot 1
     exec_background u:r:vendor_qti_init_shell_bg:s0 -- /vendor/bin/init.qti.write.sh /sys/kernel/boot_cdsp/boot 1
     exec_background u:r:vendor_qti_init_shell_bg:s0 -- /vendor/bin/init.qti.write.sh /sys/devices/virtual/cvp/cvp/boot 1
@@ -88,27 +93,11 @@ on boot
     chown root system /sys/kernel/dload/dload_mode
     chmod 0660 /sys/kernel/dload/dload_mode
 
-    # set the io-scheduler to bfq on all mq support devices
-    write /sys/block/sda/queue/scheduler bfq
-    write /sys/block/sdb/queue/scheduler bfq
-    write /sys/block/sdc/queue/scheduler bfq
-    write /sys/block/sdd/queue/scheduler bfq
-    write /sys/block/sde/queue/scheduler bfq
-    write /sys/block/sdf/queue/scheduler bfq
-    write /sys/block/sdg/queue/scheduler bfq
-    write /sys/block/sdh/queue/scheduler bfq
+    # set the io-scheduler to bfq on all eMMC and SD devices
     write /sys/class/block/mmcblk0/queue/scheduler bfq
     write /sys/class/block/mmcblk1/queue/scheduler bfq
 
     # update io-scheduler tunables
-    write /sys/block/sda/queue/iosched/slice_idle 0
-    write /sys/block/sdb/queue/iosched/slice_idle 0
-    write /sys/block/sdc/queue/iosched/slice_idle 0
-    write /sys/block/sdd/queue/iosched/slice_idle 0
-    write /sys/block/sde/queue/iosched/slice_idle 0
-    write /sys/block/sdf/queue/iosched/slice_idle 0
-    write /sys/block/sdg/queue/iosched/slice_idle 0
-    write /sys/block/sdh/queue/iosched/slice_idle 0
     write /sys/class/block/mmcblk0/queue/iosched/slice_idle 0
     write /sys/class/block/mmcblk1/queue/iosched/slice_idle 0
 
@@ -142,6 +131,9 @@ on property:persist.vendor.sys.rawdump_copy=1
 
 on property:persist.vendor.sys.rawdump_copy=0
     write /sys/kernel/dload/emmc_dload 0
+
+on property:vendor.memory.min_free_kbytes=*
+    write /proc/sys/vm/min_free_kbytes ${vendor.memory.min_free_kbytes}
 
 service kernel-boot /vendor/bin/sh /vendor/bin/init.qti.kernel.sh
     class core
@@ -186,6 +178,15 @@ service gki.modprobe /vendor/bin/system_dlkm_modprobe.sh
     oneshot
 
 service vendor.modprobe /vendor/bin/vendor_modprobe.sh
+    class main
+    user root
+    group root system
+    disabled
+    stdio_to_kmsg
+    seclabel u:r:vendor_modprobe:s0
+    oneshot
+
+service load_dlkm /vendor/bin/load_dlkm
     class main
     user root
     group root system

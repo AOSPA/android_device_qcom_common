@@ -16,7 +16,7 @@ do
 		continue
 	fi
 	if [ -e ${VENDOR_DLKM_DIR}/system_dlkm.modules.blocklist ] && grep -q blocklist ${VENDOR_DLKM_DIR}/system_dlkm.modules.blocklist; then
-		blocklist_expr="$(sed -n -e 's/blocklist \(.*\)/\1/p' ${VENDOR_DLKM_DIR}/system_dlkm.modules.blocklist | sed -e 's/-/_/g' -e 's/^/-e /')"
+		blocklist_expr="$(sed -n -e 's/blocklist \(.*\)/\1/p' ${VENDOR_DLKM_DIR}/system_dlkm.modules.blocklist | sed -e 's/-/[-_]/g' -e 's/^/-e /')"
 	else
 		# Use pattern that won't be found in modules list so that all modules pass through grep below
 		blocklist_expr="-e %"
