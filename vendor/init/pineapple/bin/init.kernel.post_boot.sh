@@ -1,5 +1,5 @@
 #=============================================================================
-# Copyright (c) 2019-2022 Qualcomm Technologies, Inc.
+# Copyright (c) 2019-2023 Qualcomm Technologies, Inc.
 # All Rights Reserved.
 # Confidential and Proprietary - Qualcomm Technologies, Inc.
 #
@@ -36,23 +36,18 @@ function configure_zram_parameters() {
 
 	low_ram=`getprop ro.config.low_ram`
 
-	# Zram disk - 75% for Go and < 2GB devices .
-	# For >2GB Non-Go devices, size = 50% of RAM size. Limit the size to 4GB.
-	# And enable lz4 zram compression for Go targets.
 
 	let RamSizeGB="( $MemTotal / 1048576 ) + 1"
 	diskSizeUnit=M
-	if [ $RamSizeGB -le 2 ]; then
-		let zRamSizeMB="( $RamSizeGB * 1024 ) * 3 / 4"
-	else
-		let zRamSizeMB="( $RamSizeGB * 1024 ) / 2"
-	fi
+	# Zram disk - 75%
+	let zRamSizeMB="( $RamSizeGB * 1024 ) * 3 / 4"
 
 	# use MB avoid 32 bit overflow
 	if [ $zRamSizeMB -gt 6144 ]; then
 		let zRamSizeMB=6144
 	fi
 
+	# And enable lz4 zram compression for Go targets.
 	if [ "$low_ram" == "true" ]; then
 		echo lz4 > /sys/block/zram0/comp_algorithm
 	fi
@@ -134,12 +129,26 @@ function configure_memory_parameters() {
 	# huge pages is not as necessary.
 	echo 0 > /proc/sys/vm/compaction_proactiveness
 
-	# With THP enabled, the kernel greatly increases min_free_kbytes over its
-	# default value. Disable THP to prevent resetting of min_free_kbytes
-	# value during online/offline pages.
-	if [ -f /sys/kernel/mm/transparent_hugepage/enabled ]; then
-		echo never > /sys/kernel/mm/transparent_hugepage/enabled
-	fi
+	## Goal is to allow all allocations to use THP whilst minimizing allocaiton delays
+	# Allowing all eligibe page faults to use THP is set in the respective soc specific file
+	echo never > /sys/kernel/mm/transparent_hugepage/enabled
+	# Prevent page faults on THP-elgible VMAs from causing reclaim or compaction
+	echo never > /sys/kernel/mm/transparent_hugepage/defrag
+
+	## Goal is to make khugepaged as inert as possible using the below settings
+	# Prevent khugepaged from doing reclaim or compaction
+	echo 0 > /sys/kernel/mm/transparent_hugepage/khugepaged/defrag
+	# Minimize the number of pages that khugepaged will scan
+	echo 1 > /sys/kernel/mm/transparent_hugepage/khugepaged/pages_to_scan
+	# Maximize the amount of time that khugepaged is asleep for
+	echo 4294967295 > /sys/kernel/mm/transparent_hugepage/khugepaged/scan_sleep_millisecs
+	echo 4294967295 > /sys/kernel/mm/transparent_hugepage/khugepaged/alloc_sleep_millisecs
+	# Restrict khugepaged promotions as much as possible. Only allow khugepaged to promote
+	# if all pages in a VMA are (1) not invalid PTEs, (2) not swapped out PTEs, (3) not
+	# shared PTEs.
+	echo 0 > /sys/kernel/mm/transparent_hugepage/khugepaged/max_ptes_none
+	echo 0 > /sys/kernel/mm/transparent_hugepage/khugepaged/max_ptes_swap
+	echo 0 > /sys/kernel/mm/transparent_hugepage/khugepaged/max_ptes_shared
 
 	MemTotalStr=`cat /proc/meminfo | grep MemTotal`
 	MemTotal=${MemTotalStr:16:8}
@@ -155,6 +164,27 @@ function configure_memory_parameters() {
 	else
 		echo 4096 > /proc/sys/vm/min_free_kbytes
 	fi
+
+	#Set per-app max kgsl reclaim limit and per shrinker call limit
+	if [ -f /sys/class/kgsl/kgsl/page_reclaim_per_call ]; then
+		echo 38400 > /sys/class/kgsl/kgsl/page_reclaim_per_call
+	fi
+	if [ -f /sys/class/kgsl/kgsl/max_reclaim_limit ]; then
+		echo 51200 > /sys/class/kgsl/kgsl/max_reclaim_limit
+	fi
+}
+
+#Implementing this mechanism to jump to powersave governor if the script is not running
+#as it would be an indication for devs for debug purposes.
+fallback_setting()
+{
+        governor="powersave"
+        for i in `ls -d /sys/devices/system/cpu/cpufreq/policy[0-9]*`
+        do
+                if [ -f $i/scaling_governor ] ; then
+                        echo $governor > $i/scaling_governor
+                fi
+        done
 }
 
 configure_memory_parameters
@@ -165,9 +195,15 @@ fi
 
 case "$platformid" in
 	"557"|"577")
-		/vendor/bin/sh /vendor/bin/init.kernel.post_boot-pineapple.sh
+		#Pass as an argument the max number of clusters supported on the SOC
+		/vendor/bin/sh /vendor/bin/init.kernel.post_boot-pineapple.sh 4
+		;;
+	"614"|"632"|"642"|"643")
+		#Pass as an argument the max number of clusters supported on the SOC
+		/vendor/bin/sh /vendor/bin/init.kernel.post_boot-cliffs.sh 3 $platformid
 		;;
 	*)
 		echo "***WARNING***: Invalid SoC ID\n\t No postboot settings applied!!\n"
+		fallback_setting
 		;;
 esac
