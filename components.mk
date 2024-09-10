@@ -85,16 +85,16 @@ ifneq (,$(filter dsprpcd, $(TARGET_COMMON_QTI_COMPONENTS)))
   include $(QCOM_COMMON_PATH)/vendor/dsprpcd/qti-dsprpcd.mk
 endif
 
-ifneq (,$(filter 5.10 5.15, $(TARGET_KERNEL_VERSION)))
+ifeq (,$(filter 4.4 4.9 4.14 4.19 5.4, $(TARGET_KERNEL_VERSION)))
   include $(QCOM_COMMON_PATH)/dlkm/qti-dlkm.mk
 endif
 
 ifneq (,$(filter gps, $(TARGET_COMMON_QTI_COMPONENTS)))
   include $(QCOM_COMMON_PATH)/system/gps/qti-gps.mk
-  ifeq ($(call is-board-platform-in-list,$(5_10_FAMILY) $(5_15_FAMILY)),true)
-    TARGET_GPS_COMPONENT_VARIANT ?= gps
-  else
+  ifeq ($(call is-board-platform-in-list,$(4_4_FAMILY) $(4_9_FAMILY) $(4_14_FAMILY) $(4_19_FAMILY) $(5_4_FAMILY)),true)
     TARGET_GPS_COMPONENT_VARIANT ?= gps-legacy
+  else
+    TARGET_GPS_COMPONENT_VARIANT ?= gps
   endif
   include $(QCOM_COMMON_PATH)/vendor/$(TARGET_GPS_COMPONENT_VARIANT)/qti-$(TARGET_GPS_COMPONENT_VARIANT).mk
 endif
@@ -108,12 +108,12 @@ ifneq (,$(filter keymaster, $(TARGET_COMMON_QTI_COMPONENTS)))
 endif
 
 ifneq (,$(filter media, $(TARGET_COMMON_QTI_COMPONENTS)))
-  ifeq ($(call is-board-platform-in-list,$(5_10_FAMILY) $(5_15_FAMILY)),true)
-    TARGET_MEDIA_COMPONENT_VARIANT ?= media
+  ifeq ($(call is-board-platform-in-list,$(4_4_FAMILY) $(4_9_FAMILY) $(4_14_FAMILY) $(4_19_FAMILY)),true)
+    TARGET_MEDIA_COMPONENT_VARIANT ?= media-legacy
   else ifeq ($(call is-board-platform-in-list,$(5_4_FAMILY)),true)
     TARGET_MEDIA_COMPONENT_VARIANT ?= media-5.4
   else
-    TARGET_MEDIA_COMPONENT_VARIANT ?= media-legacy
+    TARGET_MEDIA_COMPONENT_VARIANT ?= media
   endif
   include $(QCOM_COMMON_PATH)/vendor/$(TARGET_MEDIA_COMPONENT_VARIANT)/qti-$(TARGET_MEDIA_COMPONENT_VARIANT).mk
 endif
@@ -133,10 +133,10 @@ ifneq (,$(filter perf, $(TARGET_COMMON_QTI_COMPONENTS)))
 endif
 
 ifneq (,$(filter qseecomd, $(TARGET_COMMON_QTI_COMPONENTS)))
-  ifeq ($(call is-board-platform-in-list,$(5_4_FAMILY) $(5_10_FAMILY) $(5_15_FAMILY)),true)
-    TARGET_QSEECOMD_COMPONENT_VARIANT ?= qseecomd
-  else
+  ifeq ($(call is-board-platform-in-list,$(4_4_FAMILY) $(4_9_FAMILY) $(4_14_FAMILY) $(4_19_FAMILY)),true)
     TARGET_QSEECOMD_COMPONENT_VARIANT ?= qseecomd-legacy
+  else
+    TARGET_QSEECOMD_COMPONENT_VARIANT ?= qseecomd
   endif
   include $(QCOM_COMMON_PATH)/vendor/$(TARGET_QSEECOMD_COMPONENT_VARIANT)/qti-$(TARGET_QSEECOMD_COMPONENT_VARIANT).mk
 endif
@@ -159,10 +159,10 @@ ifneq (,$(filter wfd, $(TARGET_COMMON_QTI_COMPONENTS)))
 endif
 
 ifneq (,$(filter wlan, $(TARGET_COMMON_QTI_COMPONENTS)))
-  ifeq ($(call is-board-platform-in-list,$(5_10_FAMILY) $(5_15_FAMILY)),true)
-    TARGET_WLAN_COMPONENT_VARIANT ?= wlan
-  else
+  ifeq ($(call is-board-platform-in-list,$(4_4_FAMILY) $(4_9_FAMILY) $(4_14_FAMILY) $(4_19_FAMILY) $(5_4_FAMILY)),true)
     TARGET_WLAN_COMPONENT_VARIANT ?= wlan-legacy
+  else
+    TARGET_WLAN_COMPONENT_VARIANT ?= wlan
   endif
   include $(QCOM_COMMON_PATH)/vendor/$(TARGET_WLAN_COMPONENT_VARIANT)/qti-$(TARGET_WLAN_COMPONENT_VARIANT).mk
 endif
