@@ -26,12 +26,6 @@ do
 		else
 			audio_blocklist_expr="-e %"
 		fi
-	elif [ "$audio_arch" == "audioreach_vio" ]; then
-		if [ -e ${dir}/modules.audio.ar_vio.blocklist ]; then
-			audio_blocklist_expr="$(sed -n -e 's/blocklist \(.*\)/\1/p' ${dir}/modules.audio.ar_vio.blocklist | sed -e 's/-/_/g' -e 's/^/-e /')"
-		else
-			audio_blocklist_expr="-e %"
-		fi
 	else
 		if [ -e ${dir}/modules.audio.legacy.blocklist ]; then
 			audio_blocklist_expr="$(sed -n -e 's/blocklist \(.*\)/\1/p' ${dir}/modules.audio.legacy.blocklist | sed -e 's/-/_/g' -e 's/^/-e /')"
