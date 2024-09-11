@@ -16,8 +16,20 @@
 -include hardware/qcom/display/config/display-board.mk
 -include hardware/qcom/display/config/display-product.mk
 
+# Enable Legacy Lights HAL for 4.14 target
+ifneq (,$(filter 4.14, $(TARGET_KERNEL_VERSION)))
+
+# Lights HAL
+PRODUCT_PACKAGES += \
+    android.hardware.lights-service.qti \
+    lights.qcom
+
+else
+
 # Include QTI AIDL Lights HAL
 -include vendor/qcom/opensource/lights/lights-vendor-product.mk
+
+endif
 
 # Permissions
 PRODUCT_COPY_FILES += \
