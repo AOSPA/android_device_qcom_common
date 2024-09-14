@@ -16,6 +16,24 @@
       "message": "Why was this change merged?\nWho tested it?\n+2 on code review was given by Jake but not verified. It apparently was verified by you, did you test this change on a lahaina device?",
       "revId": "b83b3514ae1018f51215a9d12f63925b9719c0b2",
       "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "e1cb793d_2406f2ea",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000737
+      },
+      "writtenOn": "2024-09-14T13:04:06Z",
+      "side": 1,
+      "message": "I think at the time there was this change in the new BSP and Jake asked me to make a commit, he probably tested it, he was with phone1",
+      "parentUuid": "164a965f_fb5fac74",
+      "revId": "b83b3514ae1018f51215a9d12f63925b9719c0b2",
+      "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
     }
   ]
 }
