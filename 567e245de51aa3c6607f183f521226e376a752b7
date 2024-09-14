@@ -16,6 +16,24 @@
       "message": "pineapple does support ubwc-p",
       "revId": "567e245de51aa3c6607f183f521226e376a752b7",
       "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "3dce6a90_f3cd77e8",
+        "filename": "vendor/display/qti-display.mk",
+        "patchSetId": 7
+      },
+      "lineNbr": 73,
+      "author": {
+        "id": 1000737
+      },
+      "writtenOn": "2024-09-14T14:42:45Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "01aee66d_254109c6",
+      "revId": "567e245de51aa3c6607f183f521226e376a752b7",
+      "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
     }
   ]
 }
