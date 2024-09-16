@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "124087e4_e0af485e",
+        "filename": "system/bt/qti-bt.mk",
+        "patchSetId": 1
+      },
+      "lineNbr": 28,
+      "author": {
+        "id": 1000579
+      },
+      "writtenOn": "2024-09-16T02:58:21Z",
+      "side": 1,
+      "message": "I don\u0027t think this is based on a2dp aidl which is what our flag enables\nvendor-side bluetooth service is prebuilt\n\nvendor/bin/hw/android.hardware.bluetooth@aidl-service-qti",
+      "revId": "3692bc6f19c2880801f047ffa26379f293d090d5",
+      "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
+    }
+  ]
+}
