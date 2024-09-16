@@ -70,6 +70,24 @@
       "parentUuid": "38d511d3_5395f194",
       "revId": "3692bc6f19c2880801f047ffa26379f293d090d5",
       "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "8b89643b_6cd1d828",
+        "filename": "system/bt/qti-bt.mk",
+        "patchSetId": 1
+      },
+      "lineNbr": 28,
+      "author": {
+        "id": 1000737
+      },
+      "writtenOn": "2024-09-16T15:32:13Z",
+      "side": 1,
+      "message": "Do we have any dumps for sun?",
+      "parentUuid": "692b8bb1_8a410364",
+      "revId": "3692bc6f19c2880801f047ffa26379f293d090d5",
+      "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
     }
   ]
 }
