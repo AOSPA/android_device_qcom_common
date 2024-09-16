@@ -52,6 +52,24 @@
       "parentUuid": "77e862cc_63648f05",
       "revId": "3692bc6f19c2880801f047ffa26379f293d090d5",
       "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "692b8bb1_8a410364",
+        "filename": "system/bt/qti-bt.mk",
+        "patchSetId": 1
+      },
+      "lineNbr": 28,
+      "author": {
+        "id": 1000579
+      },
+      "writtenOn": "2024-09-16T12:54:44Z",
+      "side": 1,
+      "message": "btw this would be for sun not pineapple",
+      "parentUuid": "38d511d3_5395f194",
+      "revId": "3692bc6f19c2880801f047ffa26379f293d090d5",
+      "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
     }
   ]
 }
