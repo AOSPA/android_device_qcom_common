@@ -34,6 +34,24 @@
       "parentUuid": "124087e4_e0af485e",
       "revId": "3692bc6f19c2880801f047ffa26379f293d090d5",
       "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "38d511d3_5395f194",
+        "filename": "system/bt/qti-bt.mk",
+        "patchSetId": 1
+      },
+      "lineNbr": 28,
+      "author": {
+        "id": 1000579
+      },
+      "writtenOn": "2024-09-16T12:54:16Z",
+      "side": 1,
+      "message": "yeah i noticed that we are finally on bluetooth apex",
+      "parentUuid": "77e862cc_63648f05",
+      "revId": "3692bc6f19c2880801f047ffa26379f293d090d5",
+      "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
     }
   ]
 }
