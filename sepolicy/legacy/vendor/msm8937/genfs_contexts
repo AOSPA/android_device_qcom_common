@@ -159,6 +159,7 @@ genfscon sysfs /devices/virtual/misc/msm_amrwb/wakeup u:object_r:sysfs_wakeup:s0
 genfscon sysfs /devices/virtual/misc/msm_g711mlaw/wakeup u:object_r:sysfs_wakeup:s0
 genfscon sysfs /devices/virtual/misc/msm_evrc/wakeup u:object_r:sysfs_wakeup:s0
 genfscon sysfs /devices/platform/soc/soc:fpc1020/wakeup u:object_r:sysfs_wakeup:s0
+genfscon sysfs /devices/platform/soc/soc:qcom,smp2p_sleepstate/wakeup u:object_r:sysfs_wakeup:s0
 genfscon sysfs /devices/platform/soc/soc:smp2p-modem/wakeup/wakeup u:object_r:sysfs_wakeup:s0
 genfscon sysfs /devices/platform/soc/soc:smp2p-wcnss/wakeup/wakeup u:object_r:sysfs_wakeup:s0
 genfscon sysfs /devices/platform/soc/78db000.usb/wakeup/wakeup u:object_r:sysfs_wakeup:s0
