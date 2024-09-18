@@ -21,7 +21,6 @@
 
    <!-- Indicates that connected MAC randomization is supported on this device -->
    <bool translatable="false" name="config_wifi_connected_mac_randomization_supported">true</bool>
-   <bool name="config_wifiAllowNonPersistentMacRandomizationOnOpenSsids">true</bool>
 
     <!-- Indicates that p2p MAC randomization is supported on this device -->
     <bool translatable="false" name="config_wifi_p2p_mac_randomization_supported">true</bool>
@@ -77,12 +76,6 @@
         will be deleted to make room for new configs.-->
     <integer translatable="false" name="config_wifiMaxNumWifiConfigurations">1000</integer>
 
-    <!-- Boolean indicating whether the framework updates country from scan results when there is
-         no telephony country code. This is applied to all generic cases and might require the
-         regulatory approval (for example, FCC pre-approval is required according to "594280 D01
-         Software Configuration Control v02r01").-->
-    <bool translatable="false" name ="config_wifiUpdateCountryCodeFromScanResultGeneric">true</bool>
-
     <!-- Lists each alternate character set per locale language for SSID translation to UTF-8. This
          will translate all SSIDs encoded with the specified character set from the native layer
          into UTF-8 SSIDs. The translated SSIDs are then converted back to the original character
@@ -96,15 +89,61 @@
         <item>zh,GBK</item>
     </string-array>
 
+    <integer translatable="false" name="config_wifiDisableReasonByWrongPasswordThreshold"> 2 </integer>
+
+    <!-- Wifi driver supports IEEE80211AX for softap -->
+    <bool translatable="false" name="config_wifiSoftapIeee80211axSupported">true</bool>
+
+    <!-- Wifi driver supports IEEE80211AX single user beamformer for softap -->
+    <bool translatable="false" name="config_wifiSoftapHeSuBeamformerSupported">true</bool>
+
+    <!-- Wifi driver supports IEEE80211AX single user beamformee for softap -->
+    <bool translatable="false" name="config_wifiSoftapHeSuBeamformeeSupported">true</bool>
+
+    <!-- Configure wifi tcp buffersizes in the form:
+                 rmem_min,rmem_def,rmem_max,wmem_min,wmem_def,wmem_max -->
+    <string name="config_wifi_tcp_buffers" translatable="false">524288,1048576,2097152,524288,1048576,4194304</string>
+
+    <!-- boolean indicating whether the WiFi chipset has 6GHz band support -->
+    <bool translatable="false" name ="config_wifi6ghzSupport">true</bool>
+
     <!-- Indicates that SAE Hash-to-Element is supported on this device -->
     <bool translatable="false" name="config_wifiSaeH2eSupported">true</bool>
 
+    <!-- Boolean indicating performing a partial initial scan is enabled -->
+    <bool translatable="false" name="config_wifiEnablePartialInitialScan">true</bool>
+
+    <!-- Enable connected frequency enhancement for pno scan -->
+    <bool translatable="false" name="config_wifiConnectedFrequencyEnhancementEnabled">true</bool>
+
+    <!-- Indicates whether or not the network-centric QoS policy feature is enabled. -->
+    <bool translatable="false" name="config_wifiNetworkCentricQosPolicyFeatureEnabled">true</bool>
+
+    <!-- Indicates whether the application-centric QoS policy feature is enabled. -->
+    <bool translatable="false" name="config_wifiApplicationCentricQosPolicyFeatureEnabled">true</bool>
+
     <!-- Indicates whether or not the WLAN driver supports the NL80211_CMD_REG_CHANGE or
-         NL80211_CMD_WIPHY_REG_CHANGE events which indicate the current country code which is
+                  NL80211_CMD_WIPHY_REG_CHANGE events which indicate the current country code which is
          being used by the WLAN driver. If the driver doesn't support these events
          (configuration is `false`) then the driver must handle the setCountryCode request from
          HAL as a blocking call. In such a case the country code will be applied
          immediately after the country code is sent to the driver (if the method returns a
          success). -->
     <bool translatable="false" name="config_wifiDriverSupportedNl80211RegChangedEvent">true</bool>
+
+    <!-- Indicates whether or not the Soft AP needs to be restarted when country code changed -->
+    <bool translatable="false" name="config_wifiForcedSoftApRestartWhenCountryCodeChanged">false</bool>
+
+    <!-- Enable WPA2 to WPA3 auto-upgrade offload to capable Driver/Firmware -->
+    <bool translatable="false" name="config_wifiSaeUpgradeOffloadEnabled">true</bool>
+
+    <!-- Indicates that dynamic country code update in AP mode is supported on this device -->
+    <bool translatable="false" name="config_wifiSoftApDynamicCountryCodeUpdateSupported">true</bool>
+
+    <!-- Indicates that dynamic country code update in STA mode is supported on this device -->
+    <bool translatable="false" name="config_wifiStaDynamicCountryCodeUpdateSupported">true</bool>
+
+    <!-- Whether to use the explicit vendor HAL API: IWifiStaIface.setRoamingState for disabling fw roaming (only needed if
+         setting the bssid on the connection alone does not disable fw roaming on this chip) -->
+    <bool translatable="false" name="config_wifiUseHalApiToDisableFwRoaming">true</bool>
 </resources>
