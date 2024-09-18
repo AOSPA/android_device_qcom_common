@@ -25,3 +25,6 @@ PRODUCT_PACKAGES += \
     TelephonyResCommon_Sys \
     WifiResCommon_Sys \
     WifiResCommonMainline_Sys
+
+PRODUCT_COPY_FILES += \
+    device/qcom/common/system/overlay/partition_order.xml:$(TARGET_COPY_OUT_PRODUCT)/overlay/partition_order.xml

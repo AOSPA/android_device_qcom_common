@@ -1,0 +1,9 @@
+<!--From least to greatest precedence is: system < system_ext < product < vendor < oem < odm-->
+<partition-order>
+  <partition name="system"/>
+  <partition name="system_ext"/>
+  <partition name="product"/>
+  <partition name="vendor"/>
+  <partition name="oem"/>
+  <partition name="odm"/>
+</partition-order>
