@@ -96,8 +96,38 @@
         <item>zh,GBK</item>
     </string-array>
 
+    <integer translatable="false" name="config_wifiDisableReasonByWrongPasswordThreshold"> 2 </integer>
+
+    <!-- Wifi driver supports IEEE80211AX for softap -->
+    <bool translatable="false" name="config_wifiSoftapIeee80211axSupported">true</bool>
+
+    <!-- Wifi driver supports IEEE80211AX single user beamformer for softap -->
+    <bool translatable="false" name="config_wifiSoftapHeSuBeamformerSupported">true</bool>
+
+    <!-- Wifi driver supports IEEE80211AX single user beamformee for softap -->
+    <bool translatable="false" name="config_wifiSoftapHeSuBeamformeeSupported">true</bool>
+
+    <!-- Configure wifi tcp buffersizes in the form:
+                 rmem_min,rmem_def,rmem_max,wmem_min,wmem_def,wmem_max -->
+    <string name="config_wifi_tcp_buffers" translatable="false">524288,1048576,2097152,524288,1048576,4194304</string>
+
+    <!-- boolean indicating whether the WiFi chipset has 6GHz band support -->
+    <bool translatable="false" name ="config_wifi6ghzSupport">true</bool>
+
     <!-- Indicates that SAE Hash-to-Element is supported on this device -->
     <bool translatable="false" name="config_wifiSaeH2eSupported">true</bool>
+
+    <!-- Boolean indicating performing a partial initial scan is enabled -->
+    <bool translatable="false" name="config_wifiEnablePartialInitialScan">true</bool>
+
+    <!-- Enable connected frequency enhancement for pno scan -->
+    <bool translatable="false" name="config_wifiConnectedFrequencyEnhancementEnabled">true</bool>
+
+    <!-- Indicates whether or not the network-centric QoS policy feature is enabled. -->
+    <bool translatable="false" name="config_wifiNetworkCentricQosPolicyFeatureEnabled">true</bool>
+
+    <!-- Indicates whether the application-centric QoS policy feature is enabled. -->
+    <bool translatable="false" name="config_wifiApplicationCentricQosPolicyFeatureEnabled">true</bool>
 
     <!-- Indicates whether or not the WLAN driver supports the NL80211_CMD_REG_CHANGE or
          NL80211_CMD_WIPHY_REG_CHANGE events which indicate the current country code which is
@@ -107,4 +137,10 @@
          immediately after the country code is sent to the driver (if the method returns a
          success). -->
     <bool translatable="false" name="config_wifiDriverSupportedNl80211RegChangedEvent">true</bool>
+
+    <!-- Indicates whether or not the Soft AP needs to be restarted when country code changed -->
+    <bool translatable="false" name="config_wifiForcedSoftApRestartWhenCountryCodeChanged">false</bool>
+
+    <!-- Enable WPA2 to WPA3 auto-upgrade offload to capable Driver/Firmware -->
+    <bool translatable="false" name="config_wifiSaeUpgradeOffloadEnabled">true</bool>
 </resources>
