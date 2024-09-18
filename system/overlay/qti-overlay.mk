@@ -22,6 +22,10 @@ PRODUCT_PACKAGES += \
     SettingsResCommon_Sys \
     SystemUIResCommon_Sys \
     TelecommResCommon_Sys \
-    TelephonyResCommon_Sys \
+    TelephonyResCommon_Sys
+
+ifneq ($(EXCLUDE_WIFI_OVERLAYS), true)
+PRODUCT_PACKAGES += \
     WifiResCommon_Sys \
     WifiResCommonMainline_Sys
+endif
