@@ -55,6 +55,8 @@ PRODUCT_PACKAGES += \
     android.hardware.wifi.supplicant-V1-ndk.vendor \
     vendor.qti.hardware.wifi.supplicant-V1-ndk.vendor
 
+PRODUCT_SOONG_NAMESPACES += hardware/qcom/wlan/qcwcn
+
 # Enable IEEE 802.11ax support
 CONFIG_IEEE80211AX := true
 
