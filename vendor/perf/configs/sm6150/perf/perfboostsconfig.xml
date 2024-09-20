@@ -312,7 +312,7 @@
          <!-- AOSPA Edit: Increase CPU freq for Drag Boost -->
          <Config
              Id="0x00001087" Type="1" Enable="true" Timeout="0" Target="sdmmagpie"
-             Resources="0x40800000, 1708, 0x40800100, 1324" />
+             Resources="0x40800000, 1324, 0x40800100, 1708" />
 
     <!--Display on Resource -->
         <!-- Display on resource opcode, value -->
