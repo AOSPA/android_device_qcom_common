@@ -51,6 +51,14 @@ if [ -z "${SRC}" ]; then
     SRC="adb"
 fi
 
+function blob_fixup() {
+    case "${1}" in
+        vendor/lib64/libmemperfd.so)
+            "${PATCHELF}" --replace-needed "libprotobuf-cpp-lite-21.7.so" "libprotobuf-cpp-full-21.12.so" "${2}"
+            ;;
+    esac
+}
+
 # Initialize the helper
 if [ -f "${MY_DIR}/${COMPONENT}/${KERNEL_VERSION}/proprietary-files.txt" ] && [ ! -z ${KERNEL_VERSION} ]; then
     setup_vendor "${COMPONENT}/${KERNEL_VERSION}" "${VENDOR}" "${ANDROID_ROOT}" false "${CLEAN_VENDOR}" "${COMPONENT}" true
