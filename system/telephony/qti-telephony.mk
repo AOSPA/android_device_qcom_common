@@ -21,7 +21,10 @@ PRODUCT_PACKAGES += \
     android.hardware.radio.config@1.3 \
     android.hardware.radio.deprecated@1.0 \
     android.system.net.netd@1.1 \
+    libbase.product \
     libc++.product \
+    libcutils.product \
+    libhidlbase \
     libjson
 
 # Properties
