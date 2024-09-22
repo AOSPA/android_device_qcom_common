@@ -49,6 +49,7 @@ PRODUCT_PACKAGES += \
     audio.usb.default \
     liba2dpoffload \
     libaudioroute \
+    libaudioroute.vendor \
     libbatterylistener \
     libcirrusspkrprot \
     libcomprcapture \
