@@ -45,7 +45,8 @@ PRODUCT_PACKAGES += \
     libcodec2_hidl@1.0.vendor \
     libcodec2_vndk.vendor \
     libgui_vendor \
-    libstagefright_softomx.vendor
+    libstagefright_softomx.vendor \
+    vendor.qti.hardware.capabilityconfigstore@1.0.vendor
 
 # Properties
 PRODUCT_SYSTEM_EXT_PROPERTIES += \
