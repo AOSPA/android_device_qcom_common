@@ -54,7 +54,10 @@ fi
 function blob_fixup() {
     case "${1}" in
         vendor/lib64/libmemperfd.so)
-            "${PATCHELF}" --replace-needed "libprotobuf-cpp-lite-21.7.so" "libprotobuf-cpp-full-21.12.so" "${2}"
+            "${PATCHELF}" --replace-needed "libprotobuf-cpp-lite-21.7.so" "libprotobuf-cpp-lite-21.12.so" "${2}"
+            ;;
+        vendor/lib64/libprekill.so)
+            "${PATCHELF}" --replace-needed "libprotobuf-cpp-full-21.7.so" "libprotobuf-cpp-full-21.12.so" "${2}"
             ;;
     esac
 }
