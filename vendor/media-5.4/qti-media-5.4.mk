@@ -26,7 +26,8 @@ PRODUCT_VENDOR_PROPERTIES += \
 
 # Packages
 PRODUCT_PACKAGES += \
-    libavservices_minijail.vendor
+    libavservices_minijail.vendor \
+    vendor.qti.hardware.capabilityconfigstore@1.0.vendor
 
 # Properties
 PRODUCT_SYSTEM_EXT_PROPERTIES += \
