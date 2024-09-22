@@ -145,6 +145,10 @@ else ifeq ($(call is-board-platform-in-list,$(3_18_FAMILY)),true)
 TARGET_KERNEL_VERSION ?= 3.18
 endif
 
+ifneq (,$(filter 3.18 4.4 4.9 4.14 4.19 5.4, $(TARGET_KERNEL_VERSION)))
+$(call soong_config_set,qti_thermal,netlink,false)
+endif
+
 ifeq ($(call is-board-platform-in-list,$(QCOM_BOARD_PLATFORMS)),true)
 ifeq ($(TARGET_FWK_SUPPORTS_FULL_VALUEADDS),true)
 # Compatibility matrix
