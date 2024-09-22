@@ -26,10 +26,7 @@ PRODUCT_VENDOR_PROPERTIES += \
 
 # Packages
 PRODUCT_PACKAGES += \
-    libavservices_minijail.vendor \
-    libgui_vendor \
-    libstagefright_softomx.vendor \
-    libstagefrighthw
+    libavservices_minijail.vendor
 
 # Properties
 PRODUCT_SYSTEM_EXT_PROPERTIES += \
