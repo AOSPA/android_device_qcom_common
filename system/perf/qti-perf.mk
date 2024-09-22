@@ -21,6 +21,7 @@ PRODUCT_BOOT_JARS += \
 PRODUCT_PACKAGES += \
     android.hardware.thermal@2.0 \
     libavservices_minijail \
+    vendor.qti.hardware.display.config-V12-ndk \
     vendor.qti.hardware.qspa-V1-ndk
 
 # Get non-open-source specific aspects
