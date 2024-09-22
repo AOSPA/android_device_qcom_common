@@ -169,7 +169,8 @@ TARGET_FS_CONFIG_GEN += $(QCOM_COMMON_PATH)/config.fs
 
 # GPS
 PRODUCT_PACKAGES += \
-    libcurl
+    libcurl \
+    libcurl.vendor
 
 # Partition source order for Product/Build properties pickup.
 PRODUCT_SYSTEM_PROPERTIES += \
@@ -209,6 +210,13 @@ PRODUCT_PACKAGES += usbudev
 # Vendor Service Manager
 PRODUCT_PACKAGES += \
     vndservicemanager
+
+# VNDK
+PRODUCT_PACKAGES += \
+    libjsoncpp.vendor \
+    libpng.vendor \
+    libsqlite.vendor \
+    libutilscallstack.vendor
 
 # SoC
 PRODUCT_VENDOR_PROPERTIES += \
