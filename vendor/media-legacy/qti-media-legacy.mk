@@ -20,7 +20,6 @@ TARGET_MEDIA_COMPONENT_VARIANT := media-legacy
 ifneq ($(call is-board-platform-in-list, sm6150 msmnile kona),true)
 TARGET_DISABLE_C2_CODEC ?= true
 endif
-
 ifeq ($(TARGET_DISABLE_C2_CODEC),true)
 PRODUCT_ODM_PROPERTIES += \
     debug.stagefright.ccodec=0
