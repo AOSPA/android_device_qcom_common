@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "a74006a8_29e0565e",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000012
+      },
+      "writtenOn": "2024-09-24T11:32:47Z",
+      "side": 1,
+      "message": "would it be better to just exclude based on kernel version or soc family?  if not, I\u0027m fine with this.",
+      "revId": "3cbd8f8716ac1518423fc3e0815652761058ce80",
+      "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
+    }
+  ]
+}
