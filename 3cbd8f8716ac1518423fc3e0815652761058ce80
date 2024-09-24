@@ -16,6 +16,24 @@
       "message": "would it be better to just exclude based on kernel version or soc family?  if not, I\u0027m fine with this.",
       "revId": "3cbd8f8716ac1518423fc3e0815652761058ce80",
       "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "3562f343_11cd8744",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000429
+      },
+      "writtenOn": "2024-09-24T11:49:51Z",
+      "side": 1,
+      "message": "that could also work but im not sure which soc to exclude yet. Imo we should go for this atleast for now",
+      "parentUuid": "a74006a8_29e0565e",
+      "revId": "3cbd8f8716ac1518423fc3e0815652761058ce80",
+      "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
     }
   ]
 }
