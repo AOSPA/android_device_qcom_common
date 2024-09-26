@@ -73,7 +73,8 @@ if [ -f "${MY_DIR}/${COMPONENT}/${KERNEL_VERSION}/proprietary-files.txt" ] && [ 
     extract "${MY_DIR}/${COMPONENT}/${KERNEL_VERSION}/proprietary-files.txt" "${SRC}" \
         "${KANG}" --section "${SECTION}"
 else
-    extract "${MY_DIR}/${COMPONENT}/proprietary-files.txt" "${SRC}" \
+    extract "${MY_DIR}/${COMPONENT}/proprietary-files.txt" "${SRC}"
+    extract "${MY_DIR}/${COMPONENT}/proprietary-files-c2.txt" "${SRC}" \
         "${KANG}" --section "${SECTION}"
 fi
 

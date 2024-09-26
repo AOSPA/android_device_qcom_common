@@ -20,10 +20,6 @@ TARGET_MEDIA_COMPONENT_VARIANT := media-legacy
 ifneq ($(call is-board-platform-in-list, sm6150 msmnile kona),true)
 TARGET_DISABLE_C2_CODEC ?= true
 endif
-ifeq ($(TARGET_DISABLE_C2_CODEC),true)
-PRODUCT_ODM_PROPERTIES += \
-    debug.stagefright.ccodec=0
-endif
 
 # Inherit configuration from the HAL.
 $(call inherit-product-if-exists, hardware/qcom/media/product.mk)
@@ -51,6 +47,10 @@ PRODUCT_SYSTEM_EXT_PROPERTIES += \
     media.settings.xml=/vendor/etc/media_profiles_vendor.xml \
     media.stagefright.thumbnail.prefer_hw_codecs=true \
     ro.media.recorder-max-base-layer-fps=60
+
+ifneq ($(TARGET_DISABLE_C2_CODEC),true)
+$(call inherit-product-if-exists, vendor/qcom/common/vendor/media-legacy/C2/media-legacy-vendor.mk)
+endif
 
 # Get non-open-source specific aspects.
 $(call inherit-product-if-exists, vendor/qcom/common/vendor/media-legacy/media-legacy-vendor.mk)
