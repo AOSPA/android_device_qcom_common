@@ -62,10 +62,6 @@ function blob_fixup() {
             zipalign -p -f 4 "${2}.tmp" "${2}"
             rm "${2}.tmp"
             ;;
-
-        system/lib64/libwfdnative.so | system/lib/libwfdnative.so | system/lib/libwfdservice.so | system/lib/libwfdcommonutils.so | system/lib/libwfdmmsrc.so | system/lib/libwfdmmsink.so)
-            "${PATCHELF}" --add-needed "libshim_wfd.so" "${2}"
-            ;;
     esac
 }
 
