@@ -215,6 +215,11 @@ PRODUCT_VENDOR_PROPERTIES += \
 PRODUCT_PACKAGES += \
     libwfdaac_vendor
 
+# WLAN
+ifdef TARGET_HAS_BROKEN_WLAN_SET_INTERFACE
+    $(call soong_config_set,wifi,target_has_broken_wlan_set_interface,true)
+endif
+
 # RFS APQ GNSS symlinks
 PRODUCT_PACKAGES += \
     rfs_apq_gnss_hlos_symlink \
