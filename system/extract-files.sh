@@ -62,6 +62,10 @@ function blob_fixup() {
             zipalign -p -f 4 "${2}.tmp" "${2}"
             rm "${2}.tmp"
             ;;
+
+        system_ext/lib/libwfdservice.so | system_ext/lib64/libwfdservice.so)
+            "${PATCHELF}" --replace-needed "android.media.audio.common.types-V2-cpp.so" "android.media.audio.common.types-V3-cpp.so" "${2}"
+            ;;
     esac
 }
 
