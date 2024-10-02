@@ -21,8 +21,8 @@ PRODUCT_PACKAGES += \
     android.hardware.radio.config@1.3 \
     android.hardware.radio.deprecated@1.0 \
     android.system.net.netd@1.1 \
-    libjson \
-    vendor.qti.hardware.systemhelperaidl-V1-ndk
+    libc++.product \
+    libjson
 
 # Properties
 PRODUCT_SYSTEM_EXT_PROPERTIES += \
