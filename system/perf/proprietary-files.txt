@@ -16,6 +16,7 @@ system_ext/lib/libpenguin.so
 system_ext/lib/libqape.qti.so
 system_ext/lib/libqspmsvc.so
 system_ext/lib/libqspm-mem-utils.so
+system_ext/lib/libqti-MemHal-client-system.so
 system_ext/lib/libqti-at.so
 system_ext/lib/libqti-iopd-client_system.so
 system_ext/lib/libqti-perfd-client_system.so
@@ -42,6 +43,7 @@ system_ext/lib64/libqape.qti.so
 system_ext/lib64/libqspm-mem-utils.so
 system_ext/lib64/libqspmsvc.so
 system_ext/lib64/libqti-at.so
+system_ext/lib64/libqti-MemHal-client-system.so
 system_ext/lib64/libqti-iopd-client_system.so
 system_ext/lib64/libqti-perfd-client_system.so
 system_ext/lib64/libqti_performance.so
@@ -60,8 +62,9 @@ system_ext/lib64/vendor.qti.qspmhal-V1-ndk.so
 system_ext/priv-app/PerformanceMode/PerformanceMode.apk
 system/etc/permissions/com.qualcomm.qti.Performance.xml|7976f2fd46b8d07814310cc957a70f829bdd6932
 system/etc/permissions/com.qualcomm.qti.UxPerformance.xml|d92749d80c5d956db8251b08ea6388d3f107a32c
+system/framework/QPerformance.jar
+system/framework/QXPerformance.jar
+system/framework/UxPerformance.jar
 system/lib/vendor.qti.hardware.perf2-V1-ndk.so
 system/lib64/vendor.qti.hardware.perf2-V1-ndk.so
-system/framework/QXPerformance.jar
-system/framework/QPerformance.jar
-system/framework/UxPerformance.jar
+system/lib64/vendor.qti.MemHal-V1-ndk.so
