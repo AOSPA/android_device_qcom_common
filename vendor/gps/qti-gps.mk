@@ -29,7 +29,7 @@ PRODUCT_PACKAGES += \
 
 # Packages
 PRODUCT_PACKAGES += \
-    android.hardware.gnss-V2-ndk.vendor
+    android.hardware.gnss-V3-ndk.vendor
 
 # Permissions
 PRODUCT_COPY_FILES += \

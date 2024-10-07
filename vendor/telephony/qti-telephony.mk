@@ -47,14 +47,15 @@ PRODUCT_PACKAGES += \
     vendor.qti.hardware.systemhelperaidl-V1-ndk.vendor
 
 PRODUCT_PACKAGES += \
-    android.hardware.radio.config-V1-ndk.vendor \
-    android.hardware.radio.data-V1-ndk.vendor \
-    android.hardware.radio.messaging-V1-ndk.vendor \
-    android.hardware.radio.modem-V1-ndk.vendor \
-    android.hardware.radio.network-V1-ndk.vendor \
-    android.hardware.radio.sim-V1-ndk.vendor \
-    android.hardware.radio.voice-V1-ndk.vendor \
-    android.hardware.radio-V1-ndk.vendor
+    android.hardware.radio.config-V2-ndk.vendor \
+    android.hardware.radio.data-V2-ndk.vendor \
+    android.hardware.radio.messaging-V2-ndk.vendor \
+    android.hardware.radio.modem-V2-ndk.vendor \
+    android.hardware.radio.network-V2-ndk.vendor \
+    android.hardware.radio.sap-V1-ndk.vendor \
+    android.hardware.radio.sim-V2-ndk.vendor \
+    android.hardware.radio.voice-V2-ndk.vendor \
+    android.hardware.radio-V2-ndk.vendor
 
 PRODUCT_VENDOR_PROPERTIES += \
     persist.radio.multisim.config=dsds \
