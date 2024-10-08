@@ -1,10 +1,8 @@
 system_ext/lib/extractors/libmmparserextractor.so
-system_ext/lib/libaudiohalvendorextn.so
 system_ext/lib/libavenhancements.so
 system_ext/lib/libmmosal.so
 system_ext/lib/libmmparser_lite.so
 system_ext/lib64/extractors/libmmparserextractor.so
-system_ext/lib64/libaudiohalvendorextn.so
 system_ext/lib64/libavenhancements.so
 system_ext/lib64/libmmosal.so
 system_ext/lib64/libmmparser_lite.so

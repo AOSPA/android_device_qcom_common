@@ -12,6 +12,10 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
+# Audio
+PRODUCT_PACKAGES += \
+    libaudiohalvendorextn
+
 # Enable QCT resampler
 AUDIO_FEATURE_ENABLED_EXTN_RESAMPLER := true
 
