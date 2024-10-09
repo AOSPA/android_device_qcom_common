@@ -33,13 +33,16 @@ ifneq (,$(filter 3.18 4.4 4.9 4.14 4.19 5.4, $(TARGET_KERNEL_VERSION)))
 TARGET_LOOP_COMPRESS_READ := true
 endif
 
-# OMX Packages
-PRODUCT_PACKAGES += \
-    libOmxAacEnc \
-    libOmxAmrEnc \
-    libOmxEvrcEnc \
-    libOmxG711Enc \
-    libOmxQcelp13Enc
+# OMX not supported for 64bit_only builds
+# Only supported when SHIPPING_API_LEVEL is less than or equal to 33
+ifneq ($(TARGET_SUPPORTS_OMX_SERVICE),false)
+    PRODUCT_PACKAGES_SHIPPING_API_LEVEL_33 += \
+        libOmxAacEnc \
+        libOmxAmrEnc \
+        libOmxEvrcEnc \
+        libOmxG711Enc \
+        libOmxQcelp13Enc
+endif
 
 # Audio Packages
 PRODUCT_PACKAGES += \
