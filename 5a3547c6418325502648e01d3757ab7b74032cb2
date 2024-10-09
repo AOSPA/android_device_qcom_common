@@ -33,6 +33,24 @@
       "message": "just set the soong flag directly in devicetree? or add to wlan-legacy component",
       "revId": "5a3547c6418325502648e01d3757ab7b74032cb2",
       "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "b231864e_a46234dc",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000429
+      },
+      "writtenOn": "2024-10-09T08:52:19Z",
+      "side": 1,
+      "message": "1. im just following what aosp does\n2. I can\u0027t put it on wlan-legacy since im not using it and i can\u0027t because some things there just doesn\u0027t match to our ultra legacy device.",
+      "parentUuid": "8f692d81_9929fe8c",
+      "revId": "5a3547c6418325502648e01d3757ab7b74032cb2",
+      "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
     }
   ]
 }
