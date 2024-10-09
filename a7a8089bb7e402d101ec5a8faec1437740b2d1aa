@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "ff154910_cef27195",
+        "filename": "vendor/media-5.4/qti-media-5.4.mk",
+        "patchSetId": 1
+      },
+      "lineNbr": 41,
+      "author": {
+        "id": 1000760
+      },
+      "writtenOn": "2024-10-09T18:28:25Z",
+      "side": 1,
+      "message": "remove the tab",
+      "revId": "a7a8089bb7e402d101ec5a8faec1437740b2d1aa",
+      "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
+    }
+  ]
+}
