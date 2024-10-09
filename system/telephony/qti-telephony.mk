@@ -8,7 +8,6 @@ SYSTEM_EXT_MANIFEST_FILES += $(QCOM_COMMON_PATH)/system/telephony/atcmdfwd-saidl
 
 # Properties
 PRODUCT_SYSTEM_EXT_PROPERTIES += \
-    DEVICE_PROVISIONED=1 \
     net.tethering.noprovisioning=true \
     persist.sys.fflag.override.settings_network_and_internet_v2=true \
     persist.vendor.cne.feature=1 \
