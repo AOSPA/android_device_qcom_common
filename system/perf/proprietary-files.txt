@@ -66,5 +66,6 @@ system/framework/QPerformance.jar
 system/framework/QXPerformance.jar
 system/framework/UxPerformance.jar
 system/lib/vendor.qti.hardware.perf2-V1-ndk.so
+system/lib/vendor.qti.MemHal-V1-ndk.so
 system/lib64/vendor.qti.hardware.perf2-V1-ndk.so
 system/lib64/vendor.qti.MemHal-V1-ndk.so
