@@ -22,6 +22,18 @@ if [ ! -f "${HELPER}" ]; then
 fi
 source "${HELPER}"
 
+function vendor_imports() {
+    cat <<EOF >>"$1"
+        "vendor/qcom/common/vendor/alarm",
+        "vendor/qcom/common/vendor/charging",
+        "vendor/qcom/common/vendor/dsprpcd",
+        "vendor/qcom/common/vendor/gps-legacy",
+        "vendor/qcom/common/vendor/keymaster",
+        "vendor/qcom/common/vendor/nfc/nq",
+        "vendor/qcom/common/vendor/perf",
+EOF
+}
+
 # Initialize the helper
 if [ -f "${MY_DIR}/${COMPONENT}/${KERNEL_VERSION}/proprietary-files.txt" ] && [ ! -z ${KERNEL_VERSION} ]; then
     setup_vendor "${COMPONENT}/${KERNEL_VERSION}" "${VENDOR_COMMON:-$VENDOR}" "${ANDROID_ROOT}" false true "${COMPONENT}" true
