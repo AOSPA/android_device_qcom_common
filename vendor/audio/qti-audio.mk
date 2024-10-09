@@ -33,14 +33,6 @@ ifneq (,$(filter 3.18 4.4 4.9 4.14 4.19 5.4, $(TARGET_KERNEL_VERSION)))
 TARGET_LOOP_COMPRESS_READ := true
 endif
 
-# OMX Packages
-PRODUCT_PACKAGES += \
-    libOmxAacEnc \
-    libOmxAmrEnc \
-    libOmxEvrcEnc \
-    libOmxG711Enc \
-    libOmxQcelp13Enc
-
 # Audio Packages
 PRODUCT_PACKAGES += \
     audioadsprpcd \
