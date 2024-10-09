@@ -1,9 +1,8 @@
 #!/bin/bash
 #
-# Copyright (C) 2016 The CyanogenMod Project
-# Copyright (C) 2017-2020 The LineageOS Project
-# Copyright (C) 2020 Paranoid Android
-#
+# SPDX-FileCopyrightText: 2016 The CyanogenMod Project
+# SPDX-FileCopyrightText: 2017-2024 The LineageOS Project
+# SPDX-FileCopyrightText: 2020 Paranoid Android
 # SPDX-License-Identifier: Apache-2.0
 #
 
@@ -23,13 +22,13 @@ fi
 source "${HELPER}"
 
 # Initialize the helper
-setup_vendor "${COMPONENT}" "${VENDOR}" "${ANDROID_ROOT}" false true "" true
+setup_vendor "${COMPONENT}" "${VENDOR_COMMON:-$VENDOR}" "${ANDROID_ROOT}" false true "" true
 
 # Warning headers and guards
 write_headers
 
 # The standard common blobs
-write_makefiles "${MY_DIR}/${COMPONENT}/proprietary-files.txt" true
+write_makefiles "${MY_DIR}/${COMPONENT}/proprietary-files.txt"
 
 # Finish
 write_footers
