@@ -16,6 +16,23 @@
       "message": "hold until my wlan fork is added on hardware/qcom/wlan",
       "revId": "5a3547c6418325502648e01d3757ab7b74032cb2",
       "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "8f692d81_9929fe8c",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000579
+      },
+      "writtenOn": "2024-10-09T03:20:02Z",
+      "side": 1,
+      "message": "just set the soong flag directly in devicetree? or add to wlan-legacy component",
+      "revId": "5a3547c6418325502648e01d3757ab7b74032cb2",
+      "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
     }
   ]
 }
