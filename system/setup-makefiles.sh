@@ -21,6 +21,20 @@ if [ ! -f "${HELPER}" ]; then
 fi
 source "${HELPER}"
 
+function vendor_imports() {
+    cat <<EOF >>"$1"
+        "vendor/qcom/common/system/alarm",
+        "vendor/qcom/common/system/audio",
+        "vendor/qcom/common/system/av",
+        "vendor/qcom/common/system/bt",
+        "vendor/qcom/common/system/display",
+        "vendor/qcom/common/system/gps",
+        "vendor/qcom/common/system/perf",
+        "vendor/qcom/common/system/telephony",
+        "vendor/qcom/common/system/wfd",
+EOF
+}
+
 # Initialize the helper
 setup_vendor "${COMPONENT}" "${VENDOR_COMMON:-$VENDOR}" "${ANDROID_ROOT}" false true "" true
 
