@@ -34,6 +34,24 @@
       "parentUuid": "ec56bb64_3f1151a5",
       "revId": "8a748c1972d8511b4d3849ce40af92a638771ada",
       "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "2772c44b_f604232a",
+        "filename": "common.mk",
+        "patchSetId": 1
+      },
+      "lineNbr": 167,
+      "author": {
+        "id": 1000488
+      },
+      "writtenOn": "2024-10-10T03:43:19Z",
+      "side": 1,
+      "message": "couldn\u0027t you just use \"ifeq (,$(filter 6.10, $(TARGET_KERNEL_VERSION)))\"",
+      "parentUuid": "06a5905a_a04f1133",
+      "revId": "8a748c1972d8511b4d3849ce40af92a638771ada",
+      "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
     }
   ]
 }
