@@ -52,6 +52,24 @@
       "parentUuid": "06a5905a_a04f1133",
       "revId": "8a748c1972d8511b4d3849ce40af92a638771ada",
       "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "38ba00f8_873f0c28",
+        "filename": "common.mk",
+        "patchSetId": 1
+      },
+      "lineNbr": 167,
+      "author": {
+        "id": 1000737
+      },
+      "writtenOn": "2024-10-10T03:52:44Z",
+      "side": 1,
+      "message": "We completely changed the structure of the components, always disabling them for old platforms and leaving them enabled for new ones, otherwise we would have to change them every time a new version came out.\n\n\n* https://github.com/AOSPA/android_device_qcom_common/commit/e40aaae29fa2239576df5cf4e7297868cfaba2a3",
+      "parentUuid": "2772c44b_f604232a",
+      "revId": "8a748c1972d8511b4d3849ce40af92a638771ada",
+      "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
     }
   ]
 }
