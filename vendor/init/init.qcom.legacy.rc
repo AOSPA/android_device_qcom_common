@@ -25,6 +25,10 @@
 # ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 #
 
+# GPS
+on init
+    enable qccsyshal
+
 on early-boot
     # Allow subsystem (modem etc) debugging
     write /sys/kernel/boot_adsp/boot 1
