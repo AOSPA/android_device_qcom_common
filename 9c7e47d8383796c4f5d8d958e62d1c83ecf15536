@@ -34,6 +34,24 @@
       "parentUuid": "051dbd97_98a45d84",
       "revId": "9c7e47d8383796c4f5d8d958e62d1c83ecf15536",
       "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "63993aee_8fc98c0f",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000579
+      },
+      "writtenOn": "2024-10-11T14:32:31Z",
+      "side": 1,
+      "message": "Matched QSSI and explained how this works in commit message",
+      "parentUuid": "f45d4cb9_536fcff3",
+      "revId": "9c7e47d8383796c4f5d8d958e62d1c83ecf15536",
+      "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
     }
   ]
 }
