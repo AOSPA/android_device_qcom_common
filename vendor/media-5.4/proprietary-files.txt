@@ -17,7 +17,6 @@ vendor/lib/libqcodec2_core.so
 vendor/lib/libqcodec2_hooks.so
 vendor/lib/libqcodec2_mockfilter.so
 vendor/lib/libqcodec2_platform.so
-vendor/lib/libqcodec2_utils.so
 vendor/lib/libqcodec2_v4l2codec.so
 vendor/lib/libqconfigclient.so
 vendor/lib/vendor.qti.hardware.qconfig@1.0.so
@@ -34,7 +33,6 @@ vendor/lib64/libqcodec2_core.so
 vendor/lib64/libqcodec2_hooks.so
 vendor/lib64/libqcodec2_mockfilter.so
 vendor/lib64/libqcodec2_platform.so
-vendor/lib64/libqcodec2_utils.so
 vendor/lib64/libqcodec2_v4l2codec.so
 vendor/lib64/libqconfigclient.so
 vendor/lib64/vendor.qti.hardware.qconfig@1.0.so
@@ -45,9 +43,9 @@ vendor/lib64/vendor.qti.hardware.vpp@2.0.so
 
 # Perf
 vendor/lib/libqti-perfd-client.so
-vendor/lib/vendor.qti.hardware.perf@2.0.so
-vendor/lib/vendor.qti.hardware.perf@2.1.so
-vendor/lib/vendor.qti.hardware.perf@2.2.so
+vendor/lib/vendor.qti.hardware.perf@2.0.so;MODULE_SUFFIX=_vendor
+vendor/lib/vendor.qti.hardware.perf@2.1.so;MODULE_SUFFIX=_vendor
+vendor/lib/vendor.qti.hardware.perf@2.2.so;MODULE_SUFFIX=_vendor
 
 # Video
 vendor/lib/libfastcrc.so
