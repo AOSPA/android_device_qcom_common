@@ -1,7 +1,7 @@
 # WLAN
 vendor/bin/athdiag
-vendor/bin/cnss-daemon
-vendor/bin/cnss_diag
+vendor/bin/cnss-daemon;DISABLE_CHECKELF
+vendor/bin/cnss_diag;DISABLE_CHECKELF
 vendor/bin/hal_proxy_daemon
 vendor/bin/myftm
 vendor/bin/pktlogconf
