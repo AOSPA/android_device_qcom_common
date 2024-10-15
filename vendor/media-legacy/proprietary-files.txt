@@ -5,9 +5,9 @@ vendor/etc/media_codecs_c2.xml
 vendor/etc/media_codecs_performance_c2.xml
 vendor/etc/seccomp_policy/codec2.vendor.ext-arm.policy
 vendor/etc/seccomp_policy/codec2.vendor.base-arm.policy
-vendor/lib/libOmxSwVdec.so
-vendor/lib/libOmxSwVencMpeg4.so
-vendor/lib/libOmxVideoDSMode.so
+vendor/lib/libOmxSwVdec.so;DISABLE_CHECKELF
+vendor/lib/libOmxSwVencMpeg4.so;DISABLE_CHECKELF
+vendor/lib/libOmxVideoDSMode.so;DISABLE_CHECKELF
 vendor/lib/libqcodec2_base.so
 vendor/lib/libqcodec2_core.so
 vendor/lib/libqcodec2_utils.so
@@ -17,8 +17,8 @@ vendor/lib/libqcodec2_v4l2codec.so
 vendor/lib/vendor.qti.hardware.vpp@1.1.so
 vendor/lib/vendor.qti.hardware.vpp@1.2.so
 vendor/lib/vendor.qti.hardware.vpp@1.3.so
-vendor/lib64/libOmxSwVdec.so
-vendor/lib64/libOmxSwVencMpeg4.so
+vendor/lib64/libOmxSwVdec.so;DISABLE_CHECKELF
+vendor/lib64/libOmxSwVencMpeg4.so;DISABLE_CHECKELF
 vendor/lib64/libqcodec2_base.so
 vendor/lib64/libqcodec2_core.so
 vendor/lib64/libqcodec2_utils.so
