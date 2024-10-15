@@ -1,4 +1,4 @@
-vendor/bin/feature_enabler_client
+vendor/bin/feature_enabler_client;DISABLE_CHECKELF
 vendor/bin/hw/vendor.display.color@1.0-service
 vendor/bin/ppd
 vendor/bin/qdcmss
@@ -25,12 +25,12 @@ vendor/lib64/libdisplayskuutils.so
 vendor/lib64/libdpps.so
 vendor/lib64/libhdr_backlight_adapter.so
 vendor/lib64/libhdr_tm.so
-vendor/lib64/libmemutils.so
+vendor/lib64/libmemutils.so;DISABLE_CHECKELF
 vendor/lib64/libmm-hdcpmgr.so
 vendor/lib64/libqdcm-algo.so
 vendor/lib64/libqdcm-json-mode-parser.so
 vendor/lib64/libqdcm-mode-parser.so
-vendor/lib64/libqrtrclient.so
+vendor/lib64/libqrtrclient.so;DISABLE_CHECKELF
 vendor/lib64/libqseed3.so
 vendor/lib64/librcmask.so
 vendor/lib64/libsdm-color.so
