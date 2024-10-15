@@ -14,7 +14,7 @@ vendor/lib/libdiag.so
 vendor/lib/libdrmfs.so
 vendor/lib/libdrmtime.so
 vendor/lib/libminkdescriptor.so
-vendor/lib/libminksocket.so
+vendor/lib/libminksocket.so;DISABLE_CHECKELF
 vendor/lib/libops.so
 vendor/lib/libqisl.so
 vendor/lib/librpmb.so
@@ -34,7 +34,7 @@ vendor/lib64/libdiag.so
 vendor/lib64/libdrmfs.so
 vendor/lib64/libdrmtime.so
 vendor/lib64/libminkdescriptor.so
-vendor/lib64/libminksocket.so
+vendor/lib64/libminksocket.so;DISABLE_CHECKELF
 vendor/lib64/libops.so
 vendor/lib64/libqisl.so
 vendor/lib64/librpmb.so
