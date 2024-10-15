@@ -17,6 +17,5 @@ set -e
 export COMPONENT=display
 export VENDOR=qcom/common/vendor
 export VENDOR_COMMON=${VENDOR}
-export KERNEL_VERSION=5.15
 
-"../../setup-makefiles.sh" "$@"
+"../setup-makefiles.sh" "$@"
