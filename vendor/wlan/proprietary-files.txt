@@ -2,7 +2,6 @@
 vendor/bin/athdiag
 vendor/bin/cnss-daemon
 vendor/bin/cnss_diag
-vendor/bin/hal_proxy_daemon
 vendor/bin/pktlogconf
 vendor/bin/spectraltool
 vendor/bin/vendor_cmd_tool
