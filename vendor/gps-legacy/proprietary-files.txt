@@ -32,7 +32,7 @@ vendor/lib64/liblbs_core.so
 vendor/lib64/liblocationservice.so
 vendor/lib64/liblocationservice_glue.so
 vendor/lib64/libloc_api_v02.so
-vendor/lib64/libloc_api_wds.so
+vendor/lib64/libloc_api_wds.so;DISABLE_CHECKELF
 vendor/lib64/libloc_qwes_iface.so
 vendor/lib64/libloc_ril_client.so
 vendor/lib64/libloc_socket.so
