@@ -24,8 +24,7 @@ vendor/lib64/libdisp-aba.so
 vendor/lib64/libdisplayqos.so
 vendor/lib64/libdisplayskuutils.so
 vendor/lib64/libdpps.so
-vendor/lib64/libfeutils.so
-vendor/lib64/libgame_enhance.so
+vendor/lib64/libfeutils.so;DISABLE_CHECKELF
 vendor/lib64/libhdr_backlight_adapter.so
 vendor/lib64/libhdr_tm.so
 vendor/lib64/libintervmipc.so
@@ -40,7 +39,6 @@ vendor/lib64/librcmask.so
 vendor/lib64/libsdm-color.so
 vendor/lib64/libsdm-colormgr-algo.so
 vendor/lib64/libsdm-disp-vndapis.so
-vendor/lib64/libsdmextension.so
 vendor/lib64/libsnapdragoncolor-manager.so
 vendor/lib64/libsnapdragoncolor-qdcm.so
 vendor/lib64/libstc-dimming.so
