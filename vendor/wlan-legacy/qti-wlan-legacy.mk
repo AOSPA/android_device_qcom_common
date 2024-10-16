@@ -47,10 +47,6 @@ PRODUCT_PACKAGES += \
     wpa_supplicant \
     wpa_supplicant.conf
 
-PRODUCT_PACKAGES += \
-    android.hardware.wifi.supplicant-V1-ndk.vendor \
-    vendor.qti.hardware.wifi.supplicant-V1-ndk.vendor
-
 ifeq ($(call is-board-platform-in-list, lahaina),true)
 PRODUCT_PACKAGES += \
     init.vendor.wlan.rc

@@ -15,15 +15,6 @@
 # AIDL / HIDL
 SYSTEM_EXT_MANIFEST_FILES += $(QCOM_COMMON_PATH)/system/telephony/atcmdfwd-saidl.xml
 
-# Packages
-PRODUCT_PACKAGES += \
-    android.hardware.radio@1.6 \
-    android.hardware.radio.config@1.3 \
-    android.hardware.radio.deprecated@1.0 \
-    android.system.net.netd@1.1 \
-    libc++.product \
-    libjson
-
 # Properties
 PRODUCT_SYSTEM_EXT_PROPERTIES += \
     DEVICE_PROVISIONED=1 \
