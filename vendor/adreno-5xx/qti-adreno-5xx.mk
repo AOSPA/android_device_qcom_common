@@ -14,10 +14,6 @@
 
 TARGET_ADRENO_COMPONENT_VARIANT := adreno-5xx
 
-# Dependencies
-PRODUCT_PACKAGES += \
-    vendor.qti.hardware.display.mapper@2.0.vendor
-
 # Permissions
 PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.opengles.aep.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.opengles.aep.xml \

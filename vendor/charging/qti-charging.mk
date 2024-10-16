@@ -34,10 +34,6 @@ PRODUCT_SYSTEM_EXT_PROPERTIES += \
     ro.charger.enable_suspend=1
 endif
 
-# Suspend
-PRODUCT_PACKAGES += \
-    libsuspend
-
 # Init
 PRODUCT_COPY_FILES += \
     $(QCOM_COMMON_PATH)/vendor/charging/vendor.qti.hardware.charger_monitor@1.0-service.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/vendor.qti.hardware.charger_monitor@1.0-service.rc
