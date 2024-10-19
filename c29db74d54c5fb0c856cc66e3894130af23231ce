@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "f77875bd_c540a7f1",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000737
+      },
+      "writtenOn": "2024-10-19T20:16:40Z",
+      "side": 1,
+      "message": "https://github.com/LineageOS/android_hardware_qcom_thermal/tree/lineage-22.0/",
+      "revId": "c29db74d54c5fb0c856cc66e3894130af23231ce",
+      "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
+    }
+  ]
+}
