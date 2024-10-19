@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "3b91663f_db98b394",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 4
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000468
+      },
+      "writtenOn": "2024-10-19T15:47:08Z",
+      "side": 1,
+      "message": "Think it\u0027s enabled in LA.QSSI.15.0.r1-10500-qssi.0",
+      "revId": "508ef2ade1f6309bf7be9c3f8c64ccd341caba3b",
+      "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
+    }
+  ]
+}
