@@ -1,0 +1,1 @@
+allow device_as_webcam vendor_hal_perf2_service:service_manager find;
