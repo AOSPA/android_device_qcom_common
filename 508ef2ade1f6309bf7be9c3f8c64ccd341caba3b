@@ -33,6 +33,23 @@
       "message": "let\u0027s wait",
       "revId": "508ef2ade1f6309bf7be9c3f8c64ccd341caba3b",
       "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "5f7e3d0f_7d543a1e",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 4
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000468
+      },
+      "writtenOn": "2024-10-22T10:21:05Z",
+      "side": 1,
+      "message": "Refer https://github.com/ThankYouMario/proprietary_vendor_qcom_common/blob/vauxite/system/gps/proprietary/system_ext/etc/init/vendor.qti.hardware.qccsyshal%401.2-service.rc#L43",
+      "revId": "508ef2ade1f6309bf7be9c3f8c64ccd341caba3b",
+      "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
     }
   ]
 }
