@@ -20,6 +20,24 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "63370e4f_22d4bd96",
+        "filename": "vendor/display/5.15/proprietary-files.txt",
+        "patchSetId": 17
+      },
+      "lineNbr": 42,
+      "author": {
+        "id": 1000737
+      },
+      "writtenOn": "2024-10-22T17:28:46Z",
+      "side": 1,
+      "message": "Need add libsdedrm for 5.15 display:\n\n\nerror: vendor/qcom/common/vendor/display/5.15/Android.bp:447:1: \"libsdmextension\" depends on undefined module \"libsdedrm\".\nModule \"libsdmextension\" is defined in namespace \"vendor/qcom/common/vendor/display/5.15\" which can read these 30 namespaces: [\"vendor/qcom/common/vendor/display/5.15\" \".\" \".\" \".\" \"hardware/qcom/wlan/qcwcn\" \"vendor/qcom/common/vendor/adreno-5xx\" \"vendor/qcom/common/vendor/adreno-r\" \"vendor/qcom/common/vendor/adreno-s\" \"vendor/qcom/common/vendor/adreno-t\" \"vendor/qcom/common/vendor/adreno-u\" \"vendor/qcom/common/vendor/alarm\" \"vendor/qcom/common/vendor/charging\" \"vendor/qcom/common/vendor/display\" \"vendor/qcom/common/vendor/display/4.19\" \"vendor/qcom/common/vendor/display/5.10\" \"vendor/qcom/common/vendor/display/5.15\" \"vendor/qcom/common/vendor/display/5.4\" \"vendor/qcom/common/vendor/dsprpcd\" \"vendor/qcom/common/vendor/gps-legacy\" \"vendor/qcom/common/vendor/keymaster\" \"vendor/qcom/common/vendor/media-5.4\" \"vendor/qcom/common/vendor/media-legacy\" \"vendor/qcom/common/vendor/media\" \"vendor/qcom/common/vendor/nfc/nq\" \"vendor/qcom/common/vendor/perf\" \"vendor/qcom/common/vendor/qseecomd-legacy\" \"vendor/qcom/common/vendor/qseecomd\" \"vendor/qcom/common/vendor/wlan-legacy\" \"vendor/qcom/common/vendor/wlan\" \".\"]\nModule \"libsdedrm\" can be found in these namespaces: [\"vendor/qcom/common/vendor/display/4.14\"]\nOr did you mean [\"libder\" \"libdrm\"]?",
+      "parentUuid": "d695525a_9716c16f",
+      "revId": "bac45d11692a59c0c82c900723bc70e2004be66a",
+      "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "86d2a4fd_a9ddaa2f",
         "filename": "vendor/media-5.4/proprietary-files.txt",
         "patchSetId": 17
@@ -31,6 +49,24 @@
       "writtenOn": "2024-10-22T05:22:55Z",
       "side": 1,
       "message": "same for this",
+      "revId": "bac45d11692a59c0c82c900723bc70e2004be66a",
+      "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "ad668a51_a5ea48ea",
+        "filename": "vendor/media-5.4/proprietary-files.txt",
+        "patchSetId": 17
+      },
+      "lineNbr": 20,
+      "author": {
+        "id": 1000737
+      },
+      "writtenOn": "2024-10-22T17:28:46Z",
+      "side": 1,
+      "message": "libqcodec2_utils need add libgrallocutils\n\nerror: vendor/qcom/common/vendor/media-5.4/Android.bp:227:1: \"libqcodec2_utils\" depends on undefined module \"libgrallocutils\".\nOr did you mean [\"gralloc.minigbm\" \"libgralloc.qti\" \"libgralloctypes\" \"libgrallocusage\"]?\nerror: vendor/qcom/common/vendor/media/Android.bp:412:1: \"libqcodec2_utils\" depends on undefined module \"libgrallocutils\".\nOr did you mean [\"gralloc.minigbm\" \"libgralloc.qti\" \"libgralloctypes\" \"libgrallocusage\"]?\nfatal errors encountered",
+      "parentUuid": "86d2a4fd_a9ddaa2f",
       "revId": "bac45d11692a59c0c82c900723bc70e2004be66a",
       "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
     },
@@ -52,6 +88,24 @@
       "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "c1936e24_f356bd04",
+        "filename": "vendor/media-5.4/proprietary-files.txt",
+        "patchSetId": 17
+      },
+      "lineNbr": 37,
+      "author": {
+        "id": 1000737
+      },
+      "writtenOn": "2024-10-22T17:28:46Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "48f5ab40_52dd0f2e",
+      "revId": "bac45d11692a59c0c82c900723bc70e2004be66a",
+      "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "b218ba77_27be8d0a",
@@ -65,6 +119,24 @@
       "writtenOn": "2024-10-22T05:22:55Z",
       "side": 1,
       "message": "same for this",
+      "revId": "bac45d11692a59c0c82c900723bc70e2004be66a",
+      "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "3db5cd1b_b3e20c8e",
+        "filename": "vendor/media-legacy/proprietary-files.txt",
+        "patchSetId": 17
+      },
+      "lineNbr": 13,
+      "author": {
+        "id": 1000737
+      },
+      "writtenOn": "2024-10-22T17:28:46Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "b218ba77_27be8d0a",
       "revId": "bac45d11692a59c0c82c900723bc70e2004be66a",
       "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
     },
@@ -86,6 +158,24 @@
       "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "a8b062fa_1ace6062",
+        "filename": "vendor/media-legacy/proprietary-files.txt",
+        "patchSetId": 17
+      },
+      "lineNbr": 24,
+      "author": {
+        "id": 1000737
+      },
+      "writtenOn": "2024-10-22T17:28:46Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "a5a76710_8e06f08c",
+      "revId": "bac45d11692a59c0c82c900723bc70e2004be66a",
+      "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "a4e3c70f_ad95a20b",
@@ -99,6 +189,24 @@
       "writtenOn": "2024-10-22T05:22:55Z",
       "side": 1,
       "message": "same for this",
+      "revId": "bac45d11692a59c0c82c900723bc70e2004be66a",
+      "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "959cc217_6287859c",
+        "filename": "vendor/media/proprietary-files.txt",
+        "patchSetId": 17
+      },
+      "lineNbr": 27,
+      "author": {
+        "id": 1000737
+      },
+      "writtenOn": "2024-10-22T17:28:46Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "a4e3c70f_ad95a20b",
       "revId": "bac45d11692a59c0c82c900723bc70e2004be66a",
       "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
     },
@@ -122,6 +230,24 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "49e83de5_792d4ddc",
+        "filename": "vendor/wlan-legacy/proprietary-files.txt",
+        "patchSetId": 17
+      },
+      "lineNbr": 5,
+      "author": {
+        "id": 1000737
+      },
+      "writtenOn": "2024-10-22T17:28:46Z",
+      "side": 1,
+      "message": "error: vendor/qcom/common/vendor/wlan-legacy/Android.bp:151:1: dependency \"libwifi-hal-qcom\" of \"hal_proxy_daemon\" missing variant:\n  os:android,image:vendor,arch:arm64_armv8-2a-dotprod_kryo785,sdk:,link:shared\navailable variants:\n  \nerror: vendor/qcom/common/vendor/wlan/Android.bp:151:1: dependency \"libwifi-hal-qcom\" of \"hal_proxy_daemon\" missing variant:\n  os:android,image:vendor,arch:arm64_armv8-2a-dotprod_kryo785,sdk:,link:shared\navailable variants:",
+      "parentUuid": "201e1c27_859c6c23",
+      "revId": "bac45d11692a59c0c82c900723bc70e2004be66a",
+      "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "1bd731da_4a2ed06f",
         "filename": "vendor/wlan/proprietary-files.txt",
         "patchSetId": 17
@@ -133,6 +259,24 @@
       "writtenOn": "2024-10-22T05:22:55Z",
       "side": 1,
       "message": "same for this",
+      "revId": "bac45d11692a59c0c82c900723bc70e2004be66a",
+      "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "50f07e7d_c2a5fa8b",
+        "filename": "vendor/wlan/proprietary-files.txt",
+        "patchSetId": 17
+      },
+      "lineNbr": 5,
+      "author": {
+        "id": 1000737
+      },
+      "writtenOn": "2024-10-22T17:28:46Z",
+      "side": 1,
+      "message": "error: vendor/qcom/common/vendor/wlan-legacy/Android.bp:151:1: dependency \"libwifi-hal-qcom\" of \"hal_proxy_daemon\" missing variant:\n  os:android,image:vendor,arch:arm64_armv8-2a-dotprod_kryo785,sdk:,link:shared\navailable variants:\n  \nerror: vendor/qcom/common/vendor/wlan/Android.bp:151:1: dependency \"libwifi-hal-qcom\" of \"hal_proxy_daemon\" missing variant:\n  os:android,image:vendor,arch:arm64_armv8-2a-dotprod_kryo785,sdk:,link:shared\navailable variants:",
+      "parentUuid": "1bd731da_4a2ed06f",
       "revId": "bac45d11692a59c0c82c900723bc70e2004be66a",
       "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
     }
