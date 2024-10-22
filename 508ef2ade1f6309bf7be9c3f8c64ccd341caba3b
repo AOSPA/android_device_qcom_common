@@ -50,6 +50,23 @@
       "message": "Refer https://github.com/ThankYouMario/proprietary_vendor_qcom_common/blob/vauxite/system/gps/proprietary/system_ext/etc/init/vendor.qti.hardware.qccsyshal%401.2-service.rc#L43",
       "revId": "508ef2ade1f6309bf7be9c3f8c64ccd341caba3b",
       "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "4cb6b902_88c30120",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 4
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000429
+      },
+      "writtenOn": "2024-10-22T20:32:42Z",
+      "side": 1,
+      "message": "well this can be used for qccsyshal_aidl-service instead.",
+      "revId": "508ef2ade1f6309bf7be9c3f8c64ccd341caba3b",
+      "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
     }
   ],
   "submitRequirementResults": []
