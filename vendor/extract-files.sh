@@ -91,4 +91,9 @@ else
         "${KANG}" --section "${SECTION}"
 fi
 
+if [ -f "${MY_DIR}/${COMPONENT}/proprietary-files-32.txt" ]; then
+    extract "${MY_DIR}/${COMPONENT}/proprietary-files-32.txt" "${SRC}" \
+        "${KANG}" --section "${SECTION}"
+fi
+
 "${MY_DIR}/setup-makefiles.sh"
