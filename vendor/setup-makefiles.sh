@@ -39,5 +39,16 @@ else
     write_makefiles "${MY_DIR}/${COMPONENT}/proprietary-files.txt"
 fi
 
+if [ -f "${MY_DIR}/${COMPONENT}/proprietary-files-32.txt" ]; then
+
+    printf '\n%s\n' "ifneq (\$(TARGET_USES_OPTIONAL_32_BIT_FILES), true)" >> "$PRODUCTMK"
+
+    # The standard common blobs
+    write_makefiles "${MY_DIR}/${COMPONENT}/proprietary-files-32.txt"
+
+    printf '%s\n' "endif" >> "$PRODUCTMK"
+
+fi
+
 # Finish
 write_footers
