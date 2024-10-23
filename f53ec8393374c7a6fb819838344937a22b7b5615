@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "1963201c_708269a4",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 7
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000760
+      },
+      "writtenOn": "2024-10-23T03:39:12Z",
+      "side": 1,
+      "message": "error: vendor/qcom/common/system/wfd/Android.bp:208:1: module \"libwfdmmsrc_system\" variant \"android_arm64_armv8-2a-dotprod_kryo785_static\": depends on multiple versions of the same aidl_interface: android.hardware.graphics.allocator-V1-ndk-source, android.hardware.graphics.allocator-V2-ndk-source\n\nisnt this happening to you guys??",
+      "revId": "f53ec8393374c7a6fb819838344937a22b7b5615",
+      "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
+    }
+  ]
+}
