@@ -117,8 +117,8 @@ as anyway perflock calls of these resources would fail. -->
         <!--L CPU - Disable schedutil PL -->
         <!--B CPU - Disable schedutil PL -->
         <!--B CPU - Set hispeed load 99 -->
-        <!--UPMIGRATE - 50 85-->
-        <!--DOWNMIGRATE - 10 85-->
+        <!--UPMIGRATE - 40 85-->
+        <!--DOWNMIGRATE - 1 85-->
         <!--B CPU - Disable Core Control -->
         <!--L CPU - Disable Core Control -->
         <!--P CPU - Disable Core Control -->
@@ -126,7 +126,7 @@ as anyway perflock calls of these resources would fail. -->
             Id="0x00001333" Enable="true" Timeout="0" Target="kalama"
             Resources="0x4183C000, 0x10, 0x41834000, 0x64, 0x41838000, 0, 0x43034000, 0x10,
             0x43020000, 0x64, 0x43024000, 0, 0x4303C000, 0x17BA38,  0x40804100, 0x459,
-            0x41444100, 0, 0x41444000, 0, 0x41440000, 0x63, 0x40CE0000, 0x0032000A,
+            0x41444100, 0, 0x41444000, 0, 0x41440000, 0x63, 0x40CE0000, 0x00280001,
             0x40CE0200, 0x00550055, 0x41008000, 0, 0x41008100, 0, 0x41008200, 0" />
 
 
@@ -322,9 +322,9 @@ as anyway perflock calls of these resources would fail. -->
         <!--CPU-LLC-DDR BWMON - Set sample_ms 16 -->
         <!--CPU-LLC-DDR BWMON - Set io_percent 100 -->
         <!--CPU-LLC-DDR BWMON - Set hyst_length hist memory 0 -->
-        <!--CPU-LLC-DDR BWMON - Set min_freq 1555 -->
+        <!--CPU-LLC-DDR BWMON - Set min_freq 3187 -->
         <!-- MPCTLV3_MIN_FREQ_CLUSTER_LITTLE_CORE_0, 0x7E0 -->
-        <!-- MPCTLV3_MIN_FREQ_CLUSTER_BIG_CORE_0, 0x806 -->
+        <!-- MPCTLV3_MIN_FREQ_CLUSTER_BIG_CORE_0, 0xA93 -->
         <!--L CPU - Disable schedutil PL -->
         <!--B CPU - Disable schedutil PL -->
         <!--B CPU - Set hispeed load 99 -->
@@ -336,9 +336,9 @@ as anyway perflock calls of these resources would fail. -->
         <Config
             Id="0x00001345" Enable="true" Timeout="0" Target="kalama"
             Resources="0x4183C000, 0x10, 0x41834000, 0x64, 0x41838000, 0, 0x43034000, 0x10,
-            0x43020000, 0x64, 0x43024000, 0, 0x4303C000, 0x17BA38, 0x40800100, 0x7E0,
-            0x40800000, 0x806, 0x41444100, 0, 0x41444000, 0, 0x41440000, 0x63, 0x41008000, 0,
-            0x41008100, 0, 0x41008200, 0, 0x40CE0000, 0x0032000A, 0x40CE0200, 0x00550055 " />
+            0x43020000, 0x64, 0x43024000, 0, 0x4303C000, 0x30A138, 0x40800100, 0x7E0,
+            0x40800000, 0xA93, 0x41444100, 0, 0x41444000, 0, 0x41440000, 0x63, 0x41008000, 0,
+            0x41008100, 0, 0x41008200, 0, 0x40CE0000, 0x0032000A, 0x40CE0200, 0x00550055" />
 
 
     </Powerhint>
