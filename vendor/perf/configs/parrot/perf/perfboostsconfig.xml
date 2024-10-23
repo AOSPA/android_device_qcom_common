@@ -341,12 +341,13 @@
         <!-- MIN_ONLINE_CPU_CLUSTER_BIG opcode, value-->
         <!-- SCHED_MIN_TASK_UTIL_FOR_COLOCATION, value-->
         <!-- SCHED_MIN_TASK_UTIL_FOR_BOOST, value-->
+        <!-- PID Affine opcode,value -->
 
         <Config
             Id="0x00001080" Type="4" Enable="true" Timeout="115" Fps="120" Target="parrot"
             Resources="0x40800000, 1900, 0x40800100, 1497,
                        0x40C00000, 2, 0x40C74000, 0xF0, 0x40408000, 0x27, 0x41000000, 3,
-                       0x40C78000, 0, 0x40C7C000, 0" />
+                       0x40C78000, 0, 0x40C7C000, 0, 0x42C20000, 1" />
 
         <!-- GPU_MIN_POWER_LEVEL resource opcode,value-->
         <Config
@@ -354,7 +355,7 @@
             Target="ravelin,montague,montaguep"
             Resources="0x40800000, 1900, 0x40800100, 1497,
                        0x40C00000, 2, 0x40C74000, 0xF0, 0x40408000, 0x27, 0x41000000, 2,
-                       0x40C78000, 0, 0x40C7C000, 0, 0x42804000, 2" />
+                       0x40C78000, 0, 0x40C7C000, 0, 0x42C20000, 1, 0x42804000, 2" />
 
         <!-- CPUBOOST_MIN_FREQ BIG CORE resource opcode, value -->
         <!-- CPUBOOST_MIN_FREQ LITTLE Core resource opcode, value -->
@@ -365,12 +366,13 @@
         <!-- SCHED_MIN_TASK_UTIL_FOR_COLOCATION, value-->
         <!-- SCHED_MIN_TASK_UTIL_FOR_BOOST, value-->
         <!-- L3_MEMLAT_MIN_FREQ_GOLD resource opcode, value -->
+        <!-- PID Affine opcode,value -->
 
         <Config
             Id="0x00001080" Type="4" Enable="true" Timeout="115" Fps="144" Target="parrot"
             Resources="0x40800000, 1900, 0x40800100, 1497,
                        0x40C00000, 2, 0x40C74000, 0xF0, 0x40408000, 0x27, 0x41000000, 3,
-                       0x40C78000, 0, 0x40C7C000, 0, 0x43480000, 0xAAE60" />
+                       0x40C78000, 0, 0x40C7C000, 0, 0x43480000, 0xAAE60, 0x42C20000, 1" />
 
         <!-- GPU_MIN_POWER_LEVEL resource opcode,value-->
         <Config
@@ -378,7 +380,8 @@
             Target="ravelin,montague,montaguep"
             Resources="0x40800000, 1900, 0x40800100, 1497,
                        0x40C00000, 2, 0x40C74000, 0xF0, 0x40408000, 0x27, 0x41000000, 2,
-                       0x40C78000, 0, 0x40C7C000, 0, 0x43480000, 0xAAE60, 0x42804000, 2" />
+                       0x40C78000, 0, 0x40C7C000, 0, 0x43480000, 0xAAE60, 0x42C20000, 1,
+                       0x42804000, 2" />
 
     <!--MTP boost-->
         <!-- SCHEDBOOST resource opcode, value-->
@@ -631,7 +634,7 @@
 
         <Config
             Id="0x00001080" Type="5" Enable="true" Fps="120, 144, 180"
-            Resources="0x40C00000, 2, 0x40800000, 1900, 0x40C78000, 0, 0x40C7C000, 0" />
+            Resources="0x40C00000, 2, 0x40800000, 1900, 0x40C78000, 0, 0x40C7C000, 0, 0x42C20000, 1" />
 
         <!-- Type 6 Medium Scrolls : Horizontal and Verical -->
         <!-- MIN_FREQ_CLUSTER_BIG_CORE_0 resource opcode, value-->
@@ -674,14 +677,14 @@
             Id="0x00001080" Type="6" Enable="true" Fps="120, 144, 180" Target="parrot"
             Resources="0x40800000, 1900, 0x40C00000, 2,
                        0x41000000, 3, 0x43480000, 0xAAE60, 0x40C78000, 0, 0x40C7C000, 0,
-                       0x40C74000, 0xF0, 0x40408000, 0x27, 0x41008000, 0" />
+                       0x40C74000, 0xF0, 0x40408000, 0x27, 0x41008000, 0, 0x42C20000, 1" />
 
          <Config
             Id="0x00001080" Type="6" Enable="true" Fps="120, 144, 180"
             Target="ravelin,montague,montaguep"
             Resources="0x40800000, 1900, 0x40C00000, 2,
                        0x41000000, 2, 0x43480000, 0xAAE60, 0x40C78000, 0, 0x40C7C000, 0,
-                       0x40C74000, 0xF0, 0x40408000, 0x27, 0x41008000, 0" />
+                       0x40C74000, 0xF0, 0x40408000, 0x27, 0x41008000, 0, 0x42C20000, 1" />
 
         <!-- Type 7 Heavy Scrolls : Horizontal and Verical -->
         <!-- MIN_FREQ_CLUSTER_BIG_CORE_0 resource opcode, value-->
@@ -723,14 +726,14 @@
             Id="0x00001080" Type="7" Enable="true" Fps="120, 144, 180" Target="parrot"
             Resources="0x40800000, 1900, 0x40C00000, 2,
                        0x41000000, 3, 0x43480000, 0xAAE60, 0x40C78000, 0, 0x40C7C000, 0,
-                       0x40C74000, 0xF0, 0x40408000, 0x27, 0x41008000, 0" />
+                       0x40C74000, 0xF0, 0x40408000, 0x27, 0x41008000, 0, 0x42C20000, 1" />
 
         <Config
             Id="0x00001080" Type="7" Enable="true" Fps="120, 144, 180"
             Target="ravelin,montague,montaguep"
             Resources="0x40800000, 1900, 0x40C00000, 2,
                        0x41000000, 2, 0x43480000, 0xAAE60, 0x40C78000, 0, 0x40C7C000, 0,
-                       0x40C74000, 0xF0, 0x40408000, 0x27, 0x41008000, 0" />
+                       0x40C74000, 0xF0, 0x40408000, 0x27, 0x41008000, 0, 0x42C20000, 1" />
 
     </PerfBoost>
 </BoostConfigs>
