@@ -16,6 +16,24 @@
       "message": "format this a little nicely like other entries\n```suggestion\n# usbudev service for usb ip assigment\nPRODUCT_PACKAGES +\u003d \\\n    usbudev\n```",
       "revId": "ed039c01eaa82408d63c6ed73ad01c6590071ee1",
       "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "1021be5e_9e1f1f89",
+        "filename": "common.mk",
+        "patchSetId": 7
+      },
+      "lineNbr": 209,
+      "author": {
+        "id": 1000737
+      },
+      "writtenOn": "2024-10-24T13:45:04Z",
+      "side": 1,
+      "message": "Fix applied.",
+      "parentUuid": "f81f900a_8f53c8d7",
+      "revId": "ed039c01eaa82408d63c6ed73ad01c6590071ee1",
+      "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
     }
   ]
 }
