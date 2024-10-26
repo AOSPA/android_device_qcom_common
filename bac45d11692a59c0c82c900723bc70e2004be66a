@@ -109,6 +109,24 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "95e3dfa0_1674504b",
+        "filename": "vendor/media-5.4/proprietary-files.txt",
+        "patchSetId": 17
+      },
+      "lineNbr": 20,
+      "author": {
+        "id": 1000737
+      },
+      "writtenOn": "2024-10-26T18:33:57Z",
+      "side": 1,
+      "message": "I already have these changes, maybe it will be necessary Add that way https://gerrit.aospa.co/c/AOSPA/android_device_xiaomi_sm6225-common/+/41912/5/setup-makefiles.sh",
+      "parentUuid": "23358961_30abbf64",
+      "revId": "bac45d11692a59c0c82c900723bc70e2004be66a",
+      "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "48f5ab40_52dd0f2e",
         "filename": "vendor/media-5.4/proprietary-files.txt",
         "patchSetId": 17
