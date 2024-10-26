@@ -38,6 +38,24 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "f0889cf8_ff6ec9e9",
+        "filename": "vendor/display/5.15/proprietary-files.txt",
+        "patchSetId": 17
+      },
+      "lineNbr": 42,
+      "author": {
+        "id": 1000579
+      },
+      "writtenOn": "2024-10-26T18:21:59Z",
+      "side": 1,
+      "message": "yes because you are missing 41847: extract_utils: Use proper setup makefiles and soong namespaces path | https://gerrit.aospa.co/c/AOSPA/android_tools_extract-utils/+/41847",
+      "parentUuid": "63370e4f_22d4bd96",
+      "revId": "bac45d11692a59c0c82c900723bc70e2004be66a",
+      "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "86d2a4fd_a9ddaa2f",
         "filename": "vendor/media-5.4/proprietary-files.txt",
         "patchSetId": 17
@@ -67,6 +85,24 @@
       "side": 1,
       "message": "libqcodec2_utils need add libgrallocutils\n\nerror: vendor/qcom/common/vendor/media-5.4/Android.bp:227:1: \"libqcodec2_utils\" depends on undefined module \"libgrallocutils\".\nOr did you mean [\"gralloc.minigbm\" \"libgralloc.qti\" \"libgralloctypes\" \"libgrallocusage\"]?\nerror: vendor/qcom/common/vendor/media/Android.bp:412:1: \"libqcodec2_utils\" depends on undefined module \"libgrallocutils\".\nOr did you mean [\"gralloc.minigbm\" \"libgralloc.qti\" \"libgralloctypes\" \"libgrallocusage\"]?\nfatal errors encountered",
       "parentUuid": "86d2a4fd_a9ddaa2f",
+      "revId": "bac45d11692a59c0c82c900723bc70e2004be66a",
+      "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "23358961_30abbf64",
+        "filename": "vendor/media-5.4/proprietary-files.txt",
+        "patchSetId": 17
+      },
+      "lineNbr": 20,
+      "author": {
+        "id": 1000579
+      },
+      "writtenOn": "2024-10-26T18:21:59Z",
+      "side": 1,
+      "message": "fix the hals to expose gralloc via blueprint, check lineage",
+      "parentUuid": "ad668a51_a5ea48ea",
       "revId": "bac45d11692a59c0c82c900723bc70e2004be66a",
       "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
     },
@@ -248,6 +284,24 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "b71e67f9_41fe8c66",
+        "filename": "vendor/wlan-legacy/proprietary-files.txt",
+        "patchSetId": 17
+      },
+      "lineNbr": 5,
+      "author": {
+        "id": 1000579
+      },
+      "writtenOn": "2024-10-26T18:21:59Z",
+      "side": 1,
+      "message": "its something broken with device arch declaration, my guess is kry785 isn\u0027t fully supported\nstill belongs in component",
+      "parentUuid": "49e83de5_792d4ddc",
+      "revId": "bac45d11692a59c0c82c900723bc70e2004be66a",
+      "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "1bd731da_4a2ed06f",
         "filename": "vendor/wlan/proprietary-files.txt",
         "patchSetId": 17
@@ -277,6 +331,24 @@
       "side": 1,
       "message": "error: vendor/qcom/common/vendor/wlan-legacy/Android.bp:151:1: dependency \"libwifi-hal-qcom\" of \"hal_proxy_daemon\" missing variant:\n  os:android,image:vendor,arch:arm64_armv8-2a-dotprod_kryo785,sdk:,link:shared\navailable variants:\n  \nerror: vendor/qcom/common/vendor/wlan/Android.bp:151:1: dependency \"libwifi-hal-qcom\" of \"hal_proxy_daemon\" missing variant:\n  os:android,image:vendor,arch:arm64_armv8-2a-dotprod_kryo785,sdk:,link:shared\navailable variants:",
       "parentUuid": "1bd731da_4a2ed06f",
+      "revId": "bac45d11692a59c0c82c900723bc70e2004be66a",
+      "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "fc90ad77_41c4db13",
+        "filename": "vendor/wlan/proprietary-files.txt",
+        "patchSetId": 17
+      },
+      "lineNbr": 5,
+      "author": {
+        "id": 1000579
+      },
+      "writtenOn": "2024-10-26T18:21:59Z",
+      "side": 1,
+      "message": "its something broken with device arch declaration, my guess is kry785 isn\u0027t fully supported\nstill belongs in component",
+      "parentUuid": "50f07e7d_c2a5fa8b",
       "revId": "bac45d11692a59c0c82c900723bc70e2004be66a",
       "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
     }
