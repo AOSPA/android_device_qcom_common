@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "006089a9_1a2ed521",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 25
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000579
+      },
+      "writtenOn": "2024-10-27T03:43:55Z",
+      "side": 1,
+      "message": "https://github.com/gotenksIN/proprietary_vendor_qcom_common/commits/vauxite/",
+      "revId": "ebf5a93eba4882e460b91f6ca27c31700ba43c25",
+      "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
+    }
+  ]
+}
