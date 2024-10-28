@@ -2,5 +2,4 @@
 vendor/bin/cnss-daemon
 vendor/bin/wifilearner
 vendor/etc/init/vendor.qti.hardware.wifi.wifilearner@1.0-service.rc
-vendor/lib64/libspectre.so
 vendor/lib64/vendor.qti.hardware.wifi.wifilearner@1.0.so
