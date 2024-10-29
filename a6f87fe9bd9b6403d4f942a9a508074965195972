@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "cc908262_34ce9bf5",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 1
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 1000579
+      },
+      "writtenOn": "2024-10-29T08:44:29Z",
+      "side": 1,
+      "message": "no need for braces here",
+      "revId": "a6f87fe9bd9b6403d4f942a9a508074965195972",
+      "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "f227cea6_c3fe8be4",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000579
+      },
+      "writtenOn": "2024-10-29T08:44:29Z",
+      "side": 1,
+      "message": "libsdmutils and displaydebug are definitely trivial to convert to blueprints",
+      "revId": "a6f87fe9bd9b6403d4f942a9a508074965195972",
+      "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
+    }
+  ]
+}
