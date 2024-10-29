@@ -16,6 +16,23 @@
       "message": "I still think it\u0027s necessary to go over the conversion of grallocutils and libsdedrm into display hal for blueprint, I tried this in a few ways and it got stuck in mi logo, and without that we have the errors that I sent before.",
       "revId": "7aea111eefe29fabebb5882b55f3337cf6141547",
       "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "28c0e811_42a56771",
+        "filename": "vendor/keymaster/proprietary-files.txt",
+        "patchSetId": 27
+      },
+      "lineNbr": 19,
+      "author": {
+        "id": 1000579
+      },
+      "writtenOn": "2024-10-29T18:27:47Z",
+      "side": 1,
+      "message": "shared_libs: [\"liblog\", \"libcrypto\", \"libhidlbase\", \"libutils\", \"libcutils\", \"libkeymasterdeviceutils\", \"libkeymasterutils\", \"libbase\", \"android.hardware.keymaster@4.0\", \"android.hardware.keymaster@4.1\", \"libc++\", \"libc\", \"libm\", \"libdl\", ],\n\nwhich one of these is not accesible?",
+      "revId": "7aea111eefe29fabebb5882b55f3337cf6141547",
+      "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
     }
   ]
 }
