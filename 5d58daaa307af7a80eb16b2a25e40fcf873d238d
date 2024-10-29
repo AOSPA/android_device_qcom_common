@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "f31a3dcb_ca914caa",
+        "filename": "vendor/media-legacy/proprietary-files.txt",
+        "patchSetId": 1
+      },
+      "lineNbr": 33,
+      "author": {
+        "id": 1000579
+      },
+      "writtenOn": "2024-10-29T08:43:49Z",
+      "side": 0,
+      "message": "no need to keep debug binaries honestly, take this opportunity to clean",
+      "revId": "5d58daaa307af7a80eb16b2a25e40fcf873d238d",
+      "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
+    }
+  ]
+}

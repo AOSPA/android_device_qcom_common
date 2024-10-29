@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "9ba74d6d_3040b430",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 1
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 1000579
+      },
+      "writtenOn": "2024-10-29T08:43:49Z",
+      "side": 1,
+      "message": "why the braces here?",
+      "revId": "8a8072c1c21a3044b8cbd150bc9c1e33c472b887",
+      "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
+    }
+  ]
+}
