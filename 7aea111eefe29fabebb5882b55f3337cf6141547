@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "5607401b_67837606",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 27
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000737
+      },
+      "writtenOn": "2024-10-29T17:35:01Z",
+      "side": 1,
+      "message": "I still think it\u0027s necessary to go over the conversion of grallocutils and libsdedrm into display hal for blueprint, I tried this in a few ways and it got stuck in mi logo, and without that we have the errors that I sent before.",
+      "revId": "7aea111eefe29fabebb5882b55f3337cf6141547",
+      "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
+    }
+  ]
+}
