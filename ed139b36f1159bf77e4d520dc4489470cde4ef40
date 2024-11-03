@@ -33,6 +33,23 @@
       "message": "Bengal does not use feature_enabler_client or DPU XML, and Kalama display HAL and bengal_515 are two completely different branches",
       "revId": "ed139b36f1159bf77e4d520dc4489470cde4ef40",
       "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "2c831afc_7ddb3e8d",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000737
+      },
+      "writtenOn": "2024-11-03T13:30:22Z",
+      "side": 1,
+      "message": "Make sure this won\u0027t cause any problems.",
+      "revId": "ed139b36f1159bf77e4d520dc4489470cde4ef40",
+      "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
     }
   ]
 }
