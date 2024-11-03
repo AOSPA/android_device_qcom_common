@@ -16,6 +16,23 @@
       "message": "display 5.15 component booted on Redmi Note 12 4G.",
       "revId": "ed139b36f1159bf77e4d520dc4489470cde4ef40",
       "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "2531110a_f698b5c1",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000737
+      },
+      "writtenOn": "2024-11-03T13:30:03Z",
+      "side": 1,
+      "message": "Bengal does not use feature_enabler_client or DPU XML, and Kalama display HAL and bengal_515 are two completely different branches",
+      "revId": "ed139b36f1159bf77e4d520dc4489470cde4ef40",
+      "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
     }
   ]
 }
