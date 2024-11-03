@@ -33,6 +33,24 @@
       "message": "shared_libs: [\"liblog\", \"libcrypto\", \"libhidlbase\", \"libutils\", \"libcutils\", \"libkeymasterdeviceutils\", \"libkeymasterutils\", \"libbase\", \"android.hardware.keymaster@4.0\", \"android.hardware.keymaster@4.1\", \"libc++\", \"libc\", \"libm\", \"libdl\", ],\n\nwhich one of these is not accesible?",
       "revId": "7aea111eefe29fabebb5882b55f3337cf6141547",
       "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "98281d66_9df780ef",
+        "filename": "vendor/keymaster/proprietary-files.txt",
+        "patchSetId": 27
+      },
+      "lineNbr": 19,
+      "author": {
+        "id": 1000737
+      },
+      "writtenOn": "2024-11-03T20:01:26Z",
+      "side": 1,
+      "message": "The build error happens the same way",
+      "parentUuid": "28c0e811_42a56771",
+      "revId": "7aea111eefe29fabebb5882b55f3337cf6141547",
+      "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
     }
   ]
 }
