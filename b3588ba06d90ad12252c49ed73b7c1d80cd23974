@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "2c948548_baa4892e",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 4
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000012
+      },
+      "writtenOn": "2024-11-04T03:32:12Z",
+      "side": 1,
+      "message": "I think I rejected this verbally but I\u0027ll make it official",
+      "revId": "b3588ba06d90ad12252c49ed73b7c1d80cd23974",
+      "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
+    }
+  ]
+}
