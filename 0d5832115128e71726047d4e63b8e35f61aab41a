@@ -16,6 +16,24 @@
       "message": "can you post the build error for this? @wandersonrodriguesf1@gmail.com",
       "revId": "0d5832115128e71726047d4e63b8e35f61aab41a",
       "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "0be48eb6_0e2714b1",
+        "filename": "vendor/display/4.19/proprietary-files.txt",
+        "patchSetId": 28
+      },
+      "lineNbr": 14,
+      "author": {
+        "id": 1000579
+      },
+      "writtenOn": "2024-11-06T15:40:32Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "4e844fc7_a0026048",
+      "revId": "0d5832115128e71726047d4e63b8e35f61aab41a",
+      "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
     }
   ]
 }
