@@ -214,6 +214,10 @@ PRODUCT_VENDOR_PROPERTIES += \
 PRODUCT_SYSTEM_PROPERTIES += \
     ro.vendor.qti.va_aosp.support=1
 
+# b/344511668
+PRODUCT_PACKAGES += \
+    android.software.credentials.prebuilt.xml
+
 # RFS APQ GNSS symlinks
 PRODUCT_PACKAGES += \
     rfs_apq_gnss_hlos_symlink \
