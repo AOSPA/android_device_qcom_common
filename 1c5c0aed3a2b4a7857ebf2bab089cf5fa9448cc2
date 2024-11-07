@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "1a50c601_88a582f3",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000579
+      },
+      "writtenOn": "2024-11-07T05:10:37Z",
+      "side": 1,
+      "message": "lost from gerrit because of reasons",
+      "revId": "1c5c0aed3a2b4a7857ebf2bab089cf5fa9448cc2",
+      "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
+    }
+  ]
+}
