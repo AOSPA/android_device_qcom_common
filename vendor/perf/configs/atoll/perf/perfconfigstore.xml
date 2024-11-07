@@ -29,7 +29,8 @@ property Name is called. -->
                 <Prop Name="vendor.iop.enabled" Value="false" />
                 <!-- AOSPA Edit: Enable Preferred Apps for pre-5.4 targets -->
                 <Prop Name="vendor.iop.enable_speed" Value="true" /> <!--rename to perf-->
-                <Prop Name="vendor.debug.enable.memperfd" Value="true" />
+                <!-- AOSPA Edit: Disable memperfd
+                <Prop Name="vendor.debug.enable.memperfd" Value="true" /> -->
 
                 <!--System Properties -->
                 <Prop Name="ro.vendor.qti.sys.fw.bservice_age" Value="300000" />

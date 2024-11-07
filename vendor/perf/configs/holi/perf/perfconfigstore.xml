@@ -41,7 +41,8 @@ ________________________________________________________________________________
                 <Prop Name="vendor.perf.iop_v3.enable.debug" Value="false" /> -->
                 <!-- AOSPA Edit: Disable IOPd explicitly -->
                 <Prop Name="vendor.iop.enabled" Value="false" />
-                <Prop Name="vendor.debug.enable.memperfd" Value="true" />
+                <!-- AOSPA Edit: Disable memperfd
+                <Prop Name="vendor.debug.enable.memperfd" Value="true" /> -->
                 <Prop Name="vendor.perf.pfar.enable" Value="1"/>
                 <Prop Name="vendor.perf.fps_switch.enable" Value="1"/>
                 <Prop Name="ro.vendor.perf.gfl.tap_ignore_enable" Value="true"/>

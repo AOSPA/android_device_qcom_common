@@ -44,20 +44,23 @@ ________________________________________________________________________________
                 <Prop Name="vendor.iop.enabled" Value="false" />
                 <Prop Name="vendor.iop.enable_speed" Value="true" />
                 <Prop Name="vendor.perf.fps_switch_hyst_time_secs" Value="10" />
+                <!-- AOSPA Edit: Disable memperfd
                 <Prop Name="vendor.debug.enable.memperfd" Value="true" Target="shima" />
-                <Prop Name="vendor.debug.enable.memperfd" Value="true" Target="yupik" />
+                <Prop Name="vendor.debug.enable.memperfd" Value="true" Target="yupik" /> -->
                 <Prop Name="vendor.perf.pfar.enable" Value="1" Target="shima" />
                 <Prop Name="vendor.perf.fps_switch.enable" Value="1" Target="shima" />
                 <Prop Name="ro.vendor.perf.gfl.tap_ignore_enable" Value="true" Target="shima" />
                 <Prop Name="ro.vendor.perf.splh" Value="sw" Target="shima" />
                 <Prop Name="ro.vendor.perf.gplaf" Value="true" Target="shima" />
-                <Prop Name="vendor.debug.enable.memperfd" Value="true" Target="yupik" />
+                <!-- AOSPA Edit: Disable memperfd
+                <Prop Name="vendor.debug.enable.memperfd" Value="true" Target="yupik" /> -->
                 <Prop Name="vendor.perf.pfar.enable" Value="1" Target="yupik" />
                 <Prop Name="vendor.perf.fps_switch.enable" Value="1" Target="yupik" />
                 <Prop Name="ro.vendor.perf.gfl.tap_ignore_enable" Value="true" Target="yupik" />
                 <Prop Name="ro.vendor.perf.splh" Value="hw" Target="yupik" />
                 <Prop Name="ro.vendor.perf.gplaf" Value="true" Target="yupik" />
-                <Prop Name="vendor.debug.enable.memperfd" Value="true" Target="katmai" />
+                <!-- AOSPA Edit: Disable memperfd
+                <Prop Name="vendor.debug.enable.memperfd" Value="true" Target="katmai" /> -->
                 <Prop Name="ro.vendor.perf.enable.prekill" Value="false" Target="lahaina" />
                 <Prop Name="ro.vendor.perf.splh" Value="none" Target="lahaina" />
 

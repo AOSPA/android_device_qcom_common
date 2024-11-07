@@ -68,9 +68,10 @@ ________________________________________________________________________________
                 <Prop Name="vendor.enable.prefetch"                            Value="false" />
                 <Prop Name="vendor.iop.enable_prefetch_ofr"                    Value="false" />
                 <Prop Name="ro.vendor.perf.enable.prekill"                     Value="true"     />
+                <!-- AOSPA Edit: Disable memperfd
                 <Prop Name="vendor.debug.enable.memperfd"                      Value="true"     />
                 <Prop Name="vendor.enable.memperfd_MIN_RAM_in_KB"              Value="1048576"  />
-                <Prop Name="vendor.enable.memperfd_MAX_RAM_in_KB"              Value="12582912" />
+                <Prop Name="vendor.enable.memperfd_MAX_RAM_in_KB"              Value="12582912" /> -->
                 <Prop Name="vendor.prekill_MIN_ADJ_to_Kill"                    Value="800"  />
                 <Prop Name="vendor.prekill_MAX_ADJ_to_Kill"                    Value="1000"  />
                 <Prop Name="ro.vendor.perf.enable.procomp"                     Value="true" />
