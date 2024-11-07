@@ -36,7 +36,8 @@ property Name is called. -->
                 <Prop Name="vendor.perf.iop_v3.enable.debug" Value="false" />
                 <!-- AOSPA Edit: Disable Speed IOP/PApps per Bengal 5.15 -->
                 <Prop Name="vendor.iop.enable_speed" Value="false" />
-                <Prop Name="vendor.debug.enable.memperfd" Value="true" />
+                <!-- AOSPA Edit: Disable memperfd
+                <Prop Name="vendor.debug.enable.memperfd" Value="true" /> -->
                 <!-- AOSPA Edit: Enable Procomp per Bengal 5.15 -->
                 <Prop Name="ro.vendor.perf.enable.procomp" Value="false" />
                 <Prop Name="vendor.perf.pfar.enable" Value="1"/>

@@ -47,9 +47,10 @@ ________________________________________________________________________________
                 <Prop Name="ro.vendor.use_perf_hal_for_preferredapps" Value="true" />
                 <Prop Name="vendor.prefapps.pkg_retention_mins" Value="28800" />
                 <Prop Name="vendor.prefapps.last_launch_threshold" Value="21600" />
+                <!-- AOSPA Edit: Disable memperfd
                 <Prop Name="vendor.debug.enable.memperfd"         Value="true"     />
                 <Prop Name="vendor.enable.memperfd_MIN_RAM_in_KB" Value="1048576"  />
-                <Prop Name="vendor.enable.memperfd_MAX_RAM_in_KB" Value="12582912" />
+                <Prop Name="vendor.enable.memperfd_MAX_RAM_in_KB" Value="12582912" /> -->
                 <Prop Name="ro.vendor.perf.ss" Value="true" Target="kalama"/>
                 <Prop Name="ro.vendor.perf.lal" Value="true" Target="kalama"/>
                 <Prop Name="ro.vendor.perf.lgl" Value="true" Target="kalama" SkewType="10"/>

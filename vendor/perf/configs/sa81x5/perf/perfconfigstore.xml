@@ -38,7 +38,8 @@ ________________________________________________________________________________
                 <Prop Name="vendor.iop.enable_prefetch_ofr" Value="0" />
                 <Prop Name="vendor.perf.iop_v3.enable" Value="false" />
                 <Prop Name="vendor.perf.iop_v3.enable.debug" Value="false" />
-                <Prop Name="vendor.debug.enable.memperfd" Value="true" />
+                <!-- AOSPA Edit: Disable memperfd
+                <Prop Name="vendor.debug.enable.memperfd" Value="true" /> -->
                 <Prop Name="vendor.perf.pfar.enable" Value="1"/>
                 <Prop Name="vendor.perf.fps_switch.enable" Value="1"/>
                 <Prop Name="ro.vendor.perf.gfl.tap_ignore_enable" Value="true"/>

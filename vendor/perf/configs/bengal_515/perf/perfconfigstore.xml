@@ -34,7 +34,8 @@ property Name is called. -->
                 <Prop Name="vendor.perf.iop_v3.enable" Value="false" />
                 <Prop Name="vendor.perf.iop_v3.enable.debug" Value="false" />
                 <Prop Name="vendor.iop.enable_speed" Value="false" />
-                <Prop Name="vendor.debug.enable.memperfd" Value="true" />
+                <!-- AOSPA Edit: Disable memperfd
+                <Prop Name="vendor.debug.enable.memperfd" Value="true" /> -->
                 <Prop Name="ro.vendor.perf.enable.procomp" Value="true" />
                 <Prop Name="vendor.perf.pfar.enable" Value="1"/>
 
