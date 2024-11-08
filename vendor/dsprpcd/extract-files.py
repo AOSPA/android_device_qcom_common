@@ -1,0 +1,42 @@
+#!/usr/bin/env -S PYTHONPATH=../../extract_utils:../../../../../tools/extract-utils python3
+#
+# SPDX-FileCopyrightText: 2024 The LineageOS Project
+# SPDX-FileCopyrightText: 2024 Paranoid Android
+# SPDX-License-Identifier: Apache-2.0
+#
+
+from qti import ExtractUtilsQTIModule, QTIComponentType
+
+from extract_utils.fixups_lib import (
+    lib_fixup_remove,
+    lib_fixup_vendorcompat,
+    lib_fixups_user_type,
+    libs_proto_3_9_1,
+)
+from extract_utils.main import ExtractUtils
+
+namespace_imports = [
+    'vendor/qcom/common/vendor/qseecomd-legacy',
+    'vendor/qcom/common/vendor/qseecomd',
+]
+
+lib_fixups: lib_fixups_user_type = {
+    libs_proto_3_9_1: lib_fixup_vendorcompat,
+    (
+        'libqmi_cci',
+        'libqmi_common_so',
+        'libqmi_encdec',
+        'libsnsapi',
+    ): lib_fixup_remove,
+}
+
+module = ExtractUtilsQTIModule(
+    'dsprpcd',
+    QTIComponentType.VENDOR,
+    namespace_imports=namespace_imports,
+    lib_fixups=lib_fixups,
+)
+
+if __name__ == '__main__':
+    utils = ExtractUtils.device(module)
+    utils.run()
