@@ -9,7 +9,7 @@ vendor/bin/xtra-daemon
 vendor/bin/xtwifi-client;DISABLE_CHECKELF
 vendor/etc/init/init.qdmastats.rc
 vendor/etc/init/vendor.qti.hardware.qccvndhal@1.0-service.rc
--vendor/etc/vintf/manifest/vendor.qti.gnss@4.3-service.xml
+vendor/etc/vintf/manifest/vendor.qti.gnss@4.3-service.xml
 vendor/etc/apdr.conf
 vendor/etc/izat.conf
 vendor/etc/lowi.conf
