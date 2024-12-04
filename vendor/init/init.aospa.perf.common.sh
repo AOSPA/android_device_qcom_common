@@ -18,6 +18,9 @@ function write_irq_affinity() {
 write_irq_affinity kgsl_3d0_irq 1
 write_irq_affinity msm_drm 2
 
+# IRQ Tuning for 5.15 and newer targets
+write_irq_affinity hfi 1
+
 # IRQ Tuning for pre-5.4 targets
 write_irq_affinity kgsl-3d0 1
 
