@@ -1,0 +1,2 @@
+# Camera IDs remapping
+vendor.camera.remapid                  u:object_r:vendor_camera_remapid_prop:s0
