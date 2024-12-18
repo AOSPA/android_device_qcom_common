@@ -29,6 +29,8 @@ else # Legacy
 endif
 
 # Common system policies
+BOARD_VENDOR_SEPOLICY_DIRS += \
+    $(COMMON_SEPOLICY_PATH)/common/vendor
 SYSTEM_EXT_PRIVATE_SEPOLICY_DIRS += \
     $(COMMON_SEPOLICY_PATH)/common/private
 SYSTEM_EXT_PUBLIC_SEPOLICY_DIRS += \
