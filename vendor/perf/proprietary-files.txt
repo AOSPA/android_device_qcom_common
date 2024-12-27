@@ -21,7 +21,6 @@ vendor/lib64/libadaptlaunch.so
 vendor/lib64/libaodoptfeature.so
 vendor/lib64/libapengine.so;DISABLE_CHECKELF
 vendor/lib64/libappclassifier.so
-vendor/lib64/libgame_enhance.so;DISABLE_CHECKELF
 vendor/lib64/libgamepoweroptfeature.so
 vendor/lib64/liblearningmodule.so
 vendor/lib64/liblightninglaunches.so

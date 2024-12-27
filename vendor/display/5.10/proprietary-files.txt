@@ -23,6 +23,7 @@ vendor/lib64/libdisp-aba.so
 vendor/lib64/libdisplayqos.so
 vendor/lib64/libdisplayskuutils.so
 vendor/lib64/libdpps.so
+vendor/lib64/libgame_enhance.so;DISABLE_CHECKELF
 vendor/lib64/libhdr_backlight_adapter.so
 vendor/lib64/libhdr_tm.so
 vendor/lib64/libmemutils.so;DISABLE_CHECKELF
