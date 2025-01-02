@@ -100,6 +100,7 @@ function lib_to_package_fixup_vendor_variants() {
             libperipheral_client | \
             libplatformconfig | \
             libqcbor | \
+            libqmi | \
             libqmi_cci | \
             libqmi_csi | \
             libqmi_common_so | \

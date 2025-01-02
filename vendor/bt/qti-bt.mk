@@ -22,6 +22,10 @@ PRODUCT_PACKAGES += \
     android.hardware.bluetooth.audio@2.1-impl
 endif
 
+ifeq ($(TARGET_USE_AIDL_QTI_BT_HCI),true)
+$(call inherit-product-if-exists, vendor/qcom/common/vendor/bt/hci/bt-vendor.mk)
+endif
+
 # FM
 PRODUCT_PACKAGES += \
     vendor.qti.hardware.fm@1.0.vendor
