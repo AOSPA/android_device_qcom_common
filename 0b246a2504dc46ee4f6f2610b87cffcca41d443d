@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "303e4c0e_5967db5b",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000889
+      },
+      "writtenOn": "2025-01-02T13:13:18Z",
+      "side": 1,
+      "message": "https://github.com/anonymix007/proprietary_vendor_qcom_common/commit/cd98ee8ab80c93dc6b82cf939901049e28a9d038\nhttps://github.com/anonymix007/android_device_nubia_nx729j/commit/9a5b6ba46066b0c7cb8b7eceb33a3244b92e2de6\n\nWorks on 8550",
+      "revId": "0b246a2504dc46ee4f6f2610b87cffcca41d443d",
+      "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
+    }
+  ]
+}
