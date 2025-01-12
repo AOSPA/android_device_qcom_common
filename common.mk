@@ -183,6 +183,11 @@ ifneq ($(TARGET_PROVIDES_POWERHAL),true)
 $(call inherit-product-if-exists, vendor/qcom/opensource/power/power-vendor-product.mk)
 endif
 
+# HIDL Camera Hal overrideFormat
+ifeq (,$(filter 3.18 4.4 4.9 4.14, $(TARGET_KERNEL_VERSION)))
+$(call soong_config_set,camhalFormat,camera_override_format_leagcy,true)
+endif
+
 # Public Libraries
 PRODUCT_COPY_FILES += \
     device/qcom/qssi/public.libraries.product-qti.txt:$(TARGET_COPY_OUT_PRODUCT)/etc/public.libraries-qti.txt \
