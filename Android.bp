@@ -507,6 +507,34 @@ install_symlink {
     symlink_target: "/mnt/vendor/persist/rfs/shared",
 }
 
+install_symlink {
+    name: "vendor_bt_firmware_mountpoint",
+    vendor: true,
+    installed_location: "bt_firmware/.keep",
+    symlink_target: "/dev/null",
+}
+
+install_symlink {
+    name: "vendor_dsp_mountpoint",
+    vendor: true,
+    installed_location: "dsp/.keep",
+    symlink_target: "/dev/null",
+}
+
+install_symlink {
+    name: "vendor_firmware_mnt_mountpoint",
+    vendor: true,
+    installed_location: "firmware_mnt/.keep",
+    symlink_target: "/dev/null",
+}
+
+install_symlink {
+    name: "vendor_vm-system_mountpoint",
+    vendor: true,
+    installed_location: "vm-system/.keep",
+    symlink_target: "/dev/null",
+}
+
 prebuilt_hidl_interfaces {
     name: "hidl_netperftuner_interface",
     interfaces: [
