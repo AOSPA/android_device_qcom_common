@@ -1,7 +1,27 @@
-#
+  #
 # SPDX-FileCopyrightText: Paranoid Android
 # SPDX-License-Identifier: Apache-2.0
 #
+
+# Add qtiaudio to soong config namespaces
+SOONG_CONFIG_NAMESPACES += qtiaudio
+
+# Add supported variables to qtiaudio config
+SOONG_CONFIG_qtiaudio += \
+    feature_gki \
+    feature_instance_id
+
+# Set default values for qtiaudio config
+SOONG_CONFIG_qtiaudio_feature_gki ?= false
+SOONG_CONFIG_qtiaudio_feature_instance_id ?= false
+
+ifeq ($(AUDIO_FEATURE_ENABLED_GKI),true)
+    SOONG_CONFIG_qtiaudio_feature_gki := true
+endif
+
+ifeq ($(AUDIO_FEATURE_ENABLED_INSTANCE_ID),true)
+    SOONG_CONFIG_qtiaudio_feature_instance_id := true
+endif
 
 # AV
 BOARD_USES_ADRENO := true
