@@ -16,6 +16,24 @@
       "message": "no need to keep debug binaries honestly, take this opportunity to clean",
       "revId": "5d58daaa307af7a80eb16b2a25e40fcf873d238d",
       "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "d85f8300_b2a21a4d",
+        "filename": "vendor/media-legacy/proprietary-files.txt",
+        "patchSetId": 1
+      },
+      "lineNbr": 33,
+      "author": {
+        "id": 1000895
+      },
+      "writtenOn": "2025-01-19T14:32:40Z",
+      "side": 0,
+      "message": "done",
+      "parentUuid": "f31a3dcb_ca914caa",
+      "revId": "5d58daaa307af7a80eb16b2a25e40fcf873d238d",
+      "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
     }
   ]
 }

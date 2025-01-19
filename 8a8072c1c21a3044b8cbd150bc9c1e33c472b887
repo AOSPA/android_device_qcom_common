@@ -16,6 +16,24 @@
       "message": "why the braces here?",
       "revId": "8a8072c1c21a3044b8cbd150bc9c1e33c472b887",
       "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "fbd7a6ea_ea996237",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 1
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 1000895
+      },
+      "writtenOn": "2025-01-19T14:32:40Z",
+      "side": 1,
+      "message": "done",
+      "parentUuid": "9ba74d6d_3040b430",
+      "revId": "8a8072c1c21a3044b8cbd150bc9c1e33c472b887",
+      "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
     }
   ]
 }
