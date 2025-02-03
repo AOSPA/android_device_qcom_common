@@ -14,9 +14,11 @@
 
 ifeq ($(TARGET_USE_AIDL_QTI_BT_AUDIO),true)
 PRODUCT_PACKAGES += \
-    android.hardware.bluetooth.audio-impl \
-    android.hardware.bluetooth.audio-V3-ndk.vendor \
-    vendor.qti.hardware.bluetooth.audio-V1-ndk.vendor
+    android.hardware.bluetooth.audio-impl-qti \
+    libbluetooth_audio_session_aidl_qti \
+    audio.bluetooth_qti.default \
+    btaudio_offload_if
+
 else
 PRODUCT_PACKAGES += \
     android.hardware.bluetooth.audio@2.1-impl
