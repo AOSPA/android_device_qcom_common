@@ -45,6 +45,9 @@ endif
 
 gki_modules := $(call get-kernel-modules,system_dlkm,modules.load)
 second_stage_modules := $(call get-kernel-modules,vendor_dlkm,modules.load)
+ifeq ($(wildcard modules.load.recovery),)
+recovery_modules := $(first_stage_modules) $(second_stage_modules)
+endif
 
 $(call prepend-kernel-modules,BOARD_VENDOR_RAMDISK_KERNEL_MODULES_LOAD,$(first_stage_modules))
 $(call prepend-kernel-modules,BOARD_VENDOR_RAMDISK_RECOVERY_KERNEL_MODULES_LOAD,$(recovery_modules))
