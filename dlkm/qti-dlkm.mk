@@ -37,8 +37,8 @@ include $(QCOM_COMMON_PATH)/dlkm/kernel-platform.mk
 -include vendor/qcom/opensource/display-drivers/display_driver_product.mk
 
 # eSE
--include vendor/st/opensource/ese-kernel/ese_kernel_board.mk
--include vendor/st/opensource/ese-kernel/ese_kernel_product.mk
+-include vendor/st/opensource/eSE-driver/ese_kernel_board.mk
+-include vendor/st/opensource/eSE-driver/ese_kernel_product.mk
 
 # EVA
 -include vendor/qcom/opensource/eva-kernel/eva_kernel_board.mk
