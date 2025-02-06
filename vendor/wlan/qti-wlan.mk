@@ -61,7 +61,6 @@ PRODUCT_SOONG_NAMESPACES += hardware/qcom/wlan/qcwcn
 CONFIG_IEEE80211AX := true
 
 # IPACM
-PRODUCT_SOONG_NAMESPACES += vendor/qcom/opensource/data-ipa-cfg-mgr
 $(call inherit-product, vendor/qcom/opensource/data-ipa-cfg-mgr/ipacm_vendor_product.mk)
 
 # Include QCOM WLAN makefiles.
