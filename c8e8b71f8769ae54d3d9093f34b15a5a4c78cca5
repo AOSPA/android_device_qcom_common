@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "acb3ec40_fcf01fdb",
+        "filename": "vendor/keymint/qti-keymint.mk",
+        "patchSetId": 1
+      },
+      "lineNbr": 29,
+      "author": {
+        "id": 1000579
+      },
+      "writtenOn": "2025-02-12T04:57:45Z",
+      "side": 1,
+      "message": "from uvite, `exclude cliffs as it only supports gatekeeper not keymint`",
+      "revId": "c8e8b71f8769ae54d3d9093f34b15a5a4c78cca5",
+      "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
+    }
+  ]
+}
