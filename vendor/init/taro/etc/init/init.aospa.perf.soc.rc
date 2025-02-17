@@ -17,11 +17,3 @@ on property:vendor.post_boot.parsed=1
     write /dev/cpuset/foreground/cpus 0-6
     setprop dalvik.vm.dex2oat-cpu-set 0,1,2,3,4,5,6
     setprop dalvik.vm.dex2oat-threads 6
-
-    # CPUFreq
-    write /sys/devices/system/cpu/cpufreq/policy0/walt/up_rate_limit_us 500
-    write /sys/devices/system/cpu/cpufreq/policy0/walt/down_rate_limit_us 20000
-    write /sys/devices/system/cpu/cpufreq/policy4/walt/up_rate_limit_us 1000
-    write /sys/devices/system/cpu/cpufreq/policy4/walt/down_rate_limit_us 10000
-    write /sys/devices/system/cpu/cpufreq/policy7/walt/up_rate_limit_us 2000
-    write /sys/devices/system/cpu/cpufreq/policy7/walt/down_rate_limit_us 5000
