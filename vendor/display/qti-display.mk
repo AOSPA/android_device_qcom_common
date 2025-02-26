@@ -46,6 +46,10 @@ PRODUCT_VENDOR_PROPERTIES += \
     debug.sf.treat_170m_as_sRGB=1
 
 PRODUCT_DEFAULT_PROPERTY_OVERRIDES += ro.surface_flinger.game_default_frame_rate_override=60
+else
+# Properties for 5.10+ targets
+PRODUCT_ODM_PROPERTIES += \
+    ro.surface_flinger.clear_slots_with_set_layer_buffer=true
 endif
 
 # Properties for <5.4 targets
