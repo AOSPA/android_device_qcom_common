@@ -34,7 +34,8 @@ endif
 # Properties for <5.15 targets
 # These are already set on 5.15+.
 ifneq (,$(filter 3.18 4.4 4.9 4.14 4.19 5.4 5.10, $(TARGET_KERNEL_VERSION)))
-# Placeholder
+PRODUCT_VENDOR_PROPERTIES += \
+    debug.graphics.game_default_frame_rate.disabled=1
 endif
 
 # Properties for <5.10 targets
