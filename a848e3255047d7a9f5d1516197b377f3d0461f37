@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "7146de0e_333dfb4d",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000012
+      },
+      "writtenOn": "2025-02-28T02:44:33Z",
+      "side": 1,
+      "message": "Not a huge deal but maybe reorder the patches in this series to avoid needing the placeholder here",
+      "revId": "a848e3255047d7a9f5d1516197b377f3d0461f37",
+      "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
+    }
+  ]
+}
