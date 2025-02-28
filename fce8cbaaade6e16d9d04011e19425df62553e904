@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "0d3f8b5f_63f6e710",
+        "filename": "vendor/media/init.qti.media.sh",
+        "patchSetId": 8
+      },
+      "lineNbr": 85,
+      "author": {
+        "id": 1000092
+      },
+      "writtenOn": "2025-02-28T13:22:20Z",
+      "side": 1,
+      "message": "amend https://gerrit.aospa.co/c/AOSPA/android_device_qcom_common/+/28272",
+      "revId": "fce8cbaaade6e16d9d04011e19425df62553e904",
+      "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
+    }
+  ]
+}
