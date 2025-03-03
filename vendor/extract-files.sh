@@ -56,6 +56,10 @@ fi
 
 function blob_fixup() {
     case "${1}" in
+        vendor/bin/slim_daemon)
+            [ "$2" = "" ] && return 0
+            "${PATCHELF}" --add-needed "libslimclient.so" "${2}"
+            ;;
         vendor/lib64/libmemperfd.so)
             [ "$2" = "" ] && return 0
             "${PATCHELF}" --replace-needed "libprotobuf-cpp-lite-21.7.so" "libprotobuf-cpp-lite-21.12.so" "${2}"
