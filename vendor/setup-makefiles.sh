@@ -45,7 +45,7 @@ function vendor_imports() {
         "vendor/qcom/common/vendor/keymaster",
         "vendor/qcom/common/vendor/media-5.4",
         "vendor/qcom/common/vendor/media-legacy",
-        "vendor/qcom/common/vendor/media",
+        "vendor/qcom/common/vendor/media-5.10",
         "vendor/qcom/common/vendor/nfc/nq",
         "vendor/qcom/common/vendor/perf",
         "vendor/qcom/common/vendor/qseecomd-legacy",

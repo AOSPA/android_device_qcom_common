@@ -13,19 +13,19 @@
 # limitations under the License.
 
 PRODUCT_SOONG_NAMESPACES += \
-    device/qcom/common/vendor/media
+    device/qcom/common/vendor/media-5.10
 
-TARGET_MEDIA_COMPONENT_VARIANT := media
+TARGET_MEDIA_COMPONENT_VARIANT := media-5.10
 
 # Inherit configuration from the HAL.
-$(call inherit-product-if-exists, hardware/qcom/media/product.mk)
+$(call inherit-product-if-exists, hardware/qcom/media-5.10/product.mk)
 
 # Enable 64-bit mediaserver
 PRODUCT_VENDOR_PROPERTIES += \
     ro.mediaserver.64b.enable=true
 
 PRODUCT_COPY_FILES += \
-    device/qcom/common/vendor/media/media_codecs_c2_audio.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs_c2_audio.xml
+    device/qcom/common/vendor/media-5.10/media_codecs_c2_audio.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs_c2_audio.xml
 
 # Packages
 PRODUCT_PACKAGES += \
@@ -40,7 +40,7 @@ PRODUCT_SYSTEM_EXT_PROPERTIES += \
 
 # Media Init
 PRODUCT_COPY_FILES += \
-    device/qcom/common/vendor/media/init.qti.media.sh:$(TARGET_COPY_OUT_VENDOR)/bin/init.qti.media.sh
+    device/qcom/common/vendor/media-5.10/init.qti.media.sh:$(TARGET_COPY_OUT_VENDOR)/bin/init.qti.media.sh
 
 # Get non-open-source specific aspects.
-$(call inherit-product-if-exists, vendor/qcom/common/vendor/media/media-vendor.mk)
+$(call inherit-product-if-exists, vendor/qcom/common/vendor/media-5.10/media-5.10-vendor.mk)

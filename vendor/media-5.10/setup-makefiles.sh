@@ -14,7 +14,7 @@ fi
 
 set -e
 
-export COMPONENT=media
+export COMPONENT=media-5.10
 export VENDOR=qcom/common/vendor
 export VENDOR_COMMON=${VENDOR}
 

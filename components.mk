@@ -114,8 +114,8 @@ ifneq (,$(filter media, $(TARGET_COMMON_QTI_COMPONENTS)))
     TARGET_MEDIA_COMPONENT_VARIANT ?= media-legacy
   else ifeq ($(call is-board-platform-in-list,$(5_4_FAMILY)),true)
     TARGET_MEDIA_COMPONENT_VARIANT ?= media-5.4
-  else
-    TARGET_MEDIA_COMPONENT_VARIANT ?= media
+  else ifeq ($(call is-board-platform-in-list,$(5_10_FAMILY)),true)
+    TARGET_MEDIA_COMPONENT_VARIANT ?= media-5.10
   endif
   include $(QCOM_COMMON_PATH)/vendor/$(TARGET_MEDIA_COMPONENT_VARIANT)/qti-$(TARGET_MEDIA_COMPONENT_VARIANT).mk
 
