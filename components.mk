@@ -97,6 +97,8 @@ ifneq (,$(filter gps, $(TARGET_COMMON_QTI_COMPONENTS)))
     TARGET_GPS_COMPONENT_VARIANT ?= gps-legacy
   else ifeq ($(call is-board-platform-in-list,$(5_10_FAMILY)),true)
     TARGET_GPS_COMPONENT_VARIANT ?= gps-5.10
+  else ifeq ($(call is-board-platform-in-list,$(5_15_FAMILY)),true)
+    TARGET_GPS_COMPONENT_VARIANT ?= gps-5.15
   endif
   include $(QCOM_COMMON_PATH)/vendor/$(TARGET_GPS_COMPONENT_VARIANT)/qti-$(TARGET_GPS_COMPONENT_VARIANT).mk
 endif

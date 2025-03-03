@@ -77,6 +77,8 @@ function lib_to_package_fixup_vendor_variants() {
             vendor.qti.hardware.perf@2.2 | \
             vendor.qti.hardware.perf2-V1-ndk | \
             vendor.qti.hardware.qccsyshal@1.0 | \
+            vendor.qti.hardware.qccsyshal@1.1 | \
+            vendor.qti.hardware.qccsyshal@1.2 | \
             vendor.qti.hardware.qccvndhal@1.0 | \
             vendor.qti.qspmhal@1.0 | \
             vendor.qti.qspmhal-V1-ndk)
@@ -103,6 +105,8 @@ function lib_to_package_fixup_vendor_variants() {
             libperipheral_client | \
             libplatformconfig | \
             libqcbor | \
+            libqcrilNrLogger | \
+            libqesdk2_0 | \
             libqmi | \
             libqmi_cci | \
             libqmi_csi | \
@@ -121,6 +125,7 @@ function lib_to_package_fixup_vendor_variants() {
             libwfdmmservice_proprietary | \
             libwfdutils_proprietary | \
             libwpa_client | \
+            qcril_client | \
             qcril_hal_client)
             # Unreachable soong namespace
             ;;
