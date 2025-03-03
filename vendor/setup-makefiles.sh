@@ -46,6 +46,7 @@ function vendor_imports() {
         "vendor/qcom/common/vendor/media-5.4",
         "vendor/qcom/common/vendor/media-legacy",
         "vendor/qcom/common/vendor/media-5.10",
+        "vendor/qcom/common/vendor/media-5.15",
         "vendor/qcom/common/vendor/nfc/nq",
         "vendor/qcom/common/vendor/perf",
         "vendor/qcom/common/vendor/qseecomd-legacy",
@@ -87,9 +88,11 @@ function lib_to_package_fixup_vendor_variants() {
         libprotobuf-cpp-lite-21.12)
             echo "libprotobuf-cpp-lite"
             ;;
-        libc2dcolorconvert | \
+        libcv_common | \
+            libc2dcolorconvert | \
             libdiag | \
             libdisplayqos | \
+            libeva | \
             libidl | \
             libminksocket_vendor | \
             libmdmdetect | \
