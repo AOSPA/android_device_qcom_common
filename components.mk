@@ -101,7 +101,20 @@ ifneq (,$(filter keymaster, $(TARGET_COMMON_QTI_COMPONENTS)))
 endif
 
 ifneq (,$(filter media, $(TARGET_COMMON_QTI_COMPONENTS)))
+<<<<<<< HEAD   (14daaf9129dfbbbb3b371b74a84ef557aff1b11a system: Update to LA.QISI.16.0.r1-01200-qssi.0)
   include $(QCOM_COMMON_PATH)/vendor/media/qti-media.mk
+=======
+  ifeq ($(call is-board-platform-in-list,$(4_4_FAMILY) $(4_9_FAMILY) $(4_14_FAMILY) $(4_19_FAMILY)),true)
+    TARGET_MEDIA_COMPONENT_VARIANT ?= media-legacy
+  else ifeq ($(call is-board-platform-in-list,$(5_4_FAMILY)),true)
+    TARGET_MEDIA_COMPONENT_VARIANT ?= media-5.4
+  else ifeq ($(call is-board-platform-in-list,$(5_10_FAMILY)),true)
+    TARGET_MEDIA_COMPONENT_VARIANT ?= media-5.10
+  else ifeq ($(call is-board-platform-in-list,$(5_15_FAMILY)),true)
+    TARGET_MEDIA_COMPONENT_VARIANT ?= media-5.15
+  endif
+  include $(QCOM_COMMON_PATH)/vendor/$(TARGET_MEDIA_COMPONENT_VARIANT)/qti-$(TARGET_MEDIA_COMPONENT_VARIANT).mk
+>>>>>>> CHANGE (def2202e6e636e15741e2a92edf43b516906e825 vendor: Introduce 5.15 media component)
 
   PRODUCT_COPY_FILES += \
     $(QCOM_COMMON_PATH)/vendor/seccomp/codec2.software.ext.policy:$(TARGET_COPY_OUT_VENDOR)/etc/seccomp_policy/codec2.software.ext.policy \
