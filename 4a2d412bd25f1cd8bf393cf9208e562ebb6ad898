@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "605062aa_88d63a46",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 15
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000730
+      },
+      "writtenOn": "2025-03-17T22:16:47Z",
+      "side": 1,
+      "message": "Aren\u0027t the removed bits needed?",
+      "revId": "4a2d412bd25f1cd8bf393cf9208e562ebb6ad898",
+      "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
+    }
+  ]
+}
