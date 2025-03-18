@@ -92,18 +92,48 @@ property Name is called. -->
                 <Prop Name="vendor.appcompact.rss_throttle_kb"             Value="12000" />
                 <Prop Name="vendor.appcompact.delta_rss_throttle_kb"       Value="8000" />
 
+                <!--2GB / 3GB Custom settings -->
+                <Prop Name="vendor.debug.enable.lm"       Value="false" Ram="2" />
+                <Prop Name="ro.lmk.enable_preferred_apps" Value="false" Ram = "2" />
+                <Prop Name="ro.vendor.perf.enable.prefapps" Value="false" Ram="2" />
+                <Prop Name="ro.vendor.use_perf_hal_for_preferredapps" Value="false" Ram = "2" />
+                <Prop Name="vendor.debug.enable.memperfd"        Value="false" Ram="2" />
+                <Prop Name="vendor.perf.pfar.enable"             Value="false" Ram="2" />
+                <Prop Name="ro.lmk.enable_preferred_apps"        Value="false" Ram="2" />
+                <Prop Name="ro.lmk.psi_window_size_ms"           Value="500"   Ram="2" />
+                <Prop Name="ro.lmk.psi_poll_period_scrit_ms"     Value="100"   Ram="2" />
+                <Prop Name="ro.lmk.psi_scrit_complete_stall_ms"  Value="85"    Ram="2" />
+                <Prop Name="vendor.iop.enable_uxe"               Value="false" Ram="2" />
+                <Prop Name="ro.vendor.qti.sys.fw.bservice_limit" Value="3"     Ram="2" />
+                <Prop Name="ro.vendor.qti.sys.fw.bservice_age"   Value="2000"  Ram="2" />
+                <Prop Name="ro.vendor.qti.sys.fw.bg_apps_limit"  Value="8"     Ram="2" />
+                <Prop Name="ro.vendor.perf.enable.procomp"       Value="false" Ram="2" />
+                <Prop Name="vendor.appcompact.some_compact_type" Value="2"     Ram="2" />
+                <Prop Name="ro.vendor.perf.ss" Value="false"  Ram="2" />
+                <Prop Name="ro.vendor.perf.lal" Value="false"  Ram="2" />
+                <Prop Name="ro.vendor.perf.lgl" Value="false" SkewType="10" Ram="2" />
+
+                <Prop Name="vendor.debug.enable.lm"       Value="false" Ram="3" />
+                <Prop Name="ro.lmk.enable_preferred_apps" Value="false" Ram="3" />
+                <Prop Name="ro.vendor.perf.enable.prefapps" Value="false" Ram="3" />
+                <Prop Name="ro.vendor.use_perf_hal_for_preferredapps" Value="false" Ram="3" />
+                <Prop Name="vendor.debug.enable.memperfd"        Value="false" Ram="3" />
+                <Prop Name="vendor.perf.pfar.enable"             Value="false" Ram="3" />
                 <Prop Name="ro.lmk.enable_preferred_apps"        Value="false" Ram="3" />
-                <Prop Name="ro.lmk.kill_heaviest_task_dup"       Value="false" Ram="3" />
                 <Prop Name="ro.lmk.psi_window_size_ms"           Value="500"   Ram="3" />
                 <Prop Name="ro.lmk.psi_poll_period_scrit_ms"     Value="100"   Ram="3" />
                 <Prop Name="ro.lmk.psi_scrit_complete_stall_ms"  Value="85"    Ram="3" />
-                <Prop Name="vendor.iop.enable_uxe"               Value="0"     Ram="3" />
+                <Prop Name="vendor.iop.enable_uxe"               Value="false" Ram="3" />
                 <Prop Name="ro.vendor.qti.sys.fw.bservice_limit" Value="5"     Ram="3" />
-                <Prop Name="ro.vendor.qti.sys.fw.bservice_age"   Value="5000"  Ram="3" />
-                <Prop Name="ro.vendor.qti.sys.fw.bg_apps_limit"  Value="32"    Ram="3" />
-                <Prop Name="ro.vendor.qti.sys.fw.bg_apps_limit"  Value="32"    Ram="4" />
+                <Prop Name="ro.vendor.qti.sys.fw.bservice_age"   Value="3000"  Ram="3" />
+                <Prop Name="ro.vendor.qti.sys.fw.bg_apps_limit"  Value="16"     Ram="3" />
                 <Prop Name="ro.vendor.perf.enable.procomp"       Value="false" Ram="3" />
-                <Prop Name="vendor.appcompact.full_compact_type" Value="3"     Ram="3" />
+                <Prop Name="vendor.appcompact.some_compact_type" Value="2"     Ram="3" />
+                <Prop Name="ro.vendor.perf.ss" Value="false"  Ram="3" />
+                <Prop Name="ro.vendor.perf.lal" Value="false"  Ram="3" />
+                <Prop Name="ro.vendor.perf.lgl" Value="false" SkewType="10" Ram="3" />
+
+                <Prop Name="ro.vendor.qti.sys.fw.bg_apps_limit"  Value="32"    Ram="4" />
 
     </PerfConfigs>
 </PerfConfigsStore>

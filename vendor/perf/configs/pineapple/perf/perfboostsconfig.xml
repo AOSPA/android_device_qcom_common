@@ -30,7 +30,7 @@
         <!-- STORAGE CLK SCALING resource opcode, value-->
         <!-- LLCC DDR LAT GOLD MIN FREQ resource opcode, value-->
         <!-- L3 resource opcode, value-->
-        <!-- GPU DISABLE resource opcode, value-->
+        <!-- GPU_TOUCH_WAKEUP  resource opcode, value-->
         <!-- CPU_CORE_CONTROL_CPU_NOT_PREFERRED resource opcode, value-->
 
         <!-- Type="1", main launch boost of 2sec -->
@@ -39,7 +39,7 @@
             Resources="0x40C00000, 0x1, 0x40804000, 0xFFF, 0x40804100, 0xFFF, 0x40804200, 0xFFF, 0x4080C300, 2956800,
                        0x40800000, 0xFFF, 0x40800100, 0xFFF, 0x40800200, 0xFFF, 0x40808300, 2956800, 0x41848000, 0x104410,
                        0x41844000, 0x104410, 0x42C10000, 0x1, 0x43488000, 0x401640,
-                       0x43458000, 0x1B8A00, 0x4281C000, 2000, 0x4100C000, 0x3" />
+                       0x43458000, 0x1B8A00, 0x42834000, 1, 0x4100C000, 0x3" />
 
         <!-- SCHEDBOOST resource opcode, value-->
         <!-- CPUBOOST_MAX_FREQ BIG Core resource opcode, value-->
@@ -143,7 +143,7 @@
         <!-- STORAGE CLK SCALING resource opcode, value-->
         <!-- LLCC DDR LAT GOLD MIN FREQ resource opcode, value-->
         <!-- L3 resource opcode, value-->
-        <!-- GPU DISABLE resource opcode, value-->
+        <!-- GPU_TOUCH_WAKEUP resource opcode, value-->
         <!-- CPU_CORE_CONTROL_CPU_NOT_PREFERRED resource opcode, value-->
 
         <!-- Type="7", main launch boost of 2sec -->
@@ -152,32 +152,28 @@
             Resources="0x40C00000, 0x1, 0x40804000, 0xFFF, 0x40804100, 0xFFF, 0x40804200, 0xFFF,
                        0x4080C300, 2956800, 0x40800000, 0xFFF, 0x40800100, 0xFFF, 0x40800200, 0xFFF,
                        0x40808300, 2956800, 0x41848000, 0x104410, 0x41844000, 0x104410, 0x42C10000, 0x1,
-                       0x43488000, 0x401640, 0x43458000, 0x1B8A00, 0x4281C000, 2000, 0x4100C000, 0x3" />
+                       0x43488000, 0x401640, 0x43458000, 0x1B8A00, 0x42834000, 1, 0x4100C000, 0x3" />
 
         <!-- SCHEDBOOST resource opcode, value-->
         <!-- CPUBOOST_MAX_FREQ BIG Core resource opcode, value-->
         <!-- CPUBOOST_MAX_FREQ LITTLE Core resource opcode, value-->
         <!-- CPUBOOST_MAX_FREQ PRIME Core resource opcode, value-->
-        <!-- WALT_ADAPTIVE_HIGH_FREQ_BIG resource opcode, value-->
-        <!-- WALT_ADAPTIVE_HIGH_FREQ_LITTLE resource opcode, value-->
-        <!-- WALT_ADAPTIVE_HIGH_FREQ_PRIME resource opcode, value-->
-        <!-- WALT_ADAPTIVE_LOW_FREQ_BIG resource opcode, value-->
-        <!-- WALT_ADAPTIVE_LOW_FREQ_LITTLE resource opcode, value-->
-        <!-- WALT_ADAPTIVE_LOW_FREQ_PRIME resource opcode, value-->
+        <!-- CPUBOOST_MIN_FREQ BIG Core resource opcode, value-->
+        <!-- CPUBOOST_MIN_FREQ LITTLE Core resource opcode, value-->
+        <!-- CPUBOOST_MIN_FREQ PRIME Core resource opcode, value-->
         <!-- STORAGE CLK SCALING resource opcode, value-->
         <!-- CPUBW_MIN_FREQ resource opcode, value-->
         <!-- LLCCBW resource opcode, value-->
         <!-- L3_MEMLAT_MIN_FREQ_PRIME resource opcode, value-->
-        <!-- GPU_TOUCH_WAKEUP resource opcode, value-->
+        <!-- GPU_IDLE_TIMER resource opcode, value-->
         <!-- Type="7", main launch of 2sec -->
 
         <Config
             Id="0x00001081" Type="7" Enable="true" Timeout="2000" Target="cliffs"
             Resources="0x40C00000, 0x1, 0x40804000, 0xFFF, 0x40804100, 0xFFF, 0x40804200, 0xFFF,
-                       0x4080C000, 1708800, 0x4080C100, 1593600, 0x4080C200, 1766400,
-                       0x40808000, 1190000, 0x40808100, 1113600, 0x40808200, 1209600,
-                       0x42C10000, 0x1, 0x4303C000, 0xC3500, 0x41844000, 0xE3C88, 0x43458000, 0x148200,
-                       0x42834000, 1" />
+                      0x40800000, 1401, 0x40800100, 1344, 0x40800200, 1651,
+                      0x42C10000, 0x1, 0x4303C000, 0xC3500, 0x41844000, 0xE3C88, 0x43458000, 0x148200,
+                      0x4282C000, 1500" />
 
     <!--Lightning App Launch-->
         <!-- SCHEDBOOST resource opcode, value-->
@@ -202,7 +198,7 @@
         <Config
             Id="0x00001081" Type="8" Enable="true" Timeout="2000" Target="cliffs"
             Resources="0x40C00000, 0x3, 0x40CF4000, 0x00640055, 0x40C74000, 0xF8"
-            IgnoreHints="0x00001083" />
+            IgnoreHints="0x00001097, 0x00001083" />
 
     <!--Lightning Game Launch -->
         <!-- SCHEDBOOST resource opcode, value-->
@@ -234,21 +230,18 @@
         <!-- SCHED_GROUP_UP_DOWN MIGRATE resource opcode, value -->
         <!-- SLB_BIG, val-->
         <!-- SLB_PRIME, val-->
-        <!-- WALT_ADAPTIVE_HIGH_FREQ_BIG resource opcode, value -->
-        <!-- WALT_ADAPTIVE_HIGH_FREQ_PRIME resource opcode, value -->
-        <!-- WALT_ADAPTIVE_LOW_FREQ_BIG resource opcode, value -->
-        <!-- WALT_ADAPTIVE_LOW_FREQ_PRIME resource opcode, value -->
+        <!-- MIN_FREQ_BIG, val MHz -->
+        <!-- MIN_FREQ_PRIME, val MHz -->
         <!-- CPU_DOWN_FREQ_THRESHOLD_US BIG, val us -->
         <!-- CPU_DOWN_FREQ_THRESHOLD_US PRIME, val us -->
         <!-- SCHED_BUSY_HYSTERSIS_CPU_MASK resource opcode, value-->
-        <!-- Type="9", Main Game Launch Boost : Duration governed by LGL -->
+        <!-- Type="9", Main App Launch Boost : Duration governed by LGL -->
         <Config
             Id="0x00001081" Type="9" Enable="true" Target="cliffs" Timeout="2000"
             Resources="0x40C00000, 0x3, 0x40CF4000, 0x00640055, 0x40C68000, 60,
-                       0x40C68200, 60, 0x4080C000, 1286400, 0x4080C200, 1324800,
-                       0x40808000, 940800, 0x40808200, 960000, 0x41448000, 20000,
+                       0x40C68200, 60, 0x40800000, 1190, 0x40800200, 1209, 0x41448000, 20000,
                        0x41448200, 20000, 0x40C74000, 0xF8"
-            IgnoreHints="0x00001083" />
+            IgnoreHints="0x00001097, 0x00001083" />
 
     <!--Activity lauch boost-->
         <!-- SCHEDBOOST resource opcode, value-->
@@ -265,7 +258,7 @@
         <!-- STORAGE CLK SCALING resource opcode, value-->
         <!-- LLCC DDR LAT GOLD MIN FREQ resource opcode, value-->
         <!-- L3 resource opcode, value-->
-        <!-- GPU DISABLE resource opcode, value-->
+        <!-- GPU_TOUCH_WAKEUP resource opcode, value-->
         <!-- CPU_CORE_CONTROL_CPU_NOT_PREFERRED resource opcode, value-->
         <!-- SCHED_TASK_BOOST resource opcode, value-->
 
@@ -276,25 +269,20 @@
                        0x4080C300, 2956800, 0x40800000, 0xFFF, 0x40800100, 0xFFF, 0x40800200, 0xFFF,
                        0x40808300, 2956800, 0x41848000, 0x104410, 0x41844000, 0x104410,
                        0x42C10000, 0x1, 0x43488000, 0x401640, 0x43458000, 0x1B8A00,
-                       0x4281C000, 2000, 0x4100C000, 0x3, 0x40C80000, 0x0" />
+                       0x42834000, 1, 0x4100C000, 0x3, 0x40C80000, 0x0" />
 
         <!-- SCHEDBOOST resource opcode, value-->
         <!-- CPUBOOST_MAX_FREQ BIG Core resource opcode, value-->
         <!-- CPUBOOST_MAX_FREQ LITTLE Core resource opcode, value-->
         <!-- CPUBOOST_MAX_FREQ PRIME Core resource opcode, value-->
-        <!-- WALT_ADAPTIVE_HIGH_FREQ_BIG resource opcode, value-->
-        <!-- WALT_ADAPTIVE_HIGH_FREQ_LITTLE resource opcode, value-->
-        <!-- WALT_ADAPTIVE_HIGH_FREQ_PRIME resource opcode, value-->
-        <!-- WALT_ADAPTIVE_LOW_FREQ_BIG resource opcode, value-->
-        <!-- WALT_ADAPTIVE_LOW_FREQ_LITTLE resource opcode, value-->
-        <!-- WALT_ADAPTIVE_LOW_FREQ_PRIME resource opcode, value-->
-        <!-- SCHED_TASK_BOOST resource opcode, value-->
+        <!-- CPUBOOST_MIN_FREQ BIG Core resource opcode, value-->
+        <!-- CPUBOOST_MIN_FREQ LITTLE Core resource opcode, value-->
+        <!-- CPUBOOST_MIN_FREQ PRIME Core resource opcode, value-->
+
         <Config
            Id="0x00001081" Type="10" Enable="true" Timeout="2000" Target="cliffs"
            Resources="0x40C00000, 0x1, 0x40804000, 0xFFF, 0x40804100, 0xFFF, 0x40804200, 0xFFF,
-                      0x4080C000, 1708800, 0x4080C100, 1593600, 0x4080C200, 1766400,
-                      0x40808000, 1190000, 0x40808100, 1113600, 0x40808200, 1209600,
-                      0x40C80000, 0x0" />
+                      0x40800000, 1401, 0x40800100, 1344, 0x40800200, 1651" />
 
     <!--app launch boost (attach application) -->
         <!-- SCHED_TASK_BOOST resource opcode, value-->
@@ -337,7 +325,7 @@
         <!-- PID Affine opcode,value -->
         <Config
             Id="0x000010A9" Enable="true" Timeout="400"  Target="cliffs" Fps="60, 90"
-            Resources="0x40800000, 1500, 0x42C20000, 1" />
+            Resources="0x40800000, 1300, 0x42C20000, 1" />
 
     <!--Vertical Scroll boost-->
         <!-- LLCBW_MIN_FREQ resource opcode, value-->
@@ -531,28 +519,21 @@
                        0x40808300, 600000" />
 
         <!-- CPUBW_MIN_FREQ resource opcode, value-->
-        <!-- WALT_ADAPTIVE_HIGH_FREQ_BIG resource opcode, value -->
-        <!-- WALT_ADAPTIVE_HIGH_FREQ_LITTLE resource opcode, value -->
-        <!-- WALT_ADAPTIVE_HIGH_FREQ_PRIME resource opcode, value -->
-        <!-- WALT_ADAPTIVE_LOW_FREQ_BIG resource opcode, value -->
-        <!-- WALT_ADAPTIVE_LOW_FREQ_LITTLE resource opcode, value -->
-        <!-- WALT_ADAPTIVE_LOW_FREQ_PRIME resource opcode, value -->
+        <!-- CPUBOOST_MIN_FREQ BIG CORE resource opcode, value -->
+        <!-- CPUBOOST_MIN_FREQ LITTLE Core resource opcode, value -->
+        <!-- CPUBOOST_MIN_FREQ PRIME Core resource opcode, value -->
         <!-- SCHEDBOOST resource opcode, value-->
         <!-- CPU_LLCC_BW_MAX_FREQ_V2 resource opcode, value-->
 
         <Config
             Id="0x00001080" Type="4" Enable="true" Timeout="80" Target="cliffs"
-            Resources="0x4303C000, 0xA6428, 0x4080C000, 1190000, 0x4080C100, 1113000, 0x4080C200, 1094000,
-                       0x40808000, 787000, 0x40808100, 787000, 0x40808200, 787000,
+            Resources="0x4303C000, 0xA6428, 0x40800000, 1190, 0x40800100, 1113, 0x40800200, 1094,
                        0x40C00000, 2, 0x41848000, 0xE3C88" />
 
         <!-- CPUBW_MIN_FREQ resource opcode, value-->
-        <!-- WALT_ADAPTIVE_HIGH_FREQ_BIG resource opcode, value -->
-        <!-- WALT_ADAPTIVE_HIGH_FREQ_LITTLE resource opcode, value -->
-        <!-- WALT_ADAPTIVE_HIGH_FREQ_PRIME resource opcode, value -->
-        <!-- WALT_ADAPTIVE_LOW_FREQ_BIG resource opcode, value -->
-        <!-- WALT_ADAPTIVE_LOW_FREQ_LITTLE resource opcode, value -->
-        <!-- WALT_ADAPTIVE_LOW_FREQ_PRIME resource opcode, value -->
+        <!-- CPUBOOST_MIN_FREQ BIG CORE resource opcode, value -->
+        <!-- CPUBOOST_MIN_FREQ LITTLE Core resource opcode, value -->
+        <!-- CPUBOOST_MIN_FREQ PRIME Core resource opcode, value -->
         <!-- SCHEDBOOST resource opcode, value-->
         <!-- SCHED_BUSY_HYSTERSIS_CPU_MASK resource opcode, value-->
         <!-- LPM Bias resource opcode, value-->
@@ -560,17 +541,13 @@
 
         <Config
             Id="0x00001080" Type="4" Enable="true" Timeout="115" Target="cliffs" Fps="90"
-            Resources="0x4303C000, 0xA6428, 0x4080C000, 1593000, 0x4080C100, 1344000, 0x4080C200, 1459000,
-                       0x40808000, 787000, 0x40808100, 787000, 0x40808200, 787000,
+            Resources="0x4303C000, 0xA6428, 0x40800000, 1593, 0x40800100, 1344, 0x40800200, 1459,
                        0x40C00000, 2, 0x40C74000, 0xF8, 0x40408000, 0x27, 0x41848000, 0xE3C88" />
 
         <!-- CPUBW_MIN_FREQ resource opcode, value-->
-        <!-- WALT_ADAPTIVE_HIGH_FREQ_BIG resource opcode, value -->
-        <!-- WALT_ADAPTIVE_HIGH_FREQ_LITTLE resource opcode, value -->
-        <!-- WALT_ADAPTIVE_HIGH_FREQ_PRIME resource opcode, value -->
-        <!-- WALT_ADAPTIVE_LOW_FREQ_BIG resource opcode, value -->
-        <!-- WALT_ADAPTIVE_LOW_FREQ_LITTLE resource opcode, value -->
-        <!-- WALT_ADAPTIVE_LOW_FREQ_PRIME resource opcode, value -->
+        <!-- CPUBOOST_MIN_FREQ BIG CORE resource opcode, value -->
+        <!-- CPUBOOST_MIN_FREQ LITTLE Core resource opcode, value -->
+        <!-- CPUBOOST_MIN_FREQ PRIME Core resource opcode, value -->
         <!-- SCHEDBOOST resource opcode, value-->
         <!-- SCHED_BUSY_HYSTERSIS_CPU_MASK resource opcode, value-->
         <!-- LPM Bias resource opcode, value-->
@@ -581,18 +558,14 @@
 
         <Config
             Id="0x00001080" Type="4" Enable="true" Timeout="115" Target="cliffs" Fps="120"
-            Resources="0x4303C000, 0xA6428, 0x4080C000, 1824000, 0x4080C100, 1344000, 0x4080C200, 1651000,
-                       0x40808000, 1056000, 0x40808100, 787000, 0x40808200, 1094000,
+            Resources="0x4303C000, 0xA6428, 0x40800000, 1824, 0x40800100, 1344, 0x40800200, 1651,
                        0x40C00000, 2, 0x40C74000, 0xF8, 0x40408000, 0x27, 0x41000000, 3,
                        0x40C78000, 0, 0x40C7C000, 0, 0x41848000, 0xE3C88" />
 
         <!-- CPUBW_MIN_FREQ resource opcode, value-->
-        <!-- WALT_ADAPTIVE_HIGH_FREQ_BIG resource opcode, value -->
-        <!-- WALT_ADAPTIVE_HIGH_FREQ_LITTLE resource opcode, value -->
-        <!-- WALT_ADAPTIVE_HIGH_FREQ_PRIME resource opcode, value -->
-        <!-- WALT_ADAPTIVE_LOW_FREQ_BIG resource opcode, value -->
-        <!-- WALT_ADAPTIVE_LOW_FREQ_LITTLE resource opcode, value -->
-        <!-- WALT_ADAPTIVE_LOW_FREQ_PRIME resource opcode, value -->
+        <!-- CPUBOOST_MIN_FREQ BIG CORE resource opcode, value -->
+        <!-- CPUBOOST_MIN_FREQ LITTLE Core resource opcode, value -->
+        <!-- CPUBOOST_MIN_FREQ PRIME Core resource opcode, value -->
         <!-- SCHEDBOOST resource opcode, value-->
         <!-- SCHED_BUSY_HYSTERSIS_CPU_MASK resource opcode, value-->
         <!-- LPM Bias resource opcode, value-->
@@ -605,8 +578,7 @@
 
         <Config
             Id="0x00001080" Type="4" Enable="true" Timeout="115" Target="cliffs" Fps="144"
-            Resources="0x4303C000, 0xA6428, 0x4080C000, 1824000, 0x4080C100, 1344000, 0x4080C200, 1651000,
-                       0x40808000, 1056000, 0x40808100, 787000, 0x40808200, 1094000,
+            Resources="0x4303C000, 0xA6428, 0x40800000, 1824, 0x40800100, 1344, 0x40800200, 1651,
                        0x40C00000, 2, 0x40C74000, 0xF8, 0x40408000, 0x27, 0x41000000, 3,
                        0x40C78000, 0, 0x40C7C000, 0, 0x41844000, 0xE3C88, 0x43480000, 0xC9900,
                        0x41848000, 0xE3C88" />
@@ -702,37 +674,34 @@
                        0x40CE0200, 0x0023000A, 0x40808000, 600000, 0x40808100, 1100000, 0x40808200, 800000,
                        0x40808300, 600000" />
 
-        <!-- WALT_ADAPTIVE_HIGH_FREQ_BIG resource opcode, value -->
-        <!-- WALT_ADAPTIVE_HIGH_FREQ_BIG resource opcode, value -->
-        <!-- WALT_ADAPTIVE_HIGH_FREQ_BIG resource opcode, value -->
-        <!-- WALT_ADAPTIVE_LOW_FREQ_BIG resource opcode, value -->
-        <!-- WALT_ADAPTIVE_LOW_FREQ_BIG resource opcode, value -->
-        <!-- WALT_ADAPTIVE_LOW_FREQ_BIG resource opcode, value -->
+        <!-- CPUBOOST_MIN_FREQ BIG CORE resource opcode, value -->
+        <!-- CPUBOOST_MIN_FREQ LITTLE Core resource opcode, value -->
+        <!-- CPUBOOST_MIN_FREQ PRIME CORE resource opcode, value -->
         <!-- CPU_LLCC_BW_MAX_FREQ_V2 resource opcode, value-->
 
         <!-- Type="1", Drag boost -->
         <Config
              Id="0x00001087" Type="1" Enable="true" Timeout="0" Target="cliffs"
-             Resources="0x4080C000, 1190000, 0x4080C100, 902000, 0x4080C200, 787000,
-                        0x40808000, 940000, 0x40808100, 787000, 0x40808200, 633000,
+             Resources="0x40800000, 1190, 0x40800100, 1113, 0x40800200, 1094,
                         0x41848000, 0xE3C88" />
 
-        <!-- WALT_ADAPTIVE_HIGH_FREQ_BIG resource opcode, value -->
-        <!-- WALT_ADAPTIVE_HIGH_FREQ_BIG resource opcode, value -->
-        <!-- WALT_ADAPTIVE_HIGH_FREQ_BIG resource opcode, value -->
-        <!-- WALT_ADAPTIVE_LOW_FREQ_BIG resource opcode, value -->
-        <!-- WALT_ADAPTIVE_LOW_FREQ_BIG resource opcode, value -->
-        <!-- WALT_ADAPTIVE_LOW_FREQ_BIG resource opcode, value -->
+        <!-- CPUBOOST_MIN_FREQ BIG CORE resource opcode, value -->
+        <!-- CPUBOOST_MIN_FREQ LITTLE Core resource opcode, value -->
+        <!-- CPUBOOST_MIN_FREQ PRIME CORE resource opcode, value -->
         <!-- SCHEDBOOST resource opcode, value-->
         <!-- LLCBW_MIN_FREQ resource opcode, value-->
         <!-- L3_MEMLAT_MIN_FREQ_GOLD resource opcode, value -->
         <!-- CPU_LLCC_BW_MAX_FREQ_V2 resource opcode, value-->
 
+        <Config
+             Id="0x00001087" Type="1" Enable="true" Timeout="0" Target="cliffs" Fps="120"
+             Resources="0x40800000, 1190, 0x40800100, 1113, 0x40800200, 1094, 0x40C00000, 2,
+                        0x4303C000, 0xA6428, 0x43480000, 0xC9900, 0x41848000, 0xE3C88" />
+
          <Config
-             Id="0x00001087" Type="1" Enable="true" Timeout="0" Target="cliffs" Fps="120, 144, 180, 240"
-             Resources="0x4080C000, 1920000, 0x4080C100, 1478000, 0x4080C200, 787000,
-                        0x40808000, 1497000, 0x40808100, 1017000, 0x40808200, 633000,
-                        0x40C00000, 2, 0x4303C000, 0xA6428, 0x43480000, 0x114900, 0x41848000, 0xE3C88" />
+             Id="0x00001087" Type="1" Enable="true" Timeout="0" Target="cliffs" Fps="144"
+             Resources="0x40800000, 1190, 0x40800100, 1113, 0x40800200, 1094, 0x40C00000, 2,
+                        0x4303C000, 0xA6428, 0x43480000, 0x114900, 0x41848000, 0xE3C88" />
 
     <!--PackageInstall boost-->
         <!-- SCHEDBOOST resource opcode, value-->
@@ -1061,26 +1030,26 @@
 
     <!-- PiCard Early Wakeup both GPU and Display -->
         <!-- 60, 90fps: CPUBOOST_MIN_FREQ LITTLE Core resource opcode, value-->
-        <!-- GPU DISABLE resource opcode, value-->
+        <!-- GPU_TOUCH_WAKEUP resource opcode, value-->
         <!-- DISPLAY EARLY WAKEUP opcode, value-->
         <Config
                 Id="0x00001098" Type="0" Enable="true" Target="pineapple" Timeout="2000" Fps="60"
-                Resources="0x40800100, 700, 0x4281C000, 25, 0x41C0C000, 0" />
+                Resources="0x40800100, 700, 0x42834000, 1, 0x41C0C000, 0" />
         <Config
                 Id="0x00001098" Type="0" Enable="true" Target="pineapple" Timeout="2000" Fps="90"
-                Resources="0x40800100, 700, 0x4281C000, 17, 0x41C0C000, 0" />
+                Resources="0x40800100, 700, 0x42834000, 1, 0x41C0C000, 0" />
         <Config
                 Id="0x00001098" Type="0" Enable="true" Target="pineapple" Timeout="2000" Fps="120"
-                Resources="0x4281C000, 13, 0x41C0C000, 0" />
+                Resources="0x42834000, 1, 0x41C0C000, 0" />
         <Config
                 Id="0x00001098" Type="0" Enable="true" Target="pineapple" Timeout="2000" Fps="144"
-                Resources="0x4281C000, 11, 0x41C0C000, 0" />
+                Resources="0x42834000, 1, 0x41C0C000, 0" />
         <Config
                 Id="0x00001098" Type="0" Enable="true" Target="pineapple" Timeout="2000" Fps="180"
-                Resources="0x4281C000, 9, 0x41C0C000, 0" />
+                Resources="0x42834000, 1, 0x41C0C000, 0" />
         <Config
                 Id="0x00001098" Type="0" Enable="true" Target="pineapple" Timeout="2000" Fps="240"
-                Resources="0x4281C000, 7, 0x41C0C000, 0" />
+                Resources="0x42834000, 1, 0x41C0C000, 0" />
 
         <!-- 60, 90fps: CPUBOOST_MIN_FREQ LITTLE Core resource opcode, value-->
         <!-- GPU TOUCH WAKEUP resource opcode, value-->
@@ -1094,25 +1063,25 @@
 
     <!-- PiCard Early Wakeup GPU only -->
         <!-- 60, 90fps: CPUBOOST_MIN_FREQ LITTLE Core resource opcode, value-->
-        <!-- GPU DISABLE resource opcode, value-->
+        <!-- GPU_TOUCH_WAKEUP resource opcode, value-->
         <Config
                 Id="0x00001099" Type="0" Enable="true" Target="pineapple" Timeout="2000" Fps="60"
-                Resources="0x40800100, 700, 0x4281C000, 25" />
+                Resources="0x40800100, 700, 0x42834000, 1" />
         <Config
                 Id="0x00001099" Type="0" Enable="true" Target="pineapple" Timeout="2000" Fps="90"
-                Resources="0x40800100, 700, 0x4281C000, 17" />
+                Resources="0x40800100, 700, 0x42834000, 1" />
         <Config
                 Id="0x00001099" Type="0" Enable="true" Target="pineapple" Timeout="2000" Fps="120"
-                Resources="0x4281C000, 13" />
+                Resources="0x42834000, 1" />
         <Config
                 Id="0x00001099" Type="0" Enable="true" Target="pineapple" Timeout="2000" Fps="144"
-                Resources="0x4281C000, 11" />
+                Resources="0x42834000, 1" />
         <Config
                 Id="0x00001099" Type="0" Enable="true" Target="pineapple" Timeout="2000" Fps="180"
-                Resources="0x4281C000, 9" />
+                Resources="0x42834000, 1" />
         <Config
                 Id="0x00001099" Type="0" Enable="true" Target="pineapple" Timeout="2000" Fps="240"
-                Resources="0x4281C000, 7" />
+                Resources="0x42834000, 1" />
 
         <!-- 60, 90fps: CPUBOOST_MIN_FREQ LITTLE Core resource opcode, value-->
         <!-- GPU TOUCH WAKEUP resource opcode, value-->
@@ -1344,71 +1313,85 @@
 
         <!-- Type 5 Light Scrolls : Horizontal and Verical -->
         <!-- SCHED_BOOST resource opcode, value-->
-        <!-- WALT_ADAPTIVE_HIGH_FREQ_BIG resource opcode, value -->
-        <!-- WALT_ADAPTIVE_LOW_FREQ_BIG resource opcode, value -->
-        <!-- SCHED_MIN_TASK_UTIL_FOR_COLOCATION resource opcode,  value-->
-        <!-- SCHED_MIN_TASK_UTIL_FOR_BOOST resource opcode, value-->
+        <!-- MIN_FREQ_CLUSTER_BIG_CORE_0 resource opcode, value-->
+        <!-- SCHED_MIN_TASK_UTIL_FOR_COLOCATION, value-->
+        <!-- SCHED_MIN_TASK_UTIL_FOR_BOOST, value-->
         <!-- CPU_LLCC_BW_MAX_FREQ_V2 resource opcode, value-->
         <Config
             Id="0x00001080" Type="5" Enable="true" Target="cliffs"
-            Resources="0x40C00000, 2, 0x4080C000, 1056000, 0x40808000, 633000, 0x40C78000, 0,
-            0x40C7C000, 0, 0x41848000, 0xE3C88" />
+            Resources="0x40C00000, 2, 0x40C78000, 0, 0x40C7C000, 0,
+            0x41848000, 0xE3C88" />
 
         <Config
-            Id="0x00001080" Type="5" Enable="true" Target="cliffs" Fps="120, 144, 180, 240"
-            Resources="0x40C00000, 2, 0x4080C000, 1190000, 0x40808000, 787000, 0x40C78000, 0,
-            0x40C7C000, 0, 0x41848000, 0xE3C88" />
+            Id="0x00001080" Type="5" Enable="true" Target="cliffs" Fps="90"
+            Resources="0x40C00000, 2, 0x40800000, 1497, 0x40C78000, 0, 0x40C7C000, 0,
+            0x41848000, 0xE3C88" />
+
+        <Config
+            Id="0x00001080" Type="5" Enable="true" Target="cliffs" Fps="120, 144, 180"
+            Resources="0x40C00000, 2, 0x40800000, 1708, 0x40C78000, 0, 0x40C7C000, 0,
+            0x41848000, 0xE3C88" />
 
         <!-- Type 6 Medium Scrolls : Horizontal and Verical -->
         <!-- LLCC_DDR_BW_MIN_FREQ_V2 resource opcode, value-->
-        <!-- WALT_ADAPTIVE_HIGH_FREQ_BIG resource opcode, value -->
-        <!-- WALT_ADAPTIVE_LOW_FREQ_BIG resource opcode, value -->
+        <!-- MIN_FREQ_CLUSTER_BIG_CORE_0 resource opcode, value-->
         <!-- SCHED_BOOST resource opcode, value-->
         <!-- MIN_ONLINE_CPU_CLUSTER_BIG resource opcode, value-->
         <!-- L3_MEMLAT_MIN_FREQ_GOLD resource opcode, value-->
-        <!-- SCHED_MIN_TASK_UTIL_FOR_COLOCATION resource opcode, value-->
-        <!-- SCHED_MIN_TASK_UTIL_FOR_BOOST resource opcode, value-->
-        <!-- SCHED_BUSY_HYSTERSIS_CPU_MASK resource opcode, value-->
+        <!-- SCHED_MIN_TASK_UTIL_FOR_COLOCATION, value-->
+        <!-- SCHED_MIN_TASK_UTIL_FOR_BOOST, value-->
+        <!-- SCHED_BUSY_HYSTERSIS_CPU_MASK, value-->
         <!-- LPM_BIAS_HYST resource opcode, value-->
         <!-- CORE_CTL_ENABLE_BIG resource opcode, value-->
         <!-- CPU_LLCC_BW_MAX_FREQ_V2 resource opcode, value-->
         <Config
             Id="0x00001080" Type="6" Enable="true" Target="cliffs"
-            Resources="0x4303C000, 0xA6428, 0x4080C000, 1497000, 0x40808000, 940000, 0x40C00000, 2,
+            Resources="0x4303C000, 0xA6428, 0x40800000, 1056, 0x40C00000, 2,
                        0x41000000, 3, 0x43480000, 0xC9900, 0x40C78000, 0, 0x40C7C000, 0,
                        0x40C74000, 0xF8, 0x40408000, 0x27, 0x41008000, 0, 0x41848000, 0xE3C88" />
 
         <Config
-            Id="0x00001080" Type="6" Enable="true" Target="cliffs" Fps="120, 144, 180, 240"
-            Resources="0x4303C000, 0xA6428, 0x4080C000, 1593000, 0x40808000, 1056000, 0x40C00000, 2,
+            Id="0x00001080" Type="6" Enable="true" Fps="90" Target="cliffs"
+            Resources="0x4303C000, 0xA6428, 0x40800000, 1593, 0x40C00000, 2,
+                       0x41000000, 3, 0x43480000, 0xC9900, 0x40C78000, 0, 0x40C7C000, 0,
+                       0x40C74000, 0xF8, 0x40408000, 0x27, 0x41008000, 0, 0x41848000, 0xE3C88" />
+
+        <Config
+            Id="0x00001080" Type="6" Enable="true" Fps="120, 144, 180" Target="cliffs"
+            Resources="0x4303C000, 0xA6428, 0x40800000, 1824, 0x40C00000, 2,
                        0x41000000, 3, 0x43480000, 0xC9900, 0x40C78000, 0, 0x40C7C000, 0,
                        0x40C74000, 0xF8, 0x40408000, 0x27, 0x41008000, 0, 0x41848000, 0xE3C88" />
 
         <!-- Type 7 Heavy Scrolls : Horizontal and Verical -->
         <!-- LLCC_DDR_BW_MIN_FREQ_V2 resource opcode, value-->
-        <!-- WALT_ADAPTIVE_HIGH_FREQ_BIG resource opcode, value -->
-        <!-- WALT_ADAPTIVE_LOW_FREQ_BIG resource opcode, value -->
+        <!-- MIN_FREQ_CLUSTER_BIG_CORE_0 resource opcode, value-->
         <!-- SCHED_BOOST resource opcode, value-->
         <!-- MIN_ONLINE_CPU_CLUSTER_BIG resource opcode, value-->
         <!-- L3_MEMLAT_MIN_FREQ_GOLD resource opcode, value-->
-        <!-- SCHED_MIN_TASK_UTIL_FOR_COLOCATION resource opcode, value-->
-        <!-- SCHED_MIN_TASK_UTIL_FOR_BOOST resource opcode, value-->
-        <!-- SCHED_BUSY_HYSTERSIS_CPU_MASK resource opcode, value-->
-        <!-- LPM_BIAS_HYST resource opcode resource opcode, value-->
+        <!-- SCHED_MIN_TASK_UTIL_FOR_COLOCATION, value-->
+        <!-- SCHED_MIN_TASK_UTIL_FOR_BOOST, value-->
+        <!-- SCHED_BUSY_HYSTERSIS_CPU_MASK, value-->
+        <!-- LPM_BIAS_HYST resource opcode, value-->
         <!-- CORE_CTL_ENABLE_BIG resource opcode, value-->
         <!-- CORE_CTL_ENABLE_PRIME  resource opcode, value-->
         <!-- CPU_LLCC_BW_MAX_FREQ_V2 resource opcode, value-->
         <!-- PID Affine opcode, value -->
         <Config
             Id="0x00001080" Type="7" Enable="true" Target="cliffs"
-            Resources="0x4303C000, 0xA6428, 0x4080C000, 1708000, 0x40808000, 1056000, 0x40C00000, 2,
+            Resources="0x4303C000, 0xA6428, 0x40800000, 1190, 0x40C00000, 2,
                        0x41000000, 3, 0x43480000, 0xC9900, 0x40C78000, 0, 0x40C7C000, 0,
                        0x40C74000, 0xF8, 0x40408000, 0x27, 0x41008000, 0, 0x41008200, 0,
                        0x41848000, 0xE3C88" />
 
         <Config
-            Id="0x00001080" Type="7" Enable="true" Target="cliffs" Fps="120, 144, 180, 240"
-            Resources="0x4303C000, 0xA6428, 0x4080C000, 1824000, 0x40808000, 787000, 0x40C00000, 2,
+            Id="0x00001080" Type="7" Enable="true" Target="cliffs" Fps="90"
+            Resources="0x4303C000, 0xA6428, 0x40800000, 1593, 0x40C00000, 2,
+                       0x41000000, 3, 0x43480000, 0xAAE60, 0x40C78000, 0, 0x40C7C000, 0,
+                       0x40C74000, 0xF8, 0x40408000, 0x27, 0x41008000, 0, 0x41008200, 0,
+                       0x41848000, 0xE3C88" />
+        <Config
+            Id="0x00001080" Type="7" Enable="true" Target="cliffs" Fps="120, 144, 180"
+            Resources="0x4303C000, 0xA6428, 0x40800000, 1824, 0x40C00000, 2,
                        0x41000000, 3, 0x43480000, 0xAAE60, 0x40C78000, 0, 0x40C7C000, 0,
                        0x40C74000, 0xF8, 0x40408000, 0x27, 0x41008000, 0, 0x41008200, 0,
                        0x41848000, 0xE3C88, 0x42C20000, 1" />
@@ -1536,25 +1519,28 @@
 
         <!-- Type 5 Light Pre-fling : Horizontal and Verical -->
         <!-- SCHED_BOOST resource opcode, value-->
+        <!-- MIN_FREQ_CLUSTER_BIG_CORE_0 resource opcode, value-->
         <!-- SCHED_MIN_TASK_UTIL_FOR_COLOCATION, value-->
-        <!-- WALT_ADAPTIVE_HIGH_FREQ_BIG resource opcode, value -->
-        <!-- WALT_ADAPTIVE_LOW_FREQ_BIG resource opcode, value -->
         <!-- SCHED_MIN_TASK_UTIL_FOR_BOOST, value-->
         <!-- CPU_LLCC_BW_MAX_FREQ_V2 resource opcode, value-->
         <Config
             Id="0x000010A6" Type="5" Enable="true" Timeout="100" Target="cliffs"
-            Resources="0x40C00000, 2, 0x4080C000, 1056000, 0x40808000, 633000, 0x40C78000, 0, 0x40C7C000, 0,
+            Resources="0x40C00000, 2, 0x40C78000, 0, 0x40C7C000, 0,
             0x41848000, 0xE3C88" />
 
         <Config
-            Id="0x000010A6" Type="5" Enable="true" Timeout="100" Target="cliffs" Fps="120, 144, 180, 240"
-            Resources="0x40C00000, 2, 0x4080C000, 1593000, 0x40808000, 1056000, 0x40C78000, 0, 0x40C7C000, 0,
+            Id="0x000010A6" Type="5" Enable="true" Timeout="100" Target="cliffs" Fps="90"
+            Resources="0x40C00000, 2, 0x40800000, 1497, 0x40C78000, 0, 0x40C7C000, 0,
+            0x41848000, 0xE3C88" />
+
+        <Config
+            Id="0x000010A6" Type="5" Enable="true" Timeout="100" Target="cliffs" Fps="120, 144, 180"
+            Resources="0x40C00000, 2, 0x40800000, 1708, 0x40C78000, 0, 0x40C7C000, 0,
             0x41848000, 0xE3C88" />
 
         <!-- Type 6 Medium Pre-fling : Horizontal and Verical -->
         <!-- LLCC_DDR_BW_MIN_FREQ_V2 resource opcode, value-->
-        <!-- WALT_ADAPTIVE_HIGH_FREQ_BIG resource opcode, value -->
-        <!-- WALT_ADAPTIVE_LOW_FREQ_BIG resource opcode, value -->
+        <!-- MIN_FREQ_CLUSTER_BIG_CORE_0 resource opcode, value-->
         <!-- SCHED_BOOST resource opcode, value-->
         <!-- MIN_ONLINE_CPU_CLUSTER_BIG resource opcode, value-->
         <!-- L3_MEMLAT_MIN_FREQ_GOLD resource opcode, value-->
@@ -1566,19 +1552,24 @@
         <!-- CPU_LLCC_BW_MAX_FREQ_V2 resource opcode, value-->
         <Config
             Id="0x000010A6" Type="6" Enable="true" Timeout="100" Target="cliffs"
-            Resources="0x4303C000, 0xA6428, 0x4080C000, 1497000, 0x40808000, 940000, 0x40C00000, 2,
+            Resources="0x4303C000, 0xA6428, 0x40800000, 1056, 0x40C00000, 2,
+                       0x41000000, 3, 0x43480000, 0xC9900, 0x40C78000, 0, 0x40C7C000, 0,
+                       0x40C74000, 0xF8, 0x40408000, 0x27, 0x41008000, 0, 0x41848000, 0xE3C88" />
+
+        <Config
+            Id="0x000010A6" Type="6" Enable="true" Timeout="100" Fps="90" Target="cliffs"
+            Resources="0x4303C000, 0xA6428, 0x40800000, 1593, 0x40C00000, 2,
                        0x41000000, 3, 0x43480000, 0xC9900, 0x40C78000, 0, 0x40C7C000, 0,
                        0x40C74000, 0xF8, 0x40408000, 0x27, 0x41008000, 0, 0x41848000, 0xE3C88" />
         <Config
-            Id="0x000010A6" Type="6" Enable="true" Timeout="100" Target="cliffs" Fps="120, 144, 180, 240"
-            Resources="0x4303C000, 0xA6428, 0x4080C000, 1593000, 0x40808000, 1056000, 0x40C00000, 2,
+            Id="0x000010A6" Type="6" Enable="true" Timeout="100" Fps="120, 144, 180" Target="cliffs"
+            Resources="0x4303C000, 0xA6428, 0x40800000, 1824, 0x40C00000, 2,
                        0x41000000, 3, 0x43480000, 0xC9900, 0x40C78000, 0, 0x40C7C000, 0,
                        0x40C74000, 0xF8, 0x40408000, 0x27, 0x41008000, 0, 0x41848000, 0xE3C88" />
 
         <!-- Type 7 Heavy Pre-fling : Horizontal and Verical -->
         <!-- LLCC_DDR_BW_MIN_FREQ_V2 resource opcode, value-->
-        <!-- WALT_ADAPTIVE_HIGH_FREQ_BIG resource opcode, value -->
-        <!-- WALT_ADAPTIVE_LOW_FREQ_BIG resource opcode, value -->
+        <!-- MIN_FREQ_CLUSTER_BIG_CORE_0 resource opcode, value-->
         <!-- SCHED_BOOST resource opcode, value-->
         <!-- MIN_ONLINE_CPU_CLUSTER_BIG resource opcode, value-->
         <!-- L3_MEMLAT_MIN_FREQ_GOLD resource opcode, value-->
@@ -1592,13 +1583,20 @@
         <!-- PID Affine opcode, value -->
         <Config
             Id="0x000010A6" Type="7" Enable="true" Timeout="100" Target="cliffs"
-            Resources="0x4303C000, 0xA6428, 0x4080C000, 1708000, 0x40808000, 1056000, 0x40C00000, 2,
+            Resources="0x4303C000, 0xA6428, 0x40800000, 1190, 0x40C00000, 2,
                        0x41000000, 3, 0x43480000, 0xC9900, 0x40C78000, 0, 0x40C7C000, 0,
                        0x40C74000, 0xF8, 0x40408000, 0x27, 0x41008000, 0, 0x41008200, 0,
                        0x41848000, 0xE3C88" />
+
         <Config
-            Id="0x000010A6" Type="7" Enable="true" Timeout="100" Target="cliffs" Fps="120, 144, 180, 240"
-            Resources="0x4303C000, 0xA6428, 0x4080C000, 1824000, 0x40808000, 787000, 0x40C00000, 2,
+            Id="0x000010A6" Type="7" Enable="true" Timeout="100" Target="cliffs" Fps="90"
+            Resources="0x4303C000, 0xA6428, 0x40800000, 1593, 0x40C00000, 2,
+                       0x41000000, 3, 0x43480000, 0xAAE60, 0x40C78000, 0, 0x40C7C000, 0,
+                       0x40C74000, 0xF8, 0x40408000, 0x27, 0x41008000, 0, 0x41008200, 0,
+                       0x41848000, 0xE3C88" />
+        <Config
+            Id="0x000010A6" Type="7" Enable="true" Timeout="100" Target="cliffs" Fps="120, 144, 180"
+            Resources="0x4303C000, 0xA6428, 0x40800000, 1824, 0x40C00000, 2,
                        0x41000000, 3, 0x43480000, 0xAAE60, 0x40C78000, 0, 0x40C7C000, 0,
                        0x40C74000, 0xF8, 0x40408000, 0x27, 0x41008000, 0, 0x41008200, 0,
                        0x41848000, 0xE3C88, 0x42C20000, 1" />
@@ -1795,54 +1793,46 @@
         <!-- MPCTLV3_SCHED_MIN_TASK_UTIL_FOR_COLOCATION, value -->
         <!-- MPCTLV3_SCHED_MIN_TASK_UTIL_FOR_BOOST, value -->
         <!-- MPCTLV3_SCHED_BOOST, value -->
-        <!-- WALT_ADAPTIVE_HIGH_FREQ_BIG resource opcode, value -->
-        <!-- WALT_ADAPTIVE_HIGH_FREQ_LITTLE resource opcode, value -->
-        <!-- WALT_ADAPTIVE_HIGH_FREQ_PRIME resource opcode, value -->
-        <!-- WALT_ADAPTIVE_LOW_FREQ_BIG resource opcode, value -->
-        <!-- WALT_ADAPTIVE_LOW_FREQ_LITTLE resource opcode, value -->
-        <!-- WALT_ADAPTIVE_LOW_FREQ_PRIME resource opcode, value -->
+        <!-- CPUBOOST_MIN_FREQ BIG CORE resource opcode, value -->
+        <!-- CPUBOOST_MIN_FREQ LITTLE Core resource opcode, value -->
+        <!-- CPUBOOST_MIN_FREQ PRIME CORE resource opcode, value -->
         <!-- Type 6 Medium Drags: -->
         <Config
             Id="0x00001087" Type="6" Enable="true" Timeout="0" Target="cliffs"
             Resources="0x40C78000, 0, 0x40C7C000, 0, 0x40C00000, 2,
-                       0x4080C000, 1056000, 0x4080C100, 902000, 0x4080C200, 787000,
-                       0x40808000, 633000, 0x40808100, 787000, 0x40808200, 633000" />
+                       0x40800000, 787, 0x40800100, 787, 0x40800200, 787" />
         <Config
-            Id="0x00001087" Type="6" Enable="true" Timeout="0" Target="cliffs" Fps="120, 144, 180, 240"
+            Id="0x00001087" Type="6" Enable="true" Timeout="0" Target="cliffs" Fps="120,144"
             Resources="0x40C78000, 0, 0x40C7C000, 0, 0x40C00000, 2,
-                       0x4080C000, 1190000, 0x4080C100, 902000, 0x4080C200, 787000,
-                       0x40808000, 940000, 0x40808100, 787000, 0x40808200, 633000" />
+                       0x40800000, 940, 0x40800100, 902, 0x40800200, 960" />
 
-        <!-- WALT_ADAPTIVE_HIGH_FREQ_BIG resource opcode, value -->
-        <!-- WALT_ADAPTIVE_HIGH_FREQ_LITTLE resource opcode, value -->
-        <!-- WALT_ADAPTIVE_HIGH_FREQ_PRIME resource opcode, value -->
-        <!-- WALT_ADAPTIVE_LOW_FREQ_BIG resource opcode, value -->
-        <!-- WALT_ADAPTIVE_LOW_FREQ_LITTLE resource opcode, value -->
-        <!-- WALT_ADAPTIVE_LOW_FREQ_PRIME resource opcode, value -->
+        <!-- CPUBOOST_MIN_FREQ BIG CORE resource opcode, value -->
+        <!-- CPUBOOST_MIN_FREQ LITTLE Core resource opcode, value -->
+        <!-- CPUBOOST_MIN_FREQ PRIME CORE resource opcode, value -->
         <!-- CPU_LLCC_BW_MAX_FREQ_V2 resource opcode, value-->
         <!-- Type=7 Heavy Drags -->
         <Config
              Id="0x00001087" Type="7" Enable="true" Timeout="0" Target="cliffs"
-             Resources="0x4080C000, 1401000, 0x4080C100, 1228000, 0x4080C200, 787000,
-                        0x40808000, 1190000, 0x40808100, 902000, 0x40808200, 633000,
+             Resources="0x40800000, 1056, 0x40800100, 1017, 0x40800200, 1094,
                         0x41848000, 0xE3C88" />
 
-        <!-- WALT_ADAPTIVE_HIGH_FREQ_BIG resource opcode, value -->
-        <!-- WALT_ADAPTIVE_HIGH_FREQ_LITTLE resource opcode, value -->
-        <!-- WALT_ADAPTIVE_HIGH_FREQ_PRIME resource opcode, value -->
-        <!-- WALT_ADAPTIVE_LOW_FREQ_BIG resource opcode, value -->
-        <!-- WALT_ADAPTIVE_LOW_FREQ_LITTLE resource opcode, value -->
-        <!-- WALT_ADAPTIVE_LOW_FREQ_PRIME resource opcode, value -->
+        <!-- CPUBOOST_MIN_FREQ BIG CORE resource opcode, value -->
+        <!-- CPUBOOST_MIN_FREQ LITTLE Core resource opcode, value -->
+        <!-- CPUBOOST_MIN_FREQ PRIME CORE resource opcode, value -->
         <!-- SCHEDBOOST resource opcode, value-->
         <!-- LLCBW_MIN_FREQ resource opcode, value-->
         <!-- L3_MEMLAT_MIN_FREQ_GOLD resource opcode, value -->
         <!-- CPU_LLCC_BW_MAX_FREQ_V2 resource opcode, value-->
         <!-- Type=7 Heavy Drags -->
         <Config
-             Id="0x00001087" Type="7" Enable="true" Timeout="0" Target="cliffs" Fps="120, 144, 180, 240"
-             Resources="0x4080C000, 1920000, 0x4080C100, 1478000, 0x4080C200, 787000,
-                        0x40808000, 1497000, 0x40808100, 1017000, 0x40808200, 633000, 0x40C00000, 2,
-                        0x4303C000, 0xA6428, 0x43480000, 0x114900, 0x41848000, 0xE3C88"/>
+             Id="0x00001087" Type="7" Enable="true" Timeout="0" Target="cliffs" Fps="120"
+             Resources="0x40800000, 1190, 0x40800100, 1017, 0x40800200, 1094, 0x40C00000, 2,
+                        0x4303C000, 0xA6428, 0x43480000, 0xC9900, 0x41848000, 0xE3C88" />
+
+         <Config
+             Id="0x00001087" Type="7" Enable="true" Timeout="0" Target="cliffs" Fps="144"
+             Resources="0x40800000, 1190, 0x40800100, 1113, 0x40800200, 1209, 0x40C00000, 2,
+                        0x4303C000, 0xA6428, 0x43480000, 0x114900, 0x41848000, 0xE3C88" />
 
     </PerfBoost>
 </BoostConfigs>
