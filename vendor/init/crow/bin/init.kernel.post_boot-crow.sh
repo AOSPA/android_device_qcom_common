@@ -54,11 +54,11 @@ case "$variant" in
 	"4_3_1")
 	/vendor/bin/sh /vendor/bin/init.kernel.post_boot-crow_default_4_3_1.sh
 	;;
-	"4_2_1")
-	/vendor/bin/sh /vendor/bin/init.kernel.post_boot-crow_4_2_1.sh
+	"2_1_1")
+	/vendor/bin/sh /vendor/bin/init.kernel.post_boot-crow_2_1_1.sh
 	;;
-	"4_3_0")
-	/vendor/bin/sh /vendor/bin/init.kernel.post_boot-crow_4_3_0.sh
+	"3_2_0")
+	/vendor/bin/sh /vendor/bin/init.kernel.post_boot-crow_3_2_0.sh
 	;;
 	*)
 	echo "***WARNING***: Postboot script not present for the variant ${variant}"

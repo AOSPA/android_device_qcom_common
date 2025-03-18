@@ -1,5 +1,5 @@
 #=============================================================================
-# Copyright (c) 2019-2023 Qualcomm Technologies, Inc.
+# Copyright (c) 2019-2024 Qualcomm Technologies, Inc.
 # All Rights Reserved.
 # Confidential and Proprietary - Qualcomm Technologies, Inc.
 #
@@ -154,7 +154,7 @@ if [ -f /sys/devices/soc0/soc_id ]; then
 fi
 
 case "$platformid" in
-	"608")
+	"608"|"644"|"687")
 		#Pass as an argument the max number of clusters supported on the SOC
 		/vendor/bin/sh /vendor/bin/init.kernel.post_boot-crow.sh 3
 		;;

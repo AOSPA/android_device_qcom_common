@@ -1,4 +1,4 @@
-# Copyright (c) 2020-2022 Qualcomm Technologies, Inc.
+# Copyright (c) 2020-2024 Qualcomm Technologies, Inc.
 # All Rights Reserved.
 # Confidential and Proprietary - Qualcomm Technologies, Inc.
 #
@@ -240,8 +240,17 @@ echo 4 > /sys/devices/system/cpu/cpu4/core_ctl/task_thres
 #echo 1 > /sys/devices/system/cpu/cpu7/core_ctl/nr_prev_assist_thresh
 
 # Setting b.L scheduler parameters
-echo 65 > /proc/sys/walt/sched_downmigrate
-echo 71 > /proc/sys/walt/sched_upmigrate
+case "$soc_id" in
+	"518" | "561" | "585")
+		echo 65 > /proc/sys/walt/sched_downmigrate
+		echo 71 > /proc/sys/walt/sched_upmigrate
+		;;
+	"417" | "420" | "444" | "445")
+		echo 67 > /proc/sys/walt/sched_downmigrate
+		echo 77 > /proc/sys/walt/sched_upmigrate
+		;;
+esac
+
 echo 100 > /proc/sys/walt/sched_group_upmigrate
 echo 85 > /proc/sys/walt/sched_group_downmigrate
 echo 1 > /proc/sys/walt/sched_walt_rotate_big_tasks
@@ -287,26 +296,52 @@ echo 0 > /proc/sys/kernel/sched_util_clamp_min_rt_default
 echo "walt" > /sys/devices/system/cpu/cpufreq/policy0/scaling_governor
 echo 0 > /sys/devices/system/cpu/cpufreq/policy0/walt/down_rate_limit_us
 echo 0 > /sys/devices/system/cpu/cpufreq/policy0/walt/up_rate_limit_us
-echo 1516800 > /sys/devices/system/cpu/cpufreq/policy0/walt/hispeed_freq
-echo 691200 > /sys/devices/system/cpu/cpufreq/policy0/scaling_min_freq
+case "$soc_id" in
+	"518" | "561" | "585")
+		echo 1516800 > /sys/devices/system/cpu/cpufreq/policy0/walt/hispeed_freq
+		echo 691200 > /sys/devices/system/cpu/cpufreq/policy0/scaling_min_freq
+		;;
+	"417" | "420" | "444" | "445")
+		echo 1305600 > /sys/devices/system/cpu/cpufreq/policy0/walt/hispeed_freq
+		echo 614400 > /sys/devices/system/cpu/cpufreq/policy0/scaling_min_freq
+		;;
+esac
 echo 1 > /sys/devices/system/cpu/cpufreq/policy0/walt/pl
 echo 0 > /sys/devices/system/cpu/cpufreq/policy0/walt/rtg_boost_freq
 
 # configure input boost settings
-echo 1190000 0 0 0 0 0 0 0 > /proc/sys/walt/input_boost/input_boost_freq
+case "$soc_id" in
+        "518" | "561" | "585")
+		echo 1190000 0 0 0 0 0 0 0 > /proc/sys/walt/input_boost/input_boost_freq
+		;;
+	"417" | "420" | "444" | "445")
+		echo 1017600 0 0 0 0 0 0 0 > /proc/sys/walt/input_boost/input_boost_freq
+		;;
+esac
 echo 80 > /proc/sys/walt/input_boost/input_boost_ms
 
 # configure governor settings for gold cluster
 echo "walt" > /sys/devices/system/cpu/cpufreq/policy4/scaling_governor
 echo 0 > /sys/devices/system/cpu/cpufreq/policy4/walt/down_rate_limit_us
 echo 0 > /sys/devices/system/cpu/cpufreq/policy4/walt/up_rate_limit_us
-echo 1344000 > /sys/devices/system/cpu/cpufreq/policy4/walt/hispeed_freq
+case "$soc_id" in
+        "518" | "561" | "585")
+		echo 1344000 > /sys/devices/system/cpu/cpufreq/policy4/walt/hispeed_freq
+		;;
+	"417" | "420" | "444" | "445")
+		echo 1401600 > /sys/devices/system/cpu/cpufreq/policy4/walt/hispeed_freq
+		;;
+esac
 echo 1056000 > /sys/devices/system/cpu/cpufreq/policy4/scaling_min_freq
 echo 1 > /sys/devices/system/cpu/cpufreq/policy4/walt/pl
 echo 0 > /sys/devices/system/cpu/cpufreq/policy4/walt/rtg_boost_freq
 
 # configure bus-dcvs
 bus_dcvs="/sys/devices/system/cpu/bus_dcvs"
+
+ddr_type=`od -An -tx /proc/device-tree/memory/ddr_device_type`
+ddr_type4="07"
+ddr_type3="05"
 
 for device in $bus_dcvs/*
 do
@@ -315,9 +350,24 @@ done
 
 for ddrbw in $bus_dcvs/DDR/*bwmon-ddr
 do
-	echo "762 2086 2929 3879 5931 6881 7980" > $ddrbw/mbps_zones
+	case "$soc_id" in
+        "518" | "561" | "585")
+		echo "762 2086 2929 3879 5931 6881 7980" > $ddrbw/mbps_zones
+		;;
+	"417" | "420" | "444" | "445")
+		if [ ${ddr_type:4:2} == $ddr_type4 ]; then
+		# LPDDR4
+			echo "2288 3440 4173 5195 5859 7759 10322 11863 13763" > $ddrbw/mbps_zones
+			echo 85 > $ddrbw/io_percent
+		fi
+		if [ ${ddr_type:4:2} == $ddr_type3 ]; then
+		# LPDDR3
+			echo "1525 3440 5195 5859 7102" > $ddrbw/mbps_zones
+			echo 34 > $ddrbw/io_percent
+		fi
+		;;
+	esac
 	echo 4 > $ddrbw/sample_ms
-	echo 85 > $ddrbw/io_percent
 	echo 20 > $ddrbw/hist_memory
 	echo 0 > $ddrbw/hyst_length
 	echo 80 > $ddrbw/down_thres

@@ -164,7 +164,7 @@ if [ -f /sys/devices/soc0/soc_id ]; then
 fi
 
 case "$platformid" in
-	"519"|"536"|"600"|"601"|"603"|"604")
+	"519"|"536"|"600"|"601"|"603"|"604"|"668"|"688")
 		#Pass as an argument the max number of clusters supported on the SOC
 		/vendor/bin/sh /vendor/bin/init.kernel.post_boot-kalama.sh 3
 		;;

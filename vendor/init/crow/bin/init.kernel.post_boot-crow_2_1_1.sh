@@ -1,5 +1,5 @@
 #=============================================================================
-# Copyright (c) 2023 Qualcomm Technologies, Inc.
+# Copyright (c) 2023-2024 Qualcomm Technologies, Inc.
 # All Rights Reserved.
 # Confidential and Proprietary - Qualcomm Technologies, Inc.
 #=============================================================================
@@ -15,10 +15,10 @@ ddr_type5="08"
 echo 0 > /sys/devices/system/cpu/cpu0/core_ctl/enable
 
 # Disable Core control on gold
-echo 0 > /sys/devices/system/cpu/cpu4/core_ctl/enable
+echo 0 > /sys/devices/system/cpu/cpu2/core_ctl/enable
 
 # Disable Core control on gold+
-echo 0 > /sys/devices/system/cpu/cpu6/core_ctl/enable
+echo 0 > /sys/devices/system/cpu/cpu3/core_ctl/enable
 
 # Setting b.L scheduler parameters
 echo 65 85 > /proc/sys/walt/sched_downmigrate
@@ -28,12 +28,12 @@ echo 100 > /proc/sys/walt/sched_group_upmigrate
 echo 1 > /proc/sys/walt/sched_walt_rotate_big_tasks
 echo 0 > /proc/sys/walt/sched_coloc_busy_hysteresis_enable_cpus
 echo 255 > /proc/sys/walt/sched_util_busy_hysteresis_enable_cpus
-echo 8500000 8500000 8500000 8500000 5000000 5000000 2000000 > /proc/sys/walt/sched_util_busy_hyst_cpu_ns
-echo 1 1 1 1 15 15 15 > /proc/sys/walt/sched_util_busy_hyst_cpu_util
+echo 8500000 8500000 5000000 2000000 > /proc/sys/walt/sched_util_busy_hyst_cpu_ns
+echo 1 1 15 15 > /proc/sys/walt/sched_util_busy_hyst_cpu_util
 
 # cpuset parameters
-echo 0-3 > /dev/cpuset/background/cpus
-echo 0-3 > /dev/cpuset/system-background/cpus
+echo 0-1 > /dev/cpuset/background/cpus
+echo 0-1 > /dev/cpuset/system-background/cpus
 
 # Turn off scheduler boost at the end
 echo 0 > /proc/sys/walt/sched_boost
@@ -50,30 +50,30 @@ echo 614400 > /sys/devices/system/cpu/cpufreq/policy0/scaling_min_freq
 echo 0 > /sys/devices/system/cpu/cpufreq/policy0/walt/pl
 
 # configure input boost settings
-echo 1075200 0 0 0 0 0 0 > /proc/sys/walt/input_boost/input_boost_freq
+echo 1075200 0 0 0 > /proc/sys/walt/input_boost/input_boost_freq
 echo 120 > /proc/sys/walt/input_boost/input_boost_ms
 
 # configure governor settings for gold cluster
-echo "walt" > /sys/devices/system/cpu/cpufreq/policy4/scaling_governor
-echo 0 > /sys/devices/system/cpu/cpufreq/policy4/walt/down_rate_limit_us
-echo 0 > /sys/devices/system/cpu/cpufreq/policy4/walt/up_rate_limit_us
-echo 1113600 > /sys/devices/system/cpu/cpufreq/policy4/walt/hispeed_freq
-echo 652800 > /sys/devices/system/cpu/cpufreq/policy4/scaling_min_freq
-echo 85 > /sys/devices/system/cpu/cpufreq/policy4/walt/hispeed_load
-echo -6 > /sys/devices/system/cpu/cpufreq/policy4/walt/boost
-echo 0 > /sys/devices/system/cpu/cpufreq/policy4/walt/rtg_boost_freq
-echo 0 > /sys/devices/system/cpu/cpufreq/policy4/walt/pl
+echo "walt" > /sys/devices/system/cpu/cpufreq/policy2/scaling_governor
+echo 0 > /sys/devices/system/cpu/cpufreq/policy2/walt/down_rate_limit_us
+echo 0 > /sys/devices/system/cpu/cpufreq/policy2/walt/up_rate_limit_us
+echo 1113600 > /sys/devices/system/cpu/cpufreq/policy2/walt/hispeed_freq
+echo 652800 > /sys/devices/system/cpu/cpufreq/policy2/scaling_min_freq
+echo 85 > /sys/devices/system/cpu/cpufreq/policy2/walt/hispeed_load
+echo -6 > /sys/devices/system/cpu/cpufreq/policy2/walt/boost
+echo 0 > /sys/devices/system/cpu/cpufreq/policy2/walt/rtg_boost_freq
+echo 0 > /sys/devices/system/cpu/cpufreq/policy2/walt/pl
 
 # configure governor settings for gold+ cluster
-echo "walt" > /sys/devices/system/cpu/cpufreq/policy6/scaling_governor
-echo 0 > /sys/devices/system/cpu/cpufreq/policy6/walt/down_rate_limit_us
-echo 0 > /sys/devices/system/cpu/cpufreq/policy6/walt/up_rate_limit_us
-echo 1401600 > /sys/devices/system/cpu/cpufreq/policy6/walt/hispeed_freq
-echo 652800 > /sys/devices/system/cpu/cpufreq/policy6/scaling_min_freq
-echo 85 > /sys/devices/system/cpu/cpufreq/policy6/walt/hispeed_load
-echo -6 > /sys/devices/system/cpu/cpufreq/policy6/walt/boost
-echo 0 > /sys/devices/system/cpu/cpufreq/policy6/walt/rtg_boost_freq
-echo 0 > /sys/devices/system/cpu/cpufreq/policy6/walt/pl
+echo "walt" > /sys/devices/system/cpu/cpufreq/policy3/scaling_governor
+echo 0 > /sys/devices/system/cpu/cpufreq/policy3/walt/down_rate_limit_us
+echo 0 > /sys/devices/system/cpu/cpufreq/policy3/walt/up_rate_limit_us
+echo 1401600 > /sys/devices/system/cpu/cpufreq/policy3/walt/hispeed_freq
+echo 652800 > /sys/devices/system/cpu/cpufreq/policy3/scaling_min_freq
+echo 85 > /sys/devices/system/cpu/cpufreq/policy3/walt/hispeed_load
+echo -6 > /sys/devices/system/cpu/cpufreq/policy3/walt/boost
+echo 0 > /sys/devices/system/cpu/cpufreq/policy3/walt/rtg_boost_freq
+echo 0 > /sys/devices/system/cpu/cpufreq/policy3/walt/pl
 
 # colocation V3 settings
 echo 614400 > /sys/devices/system/cpu/cpufreq/policy0/walt/rtg_boost_freq
@@ -196,9 +196,5 @@ case "$console_config" in
 		echo "Enable console config to $console_config"
 	;;
 esac
-
-
-
-
 
 setprop vendor.post_boot.parsed 1

@@ -1,5 +1,5 @@
 #=============================================================================
-# Copyright (c) 2020-2022 Qualcomm Technologies, Inc.
+# Copyright (c) 2020-2024 Qualcomm Technologies, Inc.
 # All Rights Reserved.
 # Confidential and Proprietary - Qualcomm Technologies, Inc.
 #
@@ -35,10 +35,10 @@ if [ -f /sys/devices/soc0/soc_id ]; then
 fi
 
 case "$platformid" in
-	"518" | "561" | "585")
+	"518" | "561" | "585" | "417" | "420" | "444" | "445")
 		/vendor/bin/sh /vendor/bin/init.kernel.post_boot-bengal.sh
 		;;
-	"586")
+	"586" | "473" | "474")
 		/vendor/bin/sh /vendor/bin/init.kernel.post_boot-bengal-iot.sh
 		;;
 	*)

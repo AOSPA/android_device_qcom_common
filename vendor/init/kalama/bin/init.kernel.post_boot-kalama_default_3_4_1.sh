@@ -277,4 +277,7 @@ case "$console_config" in
 	;;
 esac
 
+#set uclamp.min for top-app cgroup for VPT usecase
+echo 20 > /dev/cpuctl/top-app/cpu.uclamp.min
+
 setprop vendor.post_boot.parsed 1
