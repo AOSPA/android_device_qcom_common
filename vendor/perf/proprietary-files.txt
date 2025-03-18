@@ -1,5 +1,5 @@
-# IRQBalance from LA.VENDOR.13.2.6.r1-01200-KAILUA.0
-vendor/bin/msm_irqbalance|057fba01bad6fa18877315ad1f0dc647c85c62e6
+# IRQBalance from LA.VENDOR.13.2.6.r1-02200-KAILUA.0
+vendor/bin/msm_irqbalance|e9bb0e6659ae494e03627bb9c11301e483dedeac
 
 vendor/bin/hw/vendor.qti.hardware.iop@2.0-service
 vendor/bin/hw/vendor.qti.hardware.perf2-hal-service
