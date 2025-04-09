@@ -25,3 +25,7 @@
 /(vendor|system/vendor)/bin/hw/vendor\.qti\.esepowermanager@1\.1-service           u:object_r:vendor_hal_esepowermanager_qti_exec:s0
 /vendor/lib(64)?/vendor.qti.qspmhal@1.0\.so  u:object_r:same_process_hal_file:s0
 /(vendor|system/vendor)/bin/hw/vendor\.qti\.hardware\.AGMIPC@1\.0-service          u:object_r:vendor_agmservice_qti_exec:s0
+
+/(vendor|system/vendor)/bin/dpmQmiMgr                                              u:object_r:vendor_hal_dpmQmiMgr_exec:s0
+/(vendor|system/vendor)/bin/blpsvc                                                 u:object_r:vendor_location_blp_svc_exec:s0
+/(vendor|system/vendor)/bin/blpctl                                                 u:object_r:vendor_location_blp_svc_exec:s0

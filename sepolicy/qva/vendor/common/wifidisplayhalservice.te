@@ -8,3 +8,6 @@ allow vendor_wifidisplayhalservice_qti tee_device:chr_file rw_file_perms;
 allow vendor_wifidisplayhalservice_qti ion_device:chr_file r_file_perms;
 
 allow vendor_wifidisplayhalservice_qti vendor_dmabuf_qseecom_ta_heap_device:chr_file r_file_perms;
+
+# Add hwservice related rules
+hal_attribute_hwservice(vendor_wifidisplayhalservice, vendor_wifidisplayhalservice_hwservice)

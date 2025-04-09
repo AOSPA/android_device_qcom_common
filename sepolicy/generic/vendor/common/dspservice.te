@@ -1,0 +1,2 @@
+# Add dspservice to hwservice_manager and allow it to be discovered
+hal_attribute_hwservice(vendor_hal_dspmanager, vendor_hal_dspmanager_hwservice)
