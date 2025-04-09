@@ -61,3 +61,12 @@
 /data/vendor/netmgr(/.*)?              u:object_r:vendor_nicm_data_file:s0
 /data/vendor/netmgr/recovery(/.*)?     u:object_r:vendor_nicm_data_file:s0
 /data/vendor/qnicornd(/.*)?            u:object_r:vendor_nicm_data_file:s0
+
+# Raw HID Device
+/dev/hidraw[0-9]*                  u:object_r:vendor_hidraw_device:s0
+
+/(vendor|system/vendor)/bin/hw/android\.hardware\.audio(@2\.0-|\.)service_64  u:object_r:hal_audio_default_exec:s0
+/dev/dri/card[0-9]                              u:object_r:graphics_device:s0
+
+#Gfx
+/(vendor|system/vendor)/bin/init\.qti\.graphics\.sh  u:object_r:vendor_qti_graphics_boot_exec:s0

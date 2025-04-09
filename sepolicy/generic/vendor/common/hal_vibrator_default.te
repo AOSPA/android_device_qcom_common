@@ -1,0 +1,2 @@
+# default permissions for qc_aon_node
+get_prop(hal_vibrator_default, vendor_qc_aon_prop)
