@@ -5,3 +5,12 @@ vendor.qti.hardware.sensorscalibrate::ISensorsCalibrate      u:object_r:vendor_h
 vendor.qti.esepowermanager::IEsePowerManager                 u:object_r:vendor_hal_esepowermanager_hwservice:s0
 vendor.qti.hardware.qseecom::IQSEECom                        u:object_r:vendor_hal_qseecom_hwservice:s0
 vendor.qti.hardware.qccvndhal::IQccvndhal                     u:object_r:vendor_hal_qccvndhal_hwservice:s0
+com.qualcomm.qti.wifidisplayhal::IHDCPSession                u:object_r:vendor_wifidisplayhalservice_hwservice:s0
+vendor.qti.hardware.iop::IIop                                u:object_r:vendor_hal_iop_hwservice:s0
+com.qualcomm.qti.wifidisplayhal::IDSManager                  u:object_r:vendor_wifidisplayhalservice_hwservice:s0
+vendor.qti.hardware.audiohalext::IAudioHalExt                u:object_r:hal_audio_hwservice:s0
+com.qualcomm.qti.imscmservice::IImsCmService                 u:object_r:vendor_hal_imsrcsd_hwservice:s0
+vendor.qti.hardware.wifidisplaysession::IWifiDisplaySession  u:object_r:vendor_wifidisplayhalservice_hwservice:s0
+vendor.qti.hardware.wifidisplaysession::IWifiDisplaySessionVideoTrack    u:object_r:vendor_wifidisplayhalservice_hwservice:s0
+vendor.qti.hardware.wifidisplaysession::IWifiDisplaySessionAudioTrack    u:object_r:vendor_wifidisplayhalservice_hwservice:s0
+vendor.qti.hardware.wifidisplaysession::IWifiDisplaySessionImageTrack    u:object_r:vendor_wifidisplayhalservice_hwservice:s0

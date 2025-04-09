@@ -3,3 +3,7 @@ type vendor_hal_iwlan_hwservice, hwservice_manager_type, protected_hwservice;
 type vendor_hal_display_color_hwservice, hwservice_manager_type, protected_hwservice;
 type vendor_hal_display_postproc_hwservice, hwservice_manager_type, protected_hwservice;
 type vendor_hal_embmssl_hwservice, hwservice_manager_type, protected_hwservice;
+type vendor_hal_imsrcsd_hwservice, hwservice_manager_type, protected_hwservice;
+type vendor_hal_imsrtp_hwservice, hwservice_manager_type, protected_hwservice;
+type vendor_hal_imscallinfo_hwservice, hwservice_manager_type, protected_hwservice;
+type vendor_hal_dspmanager_hwservice, hwservice_manager_type;

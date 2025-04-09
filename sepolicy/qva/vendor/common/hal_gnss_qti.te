@@ -1,1 +1,3 @@
 allow vendor_hal_gnss_qti vendor_location_xtwifi_inetagent:unix_dgram_socket sendto;
+allow vendor_hal_gnss_qti vendor_location_blp_svc:unix_dgram_socket sendto;
+hal_client_domain(vendor_hal_gnss_qti, vendor_hal_qms_qti);

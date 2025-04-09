@@ -4,3 +4,5 @@ type vendor_hal_sensorscalibrate_qti_hwservice , hwservice_manager_type, protect
 type vendor_hal_esepowermanager_hwservice, hwservice_manager_type, protected_hwservice;
 type vendor_hal_qseecom_hwservice, hwservice_manager_type, protected_hwservice;
 type vendor_hal_qccvndhal_hwservice , hwservice_manager_type, protected_hwservice;
+type vendor_wifidisplayhalservice_hwservice , hwservice_manager_type, protected_hwservice;
+type vendor_hal_imsfactory_hwservice, hwservice_manager_type, protected_hwservice;

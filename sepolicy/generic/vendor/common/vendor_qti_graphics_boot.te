@@ -1,0 +1,11 @@
+# Copyright (c) 2023 Qualcomm Innovation Center, Inc. All rights reserved.
+# SPDX-License-Identifier: BSD-3-Clause-Clear
+
+type vendor_qti_graphics_boot, domain;
+type vendor_qti_graphics_boot_exec, exec_type, vendor_file_type, file_type;
+
+init_daemon_domain(vendor_qti_graphics_boot)
+
+#============= qti_graphics_boot ==============
+set_prop(vendor_qti_graphics_boot, vendor_display_prop)
+allow vendor_qti_graphics_boot vendor_toolbox_exec:file rx_file_perms;
