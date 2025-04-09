@@ -2,3 +2,6 @@
 vendor_internal_prop(vendor_data_ko_prop);
 
 vendor_internal_prop(vendor_nfc_prop)
+
+#AON
+vendor_internal_prop(vendor_qc_aon_prop);

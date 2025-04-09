@@ -1,2 +1,12 @@
 # send to /dev/socket/location/ - mq/inet-agent-tdp-dl, mq/inet-agent-cs etc
 allow vendor_location_xtwifi_client vendor_location_xtwifi_inetagent:unix_dgram_socket sendto;
+
+allow vendor_location_xtwifi_client vendor_location_blp_svc:unix_dgram_socket sendto;
+allow vendor_location_xtwifi_client self:capability2 wake_alarm;
+
+# access to /persist/hlos_rfs/shared
+allow vendor_location_xtwifi_client vendor_persist_rfs_shared_hlos_file:dir r_dir_perms;
+allow vendor_location_xtwifi_client vendor_persist_rfs_shared_hlos_file:file rw_file_perms;
+
+# allows xtwifi-client to access qdata
+hal_client_domain(vendor_location_xtwifi_client, vendor_hal_qms_qti)

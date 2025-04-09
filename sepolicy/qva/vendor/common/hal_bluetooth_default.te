@@ -1,0 +1,2 @@
+# for Xpan Provider Service
+hal_attribute_service(hal_bluetooth, vendor_hal_xpanprovider_service)

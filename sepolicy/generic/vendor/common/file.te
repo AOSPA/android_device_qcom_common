@@ -5,3 +5,5 @@ type vendor_pm_data_file, file_type, data_file_type;
 
 # lifetime_write_kbytes from kernel
 type vendor_sysfs_fs_ext4, fs_type, sysfs_type;
+
+type vendor_sysfs_sd, fs_type, sysfs_type;
