@@ -5,4 +5,4 @@ allow vendor_location_lowi_server vendor_location_xtwifi_inetagent:unix_dgram_so
 
 hal_client_domain(vendor_location_lowi_server, vendor_hal_qms_qti);
 
-binder_use(vendor_location_lowi_server);
+init_daemon_domain(vendor_location_lowi_server)

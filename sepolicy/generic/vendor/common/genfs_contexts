@@ -15,3 +15,5 @@ genfscon sysfs /kernel/camera/num_ifes u:object_r:vendor_sysfs_camera:s0
 genfscon sysfs /kernel/camera/num_ife_lites u:object_r:vendor_sysfs_camera:s0
 genfscon sysfs /kernel/camera/num_sfes u:object_r:vendor_sysfs_camera:s0
 genfscon sysfs /kernel/camera/num_sbi u:object_r:vendor_sysfs_camera:s0
+
+genfscon sysfs /devices/platform/soc/a400000.ssusb/mode                 u:object_r:vendor_sysfs_usb_device:s0

@@ -15,3 +15,7 @@ unix_socket_connect(vendor_ims_service, vendor_ims_service, vendor_ims_service)
 
 set_prop(vendor_ims_service, vendor_persist_rcs_qti_prop)
 nicm_socket(vendor_ims_service);
+
+hal_attribute_hwservice(vendor_hal_imsfactory, vendor_hal_imsfactory_hwservice)
+hal_attribute_hwservice(vendor_hal_imsfactory, vendor_hal_imsrcsd_hwservice)
+hal_attribute_hwservice(vendor_hal_imsfactory, vendor_hal_imscallinfo_hwservice)

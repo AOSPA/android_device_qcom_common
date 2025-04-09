@@ -6,3 +6,6 @@ persist.vendor.data.perf_ko_load u:object_r:vendor_data_ko_prop:s0
 persist.vendor.data.offload_ko_load u:object_r:vendor_data_ko_prop:s0
 
 vendor.nfc.min_firmware                      u:object_r:vendor_nfc_prop:s0
+
+#AON
+ro.vendor.qc_aon_presence                    u:object_r:vendor_qc_aon_prop:s0

@@ -4,3 +4,9 @@ vendor.display.color::IDisplayColor                             u:object_r:vendo
 vendor.display.postproc::IDisplayPostproc                       u:object_r:vendor_hal_display_postproc_hwservice:s0
 vendor.qti.hardware.display.composer::IQtiComposer           u:object_r:hal_graphics_composer_hwservice:s0
 vendor.qti.hardware.embmssl::IEmbms                          u:object_r:vendor_hal_embmssl_hwservice:s0
+com.qualcomm.qti.uceservice::IUceService                        u:object_r:vendor_hal_imsrcsd_hwservice:s0
+com.qualcomm.qti.imscmservice::IImsCmService                    u:object_r:vendor_hal_imsrcsd_hwservice:s0
+vendor.qti.ims.callinfo::IService                               u:object_r:vendor_hal_imscallinfo_hwservice:s0
+vendor.qti.imsrtpservice::IRTPService                          u:object_r:vendor_hal_imsrtp_hwservice:s0
+vendor.qti.ims.factory::IImsFactory                             u:object_r:vendor_hal_imsfactory_hwservice:s0
+vendor.qti.hardware.dsp::IDspService                         u:object_r:vendor_hal_dspmanager_hwservice:s0
