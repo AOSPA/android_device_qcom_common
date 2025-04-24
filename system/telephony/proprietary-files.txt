@@ -7,6 +7,7 @@ product/app/uimgbaservice/uimgbaservice.apk
 product/app/uimlpaservice/uimlpaservice.apk
 product/app/uimremoteclient/uimremoteclient.apk
 product/app/uimremoteserver/uimremoteserver.apk
+product/etc/permissions/lpa.xml
 product/etc/permissions/RemoteSimlock.xml
 product/etc/permissions/RemoteSimlockManager.xml
 product/etc/permissions/telephony_product_privapp-permissions-qti.xml
@@ -19,6 +20,7 @@ product/etc/permissions/vendor.qti.hardware.data.connectionaidl-V1-java.xml
 product/framework/remotesimlockmanagerlibrary.jar
 product/framework/uimgbalibrary.jar
 product/framework/uimgbamanagerlibrary.jar
+product/framework/uimlpalibrary.jar
 product/framework/uimremoteclientlibrary.jar
 product/framework/uimremoteserverlibrary.jar
 product/framework/uimremotesimlocklibrary.jar
