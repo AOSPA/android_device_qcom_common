@@ -74,10 +74,13 @@ ifeq ($(TARGET_FWK_SUPPORTS_FULL_VALUEADDS),true)
 include vendor/qcom/opensource/core-utils/build/utils.mk
 endif
 
+# Kernel Families
+6_6_FAMILY := \
+    sun
+
 6_1_FAMILY := \
     pineapple
 
-# Kernel Families
 5_15_FAMILY := \
     crow \
     kalama \
@@ -116,7 +119,9 @@ endif
     msm8937 \
     msm8996
 
-ifeq ($(call is-board-platform-in-list,$(6_1_FAMILY)),true)
+ifeq ($(call is-board-platform-in-list,$(6_6_FAMILY)),true)
+TARGET_KERNEL_VERSION ?= 6.6
+else ($(call is-board-platform-in-list,$(6_1_FAMILY)),true)
 TARGET_KERNEL_VERSION ?= 6.1
 else ifeq ($(call is-board-platform-in-list,$(5_15_FAMILY)),true)
 TARGET_KERNEL_VERSION ?= 5.15
