@@ -1,3 +1,8 @@
+//
+// SPDX-FileCopyrightText: Paranoid Android
+// SPDX-License-Identifier: Apache-2.0
+//
+
 install_symlink {
     name: "rfs_apq_gnss_hlos_symlink",
     vendor: true,
