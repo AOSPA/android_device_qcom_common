@@ -1,7 +1,7 @@
 #!/usr/bin/env -S PYTHONPATH=../../../:../../../../../../tools/extract-utils python3
 #
-# SPDX-FileCopyrightText: 2024 The LineageOS Project
-# SPDX-FileCopyrightText: 2024 Paranoid Android
+# SPDX-FileCopyrightText: The LineageOS Project
+# SPDX-FileCopyrightText: Paranoid Android
 # SPDX-License-Identifier: Apache-2.0
 #
 
