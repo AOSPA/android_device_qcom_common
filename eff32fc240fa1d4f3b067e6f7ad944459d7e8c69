@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "641c88e9_343aa282",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1001069
+      },
+      "writtenOn": "2025-04-26T01:55:47Z",
+      "side": 1,
+      "message": "With this thing devices should work better\nI tested it on my fog device, seems it is nice improvement \nSomeone else should test",
+      "revId": "eff32fc240fa1d4f3b067e6f7ad944459d7e8c69",
+      "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
+    }
+  ]
+}
