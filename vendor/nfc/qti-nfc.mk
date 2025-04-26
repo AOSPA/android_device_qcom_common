@@ -1,6 +1,5 @@
 #
-# Copyright (C) 2021-2022 Paranoid Android
-#
+# SPDX-FileCopyrightText: Paranoid Android
 # SPDX-License-Identifier: Apache-2.0
 #
 
