@@ -28,6 +28,9 @@ endif
 
 ifeq (,$(filter 4.4 4.9 4.14 4.19 5.4, $(TARGET_KERNEL_VERSION)))
 PRODUCT_HAS_GADGET_HAL := true
+
+PRODUCT_PACKAGES += \
+    NcmTetheringOverlay
 endif
 
 PRODUCT_COPY_FILES += \
