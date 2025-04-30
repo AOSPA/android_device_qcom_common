@@ -32,7 +32,8 @@ endif
 
 ifeq ($(PRODUCT_HAS_GADGET_HAL),true)
 PRODUCT_PACKAGES += \
-    NcmTetheringOverlay
+    NcmTetheringOverlay \
+    NcmTetheringOverlayMainline
 endif
 
 PRODUCT_COPY_FILES += \

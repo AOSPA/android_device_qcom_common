@@ -11,3 +11,9 @@ runtime_resource_overlay {
     name: "NcmTetheringOverlay",
     vendor: true,
 }
+
+runtime_resource_overlay {
+    name: "NcmTetheringOverlayMainline",
+    manifest: "AndroidGoogleManifest.xml",
+    vendor: true,
+}
