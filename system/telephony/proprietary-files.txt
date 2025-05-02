@@ -210,8 +210,6 @@ system_ext/lib64/libmsp.so
 system_ext/lib64/libmwqemiptablemgr.so
 system_ext/lib64/libqmi_cci_system.so
 system_ext/lib64/libqmi_encdec_system.so
-system_ext/lib64/libtrigger-handler.so
-system_ext/lib64/libupdateprof.qti.so
 system_ext/lib64/vendor.qti.data.dmapconsent-V1-ndk.so
 system_ext/lib64/vendor.qti.data.factory@1.0.so
 system_ext/lib64/vendor.qti.data.factory@2.0.so
