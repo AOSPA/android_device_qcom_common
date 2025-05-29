@@ -37,6 +37,7 @@
         <SysNode Idx="0x19" Node="/sys/kernel/msm_performance/parameters/gplaf_data_node" />
         <SysNode Idx="0x1A" Node="/sys/kernel/msm_performance/parameters/gplaf_health" />
         <SysNode Idx="0x1B" Node="/sys/kernel/msm_performance/parameters/dplh_notif" />
+        <SysNode Idx="0x1C" Node="/data/vendor/lm/" />
         <!-- Please add any new Node into the configs/test/avcsysnodesconfigs.xml as well which is used for testing -->
     </PerfResources>
 </ResourceConfigs>

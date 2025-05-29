@@ -1,0 +1,124 @@
+<!--
+/******************************************************************************
+  @file    PSMOptimizationFeature.xml
+  @brief   PSM Optimization feature xml
+
+  DESCRIPTION
+      Each feature has an xml file to define the feature components
+
+  ===========================================================================
+  Copyright (c) Qualcomm Technologies, Inc. and/or its subsidiaries.
+  All rights reserved.
+  Confidential and Proprietary - Qualcomm Technologies, Inc.
+  ===========================================================================
+******************************************************************************/
+-->
+<Feature>
+    <Name>PSMPowerOptFeature</Name>
+    <Libname>libpsmoptfeature.so</Libname>
+    <Configs>
+        <PSM_STATE>2</PSM_STATE>
+        <GPUMode>1</GPUMode>
+        <GAME_TIMER>500</GAME_TIMER>
+        <GPU_SAMPLE_COUNT>10</GPU_SAMPLE_COUNT>
+        <STABILITY_SAMPLE_COUNT>5</STABILITY_SAMPLE_COUNT>
+        <GPU_BUSY_STABILITY_THRESHOLD>10</GPU_BUSY_STABILITY_THRESHOLD>
+        <GPU_Freq_THRESHOLD_LOW>342</GPU_Freq_THRESHOLD_LOW>
+        <GPU_Freq_THRESHOLD_HIGH>1050</GPU_Freq_THRESHOLD_HIGH>
+        <DEEP_MODE>0</DEEP_MODE>
+        <CPUNODE>/sys/devices/system/cpu/cpu7/online</CPUNODE>
+        <CPUPOLICY>/sys/devices/system/cpu/cpufreq/policy7</CPUPOLICY>
+        <Display>vendor.display.use_smooth_motion, 0</Display>
+        <Camera>camera.disable_zsl_mode, 1</Camera>
+        <VIDEO_SCALING_UP>225</VIDEO_SCALING_UP>
+        <BROWSER_SCALING_UP>150</BROWSER_SCALING_UP>
+        <GAME_SCALING_UP>420</GAME_SCALING_UP>
+        <VIDEO_SCALING_DOWN>180</VIDEO_SCALING_DOWN>
+        <BROWSER_SCALING_DOWN>120</BROWSER_SCALING_DOWN>
+        <GAME_SCALING_DOWN>336</GAME_SCALING_DOWN>
+        <MAX_SAMPLE_NUM>30</MAX_SAMPLE_NUM>
+        <SCALING_DOWN_TASK_LOAD_BOOST>-20</SCALING_DOWN_TASK_LOAD_BOOST>
+    </Configs>
+    <Profiles>
+        <Profile>
+            <!--mincap/numbusy/penalty -->
+            <DYN_GPU_LEVEL0>0X42838000, 0, 0X4283c000, 0, 0X42840000, 0</DYN_GPU_LEVEL0>
+            <DYN_GPU_LEVEL1>0X42838000, 3, 0X4283c000, 2, 0X42840000, 0</DYN_GPU_LEVEL1>
+            <DYN_GPU_LEVEL2>0X42838000, 0, 0X4283c000, 0, 0X42840000, 0</DYN_GPU_LEVEL2>
+        <!-- config_enableDefault -->
+            <!-- MPCTLV3_SCHED_LOAD_BOOST_LITTLE -->
+            <!-- MPCTLV3_SCHED_LOAD_BOOST_BIG -->
+            <!-- MPCTLV3_SCHED_LOAD_BOOST_PRIME -->
+            <!-- Disable Colocation -->
+            <!-- MPCTLV3_SCHEDUTIL_HISPEED_FREQ_CLUSTER_LITTLE -->
+            <!-- MPCTLV3_SCHEDUTIL_HISPEED_FREQ_CLUSTER_BIG -->
+            <!-- MPCTLV3_TARGET_LOAD_THRESH_CLUSTER_LITTLE -->
+            <!-- MPCTLV3_TARGET_LOAD_SHIFT_CLUSTER_LITTLE -->
+            <DEFAULT>0x40C68100, 0xFFFFFFF6, 0x40C68000, 0xFFFFFFF6, 0x40C68200, 0xFFFFFFF6, 0x40CF4000, 0x270F2706,
+            0x4143C100, 998, 0x4143C000, 1100, 0x41450100, 0, 0x41454100, 0x4</DEFAULT>
+        <!-- config_enableProfile for Browser -->
+            <!-- CPUBOOST_MAX_FREQ BIG Core resource opcode, val -->
+            <PROFILE_BROWSER>0x40804000, 0x7D0</PROFILE_BROWSER>
+            <!-- MPCTLV3_TARGET_LOAD_THRESH_CLUSTER_LITTLE -->
+            <!-- MPCTLV3_SCHED_LOAD_BOOST_BIG -->
+            <!-- MPCTLV3_SCHED_LOAD_BOOST_TITANIUM -->
+            <!-- MPCTLV3_SCHED_LOAD_BOOST_PRIME -->
+            <!-- MPCTLV3_SCHED_EM_INFLATE_PCT -->
+            <!-- MPCTLV3_SCHED_EM_INFLATE_THRES -->
+            <!-- MPCTLV3_TITANIUM_CORE_STATE2_OFFLINE_TIMEOUT -->
+            <!-- MPCTLV3_SCHEDUTIL_PREDICTIVE_LOAD_CLUSTER_LITTLE -->
+            <!-- MPCTLV3_SCHEDUTIL_PREDICTIVE_LOAD_CLUSTER_BIG -->
+            <!-- MPCTLV3_SCHEDUTIL_PREDICTIVE_LOAD_CLUSTER_TITANIUM -->
+            <!-- MPCTLV3_SCHEDUTIL_PREDICTIVE_LOAD_CLUSTER_PRIME -->
+            <!-- MPCTLV3_SCHEDUTIL_RTG_BOOST_FREQ_CLUSTER_LITTLE -->
+            <!-- MPCTLV3_SCHEDUTIL_RTG_BOOST_FREQ_CLUSTER_BIG -->
+            <!-- MPCTLV3_LLCC_BW_HYST_OPT -->
+            <!-- MPCTLV3_DDR_BW_HYST_OPT -->
+            <!-- MPCTLV3_LLCC_BWMON_IO_PERCENT -->
+            <!-- MPCTLV3_DDR_BWMON_IO_PERCENT -->
+            <!-- SCHED_COLOC_DOWNMIGRATE_NS resource opcode -->
+            <PROFILE_LIGHT_MODE>0x41450100, 0, 0x40C68000, -10, 0x40C68300, -10, 0x40C68200, -10, 0X43C10000, 300, 0X43C14000, 173, 0x41014300, 10, 0x41444100, 0, 0x41444000, 0,
+            0x41444300, 0, 0x41444200, 0, 0x4144C100, 600000, 0x4144C000, 600000, 0x41838000, 0, 0x43024000, 0, 0x41834000, 95, 0x43020000, 95, 0x40C8C000, 100000000</PROFILE_LIGHT_MODE>
+            <!-- MPCTLV3_SCHEDUTIL_HISPEED_FREQ_CLUSTER_LITTLE -->
+            <!-- MPCTLV3_SCHEDUTIL_HISPEED_FREQ_CLUSTER_BIG -->
+            <!-- MPCTLV3_SCHEDUTIL_RTG_BOOST_FREQ_CLUSTER_LITTLE -->
+            <!-- MPCTLV3_SCHEDUTIL_RTG_BOOST_FREQ_CLUSTER_BIG -->
+            <!-- MPCTLV3_SCHEDUTIL_PREDICTIVE_LOAD_CLUSTER_LITTLE -->
+            <!-- MPCTLV3_SCHEDUTIL_PREDICTIVE_LOAD_CLUSTER_BIG -->
+            <!-- MPCTLV3_TARGET_LOAD_THRESH_CLUSTER_LITTLE -->
+            <!-- MPCTLV3_TARGET_LOAD_SHIFT_CLUSTER_LITTLE -->
+            <!-- MPCTLV3_TARGET_LOAD_THRESH_CLUSTER_BIG -->
+            <!-- MPCTLV3_TARGET_LOAD_SHIFT_CLUSTER_BIG -->
+            <PROFILE_MEDIUM_MODE>0x4143C100, 800, 0x4143C000, 1113, 0x4144C000, 600000, 0x4144C100, 600000, 0x41444100, 0, 0x41444000, 0,
+            0x41450100, 0, 0x41454100, 0x4, 0x41450000, 100, 0x41454000, 0x4</PROFILE_MEDIUM_MODE>
+        <!-- config_enableProfile1 -->
+            <!-- MPCTLV3_SCHED_LOAD_BOOST_BIG -->
+            <!-- MPCTLV3_SCHED_LOAD_BOOST_PRIME -->
+            <!-- Disable Colocation -->
+            <!-- MPCTLV3_SCHEDUTIL_HISPEED_FREQ_CLUSTER_LITTLE -->
+            <!-- MPCTLV3_SCHEDUTIL_HISPEED_FREQ_CLUSTER_BIG -->
+            <!-- MPCTLV3_TARGET_LOAD_THRESH_CLUSTER_LITTLE -->
+            <!-- MPCTLV3_TARGET_LOAD_SHIFT_CLUSTER_LITTLE -->
+            <PROFILE1>0x40C68000, 0xFFFFFFEC, 0x40C68200, 0xFFFFFFEC, 0x40CF4000, 0x270F2706,
+            0x4143C100, 998, 0x4143C000, 1100, 0x41450100, 0, 0x41454100, 0x4</PROFILE1>
+        <!-- config_enableProfile2 -->
+            <!-- MPCTLV3_SCHED_LOAD_BOOST_BIG -->
+            <!-- MPCTLV3_SCHED_LOAD_BOOST_PRIME -->
+            <!-- Disable Colocation -->
+            <!-- MPCTLV3_SCHEDUTIL_HISPEED_FREQ_CLUSTER_LITTLE -->
+            <!-- MPCTLV3_SCHEDUTIL_HISPEED_FREQ_CLUSTER_BIG -->
+            <!-- MPCTLV3_TARGET_LOAD_THRESH_CLUSTER_LITTLE -->
+            <!-- MPCTLV3_TARGET_LOAD_SHIFT_CLUSTER_LITTLE -->
+            <PROFILE2>0x40C68000, 0xFFFFFFFA, 0x40C68200, 0xFFFFFFFA, 0x40CF4000, 0x270F2706,
+            0x4143C100, 998, 0x4143C000, 1100, 0x41450100, 0, 0x41454100, 0x4</PROFILE2>
+            <PSM_OPT_RESOURCE>0x43C04000</PSM_OPT_RESOURCE>
+        </Profile>
+    </Profiles>
+    <IgnoredApps>
+        <App1></App1>
+        <App2></App2>
+    </IgnoredApps>
+    <Trigger>
+        <AsyncId>0x000015E0, 0x00001001, 0x00001002, 0x00001003, 0x00001004, 0x00001040, 0x00001087</AsyncId>
+    </Trigger>
+</Feature>
