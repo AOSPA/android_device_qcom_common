@@ -25,10 +25,20 @@ namespace_imports = [
 ]
 
 blob_fixups: blob_fixups_user_type = {
-    'vendor/lib64/libmemperfd.so': blob_fixup()
-        .replace_needed('libprotobuf-cpp-lite-21.7.so', 'libprotobuf-cpp-lite-21.12.so'),
-    'vendor/lib64/libprekill.so': blob_fixup()
-        .replace_needed('libprotobuf-cpp-full-21.7.so', 'libprotobuf-cpp-full-21.12.so'),
+    'vendor/lib64/libaodoptfeature.so': blob_fixup()
+        .replace_needed('vendor.qti.hardware.display.config-V5-ndk.so', 'vendor.qti.hardware.display.config-V12-ndk.so'),
+    'vendor/lib64/libapengine.so': blob_fixup()
+        .replace_needed('vendor.qti.hardware.display.config-V5-ndk.so', 'vendor.qti.hardware.display.config-V12-ndk.so'),
+    'vendor/lib64/libgamepoweroptfeature.so': blob_fixup()
+        .replace_needed('vendor.qti.hardware.display.config-V5-ndk.so', 'vendor.qti.hardware.display.config-V12-ndk.so'),
+    'vendor/lib64/liboffscreenpoweroptfeature.so': blob_fixup()
+        .replace_needed('vendor.qti.hardware.display.config-V5-ndk.so', 'vendor.qti.hardware.display.config-V12-ndk.so'),
+    'vendor/lib64/libpsmoptfeature.so': blob_fixup()
+        .replace_needed('vendor.qti.hardware.display.config-V5-ndk.so', 'vendor.qti.hardware.display.config-V12-ndk.so'),
+    'vendor/lib64/libqti-perfd.so': blob_fixup()
+        .replace_needed('vendor.qti.hardware.display.config-V5-ndk.so', 'vendor.qti.hardware.display.config-V12-ndk.so'),
+    'vendor/lib64/libvideooptfeature.so': blob_fixup()
+        .replace_needed('vendor.qti.hardware.display.config-V5-ndk.so', 'vendor.qti.hardware.display.config-V12-ndk.so'),
 }  # fmt: skip
 
 lib_fixups: lib_fixups_user_type = {

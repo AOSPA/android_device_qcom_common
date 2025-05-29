@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!--
+ * Copyright (c) 2017-2023 Qualcomm Technologies, Inc.
+ * All Rights Reserved.
+ * Confidential and Proprietary - Qualcomm Technologies, Inc.
+-->
+
+<TargetConfig>
+
+    <!-- All the target related information goes in TargetInfo tag.
+    Following are the supported fields for  TargetInfo tag.
+        Mandatory Fields
+        * NumClusters, number of clusters
+        * TotalNumCores, total number of cores
+        * SocIds, a comma seperated list of supported socids for this target.
+        Other Fields
+        * Target, target name.
+        * SynCore, default value is "1" implies sync core and change to "0" for async core.
+        * CoreCtlCpu, core_ctl is enabled on which physical core, defalut value is "-1".
+        * MinCoreOnline, minimum number of cores needed to be online, default value is "0"
+        * GovInstanceType, default value "0" which implies "CLUSTER_BASED_GOV_INSTANCE",
+          can be changed to "1" for "SINGLE_GOV_INSTANCE".
+        * CpufreqGov, default value is "0" which implies "INTERACTIVE", can be changed it
+          to "1" for "SCHEDUTIL".
+        * TargetMaxArgsPerReq, can be used to update max arg per req value, default is 64.
+        * MPAMPrioAware, can be used to indicate if we want to use prio aware perflocks for
+          MPAM resource. Default value is "0", which implies non prio aware MPAM perflocks.
+    -->
+
+    <!-- For each cluster,write a seperate ClustersInfo tag.
+        Following are the supported fields for ClustersInfo tag.
+        Mandatory Fields
+        * Id, cluster number starts with index 0.
+        * NumCores, total number of cores for that cluster.
+        Other Fields
+        * Type, whther a "little" or "big" cluster.
+        (Type is mandatory, If there is more than one cluster.)
+        * MaxFrequency, Any limitations for max frequency for that cluster.
+    -->
+
+    <!-- For each MPAM group, write a separate LogicalMPAMGroupInfo tag.
+        Following are the supported fields for LogicalMPAMGroupInfo tag.
+        * Id, logical part_id number. starts with index 0.
+        * Name, to specify the name of the MPAM group
+        * Prio, to indicate priority of the MPAM group. Higher priority is
+          given preference. In non prio aware case, the prio won't be considered
+          for anything.
+    -->
+
+    <!-- For targets sharing the same platfrom, we can have seperate config tag for each
+         of those targets with different number in the Config tag and basing on the socId
+         of the target device, we decide which configs to consider. -->
+
+    <Config1>
+
+         <TargetInfo
+             Target="sun"
+             NumClusters="2"
+             TotalNumCores="8"
+             SocIds="618"
+             SynCore="1"
+             CoreCtlCpu="4"
+             MinCoreOnline="0"
+             CpufreqGov="1"
+             TargetMaxArgsPerReq="64"
+        />
+
+         <ClustersInfo Id="0" NumCores="6" Type="big" />
+         <ClustersInfo Id="1" NumCores="2" Type="prime" />
+
+         <LogicalMPAMGroupInfo Id="0" Name="default" Prio="0" />
+         <LogicalMPAMGroupInfo Id="1" Name="video" Prio="1" />
+         <LogicalMPAMGroupInfo Id="2" Name="camera" Prio="2" />
+         <LogicalMPAMGroupInfo Id="3" Name="game" Prio="3" />
+
+         <MPAMInfo NumOfCacheBlocks="2" CacheType="L2" MPAMPrioAware="0" />
+
+    </Config1>
+
+    <Config2>
+
+         <TargetInfo
+             Target="tuna"
+             NumClusters="4"
+             TotalNumCores="8"
+             SocIds="694,681,655"
+             SynCore="1"
+             CoreCtlCpu="4"
+             MinCoreOnline="0"
+             CpufreqGov="1"
+             TargetMaxArgsPerReq="64"
+        />
+
+         <ClustersInfo Id="0" NumCores="2" Type="little" />
+         <ClustersInfo Id="1" NumCores="3" Type="big" />
+         <ClustersInfo Id="2" NumCores="2" Type="titanium" />
+         <ClustersInfo Id="3" NumCores="1" Type="prime" />
+
+         <LogicalMPAMGroupInfo Id="0" Name="default" Prio="0" />
+         <LogicalMPAMGroupInfo Id="1" Name="video" Prio="1" />
+         <LogicalMPAMGroupInfo Id="2" Name="camera" Prio="2" />
+         <LogicalMPAMGroupInfo Id="3" Name="game" Prio="3" />
+
+         <MPAMInfo NumOfCacheBlocks="1" CacheType="L3" MPAMPrioAware="0" />
+
+    </Config2>
+
+    <Config3>
+
+         <TargetInfo
+             Target="kera"
+             NumClusters="3"
+             TotalNumCores="8"
+             SocIds="659,686"
+             SynCore="1"
+             CoreCtlCpu="3"
+             MinCoreOnline="0"
+             CpufreqGov="1"
+             TargetMaxArgsPerReq="64"
+        />
+
+         <ClustersInfo Id="0" NumCores="3" Type="little" />
+         <ClustersInfo Id="1" NumCores="4" Type="big" />
+         <ClustersInfo Id="2" NumCores="1" Type="prime" />
+
+         <LogicalMPAMGroupInfo Id="0" Name="default" Prio="0" />
+         <LogicalMPAMGroupInfo Id="1" Name="video" Prio="1" />
+         <LogicalMPAMGroupInfo Id="2" Name="camera" Prio="2" />
+         <LogicalMPAMGroupInfo Id="3" Name="game" Prio="3" />
+
+         <MPAMInfo NumOfCacheBlocks="1" CacheType="L3" MPAMPrioAware="0" />
+
+    </Config3>
+
+</TargetConfig>
