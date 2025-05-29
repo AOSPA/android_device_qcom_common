@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!--
+/* Copyright (c) Qualcomm Technologies, Inc. and/or its subsidiaries.
+ * All rights reserved.
+ * Confidential and Proprietary - Qualcomm Technologies, Inc.
+ */
+-->
+
+<WorkloadConfigs>
+    <WLConfigResources>
+        <!-- Reference XML parameters/-->
+        <!--Workload Name="com.miHoYo.hkrpg" LE="600" Target="tuna" Type="1" Weight="2" /-->
+        <Workload Name="com.tencent.mm"                        LE="537"   Target="tuna,kera" />
+        <Workload Name="com.levelinfinite.sgameGlobal"         LE="10465" Target="tuna,kera" />
+        <Workload Name="com.tencent.tmgp.pubgmhd"              LE="8875"  Target="tuna,kera" />
+        <Workload Name="com.ss.android.ugc.aweme"              LE="452"   Target="tuna,kera" />
+        <Workload Name="com.facebook.katana"                   LE="433"   Target="tuna,kera" />
+        <Workload Name="com.android.chrome"                    LE="642"   Target="tuna,kera" />
+        <Workload Name="com.tencent.qqlivei18n.us"             LE="7052"  Target="tuna,kera" />
+        <Workload Name="com.gameloft.android.ANMP.GloftA8HM"   LE="7268"  Target="tuna,kera" />
+        <Workload Name="com.whatsapp"                          LE="1537"  Target="tuna,kera" />
+
+    </WLConfigResources>
+</WorkloadConfigs>

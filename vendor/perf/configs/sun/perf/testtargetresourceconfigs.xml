@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!--
+ * Copyright (c) 2023 Qualcomm Technologies, Inc.
+ * All Rights Reserved.
+ * Confidential and Proprietary - Qualcomm Technologies, Inc.
+-->
+
+<!-- This is a target specific resource config file which can be
+used to overwrite the node paths mentioned in common resources file
+and also to modify the Supported field information. -->
+
+<!-- This file supports only Config tag, which has the following fields
+* MajorValue and MinorValue, both are required to uniquely
+identify the resource.
+* Node, the new node path to overwrite the already existing path
+of commonresourceconfigs.xml file.
+* Supported, to indicate whether the resource is supported or not.
+* For each config tag, either of Node or Supported fields need
+to be mentioned.
+NOTE - It is not Mandatory to write all the resources which are not supported,
+as anyway perflock calls of these resources would fail.
+
+Exception tag is used to pass the exception why ths node cannot be tested.
+Cluster tag is used when node in resource xml is cluster specific(put logical cluster here).
+Cluster 0=> Big
+Cluster 1=> Little
+Cluster 2=> Prime
+
+| RVal | Wval | Reason
+| Yes  | Yes  | Different Value read and write
+| No   | Yes  | Read Val Same as write Value
+| Blank| Blank| Unsupported Node
+
+(Yes) => Tag is Added
+(No) => Tag is not Added
+(Blank) => Tag is added but written value is blank (eg: WVal="").
+-->
+
+
+<ResourceConfigs>
+    <PerfResources>
+        <Config MajorValue="0x2" MinorValue="0x0" Cluster="0" WVal="864" RVal="864000" />
+        <Config MajorValue="0x2" MinorValue="0x0" Cluster="0" WVal="1958" RVal="1958400" />
+        <Config MajorValue="0x2" MinorValue="0x1" Cluster="0" WVal="2572" RVal="2572800" />
+        <Config MajorValue="0x2" MinorValue="0x4" Cluster="0" WVal="384" RVal="384000" />
+        <Config MajorValue="0x2" MinorValue="0x5" Cluster="0" WVal="960000" RVal="960000" />
+        <Config MajorValue="0x3" MinorValue="0x3C" Exception="To be tested Manually - Special read Node" />
+        <Config MajorValue="0x4" MinorValue="0x2" Cluster="0" WVal="1" RVal="1" />
+        <Config MajorValue="0x5" MinorValue="0xF" Cluster="0" WVal="1478" RVal="1478400" />
+        <Config MajorValue="0x5" MinorValue="0x10" Cluster="0" WVal="0x27" RVal="39" />
+        <Config MajorValue="0x5" MinorValue="0x11" Cluster="0" WVal="0x0" RVal="0" />
+        <Config MajorValue="0x5" MinorValue="0x12" Cluster="0" WVal="0xFA" />
+        <Config MajorValue="0x5" MinorValue="0x13" Cluster="0" WVal="0xBB801" />
+        <Config MajorValue="0x5" MinorValue="0x14" Cluster="0" WVal="0x4566FF" />
+        <Config MajorValue="0x5" MinorValue="0x15" Cluster="0" WVal="0x5AA" />
+        <Config MajorValue="0x5" MinorValue="0x16" Cluster="0" WVal="0xFFA1" RVal="65441" />
+        <Config MajorValue="0xB" MinorValue="0x12" Exception="To be tested manually - the node is for all clusters" />
+        <Config MajorValue="0xB" MinorValue="0xC" Exception="Manual hint node" />
+        <Config MajorValue="0xA" MinorValue="0x3" WVal="680" RVal="734000000" />
+        <Config MajorValue="0xC" MinorValue="0x10" WVal="0x1FEABF3" RVal="4243000" />
+        <Config MajorValue="0xC" MinorValue="0xF" WVal="" RVal="" />
+        <Config MajorValue="0xD" MinorValue="0x26" WVal="1555000" RVal="1555000" />
+        <Config MajorValue="0xD" MinorValue="0x28" WVal="600000" RVal="600000" />
+    </PerfResources>
+</ResourceConfigs>
