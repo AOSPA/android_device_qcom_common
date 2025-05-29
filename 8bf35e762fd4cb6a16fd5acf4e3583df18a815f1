@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "638edfba_e909e6c0",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 3
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000579
+      },
+      "writtenOn": "2025-05-29T16:09:10Z",
+      "side": 1,
+      "message": "now that we have new powerhal, we can look into this again",
+      "revId": "8bf35e762fd4cb6a16fd5acf4e3583df18a815f1",
+      "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
+    }
+  ]
+}
