@@ -1,0 +1,25 @@
+#GameID   GameAPK          MaxTemperature  MaxCurrent  AvgCurrent //Current here means device consuming current (1000 means device is consuming 1000 mA)
+100001    hok                 48000          1150        1000
+100002    codm                48000          1150        1000
+100010    hok_oversea         48000          1150        1000
+100100    GP                  48000          1150        1000
+120000    com.netease.allstar 48000          1150        1000
+120100    Infinity_Nikki      48000          1150        1000
+120200    NARAKA_BLADEPOINT   48000          1150        1000
+120300    JusticeOnline       48000          1150        1000
+120400    Seasun_JXOnline3    48000          1150        1000
+120500    Tencent_DFM         48000          1150        1000
+120600    Tencent_PRacing     48000          1150        1000
+120700    WutheringWaves      48000          1150        1000
+120800    PerfectWorld_P5X    48000          1150        1000
+120900    Netease_Diablo      48000          1150        1000
+121000    Racing_Master       48000          1150        1000
+121100    Tarisland           48000          1150        1000
+121200    Arena_Breakout      48000          1150        1000
+121300    Tencent_DNF         48000          1150        1000
+121400    Tencent_LOL         48000          1150        1000
+121500    Tencent_Spatula     48000          1150        1000
+121600    Genshin             48000          1150        1000
+122700    StarRail            48000          1150        1000
+122800    ZenlessZoneZero     48000          1150        1000
+0         Default             48000          1150        100
