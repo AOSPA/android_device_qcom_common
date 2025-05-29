@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+/* Copyright (c) Qualcomm Technologies, Inc. and/or its subsidiaries.
+ * All rights reserved.
+ * Confidential and Proprietary - Qualcomm Technologies, Inc.
+ */
+-->
+
+<!-- This is QapeConfigsStore file which returns the value when a
+particular property name is invoked -->
+
+<!-- This file supports only Prop tag, which has the following fields
+* Name, to identify the name of the property. The names of the
+properties have been classified into Vendor and System property.
+* Value, the new value to be returned as string when respective
+property Name is called. -->
+
+<!--__________________________________Example format_______________________________________________
+<Prop Name="vendor.debug.enable.lm" Value="true" Target="lagoon" Variant="lito" Resolution="1080p"
+ Ram="3" Kernel="4.19"/>
+    Target: target code name (decided based on soc id, doesn't depend on lunch combo name)
+            ex: lito, lagoon, kona, etc
+    Variant: For Variants of Target go/32bit/64bit/nongo, examples below
+               Variant=bengal_32go  -> bengal 32 bit go target
+               Variant=bengal_32    -> bengal 32 bit target
+               Variant=bengal       -> bengal 64 bit target
+    Resolution="1080p", "2560", "720p", "HD+"
+    Kernel: kernel version, examples: "4.19", "5.4", etc
+    Ram: ram size in GB, examples: "1","2","3","4","6","8","10","12" (12 for target with >= 12GB of RAM as well)
+
+<Configs Target="tuna" Package="com.test.game" Weight="0,1"/>
+    <MinimalisticJankRescuer>1</MinimalisticJankRescuer>
+    <Qfps>VALUE</Qfps>
+    ...
+</Configs>
+    All of the mentioned attributes are optional.
+    Target: target code name (decided based on soc id, doesn't depend on lunch combo name)
+            ex: lito, lagoon, kona, etc
+    Package: package name delimited by comma.
+        Examples: "com.example.testapp", "com.example.testapp,com.example.debug" etc
+    Weight: weight values (0/1/2) delimited by comma. Example: "0", "1", "2", "0,1", "0,2" etc
+_______________________________________________________________________________________________ -->
+
+<QapeConfigStore>
+    <QapeConfigs>
+        <!-- Qape config store properties/-->
+        <Prop Name="vendor.qape.enable.s3tf" Value="true" Target="tuna,kera" />
+        <Prop Name="vendor.qape.enable.mjr" Value="true" Target="tuna" />
+        <Prop Name="vendor.qape.enable.mjr" Value="true" Target="kera" />
+
+        <!-- Qape configs for tuna -->
+        <Configs Target="tuna,kera" Weight="0,1">
+            <MinimalisticJankRescuer>0</MinimalisticJankRescuer>
+        </Configs>
+
+        <Configs Target="tuna,kera" Weight="2">
+            <MinimalisticJankRescuer>1</MinimalisticJankRescuer>
+        </Configs>
+
+        <Configs Target="tuna" Package="com.miHoYo.GenshinImpact" >
+            <MinimalisticJankRescuer>1</MinimalisticJankRescuer>
+        </Configs>
+
+        <Configs Target="tuna" Package="com.HoYoverse.hkrpgoversea" >
+            <MinimalisticJankRescuer>1</MinimalisticJankRescuer>
+        </Configs>
+
+        <Configs Target="tuna" Package="com.tencent.tmgp.sgame" >
+            <MinimalisticJankRescuer>0</MinimalisticJankRescuer>
+        </Configs>
+
+        <Configs Target="tuna" Package="com.tencent.tmgp.speedmobile" >
+            <MinimalisticJankRescuer>0</MinimalisticJankRescuer>
+        </Configs>
+
+        <Configs Target="tuna" Package="com.miHoYo.Yuanshen" >
+            <MinimalisticJankRescuer>0</MinimalisticJankRescuer>
+        </Configs>
+
+        <Configs Target="tuna" Package="com.miHoYo.hkrpg" >
+            <MinimalisticJankRescuer>0</MinimalisticJankRescuer>
+        </Configs>
+
+        <Configs Target="tuna" Package="com.levelinfinite.sgameGlobal" >
+            <MinimalisticJankRescuer>1</MinimalisticJankRescuer>
+        </Configs>
+
+        <Configs Target="tuna" Package="com.epicgames.fortnite" >
+            <MinimalisticJankRescuer>0</MinimalisticJankRescuer>
+        </Configs>
+
+        <Configs Target="tuna,kera" Package="com.tencent.tmpg.pubgmhd" >
+            <MinimalisticJankRescuer>1</MinimalisticJankRescuer>
+        </Configs>
+
+        <Configs Target="tuna,kera" Package="com.pubg.imobile" >
+            <MinimalisticJankRescuer>1</MinimalisticJankRescuer>
+        </Configs>
+
+        <!-- SpuriousActvts are also checked as substrings in actual activity -->
+        <!--Configs>
+            <SpuriousActvtList>
+                "com.android.permissioncontroller",
+                "com.android.example"
+            </SpuriousActvtList>
+        </Configs -->
+
+    </QapeConfigs>
+</QapeConfigStore>
