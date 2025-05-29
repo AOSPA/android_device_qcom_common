@@ -1,0 +1,72 @@
+<!--
+/******************************************************************************
+  @file    OffScreenPowerOptFeature.xml
+  @brief   OffScreen Optimization feature xml
+
+  DESCRIPTION
+      Each feature has an xml file to define the feature components
+
+  ===========================================================================
+  Copyright (c) Qualcomm Technologies, Inc. and/or its subsidiaries.
+  All rights reserved.
+  Confidential and Proprietary - Qualcomm Technologies, Inc.
+  ===========================================================================
+******************************************************************************/
+-->
+<Feature>
+   <Name>OffScreenPowerOptFeature</Name>
+   <Libname>liboffscreenpoweroptfeature.so</Libname>
+   <Configs>
+        <!-- Set min workload threashold, pick the max value of LIGHTLOAD_FREQ_THRESH/LIGHTLOAD_FREQ_STEP-->
+        <LIGHTLOAD_FREQ_THRESH>700000</LIGHTLOAD_FREQ_THRESH>
+        <LIGHTLOAD_FREQ_STEP>3</LIGHTLOAD_FREQ_STEP>
+        <LIGHTLOAD_MONITOR_WINDOW>5</LIGHTLOAD_MONITOR_WINDOW>
+        <LIGHTLOAD_STABLE_WINDOW>10</LIGHTLOAD_STABLE_WINDOW>
+        <LIGHTLOAD_STABLE_TIMER>5000</LIGHTLOAD_STABLE_TIMER>
+   </Configs>
+    <Profiles>
+        <Profile target = "kera">
+        <!-- config_enableDefault -->
+            <!-- ALL_ALLOW_DISPLAY_OFF -->
+            <!-- MPCTLV3_LLCC_DDR_BW_SAMPLE_MS -->
+            <!-- MPCTLV3_SCHEDUTIL_PREDICTIVE_LOAD_CLUSTER_LITTLE -->
+            <!-- MPCTLV3_SCHEDUTIL_PREDICTIVE_LOAD_CLUSTER_BIG -->
+            <!-- MPCTLV3_SCHED_IDLE_ENOUGH -->
+            <!-- MPCTLV3_SCHED_EM_INFLATE_PCT -->
+            <!-- MPCTLV3_SCHED_EM_INFLATE_THRES -->
+            <!-- MPCTLV3_SCHED_GROUP_UP_DOWN_MIGRATE, value -->
+          <DEFAULT>0x42C28000, 0x1, 0x43034000, 0xA, 0x41444100, 0, 0x41444000, 0, 0x43C0C000, 0x50, 0X43C10000, 300, 0X43C14000, 173, 0x40CE0000, 0x0032000A</DEFAULT>
+        </Profile>
+        <Profile target = "tuna">
+        <!-- config_enableDefault -->
+            <!-- ALL_ALLOW_DISPLAY_OFF -->
+            <!-- MPCTLV3_SCHEDUTIL_PREDICTIVE_LOAD_CLUSTER_BIG -->
+            <!-- MPCTLV3_SCHED_IDLE_ENOUGH -->
+            <!-- MPCTLV3_SCHEDUTIL_HISPEED_FREQ_CLUSTER_BIG -->
+            <!-- MPCTLV3_SCALING_MIN_FREQ_BIG , value -->
+            <!-- MPCTLV3_MIN_ONLINE_CPU_CLUSTER_BIG, value -->
+            <!-- MPCTLV3_CORE_CTL_OFFLINE_DELAY_MS_BIG -->
+            <!-- MPCTLV3_MIN_ONLINE_CPU_CLUSTER_BIG -->
+            <!-- MPCTLV3_CORE_CTL_OFFLINE_DELAY_MS_BIG -->
+            <!-- MPCTLV3_SCHED_LOAD_BOOST_BIG -->
+          <DEFAULT>0x42C28000, 0x1, 0x41444000, 0, 0x4143C000, 556, 0x40810000, 0x180, 0x41000000, 2, 0x4100c000, 0xf, 0x41014000, 0, 0x40C68000, -10</DEFAULT>
+        </Profile>
+        <Profile>
+        <!-- config_enableDefault -->
+            <!-- ALL_ALLOW_DISPLAY_OFF -->
+            <!-- MPCTLV3_SCHEDUTIL_PREDICTIVE_LOAD_CLUSTER_BIG -->
+            <!-- MPCTLV3_SCHED_IDLE_ENOUGH -->
+            <!-- MPCTLV3_SCHEDUTIL_HISPEED_FREQ_CLUSTER_BIG -->
+            <!-- MPCTLV3_SCALING_MIN_FREQ_BIG , value -->
+            <!-- MPCTLV3_MIN_ONLINE_CPU_CLUSTER_BIG, value -->
+            <!-- MPCTLV3_CORE_CTL_OFFLINE_DELAY_MS_BIG -->
+            <!-- MPCTLV3_MIN_ONLINE_CPU_CLUSTER_BIG -->
+            <!-- MPCTLV3_CORE_CTL_OFFLINE_DELAY_MS_BIG -->
+            <!-- MPCTLV3_SCHED_LOAD_BOOST_BIG -->
+          <DEFAULT>0x42C28000, 0x1, 0x41444000, 0, 0x4143C000, 556, 0x40810000, 0x180, 0x41000000, 2, 0x4100c000, 0xf, 0x41014000, 0, 0x40C68000, -10</DEFAULT>
+        </Profile>
+    </Profiles>
+    <Trigger>
+        <AsyncId>0x00001040, 0x00001041</AsyncId>
+    </Trigger>
+</Feature>
