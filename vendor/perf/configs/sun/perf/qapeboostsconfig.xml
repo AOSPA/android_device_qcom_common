@@ -1,0 +1,672 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!--
+/* Copyright (c) Qualcomm Technologies, Inc. and/or its subsidiaries.
+ * All rights reserved.
+ * Confidential and Proprietary - Qualcomm Technologies, Inc.
+ */
+-->
+
+<QapeBoostConfigs>
+    <QapePerfBoost>
+        <!-- Game Play Generic Profiles for tuna-->
+        <!-- MPCTLV3_SCHED_PIPELINE_SPEC_TASK_UTIL_THRES -->
+        <!-- MPCTLV3_SCHED_SINGLE_THREAD_PIPELINE -->
+        <!-- MPCTLV3_WALT_HISPEED_COND_FREQ_BIG -->
+        <!-- MPCTLV3_WALT_HISPEED_COND_FREQ_PRIME -->
+        <!-- MPCTLV3_GPU_DCVS_TUNING_MINGAP -->
+        <!-- MPCTLV3_GPU_DCVS_TUNING_PENALTY -->
+        <!-- MPCTLV3_SCHED_PIPELINE_UTIL_THRES -->
+        <!-- MPCTLV3_SCHED_LEGACY_FREQ_LEVELS PRIME -->
+        <!-- MPCTLV3_SCHED_LEGACY_FREQ_LEVELS BIG -->
+        <!-- MPCTLV3_SCHED_LEGACY_FREQ_LEVELS TITANIUM -->
+        <!-- MPCTLV3_SCHED_PIPELINE_REARRAGE_DELAY_MS -->
+        <Config
+            Id="0x1" Enable="true" Timeout="0" Target="tuna" Class="0"
+            Resources="0x43C6C000, 1, 0X43C40000, 0, 0x43C60000, 0x1, 0x40818000, 900, 0x40818200, 900,
+            0x40C9C000, 4, 0X42838000, 3, 0X42840000, 2, 0X43C34000, 250,
+            0x63C5C000, 14, 0, 2208000, 2, 2918400, 3, 2918400, 4, 2208000, 6, 2208000, 7, 2208000, 8, 2208000,
+            0x63C5C200, 14, 0, 1363200, 2, 1670400, 3, 1363200, 4, 1363200, 6, 1363200, 7, 1363200, 8, 1363200,
+            0x63C5C300, 14, 0, 2208000, 2, 2707200, 3, 2707200, 4, 2208000, 6, 2208000, 7, 2208000, 8, 2208000,
+            0x63C64000, 2, 60000, 300000" />
+
+        <!-- MPCTLV3_SCHED_PIPELINE_SPEC_TASK_UTIL_THRES -->
+        <!-- MPCTLV3_SCHED_SINGLE_THREAD_PIPELINE -->
+        <!-- MPCTLV3_WALT_HISPEED_COND_FREQ_BIG -->
+        <!-- MPCTLV3_WALT_HISPEED_COND_FREQ_PRIME -->
+        <!-- MPCTLV3_GPU_DCVS_TUNING_MINGAP -->
+        <!-- MPCTLV3_GPU_DCVS_TUNING_PENALTY -->
+        <!-- MPCTLV3_SCHED_PIPELINE_UTIL_THRES -->
+        <!-- MPCTLV3_SCHED_LEGACY_FREQ_LEVELS PRIME -->
+        <!-- MPCTLV3_SCHED_LEGACY_FREQ_LEVELS BIG -->
+        <!-- MPCTLV3_SCHED_LEGACY_FREQ_LEVELS TITANIUM -->
+        <!-- MPCTLV3_SCHED_PIPELINE_REARRAGE_DELAY_MS -->
+        <Config
+            Id="0x1" Enable="true" Timeout="0" Target="tuna" Class="1"
+            Resources="0x43C6C000, 1, 0X43C40000, 0, 0x43C60000, 0x1, 0x40818000, 1056, 0x40818200, 960,
+            0x40C9C000, 4, 0X42838000, 3, 0X42840000, 2, 0X43C34000, 250,
+            0x63C5C000, 14, 0, 2515200, 2, 2918400, 3, 2918400, 4, 2515200, 6, 2515200, 7, 2515200, 8, 2515200,
+            0x63C5C200, 14, 0, 1632000, 2, 1920000, 3, 1632000, 4, 1632000, 6, 1632000, 7, 1632000, 8, 1632000,
+            0x63C5C300, 14, 0, 2515200, 2, 2707200, 3, 2707200, 4, 2515200, 6, 2515200, 7, 2515200, 8, 2515200,
+            0x63C64000, 2, 60000, 300000" />
+
+        <!-- MPCTLV3_SCHED_PIPELINE_SPEC_TASK_UTIL_THRES -->
+        <!-- MPCTLV3_SCHED_SINGLE_THREAD_PIPELINE -->
+        <!-- MPCTLV3_WALT_HISPEED_COND_FREQ_BIG -->
+        <!-- MPCTLV3_WALT_HISPEED_COND_FREQ_PRIME -->
+        <!-- MPCTLV3_SCHED_UTIL_BUSY_HYST_CPU_NS_PRIME -->
+        <!-- MPCTLV3_SCHED_UTIL_BUSY_HYST_CPU_UTIL_PRIME -->
+        <!-- MPCTLV3_SCHED_PIPELINE_UTIL_THRES -->
+        <!-- MPCTLV3_SCHED_LEGACY_FREQ_LEVELS PRIME -->
+        <!-- MPCTLV3_SCHED_LEGACY_FREQ_LEVELS BIG -->
+        <!-- MPCTLV3_SCHED_LEGACY_FREQ_LEVELS TITANIUM -->
+        <!-- MPCTLV3_SCHED_LEGACY_FREQ_LEVELS SILVER -->
+        <!-- MPCTLV3_SCHED_PIPELINE_REARRAGE_DELAY_MS -->
+        <Config
+            Id="0x1" Enable="true" Timeout="0" Target="tuna" Class="2"
+            Resources="0x43C6C000, 1, 0x43C40000, 0, 0x43C60000, 0x1, 0x40818000, 1401,
+            0x40818200, 1363, 0x40CF8200, 0x3D0900, 0x43C68200, 1, 0X43C34000, 250, 0x40C9C000, 4,
+            0x63C5C000, 10, 0, 2707200, 4, 2918400, 6, 2918400, 7, 2918400, 8, 2918400,
+            0x63C5C100, 10, 0, 1785600, 4, 1804800, 6, 1804800, 7, 1804800, 8, 1804800,
+            0x63C5C200, 14, 0, 1632000, 2, 2515200, 3, 2515200, 4, 1632000, 6, 1632000, 7, 1632000, 8, 1632000,
+            0x63C5C300, 10, 0, 2515200, 4, 2707200, 6, 2707200, 7, 2707200, 8, 2707200,
+            0x63C64000, 2, 60000, 300000" />
+
+        <!-- Game Play Specific Profiles-->
+        <Config
+            Id="0x1" Package="com.miHoYo.GenshinImpact" Enable="true" Timeout="0" Target="tuna"
+            Resources="0x63C5C100, 12, 0, 1075200, 4, 1075200, 5, 1075200, 6, 1075200, 7, 1075200,
+            8, 1075200, 0x63C5C000, 12, 0, 2515200, 4, 2515200, 5, 2515200, 6, 2515200, 7, 2515200,
+            8, 2515200, 0x63C5C300, 12, 0, 2515200, 4, 2515200, 5, 2515200, 6, 2515200, 7, 2515200,
+            8, 2515200, 0x63C5C200, 12, 0, 1632000, 4, 1632000, 5, 1632000, 6, 1632000, 7, 1632000,
+            8, 1632000, 0x43C40000, 1024, 0x43C60000, 0x0, 0x40CF8200, 0x4C4B40, 0x43C68200, 1,
+            0x40818000, 0, 0x40818200, 0, 0x41444000, 0x0, 0x41444100, 0x0, 0x41444200, 0x0,
+            0x41444300, 0x0, 0x44418100, 0x4, 0x40808000, 1632000, 0x40808300, 1632000,
+            0x4080C000, 2208000, 0x4080C300, 2208000, 0x43040000, 3686400, 0x434A8000, 4224000,
+            0x4346C000, 4224000, 0x434AC000, 4224000, 0x434B0000, 4224000, 0x434B4000, 4224000,
+            0x41848000, 933000, 0x434B8000, 1066000, 0x43470000, 1066000, 0x434BC000, 1066000,
+            0X43C34000, 400" />
+        <Config
+            Id="0x1" Package="com.HoYoverse.hkrpgoversea" Enable="true" Timeout="0" Target="tuna"
+            Resources="0x63C5C100, 12, 0, 1075200, 4, 1075200, 5, 1075200, 6, 1075200, 7, 1075200,
+            8, 1075200, 0x63C5C000, 12, 0, 2438400, 4, 2438400, 5, 2438400, 6, 2438400, 7, 2438400,
+            8, 2438400, 0x63C5C300, 12, 0, 1632000, 4, 1632000, 5, 1632000, 6, 1632000, 7, 1632000,
+            8, 1632000, 0x63C5C200, 12, 0, 1632000, 4, 1632000, 5, 1632000, 6, 1632000, 7, 1632000,
+            8, 1632000, 0x43C60000, 0x0, 0x40CF8200, 0x4C4B40, 0x43C68200, 1, 0x40818000, 0,
+            0x40818200, 0, 0x44418100, 0x4, 0x41018010, 0, 0x43040000, 3686400, 0x434A8000, 4224000,
+            0x4346C000, 4224000, 0x434AC000, 4224000, 0x434B0000, 4224000, 0x434B4000, 4224000,
+            0x41848000, 933000, 0x434B8000, 1066000, 0x43470000, 1066000, 0x434BC000, 1066000,
+            0x41444000, 0x0, 0x41444100, 0x0, 0x41444200, 0x0, 0x41444300, 0x0, 0x44410000, 0,
+            0x44408000, 0x2, 0x4440C000, 0x2, 0X42838000, 3, 0X42840000, 2, 0x43C40000, 0, 0x43C58000, 0,
+            0X43C34000, 400" />
+            <Config
+            Id="0x1" Package="com.miHoYo.Yuanshen" Enable="true" Timeout="0" Target="tuna"
+            Resources="0x63C5C100, 12, 0, 1075200, 4, 1075200, 5, 1075200, 6, 1075200, 7, 1075200,
+            8, 1075200, 0x63C5C000, 12, 0, 2515200, 4, 2515200, 5, 2515200, 6, 2515200, 7, 2515200,
+            8, 2515200, 0x63C5C300, 12, 0, 2515200, 4, 2515200, 5, 2515200, 6, 2515200, 7, 2515200,
+            8, 2515200, 0x63C5C200, 12, 0, 1632000, 4, 1632000, 5, 1632000, 6, 1632000, 7, 1632000,
+            8, 1632000, 0x43C40000, 1024, 0x43C60000, 0x0, 0x40CF8200, 0x4C4B40, 0x43C68200, 1,
+            0x40818000, 0, 0x40818200, 0, 0x41444000, 0x0, 0x41444100, 0x0, 0x41444200, 0x0,
+            0x41444300, 0x0, 0x44418100, 0x4, 0x40808000, 1632000, 0x40808300, 1632000,
+            0x4080C000, 2208000, 0x4080C300, 2208000, 0x43040000, 3686400, 0x434A8000, 4224000,
+            0x4346C000, 4224000, 0x434AC000, 4224000, 0x434B0000, 4224000, 0x434B4000, 4224000,
+            0x41848000, 933000, 0x434B8000, 1066000, 0x43470000, 1066000, 0x434BC000, 1066000,
+            0X43C34000, 400" />
+        <Config
+            Id="0x1" Package="com.miHoYo.hkrpg" Enable="true" Timeout="0" Target="tuna"
+            Resources="0x63C5C100, 12, 0, 1075200, 4, 1075200, 5, 1075200, 6, 1075200, 7, 1075200,
+            8, 1075200, 0x63C5C000, 12, 0, 2438400, 4, 2438400, 5, 2438400, 6, 2438400, 7, 2438400,
+            8, 2438400, 0x63C5C300, 12, 0, 1632000, 4, 1632000, 5, 1632000, 6, 1632000, 7, 1632000,
+            8, 1632000, 0x63C5C200, 12, 0, 1632000, 4, 1632000, 5, 1632000, 6, 1632000, 7, 1632000,
+            8, 1632000, 0x43C60000, 0x0, 0x40CF8200, 0x4C4B40, 0x43C68200, 1, 0x40818000, 0,
+            0x40818200, 0, 0x44418100, 0x4, 0x41018010, 0, 0x43040000, 3686400, 0x434A8000, 4224000,
+            0x4346C000, 4224000, 0x434AC000, 4224000, 0x434B0000, 4224000, 0x434B4000, 4224000,
+            0x41848000, 933000, 0x434B8000, 1066000, 0x43470000, 1066000, 0x434BC000, 1066000,
+            0x41444000, 0x0, 0x41444100, 0x0, 0x41444200, 0x0, 0x41444300, 0x0, 0x44410000, 0,
+            0x44408000, 0x2, 0x4440C000, 0x2, 0X42838000, 3, 0X42840000, 2, 0x43C40000, 0, 0x43C58000, 0,
+            0X43C34000, 400" />
+        <Config
+            Id="0x1" Package="com.tencent.tmgp.sgame" Enable="true" Timeout="0" Target="tuna" Fps="120" TargetFps="120"
+            Resources="0x63C5C100, 12, 0, 979200, 4, 979200, 5, 979200, 6, 979200, 7, 979200,
+            8, 979200, 0x63C5C000, 12, 0, 2323200, 4, 2323200, 5, 2323200, 6, 2323200, 7, 2323200,
+            8, 2323200, 0x63C5C300, 12, 0, 2323200, 4, 2323200, 5, 2323200, 6, 2323200, 7, 2323200,
+            8, 2323200, 0x63C5C200, 12, 0, 2400000, 4, 2400000, 5, 2400000, 6, 2400000, 7, 2400000,
+            8, 2400000, 0x41444000, 0x0, 0x41444100, 0x0, 0x41444200, 0x0, 0x41444300, 0x0,
+            0x40CF8200, 0x3D0900, 0x43C68200, 1, 0x43C60000, 0x0, 0X43C18000, 3, 0X43C34000, 400" />
+        <Config
+            Id="0x1" Package="com.tencent.tmgp.pubgmhd" Enable="true" Target="tuna" Fps="60"
+            Resources="0x40C9C000, 4, 0x43C6C000, 1, 0x63C5C100, 12, 0, 979200, 4, 979200, 5, 979200, 6, 979200, 7, 979200,
+            8, 979200, 0x63C5C000, 12, 0, 1190400, 4, 1190400, 5, 1190400, 6, 1190400, 7, 1190400,
+            8, 1190400, 0x63C5C300, 12, 0, 979200, 4, 979200, 5, 979200, 6, 979200, 7, 979200,
+            8, 979200, 0x63C5C200, 12, 0, 1228800, 4, 1228800, 5, 1228800, 6, 1228800, 7, 1228800,
+            8, 1228800, 0x43C58000, 0, 0x41444000, 0, 0x41444100, 0, 0x41444200, 0, 0x41444300, 0,
+            0X43C40000, 0, 0x43C60000, 0, 0X43C34000, 250" />
+        <Config
+            Id="0x1" Package="com.tencent.tmgp.pubgmhd" Enable="true" Target="tuna"  Fps="90"
+            Resources="0x43C60000, 0, 0x40C9C000, 4, 0x43C6C000, 1, 0x43C40000, 650,
+            0X43C18000, 3, 0x40818000, 1632, 0x40818200, 1670, 0x40818300, 1632, 0X43C34000, 250,
+            0x40CF8200, 0x895440, 0x43C68200, 1, 0x43C70000, 0XF21F, 0x40CE0200, 0x00640063,
+            0x40C78000, 95, 0x40C7C000, 95, 0x41008300, 0, 0x4144C100, 979200, 0x4144C300, 940800,
+            0x40814000, 1632000, 0x40808000, 2073600, 0x4080C000, 2515200,
+            0x40814100, 979200, 0x40808100, 1286400, 0x4080C100, 1516800,
+            0x40814200, 1670400, 0x40808200, 2054400, 0x4080C200, 2400000,
+            0x40814300, 1632000, 0x40808300, 2073600, 0x4080C300, 2515200,
+            0x63C5C000, 10, 0, 0xFFFFFF, 4, 1632000, 6, 0xFFFFFF, 7, 0xFFFFFF, 8, 0xFFFFFF,
+            0x63C5C100, 10, 0, 0xFFFFFF, 4, 1075200, 6, 0xFFFFFF, 7, 0xFFFFFF, 8, 0xFFFFFF,
+            0x63C5C200, 10, 0, 2841600, 4, 1632000, 6, 2956800, 7, 2956800, 8, 2956800,
+            0x63C5C300, 10, 0, 0xFFFFFF, 4, 1632000, 6, 0xFFFFFF, 7, 0xFFFFFF, 8, 0xFFFFFF" />
+        <Config
+            Id="0x1" Package="com.tencent.tmgp.pubgmhd" Enable="true" Target="tuna"  Fps="120"
+            Resources="0x43C60000, 0, 0x40C9C000, 4, 0x43C6C000, 1, 0x43C40000, 0,
+            0X43C18000, 3, 0x40818000, 1632, 0x40818200, 1670, 0x40818300, 1632, 0X43C34000, 250,
+            0x40CF8200, 0x895440, 0x43C68200, 1, 0x43C70000, 0XF21F, 0x40CE0200, 0x00640063,
+            0x40C78000, 95, 0x40C7C000, 95, 0x41008300, 0, 0x4144C100, 979200, 0x4144C300, 940800,
+            0x40814000, 1632000, 0x40808000, 2208000, 0x4080C000, 2515200,
+            0x40814100, 979200, 0x40808100, 1286400, 0x4080C100, 1516800,
+            0x40814200, 1670400, 0x40808200, 2169600, 0x4080C200, 2400000,
+            0x40814300, 1632000, 0x40808300, 2208000, 0x4080C300, 2515200,
+            0x63C5C000, 10, 0, 2803200, 4, 1632000, 6, 2918400, 7, 2918400, 8, 2918400,
+            0x63C5C100, 10, 0, 1785600, 4, 1075200, 6, 1804800, 7, 1804800, 8, 1804800,
+            0x63C5C200, 10, 0, 2841600, 4, 1632000, 6, 2956800, 7, 2956800, 8, 2956800,
+            0x63C5C300, 10, 0, 2707200, 4, 1632000, 6, 2803200, 7, 2803200, 8, 2803200" />
+        <Config
+            Id="0x1" Package="com.pubg.imobile" Enable="true" Target="tuna" Fps="60"
+            Resources="0x40C9C000, 4, 0x43C6C000, 1, 0x63C5C100, 12, 0, 979200, 4, 979200, 5, 979200, 6, 979200, 7, 979200,
+            8, 979200, 0x63C5C000, 12, 0, 1190400, 4, 1190400, 5, 1190400, 6, 1190400, 7, 1190400,
+            8, 1190400, 0x63C5C300, 12, 0, 979200, 4, 979200, 5, 979200, 6, 979200, 7, 979200,
+            8, 979200, 0x63C5C200, 12, 0, 1228800, 4, 1228800, 5, 1228800, 6, 1228800, 7, 1228800,
+            8, 1228800, 0x43C58000, 0, 0x41444000, 0, 0x41444100, 0, 0x41444200, 0, 0x41444300, 0,
+            0X43C40000, 0, 0x43C60000, 0, 0X43C34000, 250" />
+        <Config
+            Id="0x1" Package="com.pubg.imobile" Enable="true" Target="tuna"  Fps="90"
+            Resources="0x43C60000, 1, 0x40C9C000, 4, 0x43C6C000, 1, 0x43C40000, 0, 0x40CD8000, 0,
+            0x40818000, 1401, 0x40818200, 1363, 0x40CF8200, 0x3D0900, 0x43C68200, 1, 0X43C34000, 250,
+            0x40814000, 787200, 0x40808000, 1401600, 0x4080C000, 1728000,
+            0x40814200, 787200, 0x40808200, 1728000, 0x4080C200, 1920000,
+            0x40814300, 787200, 0x40808000, 1401600, 0x4080C000, 1728000,
+            0x63C5C000, 10, 0, 2515200, 4, 1632000, 6, 2707200, 7, 2707200, 8, 2707200,
+            0x63C5C100, 10, 0, 1785600, 4, 1075200, 6, 1804800, 7, 1804800, 8, 1804800,
+            0x63C5C200, 10, 0, 2745600, 4, 1632000, 6, 2841600, 7, 2841600, 8, 2841600,
+            0x63C5C300, 10, 0, 2515200, 4, 1632000, 6, 2707200, 7, 2707200, 8, 2707200,
+            0x63C64000, 2, 60000, 60000" />
+        <Config
+            Id="0x1" Package="com.pubg.imobile" Enable="true" Target="tuna"  Fps="120"
+            Resources="0x43C60000, 1, 0x40C9C000, 4, 0x43C6C000, 1, 0x43C40000, 0, 0x40CD8000, 0,
+            0x40818000, 1401, 0x40818200, 1363, 0x40CF8200, 0x3D0900, 0x43C68200, 1, 0X43C34000, 250,
+            0x40814000, 1056000, 0x40808000, 1632000, 0x4080C000, 2208000,
+            0x40814200, 1094400, 0x40808200, 1670400, 0x4080C200, 2284800,
+            0x40814300, 1056000, 0x40808300, 1632000, 0x4080C300, 2208000,
+            0x63C5C000, 10, 0, 2707200, 4, 1632000, 6, 2918400, 7, 2918400, 8, 2918400,
+            0x63C5C100, 10, 0, 1785600, 4, 1075200, 6, 1804800, 7, 1804800, 8, 1804800,
+            0x63C5C200, 10, 0, 2745600, 4, 1632000, 6, 2841600, 7, 2841600, 8, 2841600,
+            0x63C5C300, 10, 0, 2515200, 4, 1632000, 6, 2707200, 7, 2707200, 8, 2707200,
+            0x63C64000, 2, 60000, 60000" />
+        <Config
+            Id="0x1" Package="com.tencent.tmgp.sgame" Enable="true" Target="tuna" Fps="60" TargetFps="60"
+            Resources="0x63C5C100, 12, 0, 979200, 4, 979200, 5, 979200, 6, 979200, 7, 979200,
+            8, 979200, 0x63C5C000, 12, 0, 1401600, 4, 1401600, 5, 1401600, 6, 1401600,
+            7, 1401600, 8, 1401600, 0x63C5C300, 12, 0, 979200, 4, 979200, 5, 979200, 6, 979200,
+            7, 979200, 8, 979200, 0x63C5C200, 12, 0, 1478400, 4, 1478400, 5, 1478400, 6, 1478400,
+            7, 1478400, 8, 1478400, 0x43C58000, 0, 0x41444000, 0, 0x41444100, 0, 0x41444200, 0,
+            0x41444300, 0, 0X43C40000, 0, 0x43C60000, 0, 0X43C18000, 2, 0X43C34000, 400" />
+      <Config
+            Id="0x1" Package="com.tencent.tmgp.speedmobile" Enable="true" Target="tuna" Fps="120" TargetFps="120"
+            Resources="0x63C5C100, 12, 0, 979200, 4, 979200, 5, 979200, 6, 979200, 7, 979200,
+            8, 979200, 0x63C5C000, 12, 0, 2707200, 4, 2707200, 5, 2707200, 6, 2707200,
+            7, 2707200, 8, 2707200, 0x63C5C300, 12, 0, 2630400, 4, 2630400, 5, 2630400,
+            6, 2630400, 7, 2630400, 8, 2630400, 0x63C5C200, 12, 0, 2611200, 4, 2611200,
+            5, 2611200, 6, 2611200, 7, 2611200, 8, 2611200, 0x43C58000, 0, 0x41444000, 0,
+            0x41444100, 0, 0x41444200, 0, 0x41444300, 0, 0X43C40000, 0, 0x43C60000, 0, 0X43C18000, 3,
+            0X43C34000, 400" />
+        <Config
+            Id="0x1" Package="com.levelinfinite.sgameGlobal" Enable="true" Timeout="0" Target="tuna" Fps="120" TargetFps="120"
+            Resources="0x63C5C100, 12, 0, 979200, 4, 979200, 5, 979200, 6, 979200, 7, 979200,
+            8, 979200, 0x63C5C000, 12, 0, 2323200, 4, 2323200, 5, 2323200, 6, 2323200, 7, 2323200,
+            8, 2323200, 0x63C5C300, 12, 0, 2323200, 4, 2323200, 5, 2323200, 6, 2323200, 7, 2323200,
+            8, 2323200, 0x63C5C200, 12, 0, 2400000, 4, 2400000, 5, 2400000, 6, 2400000, 7, 2400000,
+            8, 2400000, 0x41444000, 0x0, 0x41444100, 0x0, 0x41444200, 0x0, 0x41444300, 0x0,
+            0x40CF8200, 0x3D0900, 0x43C68200, 1, 0x43C60000, 0x0, 0X43C18000, 3, 0X43C34000, 400" />
+        <Config
+            Id="0x1" Package="com.epicgames.fortnite" Enable="true" Timeout="0" Target="tuna" Fps="60"
+            Resources="0x43C60000, 0x0, 0x43C40000, 1024, 0X43C34000, 300"/>
+        <Config
+            Id="0x1" Package="com.epicgames.fortnite" Enable="true" Timeout="0" Target="tuna" Fps="120"
+            Resources="0x43C40000, 0, 0x43C60000, 0x1, 0x40818000, 1401, 0x40818200, 1363,
+            0x40CF8200, 0x3D0900, 0x43C68200, 1, 0X43C34000, 300,
+            0x63C5C200, 12, 0, 1632000, 2, 2515200, 3, 2515200, 6, 1632000, 7, 1632000,
+            8, 1632000, 0x63C5C000, 8, 0, 2707200, 6, 2918400, 7, 2918400, 8, 2918400,
+            0x63C5C300, 8, 0, 2515200, 6, 2707200, 7, 2707200, 8, 2707200,
+            0x63C5C100, 8, 0, 1785600, 6, 1804800, 7, 1804800, 8, 1804800,
+            0x63C64000, 2, 60000, 300000,
+            0x40814000, 1056000, 0x40808000, 1920000, 0x4080C000, 2515200,
+            0x40814200, 1094400, 0x40808200, 1920000, 0x4080C200, 2515200" />
+        <Config
+            Id="0x1" Package="com.miHoYo.Nap" Enable="true" Timeout="0" Target="tuna" Fps="60"
+            Resources="0x63C5C100, 12, 0, 1075200, 4, 1075200, 5, 1075200, 6, 1075200, 7, 1075200,
+            8, 1075200, 0x63C5C000, 12, 0, 2707200, 4, 2707200, 5, 2707200, 6, 2707200, 7, 2707200,
+            8, 2707200, 0x63C5C200, 12, 0, 2745600, 4, 2745600, 5, 2745600, 6, 2745600, 7, 2745600,
+            8, 2745600, 0x63C5C300, 12, 0, 1632000, 4, 1632000, 5, 1632000, 6, 1632000, 7, 1632000,
+            8, 1632000, 0x41444000, 0x0, 0x41444100, 0x0, 0x41444200, 0x0, 0x41444300, 0x0,
+            0x40CF8200, 0x3D0900, 0x43C68200, 1, 0x43C60000, 0x0, 0x43C40000, 0, 0x43C58000, 0,
+            0X43C18000, 3, 0X42838000, 0x3, 0X4283c000, 0x2, 0x44418100, 0x2, 0x44410000, 0x1, 0x44408000, 0x2,
+	        0x4440C000, 0x2, 0x4143C200, 0, 0x4143C000, 0, 0x4143C300, 0, 0X43C34000, 400" />
+        <Config
+            Id="0x1" Package="com.kurogame.mingchao" Enable="true" Timeout="0" Target="tuna" Fps="60"
+            Resources="0x63C5C100, 12, 0, 1075200, 4, 1075200, 5, 1075200, 6, 1075200, 7, 1075200,
+            8, 1075200, 0x63C5C000, 12, 0, 2707200, 4, 2707200, 5, 2707200, 6, 2707200, 7, 2707200,
+            8, 2707200, 0x63C5C200, 12, 0, 2707200, 4, 2707200, 5, 2707200, 6, 2707200, 7, 2707200,
+            8, 2707200, 0x63C5C300, 12, 0, 1632000, 4, 1632000, 5, 1632000, 6, 1632000, 7, 1632000,
+            8, 1632000, 0x41444000, 0x0, 0x41444100, 0x0, 0x41444200, 0x0, 0x41444300, 0x0,
+            0x40CF8200, 0x3D0900, 0x43C68200, 1, 0x43C60000, 0x0, 0x43C40000, 0, 0x43C58000, 0,
+            0X43C18000, 3, 0X42838000, 0x3, 0X4283c000, 0x2, 0x44418100, 0x2, 0x44410000, 0x1, 0x44408000, 0x2,
+		    0x4440C000, 0x2, 0x4143C200, 0, 0x4143C000, 0, 0x4143C300, 0, 0x63C64000, 2, 300, 300,
+            0X43C34000, 400" />
+
+        <!-- Game Play Generic Profiles for kera-->
+        <!-- MPCTLV3_WALT_HISPEED_COND_FREQ_BIG -->
+        <!-- MPCTLV3_WALT_HISPEED_COND_FREQ_PRIME -->
+        <!-- MPCTLV3_SCHED_PIPELINE_UTIL_THRES -->
+        <!-- MPCTLV3_SCHED_LEGACY_FREQ_LEVELS BIG -->
+        <!-- MPCTLV3_SCHED_LEGACY_FREQ_LEVELS SILVER -->
+        <!-- MPCTLV3_SCHED_LEGACY_FREQ_LEVELS PRIME -->
+        <!-- MPCTLV3_SCHED_PIPELINE_REARRAGE_DELAY_MS -->
+        <Config
+            Id="0x1" Enable="true" Timeout="0" Target="kera" Class="0"
+            Resources="0x43C60000, 1, 0x40C9C000, 4, 0x43C6C000, 1, 0x43C40000, 0, 0x40CD8000, 25,
+            0x40818000, 900, 0x40818200, 900, 0X43C34000, 250, 0X42838000, 3, 0X42840000, 2,
+            0x63C5C000, 14, 0, 1920000, 2, 1920000, 3, 1920000, 4, 1612800, 6, 1920000, 7, 1920000, 8, 1920000,
+            0x63C5C100, 10, 0, 1593600, 4, 1094400, 6, 1593600, 7, 1593600, 8, 1593600,
+            0x63C5C200, 14, 0, 2016000, 2, 2150400, 3, 2150400, 4, 1651200, 6, 2150400, 7, 2150400, 8, 2150400,
+            0x63C64000, 2, 60000, 30000" />
+        <!-- MPCTLV3_WALT_HISPEED_COND_FREQ_BIG -->
+        <!-- MPCTLV3_WALT_HISPEED_COND_FREQ_PRIME -->
+        <!-- MPCTLV3_SCHED_PIPELINE_UTIL_THRES -->
+        <!-- MPCTLV3_GPU_DCVS_TUNING_MINGAP -->
+        <!-- MPCTLV3_GPU_DCVS_TUNING_PENALTY -->
+        <!-- MPCTLV3_SCHED_LEGACY_FREQ_LEVELS PRIME -->
+        <!-- MPCTLV3_SCHED_LEGACY_FREQ_LEVELS BIG -->
+        <!-- MPCTLV3_SCHED_LEGACY_FREQ_LEVELS TITANIUM -->
+        <!-- MPCTLV3_SCHED_PIPELINE_REARRAGE_DELAY_MS -->
+        <Config
+            Id="0x1" Enable="true" Timeout="0" Target="kera" Class="1"
+            Resources="0x43C60000, 1, 0x40C9C000, 4, 0x43C6C000, 1, 0x43C40000, 0, 0x40CD8000, 25,
+            0x40818000, 900, 0x40818200, 900, 0X43C34000, 300, 0X42838000, 3, 0X42840000, 2,
+            0x63C5C000, 10, 0, 2073600, 4, 1612800, 6, 2208000, 7, 2208000, 8, 2208000,
+            0x63C5C100, 10, 0, 1593600, 4, 1094400, 6, 1593600, 7, 1593600, 8, 1593600,
+            0x63C5C200, 10, 0, 2304000, 4, 1651200, 6, 2496000, 7, 2496000, 8, 2496000,
+            0x63C64000, 2, 60000, 30000" />
+        <!-- MPCTLV3_WALT_HISPEED_COND_FREQ_BIG -->
+        <!-- MPCTLV3_WALT_HISPEED_COND_FREQ_PRIME -->
+        <!-- MPCTLV3_SCHED_PIPELINE_UTIL_THRES -->
+        <!-- MPCTLV3_GPU_DCVS_TUNING_MINGAP -->
+        <!-- MPCTLV3_GPU_DCVS_TUNING_PENALTY -->
+        <!-- MPCTLV3_SCHED_LEGACY_FREQ_LEVELS PRIME -->
+        <!-- MPCTLV3_SCHED_LEGACY_FREQ_LEVELS BIG -->
+        <!-- MPCTLV3_SCHED_LEGACY_FREQ_LEVELS TITANIUM -->
+        <!-- MPCTLV3_SCHED_LEGACY_FREQ_LEVELS SILVER -->
+        <!-- MPCTLV3_SCHED_PIPELINE_REARRAGE_DELAY_MS -->
+        <Config
+            Id="0x1" Enable="true" Timeout="0" Target="kera" Class="2"
+            Resources="0x43C60000, 1, 0x40C9C000, 4, 0x43C6C000, 1, 0x43C40000, 0, 0x41000000, 4,
+            0x40818000, 1401, 0x40818200, 1363, 0X43C34000, 300, 0X42838000, 3, 0X42840000, 2,
+            0x63C5C000, 10, 0, 2361600, 4, 1612800, 6, 2534400, 7, 2534400, 8, 2534400,
+            0x63C5C100, 10, 0, 1785600, 4, 1094400, 6, 1804800, 7, 1804800, 8, 1804800,
+            0x63C5C200, 10, 0, 2649600, 4, 1651200, 6, 2803200, 7, 2803200, 8, 2803200,
+            0x63C64000, 2, 60000, 60000" />
+
+       <Config
+            Id="0x1" Package="com.tencent.tmgp.pubgmhd" Enable="true" Target="kera"
+            Resources="0x43C60000, 0, 0x40C9C000, 4, 0x43C6C000, 1, 0x43C40000, 0,
+            0x40818000, 1401, 0x40818200, 1363, 0x40CF8200, 0x3D0900, 0X43C34000, 250,
+            0x40C78000, 95, 0x40C7C000, 95, 0x41008000, 0, 0x4144C100, 1017600,
+            0X43C18000, 3, 0x41000000, 4, 0x41000200, 1, 0x43C70000, 0XFFFF, 0x40CE0200, 0x00640063,
+            0x40814000, 1612800, 0x40808000, 2073600, 0x4080C000, 2534400,
+            0x40814200, 1651200, 0x40808200, 2150400, 0x4080C200, 2649600,
+            0x63C5C000, 10, 0, 2534400, 4, 1612800, 6, 0xffffff, 7, 0xffffff, 8, 0xffffff,
+            0x63C5C100, 10, 0, 1708800, 4, 1094400, 6, 0xffffff, 7, 0xffffff, 8, 0xffffff,
+            0x63C5C200, 10, 0, 2803200, 4, 1651200, 6, 0xffffff, 7, 0xffffff, 8, 0xffffff" />
+        <Config
+            Id="0x1" Package="com.miHoYo.GenshinImpact" Enable="true" Timeout="0" Target="kera"
+            Resources="0x43C60000, 1, 0x40C9C000, 4, 0x43C6C000, 1, 0x43C40000, 0, 0x41000000, 4,
+            0x40818000, 1401, 0x40818200, 1363, 0X43C34000, 300, 0X42838000, 3, 0X42840000, 2,
+            0x63C5C000, 10, 0, 2361600, 4, 1612800, 6, 2534400, 7, 2534400, 8, 2534400,
+            0x63C5C100, 10, 0, 1785600, 4, 1094400, 6, 1804800, 7, 1804800, 8, 1804800,
+            0x63C5C200, 10, 0, 2649600, 4, 1651200, 6, 2803200, 7, 2803200, 8, 2803200,
+            0x63C64000, 2, 60000, 60000" />
+        <Config
+            Id="0x1" Package="com.miHoYo.Yuanshen" Enable="true" Timeout="0" Target="kera"
+            Resources="0x43C60000, 1, 0x40C9C000, 4, 0x43C6C000, 1, 0x43C40000, 0, 0x41000000, 4,
+            0x40818000, 1401, 0x40818200, 1363, 0X43C34000, 300, 0X42838000, 3, 0X42840000, 2,
+            0x63C5C000, 10, 0, 2361600, 4, 1612800, 6, 2534400, 7, 2534400, 8, 2534400,
+            0x63C5C100, 10, 0, 1785600, 4, 1094400, 6, 1804800, 7, 1804800, 8, 1804800,
+            0x63C5C200, 10, 0, 2649600, 4, 1651200, 6, 2803200, 7, 2803200, 8, 2803200,
+            0x63C64000, 2, 60000, 60000" />
+        <Config
+            Id="0x1" Package="com.tencent.tmgp.pubgmhd" Enable="true" Target="kera" Fps="60"
+            Resources="0x63C5C100, 12, 0, 979200, 4, 979200, 5, 979200, 6, 979200, 7, 979200,
+            8, 979200, 0x63C5C000, 12, 0, 1190400, 4, 1190400, 5, 1190400, 6, 1190400, 7, 1190400,
+            8, 1190400, 0x63C5C200, 12, 0, 1228800, 4, 1228800, 5, 1228800, 6, 1228800, 7, 1228800,
+            8, 1228800, 0x43C58000, 0, 0x41444000, 0, 0x41444100, 0, 0x41444200, 0, 0x41444300, 0,
+            0X43C40000, 0, 0x43C60000, 0" />
+        <Config
+            Id="0x1" Package="com.tencent.tmgp.sgame" Enable="true" Timeout="0" Target="kera" Fps="120" TargetFps="120"
+            Resources="0x63C5C100, 12, 0, 979200, 4, 979200, 5, 979200, 6, 979200, 7, 979200,
+            8, 979200, 0x63C5C000, 12, 0, 2323200, 4, 2323200, 5, 2323200, 6, 2323200, 7, 2323200,
+            8, 2323200, 0x63C5C200, 12, 0, 2400000, 4, 2400000, 5, 2400000, 6, 2400000, 7, 2400000,
+            8, 2400000, 0x41444000, 0x0, 0x41444100, 0x0, 0x41444200, 0x0, 0x41444300, 0x0,
+            0x40CF8200, 0x3D0900, 0x43C68200, 1, 0x43C40000, 0, 0x43C58000, 0, 0x43C60000, 0x0, 0X43C18000, 3" />
+        <Config
+            Id="0x1" Package="com.levelinfinite.sgameGlobal" Enable="true" Timeout="0" Target="kera" Fps="120" TargetFps="120"
+            Resources="0x63C5C100, 12, 0, 979200, 4, 979200, 5, 979200, 6, 979200, 7, 979200,
+            8, 979200, 0x63C5C000, 12, 0, 2323200, 4, 2323200, 5, 2323200, 6, 2323200, 7, 2323200,
+            8, 2323200, 0x63C5C200, 12, 0, 2400000, 4, 2400000, 5, 2400000, 6, 2400000, 7, 2400000,
+            8, 2400000, 0x41444000, 0x0, 0x41444100, 0x0, 0x41444200, 0x0, 0x41444300, 0x0,
+            0x40CF8200, 0x3D0900, 0x43C68200, 1, 0x43C40000, 0, 0x43C58000, 0, 0x43C60000, 0x0, 0X43C18000, 3" />
+        <Config
+            Id="0x1" Package="com.tencent.tmgp.sgame" Enable="true" Target="kera" Fps="60" TargetFps="60"
+            Resources="0x63C5C100, 12, 0, 979200, 4, 979200, 5, 979200, 6, 979200, 7, 979200,
+            8, 979200, 0x63C5C000, 12, 0, 1401600, 4, 1401600, 5, 1401600, 6, 1401600,
+            7, 1401600, 8, 1401600, 0x63C5C200, 12, 0, 1478400, 4, 1478400, 5, 1478400, 6, 1478400,
+            7, 1478400, 8, 1478400, 0x43C58000, 0, 0x41444000, 0, 0x41444100, 0, 0x41444200, 0,
+            0x41444300, 0, 0X43C40000, 0, 0x43C60000, 0, 0X43C18000, 2" />
+        <Config
+            Id="0x1" Package="com.levelinfinite.sgameGlobal" Enable="true" Target="kera" Fps="60" TargetFps="60"
+            Resources="0x63C5C100, 12, 0, 979200, 4, 979200, 5, 979200, 6, 979200, 7, 979200,
+            8, 979200, 0x63C5C000, 12, 0, 1401600, 4, 1401600, 5, 1401600, 6, 1401600,
+            7, 1401600, 8, 1401600, 0x63C5C200, 12, 0, 1478400, 4, 1478400, 5, 1478400, 6, 1478400,
+            7, 1478400, 8, 1478400, 0x43C58000, 0, 0x41444000, 0, 0x41444100, 0, 0x41444200, 0,
+            0x41444300, 0, 0X43C40000, 0, 0x43C60000, 0, 0X43C18000, 2" />
+        <Config
+            Id="0x1" Package="com.tencent.tmgp.speedmobile" Enable="true" Target="kera" Fps="120" TargetFps="120"
+            Resources="0x63C5C100, 12, 0, 979200, 4, 979200, 5, 979200, 6, 979200, 7, 979200,
+            8, 979200, 0x63C5C000, 12, 0, 2707200, 4, 2707200, 5, 2707200, 6, 2707200,
+            7, 2707200, 8, 2707200, 0x63C5C200, 12, 0, 2611200, 4, 2611200,
+            5, 2611200, 6, 2611200, 7, 2611200, 8, 2611200, 0x43C58000, 0, 0x41444000, 0,
+	    0x41444100, 0, 0x41444200, 0, 0x41444300, 0, 0X43C40000, 0, 0x43C60000, 0, 0X43C18000, 3" />
+        <Config
+            Id="0x1" Package="com.epicgames.fortnite" Enable="true" Timeout="0" Target="kera" Fps="60"
+            Resources="0x43C60000, 0x0, 0x43C40000, 1024" />
+
+        <!-- Minimalistic Jank Rescuer Profiles for tuna-->
+        <!-- MJR: jank tile profiles -->
+        <Config
+            Id="0x2" Enable="true" Timeout="200" Target="tuna" Class="2" RescueLevel="1"
+            RescueResources="0x40804000, 0xffffff, 0x40804200, 0xffffff, 0x40804300, 0xffffff,
+            0x63C5C000, 8, 0, 0xffffff, 6, 0xffffff, 7, 0xffffff, 8, 0xffffff,
+            0x63C5C100, 8, 0, 0xffffff, 6, 0xffffff, 7, 0xffffff, 8, 0xffffff,
+            0x63C5C200, 12, 0, 0xffffff, 2, 0xffffff, 3, 0xffffff, 6, 0xffffff, 7, 0xffffff, 8, 0xffffff,
+            0x63C5C300, 8, 0, 0xffffff, 6, 0xffffff, 7, 0xffffff, 8, 0xffffff,
+            0x40814000, 1401600, 0x40808000, 1920000, 0x4080C000, 2515200,
+            0x40814200, 1478400, 0x40808200, 1920000, 0x4080C200, 2515200,
+            0x43488000, 3686400, 0x43484000, 3686400" />
+        <Config
+            Id="0x2" Enable="true" Timeout="200" Target="tuna" Class="2" RescueLevel="2"
+            RescueResources="0x40804000, 0xffffff, 0x40804200, 0xffffff, 0x40804300, 0xffffff,
+            0x63C5C000, 8, 0, 0xffffff, 6, 0xffffff, 7, 0xffffff, 8, 0xffffff,
+            0x63C5C100, 8, 0, 0xffffff, 6, 0xffffff, 7, 0xffffff, 8, 0xffffff,
+            0x63C5C200, 12, 0, 0xffffff, 2, 0xffffff, 3, 0xffffff, 6, 0xffffff, 7, 0xffffff, 8, 0xffffff,
+            0x63C5C300, 8, 0, 0xffffff, 6, 0xffffff, 7, 0xffffff, 8, 0xffffff,
+            0x40814000, 1401600, 0x40808000, 1920000, 0x4080C000, 2515200,
+            0x40814200, 1478400, 0x40808200, 1920000, 0x4080C200, 2515200,
+            0x43488000, 3686400, 0x43484000, 3686400, 0x42804000, 3" />
+        <Config
+            Id="0x2" Enable="true" Timeout="200" Target="tuna" Class="2" RescueLevel="3"
+            RescueResources="0x40804000, 0xffffff, 0x40804200, 0xffffff, 0x40804300, 0xffffff,
+            0x63C5C000, 8, 0, 0xffffff, 6, 0xffffff, 7, 0xffffff, 8, 0xffffff,
+            0x63C5C100, 8, 0, 0xffffff, 6, 0xffffff, 7, 0xffffff, 8, 0xffffff,
+            0x63C5C200, 12, 0, 0xffffff, 2, 0xffffff, 3, 0xffffff, 6, 0xffffff, 7, 0xffffff, 8, 0xffffff,
+            0x63C5C300, 8, 0, 0xffffff, 6, 0xffffff, 7, 0xffffff, 8, 0xffffff,
+            0x40814000, 1632000, 0x40808000, 2208000, 0x4080C000, 2803200,
+            0x40814200, 1670400, 0x40808200, 2169600, 0x4080C200, 2630400,
+            0x43488000, 3686400, 0x43484000, 3686400, 0x42804000, 2" />
+        <Config
+            Id="0x2" Enable="true" Timeout="200" Target="tuna" Class="2" RescueLevel="4"
+            RescueResources="0x42804000, 0" />
+        <Config
+            Id="0x2" Enable="true" Timeout="200" Target="tuna" Class="2" RescueLevel="5"
+            RescueResources="0x40804000, 0xffffff, 0x40804200, 0xffffff, 0x40804300, 0xffffff,
+            0x63C5C200, 10, 2, 3030000, 3, 3030000, 6, 3030000, 7, 3030000, 8, 3030000,
+            0x40814000, 1632000, 0x40808000, 2208000, 0x4080C000, 2803200,
+            0x40814200, 1670400, 0x40808200, 2169600, 0x4080C200, 2630400,
+            0x43488000, 3686400, 0x43484000, 3686400, 0x42804000, 0" />
+        <!-- MJR: jank window profiles -->
+        <Config
+            Id="0x2" Enable="true" Timeout="500" Target="tuna" Class="2" RescueLevel="6"
+            RescueResources="0x40804000, 0xffffff, 0x40804200, 0xffffff,
+            0x63C5C200, 10, 2, 2841600, 3, 2841600, 6, 2841600, 7, 2841600, 8, 2841600,
+            0x40814000, 1632000, 0x40808000, 2208000, 0x4080C000, 2803200,
+            0x40814200, 1363200, 0x40808200, 1670400, 0x4080C200, 2400000" />
+        <!-- MJR: jank profiles for specific games -->
+        <Config
+            Id="0x2" Package="com.tencent.tmgp.pubgmhd" Enable="true" Timeout="200" Target="tuna" RescueLevel="1"
+            RescueResources="0x40804000, 0xffffff, 0x40804200, 0xffffff, 0x40804300, 0xffffff,
+            0x63C5C000, 8, 0, 0xffffff, 6, 0xffffff, 7, 0xffffff, 8, 0xffffff,
+            0x63C5C100, 8, 0, 0xffffff, 6, 0xffffff, 7, 0xffffff, 8, 0xffffff,
+            0x63C5C200, 8, 0, 0xffffff, 6, 0xffffff, 7, 0xffffff, 8, 0xffffff,
+            0x63C5C300, 8, 0, 0xffffff, 6, 0xffffff, 7, 0xffffff, 8, 0xffffff,
+            0x40814000, 1920000, 0x40808000, 2400000, 0x4080C000, 0xffffff,
+            0x40814200, 1920000, 0x40808200, 2400000, 0x4080C200, 0xffffff,
+            0x43488000, 4761600, 0x43484000, 4761600, 0x43C70000, 0XF21F, 0x40CE0200, 0x005A0055" />
+        <Config
+            Id="0x2" Package="com.tencent.tmgp.pubgmhd" Enable="true" Timeout="200" Target="tuna" RescueLevel="2"
+            RescueResources="0x40804000, 0xffffff, 0x40804200, 0xffffff, 0x40804300, 0xffffff,
+            0x63C5C000, 8, 0, 0xffffff, 6, 0xffffff, 7, 0xffffff, 8, 0xffffff,
+            0x63C5C100, 8, 0, 0xffffff, 6, 0xffffff, 7, 0xffffff, 8, 0xffffff,
+            0x63C5C200, 8, 0, 0xffffff, 6, 0xffffff, 7, 0xffffff, 8, 0xffffff,
+            0x63C5C300, 8, 0, 0xffffff, 6, 0xffffff, 7, 0xffffff, 8, 0xffffff,
+            0x40814000, 1920000, 0x40808000, 2400000, 0x4080C000, 0xffffff,
+            0x40814200, 1920000, 0x40808200, 2400000, 0x4080C200, 0xffffff,
+            0x43488000, 4761600, 0x43484000, 4761600, 0x43C70000, 0XF21F, 0x40CE0200, 0x005A0055" />
+        <Config
+            Id="0x2" Package="com.tencent.tmgp.pubgmhd" Enable="true" Timeout="200" Target="tuna" RescueLevel="3"
+            RescueResources="0x40804000, 0xffffff, 0x40804200, 0xffffff, 0x40804300, 0xffffff,
+            0x63C5C000, 8, 0, 0xffffff, 6, 0xffffff, 7, 0xffffff, 8, 0xffffff,
+            0x63C5C100, 8, 0, 0xffffff, 6, 0xffffff, 7, 0xffffff, 8, 0xffffff,
+            0x63C5C200, 8, 0, 0xffffff, 6, 0xffffff, 7, 0xffffff, 8, 0xffffff,
+            0x63C5C300, 8, 0, 0xffffff, 6, 0xffffff, 7, 0xffffff, 8, 0xffffff,
+            0x40814000, 1920000, 0x40808000, 2400000, 0x4080C000, 0xffffff,
+            0x40814200, 1920000, 0x40808200, 2400000, 0x4080C200, 0xffffff,
+            0x43488000, 4761600, 0x43484000, 4761600, 0x43C70000, 0XF21F, 0x40CE0200, 0x005A0055" />
+        <Config
+            Id="0x2" Package="com.tencent.tmgp.pubgmhd" Enable="true" Timeout="500" Target="tuna" RescueLevel="6"
+            RescueResources="0x40804000, 0xffff, 0x40804200, 0xffff, 0x40804300, 0xffff,
+            0x63C5C000, 8, 0, 0xffffff, 6, 0xffffff, 7, 0xffffff, 8, 0xffffff,
+            0x63C5C100, 8, 0, 0xffffff, 6, 0xffffff, 7, 0xffffff, 8, 0xffffff,
+            0x63C5C200, 8, 0, 0xffffff, 6, 0xffffff, 7, 0xffffff, 8, 0xffffff,
+            0x63C5C300, 8, 0, 0xffffff, 6, 0xffffff, 7, 0xffffff, 8, 0xffffff,
+            0x40814000, 1920000, 0x40808000, 2400000, 0x4080C000, 0xffffff,
+            0x40814200, 1920000, 0x40808200, 2400000, 0x4080C200, 0xffffff,
+            0x43488000, 4761600, 0x43484000, 4761600, 0x43C70000, 0XF21F, 0x40CE0200, 0x005A0055" />
+
+        <Config
+            Id="0x2" Package="com.miHoYo.GenshinImpact" Enable="true" Timeout="200" Target="tuna" RescueLevel="1"
+            RescueResources="0x40804000, 0xffffff, 0x40804200, 0xffffff, 0x40804300, 0xffffff,
+            0x63C5C000, 8, 0, 0xffffff, 6, 0xffffff, 7, 0xffffff, 8, 0xffffff,
+            0x63C5C100, 8, 0, 0xffffff, 6, 0xffffff, 7, 0xffffff, 8, 0xffffff,
+            0x63C5C200, 8, 0, 0xffffff, 6, 0xffffff, 7, 0xffffff, 8, 0xffffff,
+            0x63C5C300, 8, 0, 0xffffff, 6, 0xffffff, 7, 0xffffff, 8, 0xffffff,
+            0x40814000, 1920000, 0x40808000, 2400000, 0x4080C000, 0xffffff,
+            0x40814200, 1920000, 0x40808200, 2400000, 0x4080C200, 0xffffff" />
+        <Config
+            Id="0x2" Package="com.miHoYo.GenshinImpact" Enable="true" Timeout="200" Target="tuna" RescueLevel="2"
+            RescueResources="0x40804000, 0xffffff, 0x40804200, 0xffffff, 0x40804300, 0xffffff,
+            0x63C5C000, 8, 0, 0xffffff, 6, 0xffffff, 7, 0xffffff, 8, 0xffffff,
+            0x63C5C100, 8, 0, 0xffffff, 6, 0xffffff, 7, 0xffffff, 8, 0xffffff,
+            0x63C5C200, 8, 0, 0xffffff, 6, 0xffffff, 7, 0xffffff, 8, 0xffffff,
+            0x63C5C300, 8, 0, 0xffffff, 6, 0xffffff, 7, 0xffffff, 8, 0xffffff,
+            0x40814000, 1920000, 0x40808000, 2400000, 0x4080C000, 0xffffff,
+            0x40814200, 1920000, 0x40808200, 2400000, 0x4080C200, 0xffffff" />
+        <Config
+            Id="0x2" Package="com.miHoYo.GenshinImpact" Enable="true" Timeout="500" Target="tuna" RescueLevel="6"
+            RescueResources="0x40804000, 0xffff, 0x40804200, 0xffff, 0x40804300, 0xffff,
+            0x63C5C000, 8, 0, 0xffffff, 6, 0xffffff, 7, 0xffffff, 8, 0xffffff,
+            0x63C5C100, 8, 0, 0xffffff, 6, 0xffffff, 7, 0xffffff, 8, 0xffffff,
+            0x63C5C200, 8, 0, 0xffffff, 6, 0xffffff, 7, 0xffffff, 8, 0xffffff,
+            0x63C5C300, 8, 0, 0xffffff, 6, 0xffffff, 7, 0xffffff, 8, 0xffffff,
+            0x40814000, 1920000, 0x40808000, 2400000, 0x4080C000, 0xffffff,
+            0x40814200, 1920000, 0x40808200, 2400000, 0x4080C200, 0xffffff" />
+
+        <Config
+            Id="0x2" Package="com.HoYoverse.hkrpgoversea" Enable="true" Timeout="200" Target="tuna" RescueLevel="1"
+            RescueResources="0x40804000, 0xffffff, 0x40804200, 0xffffff, 0x40804300, 0xffffff,
+            0x63C5C000, 8, 0, 0xffffff, 6, 0xffffff, 7, 0xffffff, 8, 0xffffff,
+            0x63C5C100, 8, 0, 0xffffff, 6, 0xffffff, 7, 0xffffff, 8, 0xffffff,
+            0x63C5C200, 8, 0, 0xffffff, 6, 0xffffff, 7, 0xffffff, 8, 0xffffff,
+            0x63C5C300, 8, 0, 0xffffff, 6, 0xffffff, 7, 0xffffff, 8, 0xffffff,
+            0x40814000, 1920000, 0x40808000, 2400000, 0x4080C000, 0xffffff,
+            0x40814200, 1920000, 0x40808200, 2400000, 0x4080C200, 0xffffff" />
+        <Config
+            Id="0x2" Package="com.HoYoverse.hkrpgoversea" Enable="true" Timeout="200" Target="tuna" RescueLevel="2"
+            RescueResources="0x40804000, 0xffffff, 0x40804200, 0xffffff, 0x40804300, 0xffffff,
+            0x63C5C000, 8, 0, 0xffffff, 6, 0xffffff, 7, 0xffffff, 8, 0xffffff,
+            0x63C5C100, 8, 0, 0xffffff, 6, 0xffffff, 7, 0xffffff, 8, 0xffffff,
+            0x63C5C200, 8, 0, 0xffffff, 6, 0xffffff, 7, 0xffffff, 8, 0xffffff,
+            0x63C5C300, 8, 0, 0xffffff, 6, 0xffffff, 7, 0xffffff, 8, 0xffffff,
+            0x40814000, 1920000, 0x40808000, 2400000, 0x4080C000, 0xffffff,
+            0x40814200, 1920000, 0x40808200, 2400000, 0x4080C200, 0xffffff" />
+        <Config
+            Id="0x2" Package="com.HoYoverse.hkrpgoversea" Enable="true" Timeout="500" Target="tuna" RescueLevel="6"
+            RescueResources="0x40804000, 0xffff, 0x40804200, 0xffff, 0x40804300, 0xffff,
+            0x63C5C000, 8, 0, 0xffffff, 6, 0xffffff, 7, 0xffffff, 8, 0xffffff,
+            0x63C5C100, 8, 0, 0xffffff, 6, 0xffffff, 7, 0xffffff, 8, 0xffffff,
+            0x63C5C200, 8, 0, 0xffffff, 6, 0xffffff, 7, 0xffffff, 8, 0xffffff,
+            0x63C5C300, 8, 0, 0xffffff, 6, 0xffffff, 7, 0xffffff, 8, 0xffffff,
+            0x40814000, 1920000, 0x40808000, 2400000, 0x4080C000, 0xffffff,
+            0x40814200, 1920000, 0x40808200, 2400000, 0x4080C200, 0xffffff" />
+
+        <Config
+            Id="0x2" Package="com.levelinfinite.sgameGlobal" Enable="true" Timeout="200" Target="tuna" RescueLevel="1"
+            RescueResources="0x40804000, 0xffffff, 0x40804200, 0xffffff, 0x40804300, 0xffffff,
+            0x63C5C000, 8, 0, 0xffffff, 6, 0xffffff, 7, 0xffffff, 8, 0xffffff,
+            0x63C5C100, 8, 0, 0xffffff, 6, 0xffffff, 7, 0xffffff, 8, 0xffffff,
+            0x63C5C200, 8, 0, 0xffffff, 6, 0xffffff, 7, 0xffffff, 8, 0xffffff,
+            0x63C5C300, 8, 0, 0xffffff, 6, 0xffffff, 7, 0xffffff, 8, 0xffffff,
+            0x40814000, 1920000, 0x40808000, 2400000, 0x4080C000, 0xffffff,
+            0x40814200, 1920000, 0x40808200, 2400000, 0x4080C200, 0xffffff" />
+        <Config
+            Id="0x2" Package="com.levelinfinite.sgameGlobal" Enable="true" Timeout="200" Target="tuna" RescueLevel="2"
+            RescueResources="0x40804000, 0xffffff, 0x40804200, 0xffffff, 0x40804300, 0xffffff,
+            0x63C5C000, 8, 0, 0xffffff, 6, 0xffffff, 7, 0xffffff, 8, 0xffffff,
+            0x63C5C100, 8, 0, 0xffffff, 6, 0xffffff, 7, 0xffffff, 8, 0xffffff,
+            0x63C5C200, 8, 0, 0xffffff, 6, 0xffffff, 7, 0xffffff, 8, 0xffffff,
+            0x63C5C300, 8, 0, 0xffffff, 6, 0xffffff, 7, 0xffffff, 8, 0xffffff,
+            0x40814000, 1920000, 0x40808000, 2400000, 0x4080C000, 0xffffff,
+            0x40814200, 1920000, 0x40808200, 2400000, 0x4080C200, 0xffffff" />
+        <Config
+            Id="0x2" Package="com.levelinfinite.sgameGlobal" Enable="true" Timeout="500" Target="tuna" RescueLevel="6"
+            RescueResources="0x40804000, 0xffff, 0x40804200, 0xffff, 0x40804300, 0xffff,
+            0x63C5C000, 8, 0, 0xffffff, 6, 0xffffff, 7, 0xffffff, 8, 0xffffff,
+            0x63C5C100, 8, 0, 0xffffff, 6, 0xffffff, 7, 0xffffff, 8, 0xffffff,
+            0x63C5C200, 8, 0, 0xffffff, 6, 0xffffff, 7, 0xffffff, 8, 0xffffff,
+            0x63C5C300, 8, 0, 0xffffff, 6, 0xffffff, 7, 0xffffff, 8, 0xffffff,
+            0x40814000, 1920000, 0x40808000, 2400000, 0x4080C000, 0xffffff,
+            0x40814200, 1920000, 0x40808200, 2400000, 0x4080C200, 0xffffff" />
+
+        <!-- Minimalistic Jank Rescuer Profiles for kera -->
+        <!-- MJR: jank tile profiles -->
+        <Config
+            Id="0x2" Enable="true" Timeout="200" Target="kera" Class="2" RescueLevel="1"
+            RescueResources="0x40804000, 0xffffff, 0x40804200, 0xffffff,
+            0x63C5C000, 12, 0, 0xffffff, 2, 0xffffff, 3, 0xffffff, 6, 0xffffff, 7, 0xffffff, 8, 0xffffff,
+            0x63C5C100, 12, 0, 0xffffff, 2, 0xffffff, 3, 0xffffff, 6, 0xffffff, 7, 0xffffff, 8, 0xffffff,
+            0x63C5C200, 12, 0, 0xffffff, 2, 0xffffff, 3, 0xffffff, 6, 0xffffff, 7, 0xffffff, 8, 0xffffff,
+            0x40814000, 1401600, 0x40808000, 1920000, 0x4080C000, 2515200,
+            0x40814200, 1360000, 0x40808200, 1700000, 0x4080C200, 2100000,
+            0x43488000, 3686400, 0x43484000, 3686400" />
+        <Config
+            Id="0x2" Enable="true" Timeout="200" Target="kera" Class="2" RescueLevel="2"
+            RescueResources="0x40804000, 0xffffff, 0x40804200, 0xffffff,
+            0x63C5C000, 12, 0, 0xffffff, 2, 0xffffff, 3, 0xffffff, 6, 0xffffff, 7, 0xffffff, 8, 0xffffff,
+            0x63C5C100, 12, 0, 0xffffff, 2, 0xffffff, 3, 0xffffff, 6, 0xffffff, 7, 0xffffff, 8, 0xffffff,
+            0x63C5C200, 12, 0, 0xffffff, 2, 0xffffff, 3, 0xffffff, 6, 0xffffff, 7, 0xffffff, 8, 0xffffff,
+            0x40814000, 1401600, 0x40808000, 1920000, 0x4080C000, 2515200,
+            0x40814200, 1360000, 0x40808200, 1700000, 0x4080C200, 2100000,
+            0x43488000, 3686400, 0x43484000, 3686400, 0x42804000, 3" />
+        <Config
+            Id="0x2" Enable="true" Timeout="200" Target="kera" Class="2" RescueLevel="3"
+            RescueResources="0x40804000, 0xffffff, 0x40804200, 0xffffff,
+            0x63C5C000, 12, 0, 0xffffff, 2, 0xffffff, 3, 0xffffff, 6, 0xffffff, 7, 0xffffff, 8, 0xffffff,
+            0x63C5C100, 12, 0, 0xffffff, 2, 0xffffff, 3, 0xffffff, 6, 0xffffff, 7, 0xffffff, 8, 0xffffff,
+            0x63C5C200, 12, 0, 0xffffff, 2, 0xffffff, 3, 0xffffff, 6, 0xffffff, 7, 0xffffff, 8, 0xffffff,
+            0x40814000, 1632000, 0x40808000, 2208000, 0x4080C000, 2803200,
+            0x40814200, 1400000, 0x40808200, 1800000, 0x4080C200, 2300000,
+            0x43488000, 3686400, 0x43484000, 3686400, 0x42804000, 2" />
+        <Config
+            Id="0x2" Enable="true" Timeout="200" Target="kera" Class="2" RescueLevel="4"
+            RescueResources="0x42804000, 0" />
+        <Config
+            Id="0x2" Enable="true" Timeout="200" Target="kera" Class="2" RescueLevel="5"
+            RescueResources="0x40804000, 0xffffff, 0x40804200, 0xffffff,
+            0x63C5C000, 12, 0, 0xffffff, 2, 0xffffff, 3, 0xffffff, 6, 0xffffff, 7, 0xffffff, 8, 0xffffff,
+            0x63C5C100, 12, 0, 0xffffff, 2, 0xffffff, 3, 0xffffff, 6, 0xffffff, 7, 0xffffff, 8, 0xffffff,
+            0x63C5C200, 12, 0, 0xffffff, 2, 0xffffff, 3, 0xffffff, 6, 0xffffff, 7, 0xffffff, 8, 0xffffff,
+            0x40814000, 1632000, 0x40808000, 2208000, 0x4080C000, 2803200,
+            0x40814200, 1400000, 0x40808200, 1800000, 0x4080C200, 2300000, 0x42804000, 0,
+            0x43488000, 3686400, 0x43484000, 3686400" />
+        <!-- MJR: jank window profiles -->
+        <Config
+            Id="0x2" Enable="true" Timeout="500" Target="kera" Class="2" RescueLevel="6"
+            RescueResources="0x40804000, 0xffffff, 0x40804200, 0xffffff,
+            0x63C5C000, 12, 0, 0xffffff, 2, 0xffffff, 3, 0xffffff, 6, 0xffffff, 7, 0xffffff, 8, 0xffffff,
+            0x63C5C100, 12, 0, 0xffffff, 2, 0xffffff, 3, 0xffffff, 6, 0xffffff, 7, 0xffffff, 8, 0xffffff,
+            0x63C5C200, 12, 0, 0xffffff, 2, 0xffffff, 3, 0xffffff, 6, 0xffffff, 7, 0xffffff, 8, 0xffffff,
+            0x40814000, 1632000, 0x40808000, 2208000, 0x4080C000, 2803200,
+            0x40814200, 1363200, 0x40808200, 1670400, 0x4080C200, 2000000,
+            0x43488000, 3686400, 0x43484000, 3686400" />
+
+        <!-- MJR: jank profiles for specific games for kera -->
+        <Config
+            Id="0x2" Package="com.tencent.tmgp.pubgmhd" Enable="true" Timeout="200" Target="kera" RescueLevel="1"
+            RescueResources="0x40804000, 0xffffff, 0x40804200, 0xffffff,
+            0x63C5C000, 8, 0, 0xffffff, 6, 0xffffff, 7, 0xffffff, 8, 0xffffff,
+            0x63C5C100, 8, 0, 0xffffff, 6, 0xffffff, 7, 0xffffff, 8, 0xffffff,
+            0x63C5C200, 8, 0, 0xffffff, 6, 0xffffff, 7, 0xffffff, 8, 0xffffff,
+            0x40814000, 1920000, 0x40808000, 2400000, 0x4080C000, 0xffffff,
+            0x40814100, 902400, 0x40808100, 1497600, 0x4080C100, 0xffffff,
+            0x40814200, 1920000, 0x40808200, 2400000, 0x4080C200, 0xffffff,
+            0x43488000, 4224000, 0x43484000, 4224000, 0x40CE0200, 0x005A0055" />
+        <Config
+            Id="0x2" Package="com.tencent.tmgp.pubgmhd" Enable="true" Timeout="200" Target="kera" RescueLevel="2"
+            RescueResources="0x40804000, 0xffffff, 0x40804200, 0xffffff,
+            0x63C5C000, 8, 0, 0xffffff, 6, 0xffffff, 7, 0xffffff, 8, 0xffffff,
+            0x63C5C100, 8, 0, 0xffffff, 6, 0xffffff, 7, 0xffffff, 8, 0xffffff,
+            0x63C5C200, 8, 0, 0xffffff, 6, 0xffffff, 7, 0xffffff, 8, 0xffffff,
+            0x40814000, 1920000, 0x40808000, 2400000, 0x4080C000, 0xffffff,
+            0x40814100, 902400, 0x40808100, 1497600, 0x4080C100, 0xffffff,
+            0x40814200, 1920000, 0x40808200, 2400000, 0x4080C200, 0xffffff,
+            0x43488000, 4224000, 0x43484000, 4224000, 0x40CE0200, 0x005A0055" />
+        <Config
+            Id="0x2" Package="com.tencent.tmgp.pubgmhd" Enable="true" Timeout="200" Target="kera" RescueLevel="3"
+            RescueResources="0x40804000, 0xffffff, 0x40804200, 0xffffff,
+            0x63C5C000, 8, 0, 0xffffff, 6, 0xffffff, 7, 0xffffff, 8, 0xffffff,
+            0x63C5C100, 8, 0, 0xffffff, 6, 0xffffff, 7, 0xffffff, 8, 0xffffff,
+            0x63C5C200, 8, 0, 0xffffff, 6, 0xffffff, 7, 0xffffff, 8, 0xffffff,
+            0x40814000, 1920000, 0x40808000, 2400000, 0x4080C000, 0xffffff,
+            0x40814100, 1190400, 0x40808100, 2073600, 0x4080C100, 0xffffff,
+            0x40814200, 2150400, 0x40808200, 2649600, 0x4080C200, 0xffffff,
+            0x43488000, 4224000, 0x43484000, 4224000, 0x42804000, 2, 0x40CE0200, 0x005A0055" />
+        <Config
+            Id="0x2" Package="com.tencent.tmgp.pubgmhd" Enable="true" Timeout="200" Target="kera" RescueLevel="4"
+            RescueResources="0x42804000, 0" />
+        <Config
+            Id="0x2" Package="com.tencent.tmgp.pubgmhd" Enable="true" Timeout="200" Target="kera" RescueLevel="5"
+            RescueResources="0x40804000, 0xffffff, 0x40804200, 0xffffff,
+            0x63C5C000, 8, 0, 0xffffff, 6, 0xffffff, 7, 0xffffff, 8, 0xffffff,
+            0x63C5C100, 8, 0, 0xffffff, 6, 0xffffff, 7, 0xffffff, 8, 0xffffff,
+            0x63C5C200, 8, 0, 0xffffff, 6, 0xffffff, 7, 0xffffff, 8, 0xffffff,
+            0x40814000, 1920000, 0x40808000, 2400000, 0x4080C000, 0xffffff,
+            0x40814100, 1190400, 0x40808100, 2073600, 0x4080C100, 0xffffff,
+            0x40814200, 2150400, 0x40808200, 2649600, 0x4080C200, 0xffffff,
+            0x43488000, 4224000, 0x43484000, 4224000, 0x42804000, 0" />
+        <Config
+            Id="0x2" Package="com.tencent.tmgp.pubgmhd" Enable="true" Timeout="500" Target="kera" RescueLevel="6"
+            RescueResources="0x40804000, 0xffffff, 0x40804200, 0xffffff,
+            0x63C5C000, 8, 0, 0xffffff, 6, 0xffffff, 7, 0xffffff, 8, 0xffffff,
+            0x63C5C100, 8, 0, 0xffffff, 6, 0xffffff, 7, 0xffffff, 8, 0xffffff,
+            0x63C5C200, 8, 0, 0xffffff, 6, 0xffffff, 7, 0xffffff, 8, 0xffffff,
+            0x40814000, 1920000, 0x40808000, 2400000, 0x4080C000, 0xffffff,
+            0x40814100, 902400, 0x40808100, 1497600, 0x4080C100, 0xffffff,
+            0x40814200, 1920000, 0x40808200, 2400000, 0x4080C200, 0xffffff,
+            0x43488000, 4224000, 0x43484000, 4224000, 0x40CE0200, 0x005A0055" />
+    </QapePerfBoost>
+</QapeBoostConfigs>
