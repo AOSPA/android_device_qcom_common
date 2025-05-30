@@ -64,12 +64,12 @@ endif
 
 # Disable custom content metadata region on <5.15 targets
 ifneq (,$(filter 3.18 4.4 4.9 4.14 4.19 5.4 5.10, $(TARGET_KERNEL_VERSION)))
-TARGET_GRALLOC_HANDLE_HAS_NO_CUSTOM_CONTENT_MD_RESERVED_SIZE := true
+$(call soong_config_set, qtidisplaycommonsys, gralloc_handle_has_no_custom_content_md_reserved_size, true)
 endif
 
 # Disable UBWC-P on <6.1 targets
 ifneq (,$(filter 3.18 4.4 4.9 4.14 4.19 5.4 5.10 5.15, $(TARGET_KERNEL_VERSION)))
-TARGET_GRALLOC_HANDLE_HAS_NO_UBWCP := true
+$(call soong_config_set, qtidisplaycommonsys, gralloc_handle_has_no_ubwcp, true)
 endif
 
 # Use TARGET_KERNEL_VERSION for TARGET_DISP_DIR unless otherwise specified
