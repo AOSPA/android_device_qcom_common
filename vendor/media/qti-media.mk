@@ -15,9 +15,6 @@ $(call inherit-product-if-exists, hardware/qcom/media/product.mk)
 PRODUCT_VENDOR_PROPERTIES += \
     ro.mediaserver.64b.enable=true
 
-PRODUCT_COPY_FILES += \
-    device/qcom/common/vendor/media/media_codecs_c2_audio.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs_c2_audio.xml
-
 # Packages
 PRODUCT_PACKAGES += \
     android.hardware.media.c2@1.2.vendor \
