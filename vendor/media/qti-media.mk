@@ -6,7 +6,12 @@
 PRODUCT_SOONG_NAMESPACES += \
     device/qcom/common/vendor/media
 
-TARGET_MEDIA_COMPONENT_VARIANT := media
+# Use TARGET_KERNEL_VERSION for TARGET_MEDIA_DIR except for <5.4
+ifneq (,$(filter 4.4 4.9 4.14 4.19, $(TARGET_KERNEL_VERSION)))
+    TARGET_MEDIA_DIR := legacy
+else
+    TARGET_MEDIA_DIR := $(TARGET_KERNEL_VERSION)
+endif
 
 # Inherit configuration from the HAL.
 $(call inherit-product-if-exists, hardware/qcom/media/product.mk)
@@ -26,9 +31,32 @@ PRODUCT_SYSTEM_EXT_PROPERTIES += \
     media.stagefright.thumbnail.prefer_hw_codecs=true \
     ro.media.recorder-max-base-layer-fps=60
 
+# Enable 64-bit mediaserver for >4.19 targets
+ifneq (,$(filter 4.4 4.9 4.14 4.19, $(TARGET_KERNEL_VERSION)))
+    PRODUCT_VENDOR_PROPERTIES += \
+        ro.mediaserver.64b.enable=true
+endif
+
+# Copy Media Profiles for 5.4> targets
+ifeq (,$(filter 4.4 4.9 4.14 4.19, $(TARGET_KERNEL_VERSION)))
+    PRODUCT_COPY_FILES += \
+        device/qcom/common/vendor/media/media_profiles.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_profiles.xml
+
+    ifneq ($(call is-board-platform-in-list, sm6150 msmnile kona),true)
+        PRODUCT_ODM_PROPERTIES += \
+            debug.stagefright.ccodec=0
+    endif
+
+    ifneq ($(TARGET_USES_CUSTOM_C2_MANIFEST), true)
+        DEVICE_MANIFEST_FILE += \
+            $(QCOM_COMMON_PATH)/vendor/media-legacy/c2_manifest_vendor.xml
+    endif
+
+endif
+
 # Media Init
 PRODUCT_COPY_FILES += \
-    device/qcom/common/vendor/media/init.qti.media.sh:$(TARGET_COPY_OUT_VENDOR)/bin/init.qti.media.sh
+    device/qcom/common/vendor/media/$(TARGET_MEDIA_DIR)/init.qti.media.sh:$(TARGET_COPY_OUT_VENDOR)/bin/init.qti.media.sh
 
 # Get non-open-source specific aspects.
-$(call inherit-product-if-exists, vendor/qcom/common/vendor/media/media-vendor.mk)
+$(call inherit-product-if-exists, vendor/qcom/common/vendor/media/$(TARGET_MEDIA_DIR)/media-vendor.mk)

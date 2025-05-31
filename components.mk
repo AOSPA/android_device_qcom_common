@@ -101,14 +101,7 @@ ifneq (,$(filter keymaster, $(TARGET_COMMON_QTI_COMPONENTS)))
 endif
 
 ifneq (,$(filter media, $(TARGET_COMMON_QTI_COMPONENTS)))
-  ifeq ($(call is-board-platform-in-list,$(4_4_FAMILY) $(4_9_FAMILY) $(4_14_FAMILY) $(4_19_FAMILY)),true)
-    TARGET_MEDIA_COMPONENT_VARIANT ?= media-legacy
-  else ifeq ($(call is-board-platform-in-list,$(5_4_FAMILY)),true)
-    TARGET_MEDIA_COMPONENT_VARIANT ?= media-5.4
-  else
-    TARGET_MEDIA_COMPONENT_VARIANT ?= media
-  endif
-  include $(QCOM_COMMON_PATH)/vendor/$(TARGET_MEDIA_COMPONENT_VARIANT)/qti-$(TARGET_MEDIA_COMPONENT_VARIANT).mk
+  include $(QCOM_COMMON_PATH)/vendor/media/qti-media.mk
 
   PRODUCT_COPY_FILES += \
     $(QCOM_COMMON_PATH)/vendor/seccomp/codec2.software.ext.policy:$(TARGET_COPY_OUT_VENDOR)/etc/seccomp_policy/codec2.software.ext.policy \
