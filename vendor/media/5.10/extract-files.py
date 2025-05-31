@@ -1,4 +1,4 @@
-#!/usr/bin/env -S PYTHONPATH=../../:../../../../../tools/extract-utils python3
+#!/usr/bin/env -S PYTHONPATH=../../../:../../../../../../tools/extract-utils python3
 #
 # SPDX-FileCopyrightText: The LineageOS Project
 # SPDX-FileCopyrightText: Paranoid Android
@@ -17,7 +17,7 @@ from extract_utils_qti.module import ExtractUtilsQTIModule, QTIComponentType
 namespace_imports = [
     'hardware/qcom/display',
     'hardware/qcom/display/gralloc',
-    'vendor/qcom/common/vendor/media-5.4',
+    'vendor/qcom/common/vendor/media/5.10',
 ]
 
 lib_fixups: lib_fixups_user_type = {
@@ -29,7 +29,7 @@ lib_fixups: lib_fixups_user_type = {
 }
 
 module = ExtractUtilsQTIModule(
-    'media',
+    'media/5.10',
     QTIComponentType.VENDOR,
     namespace_imports=namespace_imports,
     lib_fixups=lib_fixups,
