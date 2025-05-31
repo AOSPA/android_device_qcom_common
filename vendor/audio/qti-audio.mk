@@ -39,7 +39,29 @@ endif
 
 # Audio Packages
 PRODUCT_PACKAGES += \
-    libvolumelistener
+    audio.r_submix.default \
+    audio.usb.default \
+    liba2dpoffload \
+    libaudioroute \
+    libbatterylistener \
+    libcirrusspkrprot \
+    libcomprcapture \
+    libexthwplugin \
+    libhdmiedid \
+    libhfp \
+    libhfp_pal \
+    libqcompostprocbundle \
+    libqcomvisualizer \
+    libqcomvoiceprocessing \
+    libsndcardparser \
+    libsndmonitor \
+    libspkrprot \
+    libssrec \
+    libtinycompress \
+    libvolumelistener \
+    sound_trigger.primary.$(TARGET_BOARD_PLATFORM) \
+    vendor.qti.hardware.pal@1.0.vendor \
+    vendor.qti.hardware.AGMIPC@1.0.vendor
 
 # Permissions
 PRODUCT_COPY_FILES += \
