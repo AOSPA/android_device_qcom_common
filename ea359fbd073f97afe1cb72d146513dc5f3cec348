@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "27a8a1c3_99c39c5d",
+        "filename": "vendor/audio/qti-audio.mk",
+        "patchSetId": 2
+      },
+      "lineNbr": 56,
+      "author": {
+        "id": 1000579
+      },
+      "writtenOn": "2025-05-31T14:29:05Z",
+      "side": 1,
+      "message": "libhfp isnt needed on phones btw, only bring back necessary packages",
+      "revId": "ea359fbd073f97afe1cb72d146513dc5f3cec348",
+      "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "8f4b6feb_623fd73a",
+        "filename": "vendor/audio/qti-audio.mk",
+        "patchSetId": 2
+      },
+      "lineNbr": 57,
+      "author": {
+        "id": 1000579
+      },
+      "writtenOn": "2025-05-31T14:29:05Z",
+      "side": 1,
+      "message": "audio-ar",
+      "revId": "ea359fbd073f97afe1cb72d146513dc5f3cec348",
+      "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
+    }
+  ]
+}
