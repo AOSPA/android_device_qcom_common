@@ -1,0 +1,30 @@
+{
+  "comments": [],
+  "submitRequirementResults": [
+    {
+      "submitRequirement": {
+        "name": "Code-Review",
+        "description": {
+          "value": "At least one maximum vote for label \u0027Code-Review\u0027 is required"
+        },
+        "applicabilityExpression": {},
+        "submittabilityExpression": {
+          "expressionString": "label:Code-Review\u003dMAX,user\u003dnon_patch_set_owner AND -label:Code-Review\u003dMIN"
+        },
+        "overrideExpression": {},
+        "allowOverrideInChildProjects": true
+      },
+      "applicabilityExpressionResult": {},
+      "submittabilityExpressionResult": {
+        "value": {"expression":{"expressionString":"label:Code-Review=MAX,user=non_patch_set_owner AND -label:Code-Review=MIN"},"status":"FAIL","errorMessage":{"value":null},"passingAtoms":[],"failingAtoms":["label:Code-Review=MAX,user=non_patch_set_owner","label:Code-Review=MIN"],"atomExplanations":{"value":{"label:Code-Review=MAX,user=non_patch_set_owner":"","label:Code-Review=MIN":""}}}
+      },
+      "overrideExpressionResult": {},
+      "patchSetCommitId": "20a1c96eb343ba2894ae7b2d2347a704415faec4",
+      "legacy": {
+        "value": false
+      },
+      "forced": {},
+      "hidden": {}
+    }
+  ]
+}
