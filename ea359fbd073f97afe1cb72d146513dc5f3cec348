@@ -36,6 +36,23 @@
       "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "0fdf5d1c_3b23437f",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1001094
+      },
+      "writtenOn": "2025-05-31T14:53:40Z",
+      "side": 1,
+      "message": "https://github.com/peternmuller/kernel_xiaomi_sm8250/commit/2ed40d98c1d3b831e6b0298fdafc1c13cae24ae2\ncould serve aswell\nOnly soundfx could be needed as per https://github.com/YumeMichi/device_xiaomi_pipa/commit/4210782418b560df2653fbd4df7955a9cd0477f6",
+      "revId": "ea359fbd073f97afe1cb72d146513dc5f3cec348",
+      "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "27a8a1c3_99c39c5d",
