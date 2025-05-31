@@ -41,6 +41,31 @@ endif
 PRODUCT_PACKAGES += \
     libvolumelistener
 
+# Flags for <5.4 targets
+ifneq (,$(filter 3.18 4.4 4.9 4.14 4.19, $(TARGET_KERNEL_VERSION)))
+    PRODUCT_PACKAGES += \
+        audio.r_submix.default \
+        audio.usb.default \
+        liba2dpoffload \
+        libaudioroute \
+        libbatterylistener \
+        libcirrusspkrprot \
+        libcomprcapture \
+        libexthwplugin \
+        libhdmiedid \
+        libhfp \
+        libhfp_pal \
+        libqcompostprocbundle \
+        libqcomvisualizer \
+        libqcomvoiceprocessing \
+        libsndcardparser \
+        libsndmonitor \
+        libspkrprot \
+        libssrec \
+        libtinycompress \
+        sound_trigger.primary.$(TARGET_BOARD_PLATFORM)
+endif
+
 # Permissions
 PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.software.midi.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.software.midi.xml
