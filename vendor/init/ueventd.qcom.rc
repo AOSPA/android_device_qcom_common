@@ -1,7 +1,5 @@
 # Copyright (c) 2012-2015, 2017-2021, The Linux Foundation. All rights reserved.
 #
-# Copyright (c) 2022 Qualcomm Innovation Center, Inc. All rights reserved.
-#
 # Redistribution and use in source and binary forms, with or without
 # modification, are permitted provided that the following conditions are met:
 #     * Redistributions of source code must retain the above copyright
@@ -28,7 +26,7 @@
 #
 #
 # Changes from Qualcomm Innovation Center are provided under the following license:
-# Copyright (c) 2022-2023 Qualcomm Innovation Center, Inc. All rights reserved.
+# Copyright (c) 2022-2024 Qualcomm Innovation Center, Inc. All rights reserved.
 #
 # Redistribution and use in source and binary forms, with or without
 # modification, are permitted (subject to the limitations in the
@@ -86,7 +84,7 @@ subsystem mem_buf_vm
 /dev/ion                  0664   system     system
 /dev/membuf               0664   system     system
 /dev/mem_buf_vm/*         0444   system     system
-/dev/dma_heap/qcom,*      0664   system     system
+/dev/dma_heap/qcom,*      0444   system     system
 /dev/rtc0                 0660   system     system
 /dev/smd0                 0660   system     system
 /dev/smd4                 0660   system     system
@@ -104,6 +102,7 @@ subsystem mem_buf_vm
 /dev/ipa_odl_ctl          0660   radio      radio
 /dev/ipa_adpl             0660   system     oem_2905
 /dev/synx_device          0660   root       camera
+/dev/ubwcp                0660   root       camera
 /dev/hab                  0666   system     system
 /dev/iio:device*          0664   system     system
 /dev/qmc_dma              0660   radio      radio
@@ -123,6 +122,7 @@ subsystem mem_buf_vm
 /dev/smd3                 0660   bluetooth  bluetooth
 /dev/btpower              0660   bluetooth  system
 /dev/btfmslim             0660   bluetooth  system
+/dev/btfmswr              0660   bluetooth  system
 /dev/bt_cp_ctrl           0660   bluetooth  system
 /dev/btfmcodec_dev        0660   bluetooth  system
 
@@ -183,15 +183,17 @@ subsystem mem_buf_vm
 /dev/mhi_*_pipe_32        0640   radio      radio
 /dev/at_usb0              0640   radio      radio
 /dev/at_mdm0              0640   radio      radio
+/dev/ims_dc_sub1          0640   radio      radio
+/dev/ims_dc_sub2          0640   radio      radio
 /dev/video*               0660   system     camera
 /dev/cvp*                 0660   system     camera
 /dev/media*               0660   system     camera
 /dev/v4l-subdev*          0660   system     camera
-/dev/hdmi_bdg_irq_handler 0660   system     camera
 /dev/qseecom              0660   system     drmrpc
 /dev/qce                  0660   system     drmrpc
 /dev/smcinvoke            0660   system     drmrpc
 /dev/qsee_ipc_irq_spss    0660   system     drmrpc
+/dev/qti-smmu-proxy       0660   system     system
 /dev/seemplog             0660   system     system
 /dev/pft                  0660   system     drmrpc
 /dev/spcom                0660   system     system
@@ -212,7 +214,13 @@ subsystem mem_buf_vm
 /dev/jpeg2                0660   system     camera
 /dev/jpeg3                0660   system     camera
 /dev/adsprpc-smd          0664   system     system
+/dev/fastrpc-adsp         0664   system     system
+/dev/fastrpc-cdsp         0664   system     system
+/dev/fastrpc-sdsp         0664   system     system
 /dev/adsprpc-smd-secure   0644   system     system
+/dev/fastrpc-adsp-secure  0644   system     system
+/dev/fastrpc-cdsp-secure  0644   system     system
+/dev/fastrpc-sdsp-secure  0644   system     system
 /dev/system_health_monitor 0644  radio      system
 /dev/mdss_rotator         0664   system     system
 /dev/spec_sync            0660   system     system
@@ -253,7 +261,6 @@ subsystem mem_buf_vm
 /sys/devices/platform/soc/1c00000.qcom,pcie/pci0000:00/0000:00:00.0/0000:01:00.0/net/wlan*/queues/rx-* rps_cpus      0660   system     system
 /dev/spidev0.0            0660   system     audio
 /dev/i2c-7                0660   system     audio
-/dev/msm_lsm_cdev         0660   system     audio
 /dev/msm_camera/*         0660   system     camera
 /dev/gemini/              0660   system     camera
 /dev/mercury0             0660   system     camera
@@ -298,7 +305,6 @@ subsystem mem_buf_vm
 /dev/aud_pasthru_adsp     0660   system     audio
 /dev/msm_audio_ion_cma    0660   system     audio
 /dev/msm_audio_ion        0660   system     audio
-/dev/aud_pasthru_modem    0660   system     audio
 /dev/ttyHSL1              0660   system     system
 /dev/ttyHS1               0660   system     system
 /dev/mdm                  0660   system     radio
@@ -431,9 +437,7 @@ subsystem mem_buf_vm
 /dev/block/platform/soc/7c4000.sdhci/by-name/frp        0600   system     system
 /dev/block/platform/soc/4744000.sdhci/by-name/frp       0600   system     system
 /dev/block/platform/soc/4804000.ufshc/by-name/frp       0600   system     system
-/dev/block/platform/soc/7c4000.sdhci/by-name/rawdump    0660   root       system
-/dev/block/platform/soc/1d84000.ufshc/by-name/rawdump   0660   root       system
-/dev/block/platform/soc/4804000.ufshc/by-name/rawdump   0600   root       system
+/dev/block/platform/soc/1bf8000.pcie/by-name/frp        0600   system     system
 
 # This is temporary while using SD card for initial bring-up
 /dev/block/platform/soc/8804000.sdhci/by-name/frp       0600   system     system
@@ -445,15 +449,27 @@ subsystem mem_buf_vm
 /sys/class/leds/red      delay_on     0640    system    system
 /sys/class/leds/red      delay_off    0640    system    system
 /sys/class/leds/red      breath       0640    system    system
+/sys/class/leds/red      repeat       0640    system    system
+/sys/class/leds/red      hw_pattern   0640    system    system
 /sys/class/leds/red      trigger      0640    system    system
 /sys/class/leds/green    delay_on     0640    system    system
 /sys/class/leds/green    delay_off    0640    system    system
 /sys/class/leds/green    breath       0640    system    system
 /sys/class/leds/green    trigger      0640    system    system
+/sys/class/leds/green    repeat       0640    system    system
+/sys/class/leds/green    hw_pattern   0640    system    system
 /sys/class/leds/blue     delay_on     0640    system    system
 /sys/class/leds/blue     delay_off    0640    system    system
 /sys/class/leds/blue     breath       0640    system    system
 /sys/class/leds/blue     trigger      0640    system    system
+/sys/class/leds/blue     repeat       0640    system    system
+/sys/class/leds/blue     hw_pattern   0640    system    system
+
+#Haptics class devices
+/sys/class/qcom-haptics    visense_enabled     0400    system    system
+/sys/class/qcom-haptics    primitive_duration  0600    system    system
+/sys/class/qcom-haptics    v_gain_error        0640    system    audio
+/sys/class/qcom-haptics    i_gain_error        0640    system    audio
 
 # NPU device
 /dev/msm_npu             0644   system     system
@@ -463,8 +479,25 @@ subsystem mem_buf_vm
 /sys/class/dual_role_usb/*	power_role	0660	system	system
 /sys/class/dual_role_usb/*	mode		0660	system	system
 
+/sys/class/typec/port0		data_role	0660	system	usb
+/sys/class/typec/port0		power_role	0660	system	usb
+/sys/class/typec/port0		port_type	0660	system	usb
+/sys/class/typec/port0-partner	accessory_mode	0440	system	usb
+
 # USB Dynamic Disable
 /sys/bus/platform/devices/a600000.ssusb	dynamic_disable	0220	root	usb
+
+# USB autosuspend/wakeup settings
+/sys/bus/usb/devices/*      power/autosuspend          0660  system  usb
+/sys/bus/usb/devices/*      power/autosuspend_delay_ms 0660  system  usb
+/sys/bus/usb/devices/*      power/control              0660  system  usb
+/sys/bus/usb/devices/*      power/wakeup               0660  system  usb
+
+#USB root hub authorize setting
+/sys/bus/usb/devices/usb*   authorized                 0660  system  usb
+
+#USB mode setting
+/sys/bus/platform/devices/a600000.ssusb    mode        0660  system  usb
 
 #Memory Offline
 /sys/devices/system/memory/memory* state    0660 system system
@@ -570,6 +603,14 @@ subsystem mem_buf_vm
 # devcoredump data attributes
 /sys/class/devcoredump/devcd*                           data                            0600    system  system
 
-# hdmi cec hal
-/dev/cec*                                            0660    system  system
-/sys/devices/platform/soc/984000.i2c/i2c-0/0-002b    get_hpd_stat    0660   system   system
+#Virtualization Attributes
+/dev/gunyah                 0666   root     root
+
+# Q2SPI UWB device
+/dev/q2spiuwb    0660    uwb    uwb
+
+# RemoteProc state
+/sys/class/remoteproc/remoteproc*   state    0660    root  system
+
+# IPA Events
+/dev/ipa_events         0660   radio      radio
