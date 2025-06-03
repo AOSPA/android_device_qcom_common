@@ -38,6 +38,24 @@
     {
       "unresolved": false,
       "key": {
+        "uuid": "63f0d948_ca4cf9c4",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 2
+      },
+      "lineNbr": 23,
+      "author": {
+        "id": 1000895
+      },
+      "writtenOn": "2025-06-03T01:18:02Z",
+      "side": 1,
+      "message": "thanks, the issue was cyber had removed techpack headers support inside script",
+      "parentUuid": "925e40f5_b33b5bf7",
+      "revId": "ea359fbd073f97afe1cb72d146513dc5f3cec348",
+      "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
+    },
+    {
+      "unresolved": false,
+      "key": {
         "uuid": "0fdf5d1c_3b23437f",
         "filename": "/PATCHSET_LEVEL",
         "patchSetId": 2
