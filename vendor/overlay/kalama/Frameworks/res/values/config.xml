@@ -65,7 +65,7 @@
     <integer translatable="false" name="config_bluetooth_operating_voltage_mv">4000</integer>
 
     <!-- Default list of files pinned by the Pinner Service -->
-    <string-array translatable="false" name="config_defaultPinnerServiceFiles">
+<!--     <string-array translatable="false" name="config_defaultPinnerServiceFiles">
         <item>"/system/framework/arm64/boot-QPerformance.oat"</item>
         <item>"/system/framework/arm64/boot-UxPerformance.oat"</item>
         <item>"/system/framework/framework.jar"</item>
@@ -74,7 +74,7 @@
         <item>"/vendor/lib64/libhwui.so"</item>
         <item>"/vendor/lib64/libllvm-qgl.so"</item>
         <item>"/vendor/lib64/libllvm-glnext.so"</item>
-    </string-array>
+    </string-array> -->
 
     <!-- Whether a software navigation bar should be shown. NOTE: in the future this may be
          autodetected from the Configuration. -->

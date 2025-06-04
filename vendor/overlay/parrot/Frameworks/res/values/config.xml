@@ -34,7 +34,7 @@
     <bool name="config_telephony5gNonStandalone">true</bool>
 
     <!-- Default list of files pinned by the Pinner Service -->
-    <string-array translatable="false" name="config_defaultPinnerServiceFiles">
+<!--     <string-array translatable="false" name="config_defaultPinnerServiceFiles">
         <item>"/system/framework/arm64/boot-QPerformance.oat"</item>
         <item>"/system/framework/arm64/boot-UxPerformance.oat"</item>
         <item>"/apex/com.android.media/javalib/updatable-media.jar"</item>
@@ -43,7 +43,7 @@
         <item>"/system/lib64/libhwui.so"</item>
         <item>"/system/fonts/NotoSansCJK-Regular.ttc"</item>
         <item>"/system/framework/arm64/boot-framework.oat"</item>
-    </string-array>
+    </string-array> -->
 
     <!-- When true use the linux /dev/input/event subsystem to detect the switch changes
     on the headphone/microphone jack. When false use the older uevent framework -->

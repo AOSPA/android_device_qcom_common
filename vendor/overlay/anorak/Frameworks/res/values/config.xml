@@ -38,7 +38,7 @@ on the headphone/microphone jack. When false use the older uevent framework -->
     <!-- This device does not allow sms service. -->
     <bool name="config_sms_capable">false</bool>
     <!-- Default list of files pinned by the Pinner Service -->
-    <string-array translatable="false" name="config_defaultPinnerServiceFiles">
+<!--     <string-array translatable="false" name="config_defaultPinnerServiceFiles">
         <item>"/system/framework/arm64/boot-framework.oat"</item>
         <item>"/system/framework/arm64/boot-QPerformance.oat"</item>
         <item>"/system/framework/arm64/boot-UxPerformance.oat"</item>
@@ -46,6 +46,6 @@ on the headphone/microphone jack. When false use the older uevent framework -->
         <item>"/system/framework/oat/arm64/services.odex"</item>
         <item>"/system/framework/services.jar"</item>
         <item>"/apex/com.android.media/javalib/updatable-media.jar"</item>
-    </string-array>
+    </string-array> -->
 
 </resources>

@@ -63,7 +63,7 @@
    <string name="config_qualified_networks_service_package" translatable="false">vendor.qti.iwlan</string>
 
     <!-- Default list of files pinned by the Pinner Service -->
-   <string-array translatable="false" name="config_defaultPinnerServiceFiles">
+<!--    <string-array translatable="false" name="config_defaultPinnerServiceFiles">
        <item>"/system/framework/arm64/boot-framework.oat"</item>
        <item>"/system/framework/arm64/boot-QPerformance.oat"</item>
        <item>"/system/framework/arm64/boot-UxPerformance.oat"</item>
@@ -72,7 +72,7 @@
        <item>"/system/framework/services.jar"</item>
        <item>"/apex/com.android.media/javalib/updatable-media.jar"</item>
        <item>"/system/lib64/libsurfaceflinger.so"</item>
-   </string-array>
+   </string-array> -->
 
     <!-- List of biometric sensors on the device, in decreasing strength. Consumed by AuthService
          when registering authenticators with BiometricService. Format must be ID:Modality:Strength,
