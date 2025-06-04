@@ -172,6 +172,9 @@ include $(QCOM_COMMON_PATH)/components.mk
 
 # Filesystem
 TARGET_FS_CONFIG_GEN += $(QCOM_COMMON_PATH)/config.fs
+ifneq (,$(filter 3.18 4.4 4.9 4.14 4.19 5.4 5.10 5.15, $(TARGET_KERNEL_VERSION)))
+TARGET_FS_CONFIG_GEN += $(QCOM_COMMON_PATH)/config.legacy.fs
+endif
 
 # GPS
 PRODUCT_PACKAGES += \
