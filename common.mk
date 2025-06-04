@@ -36,6 +36,7 @@ QCOM_BOARD_PLATFORMS += \
     sdm660 \
     sdm710 \
     sdm845 \
+    sun \
     taro \
     volcano
 
@@ -78,6 +79,9 @@ include vendor/qcom/opensource/core-utils/build/utils.mk
 endif
 
 # Kernel Families
+6_6_FAMILY := \
+    sun
+
 6_1_FAMILY := \
     blair \
     pineapple \
@@ -121,7 +125,9 @@ endif
     msm8937 \
     msm8996
 
-ifeq ($(call is-board-platform-in-list,$(6_1_FAMILY)),true)
+ifeq ($(call is-board-platform-in-list,$(6_6_FAMILY)),true)
+TARGET_KERNEL_VERSION ?= 6.6
+else ifeq ($(call is-board-platform-in-list,$(6_1_FAMILY)),true)
 TARGET_KERNEL_VERSION ?= 6.1
 else ifeq ($(call is-board-platform-in-list,$(5_15_FAMILY)),true)
 TARGET_KERNEL_VERSION ?= 5.15
