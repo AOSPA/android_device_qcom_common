@@ -1,5 +1,5 @@
 ifneq ($(KERNEL_MODULES_INSTALL),)
-ifneq ($(call is-board-platform-in-list, bengal kalama pineapple taro crow), true)
+ifneq ($(call is-board-platform-in-list, bengal kalama pineapple sun taro crow), true)
 
 # Get the number of CPU cores. This is the number of parallel jobs to be passed to make command.
 NCORES := $(shell grep -c ^processor /proc/cpuinfo)
@@ -222,7 +222,5 @@ KBUILD_OPTIONS :=
 LOCAL_ADDITIONAL_DEPENDENCIES :=
 endif
 KBUILD_OPTIONS_GKI :=
-endif
-
 endif
 endif
