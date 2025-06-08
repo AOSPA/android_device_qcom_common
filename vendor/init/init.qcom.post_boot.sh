@@ -837,6 +837,11 @@ function enable_memory_features()
     MemTotal=${MemTotalStr:16:8}
 
     if [ $MemTotal -le 2097152 ]; then
+        #Enable B service adj transition for 2GB or less memory
+        setprop ro.vendor.qti.sys.fw.bservice_enable true
+        setprop ro.vendor.qti.sys.fw.bservice_limit 5
+        setprop ro.vendor.qti.sys.fw.bservice_age 5000
+
         #Enable Delay Service Restart
         setprop ro.vendor.qti.am.reschedule_service true
     fi
@@ -851,9 +856,8 @@ function start_hbtp()
         fi
 }
 
-
 case "$target" in
-        "kalama")
+        "pineapple")
                 if [ -f /sys/devices/soc0/chip_family ]; then
                         chip_family_id=`cat /sys/devices/soc0/chip_family`
                 else
@@ -863,72 +867,16 @@ case "$target" in
                 echo "adsprpc : chip_family_id : $chip_faily_id" > /dev/kmsg
 
                 case "$chip_family_id" in
-                    "0x7f")
-                    if [ -f /sys/devices/platform/soc/soc:qcom,msm_fastrpc/fastrpc_cdsp_status ]; then
-                        fastrpc_cdsp_status=`cat /sys/devices/platform/soc/soc:qcom,msm_fastrpc/fastrpc_cdsp_status`
+                    "0x8a")
+                    if [ -f /sys/devices/platform/soc/soc:qcom,msm_fastrpc/fastrpc_nsp_status ]; then
+                        fastrpc_nsp_status=`cat /sys/devices/platform/soc/soc:qcom,msm_fastrpc/fastrpc_nsp_status`
                     else
-                        fastrpc_cdsp_status=-1
+                        fastrpc_nsp_status=-1
                     fi
 
-                    echo "adsprpc : fastrpc_cdsp_status : $fastrpc_cdsp_status" > /dev/kmsg
+                    echo "adsprpc : fastrpc_nsp_status : $fastrpc_nsp_status" > /dev/kmsg
 
-                    if [ $fastrpc_cdsp_status -eq 0 ]; then
-                            setprop vendor.fastrpc.disable.cdsprpcd.daemon 1
-                            echo "adsprpc : Disabled cdsp daemon" > /dev/kmsg
-                    fi
-                esac
-                 ;;
-esac
-
-case "$target" in
-        "crow")
-                if [ -f /sys/devices/soc0/chip_family ]; then
-                        chip_family_id=`cat /sys/devices/soc0/chip_family`
-                else
-                        chip_family_id=-1
-                fi
-
-                echo "adsprpc : chip_family_id : $chip_faily_id" > /dev/kmsg
-
-                case "$chip_family_id" in
-                    "0x92")
-                    if [ -f /sys/devices/platform/soc/soc:qcom,msm_fastrpc/fastrpc_cdsp_status ]; then
-                        fastrpc_cdsp_status=`cat /sys/devices/platform/soc/soc:qcom,msm_fastrpc/fastrpc_cdsp_status`
-                    else
-                        fastrpc_cdsp_status=-1
-                    fi
-
-                    echo "adsprpc : fastrpc_cdsp_status : $fastrpc_cdsp_status" > /dev/kmsg
-
-                    if [ $fastrpc_cdsp_status -eq 0 ]; then
-                            setprop vendor.fastrpc.disable.cdsprpcd.daemon 1
-                            echo "adsprpc : Disabled cdsp daemon" > /dev/kmsg
-                    fi
-                esac
-                 ;;
-esac
-
-case "$target" in
-        "parrot")
-                if [ -f /sys/devices/soc0/chip_family ]; then
-                        chip_family_id=`cat /sys/devices/soc0/chip_family`
-                else
-                        chip_family_id=-1
-                fi
-
-                echo "adsprpc : chip_family_id : $chip_faily_id" > /dev/kmsg
-
-                case "$chip_family_id" in
-                    "0x84")
-                    if [ -f /sys/devices/platform/soc/soc:qcom,msm_fastrpc/fastrpc_cdsp_status ]; then
-                        fastrpc_cdsp_status=`cat /sys/devices/platform/soc/soc:qcom,msm_fastrpc/fastrpc_cdsp_status`
-                    else
-                        fastrpc_cdsp_status=-1
-                    fi
-
-                    echo "adsprpc : fastrpc_cdsp_status : $fastrpc_cdsp_status" > /dev/kmsg
-
-                    if [ $fastrpc_cdsp_status -eq 0 ]; then
+                    if [ $fastrpc_nsp_status -eq 0 ]; then
                             setprop vendor.fastrpc.disable.cdsprpcd.daemon 1
                             echo "adsprpc : Disabled cdsp daemon" > /dev/kmsg
                     fi
