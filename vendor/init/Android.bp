@@ -42,6 +42,13 @@ prebuilt_etc {
 }
 
 prebuilt_etc {
+    name: "init.qti.kernel.target.rc",
+    src: "init.qti.kernel.target.rc",
+    sub_dir: "init/hw",
+    vendor: true,
+}
+
+prebuilt_etc {
     name: "init.recovery.qcom.rc",
     src: "init.recovery.qcom.rc",
     sub_dir: "init",
@@ -77,6 +84,18 @@ sh_binary {
 sh_binary {
     name: "init.crda.sh",
     src: "init.crda.sh",
+    vendor: true,
+}
+
+sh_binary {
+    name: "init.kernel.init_boot-memory.sh",
+    src: "init.kernel.init_boot-memory.sh",
+    vendor: true,
+}
+
+sh_binary {
+    name: "init.kernel.post_boot-memory.sh",
+    src: "init.kernel.post_boot-memory.sh",
     vendor: true,
 }
 
@@ -153,7 +172,21 @@ sh_binary {
 }
 
 sh_binary {
+    name: "system_dlkm_modprobe.legacy.sh",
+    filename: "system_dlkm_modprobe.sh",
+    src: "system_dlkm_modprobe.legacy.sh",
+    vendor: true,
+}
+
+sh_binary {
     name: "vendor_modprobe.sh",
     src: "vendor_modprobe.sh",
+    vendor: true,
+}
+
+sh_binary {
+    name: "vendor_modprobe.legacy.sh",
+    filename: "vendor_modprobe.sh",
+    src: "vendor_modprobe.legacy.sh",
     vendor: true,
 }
