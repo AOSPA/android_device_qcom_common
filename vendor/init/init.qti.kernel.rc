@@ -1,5 +1,5 @@
 #=============================================================================
-# Copyright (c) 2019-2022 Qualcomm Technologies, Inc.
+# Copyright (c) 2019-2023 Qualcomm Technologies, Inc.
 # All Rights Reserved.
 # Confidential and Proprietary - Qualcomm Technologies, Inc.
 #
@@ -30,13 +30,29 @@
 # ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 #=============================================================================
 import /vendor/etc/init/hw/init.qti.kernel.test.rc
+import /vendor/etc/init/hw/init.qti.kernel.target.rc
+import /vendor/etc/init/hw/init.qti.kernel.legacy.rc
+
+service memory-init-boot /vendor/bin/sh /vendor/bin/init.kernel.init_boot-memory.sh
+    class core
+    user root
+    group root
+    disabled
+    oneshot
+
+service memory-post-boot /vendor/bin/sh /vendor/bin/init.kernel.post_boot-memory.sh
+    class core
+    user root
+    group root
+    disabled
+    oneshot
 
 on early-init
     # Set the console loglevel to < KERN_WARN
     # Set the default message loglevel to KERN_INFO
     write /proc/sys/kernel/printk "4 6 1 7"
 
-    start gki.modprobe
+    exec_start gki.modprobe
     start vendor.modprobe
 
     # Mount tracefs in /sys/kernel/tracing as CONFIG_DEBUG_FS might be
@@ -51,9 +67,10 @@ on early-init
 
     write /proc/sys/kernel/firmware_config/force_sysfs_fallback 1
 
-on post-fs
-    wait_for_prop vendor.all.modules.ready 1
+on init
+    start memory-init-boot
 
+on post-fs
     # Create cgroup mount point for memory
     mkdir /sys/fs/cgroup/memory/bg 0750 root system
     write /sys/fs/cgroup/memory/bg/memory.swappiness 140
@@ -75,8 +92,6 @@ on post-fs
 
 on early-boot
     # Allow subsystem (modem etc) debugging
-    exec_background u:r:vendor_qti_init_shell_bg:s0 -- /vendor/bin/init.qti.write.sh /sys/kernel/boot_adsp/boot 1
-    exec_background u:r:vendor_qti_init_shell_bg:s0 -- /vendor/bin/init.qti.write.sh /sys/kernel/boot_cdsp/boot 1
     exec_background u:r:vendor_qti_init_shell_bg:s0 -- /vendor/bin/init.qti.write.sh /sys/devices/virtual/cvp/cvp/boot 1
 
 on boot
@@ -88,27 +103,11 @@ on boot
     chown root system /sys/kernel/dload/dload_mode
     chmod 0660 /sys/kernel/dload/dload_mode
 
-    # set the io-scheduler to bfq on all mq support devices
-    write /sys/block/sda/queue/scheduler bfq
-    write /sys/block/sdb/queue/scheduler bfq
-    write /sys/block/sdc/queue/scheduler bfq
-    write /sys/block/sdd/queue/scheduler bfq
-    write /sys/block/sde/queue/scheduler bfq
-    write /sys/block/sdf/queue/scheduler bfq
-    write /sys/block/sdg/queue/scheduler bfq
-    write /sys/block/sdh/queue/scheduler bfq
+    # set the io-scheduler to bfq on all eMMC and SD devices
     write /sys/class/block/mmcblk0/queue/scheduler bfq
     write /sys/class/block/mmcblk1/queue/scheduler bfq
 
     # update io-scheduler tunables
-    write /sys/block/sda/queue/iosched/slice_idle 0
-    write /sys/block/sdb/queue/iosched/slice_idle 0
-    write /sys/block/sdc/queue/iosched/slice_idle 0
-    write /sys/block/sdd/queue/iosched/slice_idle 0
-    write /sys/block/sde/queue/iosched/slice_idle 0
-    write /sys/block/sdf/queue/iosched/slice_idle 0
-    write /sys/block/sdg/queue/iosched/slice_idle 0
-    write /sys/block/sdh/queue/iosched/slice_idle 0
     write /sys/class/block/mmcblk0/queue/iosched/slice_idle 0
     write /sys/class/block/mmcblk1/queue/iosched/slice_idle 0
 
@@ -143,6 +142,9 @@ on property:persist.vendor.sys.rawdump_copy=1
 on property:persist.vendor.sys.rawdump_copy=0
     write /sys/kernel/dload/emmc_dload 0
 
+on property:vendor.memory.min_free_kbytes=*
+    write /proc/sys/vm/min_free_kbytes ${vendor.memory.min_free_kbytes}
+
 service kernel-boot /vendor/bin/sh /vendor/bin/init.qti.kernel.sh
     class core
     user root
@@ -166,6 +168,10 @@ on property:sys.boot_completed=1
     write /proc/sys/vm/page-cluster 0
     start kernel-boot
     start kernel-post-boot
+    start memory-post-boot
+
+on property:vendor.pasr.enabled=false
+    stop pasr-hal
 
 on charger
     start kernel-post-boot
