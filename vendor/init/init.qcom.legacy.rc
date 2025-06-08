@@ -53,3 +53,8 @@ service vendor.qrtr-ns /vendor/bin/qrtr-ns -f
     user vendor_qrtr
     group vendor_qrtr
     capabilities NET_BIND_SERVICE
+
+service loc_launcher /system/vendor/bin/loc_launcher
+    class late_start
+    user gps
+    group gps
