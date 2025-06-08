@@ -21,6 +21,27 @@ prebuilt_etc {
 }
 
 prebuilt_etc {
+    name: "init.qcom.legacy_audioservice.rc",
+    src: "init.qcom.legacy_audioservice.rc",
+    sub_dir: "init/hw",
+    vendor: true,
+}
+
+prebuilt_etc {
+    name: "init.qcom.legacy_qcrild.rc",
+    src: "init.qcom.legacy_qcrild.rc",
+    sub_dir: "init/hw",
+    vendor: true,
+}
+
+prebuilt_etc {
+    name: "init.qcom.legacy_qrtr-ns.rc",
+    src: "init.qcom.legacy_qrtr-ns.rc",
+    sub_dir: "init/hw",
+    vendor: true,
+}
+
+prebuilt_etc {
     name: "init.qcom.rc",
     src: "init.qcom.rc",
     sub_dir: "init/hw",
@@ -106,6 +127,12 @@ sh_binary {
 sh_binary {
     name: "init.qcom.sh",
     src: "init.qcom.sh",
+    vendor: true,
+}
+
+sh_binary {
+    name: "init.qcrild.sh",
+    src: "init.qcrild.sh",
     vendor: true,
 }
 

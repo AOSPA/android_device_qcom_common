@@ -1,0 +1,14 @@
+#
+# SPDX-FileCopyrightText: Paranoid Android
+# SPDX-License-Identifier: Apache-2.0
+#
+
+on property:vold.decrypt=trigger_restart_framework
+    start vendor.qcrild_service-sh
+
+service vendor.qcrild_service-sh /vendor/bin/init.qcrild.sh
+    override
+    class main
+    user root
+    group root
+    oneshot
