@@ -67,6 +67,9 @@ import /vendor/etc/init/hw/init.target.rc
 import /vendor/etc/init/hw/init.qcom.legacy.rc
 
 on early-init
+    mount tracefs tracefs /sys/kernel/tracing
+    chmod 0755 /sys/kernel/tracing
+
   # create symlink for vendor mount points
     symlink /vendor/firmware_mnt /firmware
     symlink /vendor/bt_firmware /bt_firmware
@@ -75,11 +78,9 @@ on early-init
   # Change ownership of sysfs power control node
     chown system graphics /sys/class/drm/card0/device/power/control
 
-    #Disable UFS clock scaling
+    #Disable UFS LPM to save boot time
     write /sys/bus/platform/devices/1d84000.ufshc/clkscale_enable 0
-    #Disable UFS auto_hibern8
     write /sys/bus/platform/devices/1d84000.ufshc/auto_hibern8 0
-    #Disable UFS clock gating
     write /sys/bus/platform/devices/1d84000.ufshc/clkgate_enable 0
 
     chown root system /dev/kmsg
@@ -103,8 +104,8 @@ on init
 on post-fs
 
 on early-boot
-    # set RLIMIT_MEMLOCK to 64MB
-    # setrlimit 8 67108864 67108864
+    # set RLIMIT_MEMLOCK to 64KB
+    setrlimit 8 65536 65536
     exec u:r:vendor_qti_init_shell:s0 -- /vendor/bin/init.qcom.early_boot.sh
     exec u:r:vendor_qti_init_shell:s0 -- /vendor/bin/init.qti.can.sh
     setprop ro.sf.lcd_density ${vendor.display.lcd_density}
@@ -197,7 +198,9 @@ on boot
     # bond0 used by FST Manager
     chown wifi wifi /sys/class/net/bond0/bonding/queue_id
 
-    # Allow access to dload sysfs node
+    # Allow access to emmc rawdump block partition and dload sysfs node
+    chown root system /dev/block/bootdevice/by-name/rawdump
+    chmod 0660 /dev/block/bootdevice/by-name/rawdump
     chown root system /sys/kernel/dload/emmc_dload
     chmod 0660 /sys/kernel/dload/emmc_dload
     chown root system /dev/block/bootdevice/by-name/ramdump
@@ -243,6 +246,8 @@ on boot
     # Create vpp directory
     mkdir /mnt/vendor/persist/vpp 0770 media media
 
+    # Create hexlp directory
+    mkdir /mnt/vendor/persist/hexlp 0770 media media
 
     # Create hvdcp_opti directory
     mkdir /mnt/vendor/persist/hvdcp_opti 0770 root system
@@ -307,6 +312,7 @@ on post-fs-data
     # Create directory used by audio subsystem
     mkdir /data/vendor/audio 0770 audio audio
     mkdir /data/vendor/audio_dsp 0770 media media
+    mkdir /data/vendor/audio/audio_collector 0770 audio audio
 
     # Create directory for audio delta files
     mkdir /data/vendor/audio/acdbdata 0770 media audio
@@ -418,6 +424,9 @@ on post-fs-data
     # Create vpp directory
     mkdir /data/vendor/vpp 0770 media media
 
+    # Create hexlp directory
+    mkdir /data/vendor/hexlp 0770 media media
+
     #Create dir for TUI
     mkdir /data/vendor/tui 0700 system drmrpc
 
@@ -440,7 +449,7 @@ service qcomsysd /system/vendor/bin/qcom-system-daemon
     group root diag oem_2901
     disabled
 
-# Don't launch qcomsysd process in USER BUILD
+# Not launch qcomsysd process in USER BUILD
 on property:persist.vendor.qcomsysd.enabled=1 && property:ro.build.type=userdebug
     enable qcomsysd
 
@@ -506,11 +515,9 @@ on property:persist.vendor.sys.rawdump_copy=0
 
 on property:sys.boot_completed=1
     write /dev/kmsg "Boot completed "
-    #Enable UFS clock scaling back
+    #Enable UFS LPM back
     write /sys/bus/platform/devices/1d84000.ufshc/clkscale_enable 1
-    #Enable UFS auto_hibern8 back
     write /sys/bus/platform/devices/1d84000.ufshc/auto_hibern8 5000
-    #Enable UFS clock gating back
     write /sys/bus/platform/devices/1d84000.ufshc/clkgate_enable 1
     #Reset read ahead for dm-0 and dm-1 to 512kb
     write /sys/block/dm-0/queue/read_ahead_kb 512
@@ -571,7 +578,8 @@ service vendor.wigig_supplicant /vendor/bin/hw/wpa_supplicant \
     -iwigig0 -Dnl80211 -c/data/vendor/wifi/wigig_supplicant.conf \
     -m/data/vendor/wifi/wigig_p2p_supplicant.conf \
     -O/data/vendor/wifi/wigig_sockets -dd \
-    -e/data/vendor/wifi/wigig_entropy.bin -g@android:wigig/wpa_wigig0
+    -e/data/vendor/wifi/wigig_entropy.bin -g@android:wigig/wpa_wigig0 \
+    -S wigigsvc
     #   we will start as root and wpa_supplicant will switch to user wifi
     #   after setting up the capabilities required for WEXT
     #   user wifi
@@ -874,6 +882,10 @@ service esepmdaemon /system/vendor/bin/esepmdaemon
     group nfc
 
 on charger
+    #Enable UFS LPM back
+    write /sys/bus/platform/devices/1d84000.ufshc/clkscale_enable 1
+    write /sys/bus/platform/devices/1d84000.ufshc/auto_hibern8 5000
+    write /sys/bus/platform/devices/1d84000.ufshc/clkgate_enable 1
     setprop persist.sys.usb.config mass_storage
     start qcom-post-boot
 
