@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "1e05cdaa_775f76df",
+        "filename": "vendor/init/ueventd.qcom.rc",
+        "patchSetId": 1
+      },
+      "lineNbr": 544,
+      "author": {
+        "id": 1000737
+      },
+      "writtenOn": "2025-06-08T13:00:55Z",
+      "side": 1,
+      "message": "https://github.com/AOSPA/android_device_qcom_common/commit/346073a91a3edb4b05fcc3677281a86b27d9cc60",
+      "revId": "587b3b2542fe7ecdd57cb86c8c8d9534c63e5197",
+      "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
+    }
+  ]
+}
