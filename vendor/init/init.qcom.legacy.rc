@@ -35,6 +35,9 @@ on early-boot
 on property:vendor.netflix.bsp_rev=*
     setprop ro.netflix.bsp_rev ${vendor.netflix.bsp_rev}
 
+on property:vold.decrypt=trigger_restart_framework
+    start vendor.qcrild_service-sh
+
 service vendor.audio-hal /vendor/bin/hw/android.hardware.audio.service
     override
     class hal
@@ -53,3 +56,10 @@ service vendor.qrtr-ns /vendor/bin/qrtr-ns -f
     user vendor_qrtr
     group vendor_qrtr
     capabilities NET_BIND_SERVICE
+
+service vendor.qcrild_service-sh /vendor/bin/init.qcrild.sh
+    override
+    class main
+    user root
+    group root
+    oneshot

@@ -117,6 +117,12 @@ sh_binary {
 }
 
 sh_binary {
+    name: "init.qcrild.sh",
+    src: "init.qcrild.sh",
+    vendor: true,
+}
+
+sh_binary {
     name: "init.qti.kernel.sh",
     src: "init.qti.kernel.sh",
     vendor: true,

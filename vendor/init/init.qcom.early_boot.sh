@@ -311,6 +311,7 @@ case "$target" in
     "kona")
         case "$soc_hwplatform" in
             *)
+                setprop vendor.media.target_variant "_kona"
                 if [ $fb_width -le 1600 ]; then
                     setprop vendor.display.lcd_density 560
                 else
@@ -351,6 +352,13 @@ case "$target" in
                 ;;
         esac
         ;;
+    "parrot")
+         case "$soc_hwid" in
+             602|568|654|653|582|581)
+                 setprop vendor.fastrpc.disable.cdsprpcd.daemon 1
+                 ;;
+         esac
+         ;;
     "sdm710" | "msmpeafowl")
         case "$soc_hwplatform" in
             *)
@@ -398,6 +406,14 @@ case "$target" in
         ;;
     "holi")
         setprop vendor.media.target_variant "_holi"
+        ;;
+    "sun")
+        setprop vendor.display.supports_background_blur 1
+        case "$soc_hwid" in
+            655|681|659|694|686)
+                setprop vendor.display.supports_background_blur 0
+                ;;
+        esac
         ;;
 esac
 

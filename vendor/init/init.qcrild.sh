@@ -26,50 +26,68 @@
 # OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF
 # ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 #
-# Changes from Qualcomm Innovation Center, Inc. are provided under the following license:
-# Copyright (c) 2024 Qualcomm Innovation Center, Inc. All rights reserved.
-# SPDX-License-Identifier: BSD-3-Clause-Clear
 
 #
 # start ril-daemon only for targets on which radio is present
 #
 baseband=`getprop ro.baseband`
-datamode=`getprop persist.vendor.data.mode`
-low_ram=`getprop ro.config.low_ram`
+sgltecsfb=`getprop persist.vendor.radio.sglte_csfb`
 
 case "$baseband" in
     "apq" | "sda" | "qcs" )
-    setprop ro.vendor.radio.noril yes
+    stop vendor.qcrild
+    stop vendor.qcrild2
+    stop vendor.qcrild3
 esac
 
 case "$baseband" in
     "msm" | "csfb" | "svlte2a" | "mdm" | "mdm2" | "sglte" | "sglte2" | "dsda2" | "unknown" | "dsda3" | "sdm" | "sdx" | "sm6")
-    case "$datamode" in
-        "tethered")
-            start vendor.dataqti
-            if [ "$low_ram" != "true" ]; then
-              start vendor.dataadpl
-            fi
-            ;;
-        "concurrent")
-            start vendor.dataqti
-            if [ "$low_ram" != "true" ]; then
-              start vendor.dataadpl
-            fi
-            ;;
-        *)
-            ;;
-    esac
-esac
 
-#
-# Allow persistent faking of bms
-# User needs to set fake bms charge in persist.vendor.bms.fake_batt_capacity
-#
-fake_batt_capacity=`getprop persist.vendor.bms.fake_batt_capacity`
-case "$fake_batt_capacity" in
-    "") ;; #Do nothing here
-    * )
-    echo "$fake_batt_capacity" > /sys/class/power_supply/battery/capacity
-    ;;
+    # start qcrild only for targets on which modem is present
+    # modemvalue "enabled" indicates Modem is enabled
+    # modemvalue "disabled" indicates Modem is not enabled
+    qspamodemvalue="enabled"
+    qspavalue=`getprop ro.boot.vendor.qspa`
+    modemvalue="0x0"
+    if [ "$qspavalue" = "true" ]; then
+        qspamodemvalue=`getprop ro.boot.vendor.qspa.modem`
+    else
+        if [ -f /sys/devices/soc0/modem ]; then
+            modemvalue=`cat /sys/devices/soc0/modem`
+        fi
+        if [ "$modemvalue" = "0x1" ] || [ "$modemvalue" = "0xff" ]; then
+            qspamodemvalue="disabled"
+        fi
+    fi
+
+    if [ "$qspamodemvalue" = "enabled" ]; then
+        start vendor.qcrild
+
+        multisim=`getprop persist.radio.multisim.config`
+
+        if [ "$multisim" = "dsds" ] || [ "$multisim" = "dsda" ]; then
+            start vendor.qcrild2
+        elif [ "$multisim" = "tsts" ]; then
+            start vendor.qcrild2
+            start vendor.qcrild3
+        fi
+
+        case "$baseband" in
+            "svlte2a" | "csfb")
+              start qmiproxy
+            ;;
+            "sglte" | "sglte2" )
+              if [ "x$sgltecsfb" != "xtrue" ]; then
+                  start qmiproxy
+              else
+                  setprop persist.vendor.radio.voice.modem.index 0
+              fi
+            ;;
+        esac
+    else
+        setprop ro.vendor.radio.noril yes
+        stop vendor.qcrild
+        stop vendor.qcrild2
+        stop vendor.qcrild3
+    fi
 esac
