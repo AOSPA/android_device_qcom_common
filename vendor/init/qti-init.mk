@@ -34,6 +34,8 @@ PRODUCT_PACKAGES += \
     init.qcom.aospa.rc \
     init.class_main.sh \
     init.crda.sh \
+    init.kernel.init_boot-memory.sh \
+    init.kernel.post_boot-memory.sh \
     init.mdm.sh \
     init.qcom.class_core.sh \
     init.qcom.coex.sh \
@@ -60,14 +62,22 @@ PRODUCT_COPY_FILES += \
 
 PRODUCT_PACKAGES += \
     init.qti.kernel.rc \
+    init.qti.kernel.target.rc \
     init.qti.kernel.sh \
     init.qti.write.sh
 
 # If modules are present, load them.  If not, skip.
 ifneq ($(KERNEL_MODULES_OUT),)
+# Use legacy scripts for pre-6.6 targets
+ifneq (,$(filter 5.4 5.10 5.15 6.1, $(TARGET_KERNEL_VERSION)))
+PRODUCT_PACKAGES += \
+    system_dlkm_modprobe.legacy.sh \
+    vendor_modprobe.legacy.sh
+else
 PRODUCT_PACKAGES += \
     system_dlkm_modprobe.sh \
     vendor_modprobe.sh
+endif
 else
 PRODUCT_VENDOR_PROPERTIES += \
     vendor.all.modules.ready=1

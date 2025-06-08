@@ -1,5 +1,5 @@
 #=============================================================================
-# Copyright (c) 2019-2023 Qualcomm Technologies, Inc.
+# Copyright (c) Qualcomm Technologies, Inc. and/or its subsidiaries.
 # All Rights Reserved.
 # Confidential and Proprietary - Qualcomm Technologies, Inc.
 #
@@ -30,16 +30,25 @@
 # ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 #=============================================================================
 
-if [ -f /sys/devices/soc0/soc_id ]; then
-	platformid=`cat /sys/devices/soc0/soc_id`
-fi
+# Vendor pasr property needs to set in the on init phase in init rc script
+# as the Activity Manager checks for this property during the phase
+# to either enable or disable pasr app.
 
-case "$platformid" in
-	"618"|"639")
-		#Pass as an argument the max number of clusters supported on the SOC
-		/vendor/bin/sh /vendor/bin/init.kernel.post_boot-sun.sh 2
-		;;
-	*)
-		echo "***WARNING***: Invalid SoC ID\n\t No postboot settings applied!!\n"
-		;;
-esac
+configure_pasr_support()
+{
+	ddr_type=`od -An -tx /proc/device-tree/memory/ddr_device_type`
+	ddr_type5="08"
+
+	if [ -d /sys/kernel/mem-offline ]; then
+		#only LPDDR5 supports PAAR
+		if [ ${ddr_type:4:2} != $ddr_type5 ]; then
+			setprop vendor.pasr.activemode.enabled false
+		fi
+
+		setprop vendor.pasr.enabled true
+		echo "pasr-enabled"
+	else
+		setprop vendor.pasr.enabled false
+	fi
+}
+configure_pasr_support
