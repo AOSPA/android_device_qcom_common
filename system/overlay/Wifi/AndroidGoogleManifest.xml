@@ -1,12 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
+<!--Copyright (c) 2023, Qualcomm Technologies, Inc.
+    All Rights Reserved.
+    Confidential and Proprietary - Qualcomm Technologies, Inc.
+-->
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     coreApp="true"
     package="com.google.android.wifi.resources.overlay.common">
-
     <application android:hasCode="false"/>
-
-    <overlay
-        android:targetPackage="com.google.android.wifi.resources"
-        android:targetName = "WifiCustomization"
-        android:isStatic="true" />
+    <overlay android:targetPackage="com.google.android.wifi.resources" android:targetName = "WifiCustomization" android:isStatic="true" />
 </manifest>
