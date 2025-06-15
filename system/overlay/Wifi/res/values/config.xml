@@ -1,5 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
+<!-- Copyright (c) 2020 Qualcomm Technologies, Inc.
+     All Rights Reserved.
+     Confidential and Proprietary - Qualcomm Technologies, Inc.
+-->
+
 <resources>
+
 
     <!-- Boolean indicating whether the wifi chipset has 5GHz frequency band support -->
     <bool translatable="false" name="config_wifi5ghzSupport">true</bool>
@@ -143,7 +149,9 @@
     <!-- Indicates that dynamic country code update in STA mode is supported on this device -->
     <bool translatable="false" name="config_wifiStaDynamicCountryCodeUpdateSupported">true</bool>
 
-    <!-- Whether to use the explicit vendor HAL API: IWifiStaIface.setRoamingState for disabling fw roaming (only needed if
-         setting the bssid on the connection alone does not disable fw roaming on this chip) -->
-    <bool translatable="false" name="config_wifiUseHalApiToDisableFwRoaming">true</bool>
+    <!-- Boolean indicating whether the framework updates country from scan results when there is
+         no telephony country code. This is applied to all generic cases and might require the
+         regulatory approval (for example, FCC pre-approval is required according to "594280 D01
+         Software Configuration Control v02r01").-->
+    <bool translatable="false" name ="config_wifiUpdateCountryCodeFromScanResultGeneric">true</bool>
 </resources>
