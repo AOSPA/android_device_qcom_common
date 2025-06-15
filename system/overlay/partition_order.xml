@@ -1,3 +1,8 @@
+<!-- Copyright (c) 2024 Qualcomm Technologies, Inc.
+      All Rights Reserved.
+      Confidential and Proprietary - Qualcomm Technologies, Inc.
+-->
+
 <!--From least to greatest precedence is: system < system_ext < product < vendor < oem < odm-->
 <partition-order>
   <partition name="system"/>
