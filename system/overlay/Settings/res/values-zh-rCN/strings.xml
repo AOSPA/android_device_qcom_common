@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+Copyright (c) Qualcomm Technologies, Inc. and/or its subsidiaries.
+All rights reserved.
+Confidential and Proprietary - Qualcomm Technologies, Inc.
+ -->
+<resources>
+  <string name="backup_calling_settings_title">移动数据通话</string>
+  <string name="backup_calling_setting_summary">通过蜂窝互联网扩大语音覆盖范围。\n免责声明：可能会产生与数据流量使用相关的费用</string>
+</resources>
