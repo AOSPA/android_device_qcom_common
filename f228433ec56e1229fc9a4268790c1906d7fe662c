@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "9552da39_5433a136",
+        "filename": "vendor/init/ueventd.qcom.rc",
+        "patchSetId": 2
+      },
+      "lineNbr": 63,
+      "author": {
+        "id": 1000737
+      },
+      "writtenOn": "2025-06-23T01:25:38Z",
+      "side": 1,
+      "message": "Remove this",
+      "revId": "f228433ec56e1229fc9a4268790c1906d7fe662c",
+      "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
+    }
+  ]
+}
