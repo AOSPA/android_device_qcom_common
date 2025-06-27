@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "398f1120_87d5c6b0",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000737
+      },
+      "writtenOn": "2025-06-27T23:50:19Z",
+      "side": 1,
+      "message": "* https://gerrit.aospa.co/c/AOSPA/android_hardware_qcom_audio/+/44088",
+      "revId": "74beb6aeca9517158962d90c18511025ecb79764",
+      "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
+    }
+  ]
+}
