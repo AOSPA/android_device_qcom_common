@@ -34,6 +34,24 @@
       "parentUuid": "c7cbedf4_c82dcfc9",
       "revId": "bf923f61085ca85825ad93f8103c2a9ec02cca07",
       "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "355df602_99ee09af",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 6
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000012
+      },
+      "writtenOn": "2025-06-30T15:32:20Z",
+      "side": 1,
+      "message": "Do we want to replace adreno-u in that case?  Would be nice if we can get S and T users to test as well.",
+      "parentUuid": "bb2aa5b6_dbad47fd",
+      "revId": "bf923f61085ca85825ad93f8103c2a9ec02cca07",
+      "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
     }
   ]
 }
