@@ -16,6 +16,24 @@
       "message": "Looks good to me.  Are the xmls really accurate or were they just copied over from the previous target?  Also do we know if any previous generations are compatible with these?  I\u0027d like to always use the latest Adreno possible. Before GRF, that was easier but it\u0027s possible one of these years Qualcomm won\u0027t make any breaking changes.",
       "revId": "bf923f61085ca85825ad93f8103c2a9ec02cca07",
       "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "bb2aa5b6_dbad47fd",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 6
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000730
+      },
+      "writtenOn": "2025-06-30T15:28:58Z",
+      "side": 1,
+      "message": "I took the xmls from the dump,\nThey\u0027re same as before.\nCan\u0027t really vouch for R vendors but it worked on pineapple",
+      "parentUuid": "c7cbedf4_c82dcfc9",
+      "revId": "bf923f61085ca85825ad93f8103c2a9ec02cca07",
+      "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
     }
   ]
 }
