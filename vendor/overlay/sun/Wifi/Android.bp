@@ -1,0 +1,24 @@
+runtime_resource_overlay {
+    name: "WifiResTarget_sun",
+    vendor: true,
+}
+
+runtime_resource_overlay {
+    name: "WifiResTarget_spf_sun",
+    manifest: "AndroidManifest-spf.xml",
+    resource_dirs : ["spf/res"],
+    vendor: true,
+}
+
+runtime_resource_overlay {
+    name: "WifiResTargetMainline_sun",
+    manifest: "AndroidGoogleManifest.xml",
+    vendor: true,
+}
+
+runtime_resource_overlay {
+    name: "WifiResTargetMainline_spf_sun",
+    manifest: "AndroidGoogleManifest-spf.xml",
+    resource_dirs : ["spf/res"],
+    vendor: true,
+}
