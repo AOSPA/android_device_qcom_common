@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--Copyright (c) 2023, Qualcomm Technologies, Inc.
+    All Rights Reserved.
+    Confidential and Proprietary - Qualcomm Technologies, Inc.
+-->
+<irq-device-map>
+    <device name="pm8xxx_rtc_alarm">
+        <subsystem>Alarm</subsystem>
+    </device>
+</irq-device-map>
