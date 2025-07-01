@@ -29,3 +29,8 @@ PRODUCT_PACKAGES += \
     WifiResTargetMainline_cape \
     WifiResTargetMainline_ukee
 endif
+
+ifeq ($(TARGET_BOARD_PLATFORM),sun)
+PRODUCT_PACKAGES += \
+    XpanResTarget_sun
+endif
