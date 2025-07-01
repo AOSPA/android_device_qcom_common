@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- The list of AIDs are the candidate of the ARA AID in ESE.
+         The first available AID will be taken as the ARA AID. -->
+    <string-array name="config_ara_aid_candidate_list_ese" translatable="false" />
+
+    <!-- To enable vendor stable service, set this to true and
+         make sure its vntf manifest entry is also configured. -->
+    <bool name="secure_element_vintf_enabled">true</bool>
+</resources>
+
