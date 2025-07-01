@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "2af3eec8_2eec4def",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 3
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1001094
+      },
+      "writtenOn": "2025-07-01T16:46:16Z",
+      "side": 1,
+      "message": "breaks RIL on kona in that state",
+      "revId": "3de5a2aa3d3964fe739e9265c1b317cac72a6ae6",
+      "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
+    }
+  ]
+}
