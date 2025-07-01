@@ -1,0 +1,10 @@
+runtime_resource_overlay {
+    name: "WifiResTarget_sun",
+    vendor: true,
+}
+
+runtime_resource_overlay {
+    name: "WifiResTargetMainline_sun",
+    manifest: "AndroidGoogleManifest.xml",
+    vendor: true,
+}
