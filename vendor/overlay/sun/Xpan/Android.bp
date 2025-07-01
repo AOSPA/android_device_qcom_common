@@ -1,0 +1,4 @@
+runtime_resource_overlay {
+    name: "XpanResTarget_sun",
+    vendor: true,
+}
