@@ -1,0 +1,24 @@
+runtime_resource_overlay {
+    name: "WifiResTarget_pineapple",
+    vendor: true,
+}
+
+runtime_resource_overlay {
+    name: "WifiResTarget_spf_pineapple",
+    manifest: "AndroidManifest-spf.xml",
+    resource_dirs : ["spf/res"],
+    vendor: true,
+}
+
+runtime_resource_overlay {
+    name: "WifiResTargetMainline_pineapple",
+    manifest: "AndroidGoogleManifest.xml",
+    vendor: true,
+}
+
+runtime_resource_overlay {
+    name: "WifiResTargetMainline_spf_pineapple",
+    manifest: "AndroidGoogleManifest-spf.xml",
+    resource_dirs : ["spf/res"],
+    vendor: true,
+}
