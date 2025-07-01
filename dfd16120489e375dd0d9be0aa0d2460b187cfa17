@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "e83b2a93_89a78c6b",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000730
+      },
+      "writtenOn": "2025-07-01T23:21:00Z",
+      "side": 1,
+      "message": "Added in wrong patch",
+      "revId": "dfd16120489e375dd0d9be0aa0d2460b187cfa17",
+      "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
+    }
+  ]
+}
