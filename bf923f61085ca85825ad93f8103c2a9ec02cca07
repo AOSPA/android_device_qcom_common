@@ -69,6 +69,24 @@
       "message": "https://github.com/AOSPA/android_device_qcom_common/blob/f646b3cd8c67e3e9a7b09db05d25b7c416489459/components.mk#L28\n\nDon\u0027t we need to add 6_6_FAMILY first, then add adreno-v to common components?",
       "revId": "bf923f61085ca85825ad93f8103c2a9ec02cca07",
       "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "ac53026d_f018d204",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 6
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1001094
+      },
+      "writtenOn": "2025-07-02T01:43:10Z",
+      "side": 1,
+      "message": "nvm, i\u0027m blind",
+      "parentUuid": "64cd5673_cb266bf8",
+      "revId": "bf923f61085ca85825ad93f8103c2a9ec02cca07",
+      "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
     }
   ]
 }
