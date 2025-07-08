@@ -532,6 +532,12 @@ mkdir {
 }
 
 mkdir {
+    name: "vendor_modem_firmware_mountpoint",
+    dir: "modem_firmware",
+    vendor: true,
+}
+
+mkdir {
     name: "vendor_vm-system_mountpoint",
     dir: "vm-system",
     vendor: true,
