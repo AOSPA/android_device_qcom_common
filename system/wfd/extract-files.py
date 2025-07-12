@@ -20,7 +20,8 @@ blob_fixups: blob_fixups_user_type = {
         'system_ext/lib64/libwfdservice.so',
     ): blob_fixup()
         .replace_needed('android.hardware.common-V2-ndk_platform.so', 'android.hardware.common-V2-ndk.so')
-        .replace_needed('android.media.audio.common.types-V3-cpp.so', 'android.media.audio.common.types-V4-cpp.so'),
+        .replace_needed('android.media.audio.common.types-V3-cpp.so', 'android.media.audio.common.types-V4-cpp.so')
+        .add_needed('libaudioclient_shim.so'),
     'system_ext/lib64/libwfdmmsrc_system.so': blob_fixup()
         .add_needed('libgui_shim.so'),
 }  # fmt: skip
