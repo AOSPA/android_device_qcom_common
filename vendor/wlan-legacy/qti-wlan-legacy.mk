@@ -50,9 +50,6 @@ ifeq ($(call is-board-platform-in-list, $(4_14_FAMILY) $(4_19_FAMILY) $(5_4_FAMI
 CONFIG_IEEE80211AX := true
 endif
 
-# Disable RTT v3 support
-$(call soong_config_set, wifi, disable_rttv3, true)
-
 # IPACM
 PRODUCT_SOONG_NAMESPACES += vendor/qcom/opensource/data-ipa-cfg-mgr-legacy
 $(call inherit-product, vendor/qcom/opensource/data-ipa-cfg-mgr-legacy/ipacm_vendor_product.mk)

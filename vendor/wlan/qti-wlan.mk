@@ -51,11 +51,6 @@ PRODUCT_SOONG_NAMESPACES += hardware/qcom/wlan/qcwcn
 # Enable IEEE 802.11ax support
 CONFIG_IEEE80211AX := true
 
-# Disable RTT v3 support for unsupported platforms
-ifeq ($(call is-board-platform-in-list, $(5_10_FAMILY) $(5_15_FAMILY)),true)
-$(call soong_config_set, wifi, disable_rttv3, true)
-endif
-
 # IPACM
 PRODUCT_SOONG_NAMESPACES += vendor/qcom/opensource/data-ipa-cfg-mgr
 $(call inherit-product, vendor/qcom/opensource/data-ipa-cfg-mgr/ipacm_vendor_product.mk)
