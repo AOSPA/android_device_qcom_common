@@ -137,7 +137,10 @@ TARGET_KERNEL_VERSION ?= 3.18
 endif
 
 ifneq (,$(filter 3.18 4.4 4.9 4.14 4.19 5.4, $(TARGET_KERNEL_VERSION)))
-$(call soong_config_set,qti_thermal,netlink,false)
+    PRODUCT_SOONG_NAMESPACES += hardware/qcom-caf/thermal-legacy-um
+    $(call soong_config_set,qti_thermal,netlink,false)
+else
+    PRODUCT_SOONG_NAMESPACES += hardware/qcom-caf/thermal
 endif
 
 ifeq ($(call is-board-platform-in-list,$(QCOM_BOARD_PLATFORMS)),true)
