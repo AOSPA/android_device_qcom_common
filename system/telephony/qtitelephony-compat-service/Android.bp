@@ -1,0 +1,25 @@
+//
+// SPDX-FileCopyrightText: 2025 The LineageOS Project
+// SPDX-License-Identifier: Apache-2.0
+//
+
+android_app {
+    name: "QtiTelephonyServiceCompat",
+    certificate: "platform",
+    platform_apis: true,
+    privileged: true,
+    required: ["privapp-permissions-org.lineageos.qtitelephonyservice.compat.xml"],
+    srcs: ["src/**/*.kt"],
+    static_libs: [
+        "androidx.annotation_annotation",
+        "extphonelib",
+    ],
+    system_ext_specific: true,
+}
+
+prebuilt_etc {
+    name: "privapp-permissions-org.lineageos.qtitelephonyservice.compat.xml",
+    src: "privapp-permissions-org.lineageos.qtitelephonyservice.compat.xml",
+    sub_dir: "permissions",
+    system_ext_specific: true,
+}
