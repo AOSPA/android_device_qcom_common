@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "ebcb89a1_e14f9dda",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000730
+      },
+      "writtenOn": "2025-07-31T21:52:57Z",
+      "side": 1,
+      "message": "https://github.com/AOSPA-overlook/proprietary_vendor_qcom_common/commit/11a196e7681b7c2fe985bcab4342a626ce22c5e1",
+      "revId": "1f4dc7a42b0bb0c6be8260dccc4e2e789b2e44ce",
+      "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
+    }
+  ]
+}
