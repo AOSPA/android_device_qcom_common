@@ -81,6 +81,18 @@ sh_binary {
 }
 
 sh_binary {
+    name: "init.kernel.init_boot-memory",
+    src: "init.kernel.init_boot-memory",
+    vendor: true,
+}
+
+sh_binary {
+    name: "init.kernel.post_boot-memory",
+    src: "init.kernel.post_boot-memory",
+    vendor: true,
+}
+
+sh_binary {
     name: "init.mdm.sh",
     src: "init.mdm.sh",
     vendor: true,
