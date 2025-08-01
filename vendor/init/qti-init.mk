@@ -27,6 +27,8 @@ PRODUCT_PACKAGES += \
     init.qcom.aospa.rc \
     init.class_main.sh \
     init.crda.sh \
+    init.kernel.init_boot-memory.sh \
+    init.kernel.post_boot-memory \
     init.mdm.sh \
     init.qcom.class_core.sh \
     init.qcom.coex.sh \
