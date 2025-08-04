@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!--
-  Copyright (c) 2019, 2022 Qualcomm Technologies, Inc.
-  All Rights Reserved.
+  Copyright (c) Qualcomm Technologies, Inc. and/or its subsidiaries.
+  All rights reserved.
   Confidential and Proprietary - Qualcomm Technologies, Inc.
 
   Not a contribution.
@@ -53,6 +53,8 @@
         <component>com.android.internal.telephony.data.DataServiceManager</component>
         <component>com.android.internal.telephony.data.TelephonyNetworkAgent</component>
         <component>com.android.internal.telephony.data.DataSettingsManager</component>
-        <component>com.android.internal.telephony.data.TelephonyNetworkFactory</component>
+        <component>com.android.internal.telephony.data.TelephonyNetworkProvider</component>
+        <component>com.android.internal.telephony.data.LinkBandwidthEstimator</component>
+        <component>com.android.internal.telephony.data.AutoDataSwitchController</component>
     </components>
 </injection>
