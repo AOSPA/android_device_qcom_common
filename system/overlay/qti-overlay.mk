@@ -14,6 +14,7 @@ PRODUCT_PACKAGES += \
     SystemUIResCommon_Sys \
     TelecommResCommon_Sys \
     TelephonyResCommon_Sys \
+    UwbResCommon_Sys \
     WifiResCommon_Sys \
     WifiResCommonMainline_Sys
 

@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Copyright (c) 2024 Qualcomm Technologies, Inc.
+     All Rights Reserved.
+     Confidential and Proprietary - Qualcomm Technologies, Inc.
+     Not a contribution
+-->
+<!-- Copyright (C) 2021 The Android Open Source Project
+
+     Licensed under the Apache License, Version 2.0 (the "License");
+     you may not use this file except in compliance with the License.
+     You may obtain a copy of the License at
+
+          http://www.apache.org/licenses/LICENSE-2.0
+
+     Unless required by applicable law or agreed to in writing, software
+     distributed under the License is distributed on an "AS IS" BASIS,
+     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+     See the License for the specific language governing permissions and
+     limitations under the License.
+-->
+
+<resources>
+
+    <!-- Whether to interpret CCC supported sync codes value as little endian.
+    If enabled, CCC supported sync codes value will be interpreted as little endian.
+    -->
+    <bool name = "ccc_supported_sync_codes_little_endian">true</bool>
+
+    <!-- Whether multicast list update notification v2 is supported or not.
+    If enabled, the notification will be parsed into version 2 if uci major version is 2.0. -->
+    <bool name = "is_multicast_list_update_ntf_v2_supported">true</bool>
+
+    <!-- Whether multicast list update response v2 is supported or not.
+    If enabled, the response will be parsed into version 2 if uci major version is 2.0. -->
+    <bool name = "is_multicast_list_update_rsp_v2_supported">true</bool>
+
+    <!-- Whether to use a persistent cache in the algorithm to determine country code or not.
+    If enabled, will fallback to the cache to determine device location for
+    UWB regulatory purposes when  other sources (telephony, wifi, location, etc) is not available.
+    -->
+    <bool name = "persistent_cache_use_for_country_code_enabled">true</bool>
+
+    <!-- Whether to disable uwb until first toggle or not.
+    If enabled, UWB will remain disabled on boot until the user toggles UWB on for the first time.
+    -->
+    <bool name = "uwb_disabled_until_first_toggle">true</bool>
+
+
+    <!-- Enable wifi rtt Ranging for proximity -->
+    <string-array name="technology_preference_list">
+        <item>UWB</item>
+        <item>CS</item>
+        <item>RTT</item>
+        <item>RSSI</item>
+    </string-array>
+
+    <!-- The minimum guaranteed delay in milliseconds between a received Rtt ranging result and the
+    next Rtt ranging request. (This does not apply on periodic Nan-Rtt ranging)-->
+    <integer name="rtt_ranging_request_delay">0</integer>
+
+</resources>
