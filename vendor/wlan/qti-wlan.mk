@@ -11,9 +11,9 @@ TARGET_WLAN_COMPONENT_VARIANT := wlan
 BOARD_HAS_QCOM_WLAN := true
 BOARD_WLAN_DEVICE := qcwcn
 BOARD_HOSTAPD_DRIVER := NL80211
-BOARD_HOSTAPD_PRIVATE_LIB := lib_driver_cmd_$(BOARD_WLAN_DEVICE)
+BOARD_HOSTAPD_PRIVATE_LIB := //hardware/qcom/wlan/qcwcn/wpa_supplicant_8_lib:lib_driver_cmd_$(BOARD_WLAN_DEVICE)
 BOARD_WPA_SUPPLICANT_DRIVER := NL80211
-BOARD_WPA_SUPPLICANT_PRIVATE_LIB := lib_driver_cmd_$(BOARD_WLAN_DEVICE)
+BOARD_WPA_SUPPLICANT_PRIVATE_LIB := //hardware/qcom/wlan/qcwcn/wpa_supplicant_8_lib:lib_driver_cmd_$(BOARD_WLAN_DEVICE)
 WIFI_DRIVER_BUILT := qca_cld3
 WIFI_DRIVER_DEFAULT := qca_cld3
 WIFI_DRIVER_INSTALL_TO_KERNEL_OUT := true
@@ -50,6 +50,15 @@ PRODUCT_SOONG_NAMESPACES += hardware/qcom/wlan/qcwcn
 
 # Enable IEEE 802.11ax support
 CONFIG_IEEE80211AX := true
+WIFI_FEATURE_HOSTAPD_11AX := true
+WIFI_FEATURE_SUPPLICANT_11AX := true
+
+ifeq (,$(filter 3.18 4.4 4.9 4.14 4.19 5.4 5.10, $(TARGET_KERNEL_VERSION)))
+# Enable IEEE 802.11be support
+CONFIG_IEEE80211BE := true
+WIFI_FEATURE_HOSTAPD_11BE := true
+WIFI_FEATURE_SUPPLICANT_11BE := true
+endif
 
 # IPACM
 PRODUCT_SOONG_NAMESPACES += vendor/qcom/opensource/data-ipa-cfg-mgr

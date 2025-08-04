@@ -1,0 +1,4 @@
+runtime_resource_overlay {
+    name: "UwbResCommon_Sys",
+    product_specific: true,
+}
