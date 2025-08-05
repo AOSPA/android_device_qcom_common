@@ -3,6 +3,9 @@
 # SPDX-License-Identifier: Apache-2.0
 #
 
+# Include display-core HAL makefile for >=6.6 targets.
+-include vendor/qcom/opensource/display-core/config/display-core-product.mk
+
 # Include display HAL makefiles.
 -include hardware/qcom/display/config/display-board.mk
 -include hardware/qcom/display/config/display-product.mk
