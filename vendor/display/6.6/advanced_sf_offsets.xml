@@ -1,0 +1,50 @@
+<?xml version="1.0" ?>
+<!--
+Copyright (c) 2020-2024 Qualcomm Technologies, Inc.
+All Rights Reserved.
+Confidential and Proprietary - Qualcomm Technologies, Inc.
+-->
+<AdvancedSfOffsetSetting>
+    <DeviceSettingList>
+        <DefaultDevice version="1"/>
+        <Device version="1">
+            <FpsOffsetMap fps="90" SfDurationPercentage="136"/>
+            <FpsOffsetMap fps="120" SfDurationPercentage="148"/>
+            <FpsOffsetMap fps="144" SfDurationPercentage="140"/>
+        </Device>
+        <Device version="2">
+            <FpsOffsetMap fps="90" SfDurationPercentage="145"/>
+            <FpsOffsetMap fps="120" SfDurationPercentage="148"/>
+            <FpsOffsetMap fps="144" SfDurationPercentage="140"/>
+        </Device>
+        <Device version="3">
+            <FpsOffsetMap fps="90" SfDurationPercentage="136"/>
+            <FpsOffsetMap fps="120" SfDurationPercentage="148"/>
+            <FpsOffsetMap fps="144" SfDurationPercentage="157"/>
+        </Device>
+        <Device version="4">
+            <FpsOffsetMap fps="60" SfDurationPercentage="94" AppDuration="16666666"/>
+            <FpsOffsetMap fps="90" SfDurationPercentage="118"/>
+            <FpsOffsetMap fps="120" SfDurationPercentage="124"/>
+            <FpsOffsetMap fps="144" SfDurationPercentage="149" AppDuration="10333333"/>
+        </Device>
+        <Device version="5">
+            <FpsOffsetMap fps="60" SfDurationPercentage="94" AppDuration="16666666"/>
+            <FpsOffsetMap fps="90" SfDurationPercentage="136"/>
+            <FpsOffsetMap fps="120" SfDurationPercentage="148"/>
+            <FpsOffsetMap fps="144" SfDurationPercentage="149" AppDuration="10333333"/>
+            <FpsOffsetMap fps="180" SfDurationPercentage="149" AppDuration="10333333"/>
+            <FpsOffsetMap fps="240" SfDurationPercentage="149" AppDuration="10333333"/>
+        </Device>
+        <Device version="6">
+            <FpsOffsetMap fps="20" SfDurationPercentage="33"/>
+            <FpsOffsetMap fps="24" SfDurationPercentage="40"/>
+            <FpsOffsetMap fps="30" SfDurationPercentage="50"/>
+            <FpsOffsetMap fps="40" SfDurationPercentage="66"/>
+            <FpsOffsetMap fps="60" SfDurationPercentage="94" AppDuration="16666666"/>
+            <FpsOffsetMap fps="90" SfDurationPercentage="118"/>
+            <FpsOffsetMap fps="120" SfDurationPercentage="124"/>
+            <FpsOffsetMap fps="144" SfDurationPercentage="149" AppDuration="10333333"/>
+        </Device>
+    </DeviceSettingList>
+</AdvancedSfOffsetSetting>
