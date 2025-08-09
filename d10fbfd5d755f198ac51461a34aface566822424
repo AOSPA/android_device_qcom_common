@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "2cd4a1f5_f514a3a1",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1001094
+      },
+      "writtenOn": "2025-08-09T13:15:21Z",
+      "side": 1,
+      "message": "https://github.com/peternmuller/proprietary_vendor_qcom_common/commit/3435976a8bf2170ba1e71b4c55ae0c621ced9298",
+      "revId": "d10fbfd5d755f198ac51461a34aface566822424",
+      "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
+    }
+  ]
+}
