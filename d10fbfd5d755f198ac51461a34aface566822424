@@ -16,6 +16,24 @@
       "message": "https://github.com/peternmuller/proprietary_vendor_qcom_common/commit/3435976a8bf2170ba1e71b4c55ae0c621ced9298",
       "revId": "d10fbfd5d755f198ac51461a34aface566822424",
       "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "a7338364_4d0bb67c",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1001094
+      },
+      "writtenOn": "2025-08-12T13:09:10Z",
+      "side": 1,
+      "message": "New link with properly regenerated makefiles (also check the previous commit as it proprerly removes qcom omx blobs for legacy media): https://github.com/peternmuller/proprietary_vendor_qcom_common/commit/b300f7883d5e635ab3c9971e45d5c4b004346f57",
+      "parentUuid": "2cd4a1f5_f514a3a1",
+      "revId": "d10fbfd5d755f198ac51461a34aface566822424",
+      "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
     }
   ]
 }
