@@ -5,6 +5,7 @@
 # SPDX-License-Identifier: Apache-2.0
 #
 
+from extract_utils.fixups_blob import blob_fixup, blob_fixups_user_type
 from extract_utils.fixups_lib import (
     lib_fixup_remove,
     lib_fixups,
@@ -20,6 +21,11 @@ namespace_imports = [
     'vendor/qcom/common/vendor/media/5.10',
 ]
 
+blob_fixups: blob_fixups_user_type = {
+    'vendor/etc/init/vendor.qti.media.c2@1.0-service.rc': blob_fixup()
+        .regex_replace(r'writepid\s+/dev/cpuset/foreground/tasks', 'task_profiles ProcessCapacityHigh HighPerformance'),
+}
+
 lib_fixups: lib_fixups_user_type = {
     **lib_fixups,
     (
@@ -32,6 +38,7 @@ module = ExtractUtilsQTIModule(
     'media/5.10',
     QTIComponentType.VENDOR,
     namespace_imports=namespace_imports,
+    blob_fixups=blob_fixups,
     lib_fixups=lib_fixups,
 )
 
