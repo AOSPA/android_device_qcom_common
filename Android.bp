@@ -568,3 +568,25 @@ prebuilt_hidl_interfaces {
         "vendor.qti.hardware.limits@1.2::ILimits",
     ],
 }
+
+prebuilt_hidl_interfaces {
+    name: "hidl_com_qualcomm_qti_dpm_api_interface",
+    interfaces: [
+        "com.qualcomm.qti.dpm.api@1.0::IdpmQmi",
+    ],
+}
+
+prebuilt_hidl_interfaces {
+    name: "hidl_vendor_qti_hardware_dsp_interface",
+    interfaces: [
+        "vendor.qti.hardware.dsp@1.0::IDspService",
+    ],
+}
+
+prebuilt_hidl_interfaces {
+    name: "hidl_vendor_qti_hardware_factory_interface",
+    interfaces: [
+        "vendor.qti.hardware.factory@1.0::IFactory",
+        "vendor.qti.hardware.factory@1.1::IFactory",
+    ],
+}
