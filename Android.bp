@@ -559,3 +559,12 @@ prebuilt_hidl_interfaces {
         "vendor.display.postproc@1.0::IDisplayPostproc",
     ],
 }
+
+prebuilt_hidl_interfaces {
+    name: "hidl_vendor_qti_hardware_limits_interface",
+    interfaces: [
+        "vendor.qti.hardware.limits@1.0::ILimits",
+        "vendor.qti.hardware.limits@1.1::ILimits",
+        "vendor.qti.hardware.limits@1.2::ILimits",
+    ],
+}
