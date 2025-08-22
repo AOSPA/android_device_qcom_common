@@ -12,11 +12,3 @@ install_symlink {
     installed_location: "app/CneApp/lib/arm64/libvndfwk_detect_jni.qti.so",
     symlink_target: "/vendor/lib64/libvndfwk_detect_jni.qti.so",
 }
-
-prebuilt_hidl_interfaces {
-    name: "hidl_embmssl_interface",
-    interfaces: [
-        "vendor.qti.hardware.embmssl@1.0::IEmbms",
-        "vendor.qti.hardware.embmssl@1.1::IEmbms",
-    ],
-}

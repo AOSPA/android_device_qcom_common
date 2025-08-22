@@ -55,13 +55,6 @@ prebuilt_etc {
     vendor: true,
 }
 
-prebuilt_hidl_interfaces {
-    name: "hidl_netperftuner_interface",
-    interfaces: [
-        "vendor.qti.hardware.wigig.netperftuner@1.0::INetPerfTuner",
-    ],
-}
-
 sh_binary {
     name: "init.aospa.perf.common.sh",
     src: "init.aospa.perf.common.sh",
