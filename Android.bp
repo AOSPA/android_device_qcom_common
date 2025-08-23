@@ -515,10 +515,39 @@ prebuilt_hidl_interfaces {
 }
 
 prebuilt_hidl_interfaces {
+    name: "hidl_dpm_api_interface",
+    interfaces: [
+        "com.qualcomm.qti.dpm.api@1.0::IdpmQmi",
+    ],
+}
+
+prebuilt_hidl_interfaces {
+    name: "hidl_alarm_interface",
+    interfaces: [
+        "vendor.qti.hardware.alarm@1.0::IAlarm",
+    ],
+}
+
+prebuilt_hidl_interfaces {
+    name: "hidl_dsp_interface",
+    interfaces: [
+        "vendor.qti.hardware.dsp@1.0::IDspService",
+    ],
+}
+
+prebuilt_hidl_interfaces {
     name: "hidl_embmssl_interface",
     interfaces: [
         "vendor.qti.hardware.embmssl@1.0::IEmbms",
         "vendor.qti.hardware.embmssl@1.1::IEmbms",
+    ],
+}
+
+prebuilt_hidl_interfaces {
+    name: "hidl_factory_interface",
+    interfaces: [
+        "vendor.qti.hardware.factory@1.0::IFactory",
+        "vendor.qti.hardware.factory@1.1::IFactory",
     ],
 }
 
@@ -530,7 +559,7 @@ prebuilt_hidl_interfaces {
 }
 
 prebuilt_hidl_interfaces {
-    name: "hidl_vppservice_interface",
+    name: "hidl_vpp_interface",
     interfaces: [
         "vendor.qti.hardware.vpp@1.1::IHidlVppService",
         "vendor.qti.hardware.vpp@1.2::IHidlVppService",
