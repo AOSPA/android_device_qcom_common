@@ -16,6 +16,24 @@
       "message": "Duplicate",
       "revId": "1933a54f0d768bdc1dd8c2cfa7838e94a8ab6436",
       "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "043ca45d_8e55abd9",
+        "filename": "system/av/proprietary-files.txt",
+        "patchSetId": 5
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 1000895
+      },
+      "writtenOn": "2025-08-23T13:55:29Z",
+      "side": 1,
+      "message": "Not duplicate it\u0027s decoder and encoder",
+      "parentUuid": "0caf4763_eaded08f",
+      "revId": "1933a54f0d768bdc1dd8c2cfa7838e94a8ab6436",
+      "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
     }
   ]
 }
