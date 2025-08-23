@@ -574,6 +574,13 @@ prebuilt_hidl_interfaces {
 }
 
 prebuilt_hidl_interfaces {
+     name: "hidl_vendor_qti_hardware_iop_interface",
+     interfaces: [
+        "vendor.qti.hardware.iop@2.0::IIop",
+     ],
+}
+
+prebuilt_hidl_interfaces {
     name: "hidl_vendor_qti_hardware_limits_interface",
     interfaces: [
         "vendor.qti.hardware.limits@1.0::ILimits",
