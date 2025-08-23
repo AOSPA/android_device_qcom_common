@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "0caf4763_eaded08f",
+        "filename": "system/av/proprietary-files.txt",
+        "patchSetId": 5
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 1000737
+      },
+      "writtenOn": "2025-08-23T11:10:58Z",
+      "side": 1,
+      "message": "Duplicate",
+      "revId": "1933a54f0d768bdc1dd8c2cfa7838e94a8ab6436",
+      "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
+    }
+  ]
+}
