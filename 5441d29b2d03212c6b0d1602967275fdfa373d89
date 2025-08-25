@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "617743d1_02c129bc",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 5
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000579
+      },
+      "writtenOn": "2025-08-25T18:25:30Z",
+      "side": 1,
+      "message": "44487: system: bt: Update path for QSSI 16 | https://gerrit.aospa.co/c/AOSPA/android_device_qcom_common/+/44487 doesn\u0027t get included with call-inherit for reasons?",
+      "revId": "5441d29b2d03212c6b0d1602967275fdfa373d89",
+      "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
+    }
+  ]
+}
