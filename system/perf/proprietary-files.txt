@@ -28,10 +28,6 @@ system_ext/lib/libsmomoconfig.qti.so
 system_ext/lib/vendor.qti.hardware.limits@1.0.so
 system_ext/lib/vendor.qti.hardware.limits@1.1.so
 system_ext/lib/vendor.qti.hardware.iop@2.0.so
-system_ext/lib/vendor.qti.hardware.perf@2.0.so
-system_ext/lib/vendor.qti.hardware.perf@2.1.so
-system_ext/lib/vendor.qti.hardware.perf@2.2.so
-system_ext/lib/vendor.qti.hardware.perf@2.3.so
 system_ext/lib/vendor.qti.qspmhal@1.0.so
 system_ext/lib/vendor.qti.qspmhal-V1-ndk.so
 system_ext/lib64/libbeluga.so
@@ -56,10 +52,6 @@ system_ext/lib64/libsmomoconfig.qti.so
 system_ext/lib64/vendor.qti.hardware.limits@1.0.so
 system_ext/lib64/vendor.qti.hardware.limits@1.1.so
 system_ext/lib64/vendor.qti.hardware.iop@2.0.so
-system_ext/lib64/vendor.qti.hardware.perf@2.0.so
-system_ext/lib64/vendor.qti.hardware.perf@2.1.so
-system_ext/lib64/vendor.qti.hardware.perf@2.2.so
-system_ext/lib64/vendor.qti.hardware.perf@2.3.so
 system_ext/lib64/vendor.qti.qspmhal@1.0.so
 system_ext/lib64/vendor.qti.qspmhal-V1-ndk.so
 system/etc/permissions/com.qualcomm.qti.Performance.xml|7976f2fd46b8d07814310cc957a70f829bdd6932

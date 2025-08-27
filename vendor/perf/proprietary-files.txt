@@ -56,10 +56,6 @@ vendor/lib64/libstandbyfeature.so
 vendor/lib64/libvideooptfeature.so
 vendor/lib64/vendor.qti.hardware.iop@1.0.so
 vendor/lib64/vendor.qti.hardware.iop@2.0.so;MODULE_SUFFIX=_vendor
-vendor/lib64/vendor.qti.hardware.perf@2.0.so;MODULE_SUFFIX=_vendor
-vendor/lib64/vendor.qti.hardware.perf@2.1.so;MODULE_SUFFIX=_vendor
-vendor/lib64/vendor.qti.hardware.perf@2.2.so;MODULE_SUFFIX=_vendor
-vendor/lib64/vendor.qti.hardware.perf@2.3.so;MODULE_SUFFIX=_vendor
 vendor/lib64/vendor.qti.hardware.perf2-V1-ndk.so;MODULE_SUFFIX=_vendor
 vendor/lib64/vendor.qti.hardware.power.powermodule-V1-ndk.so
 vendor/lib64/vendor.qti.memory.pasrmanager-V1-ndk.so
