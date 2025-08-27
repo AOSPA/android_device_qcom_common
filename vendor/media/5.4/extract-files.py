@@ -8,7 +8,7 @@
 from extract_utils.fixups_lib import lib_fixups, lib_fixups_user_type
 from extract_utils.main import ExtractUtils
 
-from extract_utils_qti.fixups_lib import lib_fixup_vendor_suffix
+from extract_utils_qti.fixups_lib import lib_fixup_vendor_32_suffix
 from extract_utils_qti.module import ExtractUtilsQTIModule, QTIComponentType
 
 namespace_imports = [
@@ -22,7 +22,7 @@ lib_fixups: lib_fixups_user_type = {
         'vendor.qti.hardware.perf@2.0',
         'vendor.qti.hardware.perf@2.1',
         'vendor.qti.hardware.perf@2.2',
-    ): lib_fixup_vendor_suffix,
+    ): lib_fixup_vendor_32_suffix,
 }
 
 module = ExtractUtilsQTIModule(

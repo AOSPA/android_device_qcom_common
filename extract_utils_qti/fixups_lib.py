@@ -6,3 +6,7 @@
 
 def lib_fixup_vendor_suffix(lib: str, partition: str, *args, **kwargs):
     return f'{lib}_{partition}' if partition == 'vendor' else None
+
+
+def lib_fixup_vendor_32_suffix(lib: str, partition: str, *args, **kwargs):
+    return f'{lib}_{partition}_32' if partition == 'vendor' else None
