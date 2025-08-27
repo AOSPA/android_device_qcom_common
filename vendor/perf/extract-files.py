@@ -35,9 +35,6 @@ lib_fixups: lib_fixups_user_type = {
     **lib_fixups,
     (
         'vendor.qti.hardware.iop@2.0',
-        'vendor.qti.hardware.perf@2.0',
-        'vendor.qti.hardware.perf@2.1',
-        'vendor.qti.hardware.perf@2.2',
         'vendor.qti.hardware.perf2-V1-ndk',
         'vendor.qti.qspmhal-V1-ndk',
     ): lib_fixup_vendor_suffix,
