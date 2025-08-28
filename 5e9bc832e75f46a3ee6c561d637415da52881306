@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "da4c3e65_2712a5de",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000579
+      },
+      "writtenOn": "2025-08-28T02:38:20Z",
+      "side": 1,
+      "message": "44451: common: Add a list of prebuilt QTI interfaces for host_init_verifier | https://gerrit.aospa.co/c/AOSPA/android_device_qcom_common/+/44451",
+      "revId": "5e9bc832e75f46a3ee6c561d637415da52881306",
+      "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
+    }
+  ]
+}
