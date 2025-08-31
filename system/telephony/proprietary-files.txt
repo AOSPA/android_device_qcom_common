@@ -349,6 +349,8 @@ system_ext/priv-app/QtiTelephony/QtiTelephony.apk
 system_ext/priv-app/dpmserviceapp/dpmserviceapp.apk
 system_ext/priv-app/ims/ims.apk
 system_ext/priv-app/qcrilmsgtunnel/qcrilmsgtunnel.apk
+system/etc/permissions/uimremoteclient.xml
+system/etc/permissions/uimremoteserver.xml
 system/framework/tcmclient.jar
 system/framework/vendor.qti.hardware.data.connectionaidl-V1-java.jar
 system/lib64/vendor.qti.diaghal-V1-ndk.so
