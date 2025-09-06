@@ -1,3 +1,4 @@
+# Adreno
 vendor/gpu/kbc/sequence_manifest.bin
 vendor/gpu/kbc/unified_kbcs_32.bin
 vendor/gpu/kbc/unified_kbcs_64.bin
@@ -43,4 +44,6 @@ vendor/lib64/libkcl.so
 vendor/lib64/libkernelmanager.so
 vendor/lib64/libllvm-glnext.so
 vendor/lib64/libllvm-qcom.so
+
+# QSPM
 vendor/lib64/vendor.qti.qspmhal@1.0.so;MODULE_SUFFIX=_vendor
