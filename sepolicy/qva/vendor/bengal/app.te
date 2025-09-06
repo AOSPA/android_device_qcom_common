@@ -1,2 +1,0 @@
-# Allow all syscalls for untrusted apps to qdsp device
-allow appdomain vendor_qdsp_device:chr_file r_file_perms;

@@ -47,7 +47,7 @@ endif
 PRODUCT_SOONG_NAMESPACES += hardware/qcom/wlan/qcwcn
 
 # Enable IEEE 802.11ax support
-ifeq ($(call is-board-platform-in-list, $(4_14_FAMILY) $(4_19_FAMILY) $(5_4_FAMILY)),true)
+ifeq ($(call is-board-platform-in-list, $(5_4_FAMILY)),true)
 CONFIG_IEEE80211AX := true
 WIFI_FEATURE_HOSTAPD_11AX := true
 WIFI_FEATURE_SUPPLICANT_11AX := true
@@ -58,15 +58,7 @@ PRODUCT_SOONG_NAMESPACES += vendor/qcom/opensource/data-ipa-cfg-mgr-legacy
 $(call inherit-product, vendor/qcom/opensource/data-ipa-cfg-mgr-legacy/ipacm_vendor_product.mk)
 
 # Include QCOM WLAN makefiles.
-ifeq ($(call is-board-platform-in-list,sdm845),true)
--include device/qcom/wlan/skunk/wlan.mk
-else ifeq ($(call is-board-platform-in-list,msm8998 sdm660),true)
--include device/qcom/wlan/sdm660_64/wlan.mk
-else ifeq ($(call is-board-platform-in-list,sm6150),true)
--include device/qcom/wlan/talos/wlan.mk
-else
 -include device/qcom/wlan/$(TARGET_BOARD_PLATFORM)/wlan.mk
-endif
 
 # Get non-open-source specific aspects.
 $(call inherit-product-if-exists, vendor/qcom/common/vendor/wlan-legacy/wlan-legacy-vendor.mk)

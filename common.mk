@@ -9,65 +9,13 @@ ifeq ($(TARGET_BOARD_PLATFORM),)
 $(error "TARGET_BOARD_PLATFORM is not defined yet, please define in your device makefile so it's accessible to QCOM common.")
 endif
 
-# List of QCOM targets.
-MSMSTEPPE := sm6150
-TRINKET := trinket
-
 QCOM_BOARD_PLATFORMS += \
-    $(MSMSTEPPE) \
-    $(TRINKET) \
-    atoll \
-    bengal \
     crow \
     holi \
-    kona \
     kalama \
     lahaina \
-    lito \
-    monaco \
-    msm8937 \
-    msm8953 \
-    msm8996 \
-    msm8998 \
-    msmnile \
     parrot \
-    sdm660 \
-    sdm710 \
-    sdm845 \
     taro
-
-# List of targets that use video hardware.
-MSM_VIDC_TARGET_LIST ?= \
-    $(MSMSTEPPE) \
-    $(TRINKET) \
-    atoll \
-    kona \
-    lito \
-    msm8937 \
-    msm8953 \
-    msm8996 \
-    msm8998 \
-    msmnile \
-    sdm660 \
-    sdm710 \
-    sdm845
-
-ifneq (,$(filter 3.18 4.4 4.9 4.14 4.19, $(TARGET_KERNEL_VERSION)))
-# List of targets that use master side content protection.
-MASTER_SIDE_CP_TARGET_LIST := \
-    $(MSMSTEPPE) \
-    $(TRINKET) \
-    atoll \
-    bengal \
-    kona \
-    lito \
-    msm8996 \
-    msm8998 \
-    msmnile \
-    sdm660 \
-    sdm710 \
-    sdm845
-endif
 
 # Include QCOM board utilities.
 ifeq ($(TARGET_FWK_SUPPORTS_FULL_VALUEADDS),true)
@@ -91,31 +39,6 @@ endif
     holi \
     lahaina
 
-4_19_FAMILY := \
-    bengal \
-    kona \
-    lito
-
-4_14_FAMILY := \
-    $(MSMSTEPPE) \
-    $(TRINKET) \
-    atoll \
-    msmnile
-
-4_9_FAMILY := \
-    msm8953 \
-    qcs605 \
-    sdm710 \
-    sdm845
-
-4_4_FAMILY := \
-    msm8998 \
-    sdm660
-
-3_18_FAMILY := \
-    msm8937 \
-    msm8996
-
 ifeq ($(call is-board-platform-in-list,$(6_1_FAMILY)),true)
 TARGET_KERNEL_VERSION ?= 6.1
 else ifeq ($(call is-board-platform-in-list,$(5_15_FAMILY)),true)
@@ -124,19 +47,9 @@ else ifeq ($(call is-board-platform-in-list,$(5_10_FAMILY)),true)
 TARGET_KERNEL_VERSION ?= 5.10
 else ifeq ($(call is-board-platform-in-list,$(5_4_FAMILY)),true)
 TARGET_KERNEL_VERSION ?= 5.4
-else ifeq ($(call is-board-platform-in-list,$(4_19_FAMILY)),true)
-TARGET_KERNEL_VERSION ?= 4.19
-else ifeq ($(call is-board-platform-in-list,$(4_14_FAMILY)),true)
-TARGET_KERNEL_VERSION ?= 4.14
-else ifeq ($(call is-board-platform-in-list,$(4_9_FAMILY)),true)
-TARGET_KERNEL_VERSION ?= 4.9
-else ifeq ($(call is-board-platform-in-list,$(4_4_FAMILY)),true)
-TARGET_KERNEL_VERSION ?= 4.4
-else ifeq ($(call is-board-platform-in-list,$(3_18_FAMILY)),true)
-TARGET_KERNEL_VERSION ?= 3.18
 endif
 
-ifneq (,$(filter 3.18 4.4 4.9 4.14 4.19 5.4, $(TARGET_KERNEL_VERSION)))
+ifneq (,$(filter 5.4, $(TARGET_KERNEL_VERSION)))
 $(call soong_config_set,qti_thermal,netlink,false)
 endif
 
