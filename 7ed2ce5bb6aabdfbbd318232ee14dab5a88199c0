@@ -16,6 +16,24 @@
       "message": "No, still building pre-5.4, and I\u0027m not the only one",
       "revId": "7ed2ce5bb6aabdfbbd318232ee14dab5a88199c0",
       "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "8b3f52fc_dea0aae6",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 3
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000012
+      },
+      "writtenOn": "2025-09-07T02:21:42Z",
+      "side": 1,
+      "message": "Which of these are still used?  I\u0027m guessing 3.18 isn\u0027t and 4.4 would be difficult now too.  I\u0027m open to thoughts but I think we should clean up whatever is unlikely to be used.",
+      "parentUuid": "7d2b660c_89fb5237",
+      "revId": "7ed2ce5bb6aabdfbbd318232ee14dab5a88199c0",
+      "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
     }
   ]
 }
