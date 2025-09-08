@@ -34,6 +34,23 @@
       "parentUuid": "7d2b660c_89fb5237",
       "revId": "7ed2ce5bb6aabdfbbd318232ee14dab5a88199c0",
       "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "be351995_aa02a128",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 3
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000942
+      },
+      "writtenOn": "2025-09-08T17:42:08Z",
+      "side": 1,
+      "message": "There are a lot of popular devices on 4.14/4.19 kernel version (OnePlus, Xiaomi, e.t.c), also Mi439 here. We can drop 3.18, because it is no longer possible to use on A12+ without crutches, because there are no eBPF backports. I am against removing 4.4 and above.",
+      "revId": "7ed2ce5bb6aabdfbbd318232ee14dab5a88199c0",
+      "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
     }
   ]
 }
