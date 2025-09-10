@@ -36,8 +36,6 @@ ifneq (,$(filter adreno, $(TARGET_COMMON_QTI_COMPONENTS)))
     TARGET_ADRENO_COMPONENT_VARIANT ?= adreno-s
   else ifeq ($(call is-board-platform-in-list,$(4_14_FAMILY) $(4_19_FAMILY) $(5_4_FAMILY)),true)
     TARGET_ADRENO_COMPONENT_VARIANT ?= adreno-r
-  else ifeq ($(call is-board-platform-in-list,$(3_18_FAMILY) $(4_4_FAMILY) msm8953),true)
-    TARGET_ADRENO_COMPONENT_VARIANT ?= adreno-5xx
   else
     $(error "Adreno component is enabled, but there is not a variant available for your platform.")
   endif
@@ -77,14 +75,14 @@ ifneq (,$(filter dsprpcd, $(TARGET_COMMON_QTI_COMPONENTS)))
 endif
 
 ifeq ($(TARGET_FWK_SUPPORTS_FULL_VALUEADDS),true)
-ifeq (,$(filter 4.4 4.9 4.14 4.19 5.4, $(TARGET_KERNEL_VERSION)))
+ifeq (,$(filter 4.14 4.19 5.4, $(TARGET_KERNEL_VERSION)))
   include $(QCOM_COMMON_PATH)/dlkm/qti-dlkm.mk
 endif
 endif
 
 ifneq (,$(filter gps, $(TARGET_COMMON_QTI_COMPONENTS)))
   include $(QCOM_COMMON_PATH)/system/gps/qti-gps.mk
-  ifeq ($(call is-board-platform-in-list,$(4_4_FAMILY) $(4_9_FAMILY) $(4_14_FAMILY) $(4_19_FAMILY) $(5_4_FAMILY)),true)
+  ifeq ($(call is-board-platform-in-list,$(4_14_FAMILY) $(4_19_FAMILY) $(5_4_FAMILY)),true)
     TARGET_GPS_COMPONENT_VARIANT ?= gps-legacy
   else
     TARGET_GPS_COMPONENT_VARIANT ?= gps
@@ -125,7 +123,7 @@ ifneq (,$(filter perf, $(TARGET_COMMON_QTI_COMPONENTS)))
 endif
 
 ifneq (,$(filter qseecomd, $(TARGET_COMMON_QTI_COMPONENTS)))
-  ifeq ($(call is-board-platform-in-list,$(4_4_FAMILY) $(4_9_FAMILY) $(4_14_FAMILY) $(4_19_FAMILY)),true)
+  ifeq ($(call is-board-platform-in-list,$(4_14_FAMILY) $(4_19_FAMILY)),true)
     TARGET_QSEECOMD_COMPONENT_VARIANT ?= qseecomd-legacy
   else
     TARGET_QSEECOMD_COMPONENT_VARIANT ?= qseecomd
@@ -151,7 +149,7 @@ ifneq (,$(filter wfd, $(TARGET_COMMON_QTI_COMPONENTS)))
 endif
 
 ifneq (,$(filter wlan, $(TARGET_COMMON_QTI_COMPONENTS)))
-  ifeq ($(call is-board-platform-in-list,$(4_4_FAMILY) $(4_9_FAMILY) $(4_14_FAMILY) $(4_19_FAMILY) $(5_4_FAMILY)),true)
+  ifeq ($(call is-board-platform-in-list,$(4_14_FAMILY) $(4_19_FAMILY) $(5_4_FAMILY)),true)
     TARGET_WLAN_COMPONENT_VARIANT ?= wlan-legacy
   else
     TARGET_WLAN_COMPONENT_VARIANT ?= wlan

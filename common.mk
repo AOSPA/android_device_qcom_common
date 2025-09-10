@@ -24,16 +24,8 @@ QCOM_BOARD_PLATFORMS += \
     kalama \
     lahaina \
     lito \
-    monaco \
-    msm8937 \
-    msm8953 \
-    msm8996 \
-    msm8998 \
     msmnile \
     parrot \
-    sdm660 \
-    sdm710 \
-    sdm845 \
     taro
 
 # List of targets that use video hardware.
@@ -43,16 +35,9 @@ MSM_VIDC_TARGET_LIST ?= \
     atoll \
     kona \
     lito \
-    msm8937 \
-    msm8953 \
-    msm8996 \
-    msm8998 \
-    msmnile \
-    sdm660 \
-    sdm710 \
-    sdm845
+    msmnile
 
-ifneq (,$(filter 3.18 4.4 4.9 4.14 4.19, $(TARGET_KERNEL_VERSION)))
+ifneq (,$(filter 4.14 4.19, $(TARGET_KERNEL_VERSION)))
 # List of targets that use master side content protection.
 MASTER_SIDE_CP_TARGET_LIST := \
     $(MSMSTEPPE) \
@@ -102,20 +87,6 @@ endif
     atoll \
     msmnile
 
-4_9_FAMILY := \
-    msm8953 \
-    qcs605 \
-    sdm710 \
-    sdm845
-
-4_4_FAMILY := \
-    msm8998 \
-    sdm660
-
-3_18_FAMILY := \
-    msm8937 \
-    msm8996
-
 ifeq ($(call is-board-platform-in-list,$(6_1_FAMILY)),true)
 TARGET_KERNEL_VERSION ?= 6.1
 else ifeq ($(call is-board-platform-in-list,$(5_15_FAMILY)),true)
@@ -128,15 +99,9 @@ else ifeq ($(call is-board-platform-in-list,$(4_19_FAMILY)),true)
 TARGET_KERNEL_VERSION ?= 4.19
 else ifeq ($(call is-board-platform-in-list,$(4_14_FAMILY)),true)
 TARGET_KERNEL_VERSION ?= 4.14
-else ifeq ($(call is-board-platform-in-list,$(4_9_FAMILY)),true)
-TARGET_KERNEL_VERSION ?= 4.9
-else ifeq ($(call is-board-platform-in-list,$(4_4_FAMILY)),true)
-TARGET_KERNEL_VERSION ?= 4.4
-else ifeq ($(call is-board-platform-in-list,$(3_18_FAMILY)),true)
-TARGET_KERNEL_VERSION ?= 3.18
 endif
 
-ifneq (,$(filter 3.18 4.4 4.9 4.14 4.19 5.4, $(TARGET_KERNEL_VERSION)))
+ifneq (,$(filter 4.14 4.19 5.4, $(TARGET_KERNEL_VERSION)))
 $(call soong_config_set,qti_thermal,netlink,false)
 endif
 
