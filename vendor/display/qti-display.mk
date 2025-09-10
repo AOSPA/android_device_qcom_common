@@ -16,7 +16,7 @@ PRODUCT_COPY_FILES += \
 
 # Properties for <6.1 targets
 # These are already set on 6.1+.
-ifneq (,$(filter 3.18 4.4 4.9 4.14 4.19 5.4 5.10 5.15, $(TARGET_KERNEL_VERSION)))
+ifneq (,$(filter 4.14 4.19 5.4 5.10 5.15, $(TARGET_KERNEL_VERSION)))
 PRODUCT_ODM_PROPERTIES += \
     debug.sf.auto_latch_unsignaled=1 \
     debug.sf.disable_client_composition_cache=0
@@ -24,14 +24,14 @@ endif
 
 # Properties for <5.15 targets
 # These are already set on 5.15+.
-ifneq (,$(filter 3.18 4.4 4.9 4.14 4.19 5.4 5.10, $(TARGET_KERNEL_VERSION)))
+ifneq (,$(filter 4.14 4.19 5.4 5.10, $(TARGET_KERNEL_VERSION)))
 PRODUCT_VENDOR_PROPERTIES += \
     debug.graphics.game_default_frame_rate.disabled=1
 endif
 
 # Properties for <5.10 targets
 # These are already set on 5.10+.
-ifneq (,$(filter 3.18 4.4 4.9 4.14 4.19 5.4, $(TARGET_KERNEL_VERSION)))
+ifneq (,$(filter 4.14 4.19 5.4, $(TARGET_KERNEL_VERSION)))
 PRODUCT_VENDOR_PROPERTIES += \
     debug.sf.predict_hwc_composition_strategy=0 \
     debug.sf.treat_170m_as_sRGB=1
@@ -43,15 +43,9 @@ PRODUCT_ODM_PROPERTIES += \
     ro.surface_flinger.clear_slots_with_set_layer_buffer=true
 endif
 
-# Properties for <5.4 targets
-# These are already set on 5.4+
-ifneq (,$(filter 3.18 4.4 4.9 4.14 4.19, $(TARGET_KERNEL_VERSION)))
-# Placeholder
-endif
-
 # Properties for <4.19 targets
 # These are already set on 4.19+.
-ifneq (,$(filter 3.18 4.4 4.9 4.14, $(TARGET_KERNEL_VERSION)))
+ifneq (,$(filter 4.14, $(TARGET_KERNEL_VERSION)))
 PRODUCT_VENDOR_PROPERTIES += \
     debug.sf.latch_unsignaled=1
 endif
@@ -63,12 +57,12 @@ PRODUCT_COPY_FILES += \
 endif
 
 # Disable custom content metadata region on <5.15 targets
-ifneq (,$(filter 3.18 4.4 4.9 4.14 4.19 5.4 5.10, $(TARGET_KERNEL_VERSION)))
+ifneq (,$(filter 4.14 4.19 5.4 5.10, $(TARGET_KERNEL_VERSION)))
 $(call soong_config_set, qtidisplaycommonsys, gralloc_handle_has_no_custom_content_md_reserved_size, true)
 endif
 
 # Disable UBWC-P on <6.1 targets
-ifneq (,$(filter 3.18 4.4 4.9 4.14 4.19 5.4 5.10 5.15, $(TARGET_KERNEL_VERSION)))
+ifneq (,$(filter 4.14 4.19 5.4 5.10 5.15, $(TARGET_KERNEL_VERSION)))
 $(call soong_config_set, qtidisplaycommonsys, gralloc_handle_has_no_ubwcp, true)
 endif
 

@@ -7,7 +7,7 @@ PRODUCT_SOONG_NAMESPACES += \
     device/qcom/common/vendor/media
 
 # Use TARGET_KERNEL_VERSION for TARGET_MEDIA_DIR except for <5.4
-ifneq (,$(filter 4.4 4.9 4.14 4.19, $(TARGET_KERNEL_VERSION)))
+ifneq (,$(filter 4.14 4.19, $(TARGET_KERNEL_VERSION)))
     TARGET_MEDIA_DIR := legacy
 else
     TARGET_MEDIA_DIR := $(TARGET_KERNEL_VERSION)
@@ -32,7 +32,7 @@ PRODUCT_SYSTEM_EXT_PROPERTIES += \
     ro.media.recorder-max-base-layer-fps=60
 
 # Configure media stack for <5.4 targets
-ifneq (,$(filter 4.4 4.9 4.14 4.19, $(TARGET_KERNEL_VERSION)))
+ifneq (,$(filter 4.14 4.19, $(TARGET_KERNEL_VERSION)))
     PRODUCT_COPY_FILES += \
         device/qcom/common/vendor/media/media_profiles.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_profiles.xml
 
@@ -43,7 +43,7 @@ ifneq (,$(filter 4.4 4.9 4.14 4.19, $(TARGET_KERNEL_VERSION)))
 endif
 
 # Configure media stack for >=5.4 targets
-ifeq (,$(filter 4.4 4.9 4.14 4.19, $(TARGET_KERNEL_VERSION)))
+ifeq (,$(filter 4.14 4.19, $(TARGET_KERNEL_VERSION)))
     PRODUCT_COPY_FILES += \
         device/qcom/common/vendor/media/$(TARGET_MEDIA_DIR)/init.qti.media.sh:$(TARGET_COPY_OUT_VENDOR)/bin/init.qti.media.sh
 endif

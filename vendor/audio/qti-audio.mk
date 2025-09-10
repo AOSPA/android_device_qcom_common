@@ -6,7 +6,7 @@
 ifeq ($(call is-board-platform-in-list,sm6150),true)
 -include $(TOPDIR)vendor/qcom/opensource/audio-hal/primary-hal/configs/msmsteppe/msmsteppe.mk
 # Flag for inheriting audio_vendor_product.mk on >4.19 targets
-else ifeq (,$(filter 3.18 4.4 4.9 4.14 4.19, $(TARGET_KERNEL_VERSION)))
+else ifeq (,$(filter 4.14 4.19, $(TARGET_KERNEL_VERSION)))
 -include $(TOPDIR)vendor/qcom/opensource/audio-hal/primary-hal/configs/audio_vendor_product.mk
 else
 -include $(TOPDIR)vendor/qcom/opensource/audio-hal/primary-hal/configs/$(TARGET_BOARD_PLATFORM)/$(TARGET_BOARD_PLATFORM).mk
@@ -22,7 +22,7 @@ BOARD_SUPPORTS_OPENSOURCE_STHAL := false
 $(call soong_config_set,tinycompress,enable_extended_compress_format,true)
 
 # Flags for <5.10 targets
-ifneq (,$(filter 3.18 4.4 4.9 4.14 4.19 5.4, $(TARGET_KERNEL_VERSION)))
+ifneq (,$(filter 4.14 4.19 5.4, $(TARGET_KERNEL_VERSION)))
 $(call soong_config_set,tinycompress,loop_compress_read,true)
 endif
 
