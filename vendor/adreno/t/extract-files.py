@@ -1,4 +1,4 @@
-#!/usr/bin/env -S PYTHONPATH=../../:../../../../../tools/extract-utils python3
+#!/usr/bin/env -S PYTHONPATH=../../../:../../../../../../tools/extract-utils python3
 #
 # SPDX-FileCopyrightText: The LineageOS Project
 # SPDX-FileCopyrightText: Paranoid Android
@@ -21,7 +21,7 @@ lib_fixups: lib_fixups_user_type = {
 }
 
 module = ExtractUtilsQTIModule(
-    'adreno-r',
+    'adreno/t',
     QTIComponentType.VENDOR,
     namespace_imports=namespace_imports,
     lib_fixups=lib_fixups,
