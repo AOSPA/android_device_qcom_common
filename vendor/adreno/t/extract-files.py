@@ -21,7 +21,7 @@ lib_fixups: lib_fixups_user_type = {
 }
 
 module = ExtractUtilsQTIModule(
-    'adreno-t',
+    'adreno/t',
     QTIComponentType.VENDOR,
     namespace_imports=namespace_imports,
     lib_fixups=lib_fixups,

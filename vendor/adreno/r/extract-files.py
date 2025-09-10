@@ -13,16 +13,15 @@ from extract_utils_qti.module import ExtractUtilsQTIModule, QTIComponentType
 
 namespace_imports = [
     'hardware/qcom/display/gralloc',
-    'vendor/qcom/common/vendor/perf',
 ]
 
 lib_fixups: lib_fixups_user_type = {
     **lib_fixups,
-    'vendor.qti.qspmhal-V1-ndk': lib_fixup_vendor_suffix,
+    'vendor.qti.qspmhal@1.0': lib_fixup_vendor_suffix,
 }
 
 module = ExtractUtilsQTIModule(
-    'adreno-u',
+    'adreno/r',
     QTIComponentType.VENDOR,
     namespace_imports=namespace_imports,
     lib_fixups=lib_fixups,

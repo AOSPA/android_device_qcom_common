@@ -28,18 +28,7 @@ endif
 # QTI Common Components
 
 ifneq (,$(filter adreno, $(TARGET_COMMON_QTI_COMPONENTS)))
-  ifeq ($(call is-board-platform-in-list,$(6_1_FAMILY)),true)
-    TARGET_ADRENO_COMPONENT_VARIANT ?= adreno-u
-  else ifeq ($(call is-board-platform-in-list,$(5_15_FAMILY)),true)
-    TARGET_ADRENO_COMPONENT_VARIANT ?= adreno-t
-  else ifeq ($(call is-board-platform-in-list,$(5_10_FAMILY)),true)
-    TARGET_ADRENO_COMPONENT_VARIANT ?= adreno-s
-  else ifeq ($(call is-board-platform-in-list,$(4_14_FAMILY) $(4_19_FAMILY) $(5_4_FAMILY)),true)
-    TARGET_ADRENO_COMPONENT_VARIANT ?= adreno-r
-  else
-    $(error "Adreno component is enabled, but there is not a variant available for your platform.")
-  endif
-  include $(QCOM_COMMON_PATH)/vendor/$(TARGET_ADRENO_COMPONENT_VARIANT)/qti-$(TARGET_ADRENO_COMPONENT_VARIANT).mk
+  include $(QCOM_COMMON_PATH)/vendor/adreno/qti-adreno.mk
 endif
 
 ifneq (,$(filter alarm, $(TARGET_COMMON_QTI_COMPONENTS)))
