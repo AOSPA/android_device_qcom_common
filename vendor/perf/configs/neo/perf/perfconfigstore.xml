@@ -42,6 +42,5 @@ property Name is called. -->
                 <Prop Name="vendor.appcompact.enable_app_compact" Value="true" target="neo_la" />
                 <Prop Name="vendor.appcompact.full_compact_type"  Value="2" target="neo_la" />
                 <Prop Name="vendor.appcompact.some_compact_type"  Value="2" target="neo_la" />
-                <Prop Name="ro.lmk.super_critical" Value="606" target="neo_la"/>
     </PerfConfigs>
 </PerfConfigsStore>

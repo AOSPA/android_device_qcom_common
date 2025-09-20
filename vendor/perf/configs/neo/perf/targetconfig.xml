@@ -49,8 +49,7 @@
              SocIds="525"
              SynCore="1"
              MinCoreOnline="1"
-             CpufreqGov="1"
-             GovInstanceType="1" />
+             CpufreqGov="1" />
 
          <ClustersInfo Id="0" NumCores="4" Type="big" />
 
@@ -62,11 +61,10 @@
              Target="neo_la"
              NumClusters="1"
              TotalNumCores="4"
-             SocIds="554,579"
+             SocIds="554"
              SynCore="1"
              MinCoreOnline="1"
-             CpufreqGov="1"
-             GovInstanceType="1" />
+             CpufreqGov="1" />
 
          <ClustersInfo Id="0" NumCores="4" Type="big" />
 

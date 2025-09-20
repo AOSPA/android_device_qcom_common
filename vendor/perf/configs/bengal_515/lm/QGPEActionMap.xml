@@ -20,7 +20,7 @@
             <Level Val="2" Pos="2"/>
             <Level Val="4" Pos="3"/>
         </Opcode>
-        <Opcode Resource="0x40C68100,0x40C68110,0x40C68120,0x40C68130" Name="SLB_LITTLE" Target="khaje" Supported="Yes">
+        <Opcode Resource="0x40C68100,0x40C68110,0x40C68120,0x40C68130" Name="SLB_LITTLE" Supported="Yes">
             <Level Val="0" Pos="0"/>
             <Level Val="2" Pos="1"/>
             <Level Val="4" Pos="2"/>
@@ -34,12 +34,23 @@
             <Level Val="1200000" Pos="2"/>
         </Opcode>
 
-        <Opcode Resource="0x40800000" Name="MIN_FREQ_CLUSTER_BIG_CORE_0" Supported="Yes">
+        <Opcode Resource="0x40800000" Name="MIN_FREQ_CLUSTER_BIG_CORE_0" Target="bengal" Supported="Yes">
+            <Level Val="1056" Pos="0"/>
+            <Level Val="1612" Pos="1"/>
+            <Level Val="2016" Pos="2"/>
+        </Opcode>
+        <Opcode Resource="0x40800100" Name="MIN_FREQ_CLUSTER_LITTLE_CORE_0" Target="bengal" Supported="Yes">
+            <Level Val="1017" Pos="0"/>
+            <Level Val="1420" Pos="1"/>
+            <Level Val="1804" Pos="2"/>
+        </Opcode>
+
+        <Opcode Resource="0x40800000" Name="MIN_FREQ_CLUSTER_BIG_CORE_0" Target="khaje" Supported="Yes">
             <Level Val="1000" Pos="0"/>
             <Level Val="1651" Pos="1"/>
             <Level Val="2246" Pos="2"/>
         </Opcode>
-        <Opcode Resource="0x40800100" Name="MIN_FREQ_CLUSTER_LITTLE_CORE_0" Supported="Yes">
+        <Opcode Resource="0x40800100" Name="MIN_FREQ_CLUSTER_LITTLE_CORE_0" Target="khaje" Supported="Yes">
             <Level Val="1000" Pos="0"/>
             <Level Val="1324" Pos="1"/>
             <Level Val="1804" Pos="2"/>
