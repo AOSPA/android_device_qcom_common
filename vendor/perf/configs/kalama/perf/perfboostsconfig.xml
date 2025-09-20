@@ -28,7 +28,7 @@
         <!-- STORAGE CLK SCALING resource opcode, value-->
         <!-- LLCC DDR LAT GOLD MIN FREQ resource opcode, value-->
         <!-- L3 resource opcode, value-->
-        <!-- GPU DISABLE resource opcode, value-->
+        <!-- GPU_TOUCH_WAKEUP resource opcode, value-->
         <!-- CPU_CORE_CONTROL_CPU_NOT_PREFERRED resource opcode, value-->
 
         <!-- Type="1", main launch boost of 2sec -->
@@ -37,7 +37,7 @@
             Resources="0x40C00000, 0x1, 0x40804000, 0xFFF, 0x40804100, 0xFFF, 0x40804200, 0xFFF,
                        0x40800000, 0xFFF, 0x40800100, 0xFFF, 0x40800200, 0xFFF, 0x41848000, 0x104410,
                        0x41844000, 0x104410, 0x42C10000, 0x1, 0x43488000, 0x401640,
-                       0x43458000, 0x1B8A00, 0x4281C000, 2000, 0x4100C000, 0x3" />
+                       0x43458000, 0x1B8A00, 0x42834000, 1, 0x4100C000, 0x3" />
 
 
     <!--app lauch boost (disabling packing)-->
@@ -99,7 +99,7 @@
         <!-- STORAGE CLK SCALING resource opcode, value-->
         <!-- LLCC DDR LAT GOLD MIN FREQ resource opcode, value-->
         <!-- L3 resource opcode, value-->
-        <!-- GPU DISABLE resource opcode, value-->
+        <!-- GPU_TOUCH_WAKEUP resource opcode, value-->
         <!-- CPU_CORE_CONTROL_CPU_NOT_PREFERRED resource opcode, value-->
 
         <!-- Type="7", main launch boost of 2sec -->
@@ -108,7 +108,7 @@
             Resources="0x40C00000, 0x1, 0x40804000, 0xFFF, 0x40804100, 0xFFF, 0x40804200, 0xFFF,
                        0x40800000, 0xFFF, 0x40800100, 0xFFF, 0x40800200, 0xFFF, 0x41848000, 0x104410,
                        0x41844000, 0x104410, 0x42C10000, 0x1, 0x43488000, 0x401640,
-                       0x43458000, 0x1B8A00, 0x4281C000, 2000, 0x4100C000, 0x3" />
+                       0x43458000, 0x1B8A00, 0x42834000, 1, 0x4100C000, 0x3" />
 
     <!--Lightning App Launch-->
         <!-- SCHEDBOOST resource opcode, value-->
@@ -162,7 +162,7 @@
         <!-- STORAGE CLK SCALING resource opcode, value-->
         <!-- LLCC DDR LAT GOLD MIN FREQ resource opcode, value-->
         <!-- L3 resource opcode, value-->
-        <!-- GPU DISABLE resource opcode, value-->
+        <!-- GPU_TOUCH_WAKEUP resource opcode, value-->
         <!-- CPU_CORE_CONTROL_CPU_NOT_PREFERRED resource opcode, value-->
 
         <!-- Type="10", main launch boost of 2sec -->
@@ -171,7 +171,7 @@
             Resources="0x40C00000, 0x1, 0x40804000, 0xFFF, 0x40804100, 0xFFF, 0x40804200, 0xFFF,
                        0x40800000, 0xFFF, 0x40800100, 0xFFF, 0x40800200, 0xFFF, 0x41848000, 0x104410,
                        0x41844000, 0x104410, 0x42C10000, 0x1, 0x43488000, 0x401640,
-                       0x43458000, 0x1B8A00, 0x4281C000, 2000, 0x4100C000, 0x3" />
+                       0x43458000, 0x1B8A00, 0x42834000, 1, 0x4100C000, 0x3" />
 
 
     <!--app launch boost (attach application) -->
@@ -553,49 +553,49 @@
     <!-- PiCard Early Wakeup both GPU and Display -->
         <!-- 60, 90fps: CPUBOOST_MIN_FREQ LITTLE Core resource opcode, value-->
         <!-- 120fps & above: PID Affine opcode, value -->
-        <!-- GPU DISABLE resource opcode, value-->
+        <!-- GPU_TOUCH_WAKEUP resource opcode, value-->
         <!-- DISPLAY EARLY WAKEUP opcode, value-->
         <Config
                 Id="0x00001098" Type="0" Enable="true" Target="kalama" Timeout="2000" Fps="60"
-                Resources="0x40800100, 700, 0x4281C000, 25, 0x41C0C000, 0" />
+                Resources="0x40800100, 700, 0x42834000, 1, 0x41C0C000, 0" />
         <Config
                 Id="0x00001098" Type="0" Enable="true" Target="kalama" Timeout="2000" Fps="90"
-                Resources="0x40800100, 700, 0x4281C000, 17, 0x41C0C000, 0" />
+                Resources="0x40800100, 700, 0x42834000, 1, 0x41C0C000, 0" />
         <Config
                 Id="0x00001098" Type="0" Enable="true" Target="kalama" Timeout="2000" Fps="120"
-                Resources="0x42C20000, 1, 0x4281C000, 13, 0x41C0C000, 0" />
+                Resources="0x42C20000, 1, 0x42834000, 1, 0x41C0C000, 0" />
         <Config
                 Id="0x00001098" Type="0" Enable="true" Target="kalama" Timeout="2000" Fps="144"
-                Resources="0x42C20000, 1, 0x4281C000, 11, 0x41C0C000, 0" />
+                Resources="0x42C20000, 1, 0x42834000, 1, 0x41C0C000, 0" />
         <Config
                 Id="0x00001098" Type="0" Enable="true" Target="kalama" Timeout="2000" Fps="180"
-                Resources="0x42C20000, 1, 0x4281C000, 9, 0x41C0C000, 0" />
+                Resources="0x42C20000, 1, 0x42834000, 1, 0x41C0C000, 0" />
         <Config
                 Id="0x00001098" Type="0" Enable="true" Target="kalama" Timeout="2000" Fps="240"
-                Resources="0x42C20000, 1, 0x4281C000, 7, 0x41C0C000, 0" />
+                Resources="0x42C20000, 1, 0x42834000, 1, 0x41C0C000, 0" />
 
     <!-- PiCard Early Wakeup GPU only -->
         <!-- 60, 90fps: CPUBOOST_MIN_FREQ LITTLE Core resource opcode, value-->
         <!-- 120fps & above: PID Affine opcode, value -->
-        <!-- GPU DISABLE resource opcode, value-->
+        <!-- GPU_TOUCH_WAKEUP resource opcode, value-->
         <Config
                 Id="0x00001099" Type="0" Enable="true" Target="kalama" Timeout="2000" Fps="60"
-                Resources="0x40800100, 700, 0x4281C000, 25" />
+                Resources="0x40800100, 700, 0x42834000, 1" />
         <Config
                 Id="0x00001099" Type="0" Enable="true" Target="kalama" Timeout="2000" Fps="90"
-                Resources="0x40800100, 700, 0x4281C000, 17" />
+                Resources="0x40800100, 700, 0x42834000, 1" />
         <Config
                 Id="0x00001099" Type="0" Enable="true" Target="kalama" Timeout="2000" Fps="120"
-                Resources="0x42C20000, 1, 0x4281C000, 13" />
+                Resources="0x42C20000, 1, 0x42834000, 1" />
         <Config
                 Id="0x00001099" Type="0" Enable="true" Target="kalama" Timeout="2000" Fps="144"
-                Resources="0x42C20000, 1, 0x4281C000, 11" />
+                Resources="0x42C20000, 1, 0x42834000, 1" />
         <Config
                 Id="0x00001099" Type="0" Enable="true" Target="kalama" Timeout="2000" Fps="180"
-                Resources="0x42C20000, 1, 0x4281C000, 9" />
+                Resources="0x42C20000, 1, 0x42834000, 1" />
         <Config
                 Id="0x00001099" Type="0" Enable="true" Target="kalama" Timeout="2000" Fps="240"
-                Resources="0x42C20000, 1, 0x4281C000, 7" />
+                Resources="0x42C20000, 1, 0x42834000, 1" />
 
     <!-- PiCard Early Wakeup Display only -->
         <!-- 60, 90fps: CPUBOOST_MIN_FREQ LITTLE Core resource opcode, value-->

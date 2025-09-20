@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!--
+/* Copyright (c) 2023 Qualcomm Technologies, Inc.
+ * All Rights Reserved.
+ * Confidential and Proprietary - Qualcomm Technologies, Inc.
+ */
+-->
+
+<!--Ids are used in identifying the boosts, increment ids linearly,
+    do not modify Ids, or add in between-->
+<!--follow the number format rules while specifying number, can be given
+    in any format-->
+
+<AIConfigs>
+    <AIPerfBoost>
+
+    <!-- ai inferences boost-->
+        <!-- SCHEDBOOST resource opcode, value-->
+        <!-- SCHED_MIN_TASK_UTIL_FOR_BOOST, value-->
+        <!-- SCHED_MIN_TASK_UTIL_FOR_COLOCATION, value-->
+        <Config Id="0x00001651" Enable="true" Timeout="20000" Target="kalama"
+                Resources="0x40C00000, 0x1,  0x40C7C000, 0x0,  0x40C78000, 0x0" />
+
+    </AIPerfBoost>
+</AIConfigs>

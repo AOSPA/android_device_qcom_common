@@ -26,7 +26,7 @@
         <!-- STORAGE CLK SCALING resource opcode, value-->
         <!-- LLCCBW resource opcode, value-->
         <!-- L3 resource opcode, value-->
-        <!-- GPU DISABLE resource opcode, value-->
+        <!-- GPU_TOUCH_WAKEUP resource opcode, value-->
 
         <!-- Type="1", main launch boost of 2sec -->
         <Config
@@ -34,7 +34,7 @@
             Resources="0x40C00000, 0x1, 0x40804000, 0xFFF, 0x40804100, 0xFFF,
                        0x40800000, 0xFFF, 0x40800100, 0xFFF, 0x41800000, 0xFF,
                        0x40400000, 0x1, 0x42C10000, 0x1, 0x43000000, 0xFF, 0x43400000, 0xFFFF,
-                       0x4281C000, 2000" />
+                       0x42834000, 1" />
 
     <!--app lauch boost (disabling packing)-->
 

@@ -46,7 +46,7 @@
              Target="bengal"
              NumClusters="2"
              TotalNumCores="8"
-             SocIds="417,420,444,445"
+             SocIds="417,420,444,445,469,470"
              SynCore="1"
              CoreCtlCpu="4"
              MinCoreOnline="0"
@@ -63,7 +63,7 @@
              Target="scuba"
              NumClusters="1"
              TotalNumCores="4"
-             SocIds="441"
+             SocIds="441,471,473,474"
              SynCore="1"
              MinCoreOnline="1"
              CpufreqGov="1" />

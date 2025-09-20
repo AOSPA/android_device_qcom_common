@@ -33,6 +33,7 @@ property Name is called. -->
                 <Prop Name="vendor.perf.gestureflingboost.enable" Value="true" />
                 <Prop Name="ro.vendor.iocgrp.config" Value="0" />
                 <Prop Name="ro.vendor.qti.sys.fw.bg_apps_limit" Value="8" />
+                <Prop Name="ro.vendor.qti.sys.fw.bg_apps_limit" Value="4" Variant="monaco_go_aon" />
                 <Prop Name="vendor.appcompact.enable_app_compact" Value="true" />
                 <Prop Name="vendor.appcompact.some_compact_type" Value="4" />
                 <Prop Name="vendor.appcompact.full_compact_type" Value="2" />
@@ -44,6 +45,7 @@ property Name is called. -->
                 <Prop Name="ro.lmk.psi_window_size_ms" Value="500" />
                 <Prop Name="ro.lmk.psi_poll_period_scrit_ms" Value="100" />
                 <Prop Name="ro.lmk.psi_scrit_complete_stall_ms" Value="300" />
+                <Prop Name="ro.lmk.psi_scrit_complete_stall_ms" Value="85" Variant="monaco_go_aon" />
                 <Prop Name="vendor.iop.enabled" Value="false" />
                 <Prop Name="vendor.iop.enable_uxe" Value="0" />
                 <Prop Name="vendor.perf.iop_v3.enable" Value="0" />
