@@ -1,8 +1,4 @@
-vendor/bin/feature_enabler_client;DISABLE_CHECKELF
-vendor/bin/hw/vendor.display.color@1.0-service
-vendor/bin/ppd
-vendor/bin/qdcmss
-vendor/bin/ubwcconvert
+# Display Configs
 vendor/etc/display/DPU660.xml
 vendor/etc/display/DPU670.xml
 vendor/etc/display/DPU720.xml
@@ -13,6 +9,13 @@ vendor/etc/display/DPU860.xml
 vendor/etc/display/DPU8__.xml
 vendor/etc/display/DPU9__.xml
 vendor/etc/display/thermallevel_to_fps.xml
+
+# Display Libraries
+vendor/bin/feature_enabler_client;DISABLE_CHECKELF
+vendor/bin/hw/vendor.display.color@1.0-service
+vendor/bin/ppd
+vendor/bin/qdcmss
+vendor/bin/ubwcconvert
 vendor/etc/init/feature_enabler_client.rc
 vendor/etc/init/qdcmss.rc
 vendor/etc/init/vendor.display.color@1.0-service.rc
