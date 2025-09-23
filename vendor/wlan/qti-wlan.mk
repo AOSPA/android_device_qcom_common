@@ -38,6 +38,7 @@ PRODUCT_PACKAGES += \
     hostapd_cli \
     hostapd_default.conf \
     libqsap_sdk \
+    libwifi-hal-ctrl \
     libwifi-hal-qcom \
     sigma_dut \
     wpa_supplicant \
