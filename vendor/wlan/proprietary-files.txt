@@ -1,6 +1,9 @@
 # WLAN
 vendor/bin/cnss-daemon;DISABLE_CHECKELF
+vendor/bin/wifi_qos_daemon
 vendor/bin/wifilearner
+vendor/etc/init/init.vendor.wlan.rc
 vendor/etc/init/vendor.qti.hardware.wifi.wifilearner-service.rc
 vendor/etc/vintf/manifest/vendor.qti.hardware.wifi.wifilearner-service.xml
+vendor/lib64/libtensorflowlite_c.so
 vendor/lib64/vendor.qti.hardware.wifi.wifilearner-V1-ndk.so
