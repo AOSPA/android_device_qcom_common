@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "b08ce6fd_747f4d27",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000579
+      },
+      "writtenOn": "2025-11-08T06:25:15Z",
+      "side": 1,
+      "message": "NCM tethering isnt built because its handled in usb component",
+      "revId": "14daaf9129dfbbbb3b371b74a84ef557aff1b11a",
+      "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
+    }
+  ]
+}
