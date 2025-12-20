@@ -1,4 +1,5 @@
 # Allow system server to read camera properties
+get_prop(system_server, camera2_extensions_prop)
 get_prop(system_server, vendor_persist_camera_prop)
 
 get_prop(system_server, vendor_wfd_sys_debug_prop)
