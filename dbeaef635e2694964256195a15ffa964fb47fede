@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "cc5a63b9_76794ae4",
+        "filename": "vendor/init/qti-init.mk",
+        "patchSetId": 2
+      },
+      "lineNbr": 44,
+      "author": {
+        "id": 1000895
+      },
+      "writtenOn": "2026-01-18T07:32:39Z",
+      "side": 1,
+      "message": "init.qcrild.sh",
+      "revId": "dbeaef635e2694964256195a15ffa964fb47fede",
+      "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
+    }
+  ]
+}
