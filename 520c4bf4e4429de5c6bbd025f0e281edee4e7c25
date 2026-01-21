@@ -36,6 +36,24 @@
       "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "46ed8e46_b61c5445",
+        "filename": "vendor/init/Android.bp",
+        "patchSetId": 2
+      },
+      "lineNbr": 190,
+      "author": {
+        "id": 1000579
+      },
+      "writtenOn": "2026-01-21T02:55:42Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "98696437_f9a8ea75",
+      "revId": "520c4bf4e4429de5c6bbd025f0e281edee4e7c25",
+      "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "4b5ba8bc_48cf73b9",
@@ -49,6 +67,24 @@
       "writtenOn": "2026-01-18T10:00:48Z",
       "side": 1,
       "message": "Same here",
+      "revId": "520c4bf4e4429de5c6bbd025f0e281edee4e7c25",
+      "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "aad01c25_fdf1b6fd",
+        "filename": "vendor/init/Android.bp",
+        "patchSetId": 2
+      },
+      "lineNbr": 203,
+      "author": {
+        "id": 1000579
+      },
+      "writtenOn": "2026-01-21T02:55:42Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "4b5ba8bc_48cf73b9",
       "revId": "520c4bf4e4429de5c6bbd025f0e281edee4e7c25",
       "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
     }
