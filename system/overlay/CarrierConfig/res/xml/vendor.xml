@@ -634,6 +634,10 @@ IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.-->
         <boolean name="editable_wfc_mode_bool" value="true" />
         <int name="carrier_default_wfc_ims_mode_int" value="1" />
         <int name="carrier_default_wfc_ims_roaming_mode_int" value="1" />
+        <boolean name="rtt_supported_bool" value="true" />
+        <int name="default_rtt_mode_int" value="1" />
+        <boolean name="rtt_upgrade_supported_bool" value="true"/>
+        <boolean name="rtt_downgrade_supported_bool" value="true"/>
     </carrier_config>
 
     <carrier_config mcc="242" mnc="05">

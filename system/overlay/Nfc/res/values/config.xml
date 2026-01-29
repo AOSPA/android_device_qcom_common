@@ -6,4 +6,16 @@
     <bool name="enable_reader_option_support">true</bool>
     <!-- Enable EUICC support for offhost card emulation -->
     <bool name="enable_euicc_support">true</bool>
+    <bool name="enable_notify_dispatch_failed">true</bool>
+    <bool name="enable_notify_read_failed">true</bool>
+    <bool name="enable_service_for_category_other">true</bool>
+    <bool name="enable_secure_nfc_support">true</bool>
+    <bool name="nfc_observe_mode_supported">true</bool>
+    <bool name="nfc_proprietary_getcaps_supported">true</bool>
+    <bool name="enable_oem_extension">false</bool>
+    <integer name="toast_debounce_time_ms">2000</integer>
+    <integer name="unknown_tag_polling_delay">2200</integer>
+    <integer name="unknown_tag_polling_delay_count_max">5</integer>
+    <integer name="unknown_tag_read_error_count_max">5</integer>
+    <integer name="unknown_tag_polling_delay_long">2200</integer>
 </resources>

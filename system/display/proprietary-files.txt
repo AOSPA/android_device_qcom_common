@@ -18,6 +18,4 @@ system/lib64/libgpphexlpsession.so
 system/lib64/libgpppreprocessing.so
 system/lib64/libgpptxr.so
 system/lib64/libgppvppgfrcplussession.so
-system/lib64/libMotionEngine.so
-system/lib64/libMotionEngineVk.so
 system/lib64/vendor.qti.hardware.hexlp-V2-ndk.so
