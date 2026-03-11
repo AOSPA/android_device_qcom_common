@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "a893ed94_df861419",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000730
+      },
+      "writtenOn": "2026-03-11T08:25:27Z",
+      "side": 1,
+      "message": "Seems like missed here\n\nhttps://github.com/AOSPA/android_device_qcom_common/commit/bc5ef04d9ccaccbce6905031c9920b2bafe117f4#diff-7ce93841c64323791bb81c90a3a5892b81706e6f85fdeb18869ba4d3d2ea994dR21",
+      "revId": "5d868258ff69f42c1cbdedd19b2ed91c084a0ede",
+      "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
+    }
+  ]
+}
