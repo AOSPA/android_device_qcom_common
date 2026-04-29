@@ -18,6 +18,24 @@
       "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "c326a04e_e98268b3",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000579
+      },
+      "writtenOn": "2026-04-29T09:10:13Z",
+      "side": 1,
+      "message": "vendor/etc/wifi/AE_0_model.tflite\nvendor/etc/wifi/AE_1_model.tflite\nvendor/etc/wifi/AE_2_model.tflite\nvendor/etc/wifi/AE_3_model.tflite\nvendor/etc/wifi/AE_7_model.tflite\n\nmight be fixed by including this",
+      "parentUuid": "90d3dbeb_c1f4c8e6",
+      "revId": "ef47016025913218048ad386d2a2f6ef716063f4",
+      "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "5264d91c_9a5d72ac",
