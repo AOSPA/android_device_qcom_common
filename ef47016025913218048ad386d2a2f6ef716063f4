@@ -1,6 +1,23 @@
 {
   "comments": [
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "90d3dbeb_c1f4c8e6",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000579
+      },
+      "writtenOn": "2026-04-29T09:08:47Z",
+      "side": 1,
+      "message": "04-29 14:37:44.548 12033 12033 I wifi_qos_daemon: Initializing wifi_qos_daemon\n04-29 14:37:44.548 12033 12033 D wifi_qos_daemon: event loop initialization success\n04-29 14:37:44.548 12033 12033 D wifi_qos_daemon: add fd \u003d6\n04-29 14:37:44.548 12033 12033 D wifi_qos_daemon: add fd \u003d7\n04-29 14:37:44.549 12033 12033 E wifi_qos_daemon: audio model create failed, path (null)\n04-29 14:37:44.549 12033 12033 E wifi_qos_daemon: AE Audio Model load failed\n04-29 14:37:44.549 12033 12033 E wifi_qos_daemon: Auto encoder init failed\n04-29 14:37:44.549 12033 12033 E wifi_qos_daemon: STC initialization failed\n04-29 14:37:44.549 12033 12033 D wifi_qos_daemon: remove fd \u003d6\n04-29 14:37:44.549 12033 12033 D wifi_qos_daemon: remove fd \u003d7\n\ndoesn\u0027t look like its supposed to be shipped on all platforms",
+      "revId": "ef47016025913218048ad386d2a2f6ef716063f4",
+      "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "5264d91c_9a5d72ac",
