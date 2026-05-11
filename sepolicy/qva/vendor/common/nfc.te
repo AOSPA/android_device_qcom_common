@@ -1,0 +1,2 @@
+# Allow NFC service to search the vendor NFC data directory
+allow nfc vendor_nfc_vendor_data_file:dir search;
