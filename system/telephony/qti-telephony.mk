@@ -29,5 +29,8 @@ PRODUCT_SYSTEM_EXT_PROPERTIES += \
     persist.vendor.ims.disableQXDMLogs=1
 endif
 
+PRODUCT_PACKAGES += \
+    QtiTelephonyServiceCompat
+
 # Get non-open-source specific aspects.
 $(call inherit-product-if-exists, vendor/qcom/common/system/telephony/telephony-vendor.mk)
