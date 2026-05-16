@@ -1,0 +1,1 @@
+allow cameraserver vendor_perf_service:service_manager find;

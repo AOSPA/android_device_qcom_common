@@ -17,7 +17,8 @@ endif
 
 # Common system policies
 SYSTEM_EXT_PRIVATE_SEPOLICY_DIRS += \
-    $(COMMON_SEPOLICY_PATH)/common/private
+    $(COMMON_SEPOLICY_PATH)/common/private \
+    $(COMMON_SEPOLICY_PATH)/generic/private
 SYSTEM_EXT_PUBLIC_SEPOLICY_DIRS += \
     $(COMMON_SEPOLICY_PATH)/common/public
 
