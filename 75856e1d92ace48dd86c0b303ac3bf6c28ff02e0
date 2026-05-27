@@ -16,6 +16,23 @@
       "message": "I need more information than that to deviate from qcom",
       "revId": "75856e1d92ace48dd86c0b303ac3bf6c28ff02e0",
       "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "33ee2344_b53fab02",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000785
+      },
+      "writtenOn": "2026-05-27T19:25:15Z",
+      "side": 1,
+      "message": "Actually not needed anymore, abandoning",
+      "revId": "75856e1d92ace48dd86c0b303ac3bf6c28ff02e0",
+      "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
     }
   ]
 }
