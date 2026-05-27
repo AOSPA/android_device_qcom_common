@@ -63,3 +63,6 @@ type vendor_sysfs_fps_attr, fs_type, sysfs_type;
 type vendor_subsys_hvdcp, fs_type, sysfs_type;
 type sysfs_hvdcp, fs_type, sysfs_type;
 type vendor_sysfs_devfreqw, fs_type, sysfs_type;
+
+# NNHAL
+type vendor_hal_neuralnetworks_data_file, file_type, data_file_type;

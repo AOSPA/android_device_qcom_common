@@ -259,3 +259,8 @@
 /sys/devices/platform/soc/18321110.qcom,cpu6-cpu-l3-lat/devfreq/18321110.qcom,cpu6-cpu-l3-lat/min_freq   u:object_r:vendor_sysfs_devfreqw:s0
 /sys/devices/platform/soc/18321110.qcom,cpu0-cpu-l3-lat/devfreq/18321110.qcom,cpu0-cpu-l3-lat/available_frequencies u:object_r:vendor_sysfs_devfreqw:s0
 /sys/devices/platform/soc/18321110.qcom,cpu6-cpu-l3-lat/devfreq/18321110.qcom,cpu6-cpu-l3-lat/available_frequencies u:object_r:vendor_sysfs_devfreqw:s0
+
+# NNHAL
+/data/vendor/nnhal(/.*)?                                            u:object_r:vendor_hal_neuralnetworks_data_file:s0
+/vendor/bin/hw/android\.hardware\.neuralnetworks@1\.3-service-qti   u:object_r:vendor_hal_neuralnetworks_default_exec:s0
+/vendor/bin/hw/android\.hardware\.neuralnetworks-shim-service-qti   u:object_r:vendor_hal_neuralnetworks_default_exec:s0

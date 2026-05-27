@@ -1,0 +1,2 @@
+# NNHAL
+allow dumpstate vendor_hal_neuralnetworks_default:process signal;
