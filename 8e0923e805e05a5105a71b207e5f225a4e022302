@@ -16,6 +16,24 @@
       "message": "does cameraserver do anything after connecting to perf service?",
       "revId": "8e0923e805e05a5105a71b207e5f225a4e022302",
       "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "44123cb3_8f4ae849",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000785
+      },
+      "writtenOn": "2026-05-27T19:09:54Z",
+      "side": 1,
+      "message": "not sure, but i suppose its some kind of camera boost",
+      "parentUuid": "fdf395d2_70fcf513",
+      "revId": "8e0923e805e05a5105a71b207e5f225a4e022302",
+      "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
     }
   ]
 }
