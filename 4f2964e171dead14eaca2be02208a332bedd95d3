@@ -16,6 +16,24 @@
       "message": "nnhal system apis have been deprecated ages ago, as far as i know nothing vendor side uses it either so no point forward porting this",
       "revId": "4f2964e171dead14eaca2be02208a332bedd95d3",
       "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "e055181c_275df245",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000785
+      },
+      "writtenOn": "2026-06-02T03:15:43Z",
+      "side": 1,
+      "message": "Oh, the vendor service is still built here and without this commit I got a build error, so should I just completely remove it here?",
+      "parentUuid": "21e12b57_884ed3e9",
+      "revId": "4f2964e171dead14eaca2be02208a332bedd95d3",
+      "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
     }
   ]
 }
