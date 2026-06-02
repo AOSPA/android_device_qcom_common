@@ -34,6 +34,24 @@
       "parentUuid": "21e12b57_884ed3e9",
       "revId": "4f2964e171dead14eaca2be02208a332bedd95d3",
       "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "d26cef2f_ee94791b",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000579
+      },
+      "writtenOn": "2026-06-02T04:08:14Z",
+      "side": 1,
+      "message": "yeah, unless you find something actually using the qcom nnhal interface, no real point in keeping it. since qcom services communicate directly over dsp interfaces there shouldn\u0027t be any vendor dependencies on nnhal",
+      "parentUuid": "e055181c_275df245",
+      "revId": "4f2964e171dead14eaca2be02208a332bedd95d3",
+      "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
     }
   ]
 }
