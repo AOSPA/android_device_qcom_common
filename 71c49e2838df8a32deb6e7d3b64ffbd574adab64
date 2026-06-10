@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "4a0c8f87_f9e9fe3c",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000579
+      },
+      "writtenOn": "2026-06-10T05:31:40Z",
+      "side": 1,
+      "message": "Comment removed by: Omkar Chandorkar; Reason: it was different",
+      "revId": "71c49e2838df8a32deb6e7d3b64ffbd574adab64",
+      "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
+    }
+  ]
+}
