@@ -17,7 +17,6 @@ from extract_utils_qti.fixups_lib import lib_fixup_vendor_suffix
 from extract_utils_qti.module import ExtractUtilsQTIModule, QTIComponentType
 
 namespace_imports = [
-    'hardware/qcom/display',
     'vendor/qcom/common/vendor/display/4.19',
     'vendor/qcom/common/vendor/display/5.10',
     'vendor/qcom/common/vendor/display/5.15',

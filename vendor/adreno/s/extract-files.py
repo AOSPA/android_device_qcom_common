@@ -11,10 +11,6 @@ from extract_utils.main import ExtractUtils
 from extract_utils_qti.fixups_lib import lib_fixup_vendor_suffix
 from extract_utils_qti.module import ExtractUtilsQTIModule, QTIComponentType
 
-namespace_imports = [
-    'hardware/qcom/display/gralloc',
-]
-
 lib_fixups: lib_fixups_user_type = {
     **lib_fixups,
     'vendor.qti.qspmhal@1.0': lib_fixup_vendor_suffix,
@@ -23,7 +19,6 @@ lib_fixups: lib_fixups_user_type = {
 module = ExtractUtilsQTIModule(
     'adreno/s',
     QTIComponentType.VENDOR,
-    namespace_imports=namespace_imports,
     lib_fixups=lib_fixups,
 )
 
