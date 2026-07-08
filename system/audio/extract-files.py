@@ -10,9 +10,18 @@ from extract_utils.main import ExtractUtils
 
 from extract_utils_qti.module import ExtractUtilsQTIModule, QTIComponentType
 
+blob_fixups: blob_fixups_user_type = {
+    'system_ext/lib64/libqxrsplitauxservice.qti.so': blob_fixup()
+        .replace_needed(
+            'android.media.audio.common.types-V4-cpp.so',
+            'android.media.audio.common.types-V5-cpp.so',
+        ),
+}  # fmt: skip
+
 module = ExtractUtilsQTIModule(
     'audio',
     QTIComponentType.SYSTEM,
+    blob_fixups=blob_fixups,
 )
 
 if __name__ == '__main__':

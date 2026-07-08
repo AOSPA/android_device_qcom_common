@@ -1,0 +1,34 @@
+From 82288d67fc3cbb8458be39c95a5d8d28033fdef7 Mon Sep 17 00:00:00 2001
+From: Omkar Chandorkar <gotenksIN@aospa.co>
+Date: Mon, 13 Jul 2026 10:50:02 +0530
+Subject: [PATCH] Disable MIUI Bluetooth SAR check
+
+---
+ .../telephony/BluetoothAdapterCompatible.smali        | 11 +----------
+ 1 file changed, 1 insertion(+), 10 deletions(-)
+
+diff --git a/smali/com/qualcomm/qti/internal/telephony/BluetoothAdapterCompatible.smali b/smali/com/qualcomm/qti/internal/telephony/BluetoothAdapterCompatible.smali
+index 7847696..c77a418 100644
+--- a/smali/com/qualcomm/qti/internal/telephony/BluetoothAdapterCompatible.smali
++++ b/smali/com/qualcomm/qti/internal/telephony/BluetoothAdapterCompatible.smali
+@@ -20,16 +20,7 @@
+ .method public static isNeeded()Z
+     .locals 2
+ 
+-    .line 22
+-    const-string v0, "MiuiBluetoothAdapterCompatible"
+-
+-    const-string v1, " isNeeded"
+-
+-    invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+-
+-    .line 23
+-    sget-boolean v0, Lmiui/os/Build;->IS_GLOBAL_BUILD:Z
+-
++    const/4 v0, 0x0
+     return v0
+ .end method
+ 
+-- 
+2.55.0
+
