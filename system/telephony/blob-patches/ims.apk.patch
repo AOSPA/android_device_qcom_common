@@ -1,0 +1,60 @@
+diff --git a/smali/org/codeaurora/ims/ImsServiceStateReceiver.smali b/smali/org/codeaurora/ims/ImsServiceStateReceiver.smali
+index 452cb41..377d45d 100644
+--- a/smali/org/codeaurora/ims/ImsServiceStateReceiver.smali
++++ b/smali/org/codeaurora/ims/ImsServiceStateReceiver.smali
+@@ -778,10 +778,7 @@
+ .method public updateHDIcon(ZZ)V
+     .locals 3
+ 
+-    .line 69
+-    invoke-static {}, Landroid/telephony/TelephonyBaseUtilsStub;->isMiuiRom()Z
+-
+-    move-result v0
++    const/4 v0, 0x0
+ 
+     if-eqz v0, :cond_0
+ 
+diff --git a/smali/org/codeaurora/ims/ImsServiceSub.smali b/smali/org/codeaurora/ims/ImsServiceSub.smali
+index e584de9..8b0cc59 100644
+--- a/smali/org/codeaurora/ims/ImsServiceSub.smali
++++ b/smali/org/codeaurora/ims/ImsServiceSub.smali
+@@ -8203,10 +8203,7 @@
+ 
+     if-ne p1, v1, :cond_6
+ 
+-    .line 573
+-    invoke-static {}, Landroid/telephony/TelephonyBaseUtilsStub;->isMiuiRom()Z
+-
+-    move-result p2
++    const/4 p2, 0x0
+ 
+     if-nez p2, :cond_5
+ 
+diff --git a/smali/org/codeaurora/ims/ImsSubController.smali b/smali/org/codeaurora/ims/ImsSubController.smali
+index 5193daa..cef31fe 100644
+--- a/smali/org/codeaurora/ims/ImsSubController.smali
++++ b/smali/org/codeaurora/ims/ImsSubController.smali
+@@ -910,10 +910,7 @@
+ 
+     if-nez p1, :cond_2
+ 
+-    .line 501
+-    invoke-static {}, Landroid/telephony/TelephonyBaseUtilsStub;->isMiuiRom()Z
+-
+-    move-result v1
++    const/4 v1, 0x0
+ 
+     if-eqz v1, :cond_2
+ 
+@@ -1562,10 +1559,7 @@
+     :cond_6
+     if-eqz v1, :cond_7
+ 
+-    .line 545
+-    invoke-static {}, Landroid/telephony/TelephonyBaseUtilsStub;->isMiuiRom()Z
+-
+-    move-result v1
++    const/4 v1, 0x0
+ 
+     if-eqz v1, :cond_7
+ 

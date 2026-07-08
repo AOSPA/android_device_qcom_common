@@ -15,12 +15,18 @@ namespace_imports = [
 ]
 
 blob_fixups: blob_fixups_user_type = {
+    'system_ext/priv-app/ims/ims.apk': blob_fixup()
+        .apktool_patch('blob-patches/ims.apk.patch'),
+    'system_ext/framework/qti-telephony-common.jar': blob_fixup()
+        .apktool_patch('blob-patches/qti-telephony-common.jar.patch'),
     (
         'product/etc/permissions/vendor.qti.hardware.data.connection-V1.0-java.xml',
         'product/etc/permissions/vendor.qti.hardware.data.connection-V1.1-java.xml',
         'product/etc/permissions/vendor.qti.hardware.data.connectionaidl-V1-java.xml',
     ): blob_fixup()
         .regex_replace('xml version="2.0"', 'xml version="1.0"'),
+    'system_ext/lib64/libmink-sock-native-api.so': blob_fixup()
+        .remove_needed('libminksocket_system.so'),
 }  # fmt: skip
 
 module = ExtractUtilsQTIModule(
