@@ -9,8 +9,6 @@ system_ext/etc/seccomp_policy/perfservice.policy
 system_ext/lib/libbeluga.so
 system_ext/lib/libcomposerextn.qti.so
 system_ext/lib/libdolphin.so
-system_ext/lib/libjpegdecoder_ext.so
-system_ext/lib/libjpegencoder_ext.so
 system_ext/lib/liblayerext.qti.so
 system_ext/lib/libpenguin_impl.so
 system_ext/lib/libpenguin.so
@@ -37,9 +35,6 @@ system_ext/lib/vendor.qti.qspmhal-V1-ndk.so
 system_ext/lib64/libbeluga.so
 system_ext/lib64/libcomposerextn.qti.so
 system_ext/lib64/libdolphin.so
-system_ext/lib64/libdolphin_ext.so
-system_ext/lib64/libjpegdecoder_ext.so
-system_ext/lib64/libjpegencoder_ext.so
 system_ext/lib64/liblayerext.qti.so
 system_ext/lib64/libpenguin_impl.so
 system_ext/lib64/libpenguin.so
