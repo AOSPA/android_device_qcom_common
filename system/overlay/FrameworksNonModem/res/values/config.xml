@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- This device does not support mobile data. -->
+    <bool name="config_mobile_data_capable">false</bool>
+    <!-- This device is not "voice capable" -->
+    <bool name="config_voice_capable">false</bool>
+    <!-- This device does not allow sms service. -->
+    <bool name="config_sms_capable">false</bool>
+</resources>

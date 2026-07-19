@@ -1,0 +1,2 @@
+system_ext/bin/nfc_cfg_service
+system_ext/etc/init/nfc_cfg_service.rc

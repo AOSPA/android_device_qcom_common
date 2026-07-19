@@ -21,6 +21,8 @@ blob_fixups: blob_fixups_user_type = {
         'product/etc/permissions/vendor.qti.hardware.data.connectionaidl-V1-java.xml',
     ): blob_fixup()
         .regex_replace('xml version="2.0"', 'xml version="1.0"'),
+    'system_ext/lib64/libmink-sock-native-api.so': blob_fixup()
+        .remove_needed('libminksocket_system.so'),
 }  # fmt: skip
 
 module = ExtractUtilsQTIModule(

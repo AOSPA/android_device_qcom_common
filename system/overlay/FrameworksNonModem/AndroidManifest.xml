@@ -15,13 +15,15 @@
 -->
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     coreApp="true"
-    package="android.overlay.common">
+    package="com.qti.overlay.framework.nonmodem">
 
     <application
         android:hasCode="false"/>
 
     <overlay
         android:isStatic="true"
-        android:priority="500"
-        android:targetPackage="android" />
+        android:priority="600"
+        android:targetPackage="android"
+        android:requiredSystemPropertyName="ro.baseband"
+        android:requiredSystemPropertyValue="apq"/>
 </manifest>
