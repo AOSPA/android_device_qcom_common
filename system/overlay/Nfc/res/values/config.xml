@@ -18,4 +18,14 @@
     <integer name="unknown_tag_polling_delay_count_max">5</integer>
     <integer name="unknown_tag_read_error_count_max">5</integer>
     <integer name="unknown_tag_polling_delay_long">2200</integer>
+    <!-- NFC Antenna Location API -->
+    <integer name="device_width">68</integer>
+    <integer name="device_height">146</integer>
+    <bool name="device_foldable">false</bool>
+    <integer-array name="antenna_x">
+      <item>34</item>
+    </integer-array>
+    <integer-array name="antenna_y">
+      <item>48</item>
+    </integer-array>
 </resources>

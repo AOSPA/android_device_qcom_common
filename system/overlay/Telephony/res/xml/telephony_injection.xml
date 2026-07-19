@@ -56,5 +56,6 @@
         <component>com.android.internal.telephony.data.TelephonyNetworkProvider</component>
         <component>com.android.internal.telephony.data.LinkBandwidthEstimator</component>
         <component>com.android.internal.telephony.data.AutoDataSwitchController</component>
+        <component>com.android.internal.telephony.data.DataNetwork</component>
     </components>
 </injection>

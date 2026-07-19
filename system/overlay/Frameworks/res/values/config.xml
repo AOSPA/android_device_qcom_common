@@ -441,7 +441,34 @@
          config_oem_enabled_satellite_countries. -->
     <string name="config_oem_enabled_satellite_s2cell_file">/vendor/etc/telephony/sats2.dat</string>
 
+    <!-- Indicates the maximum allowed data mode specified by the OEMs. It ensures the
+         entitled and carrier config overridden data mode by the carrier is within this value.
+         Refer to {@link CarrierConfigManager#SATELLITE_DATA_SUPPORT_MODE} to see
+         the possible values -->
+    <integer name="max_allowed_data_mode">2</integer>
+
     <!-- The receiver class of the intent that hidden menu sends to start satellite non-emergency mode -->
     <string name="config_satellite_carrier_roaming_non_emergency_session_class" translatable="false">com.google.android.apps.stargate.sessionmanager.SessionManagerReceiver_Receiver</string>
+
+    <!-- Configures the packages that are allowed to access the restricted
+         messages in the Telephony database (mmsmsms.db).
+         READ_RESTRICTED_MESSAGES app-op is granted to the packages listed in
+         this configuration at boot time.
+
+         Each element in the array should be either:
+         - a preinstalled (system) package name, e.g. com.package.example
+         - an installable package name and a sha256_digest of the apk's
+           certificate pair, e.g. <package_name>:<sha256_digest>,
+           e.g. com.package.example:B94D27B9934D3E08A52E52D7DA7DABFAC484EFE37A5380EE9088F7ACE2EFCDA9
+
+         Note:
+         The sha256_digest must be a 64-character hexadecimal string in uppercase
+         with no colons.
+    -->
+<!--
+    <string-array name="config_messaging_read_restriction_allowlist" translatable="false">
+        <item>com.android.music</item>
+    </string-array>
+-->
 
 </resources>

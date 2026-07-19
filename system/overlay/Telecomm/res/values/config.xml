@@ -40,4 +40,6 @@
     <string name="dialer_default_class" translatable="false">com.android.dialer.app.DialtactsActivity</string>
     <!-- Flag indicating if the tty is enabled -->
     <bool name="tty_enabled">true</bool>
+    <!-- String indicating the audio parameter key for crs volume -->
+    <string name="config_audio_parameter_key_crs_volume" translatable="false">CRS_volume=</string>
 </resources>
