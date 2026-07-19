@@ -49,15 +49,23 @@
      If enabled, FIRa CCC capability UCI Specification used -->
      <bool name = "fira_supported_extension_ccc">true</bool>
 
+    <!-- Device with high uncertainty for timesync. 255 is max, set it to 0 if timesync is reliable.
+    Value [µsec] = 2^(timesync_uncertainty_override/8)
+    -->
+    <integer name = "timesync_uncertainty_override">0</integer>
+
+    <!-- Max clock skew ppm -->
+    <integer name = "timesync_clock_skew_ppm">0</integer>
+
     <!-- ===== End of UWB stack overlay definitions ===== -->
     <!-- ===== Start of ranging stack overlay definitions ===== -->
 
-    <!-- Enable wifi rtt Ranging for proximity -->
     <string-array name="technology_preference_list">
         <item>UWB</item>
         <item>CS</item>
         <item>RTT</item>
         <item>RSSI</item>
+        <item>RTT_STATION</item>
     </string-array>
 
     <!-- The minimum guaranteed delay in milliseconds between a received Rtt ranging result and the

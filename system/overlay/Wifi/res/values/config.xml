@@ -119,9 +119,6 @@
     <!-- Boolean indicating performing a partial initial scan is enabled -->
     <bool translatable="false" name="config_wifiEnablePartialInitialScan">true</bool>
 
-    <!-- Enable connected frequency enhancement for pno scan -->
-    <bool translatable="false" name="config_wifiConnectedFrequencyEnhancementEnabled">true</bool>
-
     <!-- Indicates whether or not the network-centric QoS policy feature is enabled. -->
     <bool translatable="false" name="config_wifiNetworkCentricQosPolicyFeatureEnabled">true</bool>
 
