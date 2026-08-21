@@ -3,20 +3,6 @@
 # SPDX-License-Identifier: Apache-2.0
 #
 
-ifeq ($(TARGET_USE_AIDL_QTI_BT_AUDIO),true)
-PRODUCT_PACKAGES += \
-    android.hardware.bluetooth.audio-impl \
-    android.hardware.bluetooth.audio-V3-ndk.vendor \
-    vendor.qti.hardware.bluetooth.audio-V1-ndk.vendor
-else
-PRODUCT_PACKAGES += \
-    android.hardware.bluetooth.audio@2.1-impl
-endif
-
-# FM
-PRODUCT_PACKAGES += \
-    vendor.qti.hardware.fm@1.0.vendor
-
 # Permissions
 PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.bluetooth_le.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.bluetooth_le.xml \
