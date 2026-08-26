@@ -16,6 +16,23 @@
       "message": "Missing for volcano and sun too.",
       "revId": "236669f4c3c39e44d6d4b246a2c58310fe666db3",
       "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "1253db53_8b36ce86",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000579
+      },
+      "writtenOn": "2026-08-26T15:56:25Z",
+      "side": 1,
+      "message": "the last platform to use this is kalama, msm irqbalance is gone now",
+      "revId": "236669f4c3c39e44d6d4b246a2c58310fe666db3",
+      "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
     }
   ]
 }
