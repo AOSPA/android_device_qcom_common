@@ -33,6 +33,24 @@
       "message": "the last platform to use this is kalama, msm irqbalance is gone now",
       "revId": "236669f4c3c39e44d6d4b246a2c58310fe666db3",
       "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "1192adda_1982190a",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1001176
+      },
+      "writtenOn": "2026-08-26T16:23:12Z",
+      "side": 1,
+      "message": "Yah thought this will work, but doesn\u0027t. We need to remove vendor/bin/msm_irqbalance too for these platforms, else it keeps crashing.",
+      "parentUuid": "1253db53_8b36ce86",
+      "revId": "236669f4c3c39e44d6d4b246a2c58310fe666db3",
+      "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
     }
   ]
 }
