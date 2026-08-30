@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "d07dbd5c_ef296335",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 9
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1001207
+      },
+      "writtenOn": "2026-08-30T00:43:49Z",
+      "side": 1,
+      "message": "Build fails on parrot66 devices, which don\u0027t ship eva.\n\nerror: vendor/qcom/common/vendor/media/6.6/Android.bp:495:1: \"libqcodec2_cvpfilter\" depends on undefined module \"libeva\".\nOr did you mean [\"libva\"]?\nerror: vendor/qcom/common/vendor/media/6.6/Android.bp:495:1: \"libqcodec2_cvpfilter\" depends on undefined module \"libcv_common\".",
+      "revId": "0af3cffb9b6914ee24da9af9684ce826726f1ca1",
+      "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
+    }
+  ]
+}
