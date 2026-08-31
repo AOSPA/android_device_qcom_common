@@ -10,5 +10,5 @@
         android:isStatic="true"
         android:priority="500"
         android:targetName="TelecomLibCustomization"
-        android:targetPackage="com.android.server.telecom" />
+        android:targetPackage="com.android.server.telecom.resources" />
 </manifest>
