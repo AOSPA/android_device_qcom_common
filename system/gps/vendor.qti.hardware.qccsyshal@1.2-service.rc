@@ -1,0 +1,8 @@
+service qccsyshal@1.2-service /system_ext/bin/qccsyshal@1.2-service
+    override
+    class hal
+    user system
+    group misc system
+    interface vendor.qti.hardware.qccsyshal@1.2::IQccsyshal qccsyshal
+    interface vendor.qti.hardware.qccsyshal@1.1::IQccsyshal qccsyshal
+    interface vendor.qti.hardware.qccsyshal@1.0::IQccsyshal qccsyshal

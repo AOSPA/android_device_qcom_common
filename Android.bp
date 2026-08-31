@@ -778,3 +778,12 @@ prebuilt_hidl_interfaces {
         "vendor.qti.hardware.wifi.wifilearner@1.0::IWifiStats",
     ],
 }
+
+prebuilt_hidl_interfaces {
+    name: "hidl_qccsyshal_interface",
+    interfaces: [
+        "vendor.qti.hardware.qccsyshal@1.0::IQccsyshal",
+        "vendor.qti.hardware.qccsyshal@1.1::IQccsyshal",
+        "vendor.qti.hardware.qccsyshal@1.2::IQccsyshal",
+    ],
+}
