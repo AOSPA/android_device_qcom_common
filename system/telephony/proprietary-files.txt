@@ -349,6 +349,7 @@ system_ext/lib64/vendor.qti.latency@2.2.so
 system_ext/lib64/vendor.qti.latency@2.3.so
 system_ext/lib64/vendor.qti.latencyaidlservice-V1-ndk.so
 system_ext/lib64/vendor.qti.mstatservice@1.0.so
+system_ext/lib64/vendor.qti.snapdragonServices-V2-ndk.so
 system_ext/priv-app/QtiTelephony/QtiTelephony.apk
 system_ext/priv-app/dpmserviceapp/dpmserviceapp.apk
 system_ext/priv-app/ims/ims.apk
