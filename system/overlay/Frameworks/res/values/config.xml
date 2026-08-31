@@ -471,4 +471,10 @@
     </string-array>
 -->
 
+    <!-- Indicating whether the retry timer from setup data call response for data throttling should
+         be honored for emergency network request. By default this is off, meaning for emergency
+         network requests, the data frameworks will ignore the previous retry timer passed in from
+         setup data call response. -->
+    <bool name="config_honor_data_retry_timer_for_emergency_network">true</bool>
+
 </resources>
