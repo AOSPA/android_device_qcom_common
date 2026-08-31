@@ -16,6 +16,14 @@ namespace_imports = [
 
 blob_fixups: blob_fixups_user_type = {
     (
+        'system_ext/lib/libwfdmmsink.so',
+        'system_ext/lib64/libwfdmmsink.so',
+    ): blob_fixup()
+        .replace_needed(
+            'libwfdparserlite.so',
+            'libmmparser_lite.so',
+        ),
+    (
         'system_ext/lib/libwfdservice.so',
         'system_ext/lib64/libwfdservice.so',
     ): blob_fixup()
