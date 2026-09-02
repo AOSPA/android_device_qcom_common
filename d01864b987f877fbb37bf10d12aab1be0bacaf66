@@ -16,6 +16,23 @@
       "message": "https://github.com/gotenksIN/proprietary_vendor_qcom_common/commit/dc863c99bf5d46eec6c3b82e13a20ee31269b9e0",
       "revId": "d01864b987f877fbb37bf10d12aab1be0bacaf66",
       "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "7aabc12f_6c505ed0",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 4
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000579
+      },
+      "writtenOn": "2026-09-02T03:41:44Z",
+      "side": 1,
+      "message": "gps rc fixed in LA.QISI.17.0.r1-02900-qssi.0",
+      "revId": "d01864b987f877fbb37bf10d12aab1be0bacaf66",
+      "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
     }
   ]
 }
