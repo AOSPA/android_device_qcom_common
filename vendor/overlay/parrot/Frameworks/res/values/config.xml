@@ -58,6 +58,4 @@
          during initialization when the setting is still null. -->
     <bool name="config_dozeAlwaysOnEnabled">false</bool>
 
-    <!-- boolean indicating whether the WiFi chipset has dual sap mode support -->
-    <bool translatable="false" name="config_wifi_dual_sap_mode_enabled">false</bool>
 </resources>
