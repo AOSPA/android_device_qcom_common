@@ -44,6 +44,10 @@
     <!-- dual sap mode is supported on this device. -->
     <bool name="config_wifiBridgedSoftApSupported">true</bool>
 
+    <!-- Indicates that STA + bridged AP concurrency mode is supported on this device provided
+         that the device interface combination allows for it-->
+    <bool translatable="false" name="config_wifiStaWithBridgedSoftApConcurrencySupported">true</bool>
+
     <!-- Enable WPA2 to WPA3 auto-upgrade offload to capable Driver/Firmware -->
     <bool translatable="false" name="config_wifiSaeUpgradeOffloadEnabled">true</bool>
 
