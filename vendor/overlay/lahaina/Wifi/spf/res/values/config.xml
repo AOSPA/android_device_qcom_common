@@ -71,6 +71,6 @@
     <bool translatable="false" name="config_wifiSoftap6ghzSupported">true</bool>
 
     <!-- dual sap mode is not supported on non-DBS targets. -->
-    <bool name="config_wifi_dual_sap_mode_enabled">false</bool>
+    <bool name="config_wifiBridgedSoftApSupported">false</bool>
 
 </resources>

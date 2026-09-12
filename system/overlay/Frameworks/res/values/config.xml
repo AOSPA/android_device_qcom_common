@@ -171,8 +171,6 @@
     <!-- Indicates that p2p MAC randomization is supported on this device -->
     <bool translatable="false" name="config_wifi_p2p_mac_randomization_supported">true</bool>
 
-    <!-- dual sap mode is supported on this device. -->
-    <bool name="config_wifi_dual_sap_mode_enabled">true</bool>
 
     <!-- Array of light sensor LUX values to define our levels for auto backlight brightness support.
          The N entries of this array define N + 1 control points as follows:
