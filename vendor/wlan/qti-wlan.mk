@@ -67,5 +67,16 @@ $(call inherit-product, vendor/qcom/opensource/data-ipa-cfg-mgr/ipacm_vendor_pro
 # Include QCOM WLAN makefile.
 -include device/qcom/wlan/$(TARGET_BOARD_PLATFORM)/wlan.mk
 
+# Translate Qualcomm DBS (Dual STA) and Dual AP flags into AOSP HAL interface combinations
+ifeq ($(QC_WIFI_HIDL_FEATURE_DUAL_STA),true)
+  ifeq ($(QC_WIFI_HIDL_FEATURE_DUAL_AP),true)
+    WIFI_HAL_INTERFACE_COMBINATIONS ?= {{{STA}, 1}, {{AP}, 1}}, {{{STA}, 1}, {{P2P, NAN}, 1}}, {{{AP}, 2}}, {{{STA}, 2}}
+  else
+    WIFI_HAL_INTERFACE_COMBINATIONS ?= {{{STA}, 1}, {{AP}, 1}}, {{{STA}, 1}, {{P2P, NAN}, 1}}, {{{STA}, 2}}
+  endif
+else ifeq ($(QC_WIFI_HIDL_FEATURE_DUAL_AP),true)
+  WIFI_HAL_INTERFACE_COMBINATIONS ?= {{{STA}, 1}, {{AP}, 1}}, {{{STA}, 1}, {{P2P, NAN}, 1}}, {{{AP}, 2}}
+endif
+
 # Get non-open-source specific aspects.
 $(call inherit-product-if-exists, vendor/qcom/common/vendor/wlan/wlan-vendor.mk)
