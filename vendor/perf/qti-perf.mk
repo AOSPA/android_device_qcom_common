@@ -32,6 +32,11 @@ PRODUCT_COPY_FILES += \
     system/core/libprocessgroup/profiles/task_profiles.json:$(TARGET_COPY_OUT_VENDOR)/etc/task_profiles.json
 endif
 
+# Only include msm_irqbalance on <6.1 platforms.
+ifneq (,$(filter 4.14 4.19 5.4 5.10 5.15, $(TARGET_KERNEL_VERSION)))
+$(call inherit-product, vendor/qcom/common/vendor/perf/irqbalance/perf-vendor.mk)
+endif
+
 # Properties
 PRODUCT_VENDOR_PROPERTIES += \
     ro.vendor.perf-hal.ver=3.0 \

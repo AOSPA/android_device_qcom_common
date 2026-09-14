@@ -1,0 +1,2 @@
+# IRQBalance from LA.VENDOR.13.2.6.r1-02200-KAILUA.0
+vendor/bin/msm_irqbalance|e9bb0e6659ae494e03627bb9c11301e483dedeac
