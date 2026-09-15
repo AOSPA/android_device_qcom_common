@@ -34,6 +34,24 @@
       "parentUuid": "b0c96708_b5c3da06",
       "revId": "56db880a8b1d9b16e07398c622a749d72105e072",
       "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "14c9a10a_afe4f9ff",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000092
+      },
+      "writtenOn": "2026-09-15T11:57:42Z",
+      "side": 1,
+      "message": "missing override",
+      "parentUuid": "47b308a1_6e87f6f1",
+      "revId": "56db880a8b1d9b16e07398c622a749d72105e072",
+      "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
     }
   ]
 }
