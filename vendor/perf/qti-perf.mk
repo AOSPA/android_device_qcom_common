@@ -32,6 +32,12 @@ PRODUCT_COPY_FILES += \
     system/core/libprocessgroup/profiles/task_profiles.json:$(TARGET_COPY_OUT_VENDOR)/etc/task_profiles.json
 endif
 
+# Disable msm_irqbalance on >5.15 platforms.
+ifeq (,$(filter 4.14 4.19 5.4 5.10 5.15, $(TARGET_KERNEL_VERSION)))
+PRODUCT_COPY_FILES += \
+    $(QCOM_COMMON_PATH)/vendor/perf/msm_irqbalance-disable.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/msm_irqbalance-disable.rc
+endif
+
 # Properties
 PRODUCT_VENDOR_PROPERTIES += \
     ro.vendor.perf-hal.ver=3.0 \
