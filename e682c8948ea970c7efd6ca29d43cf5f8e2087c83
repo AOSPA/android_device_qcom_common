@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "daff9036_b46d27c6",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 4
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1001176
+      },
+      "writtenOn": "2026-09-15T20:41:56Z",
+      "side": 1,
+      "message": "still:\n\n09-16 02:09:54.621     1     1 I init    : starting service \u0027vendor.msm_irqbalance\u0027...\n09-16 02:09:54.635     1     1 I libprocessgroup: Created cgroup /sys/fs/cgroup/system/uid_0/pid_21616\n09-16 02:09:54.642     1     1 I init    : ... started service \u0027vendor.msm_irqbalance\u0027 has pid 21616\n\n09-16 02:09:54.680     1     1 I init    : Service \u0027vendor.msm_irqbalance\u0027 (pid 21616) exited with status 255\n09-16 02:09:54.680     1     1 I init    : Sending SIGKILL to service \u0027vendor.msm_irqbalance\u0027 (pid 21616) process group...\n09-16 02:09:54.681     1     1 I libprocessgroup: Removed cgroup /sys/fs/cgroup/system/uid_0/pid_21616\n09-16 02:09:54.681     1     1 E init    : process with updatable components \u0027vendor.msm_irqbalance\u0027 exited 4 times in 4 minutes\n09-16 02:09:54.683     1     1 I init    : processing action (sys.init.updatable_crashing\u003d1) from (/system/etc/init/flags_health_check.rc:10)\n09-16 02:09:54.683     1     1 I init    : starting service \u0027exec 143 (/system/bin/flags_health_check UPDATABLE_CRASHING)\u0027...",
+      "revId": "e682c8948ea970c7efd6ca29d43cf5f8e2087c83",
+      "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
+    }
+  ]
+}
