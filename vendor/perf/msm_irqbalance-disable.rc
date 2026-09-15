@@ -1,0 +1,11 @@
+#
+# SPDX-FileCopyrightText: Paranoid Android
+# SPDX-License-Identifier: Apache-2.0
+#
+
+service vendor.msm_irqbalance /vendor/bin/msm_irqbalance
+    override
+    class core
+    user root
+    group root
+    disabled
