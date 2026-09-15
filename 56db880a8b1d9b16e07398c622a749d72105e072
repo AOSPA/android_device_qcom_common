@@ -16,6 +16,24 @@
       "message": "doesnt work with disabling in service override?",
       "revId": "56db880a8b1d9b16e07398c622a749d72105e072",
       "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "47b308a1_6e87f6f1",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1001176
+      },
+      "writtenOn": "2026-09-15T09:29:34Z",
+      "side": 1,
+      "message": "It\u0027s already disabled on my init*.rc files, then also keeps spamming on logs if included.\n\nhttps://github.com/oplus-8650-clo/android_device_oneplus_sm8650-common/blob/eecf1491de2e8effd8291ba50f91561305ea6053/init/init.qcom.rc#L717\n\nhttps://github.com/oplus-8650-clo/android_device_oneplus_sm8650-common/blob/eecf1491de2e8effd8291ba50f91561305ea6053/init/init.qti.kernel.rc#L179",
+      "parentUuid": "b0c96708_b5c3da06",
+      "revId": "56db880a8b1d9b16e07398c622a749d72105e072",
+      "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
     }
   ]
 }
