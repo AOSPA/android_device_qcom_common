@@ -33,6 +33,24 @@
       "message": "since we are forward looking in QCOM common, should we remove it from init component and keep enablement for old platforms here, also our current minimum is 4.14",
       "revId": "e682c8948ea970c7efd6ca29d43cf5f8e2087c83",
       "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "8ba6a663_4b7350ae",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 4
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000579
+      },
+      "writtenOn": "2026-09-16T06:00:23Z",
+      "side": 1,
+      "message": "Ignore the last line i didn\u0027t read the diff properly on phone",
+      "parentUuid": "4b69fbaf_a4dcd77c",
+      "revId": "e682c8948ea970c7efd6ca29d43cf5f8e2087c83",
+      "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
     }
   ]
 }
