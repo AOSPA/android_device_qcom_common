@@ -51,6 +51,24 @@
       "parentUuid": "4b69fbaf_a4dcd77c",
       "revId": "e682c8948ea970c7efd6ca29d43cf5f8e2087c83",
       "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "eecbefc3_7e72f984",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 4
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000579
+      },
+      "writtenOn": "2026-09-16T06:31:47Z",
+      "side": 1,
+      "message": "https://github.com/aospa-pipa/android_device_qcom_common/blob/calcite/vendor/init/init.qcom.legacy.rc like this\n\nthis change doesnt need to be in perf",
+      "parentUuid": "8ba6a663_4b7350ae",
+      "revId": "e682c8948ea970c7efd6ca29d43cf5f8e2087c83",
+      "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
     }
   ]
 }
