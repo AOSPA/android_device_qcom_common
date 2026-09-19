@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "7664a6d1_05ebe4ba",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000579
+      },
+      "writtenOn": "2026-09-19T09:56:51Z",
+      "side": 1,
+      "message": "sepolicy_vndr is going to be updated from pakala to kaanapali, this commit will be on hold till them, you can have local picks for now",
+      "revId": "f3b6a8756e6a8f75798deea3dc41376c7ee54627",
+      "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
+    }
+  ]
+}
