@@ -7,8 +7,10 @@
 -include hardware/qcom/display/config/display-board.mk
 -include hardware/qcom/display/config/display-product.mk
 
-# Include QTI AIDL Lights HAL
+# Include QTI AIDL Lights HAL, unless the device serves its own
+ifneq ($(TARGET_PROVIDES_LIGHTS_HAL),true)
 -include vendor/qcom/opensource/lights/lights-vendor-product.mk
+endif
 
 # Permissions
 PRODUCT_COPY_FILES += \
