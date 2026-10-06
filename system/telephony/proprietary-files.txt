@@ -62,7 +62,6 @@ system_ext/etc/permissions/vendor.qti.imsdcservice.xml
 system_ext/etc/seccomp_policy/imsvtdaemon.policy
 system_ext/etc/seccomp_policy/tcmd.policy
 system_ext/etc/sysconfig/qti_telephony_system_packages_config.xml
-system_ext/etc/sysconfig/qti_whitelist_system_ext.xml
 system_ext/etc/sysconfig/whitelist_com.qualcomm.qti.uceShimService.xml
 system_ext/framework/ActivityExt.jar
 system_ext/framework/com.qti.dpmframework.jar
