@@ -19,9 +19,12 @@ $(call inherit-product-if-exists, hardware/qcom/gps/gps_vendor_product.mk)
 DEVICE_MANIFEST_FILE += \
     $(QCOM_COMMON_PATH)/vendor/gps-legacy/qcc-manifest.xml
 
-# Overlays
+# Overlays (they make com.qualcomm.location the network location provider; it comes from
+# system/gps, which the 4.19 legacy family doesn't take)
+ifneq ($(call is-board-platform-in-list,$(4_19_LEGACY_FAMILY)),true)
 PRODUCT_PACKAGES += \
     QCOMGPSFrameworksOverlay
+endif
 
 # Permissions
 PRODUCT_COPY_FILES += \

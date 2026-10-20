@@ -72,8 +72,12 @@ endif
 endif
 
 ifneq (,$(filter gps, $(TARGET_COMMON_QTI_COMPONENTS)))
+  # The family's vendors only serve the HIDL vendor.qti.gnss; system/gps (com.qualcomm.location)
+  # binds the AIDL one only, so it would never connect.
+  ifneq ($(call is-board-platform-in-list,$(4_19_LEGACY_FAMILY)),true)
   include $(QCOM_COMMON_PATH)/system/gps/qti-gps.mk
-  ifeq ($(call is-board-platform-in-list,$(4_14_FAMILY) $(4_19_FAMILY) $(5_4_FAMILY)),true)
+  endif
+  ifeq ($(call is-board-platform-in-list,$(4_14_FAMILY) $(4_19_FAMILY) $(5_4_FAMILY) $(4_19_LEGACY_FAMILY)),true)
     TARGET_GPS_COMPONENT_VARIANT ?= gps-legacy
   else
     TARGET_GPS_COMPONENT_VARIANT ?= gps
