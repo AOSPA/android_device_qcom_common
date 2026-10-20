@@ -96,6 +96,15 @@ endif
     atoll \
     msmnile
 
+# 4.19 "legacy UM": SoCs that launched on 4.4 and run 4.19 with their original userspace
+# (fbdev MDSS display, OMX-only video, Adreno 5xx, HIDL radio). Same idea as LineageOS's
+# UM_4_19_LEGACY_FAMILY. Kept out of 4_19_FAMILY so they never pick the kona/lito/bengal
+# display/media/perf2 blobs; components opt in per family below and in components.mk.
+4_19_LEGACY_FAMILY := \
+    sdm660
+
+QCOM_BOARD_PLATFORMS += $(4_19_LEGACY_FAMILY)
+
 ifeq ($(call is-board-platform-in-list,$(6_6_FAMILY)),true)
 TARGET_KERNEL_VERSION ?= 6.6
 else ifeq ($(call is-board-platform-in-list,$(6_1_FAMILY)),true)
@@ -110,6 +119,8 @@ else ifeq ($(call is-board-platform-in-list,$(4_19_FAMILY)),true)
 TARGET_KERNEL_VERSION ?= 4.19
 else ifeq ($(call is-board-platform-in-list,$(4_14_FAMILY)),true)
 TARGET_KERNEL_VERSION ?= 4.14
+else ifeq ($(call is-board-platform-in-list,$(4_19_LEGACY_FAMILY)),true)
+TARGET_KERNEL_VERSION ?= 4.19
 endif
 
 ifneq (,$(filter 4.14 4.19 5.4, $(TARGET_KERNEL_VERSION)))

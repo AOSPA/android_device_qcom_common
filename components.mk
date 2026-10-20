@@ -33,7 +33,9 @@ endif
 
 ifneq (,$(filter alarm, $(TARGET_COMMON_QTI_COMPONENTS)))
   include $(QCOM_COMMON_PATH)/system/alarm/qti-alarm.mk
+  ifneq ($(call is-board-platform-in-list,$(4_19_LEGACY_FAMILY)),true)
   include $(QCOM_COMMON_PATH)/vendor/alarm/qti-alarm.mk
+  endif
 endif
 
 ifneq (,$(filter audio, $(TARGET_COMMON_QTI_COMPONENTS)))
@@ -109,11 +111,13 @@ endif
 
 ifneq (,$(filter perf, $(TARGET_COMMON_QTI_COMPONENTS)))
   include $(QCOM_COMMON_PATH)/system/perf/qti-perf.mk
+  ifneq ($(call is-board-platform-in-list,$(4_19_LEGACY_FAMILY)),true)
   include $(QCOM_COMMON_PATH)/vendor/perf/qti-perf.mk
+  endif
 endif
 
 ifneq (,$(filter qseecomd, $(TARGET_COMMON_QTI_COMPONENTS)))
-  ifeq ($(call is-board-platform-in-list,$(4_14_FAMILY) $(4_19_FAMILY)),true)
+  ifeq ($(call is-board-platform-in-list,$(4_14_FAMILY) $(4_19_FAMILY) $(4_19_LEGACY_FAMILY)),true)
     TARGET_QSEECOMD_COMPONENT_VARIANT ?= qseecomd-legacy
   else
     TARGET_QSEECOMD_COMPONENT_VARIANT ?= qseecomd
@@ -139,7 +143,7 @@ ifneq (,$(filter wfd, $(TARGET_COMMON_QTI_COMPONENTS)))
 endif
 
 ifneq (,$(filter wlan, $(TARGET_COMMON_QTI_COMPONENTS)))
-  ifeq ($(call is-board-platform-in-list,$(4_14_FAMILY) $(4_19_FAMILY) $(5_4_FAMILY)),true)
+  ifeq ($(call is-board-platform-in-list,$(4_14_FAMILY) $(4_19_FAMILY) $(5_4_FAMILY) $(4_19_LEGACY_FAMILY)),true)
     TARGET_WLAN_COMPONENT_VARIANT ?= wlan-legacy
   else
     TARGET_WLAN_COMPONENT_VARIANT ?= wlan

@@ -15,6 +15,16 @@ TARGET_MOUNT_POINTS_SYMLINKS ?= false
 
 # SEPolicy
 ifneq ($(TARGET_EXCLUDE_QCOM_SEPOLICY),true)
+# 4.19 legacy UM (literal list: the family variable is product-scope). The device includes
+# device/qcom/sepolicy-legacy-um; only AOSPA's system_ext app policy is shared.
+ifneq (,$(filter sdm660,$(TARGET_BOARD_PLATFORM)))
+ifneq ($(AOSPA_BUILD),)
+SYSTEM_EXT_PRIVATE_SEPOLICY_DIRS += \
+    device/qcom/common/sepolicy/aospa/private \
+    device/qcom/common/sepolicy/pixel/private
+endif
+else
 include device/qcom/sepolicy_vndr/SEPolicy.mk
 include device/qcom/common/sepolicy/SEPolicy.mk
+endif
 endif # Exclude QCOM SEPolicy

@@ -9,7 +9,7 @@ else ifeq ($(call is-board-platform-in-list,$(5_15_FAMILY)),true)
   TARGET_ADRENO_DIR ?= t
 else ifeq ($(call is-board-platform-in-list,$(5_10_FAMILY)),true)
   TARGET_ADRENO_DIR ?= s
-else ifeq ($(call is-board-platform-in-list,$(4_14_FAMILY) $(4_19_FAMILY) $(5_4_FAMILY)),true)
+else ifeq ($(call is-board-platform-in-list,$(4_14_FAMILY) $(4_19_FAMILY) $(5_4_FAMILY) $(4_19_LEGACY_FAMILY)),true)
   TARGET_ADRENO_DIR ?= r
 else
   $(error "Adreno component is enabled, but there is not a directory available for your platform.")
@@ -18,7 +18,7 @@ endif
 # Permissions
 PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.opengles.aep.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.opengles.aep.xml \
-    frameworks/native/data/etc/android.hardware.vulkan.level-1.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.vulkan.level-1.xml \
+    frameworks/native/data/etc/android.hardware.vulkan.level-$(if $(filter $(TARGET_BOARD_PLATFORM),$(4_19_LEGACY_FAMILY)),0,1).xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.vulkan.level-$(if $(filter $(TARGET_BOARD_PLATFORM),$(4_19_LEGACY_FAMILY)),0,1).xml \
     frameworks/native/data/etc/android.hardware.vulkan.version-1_1.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.vulkan.version-1_1.xml \
     frameworks/native/data/etc/android.hardware.vulkan.compute-0.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.vulkan.compute-0.xml
 
