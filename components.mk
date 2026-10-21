@@ -57,8 +57,14 @@ ifneq (,$(filter charging, $(TARGET_COMMON_QTI_COMPONENTS)))
 endif
 
 ifneq (,$(filter display, $(TARGET_COMMON_QTI_COMPONENTS)))
+  ifeq ($(call is-board-platform-in-list,$(4_19_LEGACY_FAMILY)),true)
+  # fbdev MDSS: the SDM HAL libs are DRM-era, so only take the frozen HIDL color/postproc
+  # interface libs (64-bit)
+  $(call inherit-product, vendor/qcom/common/vendor/display/display-vendor.mk)
+  else
   include $(QCOM_COMMON_PATH)/system/display/qti-display.mk
   include $(QCOM_COMMON_PATH)/vendor/display/qti-display.mk
+  endif
 endif
 
 ifneq (,$(filter dsprpcd, $(TARGET_COMMON_QTI_COMPONENTS)))
