@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Wi-Fi TCP receive and send buffer sizes in bytes.
+         Order is rmem_min, rmem_def, rmem_max, wmem_min, wmem_def, wmem_max. -->
+    <string name="config_wifi_tcp_buffers">524288,1048576,2097152,524288,1048576,4194304</string>
+</resources>

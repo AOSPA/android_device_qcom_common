@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Whether bridged Soft AP mode is supported when the interface combination allows it. -->
+    <bool name="config_wifiBridgedSoftApSupported">false</bool>
+
+    <!-- Allow a local-only Wi-Fi connection alongside an internet connection on dual-STA devices. -->
+    <bool name="config_wifiMultiStaLocalOnlyConcurrencyEnabled">false</bool>
+
+    <!-- Allow a restricted Wi-Fi connection alongside an internet connection on dual-STA devices. -->
+    <bool name="config_wifiMultiStaRestrictedConcurrencyEnabled">false</bool>
+
+    <!-- Whether the Wi-Fi driver supports IEEE 802.11be (Wi-Fi 7) in Soft AP mode. -->
+    <bool name="config_wifiSoftapIeee80211beSupported">true</bool>
+</resources>

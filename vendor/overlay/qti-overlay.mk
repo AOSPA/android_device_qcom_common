@@ -16,6 +16,13 @@ PRODUCT_PACKAGES += \
     WifiResTargetMainline_$(TARGET_BOARD_PLATFORM) \
     WifiResTargetMainline_spf_$(TARGET_BOARD_PLATFORM)
 
+ifeq ($(TARGET_BOARD_PLATFORM),pineapple)
+PRODUCT_PACKAGES += \
+    WifiResTarget_sm7675P \
+    WifiResTarget_sm7675PGL \
+    WifiResTarget_sm8635
+endif
+
 ifeq ($(TARGET_BOARD_PLATFORM),lahaina)
 PRODUCT_PACKAGES += \
     WifiResTarget_yupik_iot \

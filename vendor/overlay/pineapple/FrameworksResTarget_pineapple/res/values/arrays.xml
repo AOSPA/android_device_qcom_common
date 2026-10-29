@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Files PinnerService keeps resident in memory at startup. -->
+    <string-array name="config_defaultPinnerServiceFiles">
+        <item>/system/framework/arm64/boot-QPerformance.oat</item>
+        <item>/system/framework/arm64/boot-UxPerformance.oat</item>
+        <item>/system/framework/framework.jar</item>
+        <item>/system/framework/services.jar</item>
+        <item>/apex/com.android.media/javalib/updatable-media.jar</item>
+        <item>/system/lib64/libhwui.so</item>
+        <item>/vendor/lib64/libllvm-qgl.so</item>
+        <item>/vendor/lib64/libllvm-glnext.so</item>
+        <item>/vendor/lib64/egl/libGLESv2_adreno.so</item>
+    </string-array>
+</resources>

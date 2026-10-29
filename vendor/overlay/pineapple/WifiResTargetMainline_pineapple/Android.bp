@@ -1,0 +1,4 @@
+runtime_resource_overlay {
+    name: "WifiResTargetMainline_pineapple",
+    vendor: true,
+}

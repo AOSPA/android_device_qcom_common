@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Whether the Wi-Fi driver supports beacon protection in Soft AP mode. -->
+    <bool name="config_vendor_softap_beacon_protection_supported">true</bool>
+
+    <!-- Whether the Wi-Fi driver supports operating channel validation (OCV) in Soft AP mode. -->
+    <bool name="config_vendor_softap_ocv_supported">true</bool>
+
+    <!-- Whether the Wi-Fi chipset supports the 5 GHz band. -->
+    <bool name="config_wifi5ghzSupport">true</bool>
+
+    <!-- Whether the Wi-Fi chipset supports the 6 GHz band. -->
+    <bool name="config_wifi6ghzSupport">true</bool>
+
+    <!-- Enable the Wi-Fi QoS policy feature for application requests. -->
+    <bool name="config_wifiApplicationCentricQosPolicyFeatureEnabled">true</bool>
+
+    <!-- Whether bridged Soft AP mode is supported when the interface combination allows it. -->
+    <bool name="config_wifiBridgedSoftApSupported">false</bool>
+
+    <!-- Use saved connection frequencies for preferred network offload (PNO) scans
+         when frequency culling is enabled. -->
+    <bool name="config_wifiConnectedFrequencyEnhancementEnabled">true</bool>
+
+    <!-- Whether the driver reports country-code changes via NL80211_CMD_REG_CHANGE
+         or NL80211_CMD_WIPHY_REG_CHANGE. -->
+    <bool name="config_wifiDriverSupportedNl80211RegChangedEvent">true</bool>
+
+    <!-- Start with a partial Wi-Fi scan using cached channel history. -->
+    <bool name="config_wifiEnablePartialInitialScan">true</bool>
+
+    <!-- Whether a country-code change forces a restart of the Soft AP. -->
+    <bool name="config_wifiForcedSoftApRestartWhenCountryCodeChanged">false</bool>
+
+    <!-- Allow a local-only Wi-Fi connection alongside an internet connection on dual-STA devices. -->
+    <bool name="config_wifiMultiStaLocalOnlyConcurrencyEnabled">false</bool>
+
+    <!-- Allow two concurrent Wi-Fi connections with internet access on dual-STA devices. -->
+    <bool name="config_wifiMultiStaMultiInternetConcurrencyEnabled">true</bool>
+
+    <!-- Allow a new Wi-Fi connection to come up before switching away from the current one.
+         This requires support for concurrent station interfaces. -->
+    <bool name="config_wifiMultiStaNetworkSwitchingMakeBeforeBreakEnabled">false</bool>
+
+    <!-- Allow a restricted Wi-Fi connection alongside an internet connection on dual-STA devices. -->
+    <bool name="config_wifiMultiStaRestrictedConcurrencyEnabled">false</bool>
+
+    <!-- Enable the Wi-Fi QoS policy feature for requests from the network. -->
+    <bool name="config_wifiNetworkCentricQosPolicyFeatureEnabled">true</bool>
+
+    <!-- Whether the device supports SAE Hash-to-Element (H2E). -->
+    <bool name="config_wifiSaeH2eSupported">true</bool>
+
+    <!-- Offload automatic WPA2-to-WPA3 upgrades to capable Wi-Fi drivers or firmware. -->
+    <bool name="config_wifiSaeUpgradeOffloadEnabled">true</bool>
+
+    <!-- Whether the Wi-Fi driver supports 6 GHz in Soft AP mode on a 6 GHz-capable chipset. -->
+    <bool name="config_wifiSoftap6ghzSupported">true</bool>
+
+    <!-- Whether Soft AP supports the IEEE 802.11ax single-user beamformee role. -->
+    <bool name="config_wifiSoftapHeSuBeamformeeSupported">true</bool>
+
+    <!-- Whether Soft AP supports the IEEE 802.11ax single-user beamformer role. -->
+    <bool name="config_wifiSoftapHeSuBeamformerSupported">true</bool>
+
+    <!-- Whether the Wi-Fi driver supports IEEE 802.11ax (Wi-Fi 6) in Soft AP mode. -->
+    <bool name="config_wifiSoftapIeee80211axSupported">true</bool>
+
+    <!-- Whether the chipset can scan in the background and wake the host for a configured SSID. -->
+    <bool name="config_wifi_background_scan_support">true</bool>
+
+    <!-- Enable the Wi-Fi framework's Quick Connect feature. -->
+    <bool name="config_wifi_framework_enable_quick_connect">true</bool>
+
+    <!-- Whether the Wi-Fi driver supports automatic channel selection (ACS) in Soft AP mode. -->
+    <bool name="config_wifi_softap_acs_supported">true</bool>
+</resources>

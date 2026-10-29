@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Candidate access rule applet AIDs for the embedded secure element.
+         The first available applet is used. An empty list falls back to the default ARA-M AID. -->
+    <array name="config_ara_aid_candidate_list_ese" />
+</resources>

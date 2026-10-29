@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Fallback Bluetooth controller idle current in mA. -->
+    <integer name="config_bluetooth_idle_cur_ma">4</integer>
+
+    <!-- Fallback Bluetooth controller operating voltage in mV. -->
+    <integer name="config_bluetooth_operating_voltage_mv">4000</integer>
+
+    <!-- Fallback Bluetooth controller receive current in mA. -->
+    <integer name="config_bluetooth_rx_cur_ma">18</integer>
+
+    <!-- Fallback Bluetooth controller transmit current in mA. -->
+    <integer name="config_bluetooth_tx_cur_ma">33</integer>
+
+    <!-- Default upper limit for display refresh rate selection in Hz. -->
+    <integer name="config_defaultPeakRefreshRate">240</integer>
+
+    <!-- Default display refresh rate in Hz. -->
+    <integer name="config_defaultRefreshRate">144</integer>
+</resources>
