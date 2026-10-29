@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Interval for fetching partial Wi-Fi scan results in milliseconds. -->
+    <integer name="config_wifi_partial_scan_results_fetching_period_ms">1000</integer>
+</resources>

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Register the vendor-stable Secure Element service for the system user.
+         The service also requires a corresponding VINTF manifest entry. -->
+    <bool name="secure_element_vintf_enabled">true</bool>
+</resources>

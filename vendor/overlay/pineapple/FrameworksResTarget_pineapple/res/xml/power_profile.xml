@@ -1,0 +1,242 @@
+<?xml version="1.0" encoding="utf-8"?>
+<device name="Android">
+    <!-- Current values are in mA unless a different unit is specified. -->
+
+    <!-- Zero-current entry. -->
+    <item name="none">0</item>
+
+    <!-- Display-on current excluding backlight draw. -->
+    <item name="screen.on">176</item>
+
+    <!-- Additional backlight current at full brightness. -->
+    <item name="screen.full">460</item>
+
+    <!-- CPU core counts in cluster index order. -->
+    <array name="cpu.clusters.cores">
+        <value>4</value>
+        <value>3</value>
+        <value>1</value>
+    </array>
+
+    <!-- CPU frequencies in kHz for cluster 0, in scaling-step order. -->
+    <array name="cpu.core_speeds.cluster0">
+        <value>300000</value>
+        <value>403200</value>
+        <value>499200</value>
+        <value>595200</value>
+        <value>691200</value>
+        <value>806400</value>
+        <value>902400</value>
+        <value>998400</value>
+        <value>1094400</value>
+        <value>1209600</value>
+        <value>1305600</value>
+        <value>1401600</value>
+        <value>1497600</value>
+        <value>1612800</value>
+        <value>1708800</value>
+        <value>1804800</value>
+    </array>
+
+    <!-- Current per active core at each frequency in cpu.core_speeds.cluster0. -->
+    <array name="cpu.core_power.cluster0">
+        <value>5</value>
+        <value>7</value>
+        <value>8</value>
+        <value>9</value>
+        <value>10</value>
+        <value>14</value>
+        <value>16</value>
+        <value>18</value>
+        <value>21</value>
+        <value>23</value>
+        <value>24</value>
+        <value>27</value>
+        <value>29</value>
+        <value>31</value>
+        <value>32</value>
+        <value>35</value>
+    </array>
+
+    <!-- CPU frequencies in kHz for cluster 1, in scaling-step order. -->
+    <array name="cpu.core_speeds.cluster1">
+        <value>710400</value>
+        <value>844800</value>
+        <value>960000</value>
+        <value>1075200</value>
+        <value>1209600</value>
+        <value>1324800</value>
+        <value>1440000</value>
+        <value>1555200</value>
+        <value>1670400</value>
+        <value>1766400</value>
+        <value>1881600</value>
+        <value>1996800</value>
+        <value>2112000</value>
+        <value>2227200</value>
+        <value>2342400</value>
+        <value>2419200</value>
+    </array>
+
+    <!-- Current per active core at each frequency in cpu.core_speeds.cluster1. -->
+    <array name="cpu.core_power.cluster1">
+        <value>31</value>
+        <value>39</value>
+        <value>47</value>
+        <value>59</value>
+        <value>70</value>
+        <value>81</value>
+        <value>94</value>
+        <value>103</value>
+        <value>122</value>
+        <value>137</value>
+        <value>160</value>
+        <value>182</value>
+        <value>192</value>
+        <value>220</value>
+        <value>270</value>
+        <value>317</value>
+    </array>
+
+    <!-- CPU frequencies in kHz for cluster 2, in scaling-step order. -->
+    <array name="cpu.core_speeds.cluster2">
+        <value>844800</value>
+        <value>960000</value>
+        <value>1075200</value>
+        <value>1190400</value>
+        <value>1305600</value>
+        <value>1420800</value>
+        <value>1555200</value>
+        <value>1670400</value>
+        <value>1785600</value>
+        <value>1900800</value>
+        <value>2035200</value>
+        <value>2150400</value>
+        <value>2265600</value>
+        <value>2380800</value>
+        <value>2496000</value>
+        <value>2611200</value>
+        <value>2726400</value>
+        <value>2841600</value>
+    </array>
+
+    <!-- Current per active core at each frequency in cpu.core_speeds.cluster2. -->
+    <array name="cpu.core_power.cluster2">
+        <value>49</value>
+        <value>59</value>
+        <value>69</value>
+        <value>82</value>
+        <value>96</value>
+        <value>113</value>
+        <value>133</value>
+        <value>157</value>
+        <value>172</value>
+        <value>182</value>
+        <value>210</value>
+        <value>247</value>
+        <value>289</value>
+        <value>332</value>
+        <value>374</value>
+        <value>471</value>
+        <value>516</value>
+        <value>583</value>
+    </array>
+
+    <!-- Additional current when the CPU is running, excluding cluster and core current. -->
+    <item name="cpu.active">7.7</item>
+
+    <!-- Additional current while the CPU is awake and idle. -->
+    <item name="cpu.idle">0.1</item>
+
+    <!-- CPU current in power collapse. -->
+    <item name="cpu.suspend">0</item>
+
+    <!-- Battery capacity in mAh at nominal voltage. -->
+    <item name="battery.capacity">3550</item>
+
+    <!-- Current with Wi-Fi enabled and idle. -->
+    <item name="wifi.on">0.1</item>
+
+    <!-- Current during Wi-Fi data transfer. -->
+    <item name="wifi.active">160</item>
+
+    <!-- Current during Wi-Fi network scans. -->
+    <item name="wifi.scan">1.2</item>
+
+    <!-- Legacy DSP current during audio playback. -->
+    <item name="dsp.audio">24</item>
+
+    <!-- Legacy DSP current during video playback. -->
+    <item name="dsp.video">66</item>
+
+    <!-- Average current while the camera flash is on. -->
+    <item name="camera.flashlight">600</item>
+
+    <!-- Average camera current across typical use cases. -->
+    <item name="camera.avg">368</item>
+
+    <!-- Current while GPS is on. -->
+    <item name="gps.on">13.7</item>
+
+    <!-- Cellular radio current during active use. -->
+    <item name="radio.active">160</item>
+
+    <!-- Cellular radio current while searching for a signal. -->
+    <item name="radio.scanning">5.5</item>
+
+    <!-- Cellular radio paging current by signal strength, from weakest to strongest. -->
+    <array name="radio.on">
+        <value>86</value>
+        <value>8</value>
+    </array>
+
+    <!-- Modem controller idle current. -->
+    <item name="modem.controller.idle">6</item>
+
+    <!-- Modem controller receive current. -->
+    <item name="modem.controller.rx">180</item>
+
+    <!-- Modem controller transmit current. -->
+    <item name="modem.controller.tx">186</item>
+
+    <!-- Modem controller operating voltage in mV. -->
+    <item name="modem.controller.voltage">3700</item>
+
+    <!-- Current at the memory rail for each device-tree bandwidth bucket. -->
+    <array name="memory.bandwidths">
+        <value>17</value>
+    </array>
+
+    <!-- Wi-Fi controller idle receive current. -->
+    <item name="wifi.controller.idle">1</item>
+
+    <!-- Wi-Fi controller receive current. -->
+    <item name="wifi.controller.rx">176</item>
+
+    <!-- Wi-Fi controller transmit current. -->
+    <item name="wifi.controller.tx">200</item>
+
+    <!-- Current by Wi-Fi transmit power level when the chipset reports per-level activity. -->
+    <array name="wifi.controller.tx_levels">1 </array>
+
+    <!-- Wi-Fi controller operating voltage in mV. -->
+    <item name="wifi.controller.voltage">3700</item>
+
+    <!-- Batched scan current for 1–8, 9–64, 65–512, 513–4096, and 4097+ channels per hour. -->
+    <array name="wifi.batchedscan">
+        <value>.0001</value>
+        <value>.001</value>
+        <value>.01</value>
+        <value>.1</value>
+        <value>1</value>
+    </array>
+
+    <!-- Legacy Bluetooth current during data transfer. -->
+    <item name="bluetooth.active">130</item>
+
+    <!-- Legacy Bluetooth current while on and connectable without a connection. -->
+    <item name="bluetooth.on">0.7</item>
+
+    <!-- Bluetooth controller operating voltage in mV. -->
+    <item name="bluetooth.controller.voltage">3700</item>
+</device>

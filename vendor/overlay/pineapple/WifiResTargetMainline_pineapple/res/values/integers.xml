@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Number of wrong-password failures before the network is disabled for selection. -->
+    <integer name="config_wifiDisableReasonByWrongPasswordThreshold">2</integer>
+</resources>

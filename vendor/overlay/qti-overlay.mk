@@ -22,6 +22,13 @@ PRODUCT_PACKAGES += \
     WifiResTargetMainline_yupik_iot
 endif
 
+ifeq ($(TARGET_BOARD_PLATFORM),pineapple)
+PRODUCT_PACKAGES += \
+    WifiResTarget_sm7675P \
+    WifiResTarget_sm7675PGL \
+    WifiResTarget_sm8635
+endif
+
 ifeq ($(TARGET_BOARD_PLATFORM),taro)
 PRODUCT_PACKAGES += \
     WifiResTarget_cape \
