@@ -17,7 +17,12 @@ TARGET_USES_RRO := true
 
 # Override proprietary definitions from SoC audio HAL Makefiles.
 AUDIO_FEATURE_ENABLED_DYNAMIC_LOG := false
+ifeq (,$(filter 6.1, $(TARGET_KERNEL_VERSION)))
 BOARD_SUPPORTS_OPENSOURCE_STHAL := false
+endif
+
+# Export Qualcomm audio configuration to Soong
+include device/qcom/common/vendor/audio/audio-soong-config.mk
 
 $(call soong_config_set,tinycompress,enable_extended_compress_format,true)
 
